@@ -4,18 +4,6 @@
   "label": "GS1 Web Vocabulary",
   "prefix": "gs1",
   "items": {
-    "dc11:date": {
-      "category": "property"
-    },
-    "dc11:description": {
-      "category": "property"
-    },
-    "dc11:title": {
-      "category": "property"
-    },
-    "vs:term_status": {
-      "category": "property"
-    },
     "AdditionalProductClassificationDetails": {
       "category": "class",
       "description": "A product classification for the product other than the Global Product Classification(GPC brick value).",
@@ -260,9 +248,6 @@
       "category": "class",
       "description": "An assurance that the product is reliable and that repairs or replacement will be done free of charge within a given time limit and under certain conditions in the event of a defect.",
       "label": "Warranty"
-    },
-    "": {
-      "category": "class"
     },
     "originalCodeValue": {
       "category": "property",

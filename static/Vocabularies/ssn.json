@@ -4,60 +4,15 @@
   "label": "Semantic Sensor Network Ontology",
   "prefix": "ssn",
   "items": {
-    "dcterms:created": {
-      "category": "property"
-    },
-    "dcterms:creator": {
-      "category": "property"
-    },
-    "dcterms:description": {
-      "category": "property"
-    },
-    "dcterms:license": {
-      "category": "property"
-    },
-    "dcterms:rights": {
-      "category": "property"
-    },
-    "dcterms:title": {
-      "category": "property"
-    },
-    "vann:preferredNamespacePrefix": {
-      "category": "property"
-    },
-    "vann:preferredNamespaceUri": {
-      "category": "property"
-    },
-    "skos:definition": {
-      "category": "property"
-    },
-    "skos:example": {
-      "category": "property"
-    },
-    "foaf:name": {
-      "category": "property"
-    },
-    "": {
-      "category": "class"
-    },
     "Property": {
       "category": "class",
       "description": "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.",
       "label": "Property"
     },
-    "sosa:Actuation": {
-      "category": "class"
-    },
     "System": {
       "category": "class",
       "description": "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems.",
       "label": "System"
-    },
-    "sosa:Observation": {
-      "category": "class"
-    },
-    "sosa:Sampling": {
-      "category": "class"
     },
     "Deployment": {
       "category": "class",
@@ -78,9 +33,6 @@
       "category": "class",
       "description": "An event in the real world that 'triggers' the Sensor. The properties associated to the Stimulus may be different to the eventual observed ObservableProperty. It is the event, not the object, that triggers the Sensor.",
       "label": "Stimulus"
-    },
-    "foaf:Agent": {
-      "category": "class"
     },
     "forProperty": {
       "category": "property",

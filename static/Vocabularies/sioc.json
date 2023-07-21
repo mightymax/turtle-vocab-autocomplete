@@ -4,15 +4,6 @@
   "label": "SIOC Core Ontology Namespace",
   "prefix": "sioc",
   "items": {
-    "dcterms:date": {
-      "category": "property"
-    },
-    "dcterms:description": {
-      "category": "property"
-    },
-    "dcterms:title": {
-      "category": "property"
-    },
     "content": {
       "category": "property",
       "description": "The content of the Item in plain text format.",
@@ -133,12 +124,6 @@
       "description": "This is the title (subject line) of the Post. Note that for a Post within a threaded discussion that has no parents, it would detail the topic thread.",
       "label": "title"
     },
-    "dcterms:references": {
-      "category": "property"
-    },
-    "dcterms:subject": {
-      "category": "property"
-    },
     "about": {
       "category": "property",
       "description": "Specifies that this Item is about a particular resource, e.g. a Post describing a book, hotel, etc.",
@@ -148,9 +133,6 @@
       "category": "property",
       "description": "Refers to the foaf:Agent or foaf:Person who owns this sioc:UserAccount.",
       "label": "account of"
-    },
-    "foaf:account": {
-      "category": "property"
     },
     "addressed_to": {
       "category": "property",
@@ -176,9 +158,6 @@
       "category": "property",
       "description": "An image or depiction used to represent this UserAccount.",
       "label": "avatar"
-    },
-    "foaf:depiction": {
-      "category": "property"
     },
     "container_of": {
       "category": "property",
@@ -488,9 +467,6 @@
       "description": "An article or message that can be posted to a Forum.",
       "label": "Post"
     },
-    "foaf:Document": {
-      "category": "class"
-    },
     "Site": {
       "category": "class",
       "description": "A Site can be the location of an online community or set of communities, with UserAccounts and Usergroups creating Items in a set of Containers. It can be thought of as a web-accessible data Space.",
@@ -500,12 +476,6 @@
       "category": "class",
       "description": "A container for a series of threaded discussion Posts or Items.",
       "label": "Thread"
-    },
-    "foaf:OnlineAccount": {
-      "category": "class"
-    },
-    "foaf:Agent": {
-      "category": "class"
     }
   }
 }

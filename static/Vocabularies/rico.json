@@ -4,167 +4,80 @@
   "label": "International Council on Archives Records in Contexts Ontology\n            (ICA RiC-O) version 0.2",
   "prefix": "rico",
   "items": {
-    "cc:license": {
-      "category": "property"
-    },
-    "dc11:contributor": {
-      "category": "property"
-    },
-    "dc11:creator": {
-      "category": "property"
-    },
-    "dc11:date": {
-      "category": "property"
-    },
-    "dc11:publisher": {
-      "category": "property"
-    },
-    "dc11:rights": {
-      "category": "property"
-    },
-    "dc11:title": {
-      "category": "property"
-    },
-    "dcterms:abstract": {
-      "category": "property"
-    },
-    "": {
-      "category": "class"
-    },
-    "dcterms:contributor": {
-      "category": "property"
-    },
-    "skos:Concept": {
-      "category": "class"
-    },
-    "dcterms:creator": {
-      "category": "property"
-    },
-    "skos:ConceptScheme": {
-      "category": "class"
-    },
-    "dcterms:description": {
-      "category": "property"
-    },
     "AccumulationRelation": {
       "category": "class",
       "description": "Connects at least one Record Resource or Instantiation to at least one Agent, when the Agent accumulates it, be it intentionally (collecting it) or not (receiving it in the course of its activities).",
       "label": "Accumulation Relation"
-    },
-    "dcterms:publisher": {
-      "category": "property"
     },
     "AgentOriginationRelation": {
       "category": "class",
       "description": "Connects at least one Record Resource or an Instantiation to at least one Agent that creates or accumulates the Record Resource, receives it, or sends it.",
       "label": "Agent Origination Relation"
     },
-    "dcterms:rights": {
-      "category": "property"
-    },
     "Activity": {
       "category": "class",
       "description": "Activity is a kind of Event. Activity is specifically used to designate purposeful human activity. Activity may be understood from two perspectives. First it can be understood as leading to an end. The end is the purpose of the Activity, or why the Activity is performed. Second, it can be understood in terms of the processes that lead to achieving the end, how the end is realized through coordinated actions. Purpose and process are complementary understandings of Activity. Together the two perspectives address why the Activity is performed, the expected ends or outcomes; and how the Activity fulfills the purpose. While activity has an intended end, it also has unintended consequences and results, or side-effects. By and large, these may not be the focus of the description, but they are, unquestionably, context. |In a corporate or government context an Activity may also be called a 'function'. An Activity exists in a specific social and cultural context, and within that context is subject to change over time. An Activity may be composed of other Activities.",
       "label": "Activity"
-    },
-    "dcterms:title": {
-      "category": "property"
     },
     "Event": {
       "category": "class",
       "description": "An event may be natural, human, or a combination of natural and human. Events have temporal and spatial boundaries. An event may actively involve some agent(s) and affect any entity. An event may be discrete, happening at a specific moment in time, or may occur over an extended period of time. Events may have events as parts, and events may precede or follow one another. Multiple agents may participate in the same event, and in different roles.",
       "label": "Event"
     },
-    "vann:preferredNamespacePrefix": {
-      "category": "property"
-    },
     "ActivityDocumentationRelation": {
       "category": "class",
       "description": "Connects at least one Record Resource or Instantiation to at least one Activity, when the Record Resource or Instantiation results from the activity.",
       "label": "Activity Documentation Relation"
-    },
-    "vann:preferredNamespaceUri": {
-      "category": "property"
     },
     "ProvenanceRelation": {
       "category": "class",
       "description": "This relation stands for organic and for functional provenance.",
       "label": "Provenance Relation"
     },
-    "rdf:value": {
-      "category": "property"
-    },
     "ActivityType": {
       "category": "class",
       "description": "Can be extended with any number of subclasses, e.g. “function/action” and “activity domain”. This allows for a faceted approach that enables an Activity to be categorized using a combination of components, general or more specific. For example, “monitoring” can be used in combination with “election polls” or “water resources”.",
       "label": "Activity Type"
-    },
-    "skos:altLabel": {
-      "category": "property"
     },
     "Type": {
       "category": "class",
       "description": "A superclass for any category of some thing. A type characterizes an entity.",
       "label": "Type"
     },
-    "skos:changeNote": {
-      "category": "property"
-    },
     "Agent": {
       "category": "class",
       "description": "An Agent may have one or more identities; an identity is a constellation of properties or relations that together “identify” the Agent. A Person or Group commonly has one identity, though each also may have one or more alternative identities. Such alternative identities may be shared by more than one Person or Group. Alternative identities include but are not limited to pseudonyms, heteronyms, DBA (Doing Business As), and trade identities. An alternative identity should not be confused with a Position in a Group, for example, presidents, prime ministers, governors, popes, royalty, or bishops. Nor should an alternative identity be confused with a variant name or identifier of the same identity. Agent also includes entities created by a Person or Group that act on behalf of the creating Agent in an autonomous or semi-autonomous manner. Examples of a Mechanism include software agents, robots, and space and underwater probes that generate data (records) in the course of Activity assigned to and in conformance with the instructions given to them by the creating Person or Group.",
       "label": "Agent"
-    },
-    "skos:note": {
-      "category": "property"
     },
     "Thing": {
       "category": "class",
       "description": "Includes all RiC entities as well as any concept, material thing, or event that may be the subject of a Record Resource or associated with an Activity. Examples of entities not explicitly addressed in RiC includes but is not limited to the following: abstract concepts; cultural movements, named periods and events; named things, objects and works; legendary, mythical or fictitious figures, characters or beings.",
       "label": "Thing"
     },
-    "skos:definition": {
-      "category": "property"
-    },
     "AgentControlRelation": {
       "category": "class",
       "description": "Connects at least one Agent, to at least another Agent, when the first one(s) control(s) in a way the activities of the second one(s).",
       "label": "Agent Control Relation"
-    },
-    "skos:example": {
-      "category": "property"
     },
     "AgentHierarchicalRelation": {
       "category": "class",
       "description": "Connects at least one Agent to at least another Agent, when the first one is hierarchically superior to the second one.",
       "label": "Agent Hierarchical Relation"
     },
-    "skos:historyNote": {
-      "category": "property"
-    },
     "AuthorityRelation": {
       "category": "class",
       "description": "Would probably rarely be used as such (use its sub-categories)",
       "label": "Authority Relation"
-    },
-    "skos:inScheme": {
-      "category": "property"
     },
     "AgentToAgentRelation": {
       "category": "class",
       "description": "Connects at least two Agents.",
       "label": "Agent Relation"
     },
-    "skos:prefLabel": {
-      "category": "property"
-    },
     "AgentName": {
       "category": "class",
       "description": "A label, title or term designating an Agent in order to make it distinguishable from other similar entities.",
       "label": "Agent Name"
-    },
-    "skos:scopeNote": {
-      "category": "property"
     },
     "Name": {
       "category": "class",

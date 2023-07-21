@@ -4,10 +4,6 @@
   "label": "The Bibliographic Ontology",
   "prefix": "bibo",
   "items": {
-    "": {
-      "category": "property",
-      "description": "Used to describe the timing of an event. For example, when a conference starts and stops."
-    },
     "doi": {
       "category": "property"
     },
@@ -50,22 +46,6 @@
       "description": "A volume number",
       "label": "volume"
     },
-    "dcterms:created": {
-      "category": "property",
-      "description": "Used to describe the creation date of a bibliographic item"
-    },
-    "dcterms:date": {
-      "category": "property",
-      "description": "Use to link a bibliographic item to the date of an event. Check dcterms:created and other for proper specializations for this property"
-    },
-    "dcterms:description": {
-      "category": "property",
-      "description": "Used to describe a bibliographic resource."
-    },
-    "dcterms:issued": {
-      "category": "property",
-      "description": "Used to describe the issue date of a bibliographic resource"
-    },
     "abstract": {
       "category": "property",
       "description": "A summary of the resource.",
@@ -80,9 +60,6 @@
       "category": "property"
     },
     "identifier": {
-      "category": "property"
-    },
-    "foaf:name": {
       "category": "property"
     },
     "chapter": {
@@ -175,21 +152,6 @@
       "category": "property",
       "description": "Universal Resource Identifier of a document",
       "label": "uri"
-    },
-    "foaf:family_name": {
-      "category": "property",
-      "description": "This is the property we choose to use to describe the family name of a person related to a bibliographic resource."
-    },
-    "foaf:givenname": {
-      "category": "property",
-      "description": "This is the property we choose to describe the given name of a Person related to a bibliographic resource. This is the first name of a person."
-    },
-    "dcterms:Agent": {
-      "category": "class"
-    },
-    "foaf:Agent": {
-      "category": "class",
-      "description": "Used to describe any \"agent\" related to bibliographic items. Such agents can be persons, organizations or groups of any kind."
     },
     "AcademicArticle": {
       "category": "class",
@@ -286,9 +248,6 @@
       "description": "A collection of legal cases.",
       "label": "Court Reporter"
     },
-    "foaf:Document": {
-      "category": "class"
-    },
     "DocumentStatus": {
       "category": "class",
       "description": "The status of the publication of a document.",
@@ -331,9 +290,6 @@
       "category": "class",
       "description": "A document that presents visual or diagrammatic information.",
       "label": "Image"
-    },
-    "foaf:Image": {
-      "category": "class"
     },
     "Interview": {
       "category": "class",
@@ -490,73 +446,6 @@
       "description": "A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc.",
       "label": "Workshop"
     },
-    "rdfs:Resource": {
-      "category": "class"
-    },
-    "owl:Thing": {
-      "category": "class"
-    },
-    "foaf:Person": {
-      "category": "class",
-      "description": "Used to describe a Person related to a bibliographic ite such as an author, an editor, etc."
-    },
-    "foaf:Organization": {
-      "category": "class",
-      "description": "Ued to describe an organization related to bibliographic items such as a publishing company, etc."
-    },
-    "rdf:List": {
-      "category": "class"
-    },
-    "rdf:Seq": {
-      "category": "class"
-    },
-    "dcterms:contributor": {
-      "category": "property",
-      "description": "Used to link a bibliographic item to one of its contributor: can be an author, an editor, a publisher, etc."
-    },
-    "dcterms:format": {
-      "category": "property",
-      "description": "Used to describe the format of a bibliographic resource."
-    },
-    "dcterms:hasPart": {
-      "category": "property"
-    },
-    "dcterms:isPartOf": {
-      "category": "property"
-    },
-    "dcterms:isReferencedBy": {
-      "category": "property",
-      "description": "Used to relate a reference citation to a bibliographic resource."
-    },
-    "dcterms:isVersionOf": {
-      "category": "property"
-    },
-    "dcterms:language": {
-      "category": "property",
-      "description": "Used to link a bibliographic resource to the language used to express it."
-    },
-    "dcterms:publisher": {
-      "category": "property",
-      "description": "Used to link a bibliographic item to its publisher."
-    },
-    "dcterms:references": {
-      "category": "property"
-    },
-    "dcterms:relation": {
-      "category": "property"
-    },
-    "dcterms:rights": {
-      "category": "property",
-      "description": "Used to describe rights related to a bibliographic resource."
-    },
-    "dcterms:subject": {
-      "category": "property",
-      "description": "Used to describe the subject of a bibliographic resource."
-    },
-    "dcterms:title": {
-      "category": "property",
-      "description": "Used to describe the title of a bibliographic resource"
-    },
     "affirmedBy": {
       "category": "property",
       "description": "A legal decision that affirms a ruling."
@@ -701,52 +590,6 @@
       "category": "property",
       "description": "A person who translates written document from one language to another.",
       "label": "translator"
-    },
-    "rdf:value": {
-      "category": "property",
-      "description": "Used to describe the content of a bibo:Document and othr bibliographic resouces.  We suggest to use this property instead of the deprecated \"bibo:content\" one."
-    },
-    "foaf:based_near": {
-      "category": "property",
-      "description": "Used to link an agent, related to bibliographic things, to a place where it is based near: can be a city, a monument, a building, etc."
-    },
-    "foaf:depiction": {
-      "category": "property",
-      "description": "Used to link an agent with an image that depict it."
-    },
-    "foaf:homepage": {
-      "category": "property",
-      "description": "Used to link an agent to its homepage (which is a web page accessible using a URL)."
-    },
-    "skos:scopeNote": {
-      "category": "property"
-    },
-    "skos:changeNote": {
-      "category": "property"
-    },
-    "skos:editorialNote": {
-      "category": "property"
-    },
-    "dcterms:creator": {
-      "category": "property"
-    },
-    "skos:example": {
-      "category": "property"
-    },
-    "dcterms:identifier": {
-      "category": "property"
-    },
-    "vs:term_status": {
-      "category": "property"
-    },
-    "owl:deprecated": {
-      "category": "property"
-    },
-    "skos:historyNote": {
-      "category": "property"
-    },
-    "skos:note": {
-      "category": "property"
     }
   }
 }

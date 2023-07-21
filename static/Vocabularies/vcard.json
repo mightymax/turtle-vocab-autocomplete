@@ -18,9 +18,6 @@
       "description": "To specify the components of the delivery address for the  object",
       "label": "Address"
     },
-    "": {
-      "category": "class"
-    },
     "Agent": {
       "category": "class",
       "label": "Agent"

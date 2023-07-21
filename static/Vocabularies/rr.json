@@ -4,18 +4,6 @@
   "label": "R2RML vocabulary",
   "prefix": "rr",
   "items": {
-    "rdf:Property": {
-      "category": "class"
-    },
-    "rdfs:Class": {
-      "category": "class"
-    },
-    "rdfs:Datatype": {
-      "category": "class"
-    },
-    "rdfs:Resource": {
-      "category": "class"
-    },
     "BaseTableOrView": {
       "category": "class"
     },
@@ -74,9 +62,6 @@
     "TriplesMap": {
       "category": "class",
       "description": "Represents a triples map."
-    },
-    "": {
-      "category": "class"
     },
     "child": {
       "category": "property",

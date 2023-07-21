@@ -177,9 +177,6 @@
       "description": "A variation of Collection in which items are strictly ordered",
       "label": "OrderedCollection"
     },
-    "": {
-      "category": "class"
-    },
     "OrderedCollectionPage": {
       "category": "class",
       "description": "An ordered subset of items from an OrderedCollection",

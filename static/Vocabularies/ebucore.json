@@ -4,11 +4,6 @@
   "label": "EBUCore - the Dublin Core for media",
   "prefix": "ebucore",
   "items": {
-    "dc11:Agent": {
-      "category": "class",
-      "description": "A resource that acts or has the power to act.",
-      "label": "Agent"
-    },
     "Asset": {
       "category": "class",
       "description": "The Class \"Asset\" is an object to which an identifier will be associated at commissioning. It will serve as a central reference point to manage rights associated to EditorialObjects, Resources, MediaResources or Essences, and PublicationEvents (distribution and exploitation conditions).",
@@ -28,11 +23,6 @@
       "category": "class",
       "description": "An image, a document, an annotation (descriptive textual metadata or audio/video tag), a tag (time related in audiovisual media resources), or an audiovisual media resource (optionally composed of one or more fragment / part and / or audio, video data tracks). Other types of BusinessObjects may be defined as subclasses.",
       "label": "Business Object"
-    },
-    "": {
-      "category": "property",
-      "description": "The main subject of interest.",
-      "label": "Primary topic"
     },
     "Contact": {
       "category": "class",
@@ -82,11 +72,6 @@
     "Agent": {
       "category": "class",
       "description": "A person / contact or organisation.",
-      "label": "Agent"
-    },
-    "foaf:Agent": {
-      "category": "class",
-      "description": "A person or Organisation.",
       "label": "Agent"
     },
     "AncillaryData": {
@@ -164,159 +149,80 @@
       "description": "The target audience (target region, target audience category but also parental guidance recommendation) for which the media resource is intended.",
       "label": "Target audience"
     },
-    "dc11:contributor": {
-      "category": "property",
-      "description": "An Agent who has participated in any phase of management of an Asset.",
-      "label": "Contributor"
-    },
     "Rating": {
       "category": "class",
       "description": "This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.",
       "label": "Rating"
-    },
-    "dc11:creator": {
-      "category": "property",
-      "description": "To identify the creator of an Asset.",
-      "label": "Creator"
     },
     "AudienceRating": {
       "category": "class",
       "description": "The audience by which the Resource can be seen according to ratings like MPAA  (http://en.wikipedia.org/wiki/Motion_picture_rating_system) or other organisational / national / local standards.",
       "label": "Audience rating"
     },
-    "dc11:date": {
-      "category": "property",
-      "description": "A date associated with an Asset.",
-      "label": "Date"
-    },
     "AudienceScoreRecordingTechnique": {
       "category": "class",
       "description": "To define the technique use to measure an audience score.",
       "label": "Audience score recording technique"
-    },
-    "dc11:description": {
-      "category": "property",
-      "description": "A description of an Asset.",
-      "label": "Description"
     },
     "AudioChannelFunction": {
       "category": "class",
       "description": "To define the function of an AudioChannel.",
       "label": "Audio channel function"
     },
-    "dc11:format": {
-      "category": "property",
-      "description": "Information about the Format of a Resource.",
-      "label": "Format"
-    },
     "AudioChannelPurpose": {
       "category": "class",
       "description": "To define the purpose of an AudioChannel.",
       "label": "Audio channel purpose"
-    },
-    "dc11:identifier": {
-      "category": "property",
-      "description": "To provide a simple not strongly structured identifier.",
-      "label": "Identifier"
     },
     "AudioCodec": {
       "category": "class",
       "description": "To provide information about an audio codec.",
       "label": "Audio codec"
     },
-    "dc11:language": {
-      "category": "property",
-      "label": "To define languages associated with an Asset."
-    },
     "Codec": {
       "category": "class",
       "description": "To provide information on a codec.",
       "label": "Codec"
-    },
-    "dc11:publisher": {
-      "category": "property",
-      "description": "An Agent involved in the distribution of content.",
-      "label": "Publisher"
     },
     "AudioContent": {
       "category": "class",
       "description": "An audioContent defines one component of a programme (e.g. background music), its association with an audioGroup (e.g. a 2.0 audioPackFormat of audioChannelFormats for stereo reproduction), its association with an audioStreamFormat, and its set of loudness parameters.",
       "label": "Audio content"
     },
-    "dc11:rights": {
-      "category": "property",
-      "description": "Rights information related to an Asset, aPublicationEvent, a BusinessObject or a resource.",
-      "label": "Rights"
-    },
     "Programme": {
       "category": "class",
       "description": "An EditorialObject corresponding to a MediaResource ready for publication.",
       "label": "Programme"
-    },
-    "dc11:source": {
-      "category": "property",
-      "description": "To identify a Resource as the source of another Resource.",
-      "label": "Source"
     },
     "AudioContent_Type": {
       "category": "class",
       "description": "to define a type of AudioContent.",
       "label": "Audio content type"
     },
-    "dc11:subject": {
-      "category": "property",
-      "description": "To associate a Subject or topic addressed by a BusinessObject / Resource.",
-      "label": "Subject"
-    },
     "AudioDescription": {
       "category": "class",
       "description": "A Track containing audio description.",
       "label": "Audio description"
-    },
-    "dc11:title": {
-      "category": "property",
-      "description": "The title by which a BusinessObject is known.",
-      "label": "Title"
     },
     "AudioTrack": {
       "category": "class",
       "description": "An audioTrack is the basic audio data container of a medium. Attribute is an unambiguous reference to this container in a given medium.",
       "label": "Audio track"
     },
-    "dc11:type": {
-      "category": "property",
-      "description": "A concept associated with an Asset.",
-      "label": "Type"
-    },
     "AudioEncodingFormat": {
       "category": "class",
       "description": "The encoding format for the audio.",
       "label": "Audio encoding format"
-    },
-    "dcterms:alternative": {
-      "category": "property",
-      "description": "An alternative to the title.",
-      "label": "Alternative title"
     },
     "EncodingFormat": {
       "category": "class",
       "description": "To provide a definition of the encoding format for audio and video. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme e.g. http://www.ebu.ch/metadata/ontologies/skos/ebu_AudioCompressionCodeCS.rdf or http://www.ebu.ch/metadata/ontologies/skos/ebu_VideoCompressionCodeCS.rdf.",
       "label": "Encoding"
     },
-    "dcterms:contributor": {
-      "category": "property",
-      "description": "In the context of EBUCore, reserved for the annotation of RDF properties.",
-      "label": "Contributor"
-    },
     "AudioFormat": {
       "category": "class",
       "description": "To define an AudioFormat.",
       "label": "Audio format"
-    },
-    "dcterms:title": {
-      "category": "property",
-      "description": "In the context of EBUCore, reserved for the annotation of RDF properties.",
-      "label": "Title"
     },
     "AudioObject": {
       "category": "class",
@@ -1377,11 +1283,6 @@
       "description": "The total number of audio tracks contained in the MediaResource.",
       "label": "Audio track number"
     },
-    "foaf:Organization": {
-      "category": "class",
-      "description": "An organisation (business, corporation, federation, etc.) or moral agent (government body).",
-      "label": "Organization"
-    },
     "awardCeremony": {
       "category": "property",
       "description": "To provide an Award ceremony name.",
@@ -1427,11 +1328,6 @@
       "description": "To provide the name of an Award.",
       "label": "Award name"
     },
-    "foaf:Person": {
-      "category": "class",
-      "description": "all types of people such as politicians, athletes, historic figures, contributors in programmes e.t.c.",
-      "label": "Person"
-    },
     "awardType": {
       "category": "property",
       "description": "To define a type of Award.",
@@ -1451,14 +1347,6 @@
       "category": "class",
       "description": "A visual / graphical representation of a concept.",
       "label": "Pictogram"
-    },
-    "ma:averageBitRate": {
-      "category": "property"
-    },
-    "foaf:img": {
-      "category": "class",
-      "description": "Animage to represent something.",
-      "label": "Image"
     },
     "bitRateOverall": {
       "category": "property",
@@ -1881,11 +1769,6 @@
       "category": "property",
       "description": "To identify a new version derived from the original.",
       "label": "Derivation target"
-    },
-    "foaf:Group": {
-      "category": "class",
-      "description": "A group of Agents.",
-      "label": "Group"
     },
     "dimensions": {
       "category": "property",
@@ -3709,11 +3592,6 @@
       "description": "To identify mediaResources used to compose an Essence.",
       "label": "Media Resource"
     },
-    "ma:hasPermissions": {
-      "category": "property",
-      "description": "To define permissions as defined in the W3C media ontology (ma-ont)",
-      "label": "Permissions"
-    },
     "isDerivedFrom": {
       "category": "property",
       "description": "Identifies a content-based relationship between two resources.",
@@ -3944,16 +3822,10 @@
       "description": "The latitude of the Location.",
       "label": "Latitude"
     },
-    "wgs:lat": {
-      "category": "property"
-    },
     "locationLongitude": {
       "category": "property",
       "description": "To define the longitude of the Location.",
       "label": "Longitude"
-    },
-    "wgs:long": {
-      "category": "property"
     },
     "locationName": {
       "category": "property",
@@ -4999,16 +4871,6 @@
       "category": "property",
       "description": "A title used while content is not complete.",
       "label": "Working title"
-    },
-    "foaf:member": {
-      "category": "property",
-      "description": "To identify an Agent member of a Group.",
-      "label": "Group member"
-    },
-    "foaf:name": {
-      "category": "property",
-      "description": "To name an Agent.",
-      "label": "Name"
     }
   }
 }

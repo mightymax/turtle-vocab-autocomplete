@@ -99,9 +99,6 @@
       "description": "Abstract base class for test environments, holding information on how to set up a test case.",
       "label": "Test environment"
     },
-    "owl:Class": {
-      "category": "class"
-    },
     "Action": {
       "category": "class",
       "description": "An executable command triggered by an agent, backed by a Script implementation. Actions may get deactivated using sh:deactivated.",

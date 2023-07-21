@@ -39,17 +39,6 @@
       "description": "A Wikipedia article",
       "label": "Wikipedia Article"
     },
-    "foaf:name": {
-      "category": "property"
-    },
-    "skos:notation": {
-      "category": "property",
-      "description": "Used to store the values of feature codes",
-      "label": "notation"
-    },
-    "skos:prefLabel": {
-      "category": "property"
-    },
     "alternateName": {
       "category": "property"
     },

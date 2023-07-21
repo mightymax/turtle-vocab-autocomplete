@@ -4,12 +4,6 @@
   "label": "Ontology for Media Resources",
   "prefix": "ma",
   "items": {
-    "dc11:date": {
-      "category": "property"
-    },
-    "owl:Thing": {
-      "category": "class"
-    },
     "Agent": {
       "category": "class",
       "description": "A person or organisation contributing to the media resource."
@@ -65,9 +59,6 @@
     "Person": {
       "category": "class",
       "description": "A physical person."
-    },
-    "": {
-      "category": "class"
     },
     "alternativeTitle": {
       "category": "property",

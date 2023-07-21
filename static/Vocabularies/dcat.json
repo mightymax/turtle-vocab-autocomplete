@@ -69,9 +69,6 @@
       "description": "El formato de la distribución en el que los datos están en forma comprimida, e.g. para reducir el tamaño del archivo a bajar.",
       "label": "compression format"
     },
-    "": {
-      "category": "class"
-    },
     "contactPoint": {
       "category": "property",
       "description": "Información relevante de contacto para el recurso catalogado. Se recomienda el uso de vCard.",
@@ -146,14 +143,6 @@
       "category": "property",
       "description": "Det anbefales at taksonomien organiseres i et skos:ConceptScheme, skos:Collection, owl:Ontology eller lignende, som giver mulighed for at ethvert medlem af taksonomien kan forsynes med en IRI og udgives som linked-data.",
       "label": "emnetaksonomi"
-    },
-    "foaf:homepage": {
-      "category": "property",
-      "description": "This axiom needed so that Protege loads DCAT2 without errors."
-    },
-    "foaf:primaryTopic": {
-      "category": "property",
-      "description": "This axiom needed so that Protege loads DCAT2 without errors."
     },
     "bbox": {
       "category": "property",

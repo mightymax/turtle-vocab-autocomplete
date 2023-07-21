@@ -4,38 +4,6 @@
   "label": "QUDT Schema",
   "prefix": "qudt",
   "items": {
-    "dcterms:abstract": {
-      "category": "property",
-      "label": "abstract"
-    },
-    "dcterms:contributor": {
-      "category": "property",
-      "label": "contributor"
-    },
-    "dcterms:creator": {
-      "category": "property",
-      "label": "creator"
-    },
-    "dcterms:description": {
-      "category": "property",
-      "label": "description"
-    },
-    "dcterms:rights": {
-      "category": "property",
-      "label": "rights"
-    },
-    "dcterms:source": {
-      "category": "property",
-      "label": "source"
-    },
-    "dcterms:subject": {
-      "category": "property",
-      "label": "subject"
-    },
-    "dcterms:title": {
-      "category": "property",
-      "label": "title"
-    },
     "defaultValue": {
       "category": "property",
       "label": "Default Value"
@@ -59,14 +27,6 @@
       "category": "property",
       "description": "<em>ucumCode</em> associates a QUDT unit with with a UCUM case-sensitive code.",
       "label": "ucum case-sensitive code"
-    },
-    "dcterms:created": {
-      "category": "property",
-      "label": "created"
-    },
-    "dcterms:modified": {
-      "category": "property",
-      "label": "modified"
     },
     "elementType": {
       "category": "property",
@@ -161,10 +121,6 @@
     "orderedType": {
       "category": "property",
       "label": "ordered type"
-    },
-    "prov:wasDerivedFrom": {
-      "category": "property",
-      "label": "was derived from"
     },
     "byRow": {
       "category": "property",
@@ -1141,10 +1097,6 @@
       "description": "A three-tuple is a tuple with exactly three members. A Three-Tuple Type is a data type that defines the type properties of a class of three-tuples and their members.",
       "label": "Three-Tuple Type"
     },
-    "dcterms:isReplacedBy": {
-      "category": "property",
-      "label": "is replaced by"
-    },
     "Three-Tuple": {
       "category": "class",
       "description": "A three-tuple is a tuple with exactly three members. A Three-Tuple Type is a data type that defines the type properties of a class of three-tuples and their members.",
@@ -1388,9 +1340,6 @@
     "modalCue": {
       "category": "property",
       "label": "modal cue"
-    },
-    "": {
-      "category": "class"
     },
     "visualCue": {
       "category": "property",

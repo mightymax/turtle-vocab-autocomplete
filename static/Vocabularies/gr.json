@@ -4,27 +4,6 @@
   "label": "The GoodRelations Vocabulary for Semantic Web-based E-Commerce",
   "prefix": "gr",
   "items": {
-    "dc11:contributor": {
-      "category": "property"
-    },
-    "dc11:creator": {
-      "category": "property"
-    },
-    "dc11:rights": {
-      "category": "property"
-    },
-    "dc11:subject": {
-      "category": "property"
-    },
-    "dc11:title": {
-      "category": "property"
-    },
-    "dcterms:license": {
-      "category": "property"
-    },
-    "owl:deprecated": {
-      "category": "property"
-    },
     "displayPosition": {
       "category": "property",
       "description": "The position at which the option or element should be listed in a menu or user dialog, lower numbers come first.  The main usage of this property are the days of the week (gr:DayOfWeek), but it is also possible to apply it e.g. to product features or any other conceptual element. Note: Rely on this property only for data originating from a single RDF graph; otherwise, unpredictable results are possible.",
@@ -44,9 +23,6 @@
       "category": "class",
       "description": "The superclass of all classes describing products or services types, either by nature or purpose. Examples for such subclasses are \"TV set\", \"vacuum cleaner\", etc. An instance of this class can be either an actual product or service (gr:Individual), a placeholder instance for unknown instances of a mass-produced commodity (gr:SomeItems), or a model / prototype specification (gr:ProductOrServiceModel). When in doubt, use gr:SomeItems.  Examples: a) MyCellphone123, i.e. my personal, tangible cell phone (gr:Individual) b) Siemens1234, i.e. the Siemens cell phone make and model 1234 (gr:ProductOrServiceModel) c) dummyCellPhone123 as a placeholder for actual instances of a certain kind of cell phones (gr:SomeItems)  Note: Your first choice for specializations of gr:ProductOrService should be http://www.productontology.org.  Compatibility with schema.org: This class is (approximately) equivalent to http://schema.org/Product.",
       "label": "Product or service"
-    },
-    "foaf:homepage": {
-      "category": "property"
     },
     "Individual": {
       "category": "class",
@@ -133,9 +109,6 @@
       "description": "The warranty scope represents types of services that will be provided free of charge by the vendor or manufacturer in the case of a defect (e.g. labor and parts, just parts), as part of the warranty included in an gr:Offering. The actual services may be provided by the gr:BusinessEntity making the offering, by the manufacturer of the product, or by a third party.  Examples: Parts and Labor, Parts",
       "label": "Warranty scope"
     },
-    "": {
-      "category": "class"
-    },
     "DeliveryModeParcelService": {
       "category": "class",
       "description": "A private parcel service as the delivery mode available for a certain offering.  Examples: UPS, DHL",
@@ -155,9 +128,6 @@
       "category": "class",
       "description": "A unit price specification is a conceptual entity that specifies the price asked for a given gr:Offering by the respective gr:Business Entity. An offering may be linked to multiple unit price specifications that specify alternative prices for non-overlapping sets of conditions (e.g. quantities or sales regions) or with differing validity periods.  A unit price specification is characterized by (1) the lower and upper limits and the unit of measurement of the eligible quantity, (2) by a monetary amount per unit of the product or service, and (3)  whether this prices includes local sales taxes, namely VAT.  Example: The price, including VAT, for 1 kg of a given material is 5 Euros per kg for 0 - 5 kg and 4 Euros for quantities above 5 kg.  The eligible quantity interval for a given price is specified using the object property gr:hasEligibleQuantity, which points to an instance of gr:QuantitativeValue. The currency is specified using the gr:hasCurrency property, which points to an ISO 4217 currency code. The unit of measurement for the eligible quantity is specified using the gr:hasUnitOfMeasurement datatype property, which points to an UN/CEFACT Common Code (3 characters).  In most cases, the appropriate unit of measurement is the UN/CEFACT Common Code \"C62\" for \"Unit or piece\", since a gr:Offering is defined by the quantity and unit of measurement of all items included (e.g. \"1 kg of bananas plus a 2 kg of apples\"). As long at the offering consists of only one item, it is also possible to use an unit of measurement of choice for specifying the price per unit. For bundles, however, only  \"C62\" for \"Unit or piece\" is a valid unit of measurement.  You can assume that the price is given per unit or piece if there is no gr:hasUnitOfMeasurement property attached to the price.  Whether VAT and sales taxes are included in this price is specified using the property gr:valueAddedTaxIncluded (xsd:boolean).  The price per unit of measurement is specified as a float value of the gr:hasCurrencyValue property. The currency is specified via the gr:hasCurrency datatype property. Whether the price includes VAT or not is indicated by the gr:valueAddedTaxIncluded datatype property.  The property priceType can be used to indicate that the price is a retail price recommendation only (i.e. a list price).  If the price can only be given as a range, use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue for the upper and lower bounds.  Important: When querying for the price, always use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue.  Note 1: Due to the complexity of pricing scenarios in various industries, it may be necessary to create extensions of this fundamental model of price specifications. Such can be done easily by importing and refining the GoodRelations ontology.  Note 2: For Google, attaching a gr:validThrough statement to a gr:UnitPriceSpecification is mandatory.",
       "label": "Unit price specification"
-    },
-    "schema:Product": {
-      "category": "class"
     },
     "ProductOrServiceModel": {
       "category": "class",
@@ -203,18 +173,6 @@
       "category": "class",
       "description": "An instance of this class is an actual integer value for a quantitative property of a product. This instance is usually characterized by a minimal value, a maximal value, and a unit of measurement.  Example: A seating capacity between 1 and 8 persons.  Note: Users must keep in mind that ranges in here mean that ALL possible values in this interval are covered. (Sometimes, the actual commitment may be less than that: \"We sell cars from 2 - 12 seats\" does often not really mean that they have cars with 2,3,4,...12 seats.). Someone renting out two types of rowing boats, one that fits for 1 or 2 people, and another that must be operated by 4 people cannot claim to rent boats with a seating capacity between 1 and 4 people. He or she is offering two boat types for 1-2 and 4 persons.  Compatibility with schema.org: This class is a subclass of http://schema.org/Quantity.",
       "label": "Quantitative value integer"
-    },
-    "schema:Offer": {
-      "category": "class"
-    },
-    "schema:Organization": {
-      "category": "class"
-    },
-    "schema:Person": {
-      "category": "class"
-    },
-    "schema:Place": {
-      "category": "class"
     },
     "hasNext": {
       "category": "property",
@@ -466,15 +424,6 @@
       "description": "The width of the gr:ProductOrService. Typical unit code(s): CMT for centimeters, INH for inches",
       "label": "width (0..1)"
     },
-    "schema:image": {
-      "category": "property"
-    },
-    "foaf:depiction": {
-      "category": "property"
-    },
-    "schema:manufacturer": {
-      "category": "property"
-    },
     "amountOfThisGood": {
       "category": "property",
       "description": "This property specifies the quantity of the goods included in the gr:Offering via this gr:TypeAndQuantityNode. The quantity is given in the unit of measurement attached to the gr:TypeAndQuantityNode.",
@@ -564,9 +513,6 @@
       "category": "property",
       "description": "The EAN·UCC-13 code of the given gr:ProductOrService or gr:Offering. This code is now officially called GTIN-13 (Global Trade Identifier Number) or EAN·UCC-13. Former 12-digit UPC codes can be converted into EAN·UCC-13 code by simply adding a preceeding zero.  Note 1: When using this property for searching by 12-digit UPC codes, you must add a preceeding zero digit. Note 2: As of January 1, 2007, the former ISBN numbers for books etc. have been integrated into the EAN·UCC-13 code. For each old ISBN-10 code, there exists a proper translation into EAN·UCC-13 by adding \"978\" or \"979\" as prefix. Since the old ISBN-10 is now deprecated, GoodRelations does not provide a property for ISBNs.",
       "label": "has EAN/UCC-13 (0..*)"
-    },
-    "schema:productID": {
-      "category": "property"
     },
     "hasGTIN-14": {
       "category": "property",
@@ -707,12 +653,6 @@
       "category": "property",
       "description": "The Value-added Tax ID of the gr:BusinessEntity. See http://en.wikipedia.org/wiki/Value_added_tax_identification_number for details.",
       "label": "VAT ID (0..1)"
-    },
-    "schema:description": {
-      "category": "property"
-    },
-    "schema:name": {
-      "category": "property"
     }
   }
 }

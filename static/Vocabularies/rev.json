@@ -4,15 +4,6 @@
   "label": "RDF Review Vocabulary",
   "prefix": "rev",
   "items": {
-    "dc11:date": {
-      "category": "property"
-    },
-    "dc11:description": {
-      "category": "property"
-    },
-    "dc11:title": {
-      "category": "property"
-    },
     "positiveVotes": {
       "category": "property",
       "description": "Number of positive usefulness votes (integer)",
@@ -58,18 +49,6 @@
       "description": "A review of an work",
       "label": "Review"
     },
-    "rdfs:Class": {
-      "category": "class"
-    },
-    "foaf:Agent": {
-      "category": "class"
-    },
-    "rdfs:Resource": {
-      "category": "class"
-    },
-    "foaf:Person": {
-      "category": "class"
-    },
     "commenter": {
       "category": "property",
       "description": "The commenter on the review",
@@ -104,12 +83,6 @@
       "category": "property",
       "description": "The person that has written the review",
       "label": "reviewer"
-    },
-    "vs:moreinfo": {
-      "category": "property"
-    },
-    "vs:term_status": {
-      "category": "property"
     }
   }
 }

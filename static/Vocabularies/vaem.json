@@ -2,50 +2,6 @@
   "iri": "http://www.linkedmodel.org/schema/vaem#",
   "prefix": "vaem",
   "items": {
-    "dcterms:abstract": {
-      "category": "property",
-      "label": "abstract"
-    },
-    "dcterms:author": {
-      "category": "property",
-      "label": "author"
-    },
-    "dcterms:contributor": {
-      "category": "property",
-      "label": "contributor"
-    },
-    "dcterms:created": {
-      "category": "property",
-      "label": "created"
-    },
-    "dcterms:creator": {
-      "category": "property",
-      "label": "creator"
-    },
-    "dcterms:description": {
-      "category": "property",
-      "label": "description"
-    },
-    "dcterms:modified": {
-      "category": "property",
-      "label": "modified"
-    },
-    "dcterms:replaces": {
-      "category": "property",
-      "label": "replaces"
-    },
-    "dcterms:rights": {
-      "category": "property",
-      "label": "rights"
-    },
-    "dcterms:subject": {
-      "category": "property",
-      "label": "subject"
-    },
-    "dcterms:title": {
-      "category": "property",
-      "label": "title"
-    },
     "hasGraphMetadata": {
       "category": "property"
     },

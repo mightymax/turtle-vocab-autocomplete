@@ -112,9 +112,6 @@
       "description": "Comienzo de una entidad temporal.",
       "label": "has beginning"
     },
-    "": {
-      "category": "class"
-    },
     "hasTime": {
       "category": "property",
       "description": "Proporciona soporte a la asociación de una entidad temporal (instante o intervalo) a cualquier cosa.",

@@ -114,9 +114,6 @@
       "description": "A forum or community for developers of this project.",
       "label": "developer forum"
     },
-    "": {
-      "category": "class"
-    },
     "developer": {
       "category": "property",
       "description": "Desarrollador de software para el proyecto.",

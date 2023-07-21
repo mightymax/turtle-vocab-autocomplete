@@ -4,24 +4,6 @@
   "label": "W3C PROVenance Interchange",
   "prefix": "prov",
   "items": {
-    "rdfs:comment": {
-      "category": "property",
-      "description": ""
-    },
-    "rdfs:isDefinedBy": {
-      "category": "property"
-    },
-    "rdfs:label": {
-      "category": "property",
-      "description": ""
-    },
-    "rdfs:seeAlso": {
-      "category": "property",
-      "description": ""
-    },
-    "owl:versionInfo": {
-      "category": "property"
-    },
     "wasRevisionOf": {
       "category": "property",
       "description": "A revision is a derivation that revises an entity into a revised version.",
@@ -80,9 +62,6 @@
     },
     "sharesDefinitionWith": {
       "category": "property"
-    },
-    "owl:Thing": {
-      "category": "class"
     },
     "order": {
       "category": "property",
@@ -313,12 +292,6 @@
       "category": "class",
       "description": "An instance of prov:Usage provides additional descriptions about the binary prov:used relation from some prov:Activity to an prov:Entity that it used. For example, :keynote prov:used :podium; prov:qualifiedUsage [ a prov:Usage; prov:entity :podium; :foo :bar ].",
       "label": "Usage"
-    },
-    "": {
-      "category": "class"
-    },
-    "owl:topObjectProperty": {
-      "category": "property"
     },
     "wasDerivedFrom": {
       "category": "property",

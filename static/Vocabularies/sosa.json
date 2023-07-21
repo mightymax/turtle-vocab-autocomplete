@@ -4,54 +4,6 @@
   "label": "Sensor, Observation, Sample, and Actuator (SOSA) Ontology",
   "prefix": "sosa",
   "items": {
-    "dcterms:created": {
-      "category": "property"
-    },
-    "dcterms:creator": {
-      "category": "property"
-    },
-    "dcterms:description": {
-      "category": "property"
-    },
-    "dcterms:license": {
-      "category": "property"
-    },
-    "dcterms:rights": {
-      "category": "property"
-    },
-    "dcterms:title": {
-      "category": "property"
-    },
-    "vann:preferredNamespacePrefix": {
-      "category": "property"
-    },
-    "vann:preferredNamespaceUri": {
-      "category": "property"
-    },
-    "schema:domainIncludes": {
-      "category": "property"
-    },
-    "schema:rangeIncludes": {
-      "category": "property"
-    },
-    "skos:definition": {
-      "category": "property"
-    },
-    "skos:example": {
-      "category": "property"
-    },
-    "skos:note": {
-      "category": "property"
-    },
-    "foaf:name": {
-      "category": "property"
-    },
-    "": {
-      "category": "class"
-    },
-    "time:TemporalEntity": {
-      "category": "class"
-    },
     "ActuatableProperty": {
       "category": "class",
       "description": "An actuatable quality (property, characteristic) of a FeatureOfInterest.",
@@ -116,9 +68,6 @@
       "category": "class",
       "description": "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.",
       "label": "Sensor"
-    },
-    "foaf:Agent": {
-      "category": "class"
     },
     "actsOnProperty": {
       "category": "property",

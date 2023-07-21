@@ -4,9 +4,6 @@
   "label": "Internet Calendaring and Scheduling Core Object Specification (iCalendar)",
   "prefix": "ical",
   "items": {
-    "dc11:source": {
-      "category": "property"
-    },
     "attach": {
       "category": "property",
       "description": "The property provides the capability to associate a document object with a calendar component."
@@ -66,9 +63,6 @@
       "category": "property",
       "description": "value type: URI",
       "label": "see also"
-    },
-    "rdf:value": {
-      "category": "property"
     },
     "X-": {
       "category": "property",
@@ -345,9 +339,6 @@
     "wkst": {
       "category": "property",
       "label": "WKST"
-    },
-    "": {
-      "category": "class"
     },
     "DomainOf_rrule": {
       "category": "class"

@@ -4,36 +4,6 @@
   "label": "Functional Requirements for Bibliographic Records (FRBR)",
   "prefix": "frbr",
   "items": {
-    "dc11:contributor": {
-      "category": "property"
-    },
-    "dc11:creator": {
-      "category": "property"
-    },
-    "dc11:date": {
-      "category": "property"
-    },
-    "dc11:description": {
-      "category": "property"
-    },
-    "dc11:rights": {
-      "category": "property"
-    },
-    "dc11:title": {
-      "category": "property"
-    },
-    "rdfs:comment": {
-      "category": "property"
-    },
-    "rdfs:label": {
-      "category": "property"
-    },
-    "": {
-      "category": "class"
-    },
-    "rdfs:isDefinedBy": {
-      "category": "property"
-    },
     "Concept": {
       "category": "class",
       "description": "An abstract notion or idea.  The entity defined as concept encompasses a comprehensive range of abstractions that may be the subject of a work: fields of knowledge, disciplines, schools of thought (philosophies, religions, political ideologies, etc.), theories, processes, techniques, practices, etc.  A concept may be broad in nature or narrowly defined and precise.",
@@ -272,9 +242,6 @@
       "category": "property",
       "description": "It identifies the manifestation/item of a reproduced one.",
       "label": "is reproduction of"
-    },
-    "owl:topObjectProperty": {
-      "category": "property"
     },
     "revision": {
       "category": "property",

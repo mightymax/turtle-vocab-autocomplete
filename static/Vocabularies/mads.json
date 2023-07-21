@@ -275,9 +275,6 @@
       "category": "class",
       "label": "Topic Element"
     },
-    "": {
-      "category": "class"
-    },
     "activityEndDate": {
       "category": "property",
       "description": "Latest date in a period of activity.",

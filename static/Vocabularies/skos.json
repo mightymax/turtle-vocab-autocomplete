@@ -24,9 +24,6 @@
       "description": "Ordered collections can be used where you would like a set of concepts to be displayed in a specific order, and optionally under a 'node label'.",
       "label": "Ordered Collection"
     },
-    "": {
-      "category": "class"
-    },
     "definition": {
       "category": "property",
       "description": "A statement or formal explanation of the meaning of a concept.",
