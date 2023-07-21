@@ -2,7 +2,7 @@
   "name": "turtle-vocab-autocomplete",
   "displayName": "Turtle vocabulary autocompleter.",
   "description": "Autocomplete prefixes and RDF Classes and Properties from some well known vocabularies",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Mark Lindeman",
     "email": "mark.lindeman@triply.cc"
