@@ -1,0 +1,171 @@
+{
+  "iri": "http://www.geonames.org/ontology#",
+  "description": "The Geonames ontologies provides elements of description for geographical features, in particular those defined in the geonames.org data base",
+  "label": "The Geonames ontology",
+  "prefix": "gn",
+  "items": {
+    "Code": {
+      "category": "class",
+      "description": "A feature code.",
+      "label": "Code"
+    },
+    "Class": {
+      "category": "class",
+      "description": "A class of features.",
+      "label": "Class"
+    },
+    "Feature": {
+      "category": "class",
+      "description": "A geographical feature",
+      "label": "Feature"
+    },
+    "GeonamesFeature": {
+      "category": "class",
+      "description": "A feature described in geonames database, uniquely defined by its geonames identifier",
+      "label": "Geonames Feature"
+    },
+    "Map": {
+      "category": "class",
+      "description": "A Web page displaying a map",
+      "label": "Map"
+    },
+    "RDFData": {
+      "category": "class",
+      "description": "A Document containing RDF description of one or several features.",
+      "label": "RDF Data"
+    },
+    "WikipediaArticle": {
+      "category": "class",
+      "description": "A Wikipedia article",
+      "label": "Wikipedia Article"
+    },
+    "foaf:name": {
+      "category": "property"
+    },
+    "skos:notation": {
+      "category": "property",
+      "description": "Used to store the values of feature codes",
+      "label": "notation"
+    },
+    "skos:prefLabel": {
+      "category": "property"
+    },
+    "alternateName": {
+      "category": "property"
+    },
+    "colloquialName": {
+      "category": "property",
+      "label": "colloquial name"
+    },
+    "countryCode": {
+      "category": "property",
+      "description": "A two letters country code in the ISO 3166 list",
+      "label": "ISO country code"
+    },
+    "geonamesID": {
+      "category": "property",
+      "label": "geonames identifier"
+    },
+    "historicalName": {
+      "category": "property",
+      "label": "historical name"
+    },
+    "name": {
+      "category": "property",
+      "description": "The main international name of a feature. The value has no xml:lang tag.",
+      "label": "name"
+    },
+    "officialName": {
+      "category": "property",
+      "description": "A name in an official local language",
+      "label": "official name"
+    },
+    "population": {
+      "category": "property",
+      "label": "population"
+    },
+    "postalCode": {
+      "category": "property",
+      "label": "postal code"
+    },
+    "shortName": {
+      "category": "property",
+      "label": "short name"
+    },
+    "childrenFeatures": {
+      "category": "property",
+      "description": "Links to an RDF document containing the descriptions of children features",
+      "label": "children features"
+    },
+    "featureClass": {
+      "category": "property",
+      "description": "The main category of the feature, as defined in geonames taxonomy.",
+      "label": "feature class"
+    },
+    "featureCode": {
+      "category": "property",
+      "description": "Type of the feature, as defined in geonames taxonomy.",
+      "label": "feature code"
+    },
+    "locatedIn": {
+      "category": "property",
+      "description": "Indicates that the subject resource is located in the object feature",
+      "label": "located in"
+    },
+    "locationMap": {
+      "category": "property",
+      "description": "A geonames map centered on the feature.",
+      "label": "map"
+    },
+    "nearby": {
+      "category": "property",
+      "description": "A feature close to the reference feature",
+      "label": "nearby"
+    },
+    "nearbyFeatures": {
+      "category": "property",
+      "description": "Links to an RDF document containing the descriptions of nearby features",
+      "label": "nearby features"
+    },
+    "neighbour": {
+      "category": "property",
+      "description": "A feature sharing a common boarder with the reference feature",
+      "label": "neighbour"
+    },
+    "neighbouringFeatures": {
+      "category": "property",
+      "description": "Links to an RDF document containing the descriptions of neighbouring features. Applies when the feature has definite boarders.",
+      "label": "neighbouring features"
+    },
+    "parentADM1": {
+      "category": "property",
+      "label": "level 1 administrative parent"
+    },
+    "parentFeature": {
+      "category": "property",
+      "description": "A feature parent of the current one, in either administrative or physical subdivision.",
+      "label": "parent feature"
+    },
+    "parentADM2": {
+      "category": "property",
+      "label": "level 2 administrative parent"
+    },
+    "parentADM3": {
+      "category": "property",
+      "label": "level 3 administrative parent"
+    },
+    "parentADM4": {
+      "category": "property",
+      "label": "level 4 administrative parent"
+    },
+    "parentCountry": {
+      "category": "property",
+      "label": "parent country"
+    },
+    "wikipediaArticle": {
+      "category": "property",
+      "description": "A Wikipedia article of which subject is the resource.",
+      "label": "wikipedia article"
+    }
+  }
+}

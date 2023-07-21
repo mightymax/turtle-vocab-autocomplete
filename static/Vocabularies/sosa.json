@@ -1,0 +1,239 @@
+{
+  "iri": "http://www.w3.org/ns/sosa/",
+  "description": "This ontology is based on the SSN Ontology by the W3C Semantic Sensor Networks Incubator Group (SSN-XG), together with considerations from the W3C/OGC Spatial Data on the Web Working Group.",
+  "label": "Sensor, Observation, Sample, and Actuator (SOSA) Ontology",
+  "prefix": "sosa",
+  "items": {
+    "dcterms:created": {
+      "category": "property"
+    },
+    "dcterms:creator": {
+      "category": "property"
+    },
+    "dcterms:description": {
+      "category": "property"
+    },
+    "dcterms:license": {
+      "category": "property"
+    },
+    "dcterms:rights": {
+      "category": "property"
+    },
+    "dcterms:title": {
+      "category": "property"
+    },
+    "vann:preferredNamespacePrefix": {
+      "category": "property"
+    },
+    "vann:preferredNamespaceUri": {
+      "category": "property"
+    },
+    "schema:domainIncludes": {
+      "category": "property"
+    },
+    "schema:rangeIncludes": {
+      "category": "property"
+    },
+    "skos:definition": {
+      "category": "property"
+    },
+    "skos:example": {
+      "category": "property"
+    },
+    "skos:note": {
+      "category": "property"
+    },
+    "foaf:name": {
+      "category": "property"
+    },
+    "": {
+      "category": "class"
+    },
+    "time:TemporalEntity": {
+      "category": "class"
+    },
+    "ActuatableProperty": {
+      "category": "class",
+      "description": "An actuatable quality (property, characteristic) of a FeatureOfInterest.",
+      "label": "Actuatable Property"
+    },
+    "Actuation": {
+      "category": "class",
+      "description": "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator.",
+      "label": "Actuation"
+    },
+    "Actuator": {
+      "category": "class",
+      "description": "A device that is used by, or implements, an (Actuation) Procedure that changes the state of the world.",
+      "label": "Actuator"
+    },
+    "FeatureOfInterest": {
+      "category": "class",
+      "description": "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling.",
+      "label": "Feature Of Interest"
+    },
+    "ObservableProperty": {
+      "category": "class",
+      "description": "An observable quality (property, characteristic) of a FeatureOfInterest.",
+      "label": "Observable Property"
+    },
+    "Observation": {
+      "category": "class",
+      "description": "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.",
+      "label": "Observation"
+    },
+    "Platform": {
+      "category": "class",
+      "description": "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms.",
+      "label": "Platform"
+    },
+    "Procedure": {
+      "category": "class",
+      "description": "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results.",
+      "label": "Procedure"
+    },
+    "Result": {
+      "category": "class",
+      "description": "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property.",
+      "label": "Result"
+    },
+    "Sample": {
+      "category": "class",
+      "description": "A Sample is the result from an act of Sampling.",
+      "label": "Sample"
+    },
+    "Sampler": {
+      "category": "class",
+      "description": "A device that is used by, or implements, a Sampling Procedure to create or transform one or more samples.",
+      "label": "Sampler"
+    },
+    "Sampling": {
+      "category": "class",
+      "description": "An act of Sampling carries out a sampling Procedure to create or transform one or more samples.",
+      "label": "Sampling"
+    },
+    "Sensor": {
+      "category": "class",
+      "description": "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.",
+      "label": "Sensor"
+    },
+    "foaf:Agent": {
+      "category": "class"
+    },
+    "actsOnProperty": {
+      "category": "property",
+      "description": "Relation between an Actuation and the property of a FeatureOfInterest it is acting upon.",
+      "label": "acts on property"
+    },
+    "isActedOnBy": {
+      "category": "property",
+      "description": "Relation between an ActuatableProperty of a FeatureOfInterest and an Actuation changing its state.",
+      "label": "is acted on by"
+    },
+    "hasFeatureOfInterest": {
+      "category": "property",
+      "description": "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled.",
+      "label": "has feature of interest"
+    },
+    "isFeatureOfInterestOf": {
+      "category": "property",
+      "description": "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it.",
+      "label": "is feature of interest of"
+    },
+    "hasResult": {
+      "category": "property",
+      "description": "Relation linking an Observation or Actuation or act of Sampling and a Result or Sample.",
+      "label": "has result"
+    },
+    "isResultOf": {
+      "category": "property",
+      "description": "Relation linking a Result to the Observation or Actuation or act of Sampling that created or caused it.",
+      "label": "is result of"
+    },
+    "hasSample": {
+      "category": "property",
+      "description": "Relation between a FeatureOfInterest and the Sample used to represent it.",
+      "label": "has sample"
+    },
+    "isSampleOf": {
+      "category": "property",
+      "description": "Relation from a Sample to the FeatureOfInterest that it is intended to be representative of.",
+      "label": "is sample of"
+    },
+    "hosts": {
+      "category": "property",
+      "description": "Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it.",
+      "label": "hosts"
+    },
+    "isHostedBy": {
+      "category": "property",
+      "description": "Relation between a Sensor, Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by.",
+      "label": "is hosted by"
+    },
+    "isObservedBy": {
+      "category": "property",
+      "description": "Relation between an ObservableProperty and the Sensor able to observe it.",
+      "label": "is observed by"
+    },
+    "observes": {
+      "category": "property",
+      "description": "Relation between a Sensor and an ObservableProperty that it is capable of sensing.",
+      "label": "observes"
+    },
+    "madeActuation": {
+      "category": "property",
+      "description": "Relation between an Actuator and the Actuation it has made.",
+      "label": "made actuation"
+    },
+    "madeByActuator": {
+      "category": "property",
+      "description": "Relation linking an Actuation to the Actuator that made that Actuation.",
+      "label": "made by actuator"
+    },
+    "madeBySampler": {
+      "category": "property",
+      "description": "Relation linking an act of Sampling to the Sampler (sampling device or entity) that made it.",
+      "label": "made by sampler"
+    },
+    "madeSampling": {
+      "category": "property",
+      "description": "Relation between a Sampler (sampling device or entity) and the Sampling act it performed.",
+      "label": "made sampling"
+    },
+    "madeBySensor": {
+      "category": "property",
+      "description": "Relation between an Observation and the Sensor which made the Observation.",
+      "label": "made by sensor"
+    },
+    "madeObservation": {
+      "category": "property",
+      "description": "Relation between a Sensor and an Observation made by the Sensor.",
+      "label": "made observation"
+    },
+    "observedProperty": {
+      "category": "property",
+      "description": "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation.",
+      "label": "observed property"
+    },
+    "phenomenonTime": {
+      "category": "property",
+      "description": "The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity.",
+      "label": "phenomenon time"
+    },
+    "usedProcedure": {
+      "category": "property",
+      "description": "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.",
+      "label": "used procedure"
+    },
+    "hasSimpleResult": {
+      "category": "property",
+      "description": "The simple value of an Observation or Actuation or act of Sampling.",
+      "label": "has simple result"
+    },
+    "resultTime": {
+      "category": "property",
+      "description": "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed.",
+      "label": "result time"
+    }
+  }
+}

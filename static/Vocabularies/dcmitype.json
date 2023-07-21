@@ -1,0 +1,68 @@
+{
+  "iri": "http://purl.org/dc/dcmitype/",
+  "description": "The set of classes specified by the DCMI Type Vocabulary, used to categorize the nature or genre of the resource.",
+  "label": "DCMI Type Vocabulary",
+  "prefix": "dcmitype",
+  "items": {
+    "Collection": {
+      "category": "class",
+      "description": "A collection is described as a group; its parts may also be separately described.",
+      "label": "Collection"
+    },
+    "Dataset": {
+      "category": "class",
+      "description": "Examples include lists, tables, and databases.  A dataset may be useful for direct machine processing.",
+      "label": "Dataset"
+    },
+    "Event": {
+      "category": "class",
+      "description": "Metadata for an event provides descriptive information that is the basis for discovery of the purpose, location, duration, and responsible agents associated with an event. Examples include an exhibition, webcast, conference, workshop, open day, performance, battle, trial, wedding, tea party, conflagration.",
+      "label": "Event"
+    },
+    "Image": {
+      "category": "class",
+      "description": "Examples include images and photographs of physical objects, paintings, prints, drawings, other images and graphics, animations and moving pictures, film, diagrams, maps, musical notation.  Note that Image may include both electronic and physical representations.",
+      "label": "Image"
+    },
+    "InteractiveResource": {
+      "category": "class",
+      "description": "Examples include forms on Web pages, applets, multimedia learning objects, chat services, or virtual reality environments.",
+      "label": "Interactive Resource"
+    },
+    "MovingImage": {
+      "category": "class",
+      "description": "Examples include animations, movies, television programs, videos, zoetropes, or visual output from a simulation.  Instances of the type Moving Image must also be describable as instances of the broader type Image.",
+      "label": "Moving Image"
+    },
+    "PhysicalObject": {
+      "category": "class",
+      "description": "Note that digital representations of, or surrogates for, these objects should use Image, Text or one of the other types.",
+      "label": "Physical Object"
+    },
+    "Service": {
+      "category": "class",
+      "description": "Examples include a photocopying service, a banking service, an authentication service, interlibrary loans, a Z39.50 or Web server.",
+      "label": "Service"
+    },
+    "Software": {
+      "category": "class",
+      "description": "Examples include a C source file, MS-Windows .exe executable, or Perl script.",
+      "label": "Software"
+    },
+    "Sound": {
+      "category": "class",
+      "description": "Examples include a music playback file format, an audio compact disc, and recorded speech or sounds.",
+      "label": "Sound"
+    },
+    "StillImage": {
+      "category": "class",
+      "description": "Examples include paintings, drawings, graphic designs, plans and maps. Recommended best practice is to assign the type Text to images of textual materials. Instances of the type Still Image must also be describable as instances of the broader type Image.",
+      "label": "Still Image"
+    },
+    "Text": {
+      "category": "class",
+      "description": "Examples include books, letters, dissertations, poems, newspapers, articles, archives of mailing lists. Note that facsimiles or images of texts are still of the genre Text.",
+      "label": "Text"
+    }
+  }
+}

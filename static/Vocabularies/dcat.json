@@ -1,0 +1,199 @@
+{
+  "iri": "http://www.w3.org/ns/dcat#",
+  "description": "DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. By using DCAT to describe datasets in data catalogs, publishers increase discoverability and enable applications easily to consume metadata from multiple catalogs. It further enables decentralized publishing of catalogs and facilitates federated dataset search across sites. Aggregated DCAT metadata can serve as a manifest file to facilitate digital preservation. DCAT is defined at http://www.w3.org/TR/vocab-dcat/. Any variance between that normative document and this schema is an error in this schema.",
+  "label": "The data catalog vocabulary",
+  "prefix": "dcat",
+  "items": {
+    "Catalog": {
+      "category": "class",
+      "description": "A curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog).",
+      "label": "Catalog"
+    },
+    "Dataset": {
+      "category": "class",
+      "description": "1つのエージェントによって公開またはキュレートされ、1つ以上の形式でアクセスまたはダウンロードできるデータの集合。",
+      "label": "Conjunto de datos"
+    },
+    "CatalogRecord": {
+      "category": "class",
+      "description": "C'est une classe facultative et tous les catalogues ne l'utiliseront pas. Cette classe existe pour les catalogues ayant une distinction entre les métadonnées sur le jeu de données et les métadonnées sur une entrée du jeu de données dans le catalogue.",
+      "label": "Catalog Record"
+    },
+    "Distribution": {
+      "category": "class",
+      "description": "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above).",
+      "label": "Distribuce"
+    },
+    "DataService": {
+      "category": "class",
+      "description": "Datatjenestetypen kan indikeres ved hjælp af egenskaben dct:type. Værdien kan tages fra kontrollerede udfaldsrum såsom INSPIRE spatial data service vocabulary.",
+      "label": "Data service"
+    },
+    "hadRole": {
+      "category": "property",
+      "description": "Kan vendes ved kvalificerede krediteringer til at angive en aktørs rolle i forhold en entitet. Det anbefales at værdierne styres som et kontrolleret udfaldsrum med aktørroller, såsom http://registry.it.csiro.au/def/isotc211/CI_RoleCode.",
+      "label": "haRuolo"
+    },
+    "Resource": {
+      "category": "class",
+      "description": "Recurso publicado o curado por un agente único.",
+      "label": "Catalogued resource"
+    },
+    "accessService": {
+      "category": "property",
+      "description": "A site or end-point that gives access to the distribution of the dataset.",
+      "label": "data access service"
+    },
+    "accessURL": {
+      "category": "property",
+      "description": "A URL of a resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint. Use for all cases except a simple download link, in which case downloadURL is preferred.",
+      "label": "URL d'accès"
+    },
+    "Relationship": {
+      "category": "class",
+      "description": "An association class for attaching additional information to a relationship between DCAT Resources.",
+      "label": "Relación"
+    },
+    "catalog": {
+      "category": "property",
+      "description": "A catalog whose contents are of interest in the context of this catalog.",
+      "label": "catalog"
+    },
+    "Role": {
+      "category": "class",
+      "description": "A role is the function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships.",
+      "label": "Rol"
+    },
+    "compressFormat": {
+      "category": "property",
+      "description": "El formato de la distribución en el que los datos están en forma comprimida, e.g. para reducir el tamaño del archivo a bajar.",
+      "label": "compression format"
+    },
+    "": {
+      "category": "class"
+    },
+    "contactPoint": {
+      "category": "property",
+      "description": "Información relevante de contacto para el recurso catalogado. Se recomienda el uso de vCard.",
+      "label": "Punto de contacto"
+    },
+    "dataset": {
+      "category": "property",
+      "description": "A collection of data that is listed in the catalog.",
+      "label": "قائمة بيانات"
+    },
+    "distribution": {
+      "category": "property",
+      "description": "An available distribution of the dataset.",
+      "label": "distribuce"
+    },
+    "downloadURL": {
+      "category": "property",
+      "description": "El valor es una URL.",
+      "label": "URL de descarga"
+    },
+    "endpointDescription": {
+      "category": "property",
+      "description": "An endpoint description may be expressed in a machine-readable form, such as an OpenAPI (Swagger) description, an OGC GetCapabilities response, a SPARQL Service Description, an OpenSearch or WSDL document, a Hydra API description, else in text or some other informal mode if a formal representation is not possible.",
+      "label": "descripción del end-point del servicio"
+    },
+    "endpointURL": {
+      "category": "property",
+      "description": "Kořenové umístění nebo hlavní přístupový bod služby (IRI přístupné přes Web).",
+      "label": "end-point del servicio"
+    },
+    "landingPage": {
+      "category": "property",
+      "description": "If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known), then the landing page link should be duplicated as accessURL on a distribution.",
+      "label": "destinationsside"
+    },
+    "mediaType": {
+      "category": "property",
+      "description": "Denne egenskab BØR anvendes hvis distributionens medietype optræder i 'IANA media types registry' https://www.iana.org/assignments/media-types/, ellers KAN egenskaben dct:format anvendes med et andet udfaldsrum.",
+      "label": "media type"
+    },
+    "packageFormat": {
+      "category": "property",
+      "description": "Denne egenskab kan anvendes hvis filerne i en distribution er pakket, fx i en TAR-fil, en Frictionless Data Package eller en Bagit-fil. Formatet BØR udtrykkes ved en medietype som defineret i 'IANA media types registry', hvis der optræder en relevant medietype dér: https://www.iana.org/assignments/media-types/.",
+      "label": "formato de empaquetado"
+    },
+    "qualifiedRelation": {
+      "category": "property",
+      "description": "Anvendes til at referere til en anden ressource hvor relationens betydning er kendt men ikke matcher en af de standardiserede egenskaber fra Dublin Core (dct:hasPart, dct:isPartOf, dct:conformsTo, dct:isFormatOf, dct:hasFormat, dct:isVersionOf, dct:hasVersion, dct:replaces, dct:isReplacedBy, dct:references, dct:isReferencedBy, dct:requires, dct:isRequiredBy) eller PROV-O-egenskaber (prov:wasDerivedFrom, prov:wasInfluencedBy, prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource, prov:alternateOf, prov:specializationOf).",
+      "label": "Kvalificeret relation"
+    },
+    "record": {
+      "category": "property",
+      "description": "A record describing the registration of a single dataset or data service that is part of the catalog.",
+      "label": "سجل"
+    },
+    "servesDataset": {
+      "category": "property",
+      "description": "A collection of data that this DataService can distribute.",
+      "label": "datatjeneste for datasæt"
+    },
+    "service": {
+      "category": "property",
+      "description": "A site or endpoint that is listed in the catalog.",
+      "label": "datatjeneste"
+    },
+    "theme": {
+      "category": "property",
+      "description": "El conjunto de skos:Concepts utilizados para categorizar los recursos están organizados en un skos:ConceptScheme que describe todas las categorías y sus relaciones en el catálogo.",
+      "label": "emne"
+    },
+    "themeTaxonomy": {
+      "category": "property",
+      "description": "Det anbefales at taksonomien organiseres i et skos:ConceptScheme, skos:Collection, owl:Ontology eller lignende, som giver mulighed for at ethvert medlem af taksonomien kan forsynes med en IRI og udgives som linked-data.",
+      "label": "emnetaksonomi"
+    },
+    "foaf:homepage": {
+      "category": "property",
+      "description": "This axiom needed so that Protege loads DCAT2 without errors."
+    },
+    "foaf:primaryTopic": {
+      "category": "property",
+      "description": "This axiom needed so that Protege loads DCAT2 without errors."
+    },
+    "bbox": {
+      "category": "property",
+      "description": "Den geografiske omskrevne firkant af en ressource.",
+      "label": "bounding box"
+    },
+    "byteSize": {
+      "category": "property",
+      "description": "El tamaño de una distribución en bytes.",
+      "label": "byte size"
+    },
+    "centroid": {
+      "category": "property",
+      "description": "Il range di questa proprietà è volutamente generica, con lo scopo di consentire diverse codifiche geometriche. Ad esempio, la geometria potrebbe essere codificata con WKT (geosparql:wktLiteral [GeoSPARQL]) o [GML] (geosparql:asGML [GeoSPARQL]).",
+      "label": "centroid"
+    },
+    "endDate": {
+      "category": "property",
+      "description": "El rango de esta propiedad es intencionalmente genérico con el propósito de permitir distintos niveles de precisión temporal para especificar el fin del período. Por ejemplo, puede expresarse como una fecha (xsd:date), una fecha y un tiempo (xsd:dateTime), o un año (xsd:gYear).",
+      "label": "data di fine"
+    },
+    "keyword": {
+      "category": "property",
+      "description": "A keyword or tag describing a resource.",
+      "label": "keyword"
+    },
+    "startDate": {
+      "category": "property",
+      "description": "El rango de esta propiedad es intencionalmente genérico con el propósito de permitir distintos niveles de precisión temporal para especificar el comienzo de un período. Por ejemplo, puede expresarse como una fecha (xsd:date), una fecha y un tiempo (xsd:dateTime), o un año (xsd:gYear).",
+      "label": "data di inizio"
+    },
+    "spatialResolutionInMeters": {
+      "category": "property",
+      "description": "Alternative geografiske opløsninger kan leveres som forskellige datasætdistributioner.",
+      "label": "geografisk opløsning (meter)"
+    },
+    "temporalResolution": {
+      "category": "property",
+      "description": "Alternative temporal resolutions might be provided as different dataset distributions.",
+      "label": "resolución temporal"
+    }
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "iri": "http://www.linkedmodel.org/schema/vaem#",
+  "prefix": "vaem",
+  "items": {
+    "dcterms:abstract": {
+      "category": "property",
+      "label": "abstract"
+    },
+    "dcterms:author": {
+      "category": "property",
+      "label": "author"
+    },
+    "dcterms:contributor": {
+      "category": "property",
+      "label": "contributor"
+    },
+    "dcterms:created": {
+      "category": "property",
+      "label": "created"
+    },
+    "dcterms:creator": {
+      "category": "property",
+      "label": "creator"
+    },
+    "dcterms:description": {
+      "category": "property",
+      "label": "description"
+    },
+    "dcterms:modified": {
+      "category": "property",
+      "label": "modified"
+    },
+    "dcterms:replaces": {
+      "category": "property",
+      "label": "replaces"
+    },
+    "dcterms:rights": {
+      "category": "property",
+      "label": "rights"
+    },
+    "dcterms:subject": {
+      "category": "property",
+      "label": "subject"
+    },
+    "dcterms:title": {
+      "category": "property",
+      "label": "title"
+    },
+    "hasGraphMetadata": {
+      "category": "property"
+    },
+    "logo": {
+      "category": "property",
+      "description": "The property \"vaem:logo\" is a reference to an image that is used for publishing the ontology\""
+    },
+    "usesNonImportedResource": {
+      "category": "property",
+      "description": "The property \"vaem:usesNonImportedResource\" is used to express dependencies on resources from graphs that are not imported",
+      "label": "uses non-imported resource"
+    },
+    "withAttributionTo": {
+      "category": "property",
+      "description": "The property \"vaem:withAttributionTo\" is an annotation property that is either used to hold either a string or a reference to an instance of \"voag:Attribution\", from the VOAG ontology",
+      "label": "with attribution to"
+    },
+    "comment": {
+      "category": "property",
+      "description": "An annotation property that can be freely used on any kind of resource. The range of the property is \"xsd:string\"",
+      "label": "definition"
+    },
+    "isElaboratedIn": {
+      "category": "property",
+      "description": "An annotation used to reference a graph that elaborates (adds properties and axioms to) a resource",
+      "label": "isDefinedBy"
+    },
+    "todo": {
+      "category": "property",
+      "description": "As it name implies, a way to attach an annotation about a \"todo\" task",
+      "label": "todo"
+    },
+    "Aspect": {
+      "category": "class",
+      "description": "Aspect is used to distinguish among sets of features of a domain or subject area. The term is borrowed from \"aspect-oriented\" programming, where it is used to separate concerns. An ontology may be characterized by this dimension so as to parition features that are orthogonal. For example,  in a systems ontology there may be aspects for \"structure\", \"function\", \"behavior\" and \"interface\" or \"interoperability\". A viewpoint can be distinguished by \"aspects\". For example the \"information viewpoint\" of an application can be partitioned into separate graphs for the \"security\", \"operational\" and\"data retention\" aspects.",
+      "label": "Aspect Dimension"
+    },
+    "Dimension": {
+      "category": "class",
+      "description": "A dimension identifies a separation of concens that serves as a way to categorize an ontology graph. In VAEM,  the notion of \"Dimension\" is partitioned into \"Aspect\", \"Discipline\", \"Domain\" and \"Viewpoint\".",
+      "label": "Domain"
+    },
+    "GraphRole": {
+      "category": "class",
+      "description": "GraphRole is used to characterize how a graph of resources participates in an ontology set.  For example, a graph can be a schema, vocabulary, dataset, script, or ruleset",
+      "label": "Graph role"
+    },
+    "Discipline": {
+      "category": "class",
+      "description": "A discipline is a specific area of work or study. Examples of disciplines in the engineering domain are electrical engineering, mechanical engineering and, in the financial domain, risk assessment, investment analysis.  In VAEM, discipline is used as a dimension for characterizing an ontology graph",
+      "label": "Discipline Dimension"
+    },
+    "Domain": {
+      "category": "class",
+      "description": "A domain is a subject area of interest. Examples of domains are \"enterprise\", \"process\", \"organization\" and \"system\". In VAEM, \"Domain\" is used as a dimension for characterizing an ontology graph",
+      "label": "Domain Dimension"
+    },
+    "GraphMetaData": {
+      "category": "class",
+      "description": "\"vaem:GraphMetaData\" defines basic metadata for the registration and publishing of a graph.  For specificaiton of governance the vocabulary \"VOAG\" may be used.",
+      "label": "Graph Metadata"
+    },
+    "Party": {
+      "category": "class",
+      "description": "A \"Party\" is a generalization for an actor that may be realized as a person, organizaiton or named role.",
+      "label": "Party"
+    },
+    "Viewpoint": {
+      "category": "class",
+      "description": "Viewpoint is used to denote how a set of resources, or an individual resource, is relevant to a context of use. The term \"viewpoint\" is adopted from the ISO RM-ODP specifications and its more recent use in enterprise architecture descriptions. The RM-ODP introducesd the concept of viewpoint to describe a system from a particular set of concerns. RM-ODP defines five viewpoints. Together they provide a complete description of a system: enterprise viewpoint, information viewpoint, computational viewpoint, engineering viewpoint, and technology viewpoint.  In VAEM, \"Viewpoint\" is used as a dimension for characterizing an ontology graph.  The viewpoints of an ontology may not always correpsond directly to those of a system but the idea of describing a subject area of interest from distinct viewpoints is still relevant. A viewpoint can be further distinguished by \"aspects\". For example the \"information viewpoint\" of an application can be partitioned into separate graphs for the \"security\", \"operational\" and\"data retention\" aspects.",
+      "label": "ViewpointDimension"
+    },
+    "filePrefix": {
+      "category": "property",
+      "description": "The property \"vaem:filePrefix\" is for specifying a preferred file prefix for a graph. For example a schema graph may be given the file prefix \"SCHEMA\" followed by an underscore \"_\".",
+      "label": "file prefix"
+    },
+    "description": {
+      "category": "property",
+      "label": "description"
+    },
+    "intent": {
+      "category": "property",
+      "description": "The property \"vaem:intent\" is used to outline  a statement of purpose. This typically expresses one or more desired outcomes",
+      "label": "intent"
+    },
+    "latestPublishedVersion": {
+      "category": "property",
+      "description": "The property \"vaem:latestPublishedVersion\"is a URL to documentation for the latest version of a graph.",
+      "label": "latest published version"
+    },
+    "name": {
+      "category": "property",
+      "description": "The property \"vaem:name\" is intended for general use. In many cases \"rdfs:label\" could be used give names to resources. In the case where compliance with a specific naming rule is needed,  \"vaem:name\" allows  a resource to carry a name that is used in more specific contexts.",
+      "label": "name"
+    },
+    "namespace": {
+      "category": "property",
+      "description": "The property \"vaem:namespace\" is the onotlogy URI with which a graph is primarily associated. The intent is to allow multiple graphs to define statements for resources in the same Ontology namespace. For example, a foundation level graph with the base URI of \"http://www.somesite.com/1.0/schema/OurOntology\"  may define general  concepts for \"OurOntology\". Another graph with the base URI \"http://www.somesite.com/1.0/schema/level2/OurOntology\"  may add more specific details to the same \"OurOntology\". Each of these two graphs would carry the same value for \"vaem:namespace\", that is, \"http://www.somesite.com/schema/OurOntology\".    In other words, an ontology URI is the URI associated with the resources of a controlled namespace. On the other hand the graph URIs (the base URIs) identify the graphs that hold resources that make up an ontology",
+      "label": "namespace"
+    },
+    "namespacePrefix": {
+      "category": "property",
+      "description": "The property \"vaem:namespacePrefix\" specifes a short handle or label for the URI of an Ontology.  Multiple graphs can define statements for resources in the same Ontololgy namespace. For example, a foundation level graph with the base URI of \"http://www.somesite.com/1.0/schema/OurOntology\"  may define general  concepts for \"OurOntology\". Another graph with the base URI \"http://www.somesite.com/1.0/schema/level2/OurOntology\"  may add more specific details to the same \"OurOntology\". Each of these two graphs would carry the same value for \"vaem:namespacePrefix\", for this example, perhaps, \"ourOntology\"",
+      "label": "namespace prefix"
+    },
+    "owner": {
+      "category": "property",
+      "label": "owner"
+    },
+    "previousPublishedVersion": {
+      "category": "property",
+      "description": "The property \"vaem:previousPublishedVersion\"is a URL to documentation for the previous version of a graph.",
+      "label": "previous published version"
+    },
+    "rdfxmlFileURL": {
+      "category": "property",
+      "description": "The property \"vaem:rdfxmlFileURL\" is used to provide a link to the location of the ontology's RDF/XML file",
+      "label": "RDF/XML file URL"
+    },
+    "revision": {
+      "category": "property",
+      "description": "The property \"vaem:revision\" is a property intended for general use as the name implies.",
+      "label": "revision"
+    },
+    "title": {
+      "category": "property",
+      "label": "title"
+    },
+    "turtleFileURL": {
+      "category": "property",
+      "description": "The property \"vaem:turtleFileURL\" is used to provide a link to the location of the ontology's turtle file",
+      "label": "turtle file URL"
+    },
+    "url": {
+      "category": "property",
+      "description": "The property \"vaem:url\" is intended for general use as the name implies.  The range of the property is set as an XSD URI",
+      "label": "url"
+    },
+    "abbreviation": {
+      "category": "property",
+      "description": "The property \"vaem:abbreviation\" provides a common way to define a commonly used abbreviation on a resource",
+      "label": "abbreviation"
+    },
+    "acronym": {
+      "category": "property",
+      "description": "The property \"vaem:acronym\" provides a common way to define a commonly used abbreviation on a resource",
+      "label": "acronym"
+    },
+    "date": {
+      "category": "property",
+      "description": "The property \"vaem:date\" is intended for general use as the name implies.  The range of the property is set as \"vaem:dateUnion\" so as to allow a value to have a number of forms from a  year only to a full timestamp. The property is also the parent of all dates so that queries can be made for any date on an ontology",
+      "label": "date"
+    },
+    "id": {
+      "category": "property",
+      "description": "The property \"vaem:id\" is intended for general use as a means to specifiy an identifier. The type of this property is intentionally set to \"rdf:Property\" so that use of the property can allow both object and scaler values.  For this reason, the property is rangeless",
+      "label": "id"
+    },
+    "rationale": {
+      "category": "property",
+      "description": "A description of a justification for some other assertion or value",
+      "label": "rationale"
+    },
+    "releaseDate": {
+      "category": "property",
+      "description": "The property \"vaem:releaseDate\" is intended for general use as the name implies.  The range of the property is set as \"vaem:dateUnion\" so as to allow a value to have a number of forms from a  year only to a full timestamp",
+      "label": "release date"
+    },
+    "specificity": {
+      "category": "property",
+      "description": "The property \"vaem:specificity\" is intended to specify the level of detail of an ontology.  The values that can be set for this property are restriced to an integer from 1 to 5. An ontology at level 1 has concepts of more general applicability than one at level 5. By having graphs at different levels of specificity it is possible to support greater modularity for selective imports",
+      "label": "specificity"
+    },
+    "hasGraphRole": {
+      "category": "property",
+      "description": "The property \"lms:hasGraphRole\" is used to characterize how a resource participates in an ontology set.  The property is used to specify the role that a graph plays, for example, an ontology graph can be a schema, vocabulary, dataset, script, or ruleset",
+      "label": "has graph role"
+    },
+    "hasOwner": {
+      "category": "property",
+      "label": "has owner"
+    },
+    "hasSteward": {
+      "category": "property",
+      "description": "A property that is used to refer to a \"Steward\", that is, the party or role that is responsible for maintaining an asset, in the case of VAEM, an ontology graph.",
+      "label": "has steward"
+    },
+    "hasAspect": {
+      "category": "property",
+      "description": "The property \"vaem:hasAspect\" is used to distinguish among sets of features of a domain or subject area. The term is borrowed from \"aspect-oriented\" programming, where it is used to separate concerns. An ontology may be characterized by this dimension so as to parition features that are orthogonal. For example,  in a systems ontology we can distinguish aspects for \"structure\", \"function\", \"behavior\" and \"interface\".  The property is an \"rdf:Property\" to allow both scalar and object values",
+      "label": "has aspect "
+    },
+    "hasDimension": {
+      "category": "property",
+      "description": "The property \"vaem:hasDimension\" is used categorize an ontology.  In VAEM, the property is used to characterize an ontology graph.",
+      "label": "has dimension"
+    },
+    "hasDiscipline": {
+      "category": "property",
+      "description": "The property \"vaem:hasDiscipline\" is used to indicate relevance of a set of resources, or a resource itself, to a specific discipline of work or study. Examples of disciplines in the engineering domain are electrical engineering, mechanical engineering and, in the financial domain, risk assessment, investment analysis.  In VAEM, the property is used as a dimension for characterizing an ontology graph.  The property is an \"rdf:Property\" to allow both scalar and object values",
+      "label": "has discipline"
+    },
+    "hasDomain": {
+      "category": "property",
+      "description": "The property \"vaem:hasDomain\" is used to specify how  a set of resources, or an individual resource is grounded in a domain, that is, a subject area of interest. Examples of domains are \"enterprise\", \"process\", \"organization\" and \"system\". In VAEM, the property is used as a dimension for characterizing an ontology graph. The property is an \"rdf:Property\" to allow both scalar and object values",
+      "label": "has domain"
+    },
+    "hasIdentifier": {
+      "category": "property",
+      "description": "The property \"vaemhasIdentifier\" is intended for general use as a means to specifiy a unique reference to something. This is an object property that is a sub-property of \"vame:id\"",
+      "label": "has identifier"
+    },
+    "hasLicenseType": {
+      "category": "property",
+      "description": "The property \"vaem:hasLicenseType\" points to an entry in the VOAG ontology for licenses",
+      "label": "has license type"
+    },
+    "hasMetadata": {
+      "category": "property",
+      "description": "The property \"hasMetadata\" is used to reference a metadata information structure.",
+      "label": "has metadata"
+    },
+    "hasViewpoint": {
+      "category": "property",
+      "description": "The property \"vaem:hasViewpoint\" is used to denote how a set of resources, or an individual resource, is relevant to a context of use. The term \"viewpoint\" is adopted from the ISO RM-ODP specifications and its more recent use in enterprise architecture descriptions.  In VAEM, the property is used as a dimension for characterizing an ontology graph.  The property is an \"rdf:Property\" to allow both scalar and object values",
+      "label": "has viewpoint"
+    },
+    "reifiableBy": {
+      "category": "property",
+      "description": "To express how statements in a model can be reifiable, this property is used to explicitly associate a property with a user-defined sub-class of \"rdf:Statement\". A recommended way of using this is to declare the properties that share the same reification constructs as sub-properties of a parent property that carries the \"vaem:reifiableBy\" property. The parent property should be of type \"rdf:Property\" so that it can have both datatype and object properties as sub-properties. By this means use and transformations of a model can be understood through a fully specified metamodel. \"vaem:reifiableBy\" is rangeless in order to comply with OWL DL semantics. Its range would have been rdfs:Class in order to refer to \"rdf:Statement\" sub-classes",
+      "label": "reifiable by"
+    }
+  }
+}

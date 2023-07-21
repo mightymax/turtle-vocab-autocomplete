@@ -1,0 +1,183 @@
+{
+  "iri": "http://ogp.me/ns#",
+  "description": "The Open Graph protocol enables any web page to become a rich object in a social graph. For instance, this is used on Facebook to allow any web page to have the same functionality as any other object on Facebook.",
+  "label": "The Open Graph protocol",
+  "prefix": "og",
+  "items": {
+    "audio:album": {
+      "category": "property",
+      "description": "[DEPRECATED] An album to which some audio belongs.",
+      "label": "audio album"
+    },
+    "audio:artist": {
+      "category": "property",
+      "description": "[DEPRECATED] An artist of some audio.",
+      "label": "audio artist"
+    },
+    "audio:secure_url": {
+      "category": "property",
+      "description": "A relevant, secure audio URL for your object.",
+      "label": "audio secure URL"
+    },
+    "audio:title": {
+      "category": "property",
+      "description": "[DEPRECATED] A title for some audio.",
+      "label": "audio title"
+    },
+    "audio:type": {
+      "category": "property",
+      "description": "The mime type of an audio file e.g., \"application/mp3\"",
+      "label": "audio type"
+    },
+    "audio": {
+      "category": "property",
+      "description": "A relevant audio URL for your object.",
+      "label": "audio"
+    },
+    "country-name": {
+      "category": "property",
+      "description": "[DEPRECATED] The country name of the resource e.g., \"USA\"",
+      "label": "country name"
+    },
+    "description": {
+      "category": "property",
+      "description": "A one to two sentence description of your object.",
+      "label": "description"
+    },
+    "determiner": {
+      "category": "property",
+      "description": "The word to precede the object's title in a sentence (e.g., \"the\" in \"the statue of liberty\").  Valid values are \"a\", \"an\", \"the\", \"\", and \"auto\".",
+      "label": "determiner"
+    },
+    "email": {
+      "category": "property",
+      "description": "[DEPRECATED] Email of the contact for your object.",
+      "label": "email"
+    },
+    "fax_number": {
+      "category": "property",
+      "description": "[DEPRECATED] Fax number of the contact for your object.",
+      "label": "fax number"
+    },
+    "image:height": {
+      "category": "property",
+      "description": "The height of an image.",
+      "label": "image height"
+    },
+    "image:secure_url": {
+      "category": "property",
+      "description": "A secure image URL which should represent your object within the graph.",
+      "label": "image secure url"
+    },
+    "image:type": {
+      "category": "property",
+      "description": "The mime type of an image.",
+      "label": "image type"
+    },
+    "image:width": {
+      "category": "property",
+      "description": "The width of an image.",
+      "label": "image width"
+    },
+    "image": {
+      "category": "property",
+      "description": "An image URL which should represent your object within the graph.",
+      "label": "image"
+    },
+    "isbn": {
+      "category": "property",
+      "description": "[DEPRECATED] International Standard Book Number for you object.",
+      "label": "International Standard Book Number"
+    },
+    "latitude": {
+      "category": "property",
+      "description": "[DEPRECATED] The latitude of the resource e.g., the latitude of a company.",
+      "label": "latitude"
+    },
+    "locale": {
+      "category": "property",
+      "description": "A Unix locale in which this markup is rendered.",
+      "label": "locale"
+    },
+    "locality": {
+      "category": "property",
+      "description": "[DEPRECATED] The locality of the resource e.g, \"Palo Alto\"",
+      "label": "locality"
+    },
+    "longitude": {
+      "category": "property",
+      "description": "[DEPRECATED] The longitude of the resource e.g., the longitude of a company.",
+      "label": "longitude"
+    },
+    "phone_number": {
+      "category": "property",
+      "description": "[DEPRECATED] Phone number of the contact for your object.",
+      "label": "phone number"
+    },
+    "postal-code": {
+      "category": "property",
+      "description": "[DEPRECATED] The postal code of the resource e.g., \"94304\"",
+      "label": "postal code"
+    },
+    "region": {
+      "category": "property",
+      "description": "[DEPRECATED] The region of the resource e.g., \"CA\"",
+      "label": "region"
+    },
+    "site_name": {
+      "category": "property",
+      "description": "If your object is part of a larger web site, the name which should be displayed for the overall site. e.g., \"IMDb\".",
+      "label": "site name"
+    },
+    "street-address": {
+      "category": "property",
+      "description": "[DEPRECATED] The street address of the resource e.g., \"1601 S California Ave\".",
+      "label": "street address"
+    },
+    "title": {
+      "category": "property",
+      "description": "The title of the object as it should appear within the graph, e.g.,  \"The Rock\".",
+      "label": "title"
+    },
+    "type": {
+      "category": "property",
+      "description": "The type of your object, e.g., \"movie\".  Depending on the type you specify, other properties may also be required.",
+      "label": "type"
+    },
+    "upc": {
+      "category": "property",
+      "description": "[DEPRECATED] Universal Product Code for your object.",
+      "label": "universal product code"
+    },
+    "url": {
+      "category": "property",
+      "description": "The canonical URL of your object that will be used as its permanent ID in the graph, e.g., \"http://www.imdb.com/title/tt0117500/\".",
+      "label": "url"
+    },
+    "video:height": {
+      "category": "property",
+      "description": "The height of a video.",
+      "label": "video height"
+    },
+    "video:secure_url": {
+      "category": "property",
+      "description": "A relevant, secure video URL for your object.",
+      "label": "video secure URL"
+    },
+    "video:type": {
+      "category": "property",
+      "description": "The mime type of a video e.g., \"application/x-shockwave-flash\"",
+      "label": "video type"
+    },
+    "video:width": {
+      "category": "property",
+      "description": "The width of a video.",
+      "label": "video width"
+    },
+    "video": {
+      "category": "property",
+      "description": "A relevant video URL for your object.",
+      "label": "video"
+    }
+  }
+}

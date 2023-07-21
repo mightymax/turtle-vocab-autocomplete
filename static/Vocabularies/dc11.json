@@ -1,0 +1,83 @@
+{
+  "iri": "http://purl.org/dc/elements/1.1/",
+  "description": "This document is an up-to-date, authoritative specification of all metadata terms maintained by the Dublin Core™ Metadata Initiative. Included are the fifteen terms of the Dublin Core™ Metadata Element Set (also known as \"the Dublin Core\") plus several dozen properties, classes, datatypes, and vocabulary encoding schemes. The \"Dublin Core\" plus these extension vocabularies are collectively referred to as \"DCMI metadata terms\" (\"Dublin Core terms\" for short). These terms are intended to be used in combination with metadata terms from other, compatible vocabularies in the context of application profiles.",
+  "label": "Dublin Core Metadata Element Set, Version 1.1",
+  "prefix": "dc11",
+  "items": {
+    "contributor": {
+      "category": "property",
+      "description": "The guidelines for using names of persons or organizations as creators also apply to contributors.  Typically, the name of a Contributor should be used to indicate the entity.",
+      "label": "Contributor"
+    },
+    "coverage": {
+      "category": "property",
+      "description": "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.",
+      "label": "Coverage"
+    },
+    "creator": {
+      "category": "property",
+      "description": "Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.",
+      "label": "Creator"
+    },
+    "date": {
+      "category": "property",
+      "description": "Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a '/' (slash) character.  Either the start or end date may be missing.",
+      "label": "Date"
+    },
+    "description": {
+      "category": "property",
+      "description": "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.",
+      "label": "Description"
+    },
+    "format": {
+      "category": "property",
+      "description": "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].",
+      "label": "Format"
+    },
+    "identifier": {
+      "category": "property",
+      "description": "Recommended practice is to identify the resource by means of a string conforming to an identification system.",
+      "label": "Identifier"
+    },
+    "language": {
+      "category": "property",
+      "description": "Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag.",
+      "label": "Language"
+    },
+    "publisher": {
+      "category": "property",
+      "description": "Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.",
+      "label": "Publisher"
+    },
+    "relation": {
+      "category": "property",
+      "description": "Recommended practice is to identify the related resource by means of a URI. If this is not possible or feasible, a string conforming to a formal identification system may be provided.",
+      "label": "Relation"
+    },
+    "rights": {
+      "category": "property",
+      "description": "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.",
+      "label": "Rights"
+    },
+    "source": {
+      "category": "property",
+      "description": "The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.",
+      "label": "Source"
+    },
+    "subject": {
+      "category": "property",
+      "description": "Typically, the subject will be represented using keywords, key phrases, or classification codes.  Recommended best practice is to use a controlled vocabulary.",
+      "label": "Subject"
+    },
+    "title": {
+      "category": "property",
+      "description": "A name given to the resource.",
+      "label": "Title"
+    },
+    "type": {
+      "category": "property",
+      "description": "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.",
+      "label": "Type"
+    }
+  }
+}

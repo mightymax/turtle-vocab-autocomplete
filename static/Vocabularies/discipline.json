@@ -1,0 +1,43 @@
+{
+  "iri": "http://qudt.org/vocab/discipline/",
+  "label": "QUDT Disciplines Ontology",
+  "prefix": "discipline",
+  "items": {
+    "dcterms:author": {
+      "category": "property",
+      "label": "author"
+    },
+    "dcterms:contributor": {
+      "category": "property",
+      "label": "contributor"
+    },
+    "dcterms:creator": {
+      "category": "property",
+      "label": "creator"
+    },
+    "dcterms:date": {
+      "category": "property",
+      "label": "date"
+    },
+    "dcterms:description": {
+      "category": "property",
+      "label": "description"
+    },
+    "dcterms:rights": {
+      "category": "property",
+      "label": "rights"
+    },
+    "dcterms:subject": {
+      "category": "property",
+      "label": "subject"
+    },
+    "dcterms:title": {
+      "category": "property",
+      "label": "title"
+    },
+    "qudt:citation": {
+      "category": "property",
+      "label": "citation"
+    }
+  }
+}

@@ -1,0 +1,592 @@
+{
+  "iri": "https://www.w3.org/ns/activitystreams#",
+  "description": "Extended Activity Streams 2.0 Vocabulary",
+  "label": "Activity Streams 2.0",
+  "prefix": "as",
+  "items": {
+    "OrderedItems": {
+      "category": "class",
+      "description": "A rdf:List variant for Objects and Links",
+      "label": "OrderedItems"
+    },
+    "Accept": {
+      "category": "class",
+      "description": "Actor accepts the Object",
+      "label": "Accept"
+    },
+    "Activity": {
+      "category": "class",
+      "description": "An Object representing some form of Action that has been taken",
+      "label": "Activity"
+    },
+    "Object": {
+      "category": "class",
+      "label": "Object"
+    },
+    "Add": {
+      "category": "class",
+      "description": "To Add an Object or Link to Something",
+      "label": "Add"
+    },
+    "Announce": {
+      "category": "class",
+      "description": "Actor announces the object to the target",
+      "label": "Announce"
+    },
+    "Application": {
+      "category": "class",
+      "description": "Represents a software application of any sort",
+      "label": "Application"
+    },
+    "Arrive": {
+      "category": "class",
+      "description": "To Arrive Somewhere (can be used, for instance, to indicate that a particular entity is currently located somewhere, e.g. a \"check-in\")",
+      "label": "Arrive"
+    },
+    "IntransitiveActivity": {
+      "category": "class",
+      "description": "An Activity that has no direct object",
+      "label": "IntransitiveActivity"
+    },
+    "Article": {
+      "category": "class",
+      "description": "A written work. Typically several paragraphs long. For example, a blog post or a news article.",
+      "label": "Article"
+    },
+    "Audio": {
+      "category": "class",
+      "description": "An audio file",
+      "label": "Audio"
+    },
+    "Document": {
+      "category": "class",
+      "description": "Represents a digital document/file of any sort",
+      "label": "Document"
+    },
+    "Block": {
+      "category": "class",
+      "label": "Block"
+    },
+    "Ignore": {
+      "category": "class",
+      "description": "Actor is ignoring the Object",
+      "label": "Ignore"
+    },
+    "Collection": {
+      "category": "class",
+      "description": "An ordered or unordered collection of Objects or Links",
+      "label": "Collection"
+    },
+    "CollectionPage": {
+      "category": "class",
+      "description": "A subset of items from a Collection",
+      "label": "CollectionPage"
+    },
+    "Create": {
+      "category": "class",
+      "description": "To Create Something",
+      "label": "Create"
+    },
+    "Delete": {
+      "category": "class",
+      "description": "To Delete Something",
+      "label": "Delete"
+    },
+    "Dislike": {
+      "category": "class",
+      "description": "The actor dislikes the object",
+      "label": "Dislike"
+    },
+    "Event": {
+      "category": "class",
+      "description": "An Event of any kind",
+      "label": "Event"
+    },
+    "Flag": {
+      "category": "class",
+      "description": "To flag something (e.g. flag as inappropriate, flag as spam, etc)",
+      "label": "Flag"
+    },
+    "Follow": {
+      "category": "class",
+      "description": "To Express Interest in Something",
+      "label": "Follow"
+    },
+    "Group": {
+      "category": "class",
+      "description": "A Group of any kind.",
+      "label": "Group"
+    },
+    "Image": {
+      "category": "class",
+      "description": "An Image file",
+      "label": "Image"
+    },
+    "Invite": {
+      "category": "class",
+      "description": "To invite someone or something to something",
+      "label": "Invite"
+    },
+    "Offer": {
+      "category": "class",
+      "description": "To Offer something to someone or something",
+      "label": "Offer"
+    },
+    "Join": {
+      "category": "class",
+      "description": "To Join Something",
+      "label": "Join"
+    },
+    "Leave": {
+      "category": "class",
+      "description": "To Leave Something",
+      "label": "Leave"
+    },
+    "Like": {
+      "category": "class",
+      "description": "To Like Something",
+      "label": "Like"
+    },
+    "Link": {
+      "category": "class",
+      "description": "Represents a qualified reference to another resource. Patterned after the RFC5988 Web Linking Model",
+      "label": "Link"
+    },
+    "Listen": {
+      "category": "class",
+      "description": "The actor listened to the object",
+      "label": "Listen"
+    },
+    "Mention": {
+      "category": "class",
+      "description": "A specialized Link that represents an @mention",
+      "label": "Mention"
+    },
+    "Move": {
+      "category": "class",
+      "description": "The actor is moving the object. The target specifies where the object is moving to. The origin specifies where the object is moving from.",
+      "label": "Move"
+    },
+    "Note": {
+      "category": "class",
+      "description": "A Short note, typically less than a single paragraph. A \"tweet\" is an example, or a \"status update\"",
+      "label": "Note"
+    },
+    "OrderedCollection": {
+      "category": "class",
+      "description": "A variation of Collection in which items are strictly ordered",
+      "label": "OrderedCollection"
+    },
+    "": {
+      "category": "class"
+    },
+    "OrderedCollectionPage": {
+      "category": "class",
+      "description": "An ordered subset of items from an OrderedCollection",
+      "label": "OrderedCollectionPage"
+    },
+    "Organization": {
+      "category": "class",
+      "description": "An Organization",
+      "label": "Organization"
+    },
+    "Page": {
+      "category": "class",
+      "description": "A Web Page",
+      "label": "Page"
+    },
+    "Person": {
+      "category": "class",
+      "description": "A Person",
+      "label": "Person"
+    },
+    "Place": {
+      "category": "class",
+      "description": "A physical or logical location",
+      "label": "Place"
+    },
+    "Profile": {
+      "category": "class",
+      "description": "A Profile Document",
+      "label": "Profile"
+    },
+    "Question": {
+      "category": "class",
+      "description": "A question of any sort.",
+      "label": "Question"
+    },
+    "Read": {
+      "category": "class",
+      "description": "The actor read the object",
+      "label": "Read"
+    },
+    "Reject": {
+      "category": "class",
+      "description": "Actor rejects the Object",
+      "label": "Reject"
+    },
+    "Relationship": {
+      "category": "class",
+      "description": "Represents a Social Graph relationship between two Individuals (indicated by the 'a' and 'b' properties)",
+      "label": "Relationship"
+    },
+    "Remove": {
+      "category": "class",
+      "description": "To Remove Something",
+      "label": "Remove"
+    },
+    "Service": {
+      "category": "class",
+      "description": "A service provided by some entity",
+      "label": "Service"
+    },
+    "TentativeAccept": {
+      "category": "class",
+      "description": "Actor tentatively accepts the Object",
+      "label": "TentativeAccept"
+    },
+    "TentativeReject": {
+      "category": "class",
+      "description": "Actor tentatively rejects the object",
+      "label": "TentativeReject"
+    },
+    "Tombstone": {
+      "category": "class",
+      "description": "A placeholder for a deleted object",
+      "label": "Tombstone"
+    },
+    "Travel": {
+      "category": "class",
+      "description": "The actor is traveling to the target. The origin specifies where the actor is traveling from.",
+      "label": "Travel"
+    },
+    "Undo": {
+      "category": "class",
+      "description": "To Undo Something. This would typically be used to indicate that a previous Activity has been undone.",
+      "label": "Undo"
+    },
+    "Update": {
+      "category": "class",
+      "description": "To Update/Modify Something",
+      "label": "Update"
+    },
+    "Video": {
+      "category": "class",
+      "description": "A Video document of any kind.",
+      "label": "Video"
+    },
+    "View": {
+      "category": "class",
+      "description": "The actor viewed the object",
+      "label": "View"
+    },
+    "accuracy": {
+      "category": "property",
+      "description": "Specifies the accuracy around the point established by the longitude and latitude",
+      "label": "accuracy"
+    },
+    "altitude": {
+      "category": "property",
+      "description": "The altitude of a place",
+      "label": "altitude"
+    },
+    "content": {
+      "category": "property",
+      "description": "The content of the object.",
+      "label": "content"
+    },
+    "deleted": {
+      "category": "property",
+      "description": "Specifies the date and time the object was deleted",
+      "label": "deleted"
+    },
+    "downstreamDuplicates": {
+      "category": "property",
+      "label": "downstreamDuplicates"
+    },
+    "duration": {
+      "category": "property",
+      "description": "The duration of the object",
+      "label": "duration"
+    },
+    "endTime": {
+      "category": "property",
+      "description": "The ending time of the object",
+      "label": "endTime"
+    },
+    "height": {
+      "category": "property",
+      "description": "The display height expressed as device independent pixels",
+      "label": "height"
+    },
+    "href": {
+      "category": "property",
+      "description": "The target URI of the Link",
+      "label": "href"
+    },
+    "hreflang": {
+      "category": "property",
+      "description": "A hint about the language of the referenced resource",
+      "label": "hreflang"
+    },
+    "latitude": {
+      "category": "property",
+      "description": "The latitude",
+      "label": "latitude"
+    },
+    "longitude": {
+      "category": "property",
+      "description": "The longitude",
+      "label": "longitude"
+    },
+    "mediaType": {
+      "category": "property",
+      "description": "The MIME Media Type",
+      "label": "mediaType"
+    },
+    "name": {
+      "category": "property",
+      "label": "name"
+    },
+    "objectType": {
+      "category": "property",
+      "label": "objectType"
+    },
+    "published": {
+      "category": "property",
+      "description": "Specifies the date and time the object was published",
+      "label": "published"
+    },
+    "radius": {
+      "category": "property",
+      "description": "Specifies a radius around the point established by the longitude and latitude",
+      "label": "radius"
+    },
+    "rating": {
+      "category": "property",
+      "description": "A numeric rating (>= 0.0, <= 5.0) for the object",
+      "label": "rating"
+    },
+    "rel": {
+      "category": "property",
+      "description": "The RFC 5988 or HTML5 Link Relation associated with the Link",
+      "label": "rel"
+    },
+    "startIndex": {
+      "category": "property",
+      "description": "In a strictly ordered logical collection, specifies the index position of the first item in the items list",
+      "label": "startIndex"
+    },
+    "startTime": {
+      "category": "property",
+      "description": "The starting time of the object",
+      "label": "startTime"
+    },
+    "summary": {
+      "category": "property",
+      "description": "A short summary of the object",
+      "label": "summary"
+    },
+    "totalItems": {
+      "category": "property",
+      "description": "The total number of items in a logical collection",
+      "label": "totalItems"
+    },
+    "units": {
+      "category": "property",
+      "description": "Identifies the unit of measurement used by the radius, altitude and accuracy properties. The value can be expressed either as one of a set of predefined units or as a well-known common URI that identifies units.",
+      "label": "units"
+    },
+    "updated": {
+      "category": "property",
+      "description": "Specifies when the object was last updated",
+      "label": "updated"
+    },
+    "upstreamDuplicates": {
+      "category": "property",
+      "label": "upstreamDuplicates"
+    },
+    "verb": {
+      "category": "property",
+      "label": "verb"
+    },
+    "width": {
+      "category": "property",
+      "description": "Specifies the preferred display width of the content, expressed in terms of device independent pixels.",
+      "label": "width"
+    },
+    "actor": {
+      "category": "property",
+      "description": "Subproperty of as:attributedTo that identifies the primary actor",
+      "label": "actor"
+    },
+    "attributedTo": {
+      "category": "property",
+      "description": "Identifies an entity to which an object is attributed",
+      "label": "attributedTo"
+    },
+    "anyOf": {
+      "category": "property",
+      "description": "Describes a possible inclusive answer or option for a question.",
+      "label": "oneOf"
+    },
+    "attachment": {
+      "category": "property",
+      "label": "attachment"
+    },
+    "attachments": {
+      "category": "property",
+      "label": "attachments"
+    },
+    "audience": {
+      "category": "property",
+      "label": "audience"
+    },
+    "author": {
+      "category": "property",
+      "description": "Identifies the author of an object. Deprecated. Use as:attributedTo instead",
+      "label": "author"
+    },
+    "bcc": {
+      "category": "property",
+      "label": "bcc"
+    },
+    "bto": {
+      "category": "property",
+      "label": "bto"
+    },
+    "cc": {
+      "category": "property",
+      "label": "cc"
+    },
+    "context": {
+      "category": "property",
+      "description": "Specifies the context within which an object exists or an activity was performed",
+      "label": "context"
+    },
+    "current": {
+      "category": "property",
+      "label": "current"
+    },
+    "describes": {
+      "category": "property",
+      "description": "On a Profile object, describes the object described by the profile",
+      "label": "describes"
+    },
+    "first": {
+      "category": "property",
+      "label": "first"
+    },
+    "formerType": {
+      "category": "property",
+      "description": "On a Tombstone object, describes the former type of the deleted object",
+      "label": "formerType"
+    },
+    "generator": {
+      "category": "property",
+      "label": "generator"
+    },
+    "icon": {
+      "category": "property",
+      "label": "icon"
+    },
+    "image": {
+      "category": "property",
+      "label": "image"
+    },
+    "inReplyTo": {
+      "category": "property",
+      "label": "inReplyTo"
+    },
+    "instrument": {
+      "category": "property",
+      "description": "Indentifies an object used (or to be used) to complete an activity",
+      "label": "instrument"
+    },
+    "items": {
+      "category": "property",
+      "label": "items"
+    },
+    "last": {
+      "category": "property",
+      "label": "last"
+    },
+    "location": {
+      "category": "property",
+      "label": "location"
+    },
+    "next": {
+      "category": "property",
+      "label": "next"
+    },
+    "object": {
+      "category": "property",
+      "label": "object"
+    },
+    "oneOf": {
+      "category": "property",
+      "description": "Describes a possible exclusive answer or option for a question.",
+      "label": "oneOf"
+    },
+    "origin": {
+      "category": "property",
+      "description": "For certain activities, specifies the entity from which the action is directed.",
+      "label": "origin"
+    },
+    "partOf": {
+      "category": "property",
+      "label": "partOf"
+    },
+    "prev": {
+      "category": "property",
+      "label": "prev"
+    },
+    "preview": {
+      "category": "property",
+      "label": "preview"
+    },
+    "provider": {
+      "category": "property",
+      "label": "provider"
+    },
+    "relationship": {
+      "category": "property",
+      "description": "On a Relationship object, describes the type of relationship",
+      "label": "relationship"
+    },
+    "replies": {
+      "category": "property",
+      "label": "replies"
+    },
+    "result": {
+      "category": "property",
+      "label": "result"
+    },
+    "subject": {
+      "category": "property",
+      "description": "On a Relationship object, identifies the subject. e.g. when saying \"John is connected to Sally\", 'subject' refers to 'John'",
+      "label": "a"
+    },
+    "tag": {
+      "category": "property",
+      "label": "tag"
+    },
+    "tags": {
+      "category": "property",
+      "label": "tags"
+    },
+    "target": {
+      "category": "property",
+      "label": "target"
+    },
+    "to": {
+      "category": "property",
+      "label": "to"
+    },
+    "url": {
+      "category": "property",
+      "description": "Specifies a link to a specific representation of the Object",
+      "label": "url"
+    }
+  }
+}

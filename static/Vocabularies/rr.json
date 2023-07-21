@@ -1,0 +1,181 @@
+{
+  "iri": "http://www.w3.org/ns/r2rml#",
+  "description": "RDB to RDF Mapping Language - Vocabulary",
+  "label": "R2RML vocabulary",
+  "prefix": "rr",
+  "items": {
+    "rdf:Property": {
+      "category": "class"
+    },
+    "rdfs:Class": {
+      "category": "class"
+    },
+    "rdfs:Datatype": {
+      "category": "class"
+    },
+    "rdfs:Resource": {
+      "category": "class"
+    },
+    "BaseTableOrView": {
+      "category": "class"
+    },
+    "LogicalTable": {
+      "category": "class",
+      "description": "Represents a logical table."
+    },
+    "BlankNode": {
+      "category": "class",
+      "description": "Denotes a blank node, used with termType"
+    },
+    "GraphMap": {
+      "category": "class",
+      "description": "Represents a graph map."
+    },
+    "TermMap": {
+      "category": "class",
+      "description": "A function that generates an RDF term from a logical table row.",
+      "label": "Term Map"
+    },
+    "IRI": {
+      "category": "class",
+      "description": "Denotes an IRI, used with termpType."
+    },
+    "Join": {
+      "category": "class",
+      "description": "Represents a join condition."
+    },
+    "Literal": {
+      "category": "class",
+      "description": "Denotes a Literal, used with termType."
+    },
+    "ObjectMap": {
+      "category": "class",
+      "description": "Represents an object map."
+    },
+    "PredicateMap": {
+      "category": "class",
+      "description": "Represents a predicate map."
+    },
+    "PredicateObjectMap": {
+      "category": "class",
+      "description": "Represents a predicate-object map."
+    },
+    "R2RMLView": {
+      "category": "class"
+    },
+    "RefObjectMap": {
+      "category": "class",
+      "description": "Denotes a reference to an object map."
+    },
+    "SubjectMap": {
+      "category": "class",
+      "description": "Represents a subject map."
+    },
+    "TriplesMap": {
+      "category": "class",
+      "description": "Represents a triples map."
+    },
+    "": {
+      "category": "class"
+    },
+    "child": {
+      "category": "property",
+      "description": "Names a column in the child table of a join."
+    },
+    "column": {
+      "category": "property",
+      "description": "Name of a column in the logical table. When generating RDF triples from a logical table row, value from the specified column is used as the subject, predicate, or object (based upon the specific domain)."
+    },
+    "inverseExpression": {
+      "category": "property",
+      "description": "An expression that allows, at query processing time, use of index-based access to the the (underlying) relational tables, instead of simply retrieving the table rows first and then applying a filter. This property is useful for retrieval based on conditions involving subject, predicate, or object generated from logical table column(s) and involves some transformation."
+    },
+    "language": {
+      "category": "property",
+      "description": "Specified the language for the object component for the generated triple from a logical table row."
+    },
+    "parent": {
+      "category": "property",
+      "description": "Names a column in the parent table of a join."
+    },
+    "sqlQuery": {
+      "category": "property",
+      "description": "A valid SQL query."
+    },
+    "tableName": {
+      "category": "property",
+      "description": "Schema-qualified name of a table or view."
+    },
+    "template": {
+      "category": "property",
+      "description": "A template (format string) to specify how to generate a value for a subject, predicate, or object, using one or more columns from a logical table row."
+    },
+    "class": {
+      "category": "property",
+      "description": "The subject value generated for a logical table row will be asserted as an instance of this RDFS class."
+    },
+    "constant": {
+      "category": "property"
+    },
+    "datatype": {
+      "category": "property",
+      "description": "Specifies the datatype of the object component for the generated triple from a logical table row."
+    },
+    "graph": {
+      "category": "property",
+      "description": "An IRI reference for use as the graph name of all triples generated with the GraphMap."
+    },
+    "graphMap": {
+      "category": "property",
+      "description": "Specifies a GraphMap. When used with a SubjectMap element, all the RDF triples generated from a logical row will be stored in the specified named graph. Otherwise, the RDF triple generated using the (predicate, object) pair will be stored in the specified named graph."
+    },
+    "joinCondition": {
+      "category": "property",
+      "description": "Specifies the join condition for joining the child logical table with the parent logical table of the foreign key constraint."
+    },
+    "logicalTable": {
+      "category": "property",
+      "description": "Definition of logical table to be mapped."
+    },
+    "object": {
+      "category": "property",
+      "description": "Specifies the object for the generated triple from the logical table row."
+    },
+    "objectMap": {
+      "category": "property",
+      "description": "An ObjectMap element to generate the object component of the (predicate, object) pair from a logical table row."
+    },
+    "parentTriplesMap": {
+      "category": "property",
+      "description": "Specifies the TriplesMap element corresponding to the parent logical table of the foreign key constraint."
+    },
+    "predicate": {
+      "category": "property",
+      "description": "Specifies the predicate for the generated triple from the logical table row."
+    },
+    "predicateMap": {
+      "category": "property",
+      "description": "A PredicateMap element to generate the predicate component of the (predicate, object) pair from a logical table row."
+    },
+    "predicateObjectMap": {
+      "category": "property",
+      "description": "A PredicateObjectMap element to generate (predicate, object) pair from a logical table row."
+    },
+    "sqlVersion": {
+      "category": "property",
+      "description": "An identifier for a SQL version."
+    },
+    "subject": {
+      "category": "property",
+      "description": "An IRI reference for use as subject for all the RDF triples generated from a logical table row."
+    },
+    "subjectMap": {
+      "category": "property",
+      "description": "A SubjectMap element to generate a subject from a logical table row."
+    },
+    "termType": {
+      "category": "property",
+      "description": "A string indicating whether subject or object generated using the value from column name specified for rr:column should be an IRI reference, blank node, or a literal."
+    }
+  }
+}

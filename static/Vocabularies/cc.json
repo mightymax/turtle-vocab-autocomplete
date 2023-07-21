@@ -1,0 +1,77 @@
+{
+  "iri": "http://creativecommons.org/ns#",
+  "description": "The Creative Commons Rights Expression Language (CC REL) lets you describe copyright licenses in RDF. For more information on describing licenses in RDF and attaching those descriptions to digital works, see [CC REL](https://wiki.creativecommons.org/CC_REL) in the [Creative Commons wiki](https://wiki.creativecommons.org/).",
+  "label": "Creative Commons",
+  "prefix": "cc",
+  "items": {
+    "Requirement": {
+      "category": "class",
+      "description": "an action that may or may not be requested of you",
+      "label": "Requirement"
+    },
+    "Prohibition": {
+      "category": "class",
+      "description": "something you may be asked not to do",
+      "label": "Prohibition"
+    },
+    "Permission": {
+      "category": "class",
+      "description": "an action that may or may not be allowed or desired",
+      "label": "Permission"
+    },
+    "Jurisdiction": {
+      "category": "class",
+      "description": "the legal jurisdiction of a license",
+      "label": "Jurisdiction"
+    },
+    "License": {
+      "category": "class",
+      "description": "a set of requests/permissions to users of a Work, e.g. a copyright license, the public domain, information for distributors",
+      "label": "License"
+    },
+    "Work": {
+      "category": "class",
+      "description": "a potentially copyrightable work",
+      "label": "Work"
+    },
+    "attributionName": {
+      "category": "property"
+    },
+    "attributionURL": {
+      "category": "property"
+    },
+    "deprecatedOn": {
+      "category": "property",
+      "label": "deprecated\n\t\t  on"
+    },
+    "jurisdiction": {
+      "category": "property",
+      "label": "jurisdiction"
+    },
+    "legalcode": {
+      "category": "property"
+    },
+    "license": {
+      "category": "property",
+      "label": "has\n\t\t  license"
+    },
+    "morePermissions": {
+      "category": "property"
+    },
+    "permits": {
+      "category": "property",
+      "label": "permits"
+    },
+    "prohibits": {
+      "category": "property",
+      "label": "prohibits"
+    },
+    "requires": {
+      "category": "property",
+      "label": "requires"
+    },
+    "useGuidelines": {
+      "category": "property"
+    }
+  }
+}

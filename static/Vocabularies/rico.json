@@ -1,0 +1,3060 @@
+{
+  "iri": "https://www.ica.org/standards/RiC/ontology#",
+  "description": "<html:div xml:lang=\"en\" id=\"introduction\"> <html:h3>Introduction</html:h3> <html:p>RiC-O (Records in Contexts-Ontology) is an OWL ontology for describing archival record resources. As the second part of Records in Contexts standard, it is a formal representation of Records in Contexts Conceptual Model (RiC-CM). This version, which is v0.2, is the current official release. It is compliant with RiC-CM v0.2, that will be published soon after the release of RiC-O v0.2.</html:p> <html:p>The following diagram shows the main RiC-CM v0.2 entities and a few relations between them: <html:img src=\"https://raw.githubusercontent.com/ICA-EGAD/RiC-O/master/diagrams/diagrams_v0-2/RiC-CM-overview/diagram_RiC-CM-overview-RiC-v0-2.jpg\" alt=\"A partial overview of RiC-CM v0.2 main entities\" class=\"diagram\"></html:img> </html:p> <html:div id=\"design-principles\"> <html:h4>RiC-O design principles</html:h4> <html:p>The following design principles were followed when developing RiC-O.</html:p> <html:p> <html:strong>RiC-O is a domain or reference ontology</html:strong>.</html:p> <html:p>It provides a generic vocabulary and formal rules for creating RDF datasets (or generating them from existing archival metadata) that describe in a consistent way any kind of archival record resource. It can support publishing RDF datasets as Linked Data, querying them using SPARQL, and making inferences using the logic of the ontology.</html:p> <html:p>While some projects have built some specific ontologies for describing archives, at this time no generic domain ontology exists for the specific needs of the archival community. This is why EGAD decided to develop RiC-O as the second part of RiC standard.</html:p> <html:p>Apart this first, main target, RiC-O also can help archival institutions and engineers to design and develop other technical implementations of RiC-CM that represent record resources and their layers of contexts as oriented, interconnected graphs. Of course, other technical implementations may be developed later on, including XML models, or (hopefully) new versions of EAD and EAC-CPF XML models.</html:p> <html:p>As RiC-O is a generic, domain ontology, it does not address by itself every specific need or expectation that may occur in every archival institution or project. It is rather a high level framework and a project can either limit itself to the use of a selection of components, or can add more subcomponents where needed.</html:p> <html:p>As a domain ontology, RiC-O, at this stage at least, does not borrow any component from other existing ontologies (such as the cultural heritage models – IFLA-LRM and CIDOC-CRM, PREMIS, or PROV-O). It should therefore be easier, for an archival institution or archival project, to understand, implement and maintain RiC-O within its system.</html:p> <html:p>Later on, RiC-O will be aligned with these existing models. This is of course essential for interconnecting RDF datasets conforming to RiC-O with other datasets, or for using parts of RiC-O in other contexts than the archival or records management realm.</html:p> <html:p> <html:strong>RiC-O must be immediately usable.</html:strong> </html:p> <html:p>This is a key feature for a new model. In particular, it is very important that existing archival metadata, that are created or generated in current information systems, can be converted to RDF conforming to RiC-O, without losing any data, structural or partially implicit information. What is at stake here is that metadata conforming to the previous existing ICA standards can be processed successfully.</html:p> <html:p>During the ongoing development process, a lot of successful testing has been made, using XML/EAD finding aids and XML/EAC-CPF authority records, that have been converted to RDF datasets, either by hand or using scripts. A conversion software is being developed and will soon be available.</html:p> <html:p>While some existing metadata sets may have a very fine level of granularity and accuracy, already using, for example, controlled vocabularies, or describing curation events separately, often these metadata don’t have the very precise structure that RiC-CM recommends. Even then, such a conversion process should remain possible. In order to allow this, RiC-O sometimes provides several methods for representing information (as described below). From this point of view, the current official version of RiC-O may be considered a transitional ontology, in which some components may be deprecated later on.</html:p> <html:p> The usability of a model also depends on its documentation. That’s why the current official release has been fully documented (this documentation will be continously improved).</html:p> <html:p>RiC-O will also soon be acompanied with examples (RDF datasets). Some tutorials should also be written, and EGAD will organize practical workshops.</html:p> <html:p> <html:strong>RiC-O has to provide a flexible framework</html:strong>.</html:p> <html:p>This is a very important principle too. It is related with the usability principle quoted above. Moreover, archival description is flexible by essence. It is quite commonly noted that the level of granularity of information varies from one finding aid to another (or from one authority record to another), or even within the same finding aid. Some series or agents are described summarily because little is known about them and there is little time for extensive research, while other series, even records, or agents are described in detail; some relations (e.g. that relating to provenance) may be described without any detail while others may be thoroughly documented, as ISAAR(CPF) and EAC-CPF allow it.</html:p> <html:p>Being generally flexible, for an OWL ontology, depends first on the polyhierarchical systems of classes and properties it provides. A superproperty or superclass, more general or generic than its subproperties or subclasses, must exist and be available for handling information, while at the same time more accurate subcomponents must be there for handling more accurate description. Also, RiC-O should provide several methods for expressing whether relations are well attested and certain, or are more vague, as well as direct and short paths between entities alongside more complex ones.</html:p> <html:p> <html:strong>RiC-O opens new potential for archival description.</html:strong> </html:p> <html:p>This means that Linked Data tools and interfaces should enable end users to go through RDF/RiC-O graphs, to query them using SPARQL in an efficient way and to consult archival metadata and their contexts in new ways. As an example, an end user should be able to ask « What are (according to your dataset) the corporate bodies that succeeded to this given entity from its end of existence, by 1840, to nowadays (as concerns this given activity) ?» or « tell me what instantiations of this photograph exist? » « what are the existing copies of this original charter?», and get a list of these entities. In other words, institutions or projects that make the effort to implement RiC-O will get new insight into the content and context of their archives that wasn't visible with the existing ICA-standards. It should be even more interesting if you can infer new assertions from the RDF datasets you built, and of course link your datasets to other ressources outside of your institution.</html:p> <html:p> <html:strong>RiC-O should be extensible</html:strong>.</html:p> <html:p>Institutions are free to extend the ontology by adding new subclasses or subproperties if needed. RiC-O has also the potential to be useable in other contexts than purely archival ones. This implies that hierarchies of classes and properties are defined and that mappings are developed with other ontologies as mentioned above. It may also imply that RiC-O should provide “hooks” enabling connections with, for example, existing SKOS vocabularies.</html:p> </html:div> <html:div id=\"understanding-RiCO\"> <html:h4>Understanding RiC-O: a quick overview of some features</html:h4> <html:div id=\"fromRiCCM-to-RiCO\"> <html:h5>From RiC-CM to RiC-O</html:h5> <html:p>In the <html:strong>system of classes of RiC-O,</html:strong> for each RiC-CM entity, you can find a corresponding class. These classes are organized according to the same hierarchy as in RiC-CM. In some projects, you may need very few of them (e.g. Agent, Record Resource and Activity only), while in other ones, you may need more (e.g. Corporate Body and Person; Record; Place; Provenance Relation).</html:p> <html:p>Certain classes only exist in RiC-O and not in RiC-CM. These additional classes address special needs:</html:p> <html:ul> <html:li>some correspond to RiC-CM attributes, when it may be considered necessary to handle them as full entities. This is the case for <html:a href=\"#rico:Type\">Type</html:a> and its subclasses, that correspond to RiC-CM attributes that contain controlled values, and that can help to articulate RiC-O with external RDF resources like SKOS vocabularies; and also for <html:a href=\"#rico:Language\">Language</html:a>, <html:a href=\"#rico:Name\">Name</html:a> and <html:a href=\"#rico:Identifier\">Identifier</html:a>, that can be considered as full entities and as key linking nodes in a RDF graph. All these classes have been grouped under a <html:a href=\"#rico:Concept\">Concept</html:a> class. </html:li> <html:li>some classes have been added in order to provide a more accurate definition and model for some entities. <html:a href=\"#rico:Place\">Place</html:a> thus comes along with a <html:a href=\"#rico:PhysicalLocation\">Physical Location class</html:a>, and with a <html:a href=\"#rico:Coordinates\">Coordinates class</html:a>. A Place is considered both a geographical and historical entity. As a historical entity, among other features, it has a history, and may be preceded or succeeded by other Places. A Place also may have zero to many Physical Location through time (for instance, its boundaries, if it is an administrative area or a country, may change). Each Physical Location may be connected to zero to many Coordinates. This model is quite close to the Linked Places Format (<html:a href=\"https://github.com/LinkedPasts/linked-places\">https://github.com/LinkedPasts/linked-places</html:a>). Another example of such an addition is the <html:a href=\"#rico:Proxy\">Proxy class</html:a>, that represents (stands for) a Record Resource as it exists in a specific Record Set.</html:li> <html:li>finally, a system of classes helps to implement the Relations section of RiC-CM.<html:br></html:br> While these relations also are represented as simple, binary object properties (e.g. <html:a href=\"#rico:hasProvenance\">‘hasProvenance’</html:a> that corresponds to RiC-R026 relation), you may need to assign different attributes to a relation, e.g. a date, certainty or description, as it is already possible, and quite often done, in a XML/EAC-CPF file. One of the standard available methods for representing such a documented relation in RDF for now is to use a class. RDF* and SPARQL* specification, which is being developed by the W3C RDF-DEV Community Group, provides a far simpler method (allowing to consider a triple as the subject or object of another triple; see <html:a href=\"https://w3c.github.io/rdf-star/\">https://w3c.github.io/rdf-star/</html:a>) and is already being used by some tools; however it is not yet a W3C standard. Thus, for example, in RiC-O an <html:a href=\"#rico:AgentOriginationRelation\">AgentOriginationRelation class</html:a> exists. This class may connect one to many Agents to one to many created or accumulated Record Resources or Instantiations, and has some specific object properties (certainty, date, description, source). Back to the ‘hasProvenance’ object property, let us add that it is formally defined in RiC-O, using OWL 2 property chain axiom (see <html:a href=\"https://www.w3.org/TR/owl2-new-features/\">https://www.w3.org/TR/owl2-new-features/</html:a>, as a ‘shortcut’ for the longer path ‘recordResourceOrInstantiationIsSourceOfAgentOriginationRelation/agentOriginationRelationHasTarget’, where the intermediate node is an instance of Agent Origination Relation:<html:br></html:br> <html:code> <owl:propertyChainAxiom rdf:parseType=\"Collection\"> <html:br></html:br> <rdf:Description rdf:about=\"https://www.ica.org/standards/RiC/ontology#recordResourceOrInstantiationIsSourceOfAgentOriginationRelation\"/> <html:br></html:br> <rdf:Description rdf:about=\"https://www.ica.org/standards/RiC/ontology#agentOriginationRelationHasTarget\"/> <html:br></html:br> </owl:propertyChainAxiom> </html:code> <html:br></html:br>A triplestore, with the appropriate configuration, may thus infer the direct ‘hasProvenance’ assertion from this long path.</html:li> </html:ul> <html:p>Most of the <html:strong>datatype properties in RiC-O </html:strong>correspond to RiC-CM attributes that contain free, plain text. See for example <html:a href=\"#rico:descriptiveNote\">rico:descriptiveNote</html:a>, <html:a href=\"#rico:history\">rico:history</html:a> and <html:a href=\"#scopeAndContent\">rico:scopeAndContent</html:a>.</html:p> <html:p>In addition to these datatype properties, the Name and Identifier RiC-CM attributes also have corresponding classes (subclasses of <html:a href=\"#rico:Appellation\">rico:Appellation</html:a>). A resource may have several Identifiers and each comes with different attributes (e.g. archival reference code, system number, digital object identifier), in this case the identifiers will be modelled in a class. In many simpler usecases it's sufficent to just use the <html:a href=\"#rico:identifier\">identifier datatype property</html:a>, typically for the archival reference code.</html:p> <html:p>The Location RiC-CM attribute also has a <html:a href=\"#rico:PhysicalLocation\">rico:Physical Location corresponding class</html:a> (for users who want to use Place, Physical Location and Coordinates for handling places).</html:p> <html:p>As already said too, every RiC-CM attribute that has ‘controlled value’ or ‘rule-based’ as a schema value, has a class as corresponding component in RiC-O. For these CM attributes that correspond to a RiC-O class, as it is necessary to provide an immediately usable ontology, two supplementary datatype properties exist that allow not to use the classes, at least for a while, if you want to implement RiC-O and create RiC-O/RDF datasets from existing archival metadata without being able to handle URIs for the information you have.</html:p> <html:p>For example, you may not be able to handle and maintain URIs for some controlled values you use in EAD finding aids for carrier types: maybe your information system does not use a vocabulary for this, and you cannot for a while consider these carrier types as full entities. Nevertheless you want to produce RiC-O datasets where every piece of information is kept, and you want to avoid blank nodes. If RiC-O would only provide the Carrier Type class, it would be an issue for you. So RiC-O provides a <html:a href=\"#rico:type\">rico:type datatype property</html:a>, with range rdfs:literal, which allows you to move forward.</html:p> <html:p>Therefore, for the RiC-CM *Type attributes, you have a corresponding <html:a href=\"#rico:type\">rico:type datatype property</html:a>. For RiC-CM Coordinates attribute, you also have <html:a href=\"#rico:geographicalCoordinates\">rico:geographicalCoordinates datatype property</html:a>.</html:p> <html:p>These datatype properties have a skos:scopeNote which says (for example) \"Provided for usability reasons. May be made deprecated or removed later on. Use only if you don't use Physical Location and Coordinates classes with Place.\"</html:p> <html:p>The same key design principle (RiC-O must be immediately usable) led us to define some datatype properties that would enable users to use RiC-O in simple usecases where they do not want to consider dates and rules as full entities. Thus, there of course is Date and Rule classes in RiC-O (since there are Date and Rule entities in RiC-CM). And you also have 'date' datatype properties; plus a <html:a href=\"#rico:ruleFollowed\">rico:ruleFollowed datatype property</html:a>. The same analysis led us to keep the <html:a href=\"#rico:history\">rico:history</html:a> datatype property in RiC-O (same as RiC-CM history attribute), while RiC-CM and RiC-O also provide the <html:a href=\"#rico:Event\">Event class</html:a>, and using a series of Events may of course be a better method, easier to query, link and display, than simply using a history prose discourse. The two methods may be used in parallel within the same dataset by an institution that, for example, would decide to emphasize only the accession, appraisal and description events among the whole history of Record resources.</html:p> <html:p>These datatype properties have the same kind of skos:scopeNote as above.</html:p> <html:p>Finally, we have introduced a few datatype properties that do not correspond to any RiC-CM attribute.</html:p> <html:p>Some are superproperties, and thus group datatype properties (<html:a href=\"#rico:physicalOrLogicalExtent\">rico:physicalOrLogicalExtent</html:a>, with rico:carrierExtent, rico:instantiationExtent and rico:recordResourceExtent as subproperties ; <html:a href=\"#rico:textualValue\">rico:textualValue</html:a>, with rico:expressedDate and rico:normalizedValue as subproperties; <html:a href=\"#rico:measure\">rico:measure</html:a> (and its subproperties); <html:a href=\"#rico:referenceSystem\">rico:referenceSystem</html:a>, superproperty of rico:dateStandard (and of other datatype properties that do not exist in RiC-CM.)</html:p> <html:p>Some are simply more specific properties : <html:a href=\"#rico:accrualStatus\">rico:accrualStatus</html:a> ; <html:a href=\"#rico:recordResourceStructure\">rico:recordResourceStructure</html:a> and <html:a href=\"#rico:instantiationStructure\">rico:instantiationStructure</html:a>, subproperties of rico:structure ; <html:a href=\"#rico:title\">rico:title</html:a> (subproperty of rico:name) ; rico:altitude, rico:latitude, rico:longitude (subproperties of rico:measure), rico:geodesicSystem and rico:altimetricSystem (subproperties of rico:referenceSystem).</html:p> <html:p>In order to connect all the classes created, <html:strong>a significant number of object properties have been defined</html:strong>. While their 'flat' list is a long one, they are grouped hierarchically, so that one can use the upper to intermediate level ones for simplicity sake, or choose the most accurate and expressive ones, or extend the system adding a subproperty easily. It is expected that, in most use cases, a subset of these properties only will be needed. As already said above, some of the object properties are also formally defined as shortcuts.</html:p> <html:p>Finally, let us mention that we added to RiC-O six individuals, considering that they would address current and frequent needs:</html:p> <html:ul> <html:li>Two (<html:a href=\"#FindingAid\">FindingAid</html:a> and <html:a href=\"#AuthorityRecord\">AuthorityRecord</html:a>) are instances of both RiC-O Documentary Form Type and SKOS Concept. They can be used for categorizing Records, finding aids and authority records being considered as Records. A Record that would have ‘Finding Aid’ as a Documentary Form Type, can be connected to one to many Record Resources using 'rico:describes’ object property.</html:li> <html:li>Four (<html:a href=\"#Fonds\">Fonds</html:a>, <html:a href=\"#Series\">Series</html:a>, <html:a href=\"#File\">File</html:a>, and <html:a href=\"#Collection\">Collection</html:a>) are both instances of the Record Set Type class, and of skos:Concept. Their definition is taken from the ISAD(G) glossary. They can be used for categorizing Record Sets.</html:li> </html:ul> <html:p>In the future, we can imagine that many other categories of the kind will be defined by the archival community, forming at least rich SKOS (hopefully multilingual) vocabularies. Considering the concepts thus defined as being also instances of some RiC-O classes may be of great interest for producing a richer description (for example, an instance of the <html:a href=\"#rico:DocumentaryFormType\">Documentary Form Type class</html:a> may have a history and some temporal relations to other documentary form types).</html:p> </html:div> <html:div id=\"RiCO-documentation\"> <html:h5>RiC-O documentation and annotation properties</html:h5> <html:p>Each class or property has at least an English label (rdfs:label) and description (rdfs:comment). Some have a skos:scopeNote or a skos:example.</html:p> <html:p>When a RiC-O class or property corresponds in a way to a RiC-CM component, its description and scope note are, either the same as, or derived from, their definition and scope note in RiC-CM.</html:p> <html:p>We have created two annotation properties, subproperties of rdfs:comment, for handling:</html:p> <html:ul> <html:li>Information about the corresponding RiC-CM component when appliable (<html:a href=\"#rico:RiCCMCorrespondingComponent\">rico:RiCCMCorrespondingComponent</html:a>). Various phrasings are used in this property depending on the rule applied for defining the RiC-CM component.</html:li> <html:li>Information, most often in prose text for now, about possible mappings with other models or ontologies (<html:a href=\"#rico:closeTo\">rico:closeTo</html:a>, rarely used in this 0.1 version)).</html:li> </html:ul> <html:p>Finally, in this official 0.2 release, any change in the definition of a class or property, since December 2019, is documented using a skos:changeNote.</html:p> </html:div> </html:div> <html:div id=\"next-steps\"> <html:h4>Next steps</html:h4> <html:p>The following is a non exhaustive list of known issues, topics or tasks on which EGAD has begun to work and will continue to work in the next months:</html:p> <html:ul> <html:li>providing more examples of known implementations of RiC-O in different institutions and contexts. The goal is to show different practices on how RiC-O is being implemented. We have begun to release such examples in the <html:a href=\"https://github.com/ICA-EGAD/RiC-O\">public RiC-O repository on GitHub</html:a>. One can also have a look at the <html:a href=\"https://ica-egad.github.io/RiC-O/projects-and-tools.html\">Projects and tools page on RiC-O website</html:a>.</html:li> <html:li>finishing the system of relations (where some subclasses are still missing)</html:li> <html:li>assessing, and changing in some cases, the tense of the verbs in some object properties (e.g. for the properties that correspond to some RiC-CM relations). This has been done, following RiC-CM v0.2 updates, where many relations have changed name so that they can be used for recording both past and present situations.</html:li> <html:li>articulating the Event and Activity classes, and the Relation system of classes</html:li> <html:li>improving the names of object properties. This has been done, following RiC-CM v0.2 updates and applying a few naming rules, so that, for example, the same verb is used for naming a relation and the inverse relation when it exists.</html:li> <html:li>adding suggestions of mappings (in rico:closeTo) and OWL equivalences between some classes or properties and components in other models (among which - this is not an exhaustive list- CIDOC-CRM, IFLA-LRM, PREMIS, PROV-O, Wikidata and Schema.org)</html:li> <html:li>documenting RiC-O in French and Spanish</html:li> <html:li>providing users with some SPARQL constructs for inferring.</html:li> </html:ul> </html:div> </html:div>",
+  "label": "International Council on Archives Records in Contexts Ontology\n            (ICA RiC-O) version 0.2",
+  "prefix": "rico",
+  "items": {
+    "cc:license": {
+      "category": "property"
+    },
+    "dc11:contributor": {
+      "category": "property"
+    },
+    "dc11:creator": {
+      "category": "property"
+    },
+    "dc11:date": {
+      "category": "property"
+    },
+    "dc11:publisher": {
+      "category": "property"
+    },
+    "dc11:rights": {
+      "category": "property"
+    },
+    "dc11:title": {
+      "category": "property"
+    },
+    "dcterms:abstract": {
+      "category": "property"
+    },
+    "": {
+      "category": "class"
+    },
+    "dcterms:contributor": {
+      "category": "property"
+    },
+    "skos:Concept": {
+      "category": "class"
+    },
+    "dcterms:creator": {
+      "category": "property"
+    },
+    "skos:ConceptScheme": {
+      "category": "class"
+    },
+    "dcterms:description": {
+      "category": "property"
+    },
+    "AccumulationRelation": {
+      "category": "class",
+      "description": "Connects at least one Record Resource or Instantiation to at least one Agent, when the Agent accumulates it, be it intentionally (collecting it) or not (receiving it in the course of its activities).",
+      "label": "Accumulation Relation"
+    },
+    "dcterms:publisher": {
+      "category": "property"
+    },
+    "AgentOriginationRelation": {
+      "category": "class",
+      "description": "Connects at least one Record Resource or an Instantiation to at least one Agent that creates or accumulates the Record Resource, receives it, or sends it.",
+      "label": "Agent Origination Relation"
+    },
+    "dcterms:rights": {
+      "category": "property"
+    },
+    "Activity": {
+      "category": "class",
+      "description": "Activity is a kind of Event. Activity is specifically used to designate purposeful human activity. Activity may be understood from two perspectives. First it can be understood as leading to an end. The end is the purpose of the Activity, or why the Activity is performed. Second, it can be understood in terms of the processes that lead to achieving the end, how the end is realized through coordinated actions. Purpose and process are complementary understandings of Activity. Together the two perspectives address why the Activity is performed, the expected ends or outcomes; and how the Activity fulfills the purpose. While activity has an intended end, it also has unintended consequences and results, or side-effects. By and large, these may not be the focus of the description, but they are, unquestionably, context. |In a corporate or government context an Activity may also be called a 'function'. An Activity exists in a specific social and cultural context, and within that context is subject to change over time. An Activity may be composed of other Activities.",
+      "label": "Activity"
+    },
+    "dcterms:title": {
+      "category": "property"
+    },
+    "Event": {
+      "category": "class",
+      "description": "An event may be natural, human, or a combination of natural and human. Events have temporal and spatial boundaries. An event may actively involve some agent(s) and affect any entity. An event may be discrete, happening at a specific moment in time, or may occur over an extended period of time. Events may have events as parts, and events may precede or follow one another. Multiple agents may participate in the same event, and in different roles.",
+      "label": "Event"
+    },
+    "vann:preferredNamespacePrefix": {
+      "category": "property"
+    },
+    "ActivityDocumentationRelation": {
+      "category": "class",
+      "description": "Connects at least one Record Resource or Instantiation to at least one Activity, when the Record Resource or Instantiation results from the activity.",
+      "label": "Activity Documentation Relation"
+    },
+    "vann:preferredNamespaceUri": {
+      "category": "property"
+    },
+    "ProvenanceRelation": {
+      "category": "class",
+      "description": "This relation stands for organic and for functional provenance.",
+      "label": "Provenance Relation"
+    },
+    "rdf:value": {
+      "category": "property"
+    },
+    "ActivityType": {
+      "category": "class",
+      "description": "Can be extended with any number of subclasses, e.g. “function/action” and “activity domain”. This allows for a faceted approach that enables an Activity to be categorized using a combination of components, general or more specific. For example, “monitoring” can be used in combination with “election polls” or “water resources”.",
+      "label": "Activity Type"
+    },
+    "skos:altLabel": {
+      "category": "property"
+    },
+    "Type": {
+      "category": "class",
+      "description": "A superclass for any category of some thing. A type characterizes an entity.",
+      "label": "Type"
+    },
+    "skos:changeNote": {
+      "category": "property"
+    },
+    "Agent": {
+      "category": "class",
+      "description": "An Agent may have one or more identities; an identity is a constellation of properties or relations that together “identify” the Agent. A Person or Group commonly has one identity, though each also may have one or more alternative identities. Such alternative identities may be shared by more than one Person or Group. Alternative identities include but are not limited to pseudonyms, heteronyms, DBA (Doing Business As), and trade identities. An alternative identity should not be confused with a Position in a Group, for example, presidents, prime ministers, governors, popes, royalty, or bishops. Nor should an alternative identity be confused with a variant name or identifier of the same identity. Agent also includes entities created by a Person or Group that act on behalf of the creating Agent in an autonomous or semi-autonomous manner. Examples of a Mechanism include software agents, robots, and space and underwater probes that generate data (records) in the course of Activity assigned to and in conformance with the instructions given to them by the creating Person or Group.",
+      "label": "Agent"
+    },
+    "skos:note": {
+      "category": "property"
+    },
+    "Thing": {
+      "category": "class",
+      "description": "Includes all RiC entities as well as any concept, material thing, or event that may be the subject of a Record Resource or associated with an Activity. Examples of entities not explicitly addressed in RiC includes but is not limited to the following: abstract concepts; cultural movements, named periods and events; named things, objects and works; legendary, mythical or fictitious figures, characters or beings.",
+      "label": "Thing"
+    },
+    "skos:definition": {
+      "category": "property"
+    },
+    "AgentControlRelation": {
+      "category": "class",
+      "description": "Connects at least one Agent, to at least another Agent, when the first one(s) control(s) in a way the activities of the second one(s).",
+      "label": "Agent Control Relation"
+    },
+    "skos:example": {
+      "category": "property"
+    },
+    "AgentHierarchicalRelation": {
+      "category": "class",
+      "description": "Connects at least one Agent to at least another Agent, when the first one is hierarchically superior to the second one.",
+      "label": "Agent Hierarchical Relation"
+    },
+    "skos:historyNote": {
+      "category": "property"
+    },
+    "AuthorityRelation": {
+      "category": "class",
+      "description": "Would probably rarely be used as such (use its sub-categories)",
+      "label": "Authority Relation"
+    },
+    "skos:inScheme": {
+      "category": "property"
+    },
+    "AgentToAgentRelation": {
+      "category": "class",
+      "description": "Connects at least two Agents.",
+      "label": "Agent Relation"
+    },
+    "skos:prefLabel": {
+      "category": "property"
+    },
+    "AgentName": {
+      "category": "class",
+      "description": "A label, title or term designating an Agent in order to make it distinguishable from other similar entities.",
+      "label": "Agent Name"
+    },
+    "skos:scopeNote": {
+      "category": "property"
+    },
+    "Name": {
+      "category": "class",
+      "description": "A label, title or term designating the entity in order to make it distinguishable from other similar entities.",
+      "label": "Name"
+    },
+    "RiCCMCorrespondingComponent": {
+      "category": "property",
+      "description": "When it exists, specifies the identifier and name of RiC-CM component that corresponds to the annotated class or property.",
+      "label": "RiC-CM corresponding component"
+    },
+    "AgentTemporalRelation": {
+      "category": "class",
+      "description": "Connects at least one Agent, to at least another Agent, that succeeds it chronologically for, for instance, fullfilling some functions or performing some activities.",
+      "label": "Agent Temporal Relation"
+    },
+    "closeTo": {
+      "category": "property",
+      "description": "An annotation property for recording a possible mapping to a component in another model or ontology",
+      "label": "close to"
+    },
+    "TemporalRelation": {
+      "category": "class",
+      "description": "Connects at least one Thing to at least one Thing that follows it in chronological order.",
+      "label": "Temporal Relation"
+    },
+    "Relation": {
+      "category": "class",
+      "description": "Use when direct, binary object properties are not enough, e.g. when you need to record a date, a location or any other descriptive element for a relation (till RDF-Star becomes a W3C recommendation and provides a lighter method for doing so); or when the relation invloves more than two entities (n-ary relation). It is recommended to use the subclasses of the Relation class.",
+      "label": "Relation"
+    },
+    "Appellation": {
+      "category": "class",
+      "description": "A concept of any kind that is used for designating an Entity and referring to it.",
+      "label": "Appellation"
+    },
+    "Concept": {
+      "category": "class",
+      "description": "An idea, unit of thought, abstract cultural object or category",
+      "label": "Concept"
+    },
+    "AppellationRelation": {
+      "category": "class",
+      "description": "The relation between an Appellation and at least one Thing that the Appellation designates.",
+      "label": "Appellation Relation"
+    },
+    "AuthorshipRelation": {
+      "category": "class",
+      "description": "Connects at least one Record to at least one Person, Group or Position that is responsible for conceiving and formulating the information contained in the Record.",
+      "label": "Authorship Relation"
+    },
+    "CreationRelation": {
+      "category": "class",
+      "description": "Connects at least one Record Resource or Instantiation to at least one Agent, when the Agent is either responsible for all or some of the content of the Record Resource, or is a contributor to the genesis or production of the Instantiation.",
+      "label": "Creation Relation"
+    },
+    "CarrierExtent": {
+      "category": "class",
+      "description": "Countable characteristics of a record resource carrier expressed as a quantity.",
+      "label": "Carrier Extent"
+    },
+    "Extent": {
+      "category": "class",
+      "description": "Physical or logical extent of a resource",
+      "label": "Extent"
+    },
+    "CarrierType": {
+      "category": "class",
+      "description": "Carrier Type information is essential for assessing authenticity, conservation needs and the availability, access and use of Record Resources. Carrier Type determines the environmental conditions of storage and the prerequisites and possible ways to access and use of the records. Should not be confused with Content Type, that categorizes a Record Resource, nor with Representation Type that categorizes an Instantiation. The Carrier Type depends on the media type that is required to access the records and is independent of its content",
+      "label": "Carrier Type"
+    },
+    "ChildRelation": {
+      "category": "class",
+      "description": "Connects at lest one Person, to at least another Person, when the first has child the second one.",
+      "label": "Child Relation"
+    },
+    "DescendanceRelation": {
+      "category": "class",
+      "description": "Connects at least one Person to at least another Person, when the first has/have descendant the second one(s).",
+      "label": "Descendance Relation"
+    },
+    "ContentType": {
+      "category": "class",
+      "description": "Should not be confused with Representation Type or Carrier Type of a related Instantiation since the form of communication can be independent of the representation or carrier, for example, a map (Content Type: cartographic image) can be represented as a sketch (Representation Type: graphic) or as a GIS-coded elements (Representation Type: computer).",
+      "label": "Content Type"
+    },
+    "Coordinates": {
+      "category": "class",
+      "description": "Longitudinal and latitudinal information of a Place.",
+      "label": "Coordinates"
+    },
+    "CorporateBody": {
+      "category": "class",
+      "description": "Corporate Body is a kind of Group.",
+      "label": "Corporate Body"
+    },
+    "Group": {
+      "category": "class",
+      "description": "Group is a kind of Agent. A Group has a socially recognized identity. Each member of the Group plays a particular role or roles (that is has a particular Position) in the coordinated activity of the Group. Corporate bodies and families are kinds of groups, though other kinds of groups are possible. For example, the “electorate” -- all of the voters in a given election. Complex, large groups may be subdivided into other groups.",
+      "label": "Group"
+    },
+    "CorporateBodyType": {
+      "category": "class",
+      "description": "Categorization of a Corporate Body.",
+      "label": "Corporate Body Type"
+    },
+    "CorrespondenceRelation": {
+      "category": "class",
+      "description": "Connects at least two Persons, when they correspond to each other.",
+      "label": "Correspondence Relation"
+    },
+    "KnowingRelation": {
+      "category": "class",
+      "description": "Connects at least two Persons that directly know each other during their existence. This relation is symmetric.",
+      "label": "Knowing Relation"
+    },
+    "Date": {
+      "category": "class",
+      "description": "Date includes both single dates, a date range, or a set of non-contiguous single dates or date ranges. A date may be represented in natural language, based on a digital standard, or both. Digital standard dates will typically be based on ISO 8601, or Extended Date-Time Format (EDTF).",
+      "label": "Date"
+    },
+    "DateRange": {
+      "category": "class",
+      "description": "Chronological information associated with an entity that contributes to its identification and contextualization, that implies or explicitly states a start date and end date.",
+      "label": "Date Range"
+    },
+    "DateSet": {
+      "category": "class",
+      "description": "Primarily used in the description of Record Sets to describe dates of member Records",
+      "label": "Date Set"
+    },
+    "DemographicGroup": {
+      "category": "class",
+      "description": "Can be extended with any number of subclasses, e.g. Age or Religion. A demographic group may be defined as a subset of the general population. Individuals may belong to several demographic groups",
+      "label": "Demographic Group"
+    },
+    "DerivationRelation": {
+      "category": "class",
+      "description": "Connects an Instantiation to at least one Instantiation that is derived from it.",
+      "label": "Derivation Relation"
+    },
+    "InstantiationToInstantiationRelation": {
+      "category": "class",
+      "description": "Connects at least two instantiations",
+      "label": "Instantiation to Instantiation Relation"
+    },
+    "FamilyRelation": {
+      "category": "class",
+      "description": "Connects at least two Persons, when they have some family link, i.e. belong to the same family.",
+      "label": "Family Relation"
+    },
+    "DocumentaryFormType": {
+      "category": "class",
+      "description": "Documentary Form Type plays an important role in determining the type of information a Record may comprise, its status of perfection, and its authenticity and reliability. Documentary form types exist in a specific social and cultural context, and within that context, are subject to change over time",
+      "label": "Documentary Form Type"
+    },
+    "EventRelation": {
+      "category": "class",
+      "description": "Connects at least one Event to at least one Thing, when the first is associated with the existence and lifecycle of the second one.",
+      "label": "Event Relation"
+    },
+    "EventType": {
+      "category": "class",
+      "description": "Events of all kinds can be categorized. Curation event types include creation; acquisition; transfer; arrangement; description; digitization, etc. Biographical event types include birth, marriage, death, etc.",
+      "label": "Event Type"
+    },
+    "ExtentType": {
+      "category": "class",
+      "description": "Categorization of the extent that is being measured",
+      "label": "Extent Type"
+    },
+    "Family": {
+      "category": "class",
+      "description": "Family is a kind of Group. “Family” is used here as a general term that encompasses a wide variety of familial groups. Other types of familial groups include Dynasty, Clan, House, Tribe and others. Though family may be a recognized legal group in specific contexts, the term may also be used for groups that are socially recognized as families. A family may be a group of persons related either by consanguinity or affinity or cohabitation or other social conventions. In some context, a Family may be legally recognized as Corporate Body. For example, certain North American peoples (tribes) retain self-government rights and have jurisdiction over defined tribal lands.",
+      "label": "Family"
+    },
+    "FamilyType": {
+      "category": "class",
+      "description": "Family Type encompasses a wide variety of familial groups related by consanguinity, affinity, cohabitation or other social conventions.",
+      "label": "Family Type"
+    },
+    "FunctionalEquivalenceRelation": {
+      "category": "class",
+      "description": "Use for Instantiations which, from some point of view, in some context and for some users at least, may be considered as equivalent. This equivalence is usually based upon the fact that the Instantiations have at least the same intellectual content (they instantiate the same Record Resource).",
+      "label": "Functional Equivalence Relation"
+    },
+    "Mechanism": {
+      "category": "class",
+      "description": "Mechanism is a kind of Agent. A Mechanism may have both mechanical and software components, or may be exclusively software. A Mechanism acts in the world producing physical or social effects, and frequently generates or modifies Records.",
+      "label": "Mechanism"
+    },
+    "Person": {
+      "category": "class",
+      "description": "Person is a kind of Agent. Most commonly, a human being (biological person) has a single coeval social identity or persona. In everyday discourse, this is the “real person.” Less common though not rare, over the course of a lifetime, personae in addition to the coeval (or “original”) persona may be associated with the human being. Such “alternative personae” are most often created by the original person for specific purposes. Under some circumstances, an alternative persona might eclipse or replace the original person (Mark Twain eclipsing Samuel Clemens; John Wayne eclipsing Marion Mitchell Morrison), that is, the social (shared) alternative identity becomes the predominate identity. Less common is whentwo or more persons collaborate to create a shared persona. Persona shared by two or more Persons constitute a kind of Group. Within the archival context, the original Person generally will be the focus of the description, with alternative personae noted. Exceptionally, an alternative persona may displace the coeval persona.s.",
+      "label": "Person"
+    },
+    "Position": {
+      "category": "class",
+      "description": "Position is a kind of Agent. Position is the intersection of a Person and a Group. Position exists independently of the Person that holds the Position within a Group. More than one Person may hold a Position. Position is commonly defined in a Mandate, often called a position description or job description. The Mandate may specify the work to be performed (Activity) as well as the competencies for performing the Activity. A Position is often given a Name. A Position may be tied to a project or to a set of tasks and thus have a defined duration. A Position may change over time, as the Group that establishes it changes over time. Position is not to be confused with Occupation or Activity. Within the records created by a Corporate Body, a Position may be used to identify the record sets resulting from activities performed by one or more persons holding the Position over time, without necessarily identifying or describing the Person or persons, or identifying which records were created by each Person.",
+      "label": "Position"
+    },
+    "GroupSubdivisionRelation": {
+      "category": "class",
+      "description": "Connects a Group and at least another Group, when the first one as the second one(s) among its subdivisions.",
+      "label": "Group Subdivision Relation"
+    },
+    "WholePartRelation": {
+      "category": "class",
+      "description": "Connects a Thing to at least one constitutive or component part of that Thing.",
+      "label": "Whole Part Relation"
+    },
+    "Identifier": {
+      "category": "class",
+      "description": "A word, number, letter, symbol, or any combination of these used to uniquely identify or reference an individual instance of an entity within a specific information domain.",
+      "label": "Identifier"
+    },
+    "IdentifierType": {
+      "category": "class",
+      "description": "For example, 'old identifier' ; 'ISNI' (for a person or corporate body), etc.",
+      "label": "Identifier Type"
+    },
+    "Instantiation": {
+      "category": "class",
+      "description": "A Record or Record Part must have been instantiated at least once, though this instantiation may no longer exist at the moment of description. An instantiation might also exist at the moment of description, but be destroyed at a later moment in time, when, for example, a derived instantiation might become the only remaining instantiation. A Record Set may have an instantiation, which is to say that it is not a necessary condition. An Instantiation may be derived from another Instantiation. A Record Resource may have many Instantiations simultaneously (for instance, a record printed and saved in the same time as DOCX and PDF/A would have 3 concurrent instantiations) or through time (for example, copy of a record). Depending on the context, a new instantiation may be seen as a new or as the same record resource. During in the process of re-instantiation something is lost and something is preserved, but it is up to the context and the Agent that produces or uses that Instantiation to assess whether the two instantiations are functionally equivalent or not. For instance, a postcard representing a town map from 1874 (Instantiation 1) is digitized and kept as a JPEG file (Instantiation 2). The digital copy may be considered as instantiating the \"same\" Record by an Agent considering the information transmitted by the Record (e.g., the urban landscape displayed), but as a\" different\" Record by an antiquarian more focused on the materiality of the carrier. Successive instantiations may change the perceivable boundaries of a Record Resource. For instance, a case file comprising many records may be digitized and saved as one single PDF file, which, from management perspective, may be treated as one Record. Similarly, a large Record Set (a fonds or a series) may be maintained as one database. On the other hand, one record (main document and its annexes) may be digitized in separate files and each one may be managed as a discrete “physical” item. Instantiations may require mediation to communicate the information in the Record Resource. While a traditional Record on paper can simply be read by an Agent in order to understand the information, a vinyl recording, a video cassette or a digital file needs a device (mediator) to codify or decodify the information conveyed. This mediator may imply simple physical components (a turntable needle, for example), or a complex gallery of software and hardware elements. Instantiations are more than the mere informational content of Record Resource and may be the focus of preservation and physical management of records. The use of particular document types for records, such as a medieval charter, may have implications for the authenticity of the records. Hence, the way a Record Resource is instantiated contributes to the contextualizing of the content.record resource is instantiated contributes to the contextualizing the content. Distinguishing the message conveyed (Record Resource) and its physical representations (Instantiation) allows for the efficient management of their descriptions, and preserve information about a Record Resource even when no physical representation of it exists or is known to exist anymore. The relations between distinct instantiations can then be expressed wherever they coexist, and they can be related to the Record Resource they instantiate.",
+      "label": "Instantiation"
+    },
+    "InstantiationExtent": {
+      "category": "class",
+      "description": "Countable characteristics of an Instantiation expressed as a quantity.",
+      "label": "Instantiation Extent"
+    },
+    "IntellectualPropertyRightsRelation": {
+      "category": "class",
+      "description": "Can be used, when the record resource is a work, for specifying the connection between the record resource and its author(s).",
+      "label": "Intellectual Property Rights Relation"
+    },
+    "KnowingOfRelation": {
+      "category": "class",
+      "description": "Connects at least one Person to at least another one, when the first one has some knowledge of the second one through time or space.",
+      "label": "Knowing Of Relation"
+    },
+    "Language": {
+      "category": "class",
+      "description": "A spoken or written human language represented in the Record or Record Part, or used by the Agent.",
+      "label": "Language"
+    },
+    "LeadershipRelation": {
+      "category": "class",
+      "description": "Connects at least one Person and at least one Group, when the first one leads the second one.",
+      "label": "Leadership Relation"
+    },
+    "LegalStatus": {
+      "category": "class",
+      "description": "A status defined by law.",
+      "label": "Legal Status"
+    },
+    "ManagementRelation": {
+      "category": "class",
+      "description": "Connects at least one Agent, and at least one Record Resource or Instantiation that the Agent manages.",
+      "label": "Management Relation"
+    },
+    "Mandate": {
+      "category": "class",
+      "description": "Mandate is a kind of Rule. A Mandate confers the authority or competencies of Agents to perform a specified Activity. In addition to assigning an Activity and delegating authority to perform the Activity to an Agent, a Mandate commonly limits the Place (jurisdiction) and Date (time period) within which an Agent may perform the Activity (where and when). Mandates exist in a specific social and cultural context, and within that context are subject to change over time. While a Mandate may be tacit, in whole or part, it may be explicitly expressed in a variety of documentary sources (for example, constitutions, legislation, (legal) acts, statutes, legal codes, ordinances, charges, charters, or mission statements). The evidence for identifying a Mandate may be found in its entirety in one documentary source (for example, a law or regulation), or may be found in two or more sources. A Mandate should not be confused with the one or more documentary sources that serve as evidence of its identity. A documentary source is a Record.",
+      "label": "Mandate"
+    },
+    "Rule": {
+      "category": "class",
+      "description": "Rule can be related directly to Agent, Activity, or anything created or managed by agents, such as a Record Resource or Instantiation. A Rule may be unwritten or written or otherwise documented. Unwritten rules may include though are not limited to the following:  social mores, customs, or community expectations. Written rules may include though are not limited to the following: constitutions, legislation, acts (legal), statutes, legal codes, ordinances, charters, mission statements, regulations, policies, procedures, instructions, codes of conduct or ethics, professional standards, work assignments or work plans. The source or sources of some Rules are external to the Agent (for example, expressed in elections, social mores, customs, community expectations, laws, regulations, standards and best practice codes), while others are expressed within the Agent’s immediate context (for example, policies, or written or verbal instructions). The evidence for identifying Rules may be found in their entirety in one documentary source (for example, a law or regulation) or may be found in two or more sources. Rule should not be confused with the one or more documentary sources that serve as evidence of its identity. A documentary source is a Record.",
+      "label": "Rule"
+    },
+    "MandateRelation": {
+      "category": "class",
+      "description": "Connects at least one Mandate, and at least one Agent, when the first gives the second one the authority or competencies to act. May also involve one to many Activities that the Mandate(s) assign(s) to the Agent(s).",
+      "label": "Mandate Relation"
+    },
+    "RuleRelation": {
+      "category": "class",
+      "description": "Connects at least one Rule to at least one Thing, when it is associated with existence and lifecycle of the Thing.",
+      "label": "Rule Relation"
+    },
+    "MembershipRelation": {
+      "category": "class",
+      "description": "Connects a Group and at least one Person, when the first one has the second one(s) among its members.",
+      "label": "Membership Relation"
+    },
+    "MigrationRelation": {
+      "category": "class",
+      "description": "Connects an Instantiation and at least another Instantiation, when the first is migrated into the second one(s).",
+      "label": "Migration Relation"
+    },
+    "OccupationType": {
+      "category": "class",
+      "description": "Occupation Type should not be confused with Position where, for example, an Agent with the Occupation Type “lawyer” holds the Position of “legal counsel” in an agency. Occupation Type is related to, but should not be confused with the domain or field of Activity (Actvitity Type), such as an archivist who works in the domain of archival science. Occupation Type is a kind of Demographic Group.",
+      "label": "Occupation Type"
+    },
+    "accrual": {
+      "category": "property",
+      "description": "See also accrualStatus",
+      "label": "accrual"
+    },
+    "OwnershipRelation": {
+      "category": "class",
+      "description": "Among other probably more rare use cases for archival description, can be used between agents (a person owns a corporate body, a corporate body owns a mechanism), or between agents and record resources",
+      "label": "Ownership Relation"
+    },
+    "accrualStatus": {
+      "category": "property",
+      "description": "A text statement or single words such as “Closed” to indicate that no additional Record Resource will (or is anticipated to) be added to the Record Set; “Open” to indicate that additional records or record sets will (or are expected to) be added to the Record Set; or “Unknown” to indicate that this information is not available, for example. See also accrual",
+      "label": "accrual status"
+    },
+    "PerformanceRelation": {
+      "category": "class",
+      "description": "Connects at least one Activity to at least one Agent, when the first is performed by the second one(s).",
+      "label": "Performance Relation"
+    },
+    "altimetricSystem": {
+      "category": "property",
+      "description": "Reference system used for altitude",
+      "label": "altimetric system"
+    },
+    "PhysicalLocation": {
+      "category": "class",
+      "description": "Usually associated to one to many Places, and known during some time. A location may be linked to one to many Coordinates.",
+      "label": "Physical Location"
+    },
+    "referenceSystem": {
+      "category": "property",
+      "description": "Framework or standard used to represent an information.",
+      "label": "reference system"
+    },
+    "Place": {
+      "category": "class",
+      "description": "A Place may be a jurisdiction, a manmade structure, or a natural feature. A manmade structure or natural feature may also be a jurisdiction. A Place may be referenced to a Physical Location on the earth, or (if you don't want to use the PhysicalLocation class) directly to geographic coordinates. Both jurisdictions and natural features are historical entities. A Place thus may have begin and end dates, and changing boundaries that result from human or natural events. A Jurisdiction is the bounded geographic area within which an Agent has the authority to perform specified activities constrained by rules.",
+      "label": "Place"
+    },
+    "altitude": {
+      "category": "property",
+      "description": "Property of the Coordinates class. If you don't use this class, use geographicalCoordinates property, a property of Place class.",
+      "label": "altitude"
+    },
+    "PlaceName": {
+      "category": "class",
+      "description": "A label, title or term designating a Place in order to make it distinguishable from other similar entities.",
+      "label": "Place Name"
+    },
+    "measure": {
+      "category": "property",
+      "description": "The extent, quantity, amount, or degree of an entity, as determined by measurement or calculation.",
+      "label": "measure"
+    },
+    "PlaceRelation": {
+      "category": "class",
+      "description": "Connects a Place and at least one Thing, when the first is associated with the existence and lifecycle of the second one.",
+      "label": "Place Relation"
+    },
+    "authenticityNote": {
+      "category": "property",
+      "description": "For electronic records, it may include results from automated means of checking the validity of signatures and timestamp.",
+      "label": "authenticity note"
+    },
+    "PlaceType": {
+      "category": "class",
+      "description": "Broadly, a Place may be a member of three broad categories: jurisdiction, manmade structure, or a natural feature. Each of these three categories can subdivided into narrower categories.",
+      "label": "Place Type"
+    },
+    "authorizingMandate": {
+      "category": "property",
+      "description": "Provided for usability reasons. May be deprecated and removed later on. Use only if you don't use the Mandate class for handling mandates.",
+      "label": "authorizing mandate"
+    },
+    "PositionHoldingRelation": {
+      "category": "class",
+      "description": "Connects at least one Person, and at least one Position that the Person occupies.",
+      "label": "Position Holding Relation"
+    },
+    "ruleFollowed": {
+      "category": "property",
+      "description": "Provided for usability reasons. May be deprecated and removed later on. Use only if you don't use the Rule class for handling rules.",
+      "label": "rule followed"
+    },
+    "PositionToGroupRelation": {
+      "category": "class",
+      "description": "Connects at least one Position, and a Group, when the first one(s) exist(s) in/is defined within the second one.",
+      "label": "Position to Group Relation"
+    },
+    "beginningDate": {
+      "category": "property",
+      "description": "Provided for usability reasons. May be deprecated and removed later on. Use only if you don't use Date classes for handling dates.",
+      "label": "beginning date"
+    },
+    "ProductionTechniqueType": {
+      "category": "class",
+      "description": "Categorization of the method used in the representation of information on the Instantiation.",
+      "label": "Production Technique Type"
+    },
+    "date": {
+      "category": "property",
+      "description": "Chronological information associated with an entity that contributes to its identification and contextualization.",
+      "label": "date"
+    },
+    "Proxy": {
+      "category": "class",
+      "description": "Useful for handling in RDF the sequencing of records or records sets in the context of a Record set. A Record Resource has only one Proxy in the context of one specific Record Set. It may have many Proxies simultaneously or through time.",
+      "label": "Proxy"
+    },
+    "birthDate": {
+      "category": "property",
+      "description": "Provided for usability reasons. May be deprecated and removed later on. Use only if you don't use Date classes for handling dates.",
+      "label": "birth date"
+    },
+    "Record": {
+      "category": "class",
+      "description": "Record is a kind of Record Resource. A Record must have or have had at least one Instantiation. A Record may have more than one Instantiation. A re-instantiation of the record may be considered the same record or a new record, depending on the context and of the functions that record serves. Such information may serve a variety of purposes, though it always documents or is evidence of Activity.",
+      "label": "Record"
+    },
+    "calendar": {
+      "category": "property",
+      "description": "Used system of reckoning time in which the beginning, length, and divisions of a year are defined, sometimes along with multiyear cycles.",
+      "label": "calendar"
+    },
+    "RecordResource": {
+      "category": "class",
+      "description": "Producing a record resource may imply either its newly creation or a reuse of previous existing information by combination, rearrangement, selecting, reformatting etc. Records, Record Sets, and Record Parts are all evidence of the activities of an Agent. More than one Agent may be involved in the creation of a Record Resource. The role of the Agent in creating the Record Resource may take different forms, for example, authoring of an individual record, accumulating a set of records, or forming a set of records. Though a Record, Record Set, and Record Part, under most circumstances, may be easily distinguished from one another, frequently identifying the boundary of each and how the “bounded information regions” interrelate, may present particular challenges. Documentary Forms provide the rules governing many Records, providing criteria for identifying its boundary, and identifying its essential Record Parts. Many Records, though, do not have well-established documentary forms, particularly electronic records, where it may be difficult to determine whether individual elements represented in separate bitstreams are record parts, records, or record sets. For example, is a photograph represented independently in a bitstream embedded in a text document a Record, or a Record Part ? Or is the same photograph attached to an email, maintaining its independent representation, a Record or a Record Part? When information is grouped for some purpose, for example, zip or tar “file compression” for saving storage space, presents a further challenge. One file comprises multiple bitstreams subjected to techniques that remove bits that can be losslessly recovered when decompressed. Under what circumstances is such a compressed bitstream a Record or a Record Set? Determining when an information object is a Record, Record Part, or Record Set is based on perspective and judgement exercised in a particular context. In one context, the Agent describing an information object may designate it a Record, while another Agent in a different context may designate it a Record Part. Both designations are supported by RiC, and the significance of the difference for users of the records is ameliorated by the fact that attributes and relations employed in describing each of the record entities are shared.",
+      "label": "Record Resource"
+    },
+    "dateStandard": {
+      "category": "property",
+      "description": "Identifier of the standard of the Normalized date.",
+      "label": "date standard"
+    },
+    "RecordPart": {
+      "category": "class",
+      "description": "Record Part is a kind of Record Resource. A Record Part may itself have Record Parts.",
+      "label": "Record Part"
+    },
+    "carrierExtent": {
+      "category": "property",
+      "description": "For electronic resources, it indicates the size of storage capacity (disk, tape, film etc.). Carrier Extent should not be confused with Record Resource Extent or Instantiation Extent. For a given Record Resource, the Instantiation Extent may vary, based on format, density of information on the carrier, etc. For example, 1500 words (Record Resource Extent) may have Instantiation Extent 3kb as a Word document and 5kb as a PDF file, and instantiations may be represented on a CD of 700mb (Carrier Extent). Use if you don't use CarrierExtent class and its properties for handling such information.",
+      "label": "carrier extent"
+    },
+    "RecordResourceExtent": {
+      "category": "class",
+      "description": "Countable characteristics of the content of the Record Resource expressed as a quantity.",
+      "label": "Record Resource Extent"
+    },
+    "physicalOrLogicalExtent": {
+      "category": "property",
+      "description": "Countable characteristics of the content of an entity expressed as a quantity.",
+      "label": "physical or logical extent"
+    },
+    "RecordResourceGeneticRelation": {
+      "category": "class",
+      "description": "Connects two to more Record Resources when there is a genetic relation between them. Genetic in this sense is as defined by diplomatics, i.e. the process by which a Record Resource is developed.",
+      "label": "Record Resource Genetic Relation"
+    },
+    "certainty": {
+      "category": "property",
+      "description": "Qualifies the level of certitude of the accuracy of a Date, an Event or a Relation.",
+      "label": "certainty"
+    },
+    "RecordResourceToRecordResourceRelation": {
+      "category": "class",
+      "description": "Connects at least two Record Resources.",
+      "label": "Record Resource to Record Resource Relation"
+    },
+    "classification": {
+      "category": "property",
+      "description": "No further statement is made here about the nature of the qualifier, nor about the relation it has with the Record Resource or with the management of the Record Resource. The value of this property may in turn be used as a criterion for identifying the qualified Record Resource as a member of a Record Set.",
+      "label": "classification"
+    },
+    "RecordResourceHoldingRelation": {
+      "category": "class",
+      "description": "Connects at least one Agent, and one or more Record Resource or Instantiation that the Agent holds.",
+      "label": "Record Resource Holding Relation"
+    },
+    "conditionsOfAccess": {
+      "category": "property",
+      "description": "This property provides information about the accessibility of a Record Resource, as well as the physical, technical or legal limitations that exist for providing access to it.",
+      "label": "conditions of access"
+    },
+    "RecordResourceToInstantiationRelation": {
+      "category": "class",
+      "description": "Connects a Record Resource to one or more Instantiations that instantiate it.",
+      "label": "Record Resource to Instantiation Relation"
+    },
+    "conditionsOfUse": {
+      "category": "property",
+      "description": "Terms and circumstances affecting the use of a Record Resource after access has been provided. Includes conditions governing reproduction of the Record Resource under applicable copyright (intellectual property) and/or property legislation, and of the Instantiation, due to conservation status.",
+      "label": "conditions of use"
+    },
+    "RecordSet": {
+      "category": "class",
+      "description": "Record Set is a kind of Record Resource. The Record members in a Record Set may physically reside together, though physical proximity is not essential. In a particular context, an Agent (e.g. administrator, records manager, archivist, end-user, etc.) may select the Record members of a Record Set based on a shared attribute or attributes, or a shared Relation or Relations. The grouping of the Records serves a purpose or purposes specific to the context of the Agent. All Record members of a Record Set may share the attribute of having been accumulated by the same Agent, or all share the same Documentary Form Type and are created over time by the same Activity. A Record Set may represent the act of classifying the Records in accordance with a formal classification scheme that may be based on Activity, subject, organizational structure, or other criteria; an act of archival arrangement (e.g. based on common provenance); or some other selection and grouping that fulfils a particular purpose or purposes (e.g. a classification that reflects or supports the purposes of a researcher). By exception, some Records are brought together based on their not belonging in the context of selection to other designated groups: a ‘Miscellaneous’ series, for example. A Record Set accumulated by an Agent in the course of life or work Activity should be kept in a manner that preserves context and evidential value. Records Sets may also contain other Records Sets. Both a Record Set and a Record may simultaneously be a member of more than one Record Set, and over the course of its existence, a Record Set or Record may be a member of an indeterminate number of Record Sets in an indeterminate number of contexts. Record Sets and Records contained within a Record Set may be ordered into a sequence based on a common property or relation, or common properties or relations (e.g. alphabetical by Agent or related Place name; chronological order by an allocated Date); or some other criterion (e.g. an imposed order by relevance).",
+      "label": "Record Set"
+    },
+    "creationDate": {
+      "category": "property",
+      "description": "Provided for usability reasons. May be deprecated and removed later on. Use only if you don't use Date classes for handling dates.",
+      "label": "creation date"
+    },
+    "RecordSetType": {
+      "category": "class",
+      "description": "Four instances of Record Set Type are included for now in RiC-O; they also are instances of skos:Concept and, as such, part of a SKOS vocabulary. Record Set Type may also be used to categorize types of Record Set that have not traditionally been considered archival, e.g. search result list.",
+      "label": "Record Set Type"
+    },
+    "dateQualifier": {
+      "category": "property",
+      "description": "Indicates the precision of a date. It specifies if, and to what extent, the value is an estimation.",
+      "label": "date qualifier"
+    },
+    "RecordState": {
+      "category": "class",
+      "description": "Can in particular refer to a record state of development or its status of transmission once finished (draft, original, copy...). Specifying that a record resource has state copy usually implies that another record resource existed or exists, of which the one described is the copy. In such a case you can also use 'is copy of' object property.",
+      "label": "Record State"
+    },
+    "deathDate": {
+      "category": "property",
+      "description": "Provided for usability reasons. May be deprecated and removed later on. Use only if you don't use Date classes for handling dates.",
+      "label": "death date"
+    },
+    "RepresentationType": {
+      "category": "class",
+      "description": "Representation Type can be unmediated (which allows humans to receive the message communicated without an intermediation of a device) and mediated (which needs a device to decode the message). A lot of contemporary mediated types are digital. Each Representation Type may present specific features: bit rate for audio, resolution for digital images, encoding format for video etc. Depending of the type, properties may thus be needed to describe their characteristics. Not be confused with Content Type or Carrier Type since the form of representation can be independent of the communication or carrier.",
+      "label": "Representation Type"
+    },
+    "endDate": {
+      "category": "property",
+      "description": "Provided for usability reasons. May be deprecated and removed later on. Use only if you don't use Date classes for handling dates.",
+      "label": "end date"
+    },
+    "RoleType": {
+      "category": "class",
+      "description": "The role an agent plays in some context (usually in some creation relation). Not to be confused with a position (position of an agent in some group). For example, a person who is the head of some corporate body may play the role of annotator (of a record) in a creation relation.",
+      "label": "Role Type"
+    },
+    "deletionDate": {
+      "category": "property",
+      "description": "Provided for usability reasons. May be deprecated and removed later on. Use only if you don't use Date classes for handling dates.",
+      "label": "deletion date"
+    },
+    "RuleType": {
+      "category": "class",
+      "description": "For example, for rules that can be applied to record resources : access rule, use rule, etc.",
+      "label": "Rule Type"
+    },
+    "descriptiveNote": {
+      "category": "property",
+      "description": "Descriptive information about an entity that is not otherwise addressed.",
+      "label": "descriptive note"
+    },
+    "SequentialRelation": {
+      "category": "class",
+      "description": "Connects at least one Thing to at least one Thing that follows it in some sequence.",
+      "label": "Sequential Relation"
+    },
+    "expressedDate": {
+      "category": "property",
+      "description": "Natural language expression of a Date.",
+      "label": "expressed date"
+    },
+    "SiblingRelation": {
+      "category": "class",
+      "description": "Connects at least two Persons, when they are siblings.",
+      "label": "Sibling Relation"
+    },
+    "textualValue": {
+      "category": "property",
+      "description": "A textual expression of an Appellation or Date.",
+      "label": "textual value"
+    },
+    "SingleDate": {
+      "category": "class",
+      "description": "Chronological information associated with an entity that contributes to its identification and contextualization, related to a single point in time.",
+      "label": "Single Date"
+    },
+    "geodesicSystem": {
+      "category": "property",
+      "description": "Reference system used for geographical coordinates.",
+      "label": "geodesic system"
+    },
+    "SpouseRelation": {
+      "category": "class",
+      "description": "Connects at least two Persons, when they are spouses.",
+      "label": "Spouse Relation"
+    },
+    "geographicalCoordinates": {
+      "category": "property",
+      "description": "Longitudinal and latitudinal information of a Place.",
+      "label": "geographical coordinates"
+    },
+    "TeachingRelation": {
+      "category": "class",
+      "description": "Connects at least one Person to at least another Person, who is their student.",
+      "label": "Teaching Relation"
+    },
+    "height": {
+      "category": "property",
+      "description": "Vertical dimension of an entity.",
+      "label": "height"
+    },
+    "Title": {
+      "category": "class",
+      "description": "A name that is used for a Record Resource or a Rule",
+      "label": "Title"
+    },
+    "history": {
+      "category": "property",
+      "description": "History can alternatively be represented by a series of related Events.",
+      "label": "history"
+    },
+    "TypeRelation": {
+      "category": "class",
+      "description": "may be useful at least for some types (e.g. demographic group)",
+      "label": "Type Relation"
+    },
+    "identifier": {
+      "category": "property",
+      "description": "Use only if you don't use Identifier class for handling identifiers. Within a given domain (a closed system), identifiers are used to uniquely reference instances of an entity. Identifiers are instruments of control that facilitate management of the entities within the domain. The formulation of identifiers commonly is based on rules.",
+      "label": "identifier"
+    },
+    "UnitOfMeasurement": {
+      "category": "class",
+      "description": "A definite magnitude of a quantity, defined and adopted by convention or by law, that is used as a standard for measurement of the same kind of quantity. Can be spacial units (cm, m), weigt (g, kg), time (s, h), storage (MB, TB) or more informal units used in the archival context like number of boxes, pages or words.",
+      "label": "Unit Of Measurement"
+    },
+    "instantiationExtent": {
+      "category": "property",
+      "description": "For a given Record Resource, the Instantiation Extent may vary, based on format, density of information on the carrier, etc. For example, a file of 1500 words (Record Resource Extent) may have Instantiation Extent 3kb as a Word document and 5kb as a PDF file, and instantiations may be represented on a CD of 700mb (Carrier Extent). Use if you don't use InstantiationExtent class and its properties for handling such information.",
+      "label": "Instantiation extent"
+    },
+    "WorkRelation": {
+      "category": "class",
+      "description": "Connects at least two Agents that have some type of work relation in the course of their activities.",
+      "label": "Work Relation"
+    },
+    "instantiationStructure": {
+      "category": "property",
+      "description": "Information about the physical arrangement and composition of an Instantiation.",
+      "label": "Instantiation structure"
+    },
+    "structure": {
+      "category": "property",
+      "description": "Use only if you cannot use the subproperties (particularly if the same free text is being used in your current metadata for describing the record resource and the instantiation structure).",
+      "label": "structure"
+    },
+    "integrity": {
+      "category": "property",
+      "description": "The information about integrity may be generated manually or automatically.",
+      "label": "integrity"
+    },
+    "lastModificationDate": {
+      "category": "property",
+      "description": "Provided for usability reasons. May be deprecated and removed later on. Use only if you don't use Date classes for handling dates.",
+      "label": "last modification date"
+    },
+    "modificationDate": {
+      "category": "property",
+      "description": "Provided for usability reasons. May be deprecated and removed later on. Use only if you don't use Date classes for handling dates.",
+      "label": "modification date"
+    },
+    "latitude": {
+      "category": "property",
+      "description": "Property of the Coordinates class. If you don't use this class, use geographicalCoordinates property, a property of Place class.",
+      "label": "latitude"
+    },
+    "location": {
+      "category": "property",
+      "description": "Use only if you don't use PhysicalLocation class with Place. Use the geographicalCoordinates property, or the Coordinates class, record the geographical coordinates of the Place.s",
+      "label": "location"
+    },
+    "longitude": {
+      "category": "property",
+      "description": "Property of the Coordinates class. If you don't use this class, use geographicalCoordinates property, a property of Place class.",
+      "label": "longitude"
+    },
+    "name": {
+      "category": "property",
+      "description": "Use only if you don't use Name class for handling names.",
+      "label": "name"
+    },
+    "normalizedDateValue": {
+      "category": "property",
+      "description": "Date representation based on a standard, preferably machine-readable.",
+      "label": "normalized date value"
+    },
+    "normalizedValue": {
+      "category": "property",
+      "description": "Value representation based on a standard, preferably machine-readable.",
+      "label": "normalized value"
+    },
+    "physicalCharacteristics": {
+      "category": "property",
+      "description": "Information about the physical features of the Instantiation. Includes information about the physical nature and condition such as conservation status.",
+      "label": "physical characteristics"
+    },
+    "productionTechnique": {
+      "category": "property",
+      "description": "Use only if you have free text or don't have a controlled vocabulary for production techniques (in this case, use the ProductionTechniqueType class)",
+      "label": "production technique"
+    },
+    "publicationDate": {
+      "category": "property",
+      "description": "Provided for usability reasons. May be deprecated and removed later on. Use only if you don't use Date classes for handling dates.",
+      "label": "publication date"
+    },
+    "qualityOfRepresentation": {
+      "category": "property",
+      "description": "Conditions of an Instantiation that impact the legibility or completeness of Record Resource, and thus the viability of its use. Conditions may be associated with deficiencies in the processes of Record (re)creation or capture, or the deterioration of the Instantiation (e.g. its carrier) causing loss of information of the record over time",
+      "label": "quality of representation"
+    },
+    "quantity": {
+      "category": "property",
+      "description": "Use if you use the Extent class and its properties for handling an accurate description of the extent of a resource..",
+      "label": "quantity"
+    },
+    "recordResourceExtent": {
+      "category": "property",
+      "description": "The number, size or duration of the information content unit(s) remains the same even if the information is instantiated in various carriers. For example, a file of 1500 words (Record Resource Extent) may have Instantiation Extent 3kb as a Word document and 5kb as a PDF file, and instantiations may be represented on a CD of 700mb (Carrier Extent). Use if you don't use RecordResourceExtent class and its properties for handling such information.",
+      "label": "Record Resource extent"
+    },
+    "recordResourceStructure": {
+      "category": "property",
+      "description": "Information about the intellectual arrangement and composition of a Record Resource. For Record and Record Part, it encompasses information about the intellectual composition of the record, the presence of record parts and their functions. For Record Set, it encompasses information about the methodology or criteria used for arranging the Record Set members or Record members within the containing Record Set",
+      "label": "Record Resource structure"
+    },
+    "relationState": {
+      "category": "property",
+      "description": "Used to qualify the state of a Relation (e. g. present, past, ongoing, unknown).",
+      "label": "Relation state"
+    },
+    "scopeAndContent": {
+      "category": "property",
+      "description": "Summary of the scope (such as time periods, geography) and content (such as subject matter, administrative processes) of the Record Resource. It should highlight the information conveyed in the Record Resource, why it was created, received, and/or maintained, and the Agents connected to it. Scope and Content provides a more complete summary of the informational content of the Record Resource. It may include description of relations with agents, activities, dates and places, or with other record resources. It is not to be confused with the History attribute which focuses on the origination and subsequence changes to a Record Resource.",
+      "label": "scope and content"
+    },
+    "source": {
+      "category": "property",
+      "description": "Can be used, in particular, for Records having documentary form type Finding Aid or Authority Record, or for Relations. Use only if you don't use the hasSource object property.",
+      "label": "source"
+    },
+    "technicalCharacteristics": {
+      "category": "property",
+      "description": "Does not include references to the workflow that the Mechanism is involved in which is described under the Activity entity. It emphasizes those features that provide a better understanding of the impact of the Mechanism on the records.",
+      "label": "technical characteristics"
+    },
+    "title": {
+      "category": "property",
+      "description": "Use only if you don't use Title class for handling titles.",
+      "label": "title"
+    },
+    "type": {
+      "category": "property",
+      "description": "Provided for usability reasons. May be deprecated and removed later on. Use only if you don't use Type subclasses for handling categories.",
+      "label": "type"
+    },
+    "unitOfMeasurement": {
+      "category": "property",
+      "description": "Use if you do not use the UnitOfMeasurement class for handling units of measurement along with Extent.",
+      "label": "unit of measurement"
+    },
+    "usedFromDate": {
+      "category": "property",
+      "description": "Provided for usability reasons. May be deprecated and removed later on. Use only if you don't use Date classes for handling dates.",
+      "label": "used from date"
+    },
+    "usedToDate": {
+      "category": "property",
+      "description": "Provided for usability reasons. May be deprecated and removed later on. Use only if you don't use Date classes for handling dates.",
+      "label": "used to date"
+    },
+    "width": {
+      "category": "property",
+      "description": "Horizontal dimension of an entity.",
+      "label": "width"
+    },
+    "accumulationRelationHasSource": {
+      "category": "property",
+      "description": "Connects an Accumulation Relation to one of the accumulated Record Resources or Instantiations",
+      "label": "accumulation relation has source "
+    },
+    "agentOriginationRelationHasSource": {
+      "category": "property",
+      "description": "Connects an Agent Origination Relation to one of the resulting Record Resource or Instantiation",
+      "label": "agent origination relation has source "
+    },
+    "recordResourceOrInstantiationIsSourceOfAccumulationRelation": {
+      "category": "property",
+      "description": "Connects a Record Resource or Instantiation (that is accumulated) to an Accumulation Relation.",
+      "label": "record resource or instantiation is source of accumulation\n            relation "
+    },
+    "accumulationRelationHasTarget": {
+      "category": "property",
+      "description": "Connects an Accumulation Relation to one of the accumulating Agents",
+      "label": "accumulation relation has target "
+    },
+    "agentOriginationRelationHasTarget": {
+      "category": "property",
+      "description": "Connects an Agent Origination Relation to one of the creating or accumulating Agents",
+      "label": "agent origination relation has target "
+    },
+    "agentIsTargetOfAccumulationRelation": {
+      "category": "property",
+      "description": "Connects one of the accumulating Agents to an Accumulation Relation",
+      "label": "agent is target of accumulation relation "
+    },
+    "activityDocumentationRelationHasSource": {
+      "category": "property",
+      "description": "Connects an Activity Documentation Relation to one of the resulting Record Resources or Instantiations",
+      "label": "activity documentation relation has source "
+    },
+    "provenanceRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Provenance Relation to a Record Resource or Instantiation.",
+      "label": "provenance relation has source "
+    },
+    "recordResourceOrInstantiationIsSourceOfActivityDocumentationRelation": {
+      "category": "property",
+      "description": "Connects a Record Resource or Instantiation (that documents an Activity) to an Activity Documentation Relation.",
+      "label": "record resource or instantiation is source of activity\n            documentation relation "
+    },
+    "activityDocumentationRelationHasTarget": {
+      "category": "property",
+      "description": "Connects an Activity Documentation Relation to one of the documented Activities",
+      "label": "activity documentation relation has target "
+    },
+    "provenanceRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Provenance Relation to an Agent or Activity.",
+      "label": "provenance relation has target "
+    },
+    "activityIsTargetOfActivityDocumentationRelation": {
+      "category": "property",
+      "description": "Connects an Activity to an Activity Documentation Relation",
+      "label": "activity is target of activity documentation relation\n        "
+    },
+    "activityIsContextOfRelation": {
+      "category": "property",
+      "description": "Connects an Activity to an Agent Temporal Relation (when the Activity is transferred from an Agent to another one) or a Mandate Relation (the Mandate assigns the Activity to the Agent or defines it).",
+      "label": "activity is context of relation "
+    },
+    "thingIsContextOfRelation": {
+      "category": "property",
+      "description": "Connects a Thing (that is a secondary, contextual entity during the existence of the Relation) to a n-ary Relation.",
+      "label": "thing is context of relation "
+    },
+    "asConcernsActivity": {
+      "category": "property",
+      "description": "Connects an Agent Temporal Relation or Mandate Relation, to an Activity that is, either transferred from an Agent to another one, or assigned by a Mandate to an Agent.",
+      "label": "as concerns activity "
+    },
+    "activityIsSourceOfPerformanceRelation": {
+      "category": "property",
+      "description": "Connects an Activity that is performed to a Performance Relation",
+      "label": "activity is source of performance relation "
+    },
+    "thingIsSourceOfRelation": {
+      "category": "property",
+      "description": "Connects a Thing (that is the source of a Relation) to a Relation.",
+      "label": "thing is source of relation "
+    },
+    "performanceRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Performance Relation to a performed Activity.",
+      "label": "performance relation has source "
+    },
+    "agentOrActivityIsTargetOfProvenanceRelation": {
+      "category": "property",
+      "description": "Connects an Agent or Activity that is the provenance of a Record resource or Instantiation, to a Provenance Relation",
+      "label": "agent or activity is target of provenance relation "
+    },
+    "affectsOrAffected": {
+      "category": "property",
+      "description": "Connects an Event to a Thing on which the Event has or had some significant impact.",
+      "label": "affects or affected"
+    },
+    "hasOrHadParticipant": {
+      "category": "property",
+      "description": "Connects an Event to a Thing that is or was actively or passively involved in it.",
+      "label": "has or had participant"
+    },
+    "isOrWasAffectedBy": {
+      "category": "property",
+      "description": "Inverse of 'affects or affected' object property.",
+      "label": "is or was affected by"
+    },
+    "agentControlRelationHasSource": {
+      "category": "property",
+      "description": "Connects an Agent Control Relation to one of the controlling Agents",
+      "label": "agent control relation has source "
+    },
+    "agentHierarchicalRelationHasSource": {
+      "category": "property",
+      "description": "Connects an Agent Hierarchical Relation to one of the hierarchically superior Agents",
+      "label": "agent hierarchical relation has source "
+    },
+    "authorityRelationHasSource": {
+      "category": "property",
+      "description": "Connects an Authority Relation to an Agent that has the authority",
+      "label": "authority relation has source "
+    },
+    "agentIsSourceOfAgentControlRelation": {
+      "category": "property",
+      "description": "Connects a controlling Agent to an Agent Control Relation",
+      "label": "agent is source of agent control relation "
+    },
+    "agentControlRelationHasTarget": {
+      "category": "property",
+      "description": "Connects an Agent Control Relation to one of the controlled Agents",
+      "label": "agent control relation has target "
+    },
+    "agentHierarchicalRelationHasTarget": {
+      "category": "property",
+      "description": "Connects an Agent Hierarchical Relation to one of the hierarchically inferior Agents",
+      "label": "agent hierarchical relation has target "
+    },
+    "authorityRelationHasTarget": {
+      "category": "property",
+      "description": "Connects an Authority Relation to a Thing over which the Authority is performed",
+      "label": "authority relation has target "
+    },
+    "agentIsTargetOfAgentControlRelation": {
+      "category": "property",
+      "description": "Connects one of the controlled Agents to an Agent Control Relation",
+      "label": "agent is target of agent control relation "
+    },
+    "agentHasWorkRelation": {
+      "category": "property",
+      "description": "Connects an Agent to a Work Relation",
+      "label": "agent has work relation "
+    },
+    "agentIsConnectedToAgentRelation": {
+      "category": "property",
+      "description": "Connects an Agent to an Agent Relation",
+      "label": "agent is connected to agent relation "
+    },
+    "workRelationConnects": {
+      "category": "property",
+      "description": "Connects a Work Relation to an Agent.",
+      "label": "work relation connects "
+    },
+    "agentRelationConnects": {
+      "category": "property",
+      "description": "Connects an Agent Relation to one of the involved Agents",
+      "label": "agent relation connects "
+    },
+    "relationHasSource": {
+      "category": "property",
+      "description": "Connects an n-ary Relation to a Thing that is its source.",
+      "label": "relation has source "
+    },
+    "agentIsSourceOfAgentHierarchicalRelation": {
+      "category": "property",
+      "description": "Connects a hierarchically superior Agent to an Agent Hierarchical Relation",
+      "label": "agent is source of agent hierarchical relation "
+    },
+    "relationHasTarget": {
+      "category": "property",
+      "description": "Connects an n-ary Relation to a Thing that is its target.",
+      "label": "relation has target "
+    },
+    "agentIsTargetOfAgentHierarchicalRelation": {
+      "category": "property",
+      "description": "Connects one of the hierarchically inferior Agents to an Agent Hierarchical Relation",
+      "label": "agent is target of agent hierarchical relation "
+    },
+    "thingIsConnectedToRelation": {
+      "category": "property",
+      "description": "Connects a Thing to a n-ary Relation.",
+      "label": "thing is connected to relation "
+    },
+    "agentIsSourceOfAgentTemporalRelation": {
+      "category": "property",
+      "description": "Connects a predecessor Agent to an Agent Temporal Relation",
+      "label": "agent is source of agent temporal relation "
+    },
+    "thingIsSourceOfTemporalRelation": {
+      "category": "property",
+      "description": "Connects a Thing to a Temporal Relation, when this Thing precedes other Thing(s) in time.",
+      "label": "thing is source of temporal relation "
+    },
+    "agentTemporalRelationHasSource": {
+      "category": "property",
+      "description": "Connects an Agent Temporal Relation to one of the predecessor Agents",
+      "label": "agent temporal relation has source "
+    },
+    "agentIsSourceOfAuthorityRelation": {
+      "category": "property",
+      "description": "Connects an Agent thas has the authority, to an Authority Relation",
+      "label": "agent is source of authority relation "
+    },
+    "agentIsSourceOfIntellectualPropertyRightsRelation": {
+      "category": "property",
+      "description": "Connects an Agent having the intellectual property rights, to an Intellectual Property Rights Relation",
+      "label": "agent is source of intellectual property rights relation\n        "
+    },
+    "intellectualPropertyRightsRelationHasSource": {
+      "category": "property",
+      "description": "Connects an IntellectualPropertyRightsRelation to one of the Group, Person or Position that holds the rights.",
+      "label": "intellectual property rights relation has source "
+    },
+    "agentIsSourceOfManagementRelation": {
+      "category": "property",
+      "description": "Connects a manager Agent to a Management Relation",
+      "label": "agent is source of management relation "
+    },
+    "managementRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Management Relation to an Agent who is involved as a manager.",
+      "label": "management relation has source "
+    },
+    "agentIsSourceOfOwnershipRelation": {
+      "category": "property",
+      "description": "Connects an owner Agent to an Ownership Relation",
+      "label": "agent is source of ownership relation "
+    },
+    "ownershipRelationHasSource": {
+      "category": "property",
+      "description": "Connects an Ownership Relation to a Person, Group or Position that is involved as an owner.",
+      "label": "ownership relation has source "
+    },
+    "agentIsSourceOfRecordResourceHoldingRelation": {
+      "category": "property",
+      "description": "Connects an Agent that holds a Record Resource or Instantiation, to a Record Resource Holding Relation",
+      "label": "agent is source of record resource holding relation "
+    },
+    "recordResourceHoldingRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Record Resource Holding Relation to an Agent (as the holder of a Record Resource or Instantiation).",
+      "label": "record resource holding relation has source "
+    },
+    "agentIsTargetOfAgentOriginationRelation": {
+      "category": "property",
+      "description": "Connects one of the Agents that created or accumulated the Record resource or Instantiation, to an Agent Origination Relation",
+      "label": "agent is target of agent origination relation "
+    },
+    "thingIsTargetOfAuthorityRelation": {
+      "category": "property",
+      "description": "Connects a Thing (that is under authority of an Agent) to an Authority Relation.",
+      "label": "thing is target of authority relation "
+    },
+    "thingIsTargetOfRelation": {
+      "category": "property",
+      "description": "Connects a Thing to a n-ary Relation.",
+      "label": "thing is target of relation "
+    },
+    "agentIsTargetOfAgentTemporalRelation": {
+      "category": "property",
+      "description": "Connects a successor Agent to an Agent Temporal Relation",
+      "label": "agent is target of agent temporal relation "
+    },
+    "thingIsTargetOfTemporalRelation": {
+      "category": "property",
+      "description": "Connects a Thing (that follows other Thing(s) in time) to a Temporal Relation.",
+      "label": "thing is target of temporal relation "
+    },
+    "agentTemporalRelationHasTarget": {
+      "category": "property",
+      "description": "Connects an Agent Temporal Relation to one of the successor Agents",
+      "label": "agent temporal relation has target "
+    },
+    "agentIsTargetOfAuthorshipRelation": {
+      "category": "property",
+      "description": "Connects a Person, Group or Position to an Authorship Relation.",
+      "label": "agent is target of authorship relation"
+    },
+    "agentIsTargetOfCreationRelation": {
+      "category": "property",
+      "description": "Connects a creator Agent to a Creation Relation",
+      "label": "agent is target of creation relation "
+    },
+    "authorshipRelationHasTarget": {
+      "category": "property",
+      "description": "Connects an Authorship Relation to one of the author Person, Group or Position.",
+      "label": "authorship relation has target"
+    },
+    "creationRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Creation Relation to one of the creator Agents",
+      "label": "creation relation has target "
+    },
+    "agentIsTargetOfMandateRelation": {
+      "category": "property",
+      "description": "Connects a mandated Agent to a Mandate Relation",
+      "label": "agent is target of mandate relation "
+    },
+    "thingIsTargetOfRuleRelation": {
+      "category": "property",
+      "description": "Connects a Thing (that is associated with a Rule) to a Rule Relation.",
+      "label": "thing is target of rule relation "
+    },
+    "mandateRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Mandate Relation to an Agent who is given the authority or competencies to act.",
+      "label": "mandate relation has target "
+    },
+    "agentIsTargetOfPerformanceRelation": {
+      "category": "property",
+      "description": "Connects an Agent to a Performance Relation",
+      "label": "agent is target of performance relation "
+    },
+    "performanceRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Performance Relation to a performing Agent.",
+      "label": "performance relation has target "
+    },
+    "recordResourceOrInstantiationIsSourceOfAgentOriginationRelation": {
+      "category": "property",
+      "description": "Connects a Record Resource or Instantiation (that is created, sent or accumulated) to an Agent Origination Relation.",
+      "label": "record resource or instantiation is source of agent origination\n            relation "
+    },
+    "relationConnects": {
+      "category": "property",
+      "description": "Connects an n-ary Relation to any of the Things involved.",
+      "label": "relation connects "
+    },
+    "temporalRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Temporal Relation to a Thing that precedes other Thing(s) in time.",
+      "label": "temporal relation has source "
+    },
+    "temporalRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Temporal Relation to a Thing that follows other Thing(s) in time.",
+      "label": "temporal relation has target "
+    },
+    "appellationIsSourceOfAppellationRelation": {
+      "category": "property",
+      "description": "Connects an Appellation to an Appellation Relation",
+      "label": "appellation is source of appellation relation "
+    },
+    "appellationRelationHasSource": {
+      "category": "property",
+      "description": "Connects an Appellation Relation to the concerned Appellation",
+      "label": "appellation relation has source "
+    },
+    "appellationRelationHasTarget": {
+      "category": "property",
+      "description": "Connects an Appellation Relation to one of the designated Things",
+      "label": "appellation relation has target "
+    },
+    "thingIsTargetOfAppellationRelation": {
+      "category": "property",
+      "description": "Connects a Thing (that is designated by an Appellation) to an Appellation Relation.",
+      "label": "thing is target of appellation relation "
+    },
+    "relationHasContext": {
+      "category": "property",
+      "description": "The secondary entity may be, for instance, a Position or a Role Type.",
+      "label": "relation has context "
+    },
+    "authorizedBy": {
+      "category": "property",
+      "description": "Inverse of 'authorizes' object property",
+      "label": "authorized by "
+    },
+    "isAssociatedWithRule": {
+      "category": "property",
+      "description": "Inverse of 'is rule associated with' object property.",
+      "label": "is associated with rule "
+    },
+    "authorizes": {
+      "category": "property",
+      "description": "Connects a Mandate to the Agent that the Mandate gives the authority or competencies to act.",
+      "label": "authorizes"
+    },
+    "isRuleAssociatedWith": {
+      "category": "property",
+      "description": "Connects a Rule to a Thing that is associated with the existence and lifecycle of the Rule.",
+      "label": "is rule associated with "
+    },
+    "authorizingAgent": {
+      "category": "property",
+      "description": "Connects a Mandate Relation to an Agent that assigns the Mandate.",
+      "label": "authorizing agent "
+    },
+    "isAuthorizingAgentInMandateRelation": {
+      "category": "property",
+      "description": "Connects an Agent that assigns the Mandate, to a Mandate Relation.",
+      "label": "is authorizing agent in mandate relation "
+    },
+    "authorshipRelationHasSource": {
+      "category": "property",
+      "description": "Connects an Authorship Relation to one of the Records involved in the relation.",
+      "label": "authorship relation has source"
+    },
+    "creationRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Creation Relation to one of the created Record Resources or Instantiations",
+      "label": "creation relation has source "
+    },
+    "recordIsSourceOfAuthorshipRelation": {
+      "category": "property",
+      "description": "Connects a Record and an Authorship Relation.",
+      "label": "record is source of authorship relation"
+    },
+    "childRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Child Relation to a parent Person",
+      "label": "child relation has source "
+    },
+    "descendanceRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Descendance Relation to one of the ancestor Persons",
+      "label": "descendance relation has source "
+    },
+    "personIsSourceOfChildRelation": {
+      "category": "property",
+      "description": "Connects a Person (as a parent) to a Child Relation.",
+      "label": "person is source of child relation "
+    },
+    "childRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Child Relation to a child Person",
+      "label": "child relation has target "
+    },
+    "descendanceRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Descendance Relation to one of the descendant Persons",
+      "label": "descendance relation has target "
+    },
+    "personIsTargetOfChildRelation": {
+      "category": "property",
+      "description": "Connects a Person (as a child) to a Child Relation.",
+      "label": "person is target of child relation "
+    },
+    "containsOrContained": {
+      "category": "property",
+      "description": "Use for connecting two geographical or administrative regions.",
+      "label": "contains or contained"
+    },
+    "hasOrHadPart": {
+      "category": "property",
+      "description": "The end of existence of a whole/part relation may affect the integrity or nature of the domain entity",
+      "label": "has or had part"
+    },
+    "isAssociatedWithPlace": {
+      "category": "property",
+      "description": "Inverse of 'is place associated with' object property.",
+      "label": "is associated with place "
+    },
+    "isPlaceAssociatedWith": {
+      "category": "property",
+      "description": "Connects a Place to a Thing that Place is associated with the existence and lifecycle of.",
+      "label": "is place associated with "
+    },
+    "isOrWasContainedBy": {
+      "category": "property",
+      "description": "Inverse of 'contains or contained' object property.",
+      "label": "is or was contained by"
+    },
+    "correspondenceRelationConnects": {
+      "category": "property",
+      "description": "Connects a Correspondence Relation to one of the Persons involved",
+      "label": "correspondence relation connects "
+    },
+    "knowingRelationConnects": {
+      "category": "property",
+      "description": "Connects Knowing Relation to any known Person involved.",
+      "label": "knowing relation connects "
+    },
+    "personHasCorrespondenceRelation": {
+      "category": "property",
+      "description": "Connects a Person to a Correspondence Relation.",
+      "label": "person has correspondence relation "
+    },
+    "recordResourceOrInstantiationIsSourceOfCreationRelation": {
+      "category": "property",
+      "description": "Connects a Record Resource or Instantiation (that is created) to a Creation Relation.",
+      "label": "record resource or instantiation is source of creation relation\n        "
+    },
+    "creationWithRole": {
+      "category": "property",
+      "description": "Connects a Creation Relation to the Role Type that the creator Agent(s) has in the creation process",
+      "label": "creation with role "
+    },
+    "roleIsContextOfCreationRelation": {
+      "category": "property",
+      "description": "Connects a Role Type to a Creation Relation (this Role Type being the specific role played by the creating Person in the context of this Relation).",
+      "label": "role is context of creation relation "
+    },
+    "derivationRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Derivation Relation to the Instantiation from which one or more Instantiations is derived.",
+      "label": "derivation relation has source "
+    },
+    "instantiationToInstantiationRelationConnects": {
+      "category": "property",
+      "description": "Connects an Instantiation to Instantiation Relation to one of the related Instantiations.",
+      "label": "instantiation to instantiation relation connects "
+    },
+    "instantiationIsSourceOfDerivationRelation": {
+      "category": "property",
+      "description": "Connects an Instantiation (from which at least one Instantiation is derived) to a Derivation Relation.",
+      "label": "instantiation is source of derivation relation "
+    },
+    "derivationRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Derivation Relation to one of the derived Instantiations",
+      "label": "derivation relation has target "
+    },
+    "instantiationIsTargetOfDerivationRelation": {
+      "category": "property",
+      "description": "Connects a derived Instantiation to a Derivation Relation.",
+      "label": "instantiation is target of derivation relation "
+    },
+    "familyRelationConnects": {
+      "category": "property",
+      "description": "Connects a Family Relation to a Person.",
+      "label": "family relation connects "
+    },
+    "personIsSourceOfDescendanceRelation": {
+      "category": "property",
+      "description": "Connects a Person (as an ancestor) to a Descendance Relation.",
+      "label": "person is source of descendance relation "
+    },
+    "personIsTargetOfDescendanceRelation": {
+      "category": "property",
+      "description": "Connects a Person (as a descendant) to a Descendance Relation.",
+      "label": "person is target of descendance relation "
+    },
+    "describesOrDescribed": {
+      "category": "property",
+      "description": "Can be used, among other situations, for specifying that some finding aid (a Record that has Documentary Form Type Finding Aid) describes some Record Set.",
+      "label": "describes or described"
+    },
+    "hasOrHadSubject": {
+      "category": "property",
+      "description": "Connects a Record Resource to a Thing that is or was its subject.",
+      "label": "has or had subject"
+    },
+    "isOrWasDescribedBy": {
+      "category": "property",
+      "description": "Inverse of 'describes or described' object property.",
+      "label": "is or was described by"
+    },
+    "documentedBy": {
+      "category": "property",
+      "description": "Inverse of 'documents' object property.",
+      "label": "documented by"
+    },
+    "resultsOrResultedIn": {
+      "category": "property",
+      "description": "Connects an Event to a Thing that results or resulted from the Event.",
+      "label": "results or resulted in"
+    },
+    "documents": {
+      "category": "property",
+      "description": "Connects a Record Resource or an Instantiation to the Activity that generates the Record Resource or Instantiation.",
+      "label": "documents"
+    },
+    "resultsOrResultedFrom": {
+      "category": "property",
+      "description": "Inverse of 'results or resulted in' object property.",
+      "label": "results or resulted from"
+    },
+    "eventIsSourceOfEventRelation": {
+      "category": "property",
+      "description": "Connects an Event to an Event Relation",
+      "label": "event is source of event relation "
+    },
+    "eventRelationHasSource": {
+      "category": "property",
+      "description": "Connects an Event Relation to an Event",
+      "label": "event relation has source "
+    },
+    "eventRelationHasTarget": {
+      "category": "property",
+      "description": "Connects an Event Relation to an associated Thing",
+      "label": "event relation has target "
+    },
+    "thingIsTargetOfEventRelation": {
+      "category": "property",
+      "description": "Connects a Thing (that is associated with an Event) to an Event Relation.",
+      "label": "thing is target of event relation "
+    },
+    "existsOrExistedIn": {
+      "category": "property",
+      "description": "Connects a Position to a Group in which that Position exists or existed, or that is defined by that Group�s organizational structure.",
+      "label": "exists or existed in"
+    },
+    "isAgentAssociatedWithAgent": {
+      "category": "property",
+      "description": "Use to connect two Agents only if it is not possible to be more accurate and use a narrower Agent to Agent relation, e.g. ‘has work relation with’.",
+      "label": "is agent associated with agent "
+    },
+    "hasOrHadPosition": {
+      "category": "property",
+      "description": "Inverse of 'exists or existed in' object property.",
+      "label": "has or had position"
+    },
+    "expressesOrExpressed": {
+      "category": "property",
+      "description": "Inverse of 'is or was expressed by' object property.",
+      "label": "expresses or expressed"
+    },
+    "isOrWasExpressedBy": {
+      "category": "property",
+      "description": "Connects a Rule to a Record Resource that expresses or expressed the Rule.",
+      "label": "is or was expressed by"
+    },
+    "personHasFamilyRelation": {
+      "category": "property",
+      "description": "Connects a Person to a Family Relation.",
+      "label": "person has family relation "
+    },
+    "followsInTime": {
+      "category": "property",
+      "description": "Inverse of 'precedes in time' object property.",
+      "label": "follows in time"
+    },
+    "followsOrFollowed": {
+      "category": "property",
+      "description": "Inverse of 'precedesOrPreceded' object property.",
+      "label": "follows or followed"
+    },
+    "precedesInTime": {
+      "category": "property",
+      "description": "There may actually be zero to many intermediate Entities, ignored or unknown, in the chronological sequence between the two connected Entities.",
+      "label": "precedes in time"
+    },
+    "isRelatedTo": {
+      "category": "property",
+      "description": "The most generic object property. Connects an Thing to any other Thing This is a symmetric object property.",
+      "label": "is related to "
+    },
+    "precedesOrPreceded": {
+      "category": "property",
+      "description": "The relation does not specify by itself what criteria are used for ordering the sequence. There may actually be zero to many intermediate Entities, ignored or unkown, in the sequence between the two connected Things. Can be used, for example, for specifying that some Record 'precedes' (has next) some Record within a Record Set.",
+      "label": "precedes or preceded"
+    },
+    "functionalEquivalenceRelationConnects": {
+      "category": "property",
+      "description": "Connects a Functional Equivalence Relation to one of the functionally equivalent Instantiations.",
+      "label": "functional equivalence relation connects "
+    },
+    "instantiationIsConnectedToFunctionalEquivalenceRelation": {
+      "category": "property",
+      "description": "Connects an Instantiation to a Functional Equivalence Relation",
+      "label": "instantiation is connected to functional equivalence relation\n        "
+    },
+    "groupIsSourceOfGroupSubdivisionRelation": {
+      "category": "property",
+      "description": "Connects the Group that has at least a subdivision, to a Group Subdivision Relation",
+      "label": "group is source of group subdivision relation "
+    },
+    "thingIsSourceOfWholePartRelation": {
+      "category": "property",
+      "description": "Connects a Thing to a Whole Part Relation, when this Thing has Part other Thing(s).",
+      "label": "thing is source of whole part relation "
+    },
+    "groupSubdivisionRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Group Subdivision Relation to the Group that has subdivisions",
+      "label": "group subdivision relation has source "
+    },
+    "groupIsSourceOfMembershipRelation": {
+      "category": "property",
+      "description": "Connects the Group (that has one to many members) to a Membership Relation",
+      "label": "group is source of membership relation "
+    },
+    "membershipRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Membership Relation to the Group that has member(s).",
+      "label": "membership relation has source "
+    },
+    "groupIsTargetOfGroupSubdivisionRelation": {
+      "category": "property",
+      "description": "Connects a Group that is a subdivision, to a Group Subdivision Relation",
+      "label": "group is target of group subdivision relation "
+    },
+    "thingIsTargetOfWholePartRelation": {
+      "category": "property",
+      "description": "Connects a Thing to a Whole Part Relation, when this Thing is Part of another Thing.",
+      "label": "thing is target of whole part relation "
+    },
+    "groupSubdivisionRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Group Subdivision Relation to one of the Groups that is a subdivision",
+      "label": "group subdivision relation has target "
+    },
+    "groupIsTargetOfLeadershipRelation": {
+      "category": "property",
+      "description": "Connects a Group (which has a leader) to a Leadership Relation",
+      "label": "group is target of leadership relation "
+    },
+    "leadershipRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Leadership Relation to a lead Group.",
+      "label": "leadership relation has target "
+    },
+    "groupIsTargetOfPositionToGroupRelation": {
+      "category": "property",
+      "description": "Connects the Group (in which a Position exists) to a Position To Group Relation",
+      "label": "group is target of position to group relation "
+    },
+    "positionToGroupRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Position to Group Relation to a Group (in which a Position exists).",
+      "label": "position to group relation has target "
+    },
+    "wholePartRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Whole Part Relation to the Thing that has some parts.",
+      "label": "whole part relation has source "
+    },
+    "wholePartRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Whole Part Relation to a Thing that is a part.",
+      "label": "whole part relation has target "
+    },
+    "hasAccumulator": {
+      "category": "property",
+      "description": "Connects a Record Resource or an Instantiation to the Agent that accumulates it, be it intentionally (collecting) or not (receiving in the course of its activities).",
+      "label": "has accumulator"
+    },
+    "hasProvenance": {
+      "category": "property",
+      "description": "Connects a Record Resource or an Instantiation to an Agent that creates or accumulates the Record Resource, receives it, or sends it.",
+      "label": "has provenance "
+    },
+    "isAccumulatorOf": {
+      "category": "property",
+      "description": "Inverse of 'has accumulator' object property.",
+      "label": "is accumulator of"
+    },
+    "hasActivityType": {
+      "category": "property",
+      "description": "Connects an Activity to an Activity Type that categorizes it.",
+      "label": "has activity type"
+    },
+    "hasOrHadCategory": {
+      "category": "property",
+      "description": "Connects a Thing to a Type that categorizes or categorized it.",
+      "label": "has or had category"
+    },
+    "isActivityTypeOf": {
+      "category": "property",
+      "description": "Connects an Activity Type to an Activity that it categorizes.",
+      "label": "is activity type of"
+    },
+    "hasAddressee": {
+      "category": "property",
+      "description": "The identity of the addressee is (usually) evidenced by the Record Resource or Instantiation itself.",
+      "label": "has addressee"
+    },
+    "isAddresseeOf": {
+      "category": "property",
+      "description": "Inverse of 'has addressee' object property.",
+      "label": "is addressee of "
+    },
+    "hasAncestor": {
+      "category": "property",
+      "description": "Inverse of 'has descendant' object property.",
+      "label": "has ancestor"
+    },
+    "hasFamilyAssociationWith": {
+      "category": "property",
+      "description": "Connects two Persons that have some type of family link, i.e. belong to the same family. This relation is symmetric.",
+      "label": "has family association with"
+    },
+    "isSuccessorOf": {
+      "category": "property",
+      "description": "Inverse of 'has successor' object property.",
+      "label": "is successor of"
+    },
+    "hasDescendant": {
+      "category": "property",
+      "description": "Connects a Person to one of their descendants.",
+      "label": "has descendant"
+    },
+    "hasAuthor": {
+      "category": "property",
+      "description": "To be used for any contribution to the content of a Record. Includes (of course) the Person, Group or Position in whose name or by whose command the content may have been formulated and first instantiated (e.g. the person who signed it).",
+      "label": "has author"
+    },
+    "hasCreator": {
+      "category": "property",
+      "description": "Covers the definition of author in diplomatics, and any contribution to the intellectual content of a Record Resource.",
+      "label": "has creator"
+    },
+    "isAuthorOf": {
+      "category": "property",
+      "description": "Inverse of 'has author' object property.",
+      "label": "is author of"
+    },
+    "hasBeginningDate": {
+      "category": "property",
+      "description": "Inverse of 'is beginning date of' object property",
+      "label": "has beginning date "
+    },
+    "isAssociatedWithDate": {
+      "category": "property",
+      "description": "Inverse of 'is date associated with' object property.",
+      "label": "is associated with date "
+    },
+    "isBeginningDateOf": {
+      "category": "property",
+      "description": "Connects a Date to a Thing that came into existence on that Date.",
+      "label": "is beginning date of "
+    },
+    "hasBirthDate": {
+      "category": "property",
+      "description": "Inverse of 'is birth date of' object property",
+      "label": "has birth date "
+    },
+    "isBirthDateOf": {
+      "category": "property",
+      "description": "Connects a Date to a Person that was born on that Date.",
+      "label": "is birth date of "
+    },
+    "hasCarrierType": {
+      "category": "property",
+      "description": "Connects an Instantiation to a Carrier Type which categorizes its carrier.",
+      "label": "has carrier type"
+    },
+    "isCarrierTypeOf": {
+      "category": "property",
+      "description": "Connects a Carrier Type to an Instantiation whose carrier it categorizes.",
+      "label": "is carrier type of"
+    },
+    "hasChild": {
+      "category": "property",
+      "description": "Connects a Person to one of their children.",
+      "label": "has child"
+    },
+    "isChildOf": {
+      "category": "property",
+      "description": "Inverse of 'has child' object property.",
+      "label": "is child of"
+    },
+    "hasCollector": {
+      "category": "property",
+      "description": "Connects a Record Resource or an Instantiation to the Agent that collects it intentionally (is a collector).",
+      "label": "has collector"
+    },
+    "isCollectorOf": {
+      "category": "property",
+      "description": "Inverse of 'has collector' object property.",
+      "label": "is collector of"
+    },
+    "hasContentOfType": {
+      "category": "property",
+      "description": "Connects a Record or a Record Part to a Content Type which categorizes its content.",
+      "label": "has content of type"
+    },
+    "isContentTypeOf": {
+      "category": "property",
+      "description": "Connects a Content Type to a Record or Record Part whose content it categorizes.",
+      "label": "is content type of"
+    },
+    "hasCopy": {
+      "category": "property",
+      "description": "Connects a Record Resource to a copy of that Record Resource.",
+      "label": "has copy "
+    },
+    "hasGeneticLinkToRecordResource": {
+      "category": "property",
+      "description": "Use to connect two Record Resources only if it is not possible to be more accurate and specify a narrower, asymmetric relation, e.g. ‘is original of’.",
+      "label": "has genetic link to record resource "
+    },
+    "isCopyOf": {
+      "category": "property",
+      "description": "Inverse of 'has copy' object property.",
+      "label": "is copy of"
+    },
+    "isCreatorOf": {
+      "category": "property",
+      "description": "Inverse of 'has creator' object property.",
+      "label": "is creator of"
+    },
+    "hasDeathDate": {
+      "category": "property",
+      "description": "Inverse of 'is death date of' object property",
+      "label": "has death date "
+    },
+    "hasEndDate": {
+      "category": "property",
+      "description": "Inverse of 'is end date of' object property.",
+      "label": "has end date "
+    },
+    "isDeathDateOf": {
+      "category": "property",
+      "description": "Connects a Date to a Person who died on that Date.",
+      "label": "is death date of "
+    },
+    "hasDerivedInstantiation": {
+      "category": "property",
+      "description": "Connects an Instantiation to an Instantiation that is derived from it.",
+      "label": "has derived instantiation "
+    },
+    "isInstantiationAssociatedWithInstantiation": {
+      "category": "property",
+      "description": "Connects two Instantiations. This object property is symmetric.",
+      "label": "is instantiation associated with instantiation "
+    },
+    "isDerivedFromInstantiation": {
+      "category": "property",
+      "description": "Inverse of 'has derived instantiation' object property.",
+      "label": "is derived from instantiation "
+    },
+    "hasSuccessor": {
+      "category": "property",
+      "description": "There may be zero to many intermediate Agents , ignored or unknown, between the two connected Agents. Can be used when there is a transfer of function from the first Agent to the second Agent.",
+      "label": "has successor"
+    },
+    "hasDocumentaryFormType": {
+      "category": "property",
+      "description": "Connects a Record or Record Part to its Documentary Form Type.",
+      "label": "has documentary form type"
+    },
+    "isDocumentaryFormTypeOf": {
+      "category": "property",
+      "description": "Connects a Documentary Form Type to a Record or Record Part that it categorizes.",
+      "label": "is documentary form type of"
+    },
+    "hasDraft": {
+      "category": "property",
+      "description": "Inverse of 'is draft of' object property.",
+      "label": "has draft "
+    },
+    "isDraftOf": {
+      "category": "property",
+      "description": "Connects a draft to the final version of a Record.",
+      "label": "is draft of "
+    },
+    "isEndDateOf": {
+      "category": "property",
+      "description": "Connects a Date to a Thing whose existence ended on that Date.",
+      "label": "is end date of "
+    },
+    "hasEventType": {
+      "category": "property",
+      "description": "Connects an Event to an Event Type which categorizes it.",
+      "label": "has event type"
+    },
+    "isEventTypeOf": {
+      "category": "property",
+      "description": "Connects an Event Type to an Event that is categorizes.",
+      "label": "is event type of"
+    },
+    "hasExtent": {
+      "category": "property",
+      "description": "Connects a Record Resource or Instantiation to an Extent",
+      "label": "has extent"
+    },
+    "isExtentOf": {
+      "category": "property",
+      "description": "Connects an Extent to a Record Resource or Instantiation",
+      "label": "is extent of"
+    },
+    "hasExtentType": {
+      "category": "property",
+      "description": "Connects an Extent to an Extent Type that categorizes what is being measured.",
+      "label": "has extent type"
+    },
+    "isExtentTypeOf": {
+      "category": "property",
+      "description": "Connects an Extent Type to an Extent that it categorizes.",
+      "label": "is extent type of"
+    },
+    "hasFamilyType": {
+      "category": "property",
+      "description": "Connects a Family to a Family Type that categorizes it.",
+      "label": "has family type"
+    },
+    "isFamilyTypeOf": {
+      "category": "property",
+      "description": "Connects a Family Type to a Family that is categorizes.",
+      "label": "is family type of"
+    },
+    "isRecordResourceAssociatedWithRecordResource": {
+      "category": "property",
+      "description": "Connects two Record Resources. This object property is symmetric.",
+      "label": "is record resource associated with record resource "
+    },
+    "hasIdentifierType": {
+      "category": "property",
+      "description": "Connects an Identifier and an Identifier Type that categorizes it.",
+      "label": "has identifier type"
+    },
+    "isIdentifierTypeOf": {
+      "category": "property",
+      "description": "Connects an Identifier Type and an Identifier that it categorizes.",
+      "label": "is identifier type of"
+    },
+    "hasInstantiation": {
+      "category": "property",
+      "description": "Connects a Record Resource to one of its Instantiations.",
+      "label": "has instantiation"
+    },
+    "isInstantiationOf": {
+      "category": "property",
+      "description": "Inverse of 'has instantiation' object property.",
+      "label": "is instantiation of"
+    },
+    "hasModificationDate": {
+      "category": "property",
+      "description": "Inverse of 'is modification date of' object property.",
+      "label": "has modification date "
+    },
+    "isModificationDateOf": {
+      "category": "property",
+      "description": "Connects a Date to a Thing that was modified on that Date.",
+      "label": "is modification date of "
+    },
+    "hasOrHadAgentName": {
+      "category": "property",
+      "description": "Connects an Agent and (one of) its present or past Agent Name.",
+      "label": "has or had agent name"
+    },
+    "hasOrHadName": {
+      "category": "property",
+      "description": "Connects a Thing to one of its past or present Names.",
+      "label": "has or had name"
+    },
+    "isOrWasAgentNameOf": {
+      "category": "property",
+      "description": "Connects an Agent Name to an Agent it designates or designated.",
+      "label": "is or was agent name of"
+    },
+    "hasOrHadAllMembersWithCategory": {
+      "category": "property",
+      "description": "Connects a Record Set and a Category (Type) to which all the Records or Record Parts that are or were included in the Record Set belong.",
+      "label": "has or had all members with category"
+    },
+    "isOrWasCategoryOfAllMembersOf": {
+      "category": "property",
+      "description": "Connects a Category (Type) and a Record Set whose all present or past Record or Record Part members belong to that Category.",
+      "label": "is or was category of all members of"
+    },
+    "hasOrHadAllMembersWithContentType": {
+      "category": "property",
+      "description": "Connects a Record Set and a Content Type that categorizes all the Records or Record Parts that are or were included in the Record Set.",
+      "label": "has of had all members with content type"
+    },
+    "isOrWasContentTypeOfAllMembersOf": {
+      "category": "property",
+      "description": "Connects a Content Type and a Record Set whose all past or present Record or Record Part members have that Content Type.",
+      "label": "is or was content type of all members of"
+    },
+    "hasOrHadAllMembersWithDocumentaryFormType": {
+      "category": "property",
+      "description": "Connects a Record Set and a Documentary Form Type that categorizes all the Records or Record Parts that are or were included in the Record Set.",
+      "label": "has of had all members with documentary form type"
+    },
+    "isOrWasDocumentaryFormTypeOfAllMembersOf": {
+      "category": "property",
+      "description": "Connects a Documentary Form Type and a Record Set whose all past or present Record or Record Part members have that Documentary Form Type.",
+      "label": "is or was documentary form type of all members of"
+    },
+    "hasOrHadAllMembersWithLanguage": {
+      "category": "property",
+      "description": "Connects a Record Set and a Language used by all the Records or Record Parts that are or were included in the Record Set.",
+      "label": "has of had all members with language"
+    },
+    "isOrWasLanguageOfAllMembersOf": {
+      "category": "property",
+      "description": "Connects a Language and a Record Set whose all present or past Record or Record Part members use that Language.",
+      "label": "is or was language of all members of"
+    },
+    "hasOrHadAllMembersWithLegalStatus": {
+      "category": "property",
+      "description": "Connects a Record Set and a Legal Status that categorizes all the Records or Record Parts that are or were included in the Record Set.",
+      "label": "has of had all members with legal status"
+    },
+    "isOrWasLegalStatusOfAllMembersOf": {
+      "category": "property",
+      "description": "Connects a Legal Status and a Record Set whose all past or present Record or Record Part members have that Legal Status.",
+      "label": "is or was legal status of all members of"
+    },
+    "hasOrHadAllMembersWithRecordState": {
+      "category": "property",
+      "description": "Connects a Record Set and a Record State that categorizes all the Records or Record Parts that are or were included in the Record Set.",
+      "label": "has of had all members with record state"
+    },
+    "isOrWasRecordStateOfAllMembersOf": {
+      "category": "property",
+      "description": "Connects a Record State and a Record Set whose all past or present Record or Record Part members have that Record State.",
+      "label": "is or was record state of all members of"
+    },
+    "hasOrHadAppellation": {
+      "category": "property",
+      "description": "Connects a Thing to an Appellation that is or was used for designating it.",
+      "label": "has or had appellation"
+    },
+    "isOrWasAppellationOf": {
+      "category": "property",
+      "description": "Connects an Appellation to a Thing that it designates or designated.",
+      "label": "is or was appellation of"
+    },
+    "hasOrHadAuthorityOver": {
+      "category": "property",
+      "description": "Connects an Agent to a Thing the Agent has or had authority over.",
+      "label": "has or had authority over"
+    },
+    "isOrWasUnderAuthorityOf": {
+      "category": "property",
+      "description": "Inverse of 'has or had authority over' object property.",
+      "label": "is or was under authority of"
+    },
+    "isOrWasCategoryOf": {
+      "category": "property",
+      "description": "Connects a Type (a category) to a Thing that it categorizes or categorized.",
+      "label": "is or was category of"
+    },
+    "hasOrHadComponent": {
+      "category": "property",
+      "description": "Connects an Instantiation to one of its present or past component instantiations.",
+      "label": "has or had component"
+    },
+    "isOrWasComponentOf": {
+      "category": "property",
+      "description": "Inverse of 'has or had component' object property.",
+      "label": "is or was component of"
+    },
+    "hasOrHadConstituent": {
+      "category": "property",
+      "description": "Connects a Record to a Record Part that is or was a component of that Record.",
+      "label": "has or had constituent"
+    },
+    "isOrWasConstituentOf": {
+      "category": "property",
+      "description": "Inverse of 'has or had constituent' object property.",
+      "label": "is or was constituent of"
+    },
+    "hasOrHadController": {
+      "category": "property",
+      "description": "Inverse of 'is or was controller of' object property.",
+      "label": "has or had controller"
+    },
+    "isOrWasSubordinateTo": {
+      "category": "property",
+      "description": "Inverse of 'has or had subordinate' object property.",
+      "label": "is or was subordinate to"
+    },
+    "isOrWasControllerOf": {
+      "category": "property",
+      "description": "Connects an Agent to another Agent it controls or controlled via Activities, i.e. controls by function.",
+      "label": "is or was controller of"
+    },
+    "hasOrHadCoordinates": {
+      "category": "property",
+      "description": "Connects a Physical Location to its past or present coordinates in a reference system.",
+      "label": "has coordinates"
+    },
+    "isOrWasCoordinatesOf": {
+      "category": "property",
+      "description": "Connects an instance of Coordinates to a Physical Location it locates or located on earth, according to some reference system.",
+      "label": "is or was coordinates of"
+    },
+    "hasOrHadCorporateBodyType": {
+      "category": "property",
+      "description": "Connects a Corporate Body to a Corporate Body Type which categorizes or categorized it.",
+      "label": "has or had corporate body type"
+    },
+    "isOrWasCorporateBodyTypeOf": {
+      "category": "property",
+      "description": "Connects a Corporate Body Type to a Corporate Body that it categorizes or categorized.",
+      "label": "is or was corporate body type of"
+    },
+    "hasOrHadCorrespondent": {
+      "category": "property",
+      "description": "Connects two Persons that correspond or have corresponded with each other. This relation is symmetric.",
+      "label": "has or had correspondent"
+    },
+    "knows": {
+      "category": "property",
+      "description": "Connects two Persons that directly know each other during their existence. This object property is symmetric.",
+      "label": "knows "
+    },
+    "hasOrHadDemographicGroup": {
+      "category": "property",
+      "description": "Connects a Person or a Group to a Demographic Group to which it belongs or belonged.",
+      "label": "has or had demographic group"
+    },
+    "isOrWasDemographicGroupOf": {
+      "category": "property",
+      "description": "Connects a Demographic Group to a Person or Group which belongs or belonged to it.",
+      "label": "is or was demographic group of"
+    },
+    "hasOrHadHolder": {
+      "category": "property",
+      "description": "Inverse of 'is or was holder of' object property.",
+      "label": "has or had holder"
+    },
+    "hasOrHadManager": {
+      "category": "property",
+      "description": "Inverse of 'is or was manager of' object property.",
+      "label": "has or had manager"
+    },
+    "isOrWasHolderOf": {
+      "category": "property",
+      "description": "Connects an Agent to a Record Resource or Instantiation that the Agent holds or held.",
+      "label": "is or was holder of"
+    },
+    "hasOrHadIdentifier": {
+      "category": "property",
+      "description": "Connects a Thing to one of its past or present Identifiers.",
+      "label": "has or had identifier"
+    },
+    "isOrWasIdentifierOf": {
+      "category": "property",
+      "description": "Connects an Identifier to a Thing that it identified or identifies.",
+      "label": "is or was identifier of"
+    },
+    "hasOrHadIntellectualPropertyRightsHolder": {
+      "category": "property",
+      "description": "Inverse of 'is or was holder of intellectual property rights of' object property.",
+      "label": "has or had intellectual property rights holder"
+    },
+    "isOrWasHolderOfIntellectualPropertyRightsOf": {
+      "category": "property",
+      "description": "Connects an Agent to a Record Resource or Instantiation on which the Agent has or had some intellectual property rights.",
+      "label": "is or was holder of intellectual property rights of"
+    },
+    "hasOrHadJurisdiction": {
+      "category": "property",
+      "description": "Inverse of 'is or was jurisdiction of' object property.",
+      "label": "has or had jurisdiction"
+    },
+    "isOrWasJurisdictionOf": {
+      "category": "property",
+      "description": "Connects a Place to an Agent that has or had jurisdiction over the Place.",
+      "label": "is or was jurisdiction of"
+    },
+    "hasOrHadLanguage": {
+      "category": "property",
+      "description": "Connects an Agent or Record Resource to a Language that it uses or used.",
+      "label": "has or had language"
+    },
+    "isOrWasLanguageOf": {
+      "category": "property",
+      "description": "Connects a Language to an Agent, Record or Record Part that uses or used it.",
+      "label": "is or was language of"
+    },
+    "hasOrHadLeader": {
+      "category": "property",
+      "description": "Inverse of 'is or was leader of' object property.",
+      "label": "has or had leader"
+    },
+    "isOrWasLeaderOf": {
+      "category": "property",
+      "description": "Connects a Person to the Group that Person leads or led in the past.",
+      "label": "is or was leader of"
+    },
+    "hasOrHadLegalStatus": {
+      "category": "property",
+      "description": "Connects an Agent or Record Resource to a Legal Status which categorized or categorizes it.",
+      "label": "has or had legal status"
+    },
+    "isOrWasLegalStatusOf": {
+      "category": "property",
+      "description": "Connects a Legal Status to an Agent, Record or Record Part that it categorized or categorizes.",
+      "label": "is or was legal status of"
+    },
+    "hasOrHadLocation": {
+      "category": "property",
+      "description": "Inverse of 'is or was location of' object property.",
+      "label": "has or had location"
+    },
+    "isOrWasLocationOf": {
+      "category": "property",
+      "description": "Connects a Place to a Thing that is or was located in the Place.",
+      "label": "is or was location of"
+    },
+    "hasOrHadMainSubject": {
+      "category": "property",
+      "description": "Use for specifying, for example, that a Record Set of type personal file has main subject some person, which would help end users to retrieve the main archival resources about this person.",
+      "label": "has or had main subject"
+    },
+    "isOrWasMainSubjectOf": {
+      "category": "property",
+      "description": "Inverse of 'has or had main subject' object property.",
+      "label": "is or was main subject of"
+    },
+    "isOrWasManagerOf": {
+      "category": "property",
+      "description": "Connects an Agent to a Record Resource or Instantiation that the Agent managed or manages.",
+      "label": "is or was manager of"
+    },
+    "hasOrHadMember": {
+      "category": "property",
+      "description": "Connects a Group to a Person that is or was a member of that Group.",
+      "label": "has or had member"
+    },
+    "isOrWasMemberOf": {
+      "category": "property",
+      "description": "Inverse of 'has or had member' object property.",
+      "label": "is or was member of"
+    },
+    "isOrWasNameOf": {
+      "category": "property",
+      "description": "Connects a Name to a Thing that it designated or designates.",
+      "label": "is or was name of"
+    },
+    "hasOrHadOccupationOfType": {
+      "category": "property",
+      "description": "Connects a Person to an Occupation Type that categorized or categorizes his/her occupation (profession, trade or craft).",
+      "label": "has or had occupation of type"
+    },
+    "isOrWasOccupationTypeOf": {
+      "category": "property",
+      "description": "Connects an Occupation Type to a Person whose occupation is or was categorized by it.",
+      "label": "is or was occupation type of"
+    },
+    "hasOrHadOwner": {
+      "category": "property",
+      "description": "Inverse of 'is or was owner of' object property.",
+      "label": "has or had owner"
+    },
+    "isOrWasOwnerOf": {
+      "category": "property",
+      "description": "Connects a Group, Person or Position to a Thing that this Agent owns or owned.",
+      "label": "is or was owner of"
+    },
+    "isOrWasPartOf": {
+      "category": "property",
+      "description": "Inverse of 'has or had part' relation.",
+      "label": "is or was part of"
+    },
+    "isEventAssociatedWith": {
+      "category": "property",
+      "description": "Connects an Event to a Thing that is associated with the existence and lifecycle of the Event.",
+      "label": "is event associated with "
+    },
+    "isOrWasParticipantIn": {
+      "category": "property",
+      "description": "Inverse of 'has or had participant' object property.",
+      "label": "is or was participant in"
+    },
+    "hasOrHadPhysicalLocation": {
+      "category": "property",
+      "description": "Connects a Place to one of its past or present Physical Location.",
+      "label": "has or had physical location"
+    },
+    "isOrWasPhysicalLocationOf": {
+      "category": "property",
+      "description": "Connects a Physical Location to a Place, when it is or was its location.",
+      "label": "is or was physical location of"
+    },
+    "hasOrHadPlaceName": {
+      "category": "property",
+      "description": "Connects a Place to one of its past or present names.",
+      "label": "has or had place name"
+    },
+    "isOrWasPlaceNameOf": {
+      "category": "property",
+      "description": "Connects a Place Name to a Place that was or is designated by it.",
+      "label": "is or was place name of"
+    },
+    "hasOrHadPlaceType": {
+      "category": "property",
+      "description": "Connects a Place to a Place Type that categorized or categorizes it.",
+      "label": "has or had place type"
+    },
+    "isOrWasPlaceTypeOf": {
+      "category": "property",
+      "description": "Connects a Place Type to a Place that is or was categorized by it.",
+      "label": "is or was place type of"
+    },
+    "hasOrHadRuleType": {
+      "category": "property",
+      "description": "Connects a Rule to a Rule Type that categorized or categorizes it.",
+      "label": "has or had rule type"
+    },
+    "isOrWasRuleTypeOf": {
+      "category": "property",
+      "description": "connects a Rule Type to a Rule that it categorized or categorizes.",
+      "label": "is or was rule type of"
+    },
+    "hasOrHadSomeMembersWithCategory": {
+      "category": "property",
+      "description": "Connects a Record Set and a Category (Type) to which some of the Records or Record Parts that are or were included in the Record Set belong.",
+      "label": "has or had some members with category"
+    },
+    "isOrWasCategoryOfSomeMembersOf": {
+      "category": "property",
+      "description": "Connects a Category (Type) and a Record Set whose some present or past Record or Record Part members belong to that Category.",
+      "label": "is or was category of some members of"
+    },
+    "hasOrHadSomeMembersWithContentType": {
+      "category": "property",
+      "description": "Connects a Record Set and a Content Type that categorizes some of the Records or Record Parts that are or were included in the Record Set.",
+      "label": "has or had some members with content type"
+    },
+    "isOrWasContentTypeOfSomeMembersOf": {
+      "category": "property",
+      "description": "Connects a Content Type and a Record Set whose some past or present Record or Record Part members have that Content Type.",
+      "label": "is or was content type of some members of"
+    },
+    "hasOrHadSomeMembersWithLanguage": {
+      "category": "property",
+      "description": "Connects a Record Set and a Language used by some of the Records or Record Parts that are or were included in the Record Set.",
+      "label": "has or had some members with language"
+    },
+    "isOrWasLanguageOfSomeMembersOf": {
+      "category": "property",
+      "description": "Connects a Language and a Record Set whose some present or past Record or Record Part members use that Language.",
+      "label": "is or was language of some members of"
+    },
+    "hasOrHadSomeMembersWithLegalStatus": {
+      "category": "property",
+      "description": "Connects a Record Set and a Legal Status that categorizes some of the Records or Record Parts that are or were included in the Record Set.",
+      "label": "has or had some members with legal status"
+    },
+    "isOrWasLegalStatusOfSomeMembersOf": {
+      "category": "property",
+      "description": "Connects a Legal Status and a Record Set whose some past or present Record or Record Part members have that Legal Status.",
+      "label": "is or was legal status of some members of"
+    },
+    "hasOrHadSomeMembersWithRecordState": {
+      "category": "property",
+      "description": "Connects a Record Set and a Record State that categorizes some of the Records or Record Parts that are or were included in the Record Set.",
+      "label": "has or had some members with record state"
+    },
+    "isOrWasRecordStateOfSomeMembersOf": {
+      "category": "property",
+      "description": "Connects a Record State and a Record Set whose some past or present Record or Record Part members have that Record State.",
+      "label": "is or was record state of some members of"
+    },
+    "hasOrHadSomeMemberswithDocumentaryFormType": {
+      "category": "property",
+      "description": "Connects a Record Set and a Documentary Form Type that categorizes some of the Records or Record Parts that are or were included in the Record Set.",
+      "label": "has or had some members with documentary form type"
+    },
+    "isOrWasDocumentaryFormTypeOfSomeMembersOf": {
+      "category": "property",
+      "description": "Connects a Documentary Form Type and a Record Set whose some past or present Record or Record Part members have that Documentary Form Type.",
+      "label": "is or was documentary form type of some members of"
+    },
+    "hasOrHadSpouse": {
+      "category": "property",
+      "description": "Connects two Persons that are or were married. This relation is symmetric.",
+      "label": "has or had spouse"
+    },
+    "hasOrHadStudent": {
+      "category": "property",
+      "description": "Inverse of 'has or had teacher' object property.",
+      "label": "has or had student"
+    },
+    "hasOrHadTeacher": {
+      "category": "property",
+      "description": "Connects a Person to another Person who is or was their student.",
+      "label": "has or had teacher"
+    },
+    "hasOrHadSubdivision": {
+      "category": "property",
+      "description": "Connects a Group to one of its present or past subdivisions.",
+      "label": "has or had subdivision"
+    },
+    "hasOrHadSubordinate": {
+      "category": "property",
+      "description": "The hierarchical relation can be an authority relation, or a whole/part relation between two Groups",
+      "label": "has or had subordinate"
+    },
+    "isOrWasSubdivisionOf": {
+      "category": "property",
+      "description": "Inverse of 'has or had subdivision' object property.",
+      "label": "is or was subdivision of"
+    },
+    "hasOrHadSubevent": {
+      "category": "property",
+      "description": "Since an Activity is a kind of Event, this Relation can also be used for Activity.",
+      "label": "has or had subevent"
+    },
+    "isAssociatedWithEvent": {
+      "category": "property",
+      "description": "Inverse of 'is event associated with' object property.",
+      "label": "is associated with event "
+    },
+    "isOrWasSubeventOf": {
+      "category": "property",
+      "description": "Inverse of 'has or had subevent' object property.",
+      "label": "is or was subevent of"
+    },
+    "isOrWasSubjectOf": {
+      "category": "property",
+      "description": "Inverse of 'has or had subject' object property.",
+      "label": "is or was subject of"
+    },
+    "hasOrHadTitle": {
+      "category": "property",
+      "description": "Connects a Record Resource, Instantiation or Rule to a title that is or was used for designating it.",
+      "label": "has or had title"
+    },
+    "isOrWasTitleOf": {
+      "category": "property",
+      "description": "Connects a Title to a Record Resource, Instantiation or Rule that it designated or designates.",
+      "label": "is or was title of"
+    },
+    "hasOrHadWorkRelationWith": {
+      "category": "property",
+      "description": "Connects two Agents that have or had some type of work relation in the course of their activities. This relation is symmetric.",
+      "label": "has or had work relation with"
+    },
+    "hasOriginal": {
+      "category": "property",
+      "description": "Inverse of 'is original of' object property.",
+      "label": "has original "
+    },
+    "isOriginalOf": {
+      "category": "property",
+      "description": "There may be zero to many intermediate Records, ignored or unknown, between the two connected Records",
+      "label": "is original of "
+    },
+    "hasProductionTechniqueType": {
+      "category": "property",
+      "description": "Connects an Instantiation to a Production Technique Type that categorizes its production technique.",
+      "label": "has production technique type"
+    },
+    "isProductionTechniqueTypeOf": {
+      "category": "property",
+      "description": "Connects a Production Technique Type to an Instantiation whose production technique is categorized by it.",
+      "label": "is production technique type of"
+    },
+    "isProvenanceOf": {
+      "category": "property",
+      "description": "inverse of 'has provenance' object property.",
+      "label": "is provenance of "
+    },
+    "hasPublisher": {
+      "category": "property",
+      "description": "Connects a Record resource to an Agent who published it.",
+      "label": "hasPublisher"
+    },
+    "isPublisherOf": {
+      "category": "property",
+      "description": "Connects an Agent to a Record Resource that it published.",
+      "label": "isPublisherOf"
+    },
+    "hasReceiver": {
+      "category": "property",
+      "description": "Connects a Record Resource or an Instantiation to the Agent that receives it in the course of its activities.",
+      "label": "has receiver"
+    },
+    "isReceiverOf": {
+      "category": "property",
+      "description": "Inverse of 'received by' object property.",
+      "label": "is receiver of"
+    },
+    "hasRecordSetType": {
+      "category": "property",
+      "description": "Connects a Record Set to a Record Set Type that categorizes it.",
+      "label": "has record set type"
+    },
+    "isRecordSetTypeOf": {
+      "category": "property",
+      "description": "Connects a Record Set Type to a Record Set that it categorizes.",
+      "label": "is record set type of"
+    },
+    "hasRecordState": {
+      "category": "property",
+      "description": "Connects a Record or Record Part to a Record State that categorizes its state.",
+      "label": "has record state"
+    },
+    "isRecordStateOf": {
+      "category": "property",
+      "description": "Connects a Record State to a Record or Record Part whose state it categorizes.",
+      "label": "is record state of"
+    },
+    "hasReply": {
+      "category": "property",
+      "description": "Connects a Record Resource to a reply, usually in the form of correspondence.",
+      "label": "has reply"
+    },
+    "isReplyTo": {
+      "category": "property",
+      "description": "Inverse of 'has reply' object property.",
+      "label": "is reply to"
+    },
+    "hasRepresentationType": {
+      "category": "property",
+      "description": "Connects an Instantiation to a Representation Type that categorizes its representation type.",
+      "label": "has representation type"
+    },
+    "isRepresentationTypeOf": {
+      "category": "property",
+      "description": "Connects a Representation Type to an Instantiation that it categorizes.",
+      "label": "is representation type of"
+    },
+    "hasSender": {
+      "category": "property",
+      "description": "Connects a Record Resource or an Instantiation to the Agent that sends it",
+      "label": "has sender "
+    },
+    "isSenderOf": {
+      "category": "property",
+      "description": "Inverse of 'has sender' object property.",
+      "label": "is sender of "
+    },
+    "hasSibling": {
+      "category": "property",
+      "description": "Connects two Persons that are siblings. This relation is symmetric.",
+      "label": "has sibling"
+    },
+    "hasSource": {
+      "category": "property",
+      "description": "Connects a Record Resource or Relation to a Record Resource or Agent that is used as a source of information for identifying or describing it.",
+      "label": "has source "
+    },
+    "isSourceOf": {
+      "category": "property",
+      "description": "Connects a Record Resource or an Agent to a Record Resource or Relation, when the first is used as a source of information for identifying or describing the second one.",
+      "label": "is source of "
+    },
+    "hasUnitOfMeasurement": {
+      "category": "property",
+      "description": "Connects an Extent to a Unit Of Measurement",
+      "label": "has unit of measurement"
+    },
+    "isUnitOfMeasurementOf": {
+      "category": "property",
+      "description": "Inverse of 'has unit of measurement' object property",
+      "label": "is unit of measurement of"
+    },
+    "includesOrIncluded": {
+      "category": "property",
+      "description": "A Record or Record Set can be aggregated in one or many Record Sets simultaneously or through time",
+      "label": "includes or included"
+    },
+    "isOrWasIncludedIn": {
+      "category": "property",
+      "description": "Inverse of 'includes or included' object property.",
+      "label": "is or was included in"
+    },
+    "instantiationIsConnectedToInstantiationRelation": {
+      "category": "property",
+      "description": "Connects an Instantiation to an Instantiation to Instantiation Relation.",
+      "label": "instantiation is connected to instantiation relation "
+    },
+    "instantiationIsSourceOfMigrationRelation": {
+      "category": "property",
+      "description": "Connects an Instantiation (from which at least one Instantiation is migrated) to a Migration Relation.",
+      "label": "instantiation is source of migration relation "
+    },
+    "migrationRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Migration Relation to the migrated Instantiation.",
+      "label": "migration relation has source "
+    },
+    "instantiationIsTargetOfMigrationRelation": {
+      "category": "property",
+      "description": "Connects an Instantiation which results from a migration, to a Migration Relation.",
+      "label": "instantiation is target of migration relation "
+    },
+    "migrationRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Migration Relation to a resulting Instantiation.",
+      "label": "migration relation has target "
+    },
+    "instantiationIsTargetOfRecordResourceToInstantiationRelation": {
+      "category": "property",
+      "description": "Connects an Instantiation of a Record Resource to the Record Resource to Instantiation Relation.",
+      "label": "instantiation is target of record resource to instantiation\n            relation "
+    },
+    "recordResourceToInstantiationRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Record Resource To Instantiation Relation to an Instantiation of the involved Record Resource.",
+      "label": "record resource to instantiation relation has target "
+    },
+    "intellectualPropertyRightsRelationHasTarget": {
+      "category": "property",
+      "description": "Connects an IintellectualPropertyRightsRelation to one of the Record Resource or Instantiation on which the rights are held.",
+      "label": "intellectual property rights relation has target "
+    },
+    "recordResourceOrInstantiationIsTargetOfIntellectualPropertyRightsRelation": {
+      "category": "property",
+      "description": "Connects a Record Resource or Instantiation (on which some intellectual property rights are held) to an Intellectual Property Rights Relation.",
+      "label": "record resource or instantiation is target of intellectual\n            property rights relation "
+    },
+    "isDateAssociatedWith": {
+      "category": "property",
+      "description": "Connects a Date to a Thing that the Date is associated with the existence and lifecycle of.",
+      "label": "is date associated with "
+    },
+    "isEquivalentTo": {
+      "category": "property",
+      "description": "Connects two Things that are considered equivalent.",
+      "label": "is equivalent to "
+    },
+    "isFromUseDateOf": {
+      "category": "property",
+      "description": "Connects a Date to an Appellation, when it is the date at which the Appellation was first used.",
+      "label": "is from use date of "
+    },
+    "wasUsedFromDate": {
+      "category": "property",
+      "description": "Connects an Appellation to the Date from which it was used.",
+      "label": "was used from date "
+    },
+    "isFunctionallyEquivalentTo": {
+      "category": "property",
+      "description": "Two Instantiations, from some point of view, may be considered as equivalent. This equivalence is usually based upon the fact that the Instantiations have at least the same intellectual content (they instantiate the same Record Resource).",
+      "label": "is functionally equivalent to"
+    },
+    "isLastUpdateDateOf": {
+      "category": "property",
+      "description": "Connects a Date and a Thing that was last modified at this Date.",
+      "label": "is last update date of "
+    },
+    "wasLastUpdatedAtDate": {
+      "category": "property",
+      "description": "Connects a Thing to the Date when it was last modified.",
+      "label": "was last updated at date "
+    },
+    "isOrWasAdjacentTo": {
+      "category": "property",
+      "description": "Connects two Places that are or were geographically adjacent. This is a symmetric object property.",
+      "label": "is or was adjacent to"
+    },
+    "isOrWasEnforcedBy": {
+      "category": "property",
+      "description": "Connects a Rule to an Agent that enforces or enforced the Rule.",
+      "label": "is or was enforced by"
+    },
+    "isOrWasResponsibleForEnforcing": {
+      "category": "property",
+      "description": "Inverse of 'is or was enforced by' object property.",
+      "label": "is or was responsible for enforcing"
+    },
+    "isOrWasOccupiedBy": {
+      "category": "property",
+      "description": "Inverse of 'occupies or occupied' object property.",
+      "label": "is or was occupied by"
+    },
+    "occupiesOrOccupied": {
+      "category": "property",
+      "description": "Connects a Person to a Position they occupy or occupied.",
+      "label": "occupies or occupied"
+    },
+    "isOrWasPerformedBy": {
+      "category": "property",
+      "description": "Connects an Activity to an Agent that performed or performs the Activity.",
+      "label": "is or was performed by"
+    },
+    "performsOrPerformed": {
+      "category": "property",
+      "description": "Inverse of 'is or was performed by' object property.",
+      "label": "performs or performed"
+    },
+    "isOrWasRegulatedBy": {
+      "category": "property",
+      "description": "Inverse of the 'regulates or regulated' object property.",
+      "label": "is or was regulated by"
+    },
+    "regulatesOrRegulated": {
+      "category": "property",
+      "description": "Connects a Rule to a Thing that it regulates or regulated.",
+      "label": "regulates or regulated"
+    },
+    "isResponsibleForIssuing": {
+      "category": "property",
+      "description": "Inverse of 'issued by' object property.",
+      "label": "is responsible for issuing "
+    },
+    "issuedBy": {
+      "category": "property",
+      "description": "Connects a Rule to the Agent that issued or published the Rule.",
+      "label": "issued by "
+    },
+    "isToUseDateOf": {
+      "category": "property",
+      "description": "Connects a Date to an Appellation, when it is the date till which the Appellation was used.",
+      "label": "is to use date of "
+    },
+    "wasUsedToDate": {
+      "category": "property",
+      "description": "Connects an Appellation to the Date till when it was used.",
+      "label": "was used to date "
+    },
+    "knowingOfRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Knowing Of Relation to a 'knowing of' Person (a Person who has some knowledge of another one.)",
+      "label": "knowing of relation has source "
+    },
+    "personIsSourceOfKnowingOfRelation": {
+      "category": "property",
+      "description": "Connects a Person (who has some knowledge of another one) to a Knowing Of Relation.",
+      "label": "person is source of knowing of relation "
+    },
+    "knowingOfRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Knowing Of Relation to a 'known by' Person (a Person on which another one has some has some knowledge.)",
+      "label": "knowing of relation has target "
+    },
+    "personIsTargetOfKnowingOfRelation": {
+      "category": "property",
+      "description": "Connects a Person (of which another Person has some knowledge) to a Knowing Of Relation.",
+      "label": "person is target of knowing of relation "
+    },
+    "personHasKnowingRelation": {
+      "category": "property",
+      "description": "Connects a Person to a Knowing Relation.",
+      "label": "person has knowing relation "
+    },
+    "knownBy": {
+      "category": "property",
+      "description": "Inverse of 'knows of' object property.",
+      "label": "known by "
+    },
+    "knowsOf": {
+      "category": "property",
+      "description": "Connects a Person to another Person they have some knowledge of through time or space.",
+      "label": "knows of "
+    },
+    "leadershipRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Leadership Relation to a Person who is involved as a leader.",
+      "label": "leadership relation has source "
+    },
+    "personIsSourceOfLeadershipRelation": {
+      "category": "property",
+      "description": "Connects a Person (as a leader) to a Leadership Relation.",
+      "label": "person is source of leadership relation "
+    },
+    "leadershipWithPosition": {
+      "category": "property",
+      "description": "Connects a Leadership Relation to the Position occupied by the leading Person.",
+      "label": "leadership with position "
+    },
+    "positionIsContextOfLeadershipRelation": {
+      "category": "property",
+      "description": "Connects a Position to a Leadership Relation (the leading Person occupies that Position).",
+      "label": "position is context of leadership relation "
+    },
+    "managementRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Management Relation to a Record Resource or Instantiation that is involved as a managed thing.",
+      "label": "management relation has target "
+    },
+    "recordResourceOrInstantiationIsTargetOfManagementRelation": {
+      "category": "property",
+      "description": "Connects a Record Resource or Instantiation (that is managed by an Agent) to a Management Relation.",
+      "label": "record resource or instantiation is target of management relation\n        "
+    },
+    "mandateIsSourceOfMandateRelation": {
+      "category": "property",
+      "description": "Connects a Mandate to a Mandate Relation.",
+      "label": "mandate is source of mandate relation "
+    },
+    "ruleIsSourceOfRuleRelation": {
+      "category": "property",
+      "description": "Connects a Rule to a Rule Relation.",
+      "label": "rule is source of rule relation "
+    },
+    "mandateRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Mandate Relation to a Mandate.",
+      "label": "mandate relation has source "
+    },
+    "ruleRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Rule Relation to a Rule.",
+      "label": "rule relation has source "
+    },
+    "ruleRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Rule Relation to a Thing (that is associated to a Rule).",
+      "label": "rule relation has target "
+    },
+    "membershipRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Membership Relation to a Person who is involved as a member.",
+      "label": "membership relation has target "
+    },
+    "personIsTargetOfMembershipRelation": {
+      "category": "property",
+      "description": "Connects a Person (as a member of a Group) to a Membership Relation.",
+      "label": "person is target of membership relation "
+    },
+    "membershipWithPosition": {
+      "category": "property",
+      "description": "Connects a Membership Relation to the Position occupied by the member Person(s).",
+      "label": "membership with position "
+    },
+    "positionIsContextOfMembershipRelation": {
+      "category": "property",
+      "description": "Connects a Position to a Membership Relation (the member Person occupies that Position).",
+      "label": "position is context of membership relation "
+    },
+    "migratedFrom": {
+      "category": "property",
+      "description": "Inverse of 'migrated into' object property.",
+      "label": "migrated from"
+    },
+    "migratedInto": {
+      "category": "property",
+      "description": "Use for digital instantiations.",
+      "label": "migrated into"
+    },
+    "overlapsOrOverlapped": {
+      "category": "property",
+      "description": "Connects two Places that geographically overlap or overlapped. This object property is symmetric.",
+      "label": "overlaps or overlapped"
+    },
+    "ownershipRelationHasTarget": {
+      "category": "property",
+      "description": "Connects an Ownership Relation to a Thing that is owned.",
+      "label": "owner ship relation has target "
+    },
+    "thingIsTargetOfOwnershipRelation": {
+      "category": "property",
+      "description": "Connects a Thing (that is owned by a Group, a Person or a Position) to an Ownership Relation.",
+      "label": "thing is target of ownership relation "
+    },
+    "personHasSiblingRelation": {
+      "category": "property",
+      "description": "Connects a Person to a Sibling Relation.",
+      "label": "person has sibling relation "
+    },
+    "siblingRelationConnects": {
+      "category": "property",
+      "description": "Connects a Sibling Relation to one of the siblings involved.",
+      "label": "sibling relation connects "
+    },
+    "personHasSpouseRelation": {
+      "category": "property",
+      "description": "Connects a Person to a Spouse Relation.",
+      "label": "person has spouse relation "
+    },
+    "spouseRelationConnects": {
+      "category": "property",
+      "description": "Connects a Sibling Relation to one of the spouses involved.",
+      "label": "spouse relation connects "
+    },
+    "personIsSourceOfPositionHoldingRelation": {
+      "category": "property",
+      "description": "Connects a Person (who occupies a Position) to a Position Holding Relation.",
+      "label": "person is source of position holding relation "
+    },
+    "positionHoldingRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Position Holding Relation to a Person (who occupies a Position).",
+      "label": "position holding relation has source "
+    },
+    "personIsSourceOfTeachingRelation": {
+      "category": "property",
+      "description": "Connects a Person (as a teacher) to a Teaching Relation.",
+      "label": "person is source of teaching relation "
+    },
+    "teachingRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Teaching Relation to a Person (who is a teacher).",
+      "label": "teaching relation has source "
+    },
+    "personIsTargetOfTeachingRelation": {
+      "category": "property",
+      "description": "Connects a Person (as a student) to a Teaching Relation.",
+      "label": "person is target of teaching relation "
+    },
+    "teachingRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Teaching Relation to a Person (who is a student).",
+      "label": "teaching relation has target "
+    },
+    "placeIsSourceOfPlaceRelation": {
+      "category": "property",
+      "description": "Connects a Place (as associated to a Thing) to a Place Relation.",
+      "label": "place is source of place relation "
+    },
+    "placeRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Place Relation to the Place concerned.",
+      "label": "place relation has source "
+    },
+    "placeRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Place Relation to a Thing that is associated to the Place.",
+      "label": "place relation has target "
+    },
+    "thingIsTargetOfPlaceRelation": {
+      "category": "property",
+      "description": "Connects a Thing (that is associated with a Place) to a Place Relation.",
+      "label": "thing is target of place relation "
+    },
+    "positionHoldingRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Position Holding Relation to a Position (that is occupied).",
+      "label": "position holding relation has target "
+    },
+    "positionIsTargetOfPositionHoldingRelation": {
+      "category": "property",
+      "description": "Connects a Position (that is occupied by a Person) to a Position Holding Relation.",
+      "label": "position is target of position holding relation "
+    },
+    "positionIsSourceOfPositionToGroupRelation": {
+      "category": "property",
+      "description": "Connects a Position (that exists within a Group) to a Position to Group Relation.",
+      "label": "position is source of position to group relation "
+    },
+    "positionToGroupRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Position to Group Relation to a Position (that exists in a Group).",
+      "label": "position to group relation has source "
+    },
+    "recordResourceOrInstantiationIsSourceOfProvenanceRelation": {
+      "category": "property",
+      "description": "Connects a Record Resource or Instantiation (that is created or accumulated by an Agent, or documents an Activity) to a Provenance Relation.",
+      "label": "record resource or instantiation is source of provenance relation\n        "
+    },
+    "proxyFor": {
+      "category": "property",
+      "description": "Connects a Proxy to the Record Resource it stands for in the specific context of a Record Set.",
+      "label": "proxy for "
+    },
+    "proxyIn": {
+      "category": "property",
+      "description": "Connects a Proxy to the Record Set in which it stands for (represents) another Record Resource.",
+      "label": "proxy in "
+    },
+    "recordResourceGeneticRelationConnects": {
+      "category": "property",
+      "description": "Connects a Record Resource Genetic Relation to one of the associated Record Resources.",
+      "label": "record resource genetic relation connects "
+    },
+    "recordResourceRelationConnects": {
+      "category": "property",
+      "description": "Connects a Record Resource relation to one of the related Record Resources.",
+      "label": "record resource relation connects "
+    },
+    "recordResourceIsConnectedToRecordResourceGeneticRelation": {
+      "category": "property",
+      "description": "Connects a Record Resource to a Record Resource Genetic Relation.",
+      "label": "record resource is connected to record resource genetic relation\n        "
+    },
+    "recordResourceHoldingRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Record Resource Holding Relation to a Record Resource or Instantiation (that is held by an Agent).",
+      "label": "record resource holding relation has target "
+    },
+    "recordResourceOrInstantiationIsTargetOfRecordResourceHoldingRelation": {
+      "category": "property",
+      "description": "Connects a Record Resource or Instantiation (that is held by an Agent) to a Record Resource Holding Relation.",
+      "label": "record resource or instantiation is target of record resource\n            holding relation "
+    },
+    "recordResourceIsConnectedToRecordResourceRelation": {
+      "category": "property",
+      "description": "Connects a Record Resource to a Record Resource Relation.",
+      "label": "record resource is connected to record resource relation\n        "
+    },
+    "recordResourceIsSourceOfRecordResourceToInstantiationRelation": {
+      "category": "property",
+      "description": "Connects a Record Resource (that was instantiated) to a Record Resource To Instantiation Relation",
+      "label": "record resource is source of record resource to instantiation\n            relation "
+    },
+    "recordResourceToInstantiationRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Record Resource To Instantiation Relation to the Record Resource (that was instantiated).",
+      "label": "record resource to instantiation relation has source "
+    },
+    "sequentialRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Sequential Relation to a Thing that precedes other Thing(s) in the sequence.",
+      "label": "sequential relation has source "
+    },
+    "thingIsSourceOfSequentialRelation": {
+      "category": "property",
+      "description": "Connects a Thing to a Sequential Relation, when this Thing precedes other Thing(s) in the sequence.",
+      "label": "thing is source of sequential relation "
+    },
+    "sequentialRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Sequential Relation to a Thing that follows other Thing(s) in the sequence.",
+      "label": "sequential relation has target "
+    },
+    "thingIsTargetOfSequentialRelation": {
+      "category": "property",
+      "description": "Connects a Thing (that follows other Thing(s) in a sequence) to a Sequential Relation.",
+      "label": "thing is target of sequential relation "
+    },
+    "thingIsTargetOfTypeRelation": {
+      "category": "property",
+      "description": "Connects a Thing (that is categorized by a Type) to a Type Relation.",
+      "label": "thing is target of type relation "
+    },
+    "typeRelationHasTarget": {
+      "category": "property",
+      "description": "Connects a Type Relation to a Thing (that is categorized by the involved Type).",
+      "label": "type relation has target "
+    },
+    "typeIsSourceOfTypeRelation": {
+      "category": "property",
+      "description": "Connects a Type (a category) to a Type Relation.",
+      "label": "type is source of type relation "
+    },
+    "typeRelationHasSource": {
+      "category": "property",
+      "description": "Connects a Type Relation to the Type (that categorizes the involved Thing(s)).",
+      "label": "type relation has source "
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "name": "turtle-vocab-autocomplete",
+  "displayName": "Turtle vocabulary autocompleter.",
+  "description": "Autocomplete prefixes and RDF Classes and Properties from some well known vocabularies",
+  "version": "0.0.2",
+  "author": {
+    "name": "Mark Lindeman",
+    "email": "mark.lindeman@triply.cc"
+  },
+  "icon": "static/icon.png",
+  "license": "EUPL-1.2",
+  "publisher": "MarkLindeman",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mightymax/turtle-vocab-autocomplete"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "turtle-vocab-autocomplete.findPrefix",
+        "title": "Vocabulary Prefix"
+      }
+    ],
+    "configuration": [
+      {
+        "id": "turtle-vocab-autocomplete",
+        "title": "Turtle vocabulary autocompleter",
+        "properties": {
+          "conf.settingsEditor.turtleVocabAutoComplete.template": {
+            "type": "string",
+            "order": 1,
+            "enum": [
+              "prefix ex: <http://ex.com/>",
+              "@prefix ex: <http://ex.com/> ."
+            ],
+            "description": "Snippet template (only in Command Pallet)",
+            "default": "prefix ex: <http://ex.com/>"
+          },
+          "conf.settingsEditor.turtleVocabAutoComplete.allowMultiple": {
+            "type": "boolean",
+            "order": 2,
+            "description": "Allow selection of multiple prefixes in Command Pallet.",
+            "default": true
+          },
+          "conf.settingsEditor.turtleVocabAutoComplete.addDisplayName": {
+            "type": "boolean",
+            "order": 3,
+            "description": "Add displayname of vocabulary as comment",
+            "default": true
+          },
+          "conf.settingsEditor.turtleVocabAutoComplete.addDescription": {
+            "type": "boolean",
+            "order": 4,
+            "description": "Add descrition of vocabulary as comment",
+            "default": false
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "20.2.5",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "@vscode/test-electron": "^2.3.2",
+    "eslint": "^8.41.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.3"
+  }
+}

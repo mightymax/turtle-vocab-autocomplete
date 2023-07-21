@@ -1,0 +1,7 @@
+{
+  "iri": "http://qudt.org/vocab/quantitykind/",
+  "description": "Provides the set of all quantity kinds.",
+  "label": "QUDT VOCAB Quantity Kinds  Release 2.1.25",
+  "prefix": "quantitykind",
+  "items": {}
+}

@@ -1,0 +1,393 @@
+{
+  "iri": "http://purl.org/dc/terms/",
+  "description": "The /terms/ namespace was originally created in 2001 for identifying new terms coined outside of the original fifteen-element Dublin Core. In 2008, in the context of defining formal semantic constraints for DCMI metadata terms in support of RDF applications, the original fifteen elements themselves were mirrored in the /terms/ namespace. As a result, there exists both a dc:date (http://purl.org/dc/elements/1.1/date) with no formal range and a corresponding dcterms:date (http://purl.org/dc/terms/date) with a formal range of \"literal\". While these distinctions are significant for creators of RDF applications, most users can safely treat the fifteen parallel properties as equivalent. The most useful properties and classes of DCMI Metadata Terms have now been published as ISO 15836-2:2019 [ISO 15836-2:2019]. While the /elements/1.1/ namespace will be supported indefinitely, DCMI gently encourages use of the /terms/ namespace.",
+  "label": "DCMI Metadata Terms - other",
+  "prefix": "dcterms",
+  "items": {
+    "Agent": {
+      "category": "class",
+      "description": "A resource that acts or has the power to act.",
+      "label": "Agent"
+    },
+    "AgentClass": {
+      "category": "class",
+      "description": "A group of agents.",
+      "label": "Agent Class"
+    },
+    "BibliographicResource": {
+      "category": "class",
+      "description": "A book, article, or other documentary resource.",
+      "label": "Bibliographic Resource"
+    },
+    "FileFormat": {
+      "category": "class",
+      "description": "A digital resource format.",
+      "label": "File Format"
+    },
+    "MediaType": {
+      "category": "class",
+      "description": "A file format or physical medium.",
+      "label": "Media Type"
+    },
+    "Frequency": {
+      "category": "class",
+      "description": "A rate at which something recurs.",
+      "label": "Frequency"
+    },
+    "Jurisdiction": {
+      "category": "class",
+      "description": "The extent or range of judicial, law enforcement, or other authority.",
+      "label": "Jurisdiction"
+    },
+    "LocationPeriodOrJurisdiction": {
+      "category": "class",
+      "description": "A location, period of time, or jurisdiction.",
+      "label": "Location, Period, or Jurisdiction"
+    },
+    "LicenseDocument": {
+      "category": "class",
+      "description": "A legal document giving official permission to do something with a resource.",
+      "label": "License Document"
+    },
+    "RightsStatement": {
+      "category": "class",
+      "description": "A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights.",
+      "label": "Rights Statement"
+    },
+    "LinguisticSystem": {
+      "category": "class",
+      "description": "Written, spoken, sign, and computer languages are linguistic systems.",
+      "label": "Linguistic System"
+    },
+    "Location": {
+      "category": "class",
+      "description": "A spatial region or named place.",
+      "label": "Location"
+    },
+    "MediaTypeOrExtent": {
+      "category": "class",
+      "description": "A media type or extent.",
+      "label": "Media Type or Extent"
+    },
+    "MethodOfAccrual": {
+      "category": "class",
+      "description": "A method by which resources are added to a collection.",
+      "label": "Method of Accrual"
+    },
+    "MethodOfInstruction": {
+      "category": "class",
+      "description": "A process that is used to engender knowledge, attitudes, and skills.",
+      "label": "Method of Instruction"
+    },
+    "PeriodOfTime": {
+      "category": "class",
+      "description": "An interval of time that is named or defined by its start and end dates.",
+      "label": "Period of Time"
+    },
+    "PhysicalMedium": {
+      "category": "class",
+      "description": "Examples include paper, canvas, or DVD.",
+      "label": "Physical Medium"
+    },
+    "PhysicalResource": {
+      "category": "class",
+      "description": "A material thing.",
+      "label": "Physical Resource"
+    },
+    "Policy": {
+      "category": "class",
+      "description": "A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters.",
+      "label": "Policy"
+    },
+    "ProvenanceStatement": {
+      "category": "class",
+      "description": "Any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation.",
+      "label": "Provenance Statement"
+    },
+    "SizeOrDuration": {
+      "category": "class",
+      "description": "Examples include a number of pages, a specification of length, width, and breadth, or a period in hours, minutes, and seconds.",
+      "label": "Size or Duration"
+    },
+    "Standard": {
+      "category": "class",
+      "description": "A reference point against which other things can be evaluated or compared.",
+      "label": "Standard"
+    },
+    "modified": {
+      "category": "property",
+      "description": "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.",
+      "label": "Date Modified"
+    },
+    "publisher": {
+      "category": "property",
+      "description": "An entity responsible for making the resource available.",
+      "label": "Publisher"
+    },
+    "title": {
+      "category": "property",
+      "description": "A name given to the resource.",
+      "label": "Title"
+    },
+    "issued": {
+      "category": "property",
+      "description": "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.",
+      "label": "Date Issued"
+    },
+    "description": {
+      "category": "property",
+      "description": "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.",
+      "label": "Description"
+    },
+    "abstract": {
+      "category": "property",
+      "description": "A summary of the resource.",
+      "label": "Abstract"
+    },
+    "accessRights": {
+      "category": "property",
+      "description": "Access Rights may include information regarding access or restrictions based on privacy, security, or other policies.",
+      "label": "Access Rights"
+    },
+    "rights": {
+      "category": "property",
+      "description": "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.  Recommended practice is to refer to a rights statement with a URI.  If this is not possible or feasible, a literal value (name, label, or short text) may be provided.",
+      "label": "Rights"
+    },
+    "accrualMethod": {
+      "category": "property",
+      "description": "Recommended practice is to use a value from the Collection Description Accrual Method Vocabulary [[DCMI-ACCRUALMETHOD](https://dublincore.org/groups/collections/accrual-method/)].",
+      "label": "Accrual Method"
+    },
+    "accrualPeriodicity": {
+      "category": "property",
+      "description": "Recommended practice is to use a value from the Collection Description Frequency Vocabulary [[DCMI-COLLFREQ](https://dublincore.org/groups/collections/frequency/)].",
+      "label": "Accrual Periodicity"
+    },
+    "accrualPolicy": {
+      "category": "property",
+      "description": "Recommended practice is to use a value from the Collection Description Accrual Policy Vocabulary [[DCMI-ACCRUALPOLICY](https://dublincore.org/groups/collections/accrual-policy/)].",
+      "label": "Accrual Policy"
+    },
+    "alternative": {
+      "category": "property",
+      "description": "The distinction between titles and alternative titles is application-specific.",
+      "label": "Alternative Title"
+    },
+    "audience": {
+      "category": "property",
+      "description": "Recommended practice is to use this property with non-literal values from a vocabulary of audience types.",
+      "label": "Audience"
+    },
+    "available": {
+      "category": "property",
+      "description": "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.",
+      "label": "Date Available"
+    },
+    "date": {
+      "category": "property",
+      "description": "Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a '/' (slash) character.  Either the start or end date may be missing.",
+      "label": "Date"
+    },
+    "bibliographicCitation": {
+      "category": "property",
+      "description": "Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible.",
+      "label": "Bibliographic Citation"
+    },
+    "identifier": {
+      "category": "property",
+      "description": "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs.",
+      "label": "Identifier"
+    },
+    "conformsTo": {
+      "category": "property",
+      "description": "An established standard to which the described resource conforms.",
+      "label": "Conforms To"
+    },
+    "relation": {
+      "category": "property",
+      "description": "Recommended practice is to identify the related resource by means of a URI.  If this is not possible or feasible, a string conforming to a formal identification system may be provided.",
+      "label": "Relation"
+    },
+    "contributor": {
+      "category": "property",
+      "description": "The guidelines for using names of persons or organizations as creators apply to contributors.",
+      "label": "Contributor"
+    },
+    "coverage": {
+      "category": "property",
+      "description": "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.  Because coverage is so broadly defined, it is preferable to use the more specific subproperties Temporal Coverage and Spatial Coverage.",
+      "label": "Coverage"
+    },
+    "created": {
+      "category": "property",
+      "description": "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.",
+      "label": "Date Created"
+    },
+    "creator": {
+      "category": "property",
+      "description": "Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided.",
+      "label": "Creator"
+    },
+    "dateAccepted": {
+      "category": "property",
+      "description": "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a date of acceptance may be relevant are a thesis (accepted by a university department) or an article (accepted by a journal).",
+      "label": "Date Accepted"
+    },
+    "dateCopyrighted": {
+      "category": "property",
+      "description": "Typically a year.  Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.",
+      "label": "Date Copyrighted"
+    },
+    "dateSubmitted": {
+      "category": "property",
+      "description": "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a 'Date Submitted' may be relevant include a thesis (submitted to a university department) or an article (submitted to a journal).",
+      "label": "Date Submitted"
+    },
+    "educationLevel": {
+      "category": "property",
+      "description": "A class of agents, defined in terms of progression through an educational or training context, for which the described resource is intended.",
+      "label": "Audience Education Level"
+    },
+    "extent": {
+      "category": "property",
+      "description": "Recommended practice is to specify the file size in megabytes and duration in ISO 8601 format.",
+      "label": "Extent"
+    },
+    "format": {
+      "category": "property",
+      "description": "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration.",
+      "label": "Format"
+    },
+    "hasFormat": {
+      "category": "property",
+      "description": "This property is intended to be used with non-literal values. This property is an inverse property of Is Format Of.",
+      "label": "Has Format"
+    },
+    "hasPart": {
+      "category": "property",
+      "description": "This property is intended to be used with non-literal values. This property is an inverse property of Is Part Of.",
+      "label": "Has Part"
+    },
+    "hasVersion": {
+      "category": "property",
+      "description": "Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Is Version Of.",
+      "label": "Has Version"
+    },
+    "instructionalMethod": {
+      "category": "property",
+      "description": "Instructional Method typically includes ways of presenting instructional materials or conducting instructional activities, patterns of learner-to-learner and learner-to-instructor interactions, and mechanisms by which group and individual levels of learning are measured.  Instructional methods include all aspects of the instruction and learning processes from planning and implementation through evaluation and feedback.",
+      "label": "Instructional Method"
+    },
+    "isFormatOf": {
+      "category": "property",
+      "description": "This property is intended to be used with non-literal values. This property is an inverse property of Has Format.",
+      "label": "Is Format Of"
+    },
+    "isPartOf": {
+      "category": "property",
+      "description": "This property is intended to be used with non-literal values. This property is an inverse property of Has Part.",
+      "label": "Is Part Of"
+    },
+    "isReferencedBy": {
+      "category": "property",
+      "description": "This property is intended to be used with non-literal values. This property is an inverse property of References.",
+      "label": "Is Referenced By"
+    },
+    "isReplacedBy": {
+      "category": "property",
+      "description": "This property is intended to be used with non-literal values. This property is an inverse property of Replaces.",
+      "label": "Is Replaced By"
+    },
+    "isRequiredBy": {
+      "category": "property",
+      "description": "This property is intended to be used with non-literal values. This property is an inverse property of Requires.",
+      "label": "Is Required By"
+    },
+    "isVersionOf": {
+      "category": "property",
+      "description": "Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Has Version.",
+      "label": "Is Version Of"
+    },
+    "language": {
+      "category": "property",
+      "description": "Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag.",
+      "label": "Language"
+    },
+    "license": {
+      "category": "property",
+      "description": "Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided.",
+      "label": "License"
+    },
+    "mediator": {
+      "category": "property",
+      "description": "In an educational context, a mediator might be a parent, teacher, teaching assistant, or care-giver.",
+      "label": "Mediator"
+    },
+    "medium": {
+      "category": "property",
+      "description": "The material or physical carrier of the resource.",
+      "label": "Medium"
+    },
+    "provenance": {
+      "category": "property",
+      "description": "The statement may include a description of any changes successive custodians made to the resource.",
+      "label": "Provenance"
+    },
+    "references": {
+      "category": "property",
+      "description": "This property is intended to be used with non-literal values. This property is an inverse property of Is Referenced By.",
+      "label": "References"
+    },
+    "replaces": {
+      "category": "property",
+      "description": "This property is intended to be used with non-literal values. This property is an inverse property of Is Replaced By.",
+      "label": "Replaces"
+    },
+    "requires": {
+      "category": "property",
+      "description": "This property is intended to be used with non-literal values. This property is an inverse property of Is Required By.",
+      "label": "Requires"
+    },
+    "rightsHolder": {
+      "category": "property",
+      "description": "Recommended practice is to refer to the rights holder with a URI. If this is not possible or feasible, a literal value that identifies the rights holder may be provided.",
+      "label": "Rights Holder"
+    },
+    "source": {
+      "category": "property",
+      "description": "This property is intended to be used with non-literal values. The described resource may be derived from the related resource in whole or in part. Best practice is to identify the related resource by means of a URI or a string conforming to a formal identification system.",
+      "label": "Source"
+    },
+    "spatial": {
+      "category": "property",
+      "description": "Spatial characteristics of the resource.",
+      "label": "Spatial Coverage"
+    },
+    "subject": {
+      "category": "property",
+      "description": "Recommended practice is to refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary.",
+      "label": "Subject"
+    },
+    "tableOfContents": {
+      "category": "property",
+      "description": "A list of subunits of the resource.",
+      "label": "Table Of Contents"
+    },
+    "temporal": {
+      "category": "property",
+      "description": "Temporal characteristics of the resource.",
+      "label": "Temporal Coverage"
+    },
+    "type": {
+      "category": "property",
+      "description": "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format.",
+      "label": "Type"
+    },
+    "valid": {
+      "category": "property",
+      "description": "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.",
+      "label": "Date Valid"
+    }
+  }
+}

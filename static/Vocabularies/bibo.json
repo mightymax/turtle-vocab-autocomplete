@@ -1,0 +1,752 @@
+{
+  "iri": "http://purl.org/ontology/bibo/",
+  "description": "The Bibliographic Ontology describes bibliographic things on the semantic Web in RDF.  This ontology can be used as a citation ontology, as a document classification ontology, or simply as a way to describe any kind of document in RDF. It has been inspired by many existing document description metadata formats, and can be used as a common ground for converting other bibliographic data sources.",
+  "label": "The Bibliographic Ontology",
+  "prefix": "bibo",
+  "items": {
+    "": {
+      "category": "property",
+      "description": "Used to describe the timing of an event. For example, when a conference starts and stops."
+    },
+    "doi": {
+      "category": "property"
+    },
+    "eissn": {
+      "category": "property"
+    },
+    "edition": {
+      "category": "property",
+      "description": "The name defining a special edition of a document. Normally its a literal value composed of a version number and words.",
+      "label": "edition"
+    },
+    "pageEnd": {
+      "category": "property",
+      "description": "Ending page number within a continuous page range.",
+      "label": "page end"
+    },
+    "isbn": {
+      "category": "property"
+    },
+    "issn": {
+      "category": "property"
+    },
+    "issue": {
+      "category": "property",
+      "description": "An issue number",
+      "label": "issue"
+    },
+    "locator": {
+      "category": "property",
+      "description": "A description (often numeric) that locates an item within a containing document or collection.",
+      "label": "locator"
+    },
+    "pageStart": {
+      "category": "property",
+      "description": "Starting page number within a continuous page range.",
+      "label": "page start"
+    },
+    "volume": {
+      "category": "property",
+      "description": "A volume number",
+      "label": "volume"
+    },
+    "dcterms:created": {
+      "category": "property",
+      "description": "Used to describe the creation date of a bibliographic item"
+    },
+    "dcterms:date": {
+      "category": "property",
+      "description": "Use to link a bibliographic item to the date of an event. Check dcterms:created and other for proper specializations for this property"
+    },
+    "dcterms:description": {
+      "category": "property",
+      "description": "Used to describe a bibliographic resource."
+    },
+    "dcterms:issued": {
+      "category": "property",
+      "description": "Used to describe the issue date of a bibliographic resource"
+    },
+    "abstract": {
+      "category": "property",
+      "description": "A summary of the resource.",
+      "label": "abstract"
+    },
+    "argued": {
+      "category": "property",
+      "description": "The date on which a legal case is argued before a court. Date is of format xsd:date",
+      "label": "date argued"
+    },
+    "asin": {
+      "category": "property"
+    },
+    "identifier": {
+      "category": "property"
+    },
+    "foaf:name": {
+      "category": "property"
+    },
+    "chapter": {
+      "category": "property",
+      "description": "An chapter number",
+      "label": "chapter"
+    },
+    "coden": {
+      "category": "property"
+    },
+    "content": {
+      "category": "property",
+      "description": "This property is for a plain-text rendering of the content of a Document. While the plain-text content of an entire document could be described by this property.",
+      "label": "content"
+    },
+    "eanucc13": {
+      "category": "property"
+    },
+    "gtin14": {
+      "category": "property"
+    },
+    "handle": {
+      "category": "property"
+    },
+    "isbn10": {
+      "category": "property"
+    },
+    "isbn13": {
+      "category": "property"
+    },
+    "lccn": {
+      "category": "property"
+    },
+    "numPages": {
+      "category": "property",
+      "description": "The number of pages contained in a document",
+      "label": "number of pages"
+    },
+    "numVolumes": {
+      "category": "property",
+      "description": "The number of volumes contained in a collection of documents (usually a series, periodical, etc.).",
+      "label": "number of volumes"
+    },
+    "number": {
+      "category": "property",
+      "description": "A generic item or document number. Not to be confused with issue number.",
+      "label": "number"
+    },
+    "oclcnum": {
+      "category": "property"
+    },
+    "pages": {
+      "category": "property",
+      "description": "A string of non-contiguous page spans that locate a Document within a Collection. Example: 23-25, 34, 54-56. For continuous page ranges, use the pageStart and pageEnd properties.",
+      "label": "pages"
+    },
+    "pmid": {
+      "category": "property"
+    },
+    "prefixName": {
+      "category": "property",
+      "description": "The prefix of a name",
+      "label": "prefix name"
+    },
+    "section": {
+      "category": "property",
+      "description": "A section number",
+      "label": "section"
+    },
+    "shortDescription": {
+      "category": "property"
+    },
+    "shortTitle": {
+      "category": "property",
+      "description": "The abbreviation of a title.",
+      "label": "short title"
+    },
+    "sici": {
+      "category": "property"
+    },
+    "suffixName": {
+      "category": "property",
+      "description": "The suffix of a name",
+      "label": "suffix name"
+    },
+    "upc": {
+      "category": "property"
+    },
+    "uri": {
+      "category": "property",
+      "description": "Universal Resource Identifier of a document",
+      "label": "uri"
+    },
+    "foaf:family_name": {
+      "category": "property",
+      "description": "This is the property we choose to use to describe the family name of a person related to a bibliographic resource."
+    },
+    "foaf:givenname": {
+      "category": "property",
+      "description": "This is the property we choose to describe the given name of a Person related to a bibliographic resource. This is the first name of a person."
+    },
+    "dcterms:Agent": {
+      "category": "class"
+    },
+    "foaf:Agent": {
+      "category": "class",
+      "description": "Used to describe any \"agent\" related to bibliographic items. Such agents can be persons, organizations or groups of any kind."
+    },
+    "AcademicArticle": {
+      "category": "class",
+      "description": "A scholarly academic article, typically published in a journal.",
+      "label": "Academic Article"
+    },
+    "Article": {
+      "category": "class",
+      "description": "A written composition in prose, usually nonfiction, on a specific topic, forming an independent part of a book or other publication, as a newspaper or magazine.",
+      "label": "Article"
+    },
+    "Document": {
+      "category": "class",
+      "description": "A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information.",
+      "label": "Document"
+    },
+    "AudioDocument": {
+      "category": "class",
+      "description": "An audio document; aka record.",
+      "label": "audio document"
+    },
+    "AudioVisualDocument": {
+      "category": "class",
+      "description": "An audio-visual document; film, video, and so forth.",
+      "label": "audio-visual document"
+    },
+    "Bill": {
+      "category": "class",
+      "description": "Draft legislation presented for discussion to a legal body.",
+      "label": "Bill"
+    },
+    "Legislation": {
+      "category": "class",
+      "description": "A legal document proposing or enacting a law or a group of laws.",
+      "label": "Legislation"
+    },
+    "Book": {
+      "category": "class",
+      "description": "A written or printed work of fiction or nonfiction, usually on sheets of paper fastened or bound together within covers.",
+      "label": "Book"
+    },
+    "BookSection": {
+      "category": "class",
+      "description": "A section of a book.",
+      "label": "Book Section"
+    },
+    "DocumentPart": {
+      "category": "class",
+      "description": "a distinct part of a larger document or collected document.",
+      "label": "document part"
+    },
+    "Brief": {
+      "category": "class",
+      "description": "A written argument submitted to a court.",
+      "label": "Brief"
+    },
+    "LegalCaseDocument": {
+      "category": "class",
+      "description": "A document accompanying a legal case.",
+      "label": "Legal Case Document"
+    },
+    "Chapter": {
+      "category": "class",
+      "description": "A chapter of a book.",
+      "label": "Chapter"
+    },
+    "Code": {
+      "category": "class",
+      "description": "A collection of statutes.",
+      "label": "Code"
+    },
+    "Periodical": {
+      "category": "class",
+      "description": "A group of related documents issued at regular intervals.",
+      "label": "Periodical"
+    },
+    "CollectedDocument": {
+      "category": "class",
+      "description": "A document that simultaneously contains other documents.",
+      "label": "Collected Document"
+    },
+    "Collection": {
+      "category": "class",
+      "description": "A collection of Documents or Collections",
+      "label": "Collection"
+    },
+    "Conference": {
+      "category": "class",
+      "description": "A meeting for consultation or discussion.",
+      "label": "Conference"
+    },
+    "CourtReporter": {
+      "category": "class",
+      "description": "A collection of legal cases.",
+      "label": "Court Reporter"
+    },
+    "foaf:Document": {
+      "category": "class"
+    },
+    "DocumentStatus": {
+      "category": "class",
+      "description": "The status of the publication of a document.",
+      "label": "Document Status"
+    },
+    "EditedBook": {
+      "category": "class",
+      "description": "An edited book.",
+      "label": "Edited Book"
+    },
+    "Email": {
+      "category": "class",
+      "description": "A written communication addressed to a person or organization and transmitted electronically.",
+      "label": "EMail"
+    },
+    "PersonalCommunicationDocument": {
+      "category": "class",
+      "description": "A personal communication manifested in some document.",
+      "label": "Personal Communication Document"
+    },
+    "Event": {
+      "category": "class"
+    },
+    "Excerpt": {
+      "category": "class",
+      "description": "A passage selected from a larger work.",
+      "label": "Excerpt"
+    },
+    "Film": {
+      "category": "class",
+      "description": "aka movie.",
+      "label": "Film"
+    },
+    "Hearing": {
+      "category": "class",
+      "description": "An instance or a session in which testimony and arguments are presented, esp. before an official, as a judge in a lawsuit.",
+      "label": "Hearing"
+    },
+    "Image": {
+      "category": "class",
+      "description": "A document that presents visual or diagrammatic information.",
+      "label": "Image"
+    },
+    "foaf:Image": {
+      "category": "class"
+    },
+    "Interview": {
+      "category": "class",
+      "description": "A formalized discussion between two or more people.",
+      "label": "Interview"
+    },
+    "Issue": {
+      "category": "class",
+      "description": "something that is printed or published and distributed, esp. a given number of a periodical",
+      "label": "Issue"
+    },
+    "Journal": {
+      "category": "class",
+      "description": "A periodical of scholarly journal Articles.",
+      "label": "Journal"
+    },
+    "LegalDocument": {
+      "category": "class",
+      "description": "A legal document; for example, a court decision, a brief, and so forth.",
+      "label": "Legal Document"
+    },
+    "LegalDecision": {
+      "category": "class",
+      "description": "A document containing an authoritative determination (as a decree or judgment) made after consideration of facts or law.",
+      "label": "Decision"
+    },
+    "Letter": {
+      "category": "class",
+      "description": "A written or printed communication addressed to a person or organization and usually transmitted by mail.",
+      "label": "Letter"
+    },
+    "Magazine": {
+      "category": "class",
+      "description": "A periodical of magazine Articles. A magazine is a publication that is issued periodically, usually bound in a paper cover, and typically contains essays, stories, poems, etc., by many writers, and often photographs and drawings, frequently specializing in a particular subject or area, as hobbies, news, or sports.",
+      "label": "Magazine"
+    },
+    "Manual": {
+      "category": "class",
+      "description": "A small reference book, especially one giving instructions.",
+      "label": "Manual"
+    },
+    "Manuscript": {
+      "category": "class",
+      "description": "An unpublished Document, which may also be submitted to a publisher for publication.",
+      "label": "Manuscript"
+    },
+    "Map": {
+      "category": "class",
+      "description": "A graphical depiction of geographic features.",
+      "label": "Map"
+    },
+    "MultiVolumeBook": {
+      "category": "class",
+      "description": "A loose, thematic, collection of Documents, often Books.",
+      "label": "Multivolume Book"
+    },
+    "Newspaper": {
+      "category": "class",
+      "description": "A periodical of documents, usually issued daily or weekly, containing current news, editorials, feature articles, and usually advertising.",
+      "label": "Newspaper"
+    },
+    "Note": {
+      "category": "class",
+      "description": "Notes or annotations about a resource.",
+      "label": "Note"
+    },
+    "Patent": {
+      "category": "class",
+      "description": "A document describing the exclusive right granted by a government to an inventor to manufacture, use, or sell an invention for a certain number of years.",
+      "label": "Patent"
+    },
+    "Performance": {
+      "category": "class",
+      "description": "A public performance.",
+      "label": "Performance"
+    },
+    "PersonalCommunication": {
+      "category": "class",
+      "description": "A communication between an agent and one or more specific recipients.",
+      "label": "Personal Communication"
+    },
+    "Proceedings": {
+      "category": "class",
+      "description": "A compilation of documents published from an event, such as a conference.",
+      "label": "Proceedings"
+    },
+    "Quote": {
+      "category": "class",
+      "description": "An excerpted collection of words.",
+      "label": "Quote"
+    },
+    "ReferenceSource": {
+      "category": "class",
+      "description": "A document that presents authoritative reference information, such as a dictionary or encylopedia .",
+      "label": "Reference Source"
+    },
+    "Report": {
+      "category": "class",
+      "description": "A document describing an account or statement describing in detail an event, situation, or the like, usually as the result of observation, inquiry, etc..",
+      "label": "Report"
+    },
+    "Series": {
+      "category": "class",
+      "description": "A loose, thematic, collection of Documents, often Books.",
+      "label": "Series"
+    },
+    "Slide": {
+      "category": "class",
+      "description": "A slide in a slideshow",
+      "label": "Slide"
+    },
+    "Slideshow": {
+      "category": "class",
+      "description": "A presentation of a series of slides, usually presented in front of an audience with written text and images.",
+      "label": "Slideshow"
+    },
+    "Specification": {
+      "category": "class",
+      "description": "A document describing a specification.",
+      "label": "Specification"
+    },
+    "Standard": {
+      "category": "class",
+      "description": "A document describing a standard: a specification organized through a standards body.",
+      "label": "Standard"
+    },
+    "Statute": {
+      "category": "class",
+      "description": "A bill enacted into law.",
+      "label": "Statute"
+    },
+    "Thesis": {
+      "category": "class",
+      "description": "A document created to summarize research findings associated with the completion of an academic degree.",
+      "label": "Thesis"
+    },
+    "ThesisDegree": {
+      "category": "class",
+      "description": "The academic degree of a Thesis",
+      "label": "Thesis degree"
+    },
+    "Webpage": {
+      "category": "class",
+      "description": "A web page is an online document available (at least initially) on the world wide web. A web page is written first and foremost to appear on the web, as distinct from other online resources such as books, manuscripts or audio documents which use the web primarily as a distribution mechanism alongside other more traditional methods such as print.",
+      "label": "Webpage"
+    },
+    "Website": {
+      "category": "class",
+      "description": "A group of Webpages accessible on the Web.",
+      "label": "Website"
+    },
+    "Workshop": {
+      "category": "class",
+      "description": "A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc.",
+      "label": "Workshop"
+    },
+    "rdfs:Resource": {
+      "category": "class"
+    },
+    "owl:Thing": {
+      "category": "class"
+    },
+    "foaf:Person": {
+      "category": "class",
+      "description": "Used to describe a Person related to a bibliographic ite such as an author, an editor, etc."
+    },
+    "foaf:Organization": {
+      "category": "class",
+      "description": "Ued to describe an organization related to bibliographic items such as a publishing company, etc."
+    },
+    "rdf:List": {
+      "category": "class"
+    },
+    "rdf:Seq": {
+      "category": "class"
+    },
+    "dcterms:contributor": {
+      "category": "property",
+      "description": "Used to link a bibliographic item to one of its contributor: can be an author, an editor, a publisher, etc."
+    },
+    "dcterms:format": {
+      "category": "property",
+      "description": "Used to describe the format of a bibliographic resource."
+    },
+    "dcterms:hasPart": {
+      "category": "property"
+    },
+    "dcterms:isPartOf": {
+      "category": "property"
+    },
+    "dcterms:isReferencedBy": {
+      "category": "property",
+      "description": "Used to relate a reference citation to a bibliographic resource."
+    },
+    "dcterms:isVersionOf": {
+      "category": "property"
+    },
+    "dcterms:language": {
+      "category": "property",
+      "description": "Used to link a bibliographic resource to the language used to express it."
+    },
+    "dcterms:publisher": {
+      "category": "property",
+      "description": "Used to link a bibliographic item to its publisher."
+    },
+    "dcterms:references": {
+      "category": "property"
+    },
+    "dcterms:relation": {
+      "category": "property"
+    },
+    "dcterms:rights": {
+      "category": "property",
+      "description": "Used to describe rights related to a bibliographic resource."
+    },
+    "dcterms:subject": {
+      "category": "property",
+      "description": "Used to describe the subject of a bibliographic resource."
+    },
+    "dcterms:title": {
+      "category": "property",
+      "description": "Used to describe the title of a bibliographic resource"
+    },
+    "affirmedBy": {
+      "category": "property",
+      "description": "A legal decision that affirms a ruling."
+    },
+    "subsequentLegalDecision": {
+      "category": "property",
+      "description": "A legal decision on appeal that takes action on a case (affirming it, reversing it, etc.)."
+    },
+    "annotates": {
+      "category": "property",
+      "description": "Critical or explanatory note for a Document.",
+      "label": "annotates"
+    },
+    "authorList": {
+      "category": "property",
+      "description": "An ordered list of authors. Normally, this list is seen as a priority list that order authors by importance.",
+      "label": "list of authors"
+    },
+    "contributorList": {
+      "category": "property",
+      "description": "An ordered list of contributors. Normally, this list is seen as a priority list that order contributors by importance.",
+      "label": "list of contributors"
+    },
+    "citedBy": {
+      "category": "property",
+      "description": "Relates a document to another document that cites the first document.",
+      "label": "cited by"
+    },
+    "cites": {
+      "category": "property",
+      "description": "Relates a document to another document that is cited by the first document as reference, comment, review, quotation or for another purpose.",
+      "label": "cites"
+    },
+    "court": {
+      "category": "property",
+      "description": "A court associated with a legal document; for example, that which issues a decision.",
+      "label": "court"
+    },
+    "degree": {
+      "category": "property",
+      "description": "The thesis degree.",
+      "label": "degree"
+    },
+    "director": {
+      "category": "property",
+      "description": "A Film director.",
+      "label": "director"
+    },
+    "distributor": {
+      "category": "property",
+      "description": "Distributor of a document or a collection of documents.",
+      "label": "distributor"
+    },
+    "editor": {
+      "category": "property",
+      "description": "A person having managerial and sometimes policy-making responsibility for the editorial part of a publishing firm or of a newspaper, magazine, or other publication.",
+      "label": "editor"
+    },
+    "editorList": {
+      "category": "property",
+      "description": "An ordered list of editors. Normally, this list is seen as a priority list that order editors by importance.",
+      "label": "list of editors"
+    },
+    "interviewee": {
+      "category": "property",
+      "description": "An agent that is interviewed by another agent.",
+      "label": "interviewee"
+    },
+    "interviewer": {
+      "category": "property",
+      "description": "An agent that interview another agent.",
+      "label": "interviewer"
+    },
+    "issuer": {
+      "category": "property",
+      "description": "An entity responsible for issuing often informally published documents such as press releases, reports, etc.",
+      "label": "issuer"
+    },
+    "organizer": {
+      "category": "property",
+      "description": "The organizer of an event; includes conference organizers, but also government agencies or other bodies that are responsible for conducting hearings.",
+      "label": "organizer"
+    },
+    "owner": {
+      "category": "property",
+      "description": "Owner of a document or a collection of documents.",
+      "label": "owner"
+    },
+    "performer": {
+      "category": "property",
+      "label": "performer"
+    },
+    "presentedAt": {
+      "category": "property",
+      "description": "Relates a document to an event; for example, a paper to a conference.",
+      "label": "presented at"
+    },
+    "presents": {
+      "category": "property",
+      "description": "Relates an event to associated documents; for example, conference to a paper.",
+      "label": "presents"
+    },
+    "producer": {
+      "category": "property",
+      "description": "Producer of a document or a collection of documents.",
+      "label": "producer"
+    },
+    "recipient": {
+      "category": "property",
+      "description": "An agent that receives a communication document.",
+      "label": "recipient"
+    },
+    "reproducedIn": {
+      "category": "property",
+      "description": "The resource in which another resource is reproduced."
+    },
+    "reversedBy": {
+      "category": "property",
+      "description": "A legal decision that reverses a ruling."
+    },
+    "reviewOf": {
+      "category": "property",
+      "description": "Relates a review document to a reviewed thing (resource, item, etc.).",
+      "label": "review of"
+    },
+    "status": {
+      "category": "property",
+      "description": "The publication status of (typically academic) content.",
+      "label": "status"
+    },
+    "transcriptOf": {
+      "category": "property",
+      "description": "Relates a document to some transcribed original.",
+      "label": "transcript of"
+    },
+    "translationOf": {
+      "category": "property",
+      "description": "Relates a translated document to the original document.",
+      "label": "translation of"
+    },
+    "translator": {
+      "category": "property",
+      "description": "A person who translates written document from one language to another.",
+      "label": "translator"
+    },
+    "rdf:value": {
+      "category": "property",
+      "description": "Used to describe the content of a bibo:Document and othr bibliographic resouces.  We suggest to use this property instead of the deprecated \"bibo:content\" one."
+    },
+    "foaf:based_near": {
+      "category": "property",
+      "description": "Used to link an agent, related to bibliographic things, to a place where it is based near: can be a city, a monument, a building, etc."
+    },
+    "foaf:depiction": {
+      "category": "property",
+      "description": "Used to link an agent with an image that depict it."
+    },
+    "foaf:homepage": {
+      "category": "property",
+      "description": "Used to link an agent to its homepage (which is a web page accessible using a URL)."
+    },
+    "skos:scopeNote": {
+      "category": "property"
+    },
+    "skos:changeNote": {
+      "category": "property"
+    },
+    "skos:editorialNote": {
+      "category": "property"
+    },
+    "dcterms:creator": {
+      "category": "property"
+    },
+    "skos:example": {
+      "category": "property"
+    },
+    "dcterms:identifier": {
+      "category": "property"
+    },
+    "vs:term_status": {
+      "category": "property"
+    },
+    "owl:deprecated": {
+      "category": "property"
+    },
+    "skos:historyNote": {
+      "category": "property"
+    },
+    "skos:note": {
+      "category": "property"
+    }
+  }
+}

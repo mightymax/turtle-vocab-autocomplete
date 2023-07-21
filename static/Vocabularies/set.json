@@ -1,0 +1,37 @@
+{
+  "iri": "http://www.w3.org/2000/10/swap/set#",
+  "label": "Semantic Web Application Platform - Set",
+  "prefix": "set",
+  "items": {
+    "difference": {
+      "category": "property",
+      "description": "The subject is a list of sets, and the objet is the difference of the sets in the object",
+      "label": "difference"
+    },
+    "in": {
+      "category": "property",
+      "description": "This set contains that as a member. Cwm will bind the subject to each of the members of the object.",
+      "label": "in"
+    },
+    "intersection": {
+      "category": "property",
+      "description": "The subject is a list of sets, and the objet is the intersection of the sets in the object",
+      "label": "intersection"
+    },
+    "member": {
+      "category": "property",
+      "description": "This is a member of that set. Cwm will bind the object to each of the members of the suject.",
+      "label": "member"
+    },
+    "symmetricDifference": {
+      "category": "property",
+      "description": "The subject is a list of sets, and the objet is the symmetricDifference of the sets in the object",
+      "label": "symmetric difference"
+    },
+    "union": {
+      "category": "property",
+      "description": "The subject is a list [sic] of sets, and the objet is the union of the sets in the object",
+      "label": "union"
+    }
+  }
+}

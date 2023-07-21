@@ -1,0 +1,17 @@
+{
+  "iri": "http://datashapes.org/sparql#",
+  "description": "Defines SHACL functions (with URIs) representing the built-in SPARQL 1.1 functions and operators such as isIRI and / (divide). Each of these is represented by an instance of sh:Function with a URI such as sparql:divide. The declared parameters indicate the number of arguments but no other constraints have been added.",
+  "label": "SPARQL Vocabulary for SHACL",
+  "prefix": "dash-sparql",
+  "items": {
+    "symbol": {
+      "category": "property",
+      "description": "The SPARQL symbol, such as \"/\" for sparql:divide.",
+      "label": "symbol"
+    },
+    "unlimitedParameters": {
+      "category": "property",
+      "label": "unlimited parameters"
+    }
+  }
+}

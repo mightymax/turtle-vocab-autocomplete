@@ -1,0 +1,38 @@
+{
+  "iri": "http://purl.org/vocab/vann/",
+  "description": "This document describes a vocabulary for annotating descriptions of vocabularies with examples and usage notes.",
+  "label": "VANN: A vocabulary for annotating vocabulary descriptions",
+  "prefix": "vann",
+  "items": {
+    "preferredNamespacePrefix": {
+      "category": "property",
+      "description": "The preferred namespace prefix to use when using terms from this vocabulary in an XML document.",
+      "label": "Preferred Namespace Prefix"
+    },
+    "preferredNamespaceUri": {
+      "category": "property",
+      "description": "The preferred namespace URI to use when using terms from this vocabulary in an XML document.",
+      "label": "Preferred Namespace Uri"
+    },
+    "changes": {
+      "category": "property",
+      "description": "A reference to a resource that describes changes between this version of a vocabulary and the previous.",
+      "label": "Changes"
+    },
+    "example": {
+      "category": "property",
+      "description": "A reference to a resource that provides an example of how this resource can be used.",
+      "label": "Example"
+    },
+    "termGroup": {
+      "category": "property",
+      "description": "A group of related terms in a vocabulary.",
+      "label": "Term Group"
+    },
+    "usageNote": {
+      "category": "property",
+      "description": "A reference to a resource that provides information on how this resource is to be used.",
+      "label": "Usage Note"
+    }
+  }
+}

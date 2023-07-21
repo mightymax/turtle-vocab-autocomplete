@@ -1,0 +1,78 @@
+{
+  "iri": "http://www.w3.org/ns/solid/oidc#",
+  "description": "The OpenID Connect vocabulary used by the Solid-OIDC authentication specification.",
+  "label": "Solid OIDC",
+  "prefix": "oidc",
+  "items": {
+    "application_type": {
+      "category": "property",
+      "description": "TODO",
+      "label": "application type"
+    },
+    "client_name": {
+      "category": "property",
+      "description": "A name for this client that can be presented to an End-User",
+      "label": "client name"
+    },
+    "client_uri": {
+      "category": "property",
+      "description": "A URI for this client's home page",
+      "label": "client URI"
+    },
+    "contacts": {
+      "category": "property",
+      "description": "A collection of URIs where individuals or entities responsible for this client can be contacted.",
+      "label": "contacts"
+    },
+    "default_max_age": {
+      "category": "property",
+      "description": "TODO",
+      "label": "default max age"
+    },
+    "grant_types": {
+      "category": "property",
+      "description": "A collection of OAuth 2.0 Grant Types that the client will restrict itself to using.",
+      "label": "grant types"
+    },
+    "logo_uri": {
+      "category": "property",
+      "description": "A URI for this client's logo",
+      "label": "logo URI"
+    },
+    "policy_uri": {
+      "category": "property",
+      "description": "A URI for this client's policy document",
+      "label": "policy URI"
+    },
+    "redirect_uris": {
+      "category": "property",
+      "description": "A collection of registered URIs used by the client for redirection",
+      "label": "redirect URIs"
+    },
+    "require_auth_time": {
+      "category": "property",
+      "description": "TODO",
+      "label": "require auth time"
+    },
+    "response_types": {
+      "category": "property",
+      "description": "A collection of OAuth 2.0 Response Types that the client will restrict itself to using.",
+      "label": "response types"
+    },
+    "scope": {
+      "category": "property",
+      "description": "An OAuth2 scope for the requested access token.",
+      "label": "scope"
+    },
+    "token_endpoint_auth_method": {
+      "category": "property",
+      "description": "The requested client authentication method for the Token Endpoint",
+      "label": "token endpoint auth method"
+    },
+    "tos_uri": {
+      "category": "property",
+      "description": "A URI for this client's terms of service document",
+      "label": "ToS URI"
+    }
+  }
+}

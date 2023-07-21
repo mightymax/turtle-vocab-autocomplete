@@ -1,0 +1,58 @@
+{
+  "iri": "http://commontag.org/ns#",
+  "description": "Common Tag RDF vocabulary, described using W3C RDF Schema. Common Tags allows documents and document fragments (any resource which can be identified by a URI) to be labeled with keywords and URIs, unambigiously idenfying the concepts covered by the resource.",
+  "label": "Common Tag vocabulary",
+  "prefix": "ctag",
+  "items": {
+    "AuthorTag": {
+      "category": "class",
+      "description": "A Tag asserted by the author of a content resource.",
+      "label": "Author Tag"
+    },
+    "Tag": {
+      "category": "class",
+      "description": "A Common Tag associating a URI and a keyword to annotate a resource.",
+      "label": "Tag"
+    },
+    "AutoTag": {
+      "category": "class",
+      "description": "A Tag asserted by an automated tool on a content resource.",
+      "label": "Auto Tag"
+    },
+    "ReaderTag": {
+      "category": "class",
+      "description": "A Tag asserted by the reader (consumer) of a content resource.",
+      "label": "Reader Tag"
+    },
+    "TaggedContent": {
+      "category": "class",
+      "description": "Content which has one or more Common Tag.",
+      "label": "Tagged Content"
+    },
+    "isAbout": {
+      "category": "property",
+      "description": "A resource (URI) representing the concepts described by the content.",
+      "label": "is about"
+    },
+    "label": {
+      "category": "property",
+      "description": "A local, human-readable name for a Tag.",
+      "label": "标签"
+    },
+    "means": {
+      "category": "property",
+      "description": "A a resource (URI) representing the conceptual meaning of a Tag.",
+      "label": "means"
+    },
+    "tagged": {
+      "category": "property",
+      "description": "Links a resource to a Common Tag.",
+      "label": "标签"
+    },
+    "taggingDate": {
+      "category": "property",
+      "description": "The date the Tag was assigned.",
+      "label": "tagging date"
+    }
+  }
+}

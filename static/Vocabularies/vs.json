@@ -1,0 +1,23 @@
+{
+  "iri": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+  "description": "An RDF vocabulary for relating SW vocabulary terms to their status.",
+  "label": "SemWeb Vocab Status ontology",
+  "prefix": "vs",
+  "items": {
+    "moreinfo": {
+      "category": "property",
+      "description": "more information about the status etc of a term, typically human oriented",
+      "label": "more info"
+    },
+    "term_status": {
+      "category": "property",
+      "description": "the status of a vocabulary term, expressed as a short symbolic string; known values include 'unstable','testing', 'stable' and 'archaic'",
+      "label": "term status"
+    },
+    "userdocs": {
+      "category": "property",
+      "description": "human-oriented documentation, examples etc for use of this term",
+      "label": "user docs"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "iri": "http://purl.org/dc/dcam/",
+  "description": "This document is an up-to-date, authoritative specification of all metadata terms maintained by the Dublin Core™ Metadata Initiative. Included are the fifteen terms of the Dublin Core™ Metadata Element Set (also known as \"the Dublin Core\") plus several dozen properties, classes, datatypes, and vocabulary encoding schemes. The \"Dublin Core\" plus these extension vocabularies are collectively referred to as \"DCMI metadata terms\" (\"Dublin Core terms\" for short). These terms are intended to be used in combination with metadata terms from other, compatible vocabularies in the context of application profiles.",
+  "label": "Metadata terms for vocabulary description",
+  "prefix": "dcam",
+  "items": {
+    "VocabularyEncodingScheme": {
+      "category": "class",
+      "description": "An enumerated set of resources.",
+      "label": "Vocabulary Encoding Scheme"
+    },
+    "domainIncludes": {
+      "category": "property",
+      "description": "A suggested class for subjects of this property.",
+      "label": "Domain Includes"
+    },
+    "memberOf": {
+      "category": "property",
+      "description": "A relationship between a resource and a vocabulary encoding scheme which indicates that the resource is a member of a set.",
+      "label": "Member Of"
+    },
+    "rangeIncludes": {
+      "category": "property",
+      "description": "A suggested class for values of this property.",
+      "label": "Range Includes"
+    }
+  }
+}

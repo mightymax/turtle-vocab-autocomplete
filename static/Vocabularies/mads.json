@@ -1,0 +1,730 @@
+{
+  "iri": "http://www.loc.gov/mads/rdf/v1#",
+  "description": "This document describes the MADS/RDF (Metadata Authority Description Schema in RDF) vocabulary, a data model for authority and vocabulary data used within the library and information science (LIS) community, which is inclusive of museums, archives, and other cultural institutions. It is presented as an OWL ontology.   MADS/RDF is a knowledge organization system (KOS) designed for use with controlled values for names (personal, corporate, geographic, etc.), thesauri, taxonomies, subject heading systems, and other controlled value lists. It is closely related to SKOS, the Simple Knowledge Organization System and a widely supported and adopted RDF vocabulary. Given the close relationship between the aim of MADS/RDF and the aim of SKOS, the MADS ontology has been fully mapped to SKOS.   Unlike SKOS, however, which is very broad in its application, MADS/RDF is designed specifically to support authority data as used by and needed in the LIS community and its technology systems. For example, MADS/RDF provides a means to record data from the Machine Readable Cataloging (MARC) Authorities format in RDF for use in semantic applications and Linked Data projects.   MADS/RDF is designed to support the description of cultural and bibliographic resources. Data described using MADS/RDF, therefore, assists with identifying and annotating bibliographic and cultural resources. MADS/RDF is not focused on the description of Real World Objects. Although a MADS/RDF description may contain information specific to the Real World Object associated with the MADS/RDF authoritative label, the MADS/RDF ontology distinguishes between these two entities – the RWO and the Authority.   Updated: 29 October 2015. Addition of new properties, madsrdf:activityEndDate, madsrdf:activityStartDate, madsrdf:associatedLanguage, madsrdf:associatedLocale, madsrdf:birthDate, madsrdf:birthPlace, madsrdf:deathDate, madsrdf:deathPlace, madsrdf:entityDescriptor, madsrdf:establishDate, madsrdf:fieldOfActivity, madsrdf:gender, madsrdf:hasAffiliation, madsrdf:honoraryTitle, madsrdf:isIdentifiedByAuthority, madsrdf:occupation, madsrdf:prominentFamilyMember, madsrdf:terminateDate, madsrdf:fullerName, madsrdf:creationDateStart, madsrdf:creationDateEnd, madsrdf:workOrigin, madsrdf:hasChararacteristic.   The MADS/RDF to SKOS/RDF mapping was done by Antoine Isaac. The MADS/RDF model and ontology benefited significantly as a result of the fruitful discussions surrounding his effort to map the MADS/RDF ontology to SKOS.",
+  "label": "MADS/RDF (Metadata Authority Description Schema in RDF)",
+  "prefix": "mads",
+  "items": {
+    "Address": {
+      "category": "class",
+      "label": "Address"
+    },
+    "Affiliation": {
+      "category": "class",
+      "description": "A resource that describes an individual's affiliation with an organization or group, such as the nature of the affiliation and the active dates.",
+      "label": "Affiliation"
+    },
+    "Area": {
+      "category": "class",
+      "description": "Describes a resource whose label is a non-jurisdictional geographic entity.",
+      "label": "Area Type"
+    },
+    "Geographic": {
+      "category": "class",
+      "description": "Describes a resource whose label represents a geographic place or feature, especially when a more precise geographic determination (City, Country, Region, etc.) cannot be made.",
+      "label": "Geographic Authority"
+    },
+    "Authority": {
+      "category": "class",
+      "description": "A concept with a controlled label.",
+      "label": "Authority"
+    },
+    "DeprecatedAuthority": {
+      "category": "class",
+      "description": "A former Authority.",
+      "label": "Deprecated Authority"
+    },
+    "MADSCollection": {
+      "category": "class",
+      "description": "A madsrdf:Collection is an organizational unit, members of which will have some form of intellectually unifying theme but not to the extent that it defines an independent knowledge organization system. It aggregates madsrdf:Authority descriptions or other madsrdf:MADSCollection resources.",
+      "label": "MADS Collection"
+    },
+    "MADSScheme": {
+      "category": "class",
+      "description": "MADS Scheme is an organizational unit that describes a knowledge organization system. It aggregates madsrdf:Authority descriptions and/or madsrdf:MADSCollection resources included in the knowledge organization system. Including a madsrdf:MADSCollection within a madsrdf:MADSScheme should be done with care; when a madsrdf:MADSCollection is part of a madsrdf:MADSScheme, then any madsrdf:Authority within that madsrdf:MADSCollection is effectively also in the madsrdf:MADSScheme.",
+      "label": "MADS Scheme"
+    },
+    "Variant": {
+      "category": "class",
+      "description": "A resource whose label is the alternate form of an Authority or Deprecated Authority.",
+      "label": "Variant"
+    },
+    "City": {
+      "category": "class",
+      "description": "Describes a resource whose label is an inhabited place incorporated as a city, town, etc.",
+      "label": "City Type"
+    },
+    "CitySection": {
+      "category": "class",
+      "description": "Describes a resource whose label is a smaller unit within a populated place, e.g., a neighborhood, park, or street.",
+      "label": "City Section Type"
+    },
+    "ComplexSubject": {
+      "category": "class",
+      "description": "The label of a madsrdf:ComplexSubject is the concatenation of labels from two or more madsrdf:SimpleType descriptions, except that the combination of madsrdf:SimpleType labels for the madsrdf:ComplexSubject does not meet the conditions to be the label of a madsrdf:NameTitle resource or madsrdf:HierarchicalGeographic resource.",
+      "label": "Complex Subject Type"
+    },
+    "ComplexType": {
+      "category": "class",
+      "description": "madsrdf:ComplexType is a resource whose label is the concatenation of labels from two or more Authority descriptions or two or more Variant descriptions or some combination of Authority and Variant descriptions, each of a madsrdf:SimpleType.",
+      "label": "Complex Type"
+    },
+    "MADSType": {
+      "category": "class",
+      "label": "MADS Type"
+    },
+    "SimpleType": {
+      "category": "class",
+      "description": "madsrdf:SimpleType is a resource with a label constituting a single word or phrase.",
+      "label": "Simple Type"
+    },
+    "ConferenceName": {
+      "category": "class",
+      "description": "Describes a resource whose label represents a conference name.",
+      "label": "Conference Name Type"
+    },
+    "Name": {
+      "category": "class",
+      "description": "Describes a resource whose label represents a name, especially when a more precise Name type (madsrdf:ConferenceName, masdrdf:FamilyName, etc.) cannot be identified.",
+      "label": "Name Type"
+    },
+    "Continent": {
+      "category": "class",
+      "description": "Describes a resource whose label is one of seven large landmasses on Earth. These are: Asia, Africa, Europe, North America, South America, Australia, and Antarctica.",
+      "label": "Continent Type"
+    },
+    "CorporateName": {
+      "category": "class",
+      "description": "Describes a resource whose label is the name of a corporate entity, which may include political or ecclesiastical entities.",
+      "label": "Corporate Name Type"
+    },
+    "Country": {
+      "category": "class",
+      "description": "Describes a resource whose label is a country, i.e. a political entity considered a country.",
+      "label": "Country Type"
+    },
+    "County": {
+      "category": "class",
+      "description": "Describes a resource whose label is the largest local administrative unit, e.g. Warwickshire, in a country, e.g. England.",
+      "label": "County Type"
+    },
+    "DateNameElement": {
+      "category": "class",
+      "label": "Date Name Element"
+    },
+    "NameElement": {
+      "category": "class",
+      "label": "Name Element"
+    },
+    "Element": {
+      "category": "class",
+      "description": "madsrdf:Element types describe the various parts of labels.",
+      "label": "Element"
+    },
+    "ExtraterrestrialArea": {
+      "category": "class",
+      "description": "Describes a resource whose label is any extraterrestrial entity or space, including a solar system, a galaxy, a star system, and a planet, including a geographic feature of an individual planet.",
+      "label": "Extraterrestrial Area Type"
+    },
+    "FamilyName": {
+      "category": "class",
+      "description": "Describes a resource whose label represents a family name.",
+      "label": "Family Name Type"
+    },
+    "FamilyNameElement": {
+      "category": "class",
+      "label": "Family Name Element"
+    },
+    "FullNameElement": {
+      "category": "class",
+      "label": "Fullname Element"
+    },
+    "GenreForm": {
+      "category": "class",
+      "description": "Describes a resource whose label is a genre or form term. Genre terms for textual materials designate specific kinds of materials distinguished by the style or technique of their intellectual contents; for example, biographies, catechisms, essays, hymns, or reviews. Form terms designate historically and functionally specific kinds of materials as distinguished by an examination of their physical character, characteristics of their intellectual content, or the order of information within them; for example, daybooks, diaries, directories, journals, memoranda, questionnaires, syllabi, or time sheets. In the context of graphic materials, genre headings denote categories of material distinguished by vantage point, intended purpose, characteristics of the creator, publication status, or method of representation.",
+      "label": "Genre/Form Type"
+    },
+    "GenreFormElement": {
+      "category": "class",
+      "label": "Genre/Form Element"
+    },
+    "GeographicElement": {
+      "category": "class",
+      "label": "Geographic Element"
+    },
+    "GivenNameElement": {
+      "category": "class",
+      "label": "Given Name Element"
+    },
+    "HierarchicalGeographic": {
+      "category": "class",
+      "description": "A madsrdf:HierarchicalGeographic indicates that its label is the concatenation of labels from a sequence of madsrdf:Geographic types taken from one of the madsrdf:Geographic sub-classes such as madsrdf:City, madsrdf:Country, madsrdf:State, madsrdf:Region, madsrdf:Area, etc. The madsrdf:Geographic resources that constitute the madsrdf:HierarchicalGeographic should have a broader to narrower hierarchical relationship between them.",
+      "label": "Hierarchical Geographic Type"
+    },
+    "Identifier": {
+      "category": "class",
+      "description": "A madsrdf:Identifier resource describes an identifier by associating the identifier value with its type. To be used to record identifiers for a resource in the absence of URIs.",
+      "label": "Other Identifier"
+    },
+    "Island": {
+      "category": "class",
+      "description": "Describes a resource whose label is a tract of land surrounded by water and smaller than a continent but is not itself a separate country.",
+      "label": "Island Type"
+    },
+    "Language": {
+      "category": "class",
+      "description": "Describes a resource whose label represents a language.",
+      "label": "Language Type"
+    },
+    "LanguageElement": {
+      "category": "class",
+      "label": "Language Element"
+    },
+    "MainTitleElement": {
+      "category": "class",
+      "label": "Main Title Element"
+    },
+    "TitleElement": {
+      "category": "class",
+      "label": "Title Element"
+    },
+    "NameTitle": {
+      "category": "class",
+      "description": "The label of a madsrdf:NameTitle resource is the concatenation of a label of a madsrdf:Name description and the label of a madsrdf:Title description. Both description types (madsrdf:Name and madsrdf:Title) are of madsrdf:SimpleType types.",
+      "label": "Name/Title Type"
+    },
+    "NonSortElement": {
+      "category": "class",
+      "label": "Non-sort Element"
+    },
+    "Occupation": {
+      "category": "class",
+      "description": "Describes a resource whose label represents an occcupation.",
+      "label": "Occupation Type"
+    },
+    "PartNameElement": {
+      "category": "class",
+      "label": "Part Name Element"
+    },
+    "PartNumberElement": {
+      "category": "class",
+      "label": "Part Number Element"
+    },
+    "PersonalName": {
+      "category": "class",
+      "description": "Describes a resource whose label represents a personal name.",
+      "label": "Personal Name Type"
+    },
+    "Province": {
+      "category": "class",
+      "description": "Describes a resource whose label is a first order political division, e.g. Ontario, within a country, e.g. Canada.",
+      "label": "Province Type"
+    },
+    "RWO": {
+      "category": "class",
+      "description": "A madsrdf:RWO is an abstract entity and identifies a Real World Object (RWO) identified by the label of a madsrdf:Authority or madsrdf:DeprecatedAuthority.",
+      "label": "Real World Object"
+    },
+    "Region": {
+      "category": "class",
+      "description": "Describes a resource whose label is an area that has the status of a jurisdiction, usually incorporating more than one first level jurisdiction.",
+      "label": "Region Type"
+    },
+    "Source": {
+      "category": "class",
+      "description": "A resource that represents the source of information about another resource. madsrdf:Source is a type of citation.",
+      "label": "Source"
+    },
+    "State": {
+      "category": "class",
+      "description": "Describes a resource whose label is a first order political division, e.g. Montana, within a country, e.g. U.S.",
+      "label": "State Type"
+    },
+    "SubTitleElement": {
+      "category": "class",
+      "label": "Subtitle Element"
+    },
+    "Temporal": {
+      "category": "class",
+      "description": "Describes a resource whose label represents a time-based notion.",
+      "label": "Temporal Type"
+    },
+    "TemporalElement": {
+      "category": "class",
+      "label": "Temporal Element"
+    },
+    "TermsOfAddressNameElement": {
+      "category": "class",
+      "label": "Terms of Address Element"
+    },
+    "Territory": {
+      "category": "class",
+      "description": "Describes a resource whose label is a geographical area belonging to or under the jurisdiction of a governmental authority.",
+      "label": "Territory Type"
+    },
+    "Title": {
+      "category": "class",
+      "description": "Describes a resource whose label represents a title.",
+      "label": "Title Type"
+    },
+    "Topic": {
+      "category": "class",
+      "description": "Describes a resource whose label represents a topic.",
+      "label": "Topic Type"
+    },
+    "TopicElement": {
+      "category": "class",
+      "label": "Topic Element"
+    },
+    "": {
+      "category": "class"
+    },
+    "activityEndDate": {
+      "category": "property",
+      "description": "Latest date in a period of activity.",
+      "label": "Activity End"
+    },
+    "activityStartDate": {
+      "category": "property",
+      "description": "Earliest date in a period of activity.",
+      "label": "Activity Start"
+    },
+    "affiliationEnd": {
+      "category": "property",
+      "description": "The date an individual ceased to be affiliated with an organization.",
+      "label": "Affiliation Ended"
+    },
+    "affiliationStart": {
+      "category": "property",
+      "description": "The date an individual established an affiliation with an organization.",
+      "label": "Affiliation Started"
+    },
+    "birthDate": {
+      "category": "property",
+      "description": "The year a person was born. Date of birth may also include the month and day of the person’s birth. (RDA 9.3.2.1)",
+      "label": "Birth Date"
+    },
+    "citationStatus": {
+      "category": "property",
+      "description": "Should use a standard term - such as 'found' or 'not found' - to indicate whether the cited resource yielded information about the resource related to the madsrdf:Source.",
+      "label": "Citation Status"
+    },
+    "code": {
+      "category": "property",
+      "description": "A code is a string of characters associated with a the authoritative or deprecated label. It may record an historical notation once used to uniquely identify a concept.",
+      "label": "Code"
+    },
+    "creationDateEnd": {
+      "category": "property",
+      "description": "Ending date of the date range for which the beginning date is recorded in madsrdf:creationDateStart.",
+      "label": "Work end"
+    },
+    "creationDateStart": {
+      "category": "property",
+      "description": "For a work, earliest date (normally the year) associated with a work; that date may be the date the work was created or first published or released. For an expression, the earliest date (normally the year) associated with an expression; that date may be the date of the earliest known manifestation of that expression. In both cases the date may be the starting date of a range or a single date.",
+      "label": "Work begun"
+    },
+    "deathDate": {
+      "category": "property",
+      "description": "The year a person died. Date of death may also include the month and day of the person’s death. (RDA 9.3.3.1)",
+      "label": "Death Date"
+    },
+    "elementValue": {
+      "category": "property",
+      "label": "Element Value"
+    },
+    "email": {
+      "category": "property",
+      "label": "Email"
+    },
+    "entityDescriptor": {
+      "category": "property",
+      "description": "Any attribute that serves to characterize a person, family or corporate body or that may be needed for differentiation from other persons. families or corporate bodies and for which separate content designation is not already defined.Or",
+      "label": "Entity Descriptor"
+    },
+    "establishDate": {
+      "category": "property",
+      "description": "The year a corporate body was established. Date of establishment may also include the month and day of the corporate body’s establishment.",
+      "label": "Established"
+    },
+    "extendedAddress": {
+      "category": "property",
+      "description": "The second address line, if needed.",
+      "label": "Extended Address"
+    },
+    "fax": {
+      "category": "property",
+      "description": "Fax number",
+      "label": "Fax"
+    },
+    "hiddenLabel": {
+      "category": "property",
+      "description": "A label entered for discovery purposes but not shown.",
+      "label": "Hidden Label"
+    },
+    "honoraryTitle": {
+      "category": "property",
+      "description": "Designation indicative of royalty, nobility, or ecclesiastical rank or office, or a term of address for a person of religious vocation.",
+      "label": "Honorary Title"
+    },
+    "hours": {
+      "category": "property",
+      "label": "Hours"
+    },
+    "idValue": {
+      "category": "property",
+      "description": "The value of the identifier conforming to the Identifier Scheme syntax.",
+      "label": "Identifier Value"
+    },
+    "phone": {
+      "category": "property",
+      "label": "Phone"
+    },
+    "postcode": {
+      "category": "property",
+      "label": "Post Code / Zip Code"
+    },
+    "prominentFamilyMember": {
+      "category": "property",
+      "description": "A well-known individual who is a member of the family.",
+      "label": "Prominent Family Member"
+    },
+    "streetAddress": {
+      "category": "property",
+      "description": "First line of address. For second line, use madsrdf:extendedAddress.",
+      "label": "Street Address"
+    },
+    "terminateDate": {
+      "category": "property",
+      "description": "The year a corporate body was terminated. Date of termination may also include the month and day of the corporate body’s termination.",
+      "label": "Terminated"
+    },
+    "variantLabel": {
+      "category": "property",
+      "description": "The lexical, variant form of an authoritative label.",
+      "label": "Variant Label"
+    },
+    "adminMetadata": {
+      "category": "property",
+      "description": "This relates an Authority or Variant to its administrative metadata, which is, minimimally, a Class defined outside of the MADS/RDF namespace. The RecordInfo Class from the RecordInfo ontology is recommended.",
+      "label": "Administrative Metadata"
+    },
+    "associatedLanguage": {
+      "category": "property",
+      "description": "Language that a person, organization, or family uses for publication, communication, etc., or in which a work is expressed.",
+      "label": "Associated Language"
+    },
+    "associatedLocale": {
+      "category": "property",
+      "description": "A town, city, province, state, and/or country associated with persons, corporate bodies, families, works, and expressions.",
+      "label": "Associated Locale"
+    },
+    "birthPlace": {
+      "category": "property",
+      "description": "The town, city, province, state, and/or country in which a person was born.",
+      "label": "Place of Birth"
+    },
+    "componentList": {
+      "category": "property",
+      "description": "madsrdf:componentList organizes the madsrdf:SimpleType resources whose labels are represented in the label of the associated madsrdf:ComplexType resource.",
+      "label": "Component List"
+    },
+    "deathPlace": {
+      "category": "property",
+      "description": "The town, city, province, state, and/or country in which a person died.",
+      "label": "Place of Death"
+    },
+    "elementList": {
+      "category": "property",
+      "description": "The madsrdf:elementList property is used to organize the various parts of labels.",
+      "label": "Element List"
+    },
+    "extension": {
+      "category": "property",
+      "label": "Extension"
+    },
+    "fieldOfActivity": {
+      "category": "property",
+      "description": "The field of activity associated with an individual.",
+      "label": "Field of Activity"
+    },
+    "fullerName": {
+      "category": "property",
+      "description": "Full form of name needed to distinguish a person from another person with the same preferred name.",
+      "label": "Fuller Name"
+    },
+    "hasAbbreviationVariant": {
+      "category": "property",
+      "label": "Has Abbreviation Variant"
+    },
+    "hasVariant": {
+      "category": "property",
+      "description": "Associates a Variant with an Authority or Deprecrated Authority. Unless the variant type can be more specifically identified, use 'hasVariant.'",
+      "label": "Has Variant"
+    },
+    "hasAcronymVariant": {
+      "category": "property",
+      "label": "Has Acronym Variant"
+    },
+    "hasAffiliation": {
+      "category": "property",
+      "description": "Property to associate an individual, such as a foaf:Agent, to a group or organization with which an individual is or has been affiliated.",
+      "label": "Has Affiliation"
+    },
+    "hasAffiliationAddress": {
+      "category": "property",
+      "description": "The address of the group or organization with which an individual is associated.",
+      "label": "Has Affiliation Address"
+    },
+    "hasBroaderAuthority": {
+      "category": "property",
+      "label": "Has Broader Authority"
+    },
+    "hasRelatedAuthority": {
+      "category": "property",
+      "description": "Unless the relationship can be more specifically identified, use 'hasRelatedAuthority.'",
+      "label": "Has Related Authority"
+    },
+    "hasNarrowerAuthority": {
+      "category": "property",
+      "description": "Creates a direct relationship between an Authority and one that is more narrowly defined.",
+      "label": "Has Narrower Authority"
+    },
+    "hasBroaderExternalAuthority": {
+      "category": "property",
+      "description": "Creates a direct relationship between an Authority and a more broadly defined Authority from a different MADS Scheme.",
+      "label": "Has Broader External Authority"
+    },
+    "hasChararacteristic": {
+      "category": "property",
+      "description": "A term that specifies a characteristic that differentiates a work or expression from another one.",
+      "label": "Other characteristic"
+    },
+    "hasCloseExternalAuthority": {
+      "category": "property",
+      "description": "Records a relationship between an Authority and one that is closely related from a different MADS Scheme.",
+      "label": "Has Close External Authority"
+    },
+    "hasCorporateParentAuthority": {
+      "category": "property",
+      "description": "Establishes a relationship between a CorporateName Authority and one of the same that is more broadly defined.",
+      "label": "Has Parent Organization"
+    },
+    "hasCorporateSubsidiaryAuthority": {
+      "category": "property",
+      "description": "Establishes a relationship between a CorporateName Authority and one of the same that is more narrowly defined.",
+      "label": "Is Parent Organization Of"
+    },
+    "hasDemonym": {
+      "category": "property",
+      "description": "Establishes a relationship between an Authority that represents the demonym - Japanese or Greek, for example - and an Authority that represents the Geographic place - Japan or Greece, respectively - associated with the demonym.",
+      "label": "Has Demonym"
+    },
+    "isDemonymFor": {
+      "category": "property",
+      "description": "Establishes a relationship between an Authority that represents a Geographic place - Japan or Greece, for example - and an Authority that represents the demonym - Japanese or Greek, respectively - associated with the place.",
+      "label": "Is Demonym For"
+    },
+    "hasEarlierEstablishedForm": {
+      "category": "property",
+      "description": "Used to reference a resource that was an earlier form. This is Related type='earlier' in MADS XML.",
+      "label": "Has Earlier Established Form"
+    },
+    "see": {
+      "category": "property",
+      "description": "Denotes a relationship between an Authority and/or DeprecatedAuthority. The relationship may or may or may not be reciprocated and there is no certainty that the related resource will further illuminate the original resource.",
+      "label": "See Also"
+    },
+    "hasLaterEstablishedForm": {
+      "category": "property",
+      "description": "Use to reference the later form of a resource. This is Related type='later' in MADS XML.",
+      "label": "Has Later Established Form"
+    },
+    "hasExactExternalAuthority": {
+      "category": "property",
+      "description": "Records a relationship between an Authority and one to which it matches exactly but from a different MADS Scheme.",
+      "label": "Has Exact External Authority"
+    },
+    "hasExpansionVariant": {
+      "category": "property",
+      "label": "Has Expansion Variant"
+    },
+    "hasHiddenVariant": {
+      "category": "property",
+      "description": "Use for variants that are searchable, but not necessarily for display.",
+      "label": "Has Hidden Variant"
+    },
+    "hasIdentifier": {
+      "category": "property",
+      "description": "Associates a resource with a madsrdf:Identifier.",
+      "label": "Has Identifier"
+    },
+    "hasMADSCollectionMember": {
+      "category": "property",
+      "description": "Associates an Authority or other Collection with a madsrdf:MADSCollection.",
+      "label": "Has MADSCollection Member"
+    },
+    "isMemberOfMADSCollection": {
+      "category": "property",
+      "description": "Associates a Collection with a madsrdf:Authority or another madsrdf:MADSCollection.",
+      "label": "Is Member Of MADSCollection"
+    },
+    "hasMADSSchemeMember": {
+      "category": "property",
+      "description": "Associates an Authority or Collection with a madsrdf:MADSScheme.",
+      "label": "Has MADS Scheme Member"
+    },
+    "isMemberOfMADSScheme": {
+      "category": "property",
+      "label": "Is Member of MADS Scheme"
+    },
+    "hasNarrowerExternalAuthority": {
+      "category": "property",
+      "description": "Creates a direct relationship between an Authority and a more narrowly defined Authority from a different MADS Scheme.",
+      "label": "Has Narrower External Authority"
+    },
+    "hasSource": {
+      "category": "property",
+      "description": "Associates a resource description with its Source.",
+      "label": "Has Source"
+    },
+    "hasTopMemberOfMADSScheme": {
+      "category": "property",
+      "description": "Identifies an Authority that is at the top of the hierarchy of authorities within the MADS Scheme.",
+      "label": "Has Top Member of MADS Scheme"
+    },
+    "hasTranslationVariant": {
+      "category": "property",
+      "description": "A Variant whose label represents a translation of that of the authoritative label.",
+      "label": "Has Translation Variant"
+    },
+    "identifiesRWO": {
+      "category": "property",
+      "description": "Associates a madsrdf:Authority with the Real World Object that is the subject of the authority's label.",
+      "label": "Identifies RWO"
+    },
+    "isIdentifiedByAuthority": {
+      "category": "property",
+      "description": "Associates a Real World Object with its Authority description.",
+      "label": "Is Identified By Authority"
+    },
+    "isTopMemberOfMADSScheme": {
+      "category": "property",
+      "description": "Identifies a MADS Scheme in which the Authority is at the top of the hierarchy.",
+      "label": "Is Top Member of MADS Scheme"
+    },
+    "occupation": {
+      "category": "property",
+      "description": "A profession or occupation in which the person works or has worked.",
+      "label": "Occupation"
+    },
+    "useFor": {
+      "category": "property",
+      "description": "\"Use [This Resource] For.\" Traditional \"USE FOR\" reference.",
+      "label": "Use For"
+    },
+    "useInstead": {
+      "category": "property",
+      "description": "\"Use [This Other Resource] Instead.\" Traditional \"USE\" reference.",
+      "label": "Use Instead"
+    },
+    "workOrigin": {
+      "category": "property",
+      "description": "The country or other territorial jurisdiction from which a work originated.",
+      "label": "Work locale"
+    },
+    "authoritativeLabel": {
+      "category": "property",
+      "description": "A lexical string representing a controlled, curated label for the Authority.",
+      "label": "Authoritative Label"
+    },
+    "changeNote": {
+      "category": "property",
+      "description": "A note detailing a modification to an Authority or Variant.",
+      "label": "Change Note"
+    },
+    "note": {
+      "category": "property",
+      "description": "A note about the resource.",
+      "label": "Note"
+    },
+    "citationNote": {
+      "category": "property",
+      "description": "A note about how the madsrdf:Source relates to the resource about which the madsrdf:Source is the information source.",
+      "label": "Citation Note"
+    },
+    "citationSource": {
+      "category": "property",
+      "description": "The cited resource.",
+      "label": "Citation Source"
+    },
+    "city": {
+      "category": "property",
+      "description": "The city component of an address.",
+      "label": "City"
+    },
+    "classification": {
+      "category": "property",
+      "description": "The classification code associated with a madsrdf:Authority.",
+      "label": "Classification"
+    },
+    "country": {
+      "category": "property",
+      "description": "Country associated with an address.",
+      "label": "Country"
+    },
+    "definitionNote": {
+      "category": "property",
+      "description": "An explanation of the meaning of an Authority, DeprecatedAuthority, or Variant description.",
+      "label": "Definition Note"
+    },
+    "deletionNote": {
+      "category": "property",
+      "description": "A note pertaining to the deletion of a resource.",
+      "label": "Deletion Note"
+    },
+    "deprecatedLabel": {
+      "category": "property",
+      "description": "A label once considered authoritative (controlled and curated) but which is no longer.",
+      "label": "Deprecated Label"
+    },
+    "editorialNote": {
+      "category": "property",
+      "description": "A note pertaining to the management of the label associated with the resource.",
+      "label": "Editorial Note"
+    },
+    "exampleNote": {
+      "category": "property",
+      "description": "A example of how the resource might be used.",
+      "label": "Example Note"
+    },
+    "historyNote": {
+      "category": "property",
+      "description": "A note pertaining to the history of the resource.",
+      "label": "History Note"
+    },
+    "idScheme": {
+      "category": "property",
+      "description": "The scheme associated with the identifier. For example, \"LCCN\" would be used when the Identifier Value (madsrdf:idValue) is a LC Control Number.",
+      "label": "Identifier Scheme"
+    },
+    "natureOfAffiliation": {
+      "category": "property",
+      "description": "Records the individual's role or position in the organization with which the individual is affiliated. A \"job title\" might be appropriate.",
+      "label": "Nature of Affiliation"
+    },
+    "organization": {
+      "category": "property",
+      "description": "The group or organization with which an individual is associated.",
+      "label": "Organization or Group"
+    },
+    "scopeNote": {
+      "category": "property",
+      "label": "Scope Note"
+    },
+    "state": {
+      "category": "property",
+      "description": "The state associated with an address.",
+      "label": "State"
+    }
+  }
+}

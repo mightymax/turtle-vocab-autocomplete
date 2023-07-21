@@ -1,0 +1,86 @@
+{
+  "iri": "http://www.linkedmodel.org/schema/dtype#",
+  "prefix": "dtype",
+  "items": {
+    "CodeList": {
+      "category": "class",
+      "label": "Codelist"
+    },
+    "Enumeration": {
+      "category": "class",
+      "label": "DTYPE Enumeration"
+    },
+    "CompositeCodeList": {
+      "category": "class",
+      "label": "Composite Code List"
+    },
+    "DerivedCodeList": {
+      "category": "class",
+      "label": "Derived Code List"
+    },
+    "SimpleCodeList": {
+      "category": "class",
+      "label": "Simple Code List"
+    },
+    "EnumeratedValue": {
+      "category": "class",
+      "label": "DTYPE Enumerated value"
+    },
+    "ValueReference": {
+      "category": "class",
+      "label": "Value Reference"
+    },
+    "code": {
+      "category": "property",
+      "label": "code"
+    },
+    "isInvalid": {
+      "category": "property",
+      "label": "is invalid"
+    },
+    "literal": {
+      "category": "property",
+      "label": "literal"
+    },
+    "order": {
+      "category": "property",
+      "label": "order"
+    },
+    "position": {
+      "category": "property",
+      "label": "position"
+    },
+    "compositeOf": {
+      "category": "property",
+      "label": "composite of"
+    },
+    "derivedFrom": {
+      "category": "property",
+      "label": "derived from"
+    },
+    "hasMember": {
+      "category": "property",
+      "label": "has member"
+    },
+    "refersTo": {
+      "category": "property",
+      "label": "refers to"
+    },
+    "type": {
+      "category": "property",
+      "label": "datatype"
+    },
+    "defaultValue": {
+      "category": "property",
+      "label": "default value"
+    },
+    "value": {
+      "category": "property",
+      "label": "value"
+    },
+    "orderIndex": {
+      "category": "property",
+      "label": "order index"
+    }
+  }
+}

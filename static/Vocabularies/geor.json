@@ -1,0 +1,6 @@
+{
+  "iri": "http://www.opengis.net/def/rule/geosparql/",
+  "label": "GeoSPARQL rules",
+  "prefix": "geor",
+  "items": {}
+}

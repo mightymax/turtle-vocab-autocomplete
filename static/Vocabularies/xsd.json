@@ -1,0 +1,7 @@
+{
+  "iri": "http://www.w3.org/2001/XMLSchema#",
+  "description": "XSD (XML Schema Definition), a recommendation of the World Wide Web Consortium (W3C), specifies how to formally describe the elements in an Extensible Markup Language (XML) document. It can be used by programmers to verify each piece of item content in a document, to assure it adheres to the description of the element it is placed in.",
+  "label": "XML Schema Definition",
+  "prefix": "xsd",
+  "items": {}
+}

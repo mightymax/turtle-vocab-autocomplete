@@ -1,0 +1,53 @@
+{
+  "iri": "http://www.w3.org/2003/g/data-view#",
+  "description": "GRDDL is a technique for gleaning resource descriptions from dialects of languages. It's a way of extracting Semantic Web data in RDF from XML formats (especially XHTML dialects or [microformats](http://www.microformats.org/)) via transformations identified by URIs and typically expressed in XSLT. For full details, see the [GRDDL specification](http://www.w3.org/2003/g/data-view#grddl_spec).",
+  "label": "GRDDL Data Views",
+  "prefix": "grddl",
+  "items": {
+    "InformationResource": {
+      "category": "class",
+      "description": "A resource which has the property that all of its essential characteristics can be conveyed in a message",
+      "label": "InformationResource"
+    },
+    "RDFGraph": {
+      "category": "class",
+      "description": "a set of RDF triples",
+      "label": "RDF graphs"
+    },
+    "RootNode": {
+      "category": "class",
+      "description": "the root of the tree in the XPath data model",
+      "label": "RootNode"
+    },
+    "Transformation": {
+      "category": "class",
+      "description": "an InformationResource that specifies a transformation from a set of XML documents to RDF graphs",
+      "label": "Transformation"
+    },
+    "TransformationProperty": {
+      "category": "class",
+      "description": "a FunctionalProperty that relates XML document root nodes to RDF graphs",
+      "label": "TransformationProperty"
+    },
+    "namespaceTransformation": {
+      "category": "property",
+      "description": "relates a namespace to a transformation for all documents in that namespace",
+      "label": "namespaceTransformation"
+    },
+    "profileTransformation": {
+      "category": "property",
+      "description": "relates a profile document to a transformation for all documents bearing that profile",
+      "label": "profileTransformation"
+    },
+    "result": {
+      "category": "property",
+      "description": "an RDF graph obtained from an information resource by directly parsing a representation in the standard RDF/XML syntax or indirectly by parsing some other dialect using a transformation nominated by the document",
+      "label": "result"
+    },
+    "transformation": {
+      "category": "property",
+      "description": "relates a source document to a transformation, usually represented in XSLT, that relates the source document syntax to the RDF graph syntax",
+      "label": "transformation"
+    }
+  }
+}

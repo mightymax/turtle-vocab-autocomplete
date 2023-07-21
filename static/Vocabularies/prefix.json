@@ -1,0 +1,7 @@
+{
+  "iri": "http://qudt.org/vocab/prefix/",
+  "description": "The Prefixes vocabulary defines the prefixes commonly prepended to units to connote multiplication, either decimal or binary.",
+  "label": "QUDT Prefixes Version 2.1 Vocabulary",
+  "prefix": "prefix",
+  "items": {}
+}

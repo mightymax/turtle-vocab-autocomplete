@@ -1,0 +1,2633 @@
+{
+  "iri": "http://qudt.org/schema/qudt/",
+  "description": "The QUDT, or \"Quantity, Unit, Dimension and Type\" schema defines the base classes properties, and restrictions used for modeling physical quantities, units of measure, and their dimensions in various measurement systems. The goal of the QUDT ontology is to provide a unified model of, measurable quantities, units for measuring different kinds of quantities, the numerical values of quantities in different units of measure and the data structures and data types used to store and manipulate these objects in software.",
+  "label": "QUDT Schema",
+  "prefix": "qudt",
+  "items": {
+    "dcterms:abstract": {
+      "category": "property",
+      "label": "abstract"
+    },
+    "dcterms:contributor": {
+      "category": "property",
+      "label": "contributor"
+    },
+    "dcterms:creator": {
+      "category": "property",
+      "label": "creator"
+    },
+    "dcterms:description": {
+      "category": "property",
+      "label": "description"
+    },
+    "dcterms:rights": {
+      "category": "property",
+      "label": "rights"
+    },
+    "dcterms:source": {
+      "category": "property",
+      "label": "source"
+    },
+    "dcterms:subject": {
+      "category": "property",
+      "label": "subject"
+    },
+    "dcterms:title": {
+      "category": "property",
+      "label": "title"
+    },
+    "defaultValue": {
+      "category": "property",
+      "label": "Default Value"
+    },
+    "example": {
+      "category": "property",
+      "description": "The 'qudt:example' property is used to annotate an instance of a class with a reference to a concept that is an example. The type of this property is 'rdf:Property'. This allows both scalar and object ranges.",
+      "label": "example"
+    },
+    "expression": {
+      "category": "property",
+      "description": "An 'expression' is a finite combination of symbols that are well-formed according to rules that apply to units of measure, quantity kinds and their dimensions.",
+      "label": "expression"
+    },
+    "ucumCaseInsensitiveCode": {
+      "category": "property",
+      "description": "<em>ucumCode</em> associates a QUDT unit with a UCUM case-insensitive code.",
+      "label": "ucum case-insensitive code"
+    },
+    "ucumCaseSensitiveCode": {
+      "category": "property",
+      "description": "<em>ucumCode</em> associates a QUDT unit with with a UCUM case-sensitive code.",
+      "label": "ucum case-sensitive code"
+    },
+    "dcterms:created": {
+      "category": "property",
+      "label": "created"
+    },
+    "dcterms:modified": {
+      "category": "property",
+      "label": "modified"
+    },
+    "elementType": {
+      "category": "property",
+      "description": "This property is used to relate a structured data type with the data type of the structured type's elements. It is used for homogeneous structured data types, that is, those whose elements that are all of the same type.",
+      "label": "element type"
+    },
+    "ansiSQLName": {
+      "category": "property",
+      "label": "ANSI SQL Name"
+    },
+    "oracleSQLName": {
+      "category": "property",
+      "label": "ORACLE SQL name"
+    },
+    "protocolBuffersName": {
+      "category": "property",
+      "label": "protocol buffers name"
+    },
+    "pythonName": {
+      "category": "property",
+      "label": "python name"
+    },
+    "rdfsDatatype": {
+      "category": "property",
+      "label": "rdfs datatype"
+    },
+    "cName": {
+      "category": "property",
+      "description": "Datatype name in the C programming language",
+      "label": "C Language name"
+    },
+    "bits": {
+      "category": "property",
+      "label": "bits"
+    },
+    "bytes": {
+      "category": "property",
+      "label": "bytes"
+    },
+    "field": {
+      "category": "property"
+    },
+    "elementLabel": {
+      "category": "property",
+      "description": "This property is used to label the field of a composite data structure.",
+      "label": "element label"
+    },
+    "optional": {
+      "category": "property",
+      "label": "optional"
+    },
+    "basis": {
+      "category": "property",
+      "label": "basis"
+    },
+    "bounded": {
+      "category": "property",
+      "description": "A datatype is bounded if its value space has either a finite upper and lower bound. Either bound may be inclusive or exclusive.",
+      "label": "bounded"
+    },
+    "cardinality": {
+      "category": "property",
+      "label": "cardinality"
+    },
+    "vbName": {
+      "category": "property",
+      "label": "Visual Basic name"
+    },
+    "allowedPattern": {
+      "category": "property",
+      "description": "This property relates a date string encoding (c.f. type:DateStringEncodingType) to one or more XML Schema compliant regular expressions that together determine the allowed lexical expressions that can be unambiguously parsed to determine a temporal quantity.",
+      "label": "allowed pattern"
+    },
+    "length": {
+      "category": "property",
+      "description": "The length of a structure, for example the size of a vector",
+      "label": "length"
+    },
+    "minExclusive": {
+      "category": "property",
+      "description": "minExclusive is the exclusive lower bound of the value space for a datatype with the ordered property. The value of minExclusive must be in the value space of the base type or be equal to {value} in {base type definition}.",
+      "label": "min exclusive"
+    },
+    "value": {
+      "category": "property",
+      "description": "This property identifies the value associated with a data structure. The value may be a scalar or a reference to another object. The disjoint sub-properties of this data:value distinguish between scalar values and object references.",
+      "label": "value"
+    },
+    "isComprisedOf": {
+      "category": "property"
+    },
+    "orderedType": {
+      "category": "property",
+      "label": "ordered type"
+    },
+    "prov:wasDerivedFrom": {
+      "category": "property",
+      "label": "was derived from"
+    },
+    "byRow": {
+      "category": "property",
+      "description": "A boolean to specify whether an array is presented row by row or column by column.",
+      "label": "by row"
+    },
+    "dimensionality": {
+      "category": "property",
+      "description": "The number of dimensions making up an array. For example a 4 by 4 array has a dimensionality of 2. Whereas a vector or a string has a dimensionality of 1.",
+      "label": "dimensionality"
+    },
+    "sound": {
+      "category": "property",
+      "description": "The intended use of the sound property is to be associated with modal enumerations",
+      "label": "sound"
+    },
+    "javaName": {
+      "category": "property",
+      "label": "java name"
+    },
+    "jsName": {
+      "category": "property",
+      "label": "Javascript name"
+    },
+    "microsoftSQLServerName": {
+      "category": "property",
+      "label": "Microsoft SQL Server name"
+    },
+    "mySQLName": {
+      "category": "property",
+      "label": "MySQL name"
+    },
+    "odbcName": {
+      "category": "property",
+      "label": "ODBC name"
+    },
+    "oleDBName": {
+      "category": "property",
+      "description": "OLE DB (Object Linking and Embedding, Database, sometimes written as OLEDB or OLE-DB), an API designed by Microsoft, allows accessing data from a variety of sources in a uniform manner. The API provides a set of interfaces implemented using the Component Object Model (COM); it is otherwise unrelated to OLE.",
+      "label": "OLE DB name"
+    },
+    "abbreviation": {
+      "category": "property",
+      "description": "An abbreviation for a unit is a short ASCII string that is used in place of the full name for the unit in contexts where non-ASCII characters would be problematic, or where using the abbreviation will enhance readability. When a power of abase unit needs to be expressed, such as squares this can be done using abbreviations rather than symbols. For example, <em>sq ft</em> means <em>square foot</em>, and <em>cu ft</em> means <em>cubic foot</em>.",
+      "label": "abbreviation"
+    },
+    "maxInclusive": {
+      "category": "property",
+      "description": "maxInclusive is the inclusive upper bound of the value space for a datatype with the ordered property. The value of maxInclusive must be in the value space of the base type.",
+      "label": "max inclusive"
+    },
+    "minInclusive": {
+      "category": "property",
+      "description": "minInclusive is the inclusive lower bound of the value space for a datatype with the ordered property. The value of minInclusive must be in the value space of the base type.",
+      "label": "min inclusive"
+    },
+    "octets": {
+      "category": "property",
+      "label": "octets"
+    },
+    "maxDepth": {
+      "category": "property",
+      "label": "max depth"
+    },
+    "informativeReference": {
+      "category": "property",
+      "description": "Provides a way to reference a source that provided useful but non-normative information.",
+      "label": "informative reference"
+    },
+    "encodedValue": {
+      "category": "property",
+      "label": "encoded value"
+    },
+    "literal": {
+      "category": "property",
+      "label": "literal"
+    },
+    "rgbCode": {
+      "category": "property",
+      "label": "rgb code"
+    },
+    "plainTextDescription": {
+      "category": "property",
+      "description": "A plain text description is used to provide a description with only simple ASCII characters for cases where LaTeX , HTML or other markup would not be appropriate.",
+      "label": "description (plain text)"
+    },
+    "elementTypeCount": {
+      "category": "property",
+      "description": "This property determines the allowed number of element types that a structured data type may have.",
+      "label": "element type count"
+    },
+    "originDefinition": {
+      "category": "property",
+      "label": "origin definition"
+    },
+    "float_X": {
+      "category": "property",
+      "label": "float X"
+    },
+    "float_Y": {
+      "category": "property",
+      "label": "float Y"
+    },
+    "float_Z": {
+      "category": "property",
+      "label": "float Z"
+    },
+    "encodingDescription": {
+      "category": "property",
+      "label": "encoding description"
+    },
+    "id": {
+      "category": "property",
+      "description": "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents.",
+      "label": "id"
+    },
+    "matlabName": {
+      "category": "property",
+      "label": "matlab name"
+    },
+    "AbstractDatatype": {
+      "category": "class",
+      "description": "<p class=\"lm-para\">An \"Abstract Datatype\" (ADT) is a specification of a set of data and the set of operations that can be performed on the data. Such a data type is abstract in the sense that it is independent of various concrete implementations. The definition can be mathematical, or it can be programmed as an interface. A first class ADT supports the creation of multiple instances of the ADT, and the interface normally provides a constructor, which returns an abstract handle to new data, and several operations, which are functions accepting the abstract handle as an argument.</p>",
+      "label": "Abstract Datatype"
+    },
+    "dbpediaMatch": {
+      "category": "property",
+      "label": "dbpedia match"
+    },
+    "StructuredDatatype": {
+      "category": "class",
+      "description": "A \"Structured Datatype\", in contrast to scalar data types, is used to characterize classes of more complex data structures, such as linked or indexed lists, trees, ordered trees, and multi-dimensional file formats.",
+      "label": "Structured Data Type"
+    },
+    "elementName": {
+      "category": "property",
+      "label": "element name"
+    },
+    "AbstractQuantityKind": {
+      "category": "class",
+      "label": "Quantity Kind (abstract)"
+    },
+    "functionArity": {
+      "category": "property",
+      "description": "This property is used to state the number of arguments for a function type.",
+      "label": "function arity"
+    },
+    "Concept": {
+      "category": "class",
+      "description": "The root class for all QUDT concepts.",
+      "label": "QUDT Concept"
+    },
+    "AerospaceCoordinateSystem": {
+      "category": "class",
+      "description": "A sub-type of 'Coordinate system'. Detailed desciption to be provided in a future version.",
+      "label": "Aerospace coordinate system"
+    },
+    "maxLength": {
+      "category": "property",
+      "label": "max length"
+    },
+    "CoordinateSystem": {
+      "category": "class",
+      "description": "In geometry, a coordinate system is a system which uses one or more numbers, or coordinates, to uniquely determine the position of a point or other geometric element on a manifold such as Euclidean space. The order of the coordinates is significant and they are sometimes identified by their position in an ordered tuple and sometimes by a letter, as in 'the x-coordinate'.    In elementary mathematics the coordinates are taken to be real numbers, but may be complex numbers or elements of a more abstract system such as a commutative ring. The use of a coordinate system allows problems in geometry to be translated into problems about numbers and vice versa; this is the basis of analytic geometry.    In astronomy, a celestial coordinate system is a system for specifying positions of celestial objects: satellites, planets, stars, galaxies, and so on. Coordinate systems can specify a position in 3-dimensional space, or merely the direction of the object on the celestial sphere, if its distance is not known or not important.    The coordinate systems are implemented in either spherical coordinates or rectangular coordinates. Spherical coordinates, projected on the celestial sphere, are analogous to the geographic coordinate system used on the surface of the Earth. These differ in their choice of fundamental plane, which divides the celestial sphere into two equal hemispheres along a great circle. Rectangular coordinates, in appropriate units, are simply the cartesian equivalent of the spherical coordinates, with the same fundamental (x,y) plane and primary (x-axis) direction. Each coordinate system is named for its choice of fundamental plane.",
+      "label": "Coordinate system"
+    },
+    "minLength": {
+      "category": "property",
+      "label": "min length"
+    },
+    "AlgebraicDatatype": {
+      "category": "class",
+      "description": "<p>An \"Algebraic Datatype\" is a datatype each of whose values are data from other data types wrapped in one of the constructors of the data type. Any wrapped datum is an argument to the constructor. In contrast to other data types, the constructor is not executed and the only way to operate on the data is to unwrap the constructor using pattern matching.</p>  <p>The most common algebraic data type is a list with two constructors: Nil or [] for an empty list, and Cons (an abbreviation of constructor), ::, or : for the combination of a new element with a shorter list (for example (Cons 1 '(2 3 4)) or 1:[2,3,4]).</p>  <p>Special cases of algebraic types are product types i.e. records (only one constructor) and enumerated types (many constructors with no arguments). Algebraic types are one kind of composite type (i.e. a type formed by combining other types).</p>  <p>An algebraic data type may also be an abstract data type (ADT) if it is exported from a module without its constructors. Values of such a type can only be manipulated using functions defined in the same module as the type itself.</p>",
+      "label": "Algebraic Datatype"
+    },
+    "pattern": {
+      "category": "property",
+      "description": "A pattern is a constraint on the value space of a datatype which is achieved by constraining the lexical space to literals which match a specific pattern. The value of pattern must be a regular expression.",
+      "label": "pattern"
+    },
+    "AlignmentType": {
+      "category": "class",
+      "description": "Specifies how a physical data field is aligned. The alignment could be at a bit, byte or word boundary.",
+      "label": "Alignment type"
+    },
+    "url": {
+      "category": "property",
+      "label": "url"
+    },
+    "EnumeratedValue": {
+      "category": "class",
+      "description": "<p>This class is for all enumerated and/or coded values.  For example, it contains the dimension objects that are the basis elements in some abstract vector space associated with a quantity kind system. Another use is for the base dimensions for quantity systems. Each quantity kind system that defines a base set has a corresponding ordered enumeration whose elements are the dimension objects for the base quantity kinds. The order of the dimensions in the enumeration determines the canonical order of the basis elements in the corresponding abstract vector space.</p>  <p>An enumeration is a set of literals from which a single value is selected. Each literal can have a tag as an integer within a standard encoding appropriate to the range of integer values. Consistency of enumeration types will allow them, and the enumerated values, to be referred to unambiguously either through symbolic name or encoding. Enumerated values are also controlled vocabularies and as such need to be standardized. Without this consistency enumeration literals can be stated differently and result in  data conflicts and misinterpretations.</p>  <p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance, each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a selection. Enumerations are also subclasses of Scalar Datatype. This allows them to be used as the reference of a datatype specification.</p>",
+      "label": "Enumerated Value"
+    },
+    "image": {
+      "category": "property",
+      "label": "image"
+    },
+    "AngleUnit": {
+      "category": "class",
+      "description": "All units relating to specification of angles.",
+      "label": "Angle unit"
+    },
+    "code": {
+      "category": "property",
+      "description": "A code is a string that uniquely identifies a QUDT concept. The use of this property has been deprecated.",
+      "label": "code"
+    },
+    "DimensionlessUnit": {
+      "category": "class",
+      "description": "A Dimensionless Unit is a quantity for which all the exponents of the factors corresponding to the base quantities in its quantity dimension are zero.",
+      "label": "Dimensionless Unit"
+    },
+    "realization": {
+      "category": "property",
+      "label": "realization"
+    },
+    "Array": {
+      "category": "class",
+      "description": "An array is represented as ordered entries of values arranged according to the dimensions given. The dimensions are given as a list of integers where each integer is the cardinality of each dimension. The number of dimensions is specified in the attribute 'dimensionality'. Optionally a reference can be made to a variable, whose values are the array entries. The data type of the array entries is an optional field, 'elementType', which points to a data type definition. If the data type is given, then it applies to all elements.  If it is not given then the elements can be of different types for each position in the array. The property 'type:typeMatrix' must refer to a matrix of types.  If a default value is given this can be used to place the appropriate value in a cell when an entry value is not known. If no dimensionality or dimension vector is specified the array is under-specified but still legitimate as a place-holder for a data type.",
+      "label": "Array Type"
+    },
+    "xAxisDefinition": {
+      "category": "property",
+      "description": "The definition of the X-Axis could be an intersection, cross-product or other function of a  meridian or orbit. It could also mention any aspects of rotation, for example, the rotation equator of the Earth,  Sun, Moon or other celestial body. An epoch might also be given.",
+      "label": "X-Axis Definition"
+    },
+    "CompositeDatatype": {
+      "category": "class",
+      "description": "Composite types are datatypes which can be constructed in a programming language out of that language's basic primitive types and other composite types. The act of constructing a composite type is known as composition.",
+      "label": "Composite Data Type"
+    },
+    "yAxisDefinition": {
+      "category": "property",
+      "description": "The definition of the Y-Axis could be an intersection, cross-product or other function of a meridian or orbit. It could also mention any aspects of rotation, for example, the rotation equator of the Earth,  Sun, Moon or other celestial body. An epoch might also be given.",
+      "label": "Y-Axis definition"
+    },
+    "ArrayDataOrderType": {
+      "category": "class",
+      "description": "A sub-type of 'Enumerated Value'. Detailed desciption to be provided in a future version.",
+      "label": "Array data order type"
+    },
+    "zAxisDefinition": {
+      "category": "property",
+      "description": "The definition of the Y-Axis could be an intersection, croos-product or other function of a meridian or orbit. It could also mention any aspects of rotation, for example, the rotation equator of the Earth,  Sun, Moon or other celestial body. An epoch might also be given.",
+      "label": "Z-Axis definition"
+    },
+    "ArrayIndex": {
+      "category": "class",
+      "description": "An Array Index Type is a data type that specifies the properties of data structures that hold array indexes.",
+      "label": "Array Index Type"
+    },
+    "columns": {
+      "category": "property",
+      "label": "columns"
+    },
+    "Vector": {
+      "category": "class",
+      "description": "A Vector Type is a data type that specifies the properties of data structures that hold vectors.",
+      "label": "Vector Type"
+    },
+    "rows": {
+      "category": "property",
+      "label": "rows"
+    },
+    "ArrayIndexType": {
+      "category": "class",
+      "description": "An Array Index Type is a data type that specifies the properties of data structures that hold array indexes.",
+      "label": "Array Index Type"
+    },
+    "accuracy": {
+      "category": "property",
+      "description": "Accuracy is the degree to which a given quantity is correct and free from error. For example, a quantity specified as 100+/-1 has an (absolute) accuracy of +/-1 (meaning its true value can fall in the range 99-101), while a quantity specified as 100+/-2% has a (relative) accuracy of +/-2% (meaning its true value can fall in the range 98-102).  The concepts of accuracy and precision are both closely related and often confused. While the accuracy of a number x is given by the number of significant decimal (or other) digits to the right of the decimal point in x, the precision of x is the total number of significant decimal (or other) digits.",
+      "label": "accuracy"
+    },
+    "VectorType": {
+      "category": "class",
+      "description": "A Vector Type is a data type that specifies the properties of data structures that hold vectors.",
+      "label": "Vector Type"
+    },
+    "inverted": {
+      "category": "property",
+      "label": "inverted"
+    },
+    "DimensionVector": {
+      "category": "class",
+      "label": "Dimension Vector"
+    },
+    "base": {
+      "category": "property",
+      "label": "base"
+    },
+    "ArrayType": {
+      "category": "class",
+      "description": "<p>An <em>array type</em> is a type specification for ordered entries of values arranged according to the dimensions given. The dimensions are given as a list of integers where each integer is the cardinality of each dimension. The number of dimensions is specified in the attribute 'dimensionality'.</p>  <p>Optionally a reference can be made to a variable, whose values are the array entries. The data type of the array entries is an optional field, 'elementType', which points to a data type definition. If the data type is given, then it applies to all elements.  If it is not given then the elements can be of different types for each position in the array.</p>  <p>The property <em>qudt:typeMatrix</em> must refer to a matrix of types.  If a default value is given this can be used to place the appropriate value in a cell when an entry value is not known. If no dimensionality or dimension vector is specified the array is under-specified but still legitimate as a place-holder for a data type.</p>",
+      "label": "Array Type"
+    },
+    "maxExponent": {
+      "category": "property",
+      "label": "max exponent"
+    },
+    "PubEnumeratedType": {
+      "category": "class",
+      "label": "Pub enumerated type"
+    },
+    "precision": {
+      "category": "property",
+      "description": "Precision is the number of digits used to perform a given computation. The concepts of accuracy and precision are both closely related and often confused. While the accuracy of a number x is given by the number of significant decimal (or other) digits to the right of the decimal point in x, the precision of x is the total number of significant decimal (or other) digits.  For a given numeric data type, the value of type:precision (?p) is related to the values of type:maxMantissa (?M) and type:base (?b) by the formula  ?p := log(?b, ?M)  where log(a,y) = x iff y=a^x.",
+      "label": "precision"
+    },
+    "AspectClass": {
+      "category": "class",
+      "label": "Aspect Class"
+    },
+    "xCoordinateDefinition": {
+      "category": "property",
+      "label": "X-Coordinate definition"
+    },
+    "AssociativeArray": {
+      "category": "class",
+      "description": "An Associative Array (or Map) is an abstract data type composed of a collection of keys and a collection of values, where each key is associated with one value. The operation of finding the value associated with a key is called a lookup or indexing, and this is the most important operation supported by an associative array. The relationship between a key and its value is sometimes called a mapping or binding.",
+      "label": "Associative Array"
+    },
+    "yCoordinateDefinition": {
+      "category": "property",
+      "label": "Y-Coordinate definition"
+    },
+    "Collection": {
+      "category": "class",
+      "description": "A collection is a grouping of some variable number of zero or more data items that need to be operated upon together in some controlled fashion. Generally, the data items will all share the same data type or are derived from some common ancestor data type.",
+      "label": "Collection Type"
+    },
+    "zCoordinateDefinition": {
+      "category": "property",
+      "label": "Z-Coordinate definition"
+    },
+    "Map": {
+      "category": "class",
+      "description": "A Map Type is an abstract data type that defines the properties of map data structures. A Map (or Associative Array) is an abstract data structure composed of a collection of keys and a collection of values, where each key is associated with one value. The operation of finding the value associated with a key is called a lookup or indexing, and this is the most important operation supported by an associative array. The relationship between a key and its value is sometimes called a mapping or binding.",
+      "label": "Map Type"
+    },
+    "order": {
+      "category": "property",
+      "label": "order"
+    },
+    "AssociativeArrayType": {
+      "category": "class",
+      "description": "An Associative Array (or Map) is an abstract data type composed of a collection of keys and a collection of values, where each key is associated with one value. The operation of finding the value associated with a key is called a lookup or indexing, and this is the most important operation supported by an associative array. The relationship between a key and its value is sometimes called a mapping or binding.",
+      "label": "Associative Array Type"
+    },
+    "maxExclusive": {
+      "category": "property",
+      "description": "maxExclusive is the exclusive upper bound of the value space for a datatype with the ordered property. The value of maxExclusive must be in the value space of the base type or be equal to {value} in {base type definition}.",
+      "label": "max exclusive"
+    },
+    "CollectionType": {
+      "category": "class",
+      "description": "A collection is a grouping of some variable number of zero or more data items that need to be operated upon together in some controlled fashion. Generally, the data items will all share the same data type or are derived from some common ancestor data type.",
+      "label": "Collection Type"
+    },
+    "MapType": {
+      "category": "class",
+      "description": "A Map Type is an abstract data type that defines the properties of map data structures. A Map (or Associative Array) is an abstract data structure composed of a collection of keys and a collection of values, where each key is associated with one value. The operation of finding the value associated with a key is called a lookup or indexing, and this is the most important operation supported by an associative array. The relationship between a key and its value is sometimes called a mapping or binding.",
+      "label": "Map Type"
+    },
+    "isByteString": {
+      "category": "property",
+      "label": "is byte string"
+    },
+    "AuralCue": {
+      "category": "class",
+      "description": "An aural cue is a sound produced by a device or a system that is used to alert personnel of of an advisory, cautionary, warning, or emergency state.",
+      "label": "Aural Cue"
+    },
+    "orderInStructure": {
+      "category": "property",
+      "label": "order in structure"
+    },
+    "ModalCue": {
+      "category": "class",
+      "label": "Modal Cue"
+    },
+    "maxBits": {
+      "category": "property",
+      "label": "maximum bits"
+    },
+    "AxialOrientationType": {
+      "category": "class",
+      "description": "The axial orientation of a coordinate system frame axis.",
+      "label": "Axial Orientation Type"
+    },
+    "minBits": {
+      "category": "property",
+      "label": "minimum bits"
+    },
+    "BooleanType": {
+      "category": "class",
+      "description": "A boolean data type can take on only two values.",
+      "label": "Boolean Type"
+    },
+    "dimension": {
+      "category": "property",
+      "description": "The number of elements in a vector.",
+      "label": "dimension"
+    },
+    "SignedShortIntegerType": {
+      "category": "class",
+      "description": "A Signed Short Integer is a signed integer that can be represented in four octets (32 bits) of machine memory.",
+      "label": "Signed Short Integer Type"
+    },
+    "acronym": {
+      "category": "property",
+      "label": "acronym"
+    },
+    "BalancedTree": {
+      "category": "class",
+      "description": "A Balanced Tree Type is a data type that defines the properties of data structures that represent balanced trees. A balanced tree is a tree where no leaf is much farther away from the root than any other leaf. Different balancing schemes allow different definitions of \"much farther\" and different amounts of work to keep them balanced.",
+      "label": "Balanced Tree Type"
+    },
+    "citation": {
+      "category": "property",
+      "label": "citation"
+    },
+    "Tree": {
+      "category": "class",
+      "description": "A \"Tree\" is a data type that defines the properties of data structures that represent trees. A tree is a graph data structure accessed beginning at the root node. Each node is either a leaf or an internal node. An internal node has one or more child nodes and is called the parent of its child nodes. Leaf nodes have no chidren. Nodes that share the same parent are siblings. In graph theoretic terminology, a tree is a connected, undirected, acyclic graph.",
+      "label": "Tree Type"
+    },
+    "conversionCoefficient": {
+      "category": "property",
+      "label": "conversion coefficient"
+    },
+    "BalancedTreeType": {
+      "category": "class",
+      "description": "A Balanced Tree Type is a data type that defines the properties of data structures that represent balanced trees. A balanced tree is a tree where no leaf is much farther away from the root than any other leaf. Different balancing schemes allow different definitions of \"much farther\" and different amounts of work to keep them balanced.",
+      "label": "Balanced Tree Type"
+    },
+    "conversionMultiplier": {
+      "category": "property",
+      "label": "conversion multiplier"
+    },
+    "TreeType": {
+      "category": "class",
+      "description": "A \"Tree\" is a data type that defines the properties of data structures that represent trees. A tree is a graph data structure accessed beginning at the root node. Each node is either a leaf or an internal node. An internal node has one or more child nodes and is called the parent of its child nodes. Leaf nodes have no chidren. Nodes that share the same parent are siblings. In graph theoretic terminology, a tree is a connected, undirected, acyclic graph.",
+      "label": "Tree Type"
+    },
+    "conversionOffset": {
+      "category": "property",
+      "label": "conversion offset"
+    },
+    "BaseDimensionMagnitude": {
+      "category": "class",
+      "description": "<p class=\"lm-para\">A <em>Dimension</em> expresses a magnitude for a base quantiy kind such as mass, length and time.</p> <p class=\"lm-para\">DEPRECATED - each exponent is expressed as a property. Keep until a validaiton of this has been done.</p>",
+      "label": "Base Dimension Magnitude"
+    },
+    "currencyCode": {
+      "category": "property",
+      "description": "Alphabetic Currency Code as defined by ISO 4217. For example, US Dollar has the code 'USD'.",
+      "label": "currency code"
+    },
+    "EndianType": {
+      "category": "class",
+      "label": "Endian Type"
+    },
+    "currencyExponent": {
+      "category": "property",
+      "description": "The currency exponent indicates the number of decimal places between a major currency unit and its minor currency unit. For example, the US dollar is the major currency unit of the United States, and the US cent is the minor currency unit. Since one cent is 1/100 of a dollar, the US dollar has a currency exponent of 2. However, the Japanese Yen has no minor currency units, so the yen has a currency exponent of 0.",
+      "label": "currency exponent"
+    },
+    "BigIntegerType": {
+      "category": "class",
+      "description": "A Big Integer is an integer that can be represented in eight octets (64 bits) of machine memory. Big integers may be signed or unsigned.",
+      "label": "Big Integer Type"
+    },
+    "currencyNumber": {
+      "category": "property",
+      "description": "Numeric currency Code as defined by ISO 4217. For example, US Dollar has the number 840.",
+      "label": "currency number"
+    },
+    "IntegerDatatype": {
+      "category": "class",
+      "description": "An Integer Type is a data type that specifies how integer numbers are represented and stored in machine memory.",
+      "label": "Integer Datatype"
+    },
+    "dataStructure": {
+      "category": "property",
+      "label": "data structure"
+    },
+    "BinaryPrefix": {
+      "category": "class",
+      "description": "A <em>Binary Prefix</em> is a prefix for multiples of units in data processing, data transmission, and digital information, notably the bit and the byte, to indicate multiplication by a power of 2.",
+      "label": "Binary Prefix"
+    },
+    "dimensionExponent": {
+      "category": "property",
+      "label": "dimension exponent"
+    },
+    "Prefix": {
+      "category": "class",
+      "label": "Prefix"
+    },
+    "dimensionExponentForAmountOfSubstance": {
+      "category": "property",
+      "label": "dimension exponent for amount of substance"
+    },
+    "BinaryTree": {
+      "category": "class",
+      "description": "A Binary Tree Type is a data type that defines the properties of data structures that represent binary trees. A binary tree is a tree in which each node has at most 2 children.",
+      "label": "Binary Tree Type"
+    },
+    "dimensionExponentForElectricCurrent": {
+      "category": "property",
+      "label": "dimension exponent for electric current"
+    },
+    "BinaryTreeType": {
+      "category": "class",
+      "description": "A Binary Tree Type is a data type that defines the properties of data structures that represent binary trees. A binary tree is a tree in which each node has at most 2 children.",
+      "label": "Binary Tree Type"
+    },
+    "dimensionExponentForLength": {
+      "category": "property",
+      "label": "dimension exponent for length"
+    },
+    "BitEncodingType": {
+      "category": "class",
+      "description": "A bit encoding is a correspondence between the two possible values of a bit, 0 or 1, and some interpretation. For example, in a boolean encoding, a bit denotes a truth value, where 0 corresponds to False and 1 corresponds to True.",
+      "label": "Bit Encoding"
+    },
+    "dimensionExponentForLuminousIntensity": {
+      "category": "property",
+      "label": "dimension exponent for luminous intensity"
+    },
+    "Encoding": {
+      "category": "class",
+      "description": "An encoding is a rule or algorithm that is used to convert data from a native, or unspecified form into a specific form that satisfies the encoding rules. Examples of encodings include character encodings, such as UTF-8.",
+      "label": "Encoding"
+    },
+    "dimensionExponentForMass": {
+      "category": "property",
+      "label": "dimension exponent for mass"
+    },
+    "BitFieldType": {
+      "category": "class",
+      "description": "A bit field is a common idiom used in computer programming to store a set of Boolean datatype flags compactly, as a series of bits. The bit field is stored in an integral type of known, fixed bit-width. Each Boolean flag is stored in a separate bit. Usually the source code will define a set of constants, each a power of two, that semantically associate each individual bit with its respective Boolean flag. The bitwise operators and, or, and not are used in combination to set, reset and test the flags.",
+      "label": "Bit Field Type"
+    },
+    "dimensionExponentForThermodynamicTemperature": {
+      "category": "property",
+      "label": "dimension exponent for thermodynamic temperature"
+    },
+    "ScalarDatatype": {
+      "category": "class",
+      "description": "Scalar data types are those that have a single value. The permissible values are defined over a domain that may be integers, float, character or boolean. Often a scalar data type is referred to as a primitive data type.",
+      "label": "Scalar Datatype"
+    },
+    "dimensionExponentForTime": {
+      "category": "property",
+      "label": "dimension exponent for time"
+    },
+    "BooleanEncodingType": {
+      "category": "class",
+      "label": "Boolean encoding type"
+    },
+    "dimensionlessExponent": {
+      "category": "property",
+      "label": "dimensionless exponent"
+    },
+    "OrdinalType": {
+      "category": "class",
+      "description": "An ordinal data type is a data type that specifies the properties of values that can easily be put in a one to one correspondence with a subset of the natural numbers. Examples include boolean, character, and integer data types.",
+      "label": "Ordinal Data Type"
+    },
+    "exactConstant": {
+      "category": "property",
+      "label": "exact constant"
+    },
+    "BooleanTypeEnumeratedValue": {
+      "category": "class",
+      "description": "Specifies how a boolean value is expressed",
+      "label": "boolean value"
+    },
+    "exponent": {
+      "category": "property",
+      "label": "exponent"
+    },
+    "ByteEncodingType": {
+      "category": "class",
+      "description": "This class contains the various ways that information may be encoded into bytes.",
+      "label": "Byte Encoding"
+    },
+    "fieldCode": {
+      "category": "property",
+      "label": "field code"
+    },
+    "CoordinateCenterType": {
+      "category": "class",
+      "description": "An enumeration of coordinate centers for coordinate systems, such as \"Earth centered\", \"Mars centered\", \"Moon centered\", \"Sun centered\",  and \"Vehicle centered\".",
+      "label": "Coordinate center type"
+    },
+    "fieldName": {
+      "category": "property",
+      "label": "field name"
+    },
+    "CompositionFunction": {
+      "category": "class",
+      "label": "Composition function"
+    },
+    "figureCaption": {
+      "category": "property",
+      "label": "figure caption"
+    },
+    "ColorCue": {
+      "category": "class",
+      "description": "A visual cue that uses color to distinguish it from other cues. Each color cue has exactly one corresponding coordinate point in the RGB space.",
+      "label": "Color Cue"
+    },
+    "figureLabel": {
+      "category": "property",
+      "label": "figure label"
+    },
+    "CardinalityType": {
+      "category": "class",
+      "description": "<p class=\"lm-para\">In mathematics, the cardinality of a set is a measure of the number of elements of the set.  For example, the set \\(A = {2, 4, 6}\\) contains 3 elements, and therefore \\(A\\) has a cardinality of 3. There are two approaches to cardinality – one which compares sets directly using bijections and injections, and another which uses cardinal numbers.</p>",
+      "label": "Cardinality Type"
+    },
+    "guidance": {
+      "category": "property",
+      "label": "guidance"
+    },
+    "CartesianCoordinates": {
+      "category": "class",
+      "description": "A set of  variables which fix a geometric object. If the coordinates are distances measured along perpendicular axes, they are known as Cartesian coordinates.",
+      "label": "Cartesian Coordinate Type"
+    },
+    "height": {
+      "category": "property",
+      "label": "height"
+    },
+    "Coordinates": {
+      "category": "class",
+      "description": "A coordinate system is a mathematical structure for assigning a unique n-tuple of numbers or scalars to each point in an n-dimensional space. A Coordinate System Type is a data type that defines the properties of data structures that represent coordinate systems.",
+      "label": "Coordinate System Type"
+    },
+    "iec61360Code": {
+      "category": "property",
+      "label": "iec-61360 code"
+    },
+    "CartesianCoordinatesType": {
+      "category": "class",
+      "description": "A set of  variables which fix a geometric object. If the coordinates are distances measured along perpendicular axes, they are known as Cartesian coordinates.",
+      "label": "Cartesian Coordinate Type"
+    },
+    "imageLocation": {
+      "category": "property",
+      "label": "image location"
+    },
+    "CharEncodingType": {
+      "category": "class",
+      "description": "The class of all character encoding schemes, each of which defines a rule or algorithm for encoding character data as a sequence of bits or bytes.",
+      "label": "Char Encoding Type"
+    },
+    "isDeltaQuantity": {
+      "category": "property",
+      "description": "This property is used to identify a Quantity instance that is a measure of a change, or interval, of some property, rather than a measure of its absolute value. This is important for measurements such as temperature differences where the conversion among units would be calculated differently because of offsets.",
+      "label": "is Delta Quantity"
+    },
+    "CharacterType": {
+      "category": "class",
+      "description": "A Character Type is a data type that defines the type and encoding of single characters.",
+      "label": "Character Type"
+    },
+    "isMetricUnit": {
+      "category": "property",
+      "label": "is metric unit"
+    },
+    "Citation": {
+      "category": "class",
+      "description": "Provides a simple way of making citations.",
+      "label": "Citation"
+    },
+    "isoNormativeReference": {
+      "category": "property",
+      "description": "Provides a way to reference the ISO unit definition.",
+      "label": "normative reference (ISO)"
+    },
+    "VisualCue": {
+      "category": "class",
+      "label": "Visual Cue"
+    },
+    "normativeReference": {
+      "category": "property",
+      "description": "Provides a way to reference information that is an authorative source providing a standard definition",
+      "label": "normative reference"
+    },
+    "Comment": {
+      "category": "class",
+      "label": "Comment"
+    },
+    "landscape": {
+      "category": "property",
+      "label": "landscape"
+    },
+    "DataSetElement": {
+      "category": "class",
+      "description": "A field is a tuple that carries a name, a type and optionally other properties that characterize a member element of a composite data strucuture.",
+      "label": "QUDT DataSet Element"
+    },
+    "latexDefinition": {
+      "category": "property",
+      "label": "latex definition"
+    },
+    "CompositeDataStructure": {
+      "category": "class",
+      "description": "'Composite Data Structure', also referred to as 'Data Record' is a datatype that aggregates element of possibly different types. The aggregated items are called fields or members and are usually identified or indexed by field labels.",
+      "label": "Composite Data Structure"
+    },
+    "latexSymbol": {
+      "category": "property",
+      "description": "The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form. For example, the symbol for an Ohm is \\(ohm\\). This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.",
+      "label": "latex symbol"
+    },
+    "Datatype": {
+      "category": "class",
+      "description": "A data type is a definition of a set of values (for example, \"all integers between 0 and 10\"), and the allowable operations on those values; the meaning of the data; and the way values of that type can be stored. Some types are primitive - built-in to the language, with no visible internal structure - e.g. Boolean; others are composite - constructed from one or more other types (of either kind) - e.g. lists, arrays, structures, unions. Object-oriented programming extends this with classes which encapsulate both the structure of a type and the operations that can be performed on it. Some languages provide strong typing, others allow implicit type conversion and/or explicit type conversion.",
+      "label": "QUDT Datatype"
+    },
+    "lowerBound": {
+      "category": "property",
+      "label": "lower bound"
+    },
+    "PaddingType": {
+      "category": "class",
+      "description": "This describes how unused bits of a field are filled. Unused bits could be set to one or zero. A third option is \"don't care\".",
+      "label": "Padding type"
+    },
+    "mantissa": {
+      "category": "property",
+      "description": "In scientific notation, the mantissa of a real number is the integer coefficient preceding the base raised to the exponent.",
+      "label": "mantissa"
+    },
+    "CompositeTable": {
+      "category": "class",
+      "description": "A sub-type of 'Table Type'. Detailed desciption to be provided in a future version.",
+      "label": "Composite Table Type"
+    },
+    "mathDefinition": {
+      "category": "property",
+      "label": "math definition"
+    },
+    "Table": {
+      "category": "class",
+      "description": "A Table Type is a data type that specifies the properties of table data structures. A table is both a mode of visual communication and a means of arranging data. The use of tables is pervasive throughout NASA The precise conventions and terminology for describing tables varies depending on the context. Moreover, tables differ significantly in variety, structure, flexibility, notation, representation and use.",
+      "label": "Table Type"
+    },
+    "mathMLdefinition": {
+      "category": "property",
+      "label": "mathML definition"
+    },
+    "Function": {
+      "category": "class",
+      "label": "Function"
+    },
+    "upperBound": {
+      "category": "property",
+      "label": "upper bound"
+    },
+    "CompositionTreeType": {
+      "category": "class"
+    },
+    "maxMantissa": {
+      "category": "property",
+      "description": "<p>The maximium mantissa is the largest integer that may appear as a coefficient in a finite precision representation of a real number.  For a given numeric data type, the value of <em>maxMantissa}</em> (<em>M</em>) and the values of <em>base</em> (<em>b</em>) and  <em>precision</em> (<em>p</em>) are related by the formula: <em>M = b<sup></sup> - 1</em> .</p>",
+      "label": "max mantissa"
+    },
+    "ConstantValue": {
+      "category": "class",
+      "description": "Used to specify the values of a constant.",
+      "label": "Constant value"
+    },
+    "minMantissa": {
+      "category": "property",
+      "description": "<p>The minimium mantissa is the negative integer with the greatest magnitude that may appear as a coefficient in a finite precision representation of a real number.  For a given numeric data type, the value of <em>minMantissa</em> (<em>M</em>) and the values of <em>base</em> (<em>b</em>) and <em>precision</em> (<em>p</em>) are related by the formula: <em>M = -(b<sup>p</sup> - 1)</em>.</p>",
+      "label": "min mantissa"
+    },
+    "QuantityValue": {
+      "category": "class",
+      "description": "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section 7</a> for more on quantity values.",
+      "label": "Quantity value"
+    },
+    "minValue": {
+      "category": "property",
+      "label": "minimum value"
+    },
+    "Container": {
+      "category": "class",
+      "description": "A container is a class, a data structure, or an abstract data type (ADT) whose instances are collections of other objects. They are used to store objects in an organized way following specific access rules.",
+      "label": "Container"
+    },
+    "negativeDeltaLimit": {
+      "category": "property",
+      "description": "A negative change limit between consecutive sample values for a parameter. The Negative Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined.",
+      "label": "negative delta limit"
+    },
+    "NominalScale": {
+      "category": "class",
+      "description": "A nominal scale differentiates between items or subjects based only on their names or (meta-)categories and other qualitative classifications they belong to; thus dichotomous data involves the construction of classifications as well as the classification of items. Discovery of an exception to a classification can be viewed as progress. Numbers may be used to represent the variables but the numbers do not have numerical value or relationship: For example, a Globally unique identifier. Examples of these classifications include gender, nationality, ethnicity, language, genre, style, biological species, and form. In a university one could also use hall of affiliation as an example.",
+      "label": "Nominal scale"
+    },
+    "numericValue": {
+      "category": "property",
+      "label": "numeric value"
+    },
+    "CoordinateMember": {
+      "category": "class",
+      "description": "A Coordinate Member Type is a data type that defines the properties of a coordinate in a coordinate system.",
+      "label": "Coordinate Member Type"
+    },
+    "onlineReference": {
+      "category": "property",
+      "label": "online reference"
+    },
+    "TupleMember": {
+      "category": "class",
+      "description": "A Tuple Member Type is a data type that defines the properties of a member of a tuple. It is used to provide fine grained type specification to the elements of tuples.",
+      "label": "Tuple Member Type"
+    },
+    "outOfScope": {
+      "category": "property",
+      "label": "out of scope"
+    },
+    "TupleMemberType": {
+      "category": "class",
+      "description": "A Tuple Member Type is a data type that defines the properties of a member of a tuple. It is used to provide fine grained type specification to the elements of tuples.",
+      "label": "Tuple Member Type"
+    },
+    "positiveDeltaLimit": {
+      "category": "property",
+      "description": "A positive change limit between consecutive sample values for a parameter. The Positive Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined.",
+      "label": "Positive delta limit"
+    },
+    "ReferenceFrame": {
+      "category": "class",
+      "description": "A reference frame (or frame of reference) in physics, may refer to a coordinate system or set of axes. The frame serves as the datum to measure the position, orientation, and other properties of objects in it. Reference frame may refer to an observational reference frame tied to the state of motion of an observer. Reference frame may also refer to both an observational reference frame and an attached coordinate system as a unit.",
+      "label": "Reference Frame"
+    },
+    "prefixMultiplier": {
+      "category": "property",
+      "label": "prefix multiplier"
+    },
+    "CoordinateSystemFrame": {
+      "category": "class",
+      "label": "Coordinate system frame"
+    },
+    "rationale": {
+      "category": "property",
+      "label": "rationale"
+    },
+    "CoordinateSystemType": {
+      "category": "class",
+      "description": "<p>A coordinate system is a mathematical structure for assigning a unique n-tuple of numbers or scalars to each point in an n-dimensional space. A Coordinate System Type is a data type that defines the properties of data structures that represent coordinate systems.</p>  <p>The primary attributes of any coordinate system are the coordinate frame or orientation of the axes of the coordinate system and the coordinate center or origin of the coordinate system. The coordinate center is the easier of the two attributes to define and in trajectory-related coordinate systems is often taken to be the center of mass of natural solar system bodies such as the Earth, the Moon, or Mars. Precise definition of the coordinate frame, however, usually takes much more effort. As a result, the primary purpose of this section is to provide a detailed description of a number of different coordinate frames commonly used in lunar and Mars mission analysis. </p>",
+      "label": "Coordinate System Type"
+    },
+    "relativeStandardUncertainty": {
+      "category": "property",
+      "description": "The relative standard uncertainty of a measurement is the (absolute) standard uncertainty divided by the magnitude of the exact value.",
+      "label": "relative standard uncertainty"
+    },
+    "TupleType": {
+      "category": "class",
+      "description": "<p>The term <em>Tuple</em> originated as an abstraction of the sequence: single, double, triple, quadruple, quintuple, n-tuple.  In mathematics, a tuple is a finite sequence (also known as an <em>Ordered List</em> of objects, each of a specified type. The <em>n</em> can be any non-negative integer.</p>",
+      "label": "Tuple Type"
+    },
+    "siUnitsExpression": {
+      "category": "property",
+      "label": "si units expression"
+    },
+    "Coordinates-2D-DoublePrecision": {
+      "category": "class",
+      "description": "2D coordinates in double floating point precision for locating a point in physical space",
+      "label": "Coordinates-2D-Double precision"
+    },
+    "significantDigits": {
+      "category": "property",
+      "label": "significant digits"
+    },
+    "Coordinates-2D-Type": {
+      "category": "class",
+      "description": "A 2D coordinate system is a system for assigning a two-tuple of numbers or scalars to each point in an 2-dimensional space. A 2D Coordinate Type is a data type that defines the data type for each coordinate (tuple member) in a 2D coordinate system.",
+      "label": "2D Coordinate Type"
+    },
+    "standardUncertainty": {
+      "category": "property",
+      "description": "The standard uncertainty of a quantity is the estimated standard deviation of the mean taken from a series of measurements.",
+      "label": "standard uncertainty"
+    },
+    "Coordinates-2D": {
+      "category": "class",
+      "description": "A 2D coordinate system is a system for assigning a two-tuple of numbers or scalars to each point in an 2-dimensional space. A 2D Coordinate Type is a data type that defines the data type for each coordinate (tuple member) in a 2D coordinate system.",
+      "label": "2D Coordinate Type"
+    },
+    "stringValue": {
+      "category": "property",
+      "label": "string value"
+    },
+    "Coordinates-2D-SinglePrecision": {
+      "category": "class",
+      "description": "2D coordinates in single floating point precision for locating a point in physical space",
+      "label": "Cartesian Coordinates 2D Single Precision"
+    },
+    "symbol": {
+      "category": "property",
+      "description": "The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form. For example, the symbol for an Ohm is \\(ohm\\). This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm.",
+      "label": "symbol"
+    },
+    "TwoTupleType": {
+      "category": "class",
+      "description": "A 2-tuple is called a pair. For example, a complex number can be represented as a 2-tuple, and 2D coordinates are sometimes represented as 2-tuples.",
+      "label": "Two-Tuple Type"
+    },
+    "totalDigits": {
+      "category": "property",
+      "label": "total digits"
+    },
+    "Two-Tuple": {
+      "category": "class",
+      "description": "A 2-tuple is called a pair. For example, a complex number can be represented as a 2-tuple, and 2D coordinates are sometimes represented as 2-tuples.",
+      "label": "Two-Tuple Type"
+    },
+    "ucumCode": {
+      "category": "property",
+      "description": "<p><em>ucumCode</em> associates a QUDT unit with its UCUM code (case-sensitive). </p><p>In SHACL the values are derived from specific ucum properties using 'sh:values'.</p>",
+      "label": "ucum code"
+    },
+    "Coordinates-3D-Type": {
+      "category": "class",
+      "description": "A 3D coordinate system is a system for assigning a three-tuple of numbers or scalars to each point in an 3-dimensional space. A 3D Coordinate Type is a data type that defines the data type for each coordinate (tuple member) in a 3D coordinate system.",
+      "label": "3D Coordinate Type"
+    },
+    "udunitsCode": {
+      "category": "property",
+      "description": "The UDUNITS package supports units of physical quantities. Its C library provides for arithmetic manipulation of units and for conversion of numeric values between compatible units. The package contains an extensive unit database, which is in XML format and user-extendable. The package also contains a command-line utility for investigating units and converting values.",
+      "label": "udunits code"
+    },
+    "Coordinates-3D-DoublePrecision": {
+      "category": "class",
+      "description": "3D coordinates in double floating point precision for locating a point in physical space",
+      "label": "3D Coordinates (Double Precision)"
+    },
+    "uneceCommonCode": {
+      "category": "property",
+      "description": "The UN/CEFACT Recommendation 20 provides three character alphabetic and alphanumeric codes for representing units of measurement for length, area, volume/capacity, mass (weight), time, and other quantities used in international trade. The codes are intended for use in manual and/or automated systems for the exchange of information between participants in international trade.",
+      "label": "unece common code"
+    },
+    "Coordinates-3D": {
+      "category": "class",
+      "description": "A 3D coordinate system is a system for assigning a three-tuple of numbers or scalars to each point in an 3-dimensional space. A 3D Coordinate Type is a data type that defines the data type for each coordinate (tuple member) in a 3D coordinate system.",
+      "label": "3D Coordinate Type"
+    },
+    "vectorMagnitude": {
+      "category": "property",
+      "label": "vector magnitude"
+    },
+    "Coordinates-3D-SinglePrecision": {
+      "category": "class",
+      "description": "3D coordinates in single floating point precision for locating a point in physical space",
+      "label": "3D Coordinates (Single Precision)"
+    },
+    "width": {
+      "category": "property",
+      "label": "width"
+    },
+    "ThreeTupleType": {
+      "category": "class",
+      "description": "A three-tuple is a tuple with exactly three members. A Three-Tuple Type is a data type that defines the type properties of a class of three-tuples and their members.",
+      "label": "Three-Tuple Type"
+    },
+    "dcterms:isReplacedBy": {
+      "category": "property",
+      "label": "is replaced by"
+    },
+    "Three-Tuple": {
+      "category": "class",
+      "description": "A three-tuple is a tuple with exactly three members. A Three-Tuple Type is a data type that defines the type properties of a class of three-tuples and their members.",
+      "label": "Three-Tuple Type"
+    },
+    "Tuple": {
+      "category": "class",
+      "description": "<p>The term <em>Tuple</em> originated as an abstraction of the sequence: single, double, triple, quadruple, quintuple, n-tuple.  In mathematics, a tuple is a finite sequence (also known as an <em>Ordered List</em> of objects, each of a specified type. The <em>n</em> can be any non-negative integer.</p>",
+      "label": "Tuple Type"
+    },
+    "dataOrder": {
+      "category": "property",
+      "label": "data order"
+    },
+    "CountingUnit": {
+      "category": "class",
+      "description": "Used for all units that express counts. Examples are Atomic Number, Number, Number per Year, Percent and Sample per Second.",
+      "label": "Counting Unit"
+    },
+    "dimensionVector": {
+      "category": "property",
+      "label": "dimension vector"
+    },
+    "CurrencyUnit": {
+      "category": "class",
+      "description": "Currency Units have their own subclass of unit because: (a) they have additonal properites such as 'country' and (b) their URIs do not conform to the same rules as other units.",
+      "label": "Currency Unit"
+    },
+    "typeMatrix": {
+      "category": "property",
+      "label": "type matrix"
+    },
+    "DateStringType": {
+      "category": "class",
+      "description": "Date String Types are scalar data types that define the properties of strings that represent calendar dates.",
+      "label": "Date String Type"
+    },
+    "encoding": {
+      "category": "property",
+      "label": "encoding"
+    },
+    "NumericType": {
+      "category": "class",
+      "description": "Numeric data types are data types whose values denote quantities (in some mathematical number system).",
+      "label": "Numeric Type"
+    },
+    "DataEncoding": {
+      "category": "class",
+      "description": "<p><em>Data Encoding</em> expresses the properties that specify how data is represented at the bit and byte level. These properties are applicable to describing raw data.</p>",
+      "label": "Data Encoding"
+    },
+    "signedness": {
+      "category": "property",
+      "label": "signedness"
+    },
+    "QuantityKind": {
+      "category": "class",
+      "description": "A <b>Quantity Kind</b> is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity.",
+      "label": "Quantity Kind"
+    },
+    "bitOrder": {
+      "category": "property",
+      "label": "bit order"
+    },
+    "DateTimeStringType": {
+      "category": "class",
+      "description": "A class of data types for structures that represent temporal quantities. I.e. calendar dates, times, duration of time since a given epoch, etc.",
+      "label": "Temporal Type"
+    },
+    "byteOrder": {
+      "category": "property",
+      "description": "Byte order is an enumeration of two values: 'Big Endian' and 'Little Endian' and is used to denote whether the most signiticant byte is either first or last, respectively.",
+      "label": "byte order"
+    },
+    "DateTimeStringEncodingType": {
+      "category": "class",
+      "description": "Date Time encodings are logical encodings for expressing date/time quantities as strings by applying unambiguous formatting and parsing rules.",
+      "label": "Date Time String Encoding Type"
+    },
+    "alignment": {
+      "category": "property",
+      "label": "alignment"
+    },
+    "StringEncodingType": {
+      "category": "class",
+      "description": "A \"Encoding\" with the following instance(s): \"UTF-16 String\", \"UTF-8 Encoding\".",
+      "label": "String Encoding Type"
+    },
+    "padding": {
+      "category": "property",
+      "label": "padding"
+    },
+    "StringType": {
+      "category": "class",
+      "description": "A String Type is a data type that specifies the properties of data structures that hold strings.",
+      "label": "String Type"
+    },
+    "coordinateCenter": {
+      "category": "property",
+      "label": "coordinate center"
+    },
+    "DecimalPrefix": {
+      "category": "class",
+      "description": "A <em>Decimal Prefix</em> is a prefix for multiples of units that are powers of 10.",
+      "label": "Decimal Prefix"
+    },
+    "referenceFrame": {
+      "category": "property",
+      "label": "reference frame"
+    },
+    "DerivedUnit": {
+      "category": "class",
+      "description": "A DerivedUnit is a type specification for units that are derived from other units.",
+      "label": "Derived Unit"
+    },
+    "dataType": {
+      "category": "property",
+      "label": "datatype"
+    },
+    "Unit": {
+      "category": "class",
+      "description": "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\(Q = nU\\).",
+      "label": "Unit"
+    },
+    "hasQuantityKind": {
+      "category": "property",
+      "label": "has quantity kind"
+    },
+    "Dictionary": {
+      "category": "class",
+      "description": "A \"Map\".",
+      "label": "Dictionary Type"
+    },
+    "DictionaryType": {
+      "category": "class",
+      "description": "A kind of \"Map\".",
+      "label": "Dictionary Type"
+    },
+    "DimensionalDatatype": {
+      "category": "class",
+      "description": "A dimensional data type is a data type that specifies a physical quantity or unit of measure. Information about the physical dimensions of the quantities and units is embedded in their types.",
+      "label": "Dimensional Data Type"
+    },
+    "argType": {
+      "category": "property",
+      "description": "This property relates a function data type with the type of one of its arguments.",
+      "label": "argType"
+    },
+    "Discipline": {
+      "category": "class",
+      "label": "Discipline"
+    },
+    "returnType": {
+      "category": "property",
+      "description": "This property is used to state the return type of a function type.",
+      "label": "return type"
+    },
+    "DiscreteState": {
+      "category": "class"
+    },
+    "frameType": {
+      "category": "property",
+      "label": "frame type"
+    },
+    "FloatingPointEncodingType": {
+      "category": "class",
+      "description": "A \"Encoding\" with the following instance(s): \"Double Precision Encoding\", \"Single Precision Real Encoding\".",
+      "label": "Floating Point Encoding"
+    },
+    "auralCueEnumeration": {
+      "category": "property",
+      "label": "aural cue enumeration"
+    },
+    "DoublePrecisionType": {
+      "category": "class",
+      "description": "A double precision data type specifies how a numeric value, such as an integer or real number, is stored in memory that occupies two words in computer memory, where the byte length of a word depends on machine address size of the computer processor. For example, on 32-bit machine architectures, a word is four bytes, and so double precision data value on a 32-bit machine architecture occupies eight bytes of memory.",
+      "label": "Double Precision Type"
+    },
+    "iconicCueEnumeration": {
+      "category": "property",
+      "label": "iconic cue enumeration"
+    },
+    "SinglePrecisionType": {
+      "category": "class",
+      "description": "A single precision data type specifies how a numeric value, such as an integer or real number, is stored in memory that occupies one word in computer memory, where the byte length of a word depends on machine address size of the computer processor. For example, on 32-bit machine architectures, a word is four bytes, and so a single precision data value on a 32-bit machine architecture occupies four bytes of memory.",
+      "label": "Single Precision Type"
+    },
+    "kinestheticCueEnumeration": {
+      "category": "property",
+      "label": "kinesthetic cue enumeration"
+    },
+    "EarthCoordinateSystem": {
+      "category": "class",
+      "description": "A\"Trajectory Coordinate System\" for all earth-centered coordinates, such as \"Earth mean equator and prime meridian coordinate system\", \"Earth true equator and prime meridian of epoch coordinate system\", \"International celestial reference system\", \"International terrestrial reference system\", \"Sun centered international celestial reference system\", \"Vehicle centered international celestial reference system\".",
+      "label": "Earth Coordinate System Type"
+    },
+    "modalCueEnumeration": {
+      "category": "property",
+      "label": "modal cue enumeration"
+    },
+    "TrajectoryCoordinateSystem": {
+      "category": "class",
+      "description": "A \"Coordinate System\".",
+      "label": "Trajectory Coordinate System"
+    },
+    "visualCueEnumeration": {
+      "category": "property",
+      "label": "visual cue enumeration"
+    },
+    "RealSinglePrecisionType": {
+      "category": "class",
+      "description": "A real single precision data type specifies how a real number, or an approximation of a real number is stored in memory that occupies one word in computer memory, where the byte length of a word depends on machine address size of the computer processor. For example, on 32-bit machine architectures, a word is four bytes. An example of a real single precisoin data type specification is the IEEE 754 standard for encoding binary or decimal floating point numbers in 4 bytes for storage on 32-bit machine architectures.",
+      "label": "Real Single Precision Type"
+    },
+    "auralCue": {
+      "category": "property",
+      "label": "aural cue"
+    },
+    "EngineeringValueTupleMember": {
+      "category": "class",
+      "description": "A sub-type of 'Tuple Member Type'. Detailed desciption to be provided in a future version.",
+      "label": "Engineering Value Tuple Member"
+    },
+    "iconicCue": {
+      "category": "property",
+      "label": "iconic cue"
+    },
+    "RawValueTupleMember": {
+      "category": "class",
+      "description": "A sub-type of 'Tuple Member Type'. Detailed desciption to be provided in a future version.",
+      "label": "Raw value tuple member"
+    },
+    "kinestheticCue": {
+      "category": "property",
+      "label": "kinesthetic cue"
+    },
+    "RawValueTupleMemberType": {
+      "category": "class",
+      "label": "Raw value tuple member type"
+    },
+    "modalCue": {
+      "category": "property",
+      "label": "modal cue"
+    },
+    "": {
+      "category": "class"
+    },
+    "visualCue": {
+      "category": "property",
+      "label": "visual cue"
+    },
+    "Enumeration": {
+      "category": "class",
+      "description": "<p>An enumeration is a set of literals from which a single value is selected. Each literal can have a tag as an integer within a standard encoding appropriate to the range of integer values. Consistency of enumeration types will allow them, and the enumerated values, to be referred to unambiguously either through symbolic name or encoding. Enumerated values are also controlled vocabularies and as such need to be standardized. Without this consistency enumeration literals can be stated differently and result in  data conflicts and misinterpretations.</p>  <p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance, each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a selection. Enumerations are also subclasses of <em>Scalar Datatype</em>. This allows them to be used as the reference of a datatype specification.</p>",
+      "label": "Enumeration"
+    },
+    "orderingRelation": {
+      "category": "property",
+      "description": "This property identifies the mathematical comparison operator (such as \"<\" or \">\") that is used to order the elements of a collection.",
+      "label": "Ordering Relation"
+    },
+    "EnumerationScale": {
+      "category": "class",
+      "description": "A sub-type of 'DTYPE Enumeration'. Detailed desciption to be provided in a future version.",
+      "label": "Enumeration scale"
+    },
+    "elementUnit": {
+      "category": "property",
+      "label": "element unit"
+    },
+    "Scale": {
+      "category": "class",
+      "description": "Scales (also called \"scales of measurement\" or \"levels of measurement\")  are expressions that typically refer to the theory of scale types.",
+      "label": "Scale"
+    },
+    "type": {
+      "category": "property",
+      "description": "A reference to the specification of the data type of a variable or constant.",
+      "label": "type"
+    },
+    "FrameType": {
+      "category": "class",
+      "description": "This class contains elements which specify the intertial type of a coordinate frame as either inertial, rotating, or non-rotating.",
+      "label": "Frame Type"
+    },
+    "element": {
+      "category": "property",
+      "description": "An element of an enumeration",
+      "label": "element"
+    },
+    "FieldType": {
+      "category": "class",
+      "description": "A sub-type of 'Composite Data Type'. Detailed desciption to be provided in a future version.",
+      "label": "Field Type"
+    },
+    "coordinateSystem": {
+      "category": "property",
+      "label": "coordinate system"
+    },
+    "Figure": {
+      "category": "class",
+      "description": "A sub-type of 'QUDT Concept'. Detailed desciption to be provided in a future version.",
+      "label": "Figure"
+    },
+    "vector": {
+      "category": "property",
+      "label": "vector"
+    },
+    "FileFormat": {
+      "category": "class",
+      "description": "A sub-type of 'Enumerated Value'. Detailed desciption to be provided in a future version.",
+      "label": "File format"
+    },
+    "typeVector": {
+      "category": "property",
+      "label": "type vector"
+    },
+    "FixedIntervalTimeSeriesArray": {
+      "category": "class",
+      "description": "A Fixed Interval Time Series Array Type is a data type that specifies the properties of arrays that hold time series data that has been sampled over uniformly spaced time intervals. A time series is a sequence of data points, measured typically at successive times, spaced at uniform or non-uniform time intervals.",
+      "label": "Fixed Interval Time Series Array Type"
+    },
+    "pitchRotationDefinition": {
+      "category": "property",
+      "label": "pitch rotation definition"
+    },
+    "TimeSeriesArray": {
+      "category": "class",
+      "description": "A Time Series Array Type is a data type that specifies the properties of arrays that hold time series data. A time series is a sequence of data points, measured at successive time intervals. The time intervals may be uniformly or non-uniformly spaced.",
+      "label": "Time Series Array Type"
+    },
+    "rollRotationDefinition": {
+      "category": "property",
+      "label": "roll rotation definition"
+    },
+    "FixedIntervalTimeSeriesArrayType": {
+      "category": "class",
+      "description": "A Fixed Interval Time Series Array Type is a data type that specifies the properties of arrays that hold time series data that has been sampled over uniformly spaced time intervals. A time series is a sequence of data points, measured typically at successive times, spaced at uniform or non-uniform time intervals.",
+      "label": "Fixed Interval Time Series Array Type"
+    },
+    "yawRotationDefinition": {
+      "category": "property",
+      "label": "Yaw rotation definition"
+    },
+    "TimeSeriesArrayType": {
+      "category": "class",
+      "label": "Time Series Array Type"
+    },
+    "allowedUnitOfSystem": {
+      "category": "property",
+      "description": "This property relates a unit of measure with a unit system that does not define the unit, but allows its use within the system. An allowed unit must be convertible to some dimensionally eqiuvalent unit that is defined by the system.",
+      "label": "allowed unit of system"
+    },
+    "FunctionDatatype": {
+      "category": "class",
+      "description": "A function data type defines the input and output data type for a function or method. It includes at least the function name and the number of its parameters. In some programming languages, it may also specify the function's return type or the types of its arguments.",
+      "label": "Function Data Type"
+    },
+    "unitOfSystem": {
+      "category": "property",
+      "description": "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system.",
+      "label": "is unit of system"
+    },
+    "Graph": {
+      "category": "class",
+      "description": "A graph is a kind of abstract data type, that consists of a set of nodes (also called vertices) and a set of edges that establish relationships (connections) between the nodes. A Graph Type is a data type that defines the properties of data structures that represent graphs and their members (nodes and edges).",
+      "label": "Graph Type"
+    },
+    "hasAllowedUnit": {
+      "category": "property",
+      "description": "This property relates a unit system with a unit of measure that is not defined by or part of the system, but is allowed for use within the system. An allowed unit must be convertible to some dimensionally eqiuvalent unit that is defined by the system.",
+      "label": "allowed unit"
+    },
+    "GraphType": {
+      "category": "class",
+      "description": "A graph is a kind of abstract data type, that consists of a set of nodes (also called vertices) and a set of edges that establish relationships (connections) between the nodes. A Graph Type is a data type that defines the properties of data structures that represent graphs and their members (nodes and edges).",
+      "label": "Graph Type"
+    },
+    "applicableCGSUnit": {
+      "category": "property",
+      "label": "applicable CGS unit"
+    },
+    "GroundCoordinateSystem": {
+      "category": "class",
+      "description": "A sub-type of 'Aerospace coordinate system'. Detailed desciption to be provided in a future version.",
+      "label": "Ground coordinate system"
+    },
+    "applicableUnit": {
+      "category": "property",
+      "label": "applicable unit"
+    },
+    "HeapType": {
+      "category": "class",
+      "description": "A heap is a specialized tree-based data structure that satisfies the condition: if B is a child node of A, then <em>key(A) &gt; key(B)</em>. This implies that an element with the greatest key is always in the root node, and so such a heap is sometimes called a max heap. Alternatively, if the comparison is reversed, the smallest element is always in the root node, which results in a min heap. The function or method that implements the key() operator is specified by the heap type.",
+      "label": "Heap Type"
+    },
+    "applicableISOUnit": {
+      "category": "property",
+      "label": "applicable ISO unit"
+    },
+    "HexBinaryType": {
+      "category": "class",
+      "description": "A string composed of hex characters.",
+      "label": "Hexidecimal Binary Type"
+    },
+    "applicableImperialUnit": {
+      "category": "property",
+      "label": "applicable Imperial unit"
+    },
+    "HashTable": {
+      "category": "class",
+      "description": "A hash table is a kind of map that utilizes a hash function to perform efficient lookup: given a key (e.g., a person's name), find the corresponding value (e.g., that person's telephone number). Hash tables support the efficient lookup, insertion and deletion of elements in constant time on average. A Hash Table Type is a data type that defines the types of a hash table's key-value pairs.",
+      "label": "Hash Table Type"
+    },
+    "applicablePhysicalConstant": {
+      "category": "property",
+      "label": "applicable physical constant"
+    },
+    "TableType": {
+      "category": "class",
+      "description": "A Table Type is a data type that specifies the properties of table data structures. A table is both a mode of visual communication and a means of arranging data. The use of tables is pervasive throughout NASA The precise conventions and terminology for describing tables varies depending on the context. Moreover, tables differ significantly in variety, structure, flexibility, notation, representation and use.",
+      "label": "Table Type"
+    },
+    "applicablePlanckUnit": {
+      "category": "property",
+      "label": "applicable Planck unit"
+    },
+    "HashTableType": {
+      "category": "class",
+      "description": "A hash table is a kind of map that utilizes a hash function to perform efficient lookup: given a key (e.g., a person's name), find the corresponding value (e.g., that person's telephone number). Hash tables support the efficient lookup, insertion and deletion of elements in constant time on average. A Hash Table Type is a data type that defines the types of a hash table's key-value pairs.",
+      "label": "Hash Table Type"
+    },
+    "applicableSIUnit": {
+      "category": "property",
+      "label": "applicable SI unit"
+    },
+    "Heap": {
+      "category": "class",
+      "description": "<p class=\"lm-para\">A heap is a specialized tree-based data structure that satisfies the condition: if B is a child node of A, then \\(key(A) \\ge key(B)\\). This implies that an element with the greatest key is always in the root node, and so such a heap is sometimes called a max heap. Alternatively, if the comparison is reversed, the smallest element is always in the root node, which results in a min heap. The function or method that implements the key() operator is specified by the heap type.</p>",
+      "label": "Heap Type"
+    },
+    "applicableUSCustomaryUnit": {
+      "category": "property",
+      "label": "applicable US Customary unit"
+    },
+    "OrderedTree": {
+      "category": "class",
+      "description": "<p class=\"lm-para\">An \"Ordered Tree Type\" is a data type that defines the properties of data structures that represent ordered trees. An ordered tree is a tree where the children of every node are ordered, that is, there is a first child, second child, third child, etc. Typically a type specification for an ordered tree will include the comparison operator (such as \\(\\lt\\) or \\(\\gt\\)) that is used to order the nodes.</p>",
+      "label": "Ordered Tree Type"
+    },
+    "arg1Type": {
+      "category": "property",
+      "description": "This property relates a funciton data type with the type of its arg1.",
+      "label": "arg1Type"
+    },
+    "OrderedTreeType": {
+      "category": "class",
+      "description": "An \"Ordered Tree Type\" is a data type that defines the properties of data structures that represent ordered trees. An ordered tree is a tree where the children of every node are ordered, that is, there is a first child, second child, third child, etc. Typically a type specification for an ordered tree will include the comparison operator (such as $\\lt$ or $\\gt$) that is used to order the nodes.",
+      "label": "Ordered Tree Type"
+    },
+    "arg2Type": {
+      "category": "property",
+      "description": "This property relates a funciton data type with the type of its arg2.",
+      "label": "arg2Type"
+    },
+    "TextStringType": {
+      "category": "class",
+      "description": "A text string. Encodings can be specified as subclass or in connection to character arrays in Structured Datatypes.",
+      "label": "Text String Type"
+    },
+    "arg3Type": {
+      "category": "property",
+      "description": "This property relates a funciton data type with the type of its arg3.",
+      "label": "arg3Type"
+    },
+    "MemoryOrderType": {
+      "category": "class",
+      "description": "A sub-type of 'Enumerated Value'. Detailed desciption to be provided in a future version.",
+      "label": "Memory order type"
+    },
+    "baseDimensionEnumeration": {
+      "category": "property",
+      "description": "This property associates a system of quantities with an enumeration that enumerates the base dimensions of the system in canonical order.",
+      "label": "base dimension enumeration"
+    },
+    "IconicCue": {
+      "category": "class",
+      "label": "Iconic enumeration literal"
+    },
+    "baseUnitOfSystem": {
+      "category": "property",
+      "description": "This property relates a unit of measure to the system of units in which it is defined as a base unit for the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power.",
+      "label": "is base unit of system"
+    },
+    "KinestheticCue": {
+      "category": "class",
+      "label": "Kinesthetic Cue"
+    },
+    "coherentUnitOfSystem": {
+      "category": "property",
+      "description": "A coherent unit of measurement for a unit system is a defined unit that may be expressed as a product of powers of the system's base units with the proportionality factor of one. A system of units is coherent with respect to a system of quantities and equations if the system of units is chosen in such a way that the equations between numerical values have exactly the same form (including the numerical factors) as the corresponding equations between the quantities. For example, the 'newton' and the 'joule'. These two are, respectively, the force that causes one kilogram to be accelerated at 1 metre per second per  second, and the work done by 1 newton acting over 1 metre. Being coherent refers to this consistent use of 1. In the old c.g.s. system , with its base units the centimetre and the gram, the corresponding coherent units were the dyne and the erg, respectively the force that causes 1 gram to be accelerated at 1 centimetre per second per second, and the work done by 1 dyne acting over 1 centimetre. So \\(1 newton = 10^5\\,dyne\\), \\(1 joule = 10^7\\,erg\\), making each of the four compatible in a decimal sense within its respective other system, but not coherent therein.",
+      "label": "is coherent unit of system"
+    },
+    "InertialCoordinateFrame": {
+      "category": "class",
+      "description": "A \"Coordinate Frame\".",
+      "label": "Inertial Coordinate Frame"
+    },
+    "hasBaseUnit": {
+      "category": "property",
+      "description": "This property relates a system of units to a base unit defined within the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power.",
+      "label": "base unit"
+    },
+    "InertialReferenceFrame": {
+      "category": "class",
+      "description": "A sub-type of 'Reference Frame'. Detailed desciption to be provided in a future version.",
+      "label": "Inertial reference frame"
+    },
+    "belongsToSystemOfQuantities": {
+      "category": "property",
+      "label": "belongs to system of quantities"
+    },
+    "NonRotatingInertialFrame": {
+      "category": "class",
+      "description": "The non-rotating (or \"inertial\") coordinate frames are defined by taking a \"snapshot\" of the orientation of a particular set of right-handed, orthogonal axes at a specific epoch or time. In other words, the non-rotating coordinate frame, however it is defined, is frozen or fixed at a specific time - for all time. These non-rotating coordinate frames are referred to as \"of Epoch\" coordinate frames.",
+      "label": "Non Rotating Coordinate Frame"
+    },
+    "categorizedAs": {
+      "category": "property",
+      "label": "categorized as"
+    },
+    "IntegerEncodingType": {
+      "category": "class",
+      "description": "The encoding scheme for integer types",
+      "label": "Integer Encoding"
+    },
+    "definedUnitOfSystem": {
+      "category": "property",
+      "description": "This property relates a unit of measure with the unit system that defines the unit.",
+      "label": "defined unit of system"
+    },
+    "IntegerList": {
+      "category": "class",
+      "label": "Integer list"
+    },
+    "hasCoherentUnit": {
+      "category": "property",
+      "description": "A coherent unit of measurement for a unit system is a defined unit that may be expressed as a product of powers of the system's base units with the proportionality factor of one.",
+      "label": "coherent unit"
+    },
+    "List": {
+      "category": "class",
+      "description": "A sub-type of 'Collection Type'. Detailed desciption to be provided in a future version.",
+      "label": "List"
+    },
+    "coherentUnitSystem": {
+      "category": "property",
+      "description": "<p>A system of units is coherent with respect to a system of quantities and equations if the system of units is chosen in such a way that the equations between numerical values have exactly the same form (including the numerical factors) as the corresponding equations between the quantities. In such a coherent system, no numerical factor other than the number 1 ever occurs in the expressions for the derived units in terms of the base units. For example, the \\(newton\\) and the \\(joule\\). These two are, respectively, the force that causes one kilogram to be accelerated at 1 metre per (1) second per (1) second, and the work done by 1 newton acting over 1 metre. Being coherent refers to this consistent use of 1. In the old c.g.s. system , with its base units the centimetre and the gram, the corresponding coherent units were the dyne and the erg, respectively the force that causes 1 gram to be accelerated at 1 centimetre per (1) second per (1) second, and the work done by 1 dyne acting over 1 centimetre. So \\(1\\,newton = 10^5 dyne\\), \\(1 joule = 10^7 erg\\), making each of the four compatible in a decimal sense within its respective other system, but not coherent therein.</p>",
+      "label": "coherent unit system"
+    },
+    "IntegerVector": {
+      "category": "class",
+      "label": "Integer vector"
+    },
+    "hasUnitSystem": {
+      "category": "property",
+      "label": "has unit system"
+    },
+    "InterpolatedTable": {
+      "category": "class",
+      "description": "A sub-type of 'Table Type'. Detailed desciption to be provided in a future version.",
+      "label": "Interpolated Table Type"
+    },
+    "coordinateSystemFrame": {
+      "category": "property",
+      "label": "coordinate system frame"
+    },
+    "IntervalScale": {
+      "category": "class",
+      "description": "<p>The interval type allows for the degree of difference between items, but not the ratio between them. Examples include temperature with the Celsius scale, which has two defined points (the freezing and boiling point of water at specific conditions) and then separated into 100 intervals, date when measured from an arbitrary epoch (such as AD), percentage such as a percentage return on a stock,[16] location in Cartesian coordinates, and direction measured in degrees from true or magnetic north. Ratios are not meaningful since 20 °C cannot be said to be \"twice as hot\" as 10 °C, nor can multiplication/division be carried out between any two dates directly. However, ratios of differences can be expressed; for example, one difference can be twice another. Interval type variables are sometimes also called \"scaled variables\", but the formal mathematical term is an affine space (in this case an affine line).</p> <p>Characteristics: median, percentile &amp; Monotonic increasing (order (&lt;) &amp; totally ordered set</p>",
+      "label": "Interval scale"
+    },
+    "dataEncoding": {
+      "category": "property",
+      "label": "data encoding"
+    },
+    "OrdinalScale": {
+      "category": "class",
+      "description": "The ordinal type allows for rank order (1st, 2nd, 3rd, etc.) by which data can be sorted, but still does not allow for relative degree of difference between them. Examples include, on one hand, dichotomous data with dichotomous (or dichotomized) values such as 'sick' vs. 'healthy' when measuring health, 'guilty' vs. 'innocent' when making judgments in courts, 'wrong/false' vs. 'right/true' when measuring truth value, and, on the other hand, non-dichotomous data consisting of a spectrum of values, such as 'completely agree', 'mostly agree', 'mostly disagree', 'completely disagree' when measuring opinion.",
+      "label": "Ordinal scale"
+    },
+    "default": {
+      "category": "property",
+      "description": "The default element in an enumeration",
+      "label": "default"
+    },
+    "RatioScale": {
+      "category": "class",
+      "description": "The ratio type takes its name from the fact that measurement is the estimation of the ratio between a magnitude of a continuous quantity and a unit magnitude of the same kind (Michell, 1997, 1999). A ratio scale possesses a meaningful (unique and non-arbitrary) zero value. Most measurement in the physical sciences and engineering is done on ratio scales. Examples include mass, length, duration, plane angle, energy and electric charge. In contrast to interval scales, ratios are now meaningful because having a non-arbitrary zero point makes it meaningful to say, for example, that one object has \"twice the length\" of another (= is \"twice as long\"). Very informally, many ratio scales can be described as specifying \"how much\" of something (i.e. an amount or magnitude) or \"how many\" (a count). The Kelvin temperature scale is a ratio scale because it has a unique, non-arbitrary zero point called absolute zero.",
+      "label": "Ratio scale"
+    },
+    "hasDefinedUnit": {
+      "category": "property",
+      "description": "This property relates a unit system with a unit of measure that is defined by the system.",
+      "label": "defined unit"
+    },
+    "LargeObject": {
+      "category": "class",
+      "description": "A 'LargeObject' datatype is used to store blocks of unstructured data (such as text, graphic images, video clips, and sound waveforms). They often are used to allow efficient, random, piece-wise access to the data.",
+      "label": "Large object"
+    },
+    "denominatorDimensionVector": {
+      "category": "property",
+      "label": "denominator dimension vector"
+    },
+    "LargeObjectType": {
+      "category": "class",
+      "description": "A 'LargeObject' datatype is used to store blocks of unstructured data (such as text, graphic images, video clips, and sound waveforms). They often are used to allow efficient, random, piece-wise access to the data.",
+      "label": "Large object"
+    },
+    "derivedCoherentUnitOfSystem": {
+      "category": "property",
+      "description": "This property relates a unit of measure to the unit system in which the unit is derived from the system's base units with a proportionality constant of one.",
+      "label": "is coherent derived unit of system"
+    },
+    "LimitType": {
+      "category": "class",
+      "label": "Limit type"
+    },
+    "derivedUnitOfSystem": {
+      "category": "property",
+      "description": "This property relates a unit of measure to the system of units in which it is defined as a derived unit. That is, the derived unit is defined as a product of the base units for the system raised to some rational power.",
+      "label": "is derived unit of system"
+    },
+    "ListType": {
+      "category": "class",
+      "label": "List type"
+    },
+    "hasDerivedCoherentUnit": {
+      "category": "property",
+      "label": "derived coherent unit"
+    },
+    "LocalCoordinateSystem": {
+      "category": "class",
+      "description": "A \"Trajectory Coordinate System\" with the following instance(s): \"Local vertical curvilinear coordinate system\", \"Local vertical local horizontal coordinate system\", \"Vehicle centered local vertical curvilinear coordinate system\".",
+      "label": "Local Coordinate System Type"
+    },
+    "derivedNonCoherentUnitOfSystem": {
+      "category": "property",
+      "description": "This property relates a unit of measure to the unit system in which the unit is derived from the system's base units without proportionality constant of one.",
+      "label": "is non-coherent derived unit of system"
+    },
+    "LogarithmicUnit": {
+      "category": "class",
+      "description": "Logarithmic units are abstract mathematical units that can be used to express any quantities (physical or mathematical) that are defined on a logarithmic scale, that is, as being proportional to the value of a logarithm function. Examples of logarithmic units include common units of information and entropy, such as the bit, and the byte, as well as units of relative signal strength magnitude such as the decibel.",
+      "label": "Logarithmic Unit"
+    },
+    "hasDerivedNonCoherentUnit": {
+      "category": "property",
+      "label": "has coherent derived unit"
+    },
+    "LongIntegerType": {
+      "category": "class",
+      "description": "A Long Integer is an integer that can be represented in four octets (32 bits) of machine memory. Long integers may be signed or unsigned.",
+      "label": "Long Integer Type"
+    },
+    "derivedQuantityKindOfSystem": {
+      "category": "property",
+      "label": "derived quantity kind of system"
+    },
+    "LunarCoordinateSystem": {
+      "category": "class",
+      "description": "Two slightly different coordinate frames are commonly used to define the orientation of the axes of a lunar body-fixed coordinate system: a mean Earth/rotation frame and a principal axis coordinate frame. The mean Earth/rotation frame (sometimes called the \"Mean Earth/polar axis\" frame) is a lunar body-fixed coordinate frame with the X-axis aligned with the mean direction from the Moon to the Earth and the Z-axis aligned with the mean axis of rotation of the Moon. The principal axis frame is a lunar body-fixed coordinate frame aligned with the principal axes of the Moon. Due to the fact that the Moon is synchronously rotating but is not exactly symmetric, the principal axes and the mean Earth/rotation axes of the Moon do not coincide.",
+      "label": "Lunar Coordinate System"
+    },
+    "isQuantityKindOf": {
+      "category": "property",
+      "label": "is quantity kind of"
+    },
+    "MassPropertiesArrayType": {
+      "category": "class",
+      "description": "The Mass Properties of an object are its: Center of Gravity, Mass, Moment of Inertia, and Product of Inertia. A mass properties array is an array whose elements contain these measured quantities for some object. A mass properties array data type provides the type specification for a class of arrays in which the data types of the elements are constrained to be one of these four properties.",
+      "label": "Mass Properties Array Type"
+    },
+    "systemDerivedQuantityKind": {
+      "category": "property",
+      "label": "system derived quantity kind"
+    },
+    "MatrixType": {
+      "category": "class",
+      "label": "Matrix Type"
+    },
+    "hasDerivedUnit": {
+      "category": "property",
+      "description": "This property relates a system of units to a unit of measure that is defined within the system in terms of the base units for the system. That is, the derived unit is defined as a product of the base units for the system raised to some rational power.",
+      "label": "derived unit"
+    },
+    "MultiDimensionalArrayType": {
+      "category": "class",
+      "description": "Ordinary or one-dimensional arrays are indexed by a single integer. For a multi-dimensional array, the index into the array uses an ordered list of integers, such as in a[3,1,5]. The length of the list of integers used to index into the multi-dimensional array is always the same and is referred to as the array's dimensionality. The bounds on each of these are called the array's dimensions.",
+      "label": "Multi Dimensional Array Type"
+    },
+    "dimensionInverse": {
+      "category": "property",
+      "label": "dimension inverse"
+    },
+    "MajorMinorType": {
+      "category": "class",
+      "description": "A sub-type of 'Enumerated Value'. Detailed desciption to be provided in a future version.",
+      "label": "Major minor type"
+    },
+    "dimensionVectorForSI": {
+      "category": "property",
+      "label": "dimension vector for SI"
+    },
+    "MarsCoordinateSystem": {
+      "category": "class",
+      "description": "A \"Trajectory Coordinate System\" with the following instance(s): \"Mars mean equator and IAU-Node of epoch\", \"Mars mean equator and prime meridian body-fixed\".",
+      "label": "Mars Coordinate System Type"
+    },
+    "elementKind": {
+      "category": "property",
+      "description": "This property is used to describe the quantity kind for a dimensional data type.",
+      "label": "element kind"
+    },
+    "MassPropertiesArray": {
+      "category": "class",
+      "description": "The Mass Properties of an object are its: Center of Gravity, Mass, Moment of Inertia, and Product of Inertia. A mass properties array is an array whose elements contain these measured quantities for some object. A mass properties array data type provides the type specification for a class of arrays in which the data types of the elements are constrained to be one of these four properties.",
+      "label": "Mass Properties Array Type"
+    },
+    "elementTypeList": {
+      "category": "property",
+      "description": "This property is used to relate a structured data type with a list of data types. The list members determine the types of structured type's elements. It is used for structured data types with elements that are of different types.",
+      "label": "element type list"
+    },
+    "MathsFunctionType": {
+      "category": "class",
+      "description": "A sub-type of 'QUDT Concept'. Detailed description to be provided in a future version.",
+      "label": "Maths Function Type"
+    },
+    "enumeratedValue": {
+      "category": "property",
+      "label": "enumerated value"
+    },
+    "Matrix": {
+      "category": "class",
+      "description": "A Matrix Type is a data type that specifies the properties of data structures that hold matricies.",
+      "label": "Matrix Type"
+    },
+    "enumeration": {
+      "category": "property",
+      "label": "enumeration"
+    },
+    "MultiDimensionalArray": {
+      "category": "class",
+      "description": "Ordinary or one-dimensional arrays are indexed by a single integer. For a multi-dimensional array, the index into the array uses an ordered list of integers, such as in a[3,1,5]. The length of the list of integers used to index into the multi-dimensional array is always the same and is referred to as the array's dimensionality. The bounds on each of these are called the array's dimensions.",
+      "label": "Multi Dimensional Array Type"
+    },
+    "exactMatch": {
+      "category": "property",
+      "label": "exact match"
+    },
+    "ModalEnumeration": {
+      "category": "class",
+      "description": "A sub-type of 'QUDT Enumeration'. Detailed desciption to be provided in a future version.",
+      "label": "Modal Enumeration"
+    },
+    "fieldLabels": {
+      "category": "property",
+      "description": "This property is used to list the field labels for a record type.",
+      "label": "field labels"
+    },
+    "MultiDimensionalDataFormat": {
+      "category": "class",
+      "description": "Data formats for storing and manipulating scalar and multidimensional data in a platform and discipline independent manner, for example HDF, CDF and netCDF.",
+      "label": "Multi dimensional data format"
+    },
+    "figure": {
+      "category": "property",
+      "description": "Provides a link to an image.",
+      "label": "figure"
+    },
+    "MultiDimensionalDataFormatType": {
+      "category": "class",
+      "description": "Data formats for storing and manipulating scalar and multidimensional data in a platform and discipline independent manner, for example HDF, CDF and netCDF.",
+      "label": "Multi Dimensional Data Format Type"
+    },
+    "generalization": {
+      "category": "property",
+      "description": "This property relates a quantity kind to its generalization. A quantity kind, PARENT, is a generalization of the quantity kind CHILD only if:  1. PARENT and CHILD have the same dimensions in every system of quantities; 2. Every unit that is a measure of quantities of kind CHILD is also a valid measure of quantities of kind PARENT.",
+      "label": "generalization"
+    },
+    "MultiModalEnumeration": {
+      "category": "class",
+      "description": "A sub-type of 'QUDT Enumeration'. Detailed desciption to be provided in a future version.",
+      "label": "Multi modal enumeration"
+    },
+    "specialization": {
+      "category": "property",
+      "description": "This property relates a quantity kind to its specialization(s). For example, linear velocity and angular velocity are both specializations of velocity.",
+      "label": "specialization"
+    },
+    "MultiModalType": {
+      "category": "class",
+      "description": "A sub-type of 'Enumerated Value'. Detailed desciption to be provided in a future version.",
+      "label": "Multi Modal Type"
+    },
+    "hasUnit": {
+      "category": "property",
+      "description": "This property relates a system of units with a unit of measure that is either a) defined by the system, or b) accepted for use by the system and is convertible to a unit of equivalent dimension that is defined by the system. Systems of units may distinguish between base and derived units. Base units are the units which measure the base quantities for the corresponding system of quantities. The base units are used to define units for all other quantities as products of powers of the base units. Such units are called derived units for the system.",
+      "label": "has unit"
+    },
+    "MultiSet": {
+      "category": "class",
+      "description": "A bag is a set in which elements may be repeated.",
+      "label": "Bag"
+    },
+    "hasBaseQuantityKind": {
+      "category": "property",
+      "label": "has base quantity kind"
+    },
+    "N-Tuple": {
+      "category": "class",
+      "description": "A tuple containing n objects is known as an \"n-tuple\". For example the 4-tuple (or \"quadruple\"), with components of respective types PERSON, DAY, MONTH and YEAR, could be used to record that a certain person was born on a certain day of a certain month of a certain year.",
+      "label": "N-Tuple Type"
+    },
+    "isBaseQuantityKindOfSystem": {
+      "category": "property",
+      "label": "is base quantity kind of system"
+    },
+    "N-TupleType": {
+      "category": "class",
+      "description": "A tuple containing n objects is known as an \"n-tuple\". For example the 4-tuple (or \"quadruple\"), with components of respective types PERSON, DAY, MONTH and YEAR, could be used to record that a certain person was born on a certain day of a certain month of a certain year.",
+      "label": "N-Tuple Type"
+    },
+    "hasDenominatorPart": {
+      "category": "property",
+      "label": "has quantity kind dimension vector denominator part"
+    },
+    "NIST_SP811_Comment": {
+      "category": "class",
+      "label": "NIST SP~811 Comment"
+    },
+    "hasDimension": {
+      "category": "property",
+      "label": "has dimension"
+    },
+    "YesNoType": {
+      "category": "class",
+      "label": "Yes no type"
+    },
+    "hasDimensionExpression": {
+      "category": "property",
+      "label": "dimension expression"
+    },
+    "ParameterModifiabilityType": {
+      "category": "class",
+      "description": "An enumeration of literals that signify whether a parameter is modifiable and if so, by whom.",
+      "label": "Parameter modifiability type"
+    },
+    "hasDimensionVector": {
+      "category": "property",
+      "label": "has dimension vector"
+    },
+    "SignednessType": {
+      "category": "class",
+      "description": "Specifics whether a value should be signed or unsigned.",
+      "label": "Signedness type"
+    },
+    "hasNonCoherentUnit": {
+      "category": "property",
+      "description": "A coherent unit of measurement for a unit system is a defined unit that may be expressed as a product of powers of the system's base units with the proportionality factor of one.",
+      "label": "has non-coherent unit"
+    },
+    "NumericUnion": {
+      "category": "class",
+      "label": "Numeric union"
+    },
+    "hasNumeratorPart": {
+      "category": "property",
+      "label": "has quantity kind dimension vector numerator part"
+    },
+    "OnOffStateType": {
+      "category": "class",
+      "label": "On off state type"
+    },
+    "hasPrefixUnit": {
+      "category": "property",
+      "label": "prefix unit"
+    },
+    "OctetType": {
+      "category": "class",
+      "description": "An 8 bit unsigned integer",
+      "label": "Octet Type"
+    },
+    "hasQuantity": {
+      "category": "property",
+      "label": "has quantity"
+    },
+    "UnsignedIntegerType": {
+      "category": "class",
+      "description": "Unsgned Integers are integers that are either strictly non-negative or non-positive.",
+      "label": "Unsigned Integer Type"
+    },
+    "hasReferenceQuantityKind": {
+      "category": "property",
+      "label": "has reference quantity kind"
+    },
+    "OpenCloseStateType": {
+      "category": "class",
+      "label": "Open Close State Type"
+    },
+    "hasRule": {
+      "category": "property",
+      "label": "has rule"
+    },
+    "OrderedCollectionType": {
+      "category": "class",
+      "description": "An Ordered Collection Type is an abstract data type that defines the properties of collection data structures whose members can be linearly ordered. An ordered collection is a collection together with an ordering relation (such as greater than) that linearly orders the collection elements.",
+      "label": "Ordered Collection Type"
+    },
+    "hasVocabulary": {
+      "category": "property",
+      "label": "has vocabulary"
+    },
+    "OrderedCollection": {
+      "category": "class",
+      "description": "An Ordered Collection Type is an abstract data type that defines the properties of collection data structures whose members can be linearly ordered. An ordered collection is a collection together with an ordering relation (such as greater than) that linearly orders the collection elements.",
+      "label": "Ordered Collection Type"
+    },
+    "isDimensionInSystem": {
+      "category": "property",
+      "label": "is dimension in system"
+    },
+    "OrderedType": {
+      "category": "class",
+      "description": "Describes how a data or information structure is ordered.",
+      "label": "Ordered type"
+    },
+    "modifiability": {
+      "category": "property",
+      "description": "Reference to one in a list of enumerated elements that indicates whether data (e.g. variable or parameter) can be changed.",
+      "label": "modifiability"
+    },
+    "Organization": {
+      "category": "class",
+      "description": "A sub-type of 'QUDT Concept'. Detailed desciption to be provided in a future version.",
+      "label": "Organization"
+    },
+    "numeratorDimensionVector": {
+      "category": "property",
+      "label": "numerator dimension vector"
+    },
+    "Percentage": {
+      "category": "class",
+      "description": "A Scalar Datatype for expressing a dimensionless ratio.",
+      "label": "Percentage Type"
+    },
+    "omUnit": {
+      "category": "property",
+      "label": "om unit"
+    },
+    "PhysicalAddress": {
+      "category": "class",
+      "description": "A \"Structured Datatype\".",
+      "label": "Physical Address Type"
+    },
+    "PhysicalConstant": {
+      "category": "class",
+      "description": "A physical constant is a physical quantity that is generally believed to be both universal in nature and constant in time. It can be contrasted with a mathematical constant, which is a fixed numerical value but does not directly involve any physical measurement. There are many physical constants in science, some of the most widely recognized being the speed of light in vacuum c, Newton's gravitational constant G, Planck's constant h, the electric permittivity of free space ε0, and the elementary charge e. Physical constants can take many dimensional forms, or may be dimensionless depending on the system of quantities and units used.",
+      "label": "Physical Constant"
+    },
+    "permissibleMaths": {
+      "category": "property",
+      "label": "permissible maths"
+    },
+    "Quantity": {
+      "category": "class",
+      "description": "<p class=\"lm-para\">A <b>quantity</b> is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying <b>quantity kind</b> is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>  <p class=\"lm-para\">In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points, velocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure.  <p class=\"lm-para\">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity kinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance divided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded as \"fundamental\" in this sense.</p> <p class=\"lm-para\">A quantity is distinguished from a \"quantity kind\" in that the former carries a value and the latter is a type specifier.</p>",
+      "label": "Quantity"
+    },
+    "permissibleTransformation": {
+      "category": "property",
+      "label": "permissible transformation"
+    },
+    "PlaneAngleUnit": {
+      "category": "class",
+      "label": "Plane Angle Unit"
+    },
+    "rotationDefinition": {
+      "category": "property",
+      "label": "rotation definition"
+    },
+    "PolarCoordinates": {
+      "category": "class",
+      "description": "A set of  variables which fix a geometric object. If the coordinates of a point P are determined by the distance from P to the origin and the angle subtended by the radial vector at P and a fixed axis, they are known as polar coordinates. Typically, the angle is measured with respect to the x-axis.",
+      "label": "Polar Coordinate System Type"
+    },
+    "prefix": {
+      "category": "property",
+      "description": "Associates a unit with the appropriate prefix, if any.",
+      "label": "prefix"
+    },
+    "PolarCoordinatesType": {
+      "category": "class",
+      "description": "A set of  variables which fix a geometric object. If the coordinates of a point P are determined by the distance from P to the origin and the angle subtended by the radial vector at P and a fixed axis, they are known as polar coordinates. Typically, the angle is measured with respect to the x-axis.",
+      "label": "Polar Coordinate System Type"
+    },
+    "qkdvDenominator": {
+      "category": "property",
+      "label": "denominator dimension vector"
+    },
+    "Polarity": {
+      "category": "class",
+      "description": "A \"Tagged Enumeration\" with the following instance(s): \"negative\", \"positive\".",
+      "label": "Polarity"
+    },
+    "qkdvNumerator": {
+      "category": "property",
+      "label": "numerator dimension vector"
+    },
+    "PositiveIntegerType": {
+      "category": "class",
+      "description": "Positive Integers are integers that are either non-zero and non-negative.",
+      "label": "Positive Integer Type"
+    },
+    "quantity": {
+      "category": "property",
+      "description": "a property to relate an observable thing with a quantity (qud:Quantity)",
+      "label": "quantity"
+    },
+    "UnsignedType": {
+      "category": "class",
+      "description": "An unsigned data type is a numeric type that does not distinguish between positive and negative values.",
+      "label": "Unsigned Type"
+    },
+    "quantityValue": {
+      "category": "property",
+      "label": "quantity value"
+    },
+    "SignedIntegerType": {
+      "category": "class",
+      "description": "Signed Integers are integers can take on both positive and negative values.",
+      "label": "Signed Integer Type"
+    },
+    "reference": {
+      "category": "property",
+      "label": "reference"
+    },
+    "referenceFrameType": {
+      "category": "property",
+      "label": "reference frame type"
+    },
+    "Quantifiable": {
+      "category": "class",
+      "description": "<p><em>Quantifiable</em> ascribes to some thing the capability of being measured, observed, or counted.</p>",
+      "label": "Quantifiable"
+    },
+    "referenceUnit": {
+      "category": "property",
+      "label": "reference unit"
+    },
+    "QuantityKindDimensionVector": {
+      "category": "class",
+      "description": "<p class=\"lm-para\">A  <em>Quantity Kind Dimension Vector</em> describes the dimensionality of a quantity kind in the context of a system of units. In the SI system of units, the dimensions of a quantity kind are expressed as a product of the basic physical dimensions mass (\\(M\\)), length (\\(L\\)), time (\\(T\\)) current (\\(I\\)), amount of substance (\\(N\\)), luminous intensity (\\(J\\)) and absolute temperature (\\(\\theta\\)) as \\(dim \\, Q = L^{\\alpha} \\, M^{\\beta} \\, T^{\\gamma} \\, I ^{\\delta} \\, \\theta ^{\\epsilon} \\, N^{\\eta} \\, J ^{ u}\\).</p>  <p class=\"lm-para\">The rational powers of the dimensional exponents, \\(\\alpha, \\, \\beta, \\, \\gamma, \\, \\delta, \\, \\epsilon, \\, \\eta, \\, u\\), are positive, negative, or zero.</p>  <p class=\"lm-para\">For example, the dimension of the physical quantity kind \\(\\it{speed}\\) is \\(\\boxed{length/time}\\), \\(L/T\\) or \\(LT^{-1}\\), and the dimension of the physical quantity kind force is \\(\\boxed{mass \\times acceleration}\\) or \\(\\boxed{mass \\times (length/time)/time}\\), \\(ML/T^2\\) or \\(MLT^{-2}\\) respectively.</p>",
+      "label": "Quantity Kind Dimension Vector"
+    },
+    "relevantQuantityKind": {
+      "category": "property",
+      "label": "relevant quantity kind"
+    },
+    "QuantityKindDimensionVector_CGS-EMU": {
+      "category": "class",
+      "description": "A <em>CGS EMU Dimension Vector</em> is used to specify the dimensions for EMU C.G.S. quantity kind.",
+      "label": "CGS EMU Dimension vector"
+    },
+    "relevantUnit": {
+      "category": "property",
+      "description": "This property is used for qudt:Discipline instances to identify the Unit instances that are used within a given discipline.",
+      "label": "Relevant Unit"
+    },
+    "QuantityKindDimensionVector_CGS": {
+      "category": "class",
+      "description": "A <em>CGS Dimension Vector</em> is used to specify the dimensions for a C.G.S. quantity kind.",
+      "label": "CGS Dimension vector"
+    },
+    "ruleType": {
+      "category": "property",
+      "label": "rule type"
+    },
+    "QuantityKindDimensionVector_CGS-ESU": {
+      "category": "class",
+      "description": "A <em>CGS ESU Dimension Vector</em> is used to specify the dimensions for ESU C.G.S. quantity kind.",
+      "label": "CGS ESU Dimension vector"
+    },
+    "scaleType": {
+      "category": "property",
+      "label": "scale type"
+    },
+    "QuantityKindDimensionVector_CGS-GAUSS": {
+      "category": "class",
+      "description": "A <em>CGS GAUSS Dimension Vector</em> is used to specify the dimensions for Gaussioan C.G.S. quantity kind.",
+      "label": "CGS GAUSS Dimension vector"
+    },
+    "supercededBy": {
+      "category": "property",
+      "description": "This property is used to refer to the most current definition of an entity, when needed.",
+      "label": "superceded by"
+    },
+    "QuantityKindDimensionVector_CGS-LH": {
+      "category": "class",
+      "description": "A <em>CGS LH Dimension Vector</em> is used to specify the dimensions for Lorentz-Heaviside C.G.S. quantity kind.",
+      "label": "CGS LH Dimension vector"
+    },
+    "systemDefinition": {
+      "category": "property",
+      "label": "system definition"
+    },
+    "QuantityKindDimensionVector_ISO": {
+      "category": "class",
+      "label": "ISO Dimension vector"
+    },
+    "systemDimension": {
+      "category": "property",
+      "label": "system dimension"
+    },
+    "QuantityKindDimensionVector_Imperial": {
+      "category": "class",
+      "label": "Imperial dimension vector"
+    },
+    "timeDatatype": {
+      "category": "property",
+      "label": "time datatype"
+    },
+    "QuantityKindDimensionVector_SI": {
+      "category": "class",
+      "description": "A sub-type of 'Quantity Dimension Vector'. Detailed desciption to be provided in a future version.",
+      "label": "Quantity Kind Dimension vector (SI)"
+    },
+    "unit": {
+      "category": "property",
+      "description": "A reference to the unit of measure of a quantity (variable or constant) of interest.",
+      "label": "unit"
+    },
+    "QuantityType": {
+      "category": "class",
+      "description": "\\(\\textit{Quantity Type}\\) is an enumeration of quanity kinds. It specializes \\(\\boxed{dtype:EnumeratedValue}\\) by constrinaing \\(\\boxed{dtype:value}\\) to instances of \\(\\boxed{qudt:QuantityKind}\\).",
+      "label": "Quantity type"
+    },
+    "unitFor": {
+      "category": "property",
+      "label": "unit for"
+    },
+    "QuantityValueType": {
+      "category": "class",
+      "description": "A sub-type of 'Dimensional Data Type'. Detailed desciption to be provided in a future version.",
+      "label": "Quantity value type"
+    },
+    "valueQuantity": {
+      "category": "property",
+      "label": "value for quantity"
+    },
+    "RealNumberType": {
+      "category": "class",
+      "description": "This is the class of data values that approximate real numbers in finite precision. Often, such values are expressed in \"mantissa, base, exponent\" form. Any rational number can be expressed in the form m*b^e, where m (the mantissa), b (the base), and e (the exponent) are integers. Typically, b is chosen to be either 2 or 10, and then the values of m and e are determined given the choice of base.",
+      "label": "Real number type"
+    },
+    "valueRange": {
+      "category": "property",
+      "label": "value range"
+    },
+    "valueType": {
+      "category": "property",
+      "label": "value type"
+    },
+    "valueVector": {
+      "category": "property",
+      "description": "A list of the values of elements in a Partial Array.",
+      "label": "value vector"
+    },
+    "RealDatatype": {
+      "category": "class",
+      "description": "A real number is represented as a factor, called the mantissa, multiplied by a power (the exponent) of a base. Different bases yield different approximations to real numbers, and conversion between them is limited in accuracy.  Four floating-point types are defined in 'IEEE-754 Standard for Binary Floating-Point'. These types are 'single', 'extended single', 'double', and 'extended double'.",
+      "label": "Real Datatype"
+    },
+    "RealDoublePrecisionType": {
+      "category": "class",
+      "description": "A real double precision data type specifies how a real number, or an approximation of a real number is stored in memory that occupies two words in computer memory, where the byte length of a word depends on machine address size of the computer processor. For example, on 32-bit machine architectures, a word is four bytes.  An example of a real double precision data type specification is the IEEE 754 standard for encoding binary or decimal floating point numbers in 8 bytes for storage on 32-bit machine architectures.",
+      "label": "Real Double Precision Type"
+    },
+    "Record": {
+      "category": "class",
+      "description": "A Record Type is a type whose values are records, i.e. aggregates of several items of possibly different types. The aggregated items are called fields or members and are usually identified or indexed by field labels.",
+      "label": "Record Type"
+    },
+    "ReferenceDatatype": {
+      "category": "class",
+      "description": "A reference is an object containing information which refers to data stored elsewhere, as opposed to containing the data itself. A reference data type is a data type that specifies how a reference is represented and stored in memory, as well as the operations that can be performed on reference values. The most common example of a reference data type is a pointer. [Wikipedia]",
+      "label": "Reference Data Type"
+    },
+    "RotatingReferenceFrame": {
+      "category": "class",
+      "description": "A sub-type of 'Reference Frame'. Detailed desciption to be provided in a future version.",
+      "label": "Rotating reference frame"
+    },
+    "Rule": {
+      "category": "class",
+      "label": "Rule"
+    },
+    "RuleType": {
+      "category": "class",
+      "label": "Rule Type"
+    },
+    "StateSpaceMatrixType": {
+      "category": "class",
+      "description": "In control engineering, a state space representation is a mathematical model of a physical system as a set of input, output and state variables related by first-order differential equations. To abstract from the number of inputs, outputs and states, the variables are expressed as vectors and the differential and algebraic equations are written in matrix form (the last one can be done when the dynamical system is linear and time invariant).",
+      "label": "State Space Matrix Type"
+    },
+    "StateSpaceVectorType": {
+      "category": "class",
+      "description": "A state-space vector type in general control systems describes the observed states of an object in state space, e.g. in variables of the degrees of freedom for motion. As data types, state vector types are used to specify the structure of state vectors, such as how the observed state is encoded.",
+      "label": "State Space Vector Type"
+    },
+    "ScaleType": {
+      "category": "class",
+      "label": "Scale type"
+    },
+    "SequenceType": {
+      "category": "class",
+      "description": "A sequence is an enumerated collection of objects in which repetitions are allowed. Like a set, it contains members (also called elements, or terms). The number of elements (possibly infinite) is called the length of the sequence. Unlike a set, order matters, and exactly the same elements can appear multiple times at different positions in the sequence. Formally, a sequence can be defined as a function whose domain is either the set of the natural numbers (for infinite sequences) or the set of the first n natural numbers (for a sequence of finite length n). The position of an element in a sequence is its rank or index; it is the integer from which the element is the image. It depends on the context or of a specific convention, if the first element has index 0 or 1. [Wikipedia]",
+      "label": "Sequence"
+    },
+    "Sequence": {
+      "category": "class",
+      "description": "A \"Structured Datatype\".",
+      "label": "Sequence"
+    },
+    "Set": {
+      "category": "class",
+      "description": "A Set Type is an abstract data type that defines the properties of sets. A set is a collection (container) of certain values, without any particular order, and no repeated values. It corresponds with a finite set in mathematics.",
+      "label": "Set Type"
+    },
+    "SetType": {
+      "category": "class",
+      "description": "A Set Type is an abstract data type that defines the properties of sets. A set is a collection (container) of certain values, without any particular order, and no repeated values. It corresponds with a finite set in mathematics.",
+      "label": "Set Type"
+    },
+    "ShortIntegerType": {
+      "category": "class",
+      "description": "A Short Integer is an integer that can be represented in two octets (16 bits) of machine memory. Short integers may be signed or unsigned.",
+      "label": "Short Integer Type"
+    },
+    "SignedBigIntegerType": {
+      "category": "class",
+      "description": "A Signed Big Integer is a signed integer that can be represented in eight octets (64 bits) of machine memory.",
+      "label": "Signed Big Integer Type"
+    },
+    "SignedType": {
+      "category": "class",
+      "description": "A signed type is a numeric type that distinguishes between positive and negative numbers using an encoding scheme, such as sign and magnitude, one's compliment, and two's compliment to represent negative numbers.",
+      "label": "Signed Type"
+    },
+    "SignedLongIntegerType": {
+      "category": "class",
+      "description": "A Signed Long Integer is a signed integer that can be represented in four octets (32 bits) of machine memory.",
+      "label": "Signed Long Integer Type"
+    },
+    "SignedMediumIntegerType": {
+      "category": "class",
+      "description": "A \"Signed Medium Integers\" is an integer of 24 bits that can take on both positive and negative values.",
+      "label": "Signed Integer Type"
+    },
+    "SignedVariableLengthIntegerType": {
+      "category": "class",
+      "description": "A Signed Variable Length Integer data type defines a data structure for representing signed integers that uses a variable number of bits depending on the magnitude of the integer. Typically, variable length integer data types are between one and 64 bits in length.",
+      "label": "Signed Variable Length Integer Type"
+    },
+    "VariableLengthIntegerType": {
+      "category": "class",
+      "description": "A Variable Length Integer data type defines a data structure for representing integers that uses a variable number of bits depending on the magnitude of the integer. Typically, variable length integer data types are between one and 64 bits in length.",
+      "label": "Variable Length Integer Type"
+    },
+    "SolidAngleUnit": {
+      "category": "class",
+      "description": "The solid angle subtended by a surface S is defined as the surface area of a unit sphere covered by the surface S's projection onto the sphere. A solid angle is related to the surface of a sphere in the same way an ordinary angle is related to the circumference of a circle. Since the total surface area of the unit sphere is 4*pi, the measure of solid angle will always be between 0 and 4*pi.",
+      "label": "Solid Angle Unit"
+    },
+    "SplineCalibrator": {
+      "category": "class",
+      "description": "A sub-type of 'Map Type'. Detailed desciption to be provided in a future version.",
+      "label": "Spline calibrator"
+    },
+    "SplineCalibratorType": {
+      "category": "class",
+      "label": "Spline calibrator type"
+    },
+    "SplinePoint": {
+      "category": "class",
+      "description": "A sub-type of 'Tuple Type'. Detailed desciption to be provided in a future version.",
+      "label": "Spline point"
+    },
+    "SplinePointType": {
+      "category": "class",
+      "label": "Spline point type"
+    },
+    "StateSpaceMatrix": {
+      "category": "class",
+      "description": "In control engineering, a state space representation is a mathematical model of a physical system as a set of input, output and state variables related by first-order differential equations. To abstract from the number of inputs, outputs and states, the variables are expressed as vectors and the differential and algebraic equations are written in matrix form (the last one can be done when the dynamical system is linear and time invariant).",
+      "label": "State Space Matrix Type"
+    },
+    "StateSpaceVector": {
+      "category": "class",
+      "description": "A state vector in general control systems describes the observed states of an object in state space, e.g. in variables of the degrees of freedom for motion. As data types, state vector types are used to specify the structure of state vectors, such as how the observed state is encoded.",
+      "label": "State Space Vector Type"
+    },
+    "StateVectorType": {
+      "category": "class",
+      "description": "A state-space vector type in general control systems describes the observed states of an object in state space, e.g. in variables of the degrees of freedom for motion. As data types, state vector types are used to specify the structure of state vectors, such as how the observed state is encoded.",
+      "label": "State Vector Type"
+    },
+    "StringList": {
+      "category": "class",
+      "label": "String list"
+    },
+    "StringUTF16": {
+      "category": "class",
+      "description": "String UTF-16 Type is a string data type that specifies the properties of string data structures which encode strings using the UTF-16 encoding. UTF-16 is the native internal representation of text in the Microsoft Windows NT/Windows 2000/Windows XP/Windows CE, Qualcomm BREW, and Symbian operating systems; the Java and .NET byte code environments; Mac OS X's Cocoa and Core Foundation frameworks; and the Qt cross-platform graphical widget toolkit.",
+      "label": "String UTF16 Type"
+    },
+    "StringUTF8": {
+      "category": "class",
+      "description": "String UTF-8 Type is a string data type that specifies the properties of string data structures which encode strings using the UTF-8 encoding. UTF-8 includes ASCII, otherwise referred to as IA-5 (International Alphabet 5, as standardized by International Organization for Standardization [ISO]) as the first 128 values. The Internet Engineering Task Force (IETF) requires all Internet protocols to identify the encoding used for character data with UTF-8 as at least one supported encoding. The Internet Mail Consortium (IMC) recommends that all e-mail programs must be able to display and create mail using UTF-8.",
+      "label": "String UTF8 Type"
+    },
+    "SubjectArea": {
+      "category": "class",
+      "description": "A \"Enumeration Literal\".",
+      "label": "Subject Area"
+    },
+    "Symbol": {
+      "category": "class",
+      "description": "A sub-type of 'QUDT Concept'. Detailed desciption to be provided in a future version.",
+      "label": "Symbol"
+    },
+    "SystemOfQuantityKinds": {
+      "category": "class",
+      "description": "A system of quantity kinds is a set of one or more quantity kinds together with a set of zero or more algebraic equations that define relationships between quantity kinds in the set. In the physical sciences, the equations relating quantity kinds are typically physical laws and definitional relations, and constants of proportionality. Examples include Newton’s First Law of Motion, Coulomb’s Law, and the definition of velocity as the instantaneous change in position.  In almost all cases, the system identifies a subset of base quantity kinds. The base set is chosen so that all other quantity kinds of interest can be derived from the base quantity kinds and the algebraic equations. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind.  From a scientific point of view, the division of quantities into base quantities and derived quantities is a matter of convention.",
+      "label": "System of Quantity Kinds"
+    },
+    "SystemOfUnits": {
+      "category": "class",
+      "description": "A system of units is a set of units which are chosen as the reference scales for some set of quantity kinds together with the definitions of each unit. Units may be defined by experimental observation or by proportion to another unit not included in the system. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind.",
+      "label": "System of Units"
+    },
+    "TimeStringType": {
+      "category": "class",
+      "description": "Time takes a number of forms, depending on the units used (e.g., year, day, minute, millisecond, or combinations thereof) and the origin (i.e., time zero) to which the time value is related.",
+      "label": "Time Type"
+    },
+    "TaggedEnumeration": {
+      "category": "class",
+      "description": "An enumeration where each literal  has a tag that is a non-negative integer. These enumerations are likely to have their literals encoded - hence the need for the tag.",
+      "label": "Tagged Enumeration"
+    },
+    "ThreeBodyRotatingCoordinateSystem": {
+      "category": "class",
+      "description": "The lunar coordinate systems are primarily used when operating in close proximity to the Moon. There are, however, a few additional coordinate systems that are also useful when analyzing (and depicting) trajectories in the vicinity of the Earth-Moon system. They are rotating coordinate systems associated with two different three-body systems: the Sun-Earth-spacecraft system and the Earth-Moon-spacecraft system. The Sun-Earth and Earth-Moon rotating coordinate frames are defined as follows. The pole vector or Z-axis of the coordinate frame is set equal to the instantaneous orbit normal of the secondary (smaller) body about the primary (larger) body and the X-axis is set equal to the vector from the primary body center of mass (CM) to the secondary body CM. The X-axis rotates at a rate equal to the instantaneous rotation rate of the secondary body about the primary body.",
+      "label": "Three Body Rotating Coordinate System Type"
+    },
+    "Time": {
+      "category": "class",
+      "description": "The class of data values that denote a point in time. Time values may be encoded in a 12-hour clock or a 24-hour clock, such as 1:35 AM, or 13:35.",
+      "label": "Time"
+    },
+    "TimeDataType": {
+      "category": "class",
+      "description": "A sub-type of 'QUDT Enumeration'. Detailed desciption to be provided in a future version.",
+      "label": "Time data type"
+    },
+    "TimeInterval": {
+      "category": "class",
+      "description": "A relative interval that is an increment in time. For example, this is used in time series arrays to express the time point of a vector of values.",
+      "label": "Time interval"
+    },
+    "TransformType": {
+      "category": "class",
+      "label": "Transform type"
+    },
+    "Triplet": {
+      "category": "class",
+      "description": "A \"Tuple\".",
+      "label": "Triplet"
+    },
+    "TypeList": {
+      "category": "class",
+      "description": "A sub-type of 'QUDT Datatype'. Detailed desciption to be provided in a future version.",
+      "label": "Type list"
+    },
+    "TypeMatrix": {
+      "category": "class",
+      "description": "Members of this class are matrix data structures that describe the datatypes of a class of matrices. That is, the members of this class are matrices with cells that contain datatypes (c.f. type:Datatype) and are used to describe the datatype structure of other matrices.",
+      "label": "Type matrix"
+    },
+    "TypeVector": {
+      "category": "class",
+      "description": "A Type Vector is a vector whose elements are data types. They are used, for instance, to specify the type of each component of a vector or class of vectors. A <em>Type Vector Type</em> is a further abstraction that specifies the structure of Type Vectors.",
+      "label": "Type Vector Type"
+    },
+    "UnsignedBigIntegerType": {
+      "category": "class",
+      "description": "An Unsgned Big Integer is an unsigned integer that can be represented in eight octets (64 bits) of machine memory.",
+      "label": "Unsigned Big Integer Type"
+    },
+    "UnsignedLongIntegerType": {
+      "category": "class",
+      "description": "An Unsigned Long Integer is an unsigned integer that can be represented in four octets (32 bits) of machine memory.",
+      "label": "Unsigned Long Integer Type"
+    },
+    "UnsignedMediumIntegerType": {
+      "category": "class",
+      "description": "An \"Unsigned Medium Integers\" is an integer of 24 bits that only takes on both positive values.",
+      "label": "Signed Integer Type"
+    },
+    "UnsignedShortIntegerType": {
+      "category": "class",
+      "description": "An Unsigned Short Integer is an unsigned integer that can be represented in four octets (32 bits) of machine memory.",
+      "label": "Unsigned Short Integer Type"
+    },
+    "UnsignedVariableLengthIntegerType": {
+      "category": "class",
+      "description": "An Unsigned Variable Length Integer data type defines a data structure for representing unsigned integers that uses a variable number of bits depending on the magnitude of the integer. Typically, variable length integer data types are between one and 64 bits in length.",
+      "label": "Unsigned Variable Length Integer Type"
+    },
+    "UserQuantityKind": {
+      "category": "class",
+      "label": "User Quantity Kind"
+    },
+    "VariableIntervalTimeSeriesArray": {
+      "category": "class",
+      "description": "A Variable Interval Time Series Array Type is a data type that specifies the properties of arrays that hold time series data that has been sampled over non-uniformly spaced time intervals. A time series is a sequence of data points, measured typically at successive times, spaced at uniform or non-uniform time intervals. For variable interval time series, the successive time intervals may follow a repeating pattern, or may be completely random.",
+      "label": "Variable Interval Time Series Array Type"
+    },
+    "VariableIntervalTimeSeriesArrayType": {
+      "category": "class",
+      "description": "A Variable Interval Time Series Array Type is a data type that specifies the properties of arrays that hold time series data that has been sampled over non-uniformly spaced time intervals. A time series is a sequence of data points, measured typically at successive times, spaced at uniform or non-uniform time intervals. For variable interval time series, the successive time intervals may follow a repeating pattern, or may be completely random.",
+      "label": "Variable Interval Time Series Array Type"
+    },
+    "VectorArray": {
+      "category": "class",
+      "description": "A vector array is an array whose elements are all state vectors. As a data type, a vector array type is used to describe the structure of vector array valued quantities by specifying the types of the array's elements.",
+      "label": "Vector Array Type"
+    },
+    "VectorArrayType": {
+      "category": "class",
+      "description": "A vector array is an array whose elements are all state vectors. As a data type, a vector array type is used to describe the structure of vector array valued quantities by specifying the types of the array's elements.",
+      "label": "Vector Array Type"
+    },
+    "VehicleCoordinateSystem": {
+      "category": "class",
+      "description": "A sub-type of 'Aerospace coordinate system'. Detailed desciption to be provided in a future version.",
+      "label": "Vehicle coordinate system"
+    },
+    "WetDryStateType": {
+      "category": "class",
+      "label": "Wet dry state type"
+    },
+    "Aspect": {
+      "category": "class",
+      "description": "An aspect is an abstract type class that defines properties that can be reused.",
+      "label": "QUDT Aspect"
+    },
+    "Verifiable": {
+      "category": "class",
+      "description": "An aspect class that holds properties that provide external knowledge and specifications of a given resource.",
+      "label": "Verifiable"
+    },
+    "EnumeratedQuantity": {
+      "category": "class",
+      "label": "Enumerated Quantity"
+    },
+    "Statement": {
+      "category": "class",
+      "label": "Statement"
+    }
+  }
+}

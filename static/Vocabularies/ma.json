@@ -1,0 +1,392 @@
+{
+  "iri": "http://www.w3.org/ns/ma-ont#",
+  "description": "Created by Tobias Buerger, Jean Pierre Evain and Pierre-Antoine Champin with the RDFS Taskforce within the W3C Media Annotation Working Group.",
+  "label": "Ontology for Media Resources",
+  "prefix": "ma",
+  "items": {
+    "dc11:date": {
+      "category": "property"
+    },
+    "owl:Thing": {
+      "category": "class"
+    },
+    "Agent": {
+      "category": "class",
+      "description": "A person or organisation contributing to the media resource."
+    },
+    "Collection": {
+      "category": "class",
+      "description": "Any group of media resource e.g. a series."
+    },
+    "Location": {
+      "category": "class",
+      "description": "A location related to the media resource, e.g. depicted in the resource (possibly fictional) or where the resource was created (shooting location), etc."
+    },
+    "MediaResource": {
+      "category": "class",
+      "description": "An image or an audiovisual media resource, which can be composed of one or more fragment / track."
+    },
+    "Rating": {
+      "category": "class",
+      "description": "Information about the rating given to a media resource."
+    },
+    "TargetAudience": {
+      "category": "class",
+      "description": "Information about The target audience (target region, target audience category but also parental guidance recommendation) for which a media resource is intended."
+    },
+    "AudioTrack": {
+      "category": "class",
+      "description": "A specialisation of Track for Audio to provide a link to specific data properties such as sampleRate, etc. Specialisation is defined through object properties."
+    },
+    "Track": {
+      "category": "class",
+      "description": "A specialisation of MediaFragment for audiovisual content."
+    },
+    "DataTrack": {
+      "category": "class",
+      "description": "Ancillary data track e.g. captioning  in addition to video and audio tracks. Specialisation is made through the use of appropriate object properties."
+    },
+    "VideoTrack": {
+      "category": "class",
+      "description": "A specialisation of Track for Video to provide a link to specific data properties such as frameRate, etc. Signing is another possible example of video track. Specialisation is defined through object properties."
+    },
+    "Image": {
+      "category": "class",
+      "description": "A still image / thumbnail / key frame related to the media resource or being the media resource itself."
+    },
+    "MediaFragment": {
+      "category": "class",
+      "description": "A media fragment (spatial, temporal, track...) composing a media resource. In other ontologies fragment is sometimes referred to as a 'part' or 'segment'."
+    },
+    "Organisation": {
+      "category": "class",
+      "description": "An organisation or moral agent."
+    },
+    "Person": {
+      "category": "class",
+      "description": "A physical person."
+    },
+    "": {
+      "category": "class"
+    },
+    "alternativeTitle": {
+      "category": "property",
+      "description": "Corresponds to 'title.title' in the Ontology for Media Resources with a 'title.type' meaning \"alternative\"."
+    },
+    "title": {
+      "category": "property",
+      "description": "Corresponds to 'title.title' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'title.type'."
+    },
+    "averageBitRate": {
+      "category": "property",
+      "description": "Corresponds to 'averageBitRate' in the Ontology for Media Resources, expressed in kilobits/second."
+    },
+    "collectionName": {
+      "category": "property",
+      "description": "The name by which a collection (e.g. series) is known."
+    },
+    "copyright": {
+      "category": "property",
+      "description": "Corresponds to 'copyright.copyright' in the Ontology for Media Resources."
+    },
+    "creationDate": {
+      "category": "property",
+      "description": "Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning \"creationDate\"."
+    },
+    "date": {
+      "category": "property",
+      "description": "Corresponds to date.date in the ontology for Media Resources. Subproperties can be used to distinguish different values of 'date.type'. The recommended range is 'xsd:dateTime' (for compliance with OWL2-QL and OWL2-RL) but other time-related datatypes may be used (e.g. 'xsd:gYear', 'xsd:date'...)."
+    },
+    "description": {
+      "category": "property",
+      "description": "Corresponds to 'description' in the Ontology for Media Resources. This can be specialised by using sub-properties e.g. 'summary' or 'script'."
+    },
+    "duration": {
+      "category": "property",
+      "description": "Corresponds to 'duration' in the Ontology for Media Resources."
+    },
+    "editDate": {
+      "category": "property",
+      "description": "Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning \"editDate\"."
+    },
+    "fragmentName": {
+      "category": "property",
+      "description": "Corresponds to 'namedFragment.label' in the Ontology for Media Resources."
+    },
+    "frameHeight": {
+      "category": "property",
+      "description": "Corresponds to 'frameSize.height' in the Ontology for Media Resources, measured in frameSizeUnit."
+    },
+    "frameRate": {
+      "category": "property",
+      "description": "Corresponds to 'frameRate' in the Ontology for Media Resources, in frame per second."
+    },
+    "frameSizeUnit": {
+      "category": "property",
+      "description": "Corresponds to 'frameSize.unit' in the Ontology for Media Resources."
+    },
+    "frameWidth": {
+      "category": "property",
+      "description": "Corresponds to 'frameSize.width' in the Ontology for Media Resources measured in frameSizeUnit."
+    },
+    "locationAltitude": {
+      "category": "property",
+      "description": "Corresponds to 'location.altitude' in the Ontology for Media Resources."
+    },
+    "locationLatitude": {
+      "category": "property",
+      "description": "Corresponds to 'location.latitude' in the Ontology for Media Resources."
+    },
+    "locationLongitude": {
+      "category": "property",
+      "description": "Corresponds to 'location.longitude' in the Ontology for Media Resources."
+    },
+    "locationName": {
+      "category": "property",
+      "description": "Corresponds to 'location.name' in the Ontology for Media Resources."
+    },
+    "locator": {
+      "category": "property",
+      "description": "Corresponds to 'locator' in the Ontology for Media Resources."
+    },
+    "mainOriginalTitle": {
+      "category": "property",
+      "description": "Corresponds to 'title.title' in the Ontology for Media Resources with a 'title.type' meaning \"original\"."
+    },
+    "numberOfTracks": {
+      "category": "property",
+      "description": "Corresponds to 'numTracks.number' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'numTracks.type'."
+    },
+    "ratingScaleMax": {
+      "category": "property",
+      "description": "Corresponds to 'rating.max' in the Ontology for Media Resources."
+    },
+    "ratingScaleMin": {
+      "category": "property",
+      "description": "Corresponds to 'rating.min' in the Ontology for Media Resources."
+    },
+    "ratingValue": {
+      "category": "property",
+      "description": "Corresponds to 'rating.value' in the Ontology for Media Resources."
+    },
+    "recordDate": {
+      "category": "property",
+      "description": "Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning \"recordDate\"."
+    },
+    "releaseDate": {
+      "category": "property",
+      "description": "Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning \"releaseDate\"."
+    },
+    "samplingRate": {
+      "category": "property",
+      "description": "Corresponds to 'samplingRate' in the Ontology for Media Resources, in samples per second."
+    },
+    "trackName": {
+      "category": "property",
+      "description": "Corresponds to 'fragment.name' in the Ontology for Media Resources, for Track fragments."
+    },
+    "createdIn": {
+      "category": "property",
+      "description": "A subproperty of 'hasRelatedLocation\" used to specify where material shooting took place."
+    },
+    "hasRelatedLocation": {
+      "category": "property",
+      "description": "Corresponds to 'location' in the Ontology for Media Resources. Subproperties are provided to specify, when possible, the relation between the media resource and the location."
+    },
+    "isCreationLocationOf": {
+      "category": "property"
+    },
+    "depictsFictionalLocation": {
+      "category": "property",
+      "description": "A subproperty of 'hasRelatedLocation' used to specify where the action depicted in the media is supposed to take place, as opposed to the location where shooting actually took place (see 'createdIn')."
+    },
+    "isFictionalLocationDepictedIn": {
+      "category": "property"
+    },
+    "features": {
+      "category": "property",
+      "description": "Corresponds to 'contributor.contributor' in the Ontology for Media Resources with a 'contributor.role' meaning \"actor\"."
+    },
+    "hasContributor": {
+      "category": "property",
+      "description": "Corresponds to 'contributor.contributor' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'contributor.role'."
+    },
+    "playsIn": {
+      "category": "property"
+    },
+    "hasAccessConditions": {
+      "category": "property",
+      "description": "Corresponds to 'policy' in the Ontology for Media Resources with a 'policy.type' \"access conditions\"."
+    },
+    "hasPolicy": {
+      "category": "property",
+      "description": "Corresponds to 'policy' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'policy.type'."
+    },
+    "hasAudioDescription": {
+      "category": "property",
+      "description": "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"audio-description\"."
+    },
+    "hasCaptioning": {
+      "category": "property",
+      "description": "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"captioning\". This property can for example point to a spatial fragment, a VideoTrack or a DataTrack. The language of the captioning track can be expressed by attaching a 'hasLanguage' property to the specific track."
+    },
+    "hasFragment": {
+      "category": "property",
+      "description": "Corresponds to 'fragment' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'fragment.role'."
+    },
+    "isCaptioningOf": {
+      "category": "property"
+    },
+    "hasChapter": {
+      "category": "property",
+      "description": "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"chapter\"."
+    },
+    "isChapterOf": {
+      "category": "property"
+    },
+    "hasClassification": {
+      "category": "property",
+      "description": "Corresponds to 'targetAudience.classification' in the Ontology for Media Resources. This property is used to provide a value characterising the target audience."
+    },
+    "hasClassificationSystem": {
+      "category": "property",
+      "description": "Corresponds to 'targetAudience.identifier' in the Ontology for Media Resources. This is used to identify the reference sheme against which the target audience has been characterised."
+    },
+    "hasCompression": {
+      "category": "property",
+      "description": "Corresponds to 'compression' in the Ontology for Media Resources."
+    },
+    "hasContributedTo": {
+      "category": "property"
+    },
+    "hasCopyrightOver": {
+      "category": "property"
+    },
+    "hasCreated": {
+      "category": "property"
+    },
+    "hasCreator": {
+      "category": "property",
+      "description": "Corresponds to 'creator.creator' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'creator.role'. Note that this property is semantically a subproperty of 'hasContributor'."
+    },
+    "hasFormat": {
+      "category": "property",
+      "description": "Corresponds to 'format' in the Ontology for Media Resources."
+    },
+    "isFragmentOf": {
+      "category": "property"
+    },
+    "hasGenre": {
+      "category": "property",
+      "description": "Corresponds to 'genre' in the Ontology for Media Resources."
+    },
+    "hasKeyword": {
+      "category": "property",
+      "description": "Corresponds to 'keyword' in the Ontology for Media Resources."
+    },
+    "hasLanguage": {
+      "category": "property",
+      "description": "Corresponds to 'language' in the Ontology for Media Resources. The language used in the resource. A controlled vocabulary such as defined in BCP 47 SHOULD be used. This property can also be used to identify the presence of sign language (RFC 5646). By inheritance, the hasLanguage property applies indifferently at the media resource / fragment / track levels.  Best practice recommends to use to best possible level of granularity fo describe the usage of language within a media resource including at fragment and track levels."
+    },
+    "hasLocationCoordinateSystem": {
+      "category": "property",
+      "description": "Corresponds to 'location.coordinateSystem' in the Ontology for Media Resources."
+    },
+    "hasMember": {
+      "category": "property"
+    },
+    "hasNamedFragment": {
+      "category": "property",
+      "description": "Corresponds to 'namedFragment' in the Ontology for Media Resources."
+    },
+    "isNamedFragmentOf": {
+      "category": "property"
+    },
+    "hasPermissions": {
+      "category": "property",
+      "description": "Corresponds to 'policy' in the Ontology for Media Resources with a  'policy.type' meaning \"permissions\"."
+    },
+    "hasPublished": {
+      "category": "property"
+    },
+    "hasPublisher": {
+      "category": "property",
+      "description": "Corresponds to 'publisher' in the Ontology for Media Resources."
+    },
+    "hasRating": {
+      "category": "property",
+      "description": "Corresponds to 'rating' in the Ontology for Media Resources."
+    },
+    "isRatingOf": {
+      "category": "property"
+    },
+    "hasRatingSystem": {
+      "category": "property",
+      "description": "Corresponds to 'rating.type' in the Ontology for Media Resources."
+    },
+    "hasRelatedImage": {
+      "category": "property",
+      "description": "Corresponds to 'relation' and in the Ontology for Media Resources with a 'relation.type' meaning \"related image\"."
+    },
+    "hasRelatedResource": {
+      "category": "property",
+      "description": "Corresponds to 'relation' and in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'relation.type'."
+    },
+    "isImageRelatedTo": {
+      "category": "property"
+    },
+    "isLocationRelatedTo": {
+      "category": "property"
+    },
+    "isRelatedTo": {
+      "category": "property"
+    },
+    "hasSigning": {
+      "category": "property",
+      "description": "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"signing\". This property can for example point to a spatial fragment or a VideoTrack. The sign language of the captioning track can be expressed by attaching a 'hasLanguage' property to the specific track."
+    },
+    "isSigningOf": {
+      "category": "property"
+    },
+    "hasSource": {
+      "category": "property",
+      "description": "Corresponds to 'relation' and in the Ontology for Media Resources with a 'relation.type' meaning \"source\"."
+    },
+    "isSourceOf": {
+      "category": "property"
+    },
+    "hasSubtitling": {
+      "category": "property",
+      "description": "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"subtitling\"."
+    },
+    "hasTargetAudience": {
+      "category": "property",
+      "description": "Corresponds to 'targetAudience' in the Ontology for Media Resources."
+    },
+    "isTargetAudienceOf": {
+      "category": "property"
+    },
+    "hasTrack": {
+      "category": "property",
+      "description": "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"track\"."
+    },
+    "isTrackOf": {
+      "category": "property"
+    },
+    "isCopyrightedBy": {
+      "category": "property",
+      "description": "Corresponds to 'copyright.identifier' in the Ontology for Media Resources."
+    },
+    "isMemberOf": {
+      "category": "property",
+      "description": "Corresponds to 'collection' in the Ontology for Media Resources."
+    },
+    "isProvidedBy": {
+      "category": "property",
+      "description": "Corresponds to 'rating.identifier' in the Ontology for Media Resources."
+    },
+    "provides": {
+      "category": "property"
+    }
+  }
+}

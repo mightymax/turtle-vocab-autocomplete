@@ -1,0 +1,399 @@
+{
+  "iri": "http://www.w3.org/2006/time#",
+  "label": "OWL-Time",
+  "prefix": "time",
+  "items": {
+    "DateTimeDescription": {
+      "category": "class",
+      "description": "Descripción de fecha y tiempo estructurada con valores separados para los diferentes elementos de un sistema calendario-reloj. El sistema de referencia temporal está fijado al calendario gregoriano, y el rango de las propiedades año, mes, día restringidas a los correspondientes tipos del XML Schema xsd:gYear, xsd:gMonth y xsd:gDay respectivamente.",
+      "label": "Date-Time description"
+    },
+    "GeneralDateTimeDescription": {
+      "category": "class",
+      "description": "Descripción de fecha y hora estructurada con valores separados para los distintos elementos de un sistema calendario-reloj.",
+      "label": "Generalized date-time description"
+    },
+    "DateTimeInterval": {
+      "category": "class",
+      "description": "'intervalo de fecha-hora' es una subclase de 'intervalo propio', definida utilizando el multi-elemento 'descripción de fecha-hora'.",
+      "label": "Date-time interval"
+    },
+    "ProperInterval": {
+      "category": "class",
+      "description": "A temporal entity with non-zero extent or duration, i.e. for which the value of the beginning and end are different",
+      "label": "Proper interval"
+    },
+    "DayOfWeek": {
+      "category": "class",
+      "description": "El día de la semana",
+      "label": "Day of week"
+    },
+    "Duration": {
+      "category": "class",
+      "description": "Duración de una extensión temporal expresada como un número escalado por una unidad temporal.",
+      "label": "Time duration"
+    },
+    "TemporalDuration": {
+      "category": "class",
+      "description": "Extensión de tiempo; duración de un intervalo de tiempo independiente de su posición de inicio particular.",
+      "label": "Temporal duration"
+    },
+    "DurationDescription": {
+      "category": "class",
+      "description": "Descripción de extensión temporal estructurada con valores separados para los distintos elementos de un sistema de horario-calendario. El sistema de referencia temporal se fija al calendario gregoriano, y el intervalo de cada una de las propiedades numéricas se restringe a xsd:decimal.",
+      "label": "Duration description"
+    },
+    "GeneralDurationDescription": {
+      "category": "class",
+      "description": "Descripción de extensión temporal estructurada con valores separados para los distintos elementos de un sistema de horario-calendario.",
+      "label": "Generalized duration description"
+    },
+    "TemporalPosition": {
+      "category": "class",
+      "description": "A position on a time-line",
+      "label": "Temporal position"
+    },
+    "Instant": {
+      "category": "class",
+      "description": "A temporal entity with zero extent or duration",
+      "label": "Time instant"
+    },
+    "TemporalEntity": {
+      "category": "class",
+      "description": "A temporal interval or instant.",
+      "label": "Temporal entity"
+    },
+    "Interval": {
+      "category": "class",
+      "description": "A temporal entity with an extent or duration",
+      "label": "Time interval"
+    },
+    "January": {
+      "category": "class",
+      "label": "January"
+    },
+    "MonthOfYear": {
+      "category": "class",
+      "description": "El mes del año.",
+      "label": "Month of year"
+    },
+    "after": {
+      "category": "property",
+      "description": "Asume una dirección en el tiempo. Si una entidad temporal T1 está después de otra entidad temporal T2, entonces el principio de T1 está después del final de T2.",
+      "label": "after"
+    },
+    "TRS": {
+      "category": "class",
+      "description": "A temporal reference system, such as a temporal coordinate system (with an origin, direction, and scale), a calendar-clock combination, or a (possibly hierarchical) ordinal system.  This is a stub class, representing the set of all temporal reference systems.",
+      "label": "Temporal Reference System"
+    },
+    "before": {
+      "category": "property",
+      "description": "Asume una dirección en el tiempo. Si una entidad temporal T1 está antes que otra entidad temporal T2, entonces el final de T1 está antes que el principio de T2. Así, \"antes\" se puede considerar básica para instantes y derivada para intervalos.",
+      "label": "antes"
+    },
+    "TemporalUnit": {
+      "category": "class",
+      "description": "A standard duration, which provides a scale factor for a time extent, or the granularity or precision for a time position.",
+      "label": "Temporal unit"
+    },
+    "dayOfWeek": {
+      "category": "property",
+      "description": "The day of week, whose value is a member of the class time:DayOfWeek",
+      "label": "día de la semana"
+    },
+    "TimePosition": {
+      "category": "class",
+      "description": "A temporal position described using either a (nominal) value from an ordinal reference system, or a (numeric) value in a temporal coordinate system.",
+      "label": "Time position"
+    },
+    "hasBeginning": {
+      "category": "property",
+      "description": "Comienzo de una entidad temporal.",
+      "label": "has beginning"
+    },
+    "": {
+      "category": "class"
+    },
+    "hasTime": {
+      "category": "property",
+      "description": "Proporciona soporte a la asociación de una entidad temporal (instante o intervalo) a cualquier cosa.",
+      "label": "has time"
+    },
+    "TimeZone": {
+      "category": "class",
+      "description": "En esta implementación 'huso horario' no tiene definidas propiedades. Se debería pensar como una superclase \"abstracta\" de todas las implementaciones de huso horario específicas.",
+      "label": "Time Zone"
+    },
+    "hasDateTimeDescription": {
+      "category": "property",
+      "description": "Valor de intervalo de fecha-hora expresado como un valor estructurado. El principio y el final del intervalo coincide con los límites del elemento más corto en la descripción.",
+      "label": "has Date-Time description"
+    },
+    "Year": {
+      "category": "class",
+      "description": "Year duration",
+      "label": "Year"
+    },
+    "hasDuration": {
+      "category": "property",
+      "description": "Duración de una entidad temporal, evento o actividad, o cosa, expresada como un valor escalado.",
+      "label": "has duration"
+    },
+    "hasTemporalDuration": {
+      "category": "property",
+      "description": "Duración de una entidad temporal.",
+      "label": "has temporal duration"
+    },
+    "hasDurationDescription": {
+      "category": "property",
+      "description": "Duración de una entidad temporal, expresada utilizando una descripción estructurada.",
+      "label": "has duration description"
+    },
+    "hasEnd": {
+      "category": "property",
+      "description": "End of a temporal entity.",
+      "label": "has end"
+    },
+    "hasTRS": {
+      "category": "property",
+      "description": "El sistema de referencia temporal utilizado por una posición temporal o descripción de extensión.",
+      "label": "Temporal reference system used"
+    },
+    "inDateTime": {
+      "category": "property",
+      "description": "Posición de un instante, expresada utilizando una descripción estructurada.",
+      "label": "en descripción de fecha-hora"
+    },
+    "inTemporalPosition": {
+      "category": "property",
+      "description": "Posición de un instante de tiempo.",
+      "label": "Temporal position"
+    },
+    "inTimePosition": {
+      "category": "property",
+      "description": "Posición de un instante, expresada como una coordenada temporal o un valor nominal.",
+      "label": "Time position"
+    },
+    "inside": {
+      "category": "property",
+      "description": "An instant that falls inside the interval. It is not intended to include beginnings and ends of intervals.",
+      "label": "has time instant inside"
+    },
+    "intervalAfter": {
+      "category": "property",
+      "description": "If a proper interval T1 is intervalAfter another proper interval T2, then the beginning of T1 is after the end of T2.",
+      "label": "interval after"
+    },
+    "intervalDisjoint": {
+      "category": "property",
+      "description": "If a proper interval T1 is intervalDisjoint another proper interval T2, then the beginning of T1 is after the end of T2, or the end of T1 is before the beginning of T2, i.e. the intervals do not overlap in any way, but their ordering relationship is not known.",
+      "label": "interval disjoint"
+    },
+    "intervalBefore": {
+      "category": "property",
+      "description": "If a proper interval T1 is intervalBefore another proper interval T2, then the end of T1 is before the beginning of T2.",
+      "label": "interval before"
+    },
+    "intervalContains": {
+      "category": "property",
+      "description": "If a proper interval T1 is intervalContains another proper interval T2, then the beginning of T1 is before the beginning of T2, and the end of T1 is after the end of T2.",
+      "label": "interval contains"
+    },
+    "intervalDuring": {
+      "category": "property",
+      "description": "If a proper interval T1 is intervalDuring another proper interval T2, then the beginning of T1 is after the beginning of T2, and the end of T1 is before the end of T2.",
+      "label": "interval during"
+    },
+    "intervalIn": {
+      "category": "property",
+      "description": "If a proper interval T1 is intervalIn another proper interval T2, then the beginning of T1 is after the beginning of T2 or is coincident with the beginning of T2, and the end of T1 is before the end of T2, or is coincident with the end of T2, except that end of T1 may not be coincident with the end of T2 if the beginning of T1 is coincident with the beginning of T2.",
+      "label": "interval in"
+    },
+    "intervalEquals": {
+      "category": "property",
+      "description": "If a proper interval T1 is intervalEquals another proper interval T2, then the beginning of T1 is coincident with the beginning of T2, and the end of T1 is coincident with the end of T2.",
+      "label": "interval equals"
+    },
+    "intervalFinishedBy": {
+      "category": "property",
+      "description": "If a proper interval T1 is intervalFinishedBy another proper interval T2, then the beginning of T1 is before the beginning of T2, and the end of T1 is coincident with the end of T2.",
+      "label": "interval finished by"
+    },
+    "intervalFinishes": {
+      "category": "property",
+      "description": "If a proper interval T1 is intervalFinishes another proper interval T2, then the beginning of T1 is after the beginning of T2, and the end of T1 is coincident with the end of T2.",
+      "label": "interval finishes"
+    },
+    "intervalMeets": {
+      "category": "property",
+      "description": "If a proper interval T1 is intervalMeets another proper interval T2, then the end of T1 is coincident with the beginning of T2.",
+      "label": "interval meets"
+    },
+    "intervalMetBy": {
+      "category": "property",
+      "description": "If a proper interval T1 is intervalMetBy another proper interval T2, then the beginning of T1 is coincident with the end of T2.",
+      "label": "interval met by"
+    },
+    "intervalOverlappedBy": {
+      "category": "property",
+      "description": "If a proper interval T1 is intervalOverlappedBy another proper interval T2, then the beginning of T1 is after the beginning of T2, the beginning of T1 is before the end of T2, and the end of T1 is after the end of T2.",
+      "label": "interval overlapped by"
+    },
+    "intervalOverlaps": {
+      "category": "property",
+      "description": "Asume una dirección en el tiempo. Si una entidad temporal T1 está después de otra entidad temporal T2, entonces el principio de T1 está después del final de T2.",
+      "label": "interval overlaps"
+    },
+    "intervalStartedBy": {
+      "category": "property",
+      "description": "If a proper interval T1 is intervalStarted another proper interval T2, then the beginning of T1 is coincident with the beginning of T2, and the end of T1 is after the end of T2.",
+      "label": "interval started by"
+    },
+    "intervalStarts": {
+      "category": "property",
+      "description": "If a proper interval T1 is intervalStarts another proper interval T2, then the beginning of T1 is coincident with the beginning of T2, and the end of T1 is before the end of T2.",
+      "label": "interval starts"
+    },
+    "monthOfYear": {
+      "category": "property",
+      "description": "El mes del año, cuyo valor es un miembro de la clase 'mes del año'.",
+      "label": "mes del año"
+    },
+    "timeZone": {
+      "category": "property",
+      "description": "The time zone for clock elements in the temporal position",
+      "label": "en huso horario"
+    },
+    "unitType": {
+      "category": "property",
+      "description": "La unidad de tiempo que proporciona la precisión de un valor fecha-hora o la escala de una extensión temporal.",
+      "label": "temporal unit type"
+    },
+    "day": {
+      "category": "property",
+      "description": "Day position in a calendar-clock system.  The range of this property is not specified, so can be replaced by any specific representation of a calendar day from any calendar.",
+      "label": "day"
+    },
+    "dayOfYear": {
+      "category": "property",
+      "description": "El número de día en el año.",
+      "label": "day of year"
+    },
+    "days": {
+      "category": "property",
+      "description": "Longitud de, o elemento de la longitud de, una extensión temporal expresada en días.",
+      "label": "days duration"
+    },
+    "hasXSDDuration": {
+      "category": "property",
+      "description": "Extensión de una entidad temporal, expresada utilizando xsd:duration.",
+      "label": "has XSD duration"
+    },
+    "hour": {
+      "category": "property",
+      "description": "Hour position in a calendar-clock system.",
+      "label": "hora"
+    },
+    "hours": {
+      "category": "property",
+      "description": "Longitud de, o elemento de la longitud de, una extensión temporal expresada en horas.",
+      "label": "duración en horas"
+    },
+    "inXSDDate": {
+      "category": "property",
+      "description": "Posición de un instante, expresado utilizando xsd:date.",
+      "label": "en fecha XSD"
+    },
+    "inXSDDateTime": {
+      "category": "property",
+      "description": "Posición de un instante, expresado utilizando xsd:dateTime.",
+      "label": "en fecha-tiempo XSD"
+    },
+    "inXSDDateTimeStamp": {
+      "category": "property",
+      "description": "Posición de un instante, expresado utilizando xsd:dateTimeStamp.",
+      "label": "en fecha-sello de tiempo XSD"
+    },
+    "inXSDgYear": {
+      "category": "property",
+      "description": "Posición de un instante, expresado utilizando xsd:gYear.",
+      "label": "en año gregoriano XSD"
+    },
+    "inXSDgYearMonth": {
+      "category": "property",
+      "description": "Posición de un instante, expresado utilizando xsd:gYearMonth.",
+      "label": "en año-mes gregoriano XSD"
+    },
+    "minute": {
+      "category": "property",
+      "description": "Minute position in a calendar-clock system.",
+      "label": "minute"
+    },
+    "minutes": {
+      "category": "property",
+      "description": "Longitud de, o elemento de la longitud de, una extensión temporal expresada en minutos.",
+      "label": "minutes"
+    },
+    "month": {
+      "category": "property",
+      "description": "Month position in a calendar-clock system.  The range of this property is not specified, so can be replaced by any specific representation of a calendar month from any calendar.",
+      "label": "mes"
+    },
+    "months": {
+      "category": "property",
+      "description": "Longitud de, o elemento de la longitud de, una extensión temporal expresada en meses.",
+      "label": "duración en meses"
+    },
+    "nominalPosition": {
+      "category": "property",
+      "description": "El valor (nominal) que indica posición temporal en un sistema de referencia ordinal.",
+      "label": "Name of temporal position"
+    },
+    "numericDuration": {
+      "category": "property",
+      "description": "Valor de una extensión temporal expresada como un número decimal escalado por una unidad de tiempo.",
+      "label": "Numeric value of temporal duration"
+    },
+    "numericPosition": {
+      "category": "property",
+      "description": "El valor (numérico) que indica posición temporal en un sistema de referencia ordinal.",
+      "label": "Numeric value of temporal position"
+    },
+    "second": {
+      "category": "property",
+      "description": "Posición de segundo en un sistema calendario-reloj.",
+      "label": "second"
+    },
+    "seconds": {
+      "category": "property",
+      "description": "Longitud de, o elemento de la longitud de, una extensión temporal expresada en segundos.",
+      "label": "duración en segundos"
+    },
+    "weeks": {
+      "category": "property",
+      "description": "Longitud de, o elemento de la longitud de, una extensión temporal expresada en semanas.",
+      "label": "duración en semanas"
+    },
+    "years": {
+      "category": "property",
+      "description": "Longitud de, o elemento de la longitud de, una extensión temporal expresada en años.",
+      "label": "duración en años"
+    },
+    "week": {
+      "category": "property",
+      "description": "Las semanas están numeradas de forma diferente dependiendo del calendario en uso y de las convenciones lingüísticas y culturales locales (locale en inglés). El ISO-8601 especifica que la primera semana del año incluye al menos cuatro días, y que el lunes es el primer día de la semana. En ese sistema, la semana 1 es la semana que contiene el primer jueves del año.",
+      "label": "semana"
+    },
+    "xsdDateTime": {
+      "category": "property",
+      "description": "Valor de 'intervalo de fecha-hora' expresado como un valor compacto.",
+      "label": "has XSD date-time"
+    },
+    "year": {
+      "category": "property",
+      "description": "Posición de año en un sistema calendario-reloj.  l rango de esta propiedad no está especificado, por tanto, se puede reemplazar por cualquier representación específica de un año de calendario de un calendario cualquiera.",
+      "label": "year"
+    }
+  }
+}

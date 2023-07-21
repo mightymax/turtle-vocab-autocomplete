@@ -1,0 +1,218 @@
+{
+  "iri": "http://www.opengis.net/ont/gml#",
+  "prefix": "gml",
+  "items": {
+    "AbstractCurveSegment": {
+      "category": "class",
+      "label": "Abstract Curve Segment"
+    },
+    "AbstractGeometricPrimitive": {
+      "category": "class",
+      "label": "Abstract Geometric Primitive"
+    },
+    "AbstractGeometry": {
+      "category": "class",
+      "label": "Abstract Geometry"
+    },
+    "AbstractGriddedSurface": {
+      "category": "class",
+      "label": "Abstract Gridded Surface"
+    },
+    "AbstractParametricCurveSurface": {
+      "category": "class",
+      "label": "Abstract Parametric Curve Surface"
+    },
+    "AbstractSurfacePatch": {
+      "category": "class",
+      "label": "Abstract Surface Patch"
+    },
+    "Arc": {
+      "category": "class",
+      "label": "Arc"
+    },
+    "ArcString": {
+      "category": "class",
+      "label": "Arc String"
+    },
+    "ArcByBulge": {
+      "category": "class",
+      "label": "Arc by Bulge"
+    },
+    "ArcStringByBulge": {
+      "category": "class",
+      "label": "Arc String by Bulge"
+    },
+    "ArcByCenterPoint": {
+      "category": "class",
+      "label": "Arc by Center Point"
+    },
+    "BSpline": {
+      "category": "class",
+      "label": "BSpline"
+    },
+    "SplineCurve": {
+      "category": "class",
+      "label": "Spline Curve"
+    },
+    "Bezier": {
+      "category": "class",
+      "label": "Bezier"
+    },
+    "Circle": {
+      "category": "class",
+      "label": "Circle"
+    },
+    "CircleByCenterPoint": {
+      "category": "class",
+      "label": "CircleByCenterPoint"
+    },
+    "Clothoid": {
+      "category": "class",
+      "label": "Clothoid"
+    },
+    "Composite": {
+      "category": "class",
+      "label": "Composite"
+    },
+    "GeometricComplex": {
+      "category": "class",
+      "label": "Geometric Complex"
+    },
+    "CompositeCurve": {
+      "category": "class",
+      "label": "Composite Curve"
+    },
+    "OrientableCurve": {
+      "category": "class",
+      "label": "Orientable Curve"
+    },
+    "CompositeSolid": {
+      "category": "class",
+      "label": "Composite Solid"
+    },
+    "Solid": {
+      "category": "class",
+      "label": "Solid"
+    },
+    "CompositeSurface": {
+      "category": "class",
+      "label": "Composite Surface"
+    },
+    "OrientableSurface": {
+      "category": "class",
+      "label": "Orientable Surface"
+    },
+    "Cone": {
+      "category": "class",
+      "label": "Cone"
+    },
+    "CubicSpline": {
+      "category": "class",
+      "label": "Cubic Spline"
+    },
+    "PolynomialSpline": {
+      "category": "class",
+      "label": "Polynomial Spline"
+    },
+    "Curve": {
+      "category": "class",
+      "label": "Curve"
+    },
+    "Cylinder": {
+      "category": "class",
+      "label": "Cylinder"
+    },
+    "Geodesic": {
+      "category": "class",
+      "label": "Geodesic"
+    },
+    "GeodesicString": {
+      "category": "class",
+      "label": "Geodesic String"
+    },
+    "LineString": {
+      "category": "class",
+      "label": "Line String"
+    },
+    "LineStringSegment": {
+      "category": "class",
+      "label": "Line String Segment"
+    },
+    "LinearRing": {
+      "category": "class",
+      "label": "Linear Ring"
+    },
+    "Ring": {
+      "category": "class",
+      "label": "Ring"
+    },
+    "MultiCurve": {
+      "category": "class",
+      "label": "Multi-Curve"
+    },
+    "MultiGeometry": {
+      "category": "class",
+      "label": "Multi-Geometry"
+    },
+    "MultiPoint": {
+      "category": "class",
+      "label": "Multi-Point"
+    },
+    "MultiSolid": {
+      "category": "class",
+      "label": "Multi-Solid"
+    },
+    "MultiSurface": {
+      "category": "class",
+      "label": "Multi-Surface"
+    },
+    "OffsetCurve": {
+      "category": "class",
+      "label": "Offset Curve"
+    },
+    "Point": {
+      "category": "class",
+      "label": "Point"
+    },
+    "Polygon": {
+      "category": "class",
+      "label": "Polygon"
+    },
+    "Surface": {
+      "category": "class",
+      "label": "Surface"
+    },
+    "PolygonPatch": {
+      "category": "class",
+      "label": "Polygon Patch"
+    },
+    "PolyhedralSurface": {
+      "category": "class",
+      "label": "Polyhedral Surface"
+    },
+    "Rectangle": {
+      "category": "class",
+      "label": "Rectangle"
+    },
+    "Shell": {
+      "category": "class",
+      "label": "Shell"
+    },
+    "Sphere": {
+      "category": "class",
+      "label": "Sphere"
+    },
+    "Tin": {
+      "category": "class",
+      "label": "Triangulated Irregular Network"
+    },
+    "TriangulatedSurface": {
+      "category": "class",
+      "label": "Triangulated Surface"
+    },
+    "Triangle": {
+      "category": "class",
+      "label": "Triangle"
+    }
+  }
+}

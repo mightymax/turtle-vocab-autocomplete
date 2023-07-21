@@ -1,0 +1,1763 @@
+{
+  "iri": "http://www.w3.org/ns/dpv#",
+  "description": "The Data Privacy Vocabulary [DPV] enables expressing machine-readable metadata about the use and processing of personal data based on legislative requirements such as the General Data Protection Regulation [GDPR]. This document describes the DPV specification along with its data model.",
+  "label": "Data Privacy Vocabulary",
+  "prefix": "dpv",
+  "items": {
+    "AcademicResearch": {
+      "category": "class",
+      "description": "conduct or assist with research conducted in an academic context e.g. within universities",
+      "label": "Academic Research"
+    },
+    "ResearchAndDevelopment": {
+      "category": "class",
+      "description": "conduct research and development for new methods, products, or services",
+      "label": "Research and Development"
+    },
+    "Accent": {
+      "category": "class",
+      "description": "Information about an linguistic and speech accents.",
+      "label": "Accent"
+    },
+    "Language": {
+      "category": "class",
+      "description": "Information about language and lingual history.",
+      "label": "Language"
+    },
+    "AccessControl": {
+      "category": "class",
+      "description": "conduct or enforce access control",
+      "label": "Access Control"
+    },
+    "Security": {
+      "category": "class",
+      "description": "ensure and enforce security e.g. of data",
+      "label": "Security"
+    },
+    "AccessControlMethod": {
+      "category": "class",
+      "description": "Methods which restrict access to a place or resource",
+      "label": "Access Control Method"
+    },
+    "TechnicalMeasure": {
+      "category": "class",
+      "description": "Technical measures required/followed when processing data of the declared category",
+      "label": "Technical Measure"
+    },
+    "AccountIdentifier": {
+      "category": "class",
+      "description": "Information about financial account identifier.",
+      "label": "Account Identifier"
+    },
+    "FinancialAccount": {
+      "category": "class",
+      "description": "Information about financial accounts.",
+      "label": "Financial Account"
+    },
+    "Acquantaince": {
+      "category": "class",
+      "description": "Information about acquaintainces in a social network.",
+      "label": "Acquantaince"
+    },
+    "SocialNetwork": {
+      "category": "class",
+      "description": "Information about friends or connections expressed as a social network",
+      "label": "Social Network"
+    },
+    "Acquire": {
+      "category": "class",
+      "description": "to come into possession or control of the data",
+      "label": "Acquire"
+    },
+    "Obtain": {
+      "category": "class",
+      "description": "to solicit or gather data from someone",
+      "label": "Obtain"
+    },
+    "Adapt": {
+      "category": "class",
+      "description": "to modify the data, often rewritten into a new form for a new use",
+      "label": "Adapt"
+    },
+    "Transform": {
+      "category": "class",
+      "description": "to change the form or nature of data",
+      "label": "Transform"
+    },
+    "Advertising": {
+      "category": "class",
+      "description": "Advertising is a subset of Marketing. Advertising by itself does not indicate 'personalisation' i.e. personalised ads.",
+      "label": "Advertising"
+    },
+    "Marketing": {
+      "category": "class",
+      "description": "carry out marketing i.e. promoting, selling, and distributing a product or service",
+      "label": "Marketing"
+    },
+    "Age": {
+      "category": "class",
+      "description": "Information about age",
+      "label": "Age"
+    },
+    "PhysicalCharacteristic": {
+      "category": "class",
+      "description": "Information about physical characteristics",
+      "label": "PhysicalCharacteristic"
+    },
+    "Align": {
+      "category": "class",
+      "description": "to adjust the data to be in relation to another data",
+      "label": "Align"
+    },
+    "Alter": {
+      "category": "class",
+      "description": "to change the data withouth changing it into something else",
+      "label": "Alter"
+    },
+    "Analyse": {
+      "category": "class",
+      "description": "to study or examine the data in detail",
+      "label": "Analyse"
+    },
+    "Use": {
+      "category": "class",
+      "description": "to use data",
+      "label": "Use"
+    },
+    "Anonymise": {
+      "category": "class",
+      "description": "to irreversibly alter personal data in such a way that a unique data subject can no longer be identified directly or indirectly or in combination with other data",
+      "label": "Anonymise"
+    },
+    "Anonymization": {
+      "category": "class",
+      "description": "Alterting personal data irreversibly such that a data subject can no longer be identified directly or indirectly, either by the data controller alone or in collaboration with any other party",
+      "label": "Anonymization"
+    },
+    "PseudoAnonymization": {
+      "category": "class",
+      "description": "PseudoAnonmyization or 'pseudonymisation’ means the processing of personal data in such a manner that the personal data can no longer be attributed to a specific data subject without the use of additional information, provided that such additional information is kept separately and is subject to technical and organisational measures to ensure that the personal data are not attributed to an identified or identifiable natural person;",
+      "label": "Pseudo-Anonymization"
+    },
+    "ApartmentOwned": {
+      "category": "class",
+      "description": "Information about apartement(s) owned and its history",
+      "label": "Apartment Owned"
+    },
+    "HouseOwned": {
+      "category": "class",
+      "description": "Information about house(s) owned and ownership history.",
+      "label": "House Owned"
+    },
+    "Association": {
+      "category": "class",
+      "description": "Information about associations in a social network with other individuals, groups, or entities e.g. friend of a friend",
+      "label": "Association"
+    },
+    "Attitude": {
+      "category": "class",
+      "description": "Information about attitude.",
+      "label": "Attitude"
+    },
+    "Behavioral": {
+      "category": "class",
+      "description": "Information about behavior or activity",
+      "label": "Behavioral"
+    },
+    "Authenticating": {
+      "category": "class",
+      "description": "Information about authentication and information used for authenticating",
+      "label": "Authenticating"
+    },
+    "Internal": {
+      "category": "class",
+      "description": "Informatoin about internal characteristics that cannot be seen or observed",
+      "label": "Internal"
+    },
+    "AuthenticationHistory": {
+      "category": "class",
+      "description": "Information about prior authentication and its outcomes such as login attempts or location.",
+      "label": "Authentication History"
+    },
+    "AuthenticationProtocols": {
+      "category": "class",
+      "description": "Protocols involving validation of identity i.e. authentication of a person or information",
+      "label": "Authentication Protocols"
+    },
+    "AuthorisationProcedure": {
+      "category": "class",
+      "description": "non-technical authorisation procedures: How is it described on an organisational level, who gets access to the data",
+      "label": "Authorisation Procedure"
+    },
+    "OrganisationalMeasure": {
+      "category": "class",
+      "description": "Organisational measures required/followed when processing data of the declared category",
+      "label": "Organisational Measure"
+    },
+    "Authority": {
+      "category": "class",
+      "description": "An authority with the power to create or enforce laws, or determine their compliance.",
+      "label": "Authority"
+    },
+    "LegalEntity": {
+      "category": "class",
+      "description": "A human or non-human that constitute as a legally defined entity",
+      "label": "Legal Entity"
+    },
+    "AutomatedDecisionMaking": {
+      "category": "class",
+      "description": "Processing that involves automated decision making",
+      "label": "Automated Decision Making"
+    },
+    "BankAccount": {
+      "category": "class",
+      "description": "Information about bank accounts.",
+      "label": "Bank Account"
+    },
+    "External": {
+      "category": "class",
+      "description": "Information about external characteristics that can be observed",
+      "label": "External"
+    },
+    "Biometric": {
+      "category": "class",
+      "description": "Information about biometrics and biometric characteristics.",
+      "label": "Biometric"
+    },
+    "Identifying": {
+      "category": "class",
+      "description": "Information that uniquely or semi-uniquely identifies an individual or a group",
+      "label": "Identifying"
+    },
+    "SpecialCategoryPersonalData": {
+      "category": "class",
+      "description": "trade union membership, which is explicitly included in the taxative listing in GDPR Art. 9 (1), is not covered yet.",
+      "label": "Special Category Personal Data"
+    },
+    "BloodType": {
+      "category": "class",
+      "description": "Information about blood type.",
+      "label": "Blood Type"
+    },
+    "MedicalHealth": {
+      "category": "class",
+      "description": "Information about health, medical conditions or health care",
+      "label": "MedicalHealth"
+    },
+    "BrowserFingerprint": {
+      "category": "class",
+      "description": "Information about the web browser which is used as a 'fingerprint'",
+      "label": "Browser Fingerprint"
+    },
+    "DeviceBased": {
+      "category": "class",
+      "description": "Information about devices",
+      "label": "Device Based"
+    },
+    "BrowsingBehavior": {
+      "category": "class",
+      "description": "Information about browsing behaviour.",
+      "label": "Browsing Behavior"
+    },
+    "BrowsingReferral": {
+      "category": "class",
+      "description": "Information about web browsing referrer or referral, which can be based on location, targeted referrals, direct, organic search, social media or actions, campaigns.",
+      "label": "Browsing Referral"
+    },
+    "CallLog": {
+      "category": "class",
+      "description": "Information about the calls that an individual has made.",
+      "label": "Call Log"
+    },
+    "CarOwned": {
+      "category": "class",
+      "description": "Information about cars ownership and ownership history.",
+      "label": "Car Owned"
+    },
+    "Ownership": {
+      "category": "class",
+      "description": "Information about ownership and history, including renting, borrowing, possessions.",
+      "label": "Ownership"
+    },
+    "Certification": {
+      "category": "class",
+      "description": "Certification mechanisms, seals, and marks for the purpose of demonstrating compliance",
+      "label": "Certification"
+    },
+    "CertificationSeal": {
+      "category": "class",
+      "description": "Certifications, seals, and marks indicating compliance to regulations or practices",
+      "label": "Certification and Seal"
+    },
+    "Character": {
+      "category": "class",
+      "description": "Information about character in the public sphere",
+      "label": "Character"
+    },
+    "PublicLife": {
+      "category": "class",
+      "description": "Information about public life",
+      "label": "Public Life"
+    },
+    "Child": {
+      "category": "class",
+      "description": "The legality of age defining a child varies by jurisdiction. In addition, 'child' is distinct from a 'minor'. For example, the legal age drinking alcohol can be 21, which makes a person of age 20 a 'minor' in this context. In other cases, 'minor' and 'child' are used interchangeably to refer to a person below some legally defined age.",
+      "label": "Child"
+    },
+    "DataSubject": {
+      "category": "class",
+      "description": "The term 'data subject' is specific to the GDPR, but is functionally equivalent to the term 'individual' and the ISO/IEC term 'PII Principle'.",
+      "label": "Data Subject"
+    },
+    "CodeOfConduct": {
+      "category": "class",
+      "description": "A set of rules or procedures outlining the norms and practices for conducting activities",
+      "label": "Code of Conduct"
+    },
+    "GuidelinesPrinciple": {
+      "category": "class",
+      "description": "Guidelines or Principles regarding processing and operational measures",
+      "label": "GuidelinesPrinciple"
+    },
+    "Collect": {
+      "category": "class",
+      "description": "to gather data from someone",
+      "label": "Collect"
+    },
+    "Combine": {
+      "category": "class",
+      "description": "to join or merge data",
+      "label": "Combine"
+    },
+    "CommercialInterest": {
+      "category": "class",
+      "description": "carry out activities with a commercial interest i.e. of profit or benefit to the Controller",
+      "label": "Commercial Interest"
+    },
+    "Purpose": {
+      "category": "class",
+      "description": "The purpose of processing personal data",
+      "label": "Purpose"
+    },
+    "CommercialResearch": {
+      "category": "class",
+      "description": "conduct research in a commercial setting e.g. in a company",
+      "label": "Commercial Research"
+    },
+    "Communication": {
+      "category": "class",
+      "description": "Information communicated from or to an individual",
+      "label": "Communication"
+    },
+    "Social": {
+      "category": "class",
+      "description": "Information about social aspects such as family, public life, or professional networks.",
+      "label": "Social"
+    },
+    "CommunicationForCustomerCare": {
+      "category": "class",
+      "description": "communicate with users via email, phone, sms, chat or push messages regarding your requests.",
+      "label": "Communication for Customer Care"
+    },
+    "CustomerCare": {
+      "category": "class",
+      "description": "provide assistance for customer complaints and satisfaction",
+      "label": "Customer Care"
+    },
+    "CommunicationsMetadata": {
+      "category": "class",
+      "description": "Information about communication metadata in the public sphere",
+      "label": "Communications Metadata"
+    },
+    "Connection": {
+      "category": "class",
+      "description": "Information about and including connections in a social network",
+      "label": "Connection"
+    },
+    "Consent": {
+      "category": "class",
+      "description": "Consent of the data subject regarding processing of their personal data",
+      "label": "Consent"
+    },
+    "Consult": {
+      "category": "class",
+      "description": "to consult or query data",
+      "label": "Consult"
+    },
+    "Consultation": {
+      "category": "class",
+      "description": "Consultation is a process of receving feedback, advice, or opinion from an external agency",
+      "label": "Consultation"
+    },
+    "ConsultationWithAuthority": {
+      "category": "class",
+      "description": "Consultation with an authority or authoritative entity",
+      "label": "Consultation with Authority"
+    },
+    "Contact": {
+      "category": "class",
+      "description": "Information about contacts or used for contacting e.g. email address or phone number",
+      "label": "Contact"
+    },
+    "Tracking": {
+      "category": "class",
+      "description": "Information used to track an individual or group e.g. location or email",
+      "label": "Tracking"
+    },
+    "Context": {
+      "category": "class",
+      "description": "The 'context' or 'scope' of the purpose, e.g. restriction to a certain business sector",
+      "label": "Context"
+    },
+    "Contract": {
+      "category": "class",
+      "description": "Contractual terms governing data handling within the data controller",
+      "label": "Contract"
+    },
+    "LegalAgreement": {
+      "category": "class",
+      "description": "A legally binding agreement",
+      "label": "Legal Agreement"
+    },
+    "Copy": {
+      "category": "class",
+      "description": "to produce an exact reprodution of the data",
+      "label": "Copy"
+    },
+    "Processing": {
+      "category": "class",
+      "description": "The processing performed on personal data",
+      "label": "Processing"
+    },
+    "Country": {
+      "category": "class",
+      "description": "Information about country e.g. residence, travel.",
+      "label": "Country"
+    },
+    "Location": {
+      "category": "class",
+      "description": "Information about location",
+      "label": "Location"
+    },
+    "CreateEventRecommendations": {
+      "category": "class",
+      "description": "create and provide personalised recommendations for events",
+      "label": "Create Event Recommendations"
+    },
+    "CreatePersonalizedRecommendations": {
+      "category": "class",
+      "description": "create and provide personalised recommendations",
+      "label": "Create Personalized Recommendations"
+    },
+    "ServicePersonalization": {
+      "category": "class",
+      "description": "personalise service or activity",
+      "label": "Service Personalization"
+    },
+    "CreateProductRecommendations": {
+      "category": "class",
+      "description": "create product recommendations e.g. suggest similar products",
+      "label": "Create Product Recommendations"
+    },
+    "Credit": {
+      "category": "class",
+      "description": "Information about reputation with regards to money",
+      "label": "Credit"
+    },
+    "Transactional": {
+      "category": "class",
+      "description": "Information about an purchasing, spending or income",
+      "label": "Transactional"
+    },
+    "CreditCapacity": {
+      "category": "class",
+      "description": "Information about credit capacity.",
+      "label": "Credit Capacity"
+    },
+    "CreditCardNumber": {
+      "category": "class",
+      "description": "Information about credit card number",
+      "label": "Credit Card Number"
+    },
+    "PaymentCardNumber": {
+      "category": "class",
+      "description": "Information about payment card number.",
+      "label": "Payment Card Number"
+    },
+    "CreditRecord": {
+      "category": "class",
+      "description": "Information about credit record.",
+      "label": "Credit Record"
+    },
+    "CreditScore": {
+      "category": "class",
+      "description": "Information about credit score.",
+      "label": "Credit Score"
+    },
+    "CreditWorthiness": {
+      "category": "class",
+      "description": "Information about credit worthiness.",
+      "label": "Credit Worthiness"
+    },
+    "CreditStanding": {
+      "category": "class",
+      "description": "Information about credit standing.",
+      "label": "Credit Standing"
+    },
+    "Criminal": {
+      "category": "class",
+      "description": "Information about criminal activity e.g. criminal convictions or jail time",
+      "label": "Criminal"
+    },
+    "CriminalCharge": {
+      "category": "class",
+      "description": "Information about criminal charges.",
+      "label": "Criminal Charge"
+    },
+    "CriminalConviction": {
+      "category": "class",
+      "description": "Information about criminal convictions.",
+      "label": "Criminal Conviction"
+    },
+    "CriminalPardon": {
+      "category": "class",
+      "description": "Information about criminal pardons.",
+      "label": "Criminal Pardon"
+    },
+    "ServiceProvision": {
+      "category": "class",
+      "description": "provide service or activity",
+      "label": "Service Provision"
+    },
+    "DNACode": {
+      "category": "class",
+      "description": "Information about DNA.",
+      "label": "DNA Code"
+    },
+    "DPIA": {
+      "category": "class",
+      "description": "Top class: Impact Assessment, and DPIA is sub-class",
+      "label": "Data Protection Impact Assessment (DPIA)"
+    },
+    "ImpactAssessment": {
+      "category": "class",
+      "description": "Calculating or determining the likelihood of impact of an existing or proposed process, which can involve risks or detriments.",
+      "label": "Impact Assessment"
+    },
+    "DataController": {
+      "category": "class",
+      "description": "The terms 'Controller' is usually the more common form of indicating a Data Controller. In ISO/IEC the term 'PII Controller' is used.",
+      "label": "Data Controller"
+    },
+    "DataProcessor": {
+      "category": "class",
+      "description": "A ‘processor’ means a natural or legal person, public authority, agency or other body which processes personal data on behalf of the controller.",
+      "label": "Data Processor"
+    },
+    "Recipient": {
+      "category": "class",
+      "description": "A recipient of personal data can be used to indicate any entity that receives personal data. This can be a Third Party, Processor (GDPR), or even a Controller.",
+      "label": "Recipient"
+    },
+    "DataProtectionAuthority": {
+      "category": "class",
+      "description": "An authority tasked with overseeing legal compliance regarding privacy and data protection laws.",
+      "label": "Data Protection Authority"
+    },
+    "DataProtectionOfficer": {
+      "category": "class",
+      "description": "An entity within or authorised by an organisation to monitor internal compliance, inform and advise on your data protection obligations and act as a contact point for data subjects and the supervisory authority.",
+      "label": "Data Protection Officer"
+    },
+    "DataSource": {
+      "category": "class",
+      "description": "Source is direct point of data collection; 'origin' would indicate the original/others points of where the data originates from",
+      "label": "Data Source"
+    },
+    "DataSubProcessor": {
+      "category": "class",
+      "description": "sub-processor' is a commonly used term similar to 'sub-contractor' and does not have a specific legal definition",
+      "label": "Data Sub-Processor"
+    },
+    "DataSubjectRight": {
+      "category": "class",
+      "description": "Based on use of definitions, the notion of 'Data Subject Right' can be equivalent to 'Individual Right' or 'Right of a Person'",
+      "label": "Data Subject Right"
+    },
+    "Right": {
+      "category": "class",
+      "description": "A 'right' is a legal, social, or ethical principle of freedom or entitlement which dictate the norms regarding what is allowed or owed.. Rights as a concept encompass a broad area of norms and entities, and are not specific to Individuals or Data Protection / Privacy. For individual specific rights, see dpv:DataSubjectRight",
+      "label": "Right"
+    },
+    "DeIdentification": {
+      "category": "class",
+      "description": "Conversion of identifiable personal data (PII) to un-identifiable personal data",
+      "label": "De-Identification"
+    },
+    "DeliveryOfGoods": {
+      "category": "class",
+      "description": "deliver goods and services",
+      "label": "Delivery of Goods"
+    },
+    "Demeanor": {
+      "category": "class",
+      "description": "Information about demeanor.",
+      "label": "Demeanor"
+    },
+    "Demographic": {
+      "category": "class",
+      "description": "Information about demography and demographic characteristics",
+      "label": "Demographic"
+    },
+    "Derive": {
+      "category": "class",
+      "description": "to create new derivative data from the original data",
+      "label": "Derive"
+    },
+    "DerivedPersonalData": {
+      "category": "class",
+      "description": "Derived data is data that is obtained or derived from other data.",
+      "label": "Derived Personal Data"
+    },
+    "PersonalDataCategory": {
+      "category": "class",
+      "description": "For a formal legal definition of personal data, see GDPR Art.4-1. An informal definition consists of any data directly or indirectly associated or related to an individual. This definition is equivalent to ISO/IEC definition of Personally Identifiable Information (PII).",
+      "label": "Personal Data Category"
+    },
+    "DesignStandard": {
+      "category": "class",
+      "description": "A set of rules or guidelines outlining criterias for design",
+      "label": "Design Standard"
+    },
+    "Destruct": {
+      "category": "class",
+      "description": "to process data in a way it no longer exists or cannot be repaired",
+      "label": "Destruct"
+    },
+    "Remove": {
+      "category": "class",
+      "description": "to destruct or erase data",
+      "label": "Remove"
+    },
+    "DeviceApplications": {
+      "category": "class",
+      "description": "Information about applications or application-like software on a device.",
+      "label": "Device Applications"
+    },
+    "DeviceSoftware": {
+      "category": "class",
+      "description": "Information about software on or related to a device.",
+      "label": "Device Software"
+    },
+    "DeviceOperatingSystem": {
+      "category": "class",
+      "description": "Information about the operating system (OS) or system software that manages hardware or software resources.",
+      "label": "Device Operating System"
+    },
+    "Dialect": {
+      "category": "class",
+      "description": "Information about linguistic dialects.",
+      "label": "Dialect"
+    },
+    "DirectMarketing": {
+      "category": "class",
+      "description": "carry out direct marketing i.e. marketing communicated directly to the individual",
+      "label": "Direct Marketing"
+    },
+    "Disability": {
+      "category": "class",
+      "description": "Information about disabilities.",
+      "label": "Disability"
+    },
+    "DisciplinaryAction": {
+      "category": "class",
+      "description": "Information about disciplinary actions and its history",
+      "label": "Disciplinary Action"
+    },
+    "Professional": {
+      "category": "class",
+      "description": "Information about educational or professional career",
+      "label": "Professional"
+    },
+    "Disclose": {
+      "category": "class",
+      "description": "to make data known",
+      "label": "Disclose"
+    },
+    "DiscloseByTransmission": {
+      "category": "class",
+      "description": "to disclose data by means of transmission",
+      "label": "Disclose by Transmission"
+    },
+    "Dislike": {
+      "category": "class",
+      "description": "Information about dislikes or preferences regarding repulsions.",
+      "label": "Dislike"
+    },
+    "Interest": {
+      "category": "class",
+      "description": "Information about interests",
+      "label": "Interest"
+    },
+    "Disseminate": {
+      "category": "class",
+      "description": "to spread data throughout",
+      "label": "Disseminate"
+    },
+    "Divorce": {
+      "category": "class",
+      "description": "Information about divorce(s).",
+      "label": "Divorce"
+    },
+    "FamilyStructure": {
+      "category": "class",
+      "description": "Information about family and familial structure.",
+      "label": "Family Structure"
+    },
+    "DrugTestResult": {
+      "category": "class",
+      "description": "Information about drug test results.",
+      "label": "Drug Test Result"
+    },
+    "EmailAddress": {
+      "category": "class",
+      "description": "Information about Email address.",
+      "label": "Email Address"
+    },
+    "EmailContent": {
+      "category": "class",
+      "description": "Information about the contents of Emails sent or recevied",
+      "label": "Email Content"
+    },
+    "EmploymentHistory": {
+      "category": "class",
+      "description": "Information about employment history",
+      "label": "Employment History"
+    },
+    "EncryptionInRest": {
+      "category": "class",
+      "description": "Encryption of data when being stored (persistent encryption)",
+      "label": "Encryption in Rest"
+    },
+    "PseudonymisationEncryption": {
+      "category": "class",
+      "description": "Technical measures consisting of pseudoanonymization and encryption",
+      "label": "Pseudonymisation and Encryption"
+    },
+    "EncryptionInTransfer": {
+      "category": "class",
+      "description": "Encryption of data in transit e.g. when being transferred from one location to another, including sharing",
+      "label": "Encryption in Transfer"
+    },
+    "Erase": {
+      "category": "class",
+      "description": "to delete data",
+      "label": "Erase"
+    },
+    "EthnicOrigin": {
+      "category": "class",
+      "description": "Information about ethnic origin",
+      "label": "Ethnic Origin"
+    },
+    "Ethnicity": {
+      "category": "class",
+      "description": "Information about ethnic origins and lineage",
+      "label": "Ethnicity"
+    },
+    "hasAddress": {
+      "category": "property",
+      "description": "Specifies address of a legal entity such as street address or pin code",
+      "label": "has address"
+    },
+    "EvaluationScoring": {
+      "category": "class",
+      "description": "Processing that involves evaluation and scoring of individuals",
+      "label": "Evaluation and Scoring"
+    },
+    "Family": {
+      "category": "class",
+      "description": "Information about family and relationships",
+      "label": "Family"
+    },
+    "hasAlgorithmicLogic": {
+      "category": "property",
+      "description": "Indicates the logic used  in procdessing such as for automated decision making",
+      "label": "has algorithmic logic"
+    },
+    "FamilyHealthHistory": {
+      "category": "class",
+      "description": "Information about family health history.",
+      "label": "Family Health History"
+    },
+    "hasConsentNotice": {
+      "category": "property",
+      "description": "The actual notice that the Data Subject received to consent to, either a text or link to a document, which should be usable to decide whether the form or consent was compliant to legislation, e.g. documenting how the user has been informed about rights and implications (such as, right to data portability,right to recitffy, right to erasure, right to restrict processing, right to object, rights regarding automated decision making or profiling, processors, third parties, sub-processors, outside-EEA transfers, automated decision-making, or other necessary details of the privacy-policy). Can be TextOrDocumentOrURI.",
+      "label": "has consent notice"
+    },
+    "HealthHistory": {
+      "category": "class",
+      "description": "Information about health history.",
+      "label": "Health History"
+    },
+    "hasConsequences": {
+      "category": "property",
+      "description": "Indicates consequences of processing such as for those for Data Subjects in relation to automated decision making",
+      "label": "has consequences"
+    },
+    "Favorite": {
+      "category": "class",
+      "description": "Information about favorites",
+      "label": "Favorite"
+    },
+    "hasContact": {
+      "category": "property",
+      "description": "Specifies contact details of a legal entity such as phone  or email",
+      "label": "has contact"
+    },
+    "Preference": {
+      "category": "class",
+      "description": "Information about preferences or interests",
+      "label": "Preference"
+    },
+    "hasContext": {
+      "category": "property",
+      "description": "Indiciates a purpose is restricted to the specified context(s)",
+      "label": "has context"
+    },
+    "FavoriteColor": {
+      "category": "class",
+      "description": "Information about favorite color.",
+      "label": "Favorite Color"
+    },
+    "hasDataController": {
+      "category": "property",
+      "description": "Indicates association with a Data Controller.",
+      "label": "has data controller"
+    },
+    "FavoriteFood": {
+      "category": "class",
+      "description": "Information about favorite food.",
+      "label": "Favorite Food"
+    },
+    "hasDataSource": {
+      "category": "property",
+      "description": "Indicates the source or origin of data being processed",
+      "label": "has data source"
+    },
+    "FavoriteMusic": {
+      "category": "class",
+      "description": "Information about favorite music.",
+      "label": "Favorite Music"
+    },
+    "hasDataSubject": {
+      "category": "property",
+      "description": "Indicates association with a specific Data Subject or a group or category of Data Subjects.",
+      "label": "has data subject"
+    },
+    "Fetish": {
+      "category": "class",
+      "description": "Information an individual's sexual fetishes",
+      "label": "Fetish"
+    },
+    "hasDuration": {
+      "category": "property",
+      "description": "Indicates information about duration",
+      "label": "has duration"
+    },
+    "Sexual": {
+      "category": "class",
+      "description": "Information about sexuality and sexual history",
+      "label": "Sexual"
+    },
+    "hasExpiry": {
+      "category": "property",
+      "description": "Generic property specifying when or under which condition(s) the consent will expire",
+      "label": "has expiry"
+    },
+    "Financial": {
+      "category": "class",
+      "description": "Information about finance including monetary characteristics and transactions",
+      "label": "Financial"
+    },
+    "hasExpiryCondition": {
+      "category": "property",
+      "description": "Can be TextOrDocumentOrURI",
+      "label": "has expiry condition"
+    },
+    "FinancialAccountNumber": {
+      "category": "class",
+      "description": "Information about financial account number",
+      "label": "Financial Account Number"
+    },
+    "hasExpiryTime": {
+      "category": "property",
+      "description": "Specifies the expiry time or duration for consent",
+      "label": "has expiry time"
+    },
+    "Fingerprint": {
+      "category": "class",
+      "description": "Information about fingerprint used for biometric purposes.",
+      "label": "Fingerprint"
+    },
+    "hasHumanInvolvement": {
+      "category": "property",
+      "description": "Human involvement is also relevant to 'human in the loop'",
+      "label": "has human involvement"
+    },
+    "FraudPreventionAndDetection": {
+      "category": "class",
+      "description": "detect and prevent fraud",
+      "label": "Fraud Prevention and Detection"
+    },
+    "hasIdentifier": {
+      "category": "property",
+      "description": "Specifies an identifier for the entity such as registeration number or official ID",
+      "label": "has identifier"
+    },
+    "Friend": {
+      "category": "class",
+      "description": "Information about friends in a social network, including aspects of friendships such as years together or nature of friendship.",
+      "label": "Friend"
+    },
+    "hasLegalBasis": {
+      "category": "property",
+      "description": "Indicates applicability of a Legal Basis.",
+      "label": "has legal basis"
+    },
+    "GPSCoordinate": {
+      "category": "class",
+      "description": "Information about location expressed using Global Position System coordinates (GPS)",
+      "label": "GPS Coordinate"
+    },
+    "hasLocation": {
+      "category": "property",
+      "description": "Indicates information about location",
+      "label": "has location"
+    },
+    "Gender": {
+      "category": "class",
+      "description": "Information about gender",
+      "label": "Gender"
+    },
+    "hasName": {
+      "category": "property",
+      "description": "Specifies name of a legal entity",
+      "label": "has name"
+    },
+    "GeneralReputation": {
+      "category": "class",
+      "description": "Information about reputation in the public sphere",
+      "label": "General Reputation"
+    },
+    "hasPersonalDataCategory": {
+      "category": "property",
+      "description": "Indicates association with a Personal Data Category.",
+      "label": "has personal data category"
+    },
+    "Geographic": {
+      "category": "class",
+      "description": "Information about location or based on geography (e.g., home address)",
+      "label": "Geographic"
+    },
+    "hasProcessing": {
+      "category": "property",
+      "description": "Indicates association with a Processing (of personal data) instance or category.",
+      "label": "has processing"
+    },
+    "GroupMembership": {
+      "category": "class",
+      "description": "Information about groups and memberships included or associated with in a social network",
+      "label": "Group Membership"
+    },
+    "hasProvisionBy": {
+      "category": "property",
+      "description": "Normally this would be the dataSubject, but in some exceptional cases, the consent might be given on behalf by someone else, e.g. parents of minors.",
+      "label": "has provision by"
+    },
+    "HairColor": {
+      "category": "class",
+      "description": "Information about hair colour",
+      "label": "Hair Color"
+    },
+    "hasProvisionByJustification": {
+      "category": "property",
+      "description": "This field can be used to proivde a justification why the provision was provided by another DataSubject or legal entity,  e.g. declariing the relationship (parent, guardian), in combination with the field provisionBy",
+      "label": "has provision by justification"
+    },
+    "Health": {
+      "category": "class",
+      "description": "Information about health.",
+      "label": "Health"
+    },
+    "hasProvisionMethod": {
+      "category": "property",
+      "description": "Can be used to record information of how consent was provided e.g. by a click to a form, in writing, etc., by logging into a system and confirm per email, or with some additional authentication, etc.",
+      "label": "has provision method"
+    },
+    "HealthRecord": {
+      "category": "class",
+      "description": "Information about health record.",
+      "label": "Health Record"
+    },
+    "hasProvisionTime": {
+      "category": "property",
+      "description": "Specifies the instant in time when consent was given",
+      "label": "has provision time"
+    },
+    "Height": {
+      "category": "class",
+      "description": "Information about physical height",
+      "label": "Height"
+    },
+    "hasPurpose": {
+      "category": "property",
+      "description": "Indicates assocation with a Purpose (of processing personal data).",
+      "label": "has purpose"
+    },
+    "Historical": {
+      "category": "class",
+      "description": "Information about historical data related to or relevant regarding history or past events",
+      "label": "Historical"
+    },
+    "hasRecipient": {
+      "category": "property",
+      "description": "Indicates a recipient of personal data.",
+      "label": "has recipient"
+    },
+    "IPAddress": {
+      "category": "class",
+      "description": "Information about the Internet protocol (IP) address of a device",
+      "label": "IP Address"
+    },
+    "hasRepresentative": {
+      "category": "property",
+      "description": "Specifies representative of the legal entity",
+      "label": "has representative"
+    },
+    "IdentityVerification": {
+      "category": "class",
+      "description": "verify and authorise identity",
+      "label": "Identity Verification"
+    },
+    "hasRight": {
+      "category": "property",
+      "description": "Indicates applicability of a Right.",
+      "label": "has right"
+    },
+    "ImproveExistingProductsAndServices": {
+      "category": "class",
+      "description": "improve existing products and services",
+      "label": "Improve Existing Products and Services"
+    },
+    "hasRisk": {
+      "category": "property",
+      "description": "Indicates applicability of a Risk.",
+      "label": "has risk"
+    },
+    "OptimisationForController": {
+      "category": "class",
+      "description": "optimise activities and services for the Controller",
+      "label": "Optimisation for Controller"
+    },
+    "hasSector": {
+      "category": "property",
+      "description": "Indicates the purpose is associated with activities in the indicated (Economic) Sector(s)",
+      "label": "has sector"
+    },
+    "ImproveInternalCRMProcesses": {
+      "category": "class",
+      "description": "improve customer-relationship management (CRM) processes",
+      "label": "Improve Internal CRM Processes"
+    },
+    "hasStorage": {
+      "category": "property",
+      "description": "Indicates information about storage",
+      "label": "has storage"
+    },
+    "Income": {
+      "category": "class",
+      "description": "Information about financial income e.g. for individual or household or family",
+      "label": "Income"
+    },
+    "hasTechnicalOrganisationalMeasure": {
+      "category": "property",
+      "description": "Indicates use of a Technical or Organisational measure.",
+      "label": "has technical and organisational measure"
+    },
+    "IncomeBracket": {
+      "category": "class",
+      "description": "Information about income bracket.",
+      "label": "Income Bracket"
+    },
+    "hasWithdrawalBy": {
+      "category": "property",
+      "description": "Normally this would be the dataSubject, but in some exceptional cases, the consent might be withdraawn on behalf by someone else, e.g. parents of minors.",
+      "label": "has withdrawal by"
+    },
+    "IncreaseServiceRobustness": {
+      "category": "class",
+      "description": "improve the robustness and resilience of services",
+      "label": "Increase Service Robustness"
+    },
+    "hasWithdrawalByJustification": {
+      "category": "property",
+      "description": "This field can be used to proivde a justification why the weithdrawal was done by another DataSubject or legal entity, e.g. declariing the relationship (parent, guardian), in combination with the field withdrawalBy",
+      "label": "has withdrawal by justification"
+    },
+    "IndividualHealthHistory": {
+      "category": "class",
+      "description": "Information about information health history.",
+      "label": "Individual Health History"
+    },
+    "hasWithdrawalMethod": {
+      "category": "property",
+      "description": "Can be used to record information of how to withdraw consent, e.g. by a click to a form, in writing, etc., by logging into a system and confirm per email, or with some additional authentication, etc.",
+      "label": "has withdrawal method"
+    },
+    "InnovativeUseOfNewTechnologies": {
+      "category": "class",
+      "description": "Processing that involves use of innovative and new technologies",
+      "label": "Innovative Use of New Technologies"
+    },
+    "hasWithdrawalTime": {
+      "category": "property",
+      "description": "Specifies the instant in time when consent was withdrawn",
+      "label": "has withdrawal time"
+    },
+    "Intention": {
+      "category": "class",
+      "description": "Information about intentions",
+      "label": "Intention"
+    },
+    "isExplicit": {
+      "category": "property",
+      "description": "The conditions for what is considered 'explicit consent' differ by norms and laws.",
+      "label": "is explicit"
+    },
+    "Interaction": {
+      "category": "class",
+      "description": "Information about interactions in the public sphere",
+      "label": "Interaction"
+    },
+    "measureImplementedBy": {
+      "category": "property",
+      "description": "a generic Property to describe how the measure is implemented",
+      "label": "measure implemented by"
+    },
+    "InternalResourceOptimisation": {
+      "category": "class",
+      "description": "optimise internal resources used by the organisation e.g. resource usage",
+      "label": "Internal Resource Optimisation"
+    },
+    "mitigatesRisk": {
+      "category": "property",
+      "description": "Indicates mitigation of risk(s)",
+      "label": "mitigates risk"
+    },
+    "Job": {
+      "category": "class",
+      "description": "Information about professional jobs",
+      "label": "Job"
+    },
+    "KnowledgeBelief": {
+      "category": "class",
+      "description": "Information about knowledge and beliefs",
+      "label": "Knowledge and Beliefs"
+    },
+    "LargeScaleProcessing": {
+      "category": "class",
+      "description": "Processing that takes place at large scales",
+      "label": "Large Scale Processing"
+    },
+    "LegalBasis": {
+      "category": "class",
+      "description": "Legal basis (plural: legal bases) are defined by legislations and regulations, whose applicability is usually restricted to specific jurisdictions.",
+      "label": "Legal Basis"
+    },
+    "LegalCompliance": {
+      "category": "class",
+      "description": "fulfil obligations or requirements towards achieving compliance with law or regulations.",
+      "label": "Legal Compliance"
+    },
+    "LifeHistory": {
+      "category": "class",
+      "description": "Information about personal history regarding events or activities - including  their occurences that might be directly related or have had an influence (e.g. World War, 9/11)",
+      "label": "Life History"
+    },
+    "Like": {
+      "category": "class",
+      "description": "Information about likes or preferences regarding attractions.",
+      "label": "Like"
+    },
+    "LinkClicked": {
+      "category": "class",
+      "description": "Information about the links that an individual has clicked.",
+      "label": "LinkClicked"
+    },
+    "LoanRecord": {
+      "category": "class",
+      "description": "Information about loans, whether applied, provided or rejected, and its history",
+      "label": "Loan Record"
+    },
+    "MACAddress": {
+      "category": "class",
+      "description": "Information about the Media Access Control (MAC) address of a device",
+      "label": "MAC Address"
+    },
+    "MakeAvailable": {
+      "category": "class",
+      "description": "to transform or publish data to be used",
+      "label": "Make Available"
+    },
+    "MaritalStatus": {
+      "category": "class",
+      "description": "Information about marital status and history",
+      "label": "Marital Status"
+    },
+    "Marriage": {
+      "category": "class",
+      "description": "Information about marriage(s).",
+      "label": "Marriage"
+    },
+    "MatchingCombining": {
+      "category": "class",
+      "description": "Processing that involves matching and combining of personal data",
+      "label": "Matching and Combining"
+    },
+    "MentalHealth": {
+      "category": "class",
+      "description": "Information about mental health.",
+      "label": "Mental Health"
+    },
+    "Move": {
+      "category": "class",
+      "description": "to move data from one location to another including deleting the original copy",
+      "label": "Move"
+    },
+    "Transfer": {
+      "category": "class",
+      "description": "to move data from one place to another",
+      "label": "Transfer"
+    },
+    "NDA": {
+      "category": "class",
+      "description": "Non-disclosure Agreements e.g. preserving confidentiality of information",
+      "label": "Non-Disclosure Agreement (NDA)"
+    },
+    "Name": {
+      "category": "class",
+      "description": "Information about names associated or used as given name or nickname.",
+      "label": "Name"
+    },
+    "NonCommercialResearch": {
+      "category": "class",
+      "description": "conduct research in a non-commercial setting e.g. for a non-profit-organisation (NGO)",
+      "label": "Non-Commercial Research"
+    },
+    "OfficialID": {
+      "category": "class",
+      "description": "Information about an official identifier or identification document",
+      "label": "Official ID"
+    },
+    "Offspring": {
+      "category": "class",
+      "description": "Information about offspring(s).",
+      "label": "Offspring"
+    },
+    "Opinion": {
+      "category": "class",
+      "description": "Information about opinions",
+      "label": "Opinion"
+    },
+    "OptimisationForConsumer": {
+      "category": "class",
+      "description": "optimise activities and services for the consumer or user",
+      "label": "Optimisation for Consumer"
+    },
+    "ServiceOptimization": {
+      "category": "class",
+      "description": "optimise service or activity",
+      "label": "Service Optimization"
+    },
+    "OptimiseUserInterface": {
+      "category": "class",
+      "description": "optimise interfaces presented to the user",
+      "label": "Optimise User Interface"
+    },
+    "TechnicalOrganisationalMeasure": {
+      "category": "class",
+      "description": "The Technical and Organisational measures used.",
+      "label": "Technical and Organisational Measure"
+    },
+    "Organise": {
+      "category": "class",
+      "description": "to organize data for arranging or classifying",
+      "label": "Organise"
+    },
+    "PIA": {
+      "category": "class",
+      "description": "Carrying out an impact assessment regarding privacy risks",
+      "label": "Privacy Impact Assessment"
+    },
+    "PINCode": {
+      "category": "class",
+      "description": "Information about Personal identification number (PIN), which is usually used in the process of authenticating the individual as a user accessing a system.",
+      "label": "PIN Code"
+    },
+    "Parent": {
+      "category": "class",
+      "description": "Information about parent(s).",
+      "label": "Parent"
+    },
+    "Password": {
+      "category": "class",
+      "description": "Information about password used in the process of authenticating the individual as a user accessing a system.",
+      "label": "Password"
+    },
+    "Payment": {
+      "category": "class",
+      "description": "process users’ payment transactions.",
+      "label": "Payment"
+    },
+    "PaymentCard": {
+      "category": "class",
+      "description": "Information about payment card such as Credit Card, Debit Card.",
+      "label": "Payment Card"
+    },
+    "PaymentCardExpiry": {
+      "category": "class",
+      "description": "Information about payment card expiry such as a date.",
+      "label": "Payment Card Expiry"
+    },
+    "PersonalDataHandling": {
+      "category": "class",
+      "description": "A high-level Class to describe 'data handling'. This can consist of personal data being processed for a purpose, involving entities, using technical and organisational, applicable risks, rights, and legal basis.",
+      "label": "Personal Data Handling"
+    },
+    "PersonalPossession": {
+      "category": "class",
+      "description": "Information about personal possessions.",
+      "label": "Personal Possession"
+    },
+    "PersonalisedAdvertising": {
+      "category": "class",
+      "description": "provide personalised advertising",
+      "label": "Personalised Advertising"
+    },
+    "PersonalisedBenefits": {
+      "category": "class",
+      "description": "personalise benefits received by the user",
+      "label": "Personalised Benefits"
+    },
+    "Personality": {
+      "category": "class",
+      "description": "Information about personality (e.g., categorization in terms of the Big Five personality traits)",
+      "label": "Personality"
+    },
+    "PhilosophicalBelief": {
+      "category": "class",
+      "description": "Information about philosophical beliefs.",
+      "label": "Philosophical Belief"
+    },
+    "PhysicalAddress": {
+      "category": "class",
+      "description": "Information about physical address.",
+      "label": "Physical Address"
+    },
+    "PhysicalHealth": {
+      "category": "class",
+      "description": "Information about physical health.",
+      "label": "Physical Health"
+    },
+    "PhysicalTrait": {
+      "category": "class",
+      "description": "Information about defining traits or features regarding the body.",
+      "label": "Physical Trait"
+    },
+    "Picture": {
+      "category": "class",
+      "description": "Information about visual representation or image e.g. profile photo.",
+      "label": "Picture"
+    },
+    "Piercing": {
+      "category": "class",
+      "description": "Information about piercings",
+      "label": "Piercing"
+    },
+    "PoliticalAffiliation": {
+      "category": "class",
+      "description": "Information about political affiliation and history",
+      "label": "Political Affiliation"
+    },
+    "Prescription": {
+      "category": "class",
+      "description": "Information about medical and pharmaceutical prescriptions",
+      "label": "Prescription"
+    },
+    "PrivacyByDefault": {
+      "category": "class",
+      "description": "Practices regarding selecting appropriate data protection and privacy measures as the 'default' in an activity or service",
+      "label": "Privacy by Default"
+    },
+    "PrivacyByDesign": {
+      "category": "class",
+      "description": "Practices regarding incorporating data protection and privacy in the design of information and services",
+      "label": "Privacy by Design"
+    },
+    "RiskManagementProcedure": {
+      "category": "class",
+      "description": "Data Protection Impact Assessments as per GDPR art 35, other Privacy Impact Assessments, threat severity assessment https://www.cnil.fr/en/privacy-impact-assessment-pia",
+      "label": "Risk Management Procedure"
+    },
+    "PrivacyPreference": {
+      "category": "class",
+      "description": "Information about privacy preferences",
+      "label": "Privacy Preference"
+    },
+    "Proclivitie": {
+      "category": "class",
+      "description": "Information about proclivities in a sexual context",
+      "label": "Proclivitie"
+    },
+    "ProfessionalCertification": {
+      "category": "class",
+      "description": "Information about professional certifications",
+      "label": "Professional Certification"
+    },
+    "ProfessionalEvaluation": {
+      "category": "class",
+      "description": "Information about professional evaluations",
+      "label": "Professional Evaluation"
+    },
+    "ProfessionalInterview": {
+      "category": "class",
+      "description": "Information about professional interviews",
+      "label": "Professional Interview"
+    },
+    "Profiling": {
+      "category": "class",
+      "description": "to create a profile that describes or represents a person",
+      "label": "Profiling"
+    },
+    "PseudoAnonymise": {
+      "category": "class",
+      "description": "to replace personal identifiable information by artificial identifiers",
+      "label": "Pseudo-Anonymise"
+    },
+    "Purchase": {
+      "category": "class",
+      "description": "Information about purchases such as items bought e.g. grocery or clothing",
+      "label": "Purchase"
+    },
+    "PurchasesAndSpendingHabit": {
+      "category": "class",
+      "description": "Information about analysis of purchases made and money spent expressed as a habit e.g. monthly shopping trends",
+      "label": "Purchases and Spending Habit"
+    },
+    "Race": {
+      "category": "class",
+      "description": "Information about race or recial history.",
+      "label": "Race"
+    },
+    "Record": {
+      "category": "class",
+      "description": "to make a record (especially media)",
+      "label": "Record"
+    },
+    "Reference": {
+      "category": "class",
+      "description": "Information about references in the professional context",
+      "label": "Reference"
+    },
+    "RegistrationAuthentication": {
+      "category": "class",
+      "description": "register, authenticate, and identify in context of a service.",
+      "label": "Registration and Authentication"
+    },
+    "RegularityOfRecertification": {
+      "category": "class",
+      "description": "Policy regarding repetition or renewal of existing certification(s)",
+      "label": "Regularity of Re-certification"
+    },
+    "Relationship": {
+      "category": "class",
+      "description": "Information about relationships and relationship history.",
+      "label": "Relationship"
+    },
+    "Religion": {
+      "category": "class",
+      "description": "Information about religion, religious inclinations, and religious history.",
+      "label": "Religion"
+    },
+    "ReligiousBelief": {
+      "category": "class",
+      "description": "Information about religion and religious beliefs.",
+      "label": "Religious Belief"
+    },
+    "Representative": {
+      "category": "class",
+      "description": "A representative of a legal entity",
+      "label": "Representative"
+    },
+    "Restrict": {
+      "category": "class",
+      "description": "to apply a restriction on the processsing of specific records",
+      "label": "Restrict"
+    },
+    "Retina": {
+      "category": "class",
+      "description": "Information about retina and the retinal patterns.",
+      "label": "Retina"
+    },
+    "Retrieve": {
+      "category": "class",
+      "description": "to retrieve data, often in an automated manner",
+      "label": "Retrieve"
+    },
+    "Risk": {
+      "category": "class",
+      "description": "Risks can be associated with one or more different concepts such as purpose, processing, personal data, technical or organisational measure.",
+      "label": "Risk"
+    },
+    "RiskMitigationMeasure": {
+      "category": "class",
+      "description": "Measures intended to mitigate, minimise, or prevent risk.",
+      "label": "Risk Mitigation Measure"
+    },
+    "RoomNumber": {
+      "category": "class",
+      "description": "Information about location expressed as Room number or similar numbering systems",
+      "label": "Room Number"
+    },
+    "Salary": {
+      "category": "class",
+      "description": "Information about salary",
+      "label": "Salary"
+    },
+    "Sale": {
+      "category": "class",
+      "description": "Information about sales e.g. selling of goods or services",
+      "label": "Sale"
+    },
+    "School": {
+      "category": "class",
+      "description": "Information about school such as name of school, conduct, or grades obtained.",
+      "label": "School"
+    },
+    "Seal": {
+      "category": "class",
+      "description": "A seal or a mark indicating proof of certification to some certification or standard",
+      "label": "Seal"
+    },
+    "SecretText": {
+      "category": "class",
+      "description": "Information about secret text used in the process of authenticating the individual as a user accessing a system, e.g., when recovering a lost password.",
+      "label": "Secret Text"
+    },
+    "Sector": {
+      "category": "class",
+      "description": "There are various sector codes used commonly to indicate the domain of an organisation or business. Examples include NACE (EU), ISIC (UN), SIC and NAICS (USA).",
+      "label": "Sector"
+    },
+    "SellDataToThirdParties": {
+      "category": "class",
+      "description": "sell data or information to third parties",
+      "label": "Sell Data to Third Parties"
+    },
+    "SellInsightsFromData": {
+      "category": "class",
+      "description": "sell or commercially provide insights obtained from analysis of data",
+      "label": "Sell Insights from Data"
+    },
+    "SellProductsToDataSubject": {
+      "category": "class",
+      "description": "sell products or services",
+      "label": "Sell Products to Data Subject"
+    },
+    "SellTargettedAdvertisements": {
+      "category": "class",
+      "description": "sell or provide targetted advertisements",
+      "label": "Sell Targetted Advertisements"
+    },
+    "ServiceConsumptionBehavior": {
+      "category": "class",
+      "description": "Information about the consumption of a service, e.g. time and duration of consumption.",
+      "label": "Service Consumption Behavior"
+    },
+    "SexualHistory": {
+      "category": "class",
+      "description": "Information about sexual history",
+      "label": "Sexual History"
+    },
+    "SexualPreference": {
+      "category": "class",
+      "description": "Information about sexual preferences",
+      "label": "Sexual Preference"
+    },
+    "Share": {
+      "category": "class",
+      "description": "to give data (or a portion of it) to others",
+      "label": "Share"
+    },
+    "Sibling": {
+      "category": "class",
+      "description": "Information about sibling(s).",
+      "label": "Sibling"
+    },
+    "SingleSignOn": {
+      "category": "class",
+      "description": "Use of credentials or processes that enable using one set of credentials to authenticate multiple contexts.",
+      "label": "Single Sign On"
+    },
+    "SkinTone": {
+      "category": "class",
+      "description": "Information about skin tone",
+      "label": "Skin Tone"
+    },
+    "SocialMediaCommunication": {
+      "category": "class",
+      "description": "Information about social media communication, including the communication itself and metadata.",
+      "label": "Social Media Communication"
+    },
+    "SocialMediaMarketing": {
+      "category": "class",
+      "description": "market through and on social media.",
+      "label": "Social Media"
+    },
+    "SocialStatus": {
+      "category": "class",
+      "description": "Information about social status",
+      "label": "Social Status"
+    },
+    "StaffTraining": {
+      "category": "class",
+      "description": "Practices and policies regarding training of staff members",
+      "label": "Staff Training"
+    },
+    "StorageDeletion": {
+      "category": "class",
+      "description": "Deletion or Erasure of data including any deletion guarantees",
+      "label": "Storage Deletion"
+    },
+    "StorageRestriction": {
+      "category": "class",
+      "description": "Restrictions required or followed regarding storage of data",
+      "label": "Storage Restriction"
+    },
+    "StorageDuration": {
+      "category": "class",
+      "description": "Duration or temporal entity denoting limitation on storage of personal data",
+      "label": "Storage Duration"
+    },
+    "StorageLocation": {
+      "category": "class",
+      "description": "Location or goespatial scope where the data is stored",
+      "label": "Storage Location"
+    },
+    "StorageRestoration": {
+      "category": "class",
+      "description": "Regularity and temporal span of data restoration/backup mechanisms that guarantee that data is preserved",
+      "label": "Storage Restoration"
+    },
+    "Store": {
+      "category": "class",
+      "description": "to keep data for future use",
+      "label": "Store"
+    },
+    "Structure": {
+      "category": "class",
+      "description": "to arrange data according to a structure",
+      "label": "Structure"
+    },
+    "SystematicMonitoring": {
+      "category": "class",
+      "description": "Processing that involves systematic monitoring of individuals",
+      "label": "Systematic Monitoring"
+    },
+    "TVViewingBehavior": {
+      "category": "class",
+      "description": "Information about TV viewing behavior, such as timestamps of channel change, duration of viewership, content consumed",
+      "label": "TV Viewing Behavior"
+    },
+    "Tattoo": {
+      "category": "class",
+      "description": "Information about tattoos",
+      "label": "Tattoo"
+    },
+    "Tax": {
+      "category": "class",
+      "description": "Information about financial tax e.g. tax records or tax due",
+      "label": "Tax"
+    },
+    "TelephoneNumber": {
+      "category": "class",
+      "description": "Information about telephone number.",
+      "label": "Telephone Number"
+    },
+    "ThirdParty": {
+      "category": "class",
+      "description": "A ‘third party’ means a natural or legal person, public authority, agency or body other than the data subject, controller, processor and persons who, under the direct authority of the controller or processor, are authorised to process personal data;",
+      "label": "Third Party"
+    },
+    "Thought": {
+      "category": "class",
+      "description": "Information about thoughts",
+      "label": "Thought"
+    },
+    "Transaction": {
+      "category": "class",
+      "description": "Information about financial transactions e.g. bank transfers",
+      "label": "Transaction"
+    },
+    "Transmit": {
+      "category": "class",
+      "description": "to send out data",
+      "label": "Transmit"
+    },
+    "UID": {
+      "category": "class",
+      "description": "Information about unique identifiers.",
+      "label": "UID"
+    },
+    "UsageAnalytics": {
+      "category": "class",
+      "description": "calculate, analyse, and report user behaviour and events for a service or product.",
+      "label": "Analytics"
+    },
+    "UserInterfacePersonalisation": {
+      "category": "class",
+      "description": "personalise interfaces presented to the user",
+      "label": "User Interface Personalisation"
+    },
+    "Username": {
+      "category": "class",
+      "description": "Information about usernames.",
+      "label": "Username"
+    },
+    "VoiceCommunicationRecording": {
+      "category": "class",
+      "description": "Information about vocal recorded communication (e.g. telephony, VoIP)",
+      "label": "Voice Communication Recording"
+    },
+    "VoiceMail": {
+      "category": "class",
+      "description": "Information about voice mail messages.",
+      "label": "Voice Mail"
+    },
+    "VulnerableDataSubject": {
+      "category": "class",
+      "description": "Data Subjects which should be considered 'vulnerable' and therefore would require additional measures and safeguards",
+      "label": "Vulnerable Data Subject"
+    },
+    "Weight": {
+      "category": "class",
+      "description": "Information about physical weight",
+      "label": "Weight"
+    },
+    "WorkHistory": {
+      "category": "class",
+      "description": "Information about work history in a professional context",
+      "label": "Work History"
+    }
+  }
+}

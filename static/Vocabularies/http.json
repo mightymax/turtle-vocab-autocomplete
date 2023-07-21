@@ -1,0 +1,203 @@
+{
+  "iri": "http://www.w3.org/2011/http#",
+  "description": "A namespace for describing HTTP messages (http://www.w3.org/Protocols/rfc2616/rfc2616.html)",
+  "label": "HTTP in RDF",
+  "prefix": "http",
+  "items": {
+    "Connection": {
+      "category": "class",
+      "description": "A connection used for HTTP transfer.",
+      "label": "Connection"
+    },
+    "EntityHeader": {
+      "category": "class",
+      "description": "An entity header in an HTTP message.",
+      "label": "Entity Header"
+    },
+    "MessageHeader": {
+      "category": "class",
+      "description": "A header in an HTTP message.",
+      "label": "Message Header"
+    },
+    "GeneralHeader": {
+      "category": "class",
+      "description": "A general header in an HTTP message.",
+      "label": "General Header"
+    },
+    "HeaderElement": {
+      "category": "class",
+      "description": "A part of a deconstructed header value.",
+      "label": "Header Element"
+    },
+    "HeaderName": {
+      "category": "class",
+      "description": "A header name.",
+      "label": "Header Name"
+    },
+    "Message": {
+      "category": "class",
+      "description": "An HTTP message.",
+      "label": "Message"
+    },
+    "Method": {
+      "category": "class",
+      "description": "The HTTP method used for the request.",
+      "label": "Method"
+    },
+    "Parameter": {
+      "category": "class",
+      "description": "A parameter for a part of a header value.",
+      "label": "Parameter"
+    },
+    "Request": {
+      "category": "class",
+      "description": "An HTTP request.",
+      "label": "Request"
+    },
+    "RequestHeader": {
+      "category": "class",
+      "description": "A header in an HTTP request message.",
+      "label": "Request Header"
+    },
+    "Response": {
+      "category": "class",
+      "description": "An HTTP response.",
+      "label": "Response"
+    },
+    "ResponseHeader": {
+      "category": "class",
+      "description": "A header in an HTTP response message.",
+      "label": "Response Header"
+    },
+    "StatusCode": {
+      "category": "class",
+      "description": "The status code of an HTTP response.",
+      "label": "Status code"
+    },
+    "absolutePath": {
+      "category": "property",
+      "description": "The absolute path sort of request URI.",
+      "label": "Absolute path"
+    },
+    "requestURI": {
+      "category": "property",
+      "description": "The request URI of an HTTP request.",
+      "label": "Request URI"
+    },
+    "absoluteURI": {
+      "category": "property",
+      "description": "The absolute request URI.",
+      "label": "Absolute URI"
+    },
+    "authority": {
+      "category": "property",
+      "description": "The authority sort of request URI.",
+      "label": "Authority"
+    },
+    "body": {
+      "category": "property",
+      "description": "The entity body of an HTTP message.",
+      "label": "Entity Body"
+    },
+    "connectionAuthority": {
+      "category": "property",
+      "description": "The authority of a connection used for the HTTP transfer.",
+      "label": "Connection authority"
+    },
+    "elementName": {
+      "category": "property",
+      "description": "The name of a header element.",
+      "label": "Header element name"
+    },
+    "elementValue": {
+      "category": "property",
+      "description": "The value of a header element.",
+      "label": "Header element value"
+    },
+    "fieldName": {
+      "category": "property",
+      "description": "The name of an HTTP header field.",
+      "label": "Field name"
+    },
+    "fieldValue": {
+      "category": "property",
+      "description": "The value of an HTTP header field.",
+      "label": "Field value"
+    },
+    "hdrName": {
+      "category": "property",
+      "description": "The name of an HTTP header.",
+      "label": "Header name"
+    },
+    "headerElements": {
+      "category": "property",
+      "description": "The deconstructed parts of an HTTP header value.",
+      "label": "Header elements"
+    },
+    "headers": {
+      "category": "property",
+      "description": "The headers in an HTTP message.",
+      "label": "Headers"
+    },
+    "httpVersion": {
+      "category": "property",
+      "description": "The HTTP version of an HTTP message.",
+      "label": "HTTP version"
+    },
+    "methodName": {
+      "category": "property",
+      "description": "The HTTP method name used for the HTTP request.",
+      "label": "Method name"
+    },
+    "mthd": {
+      "category": "property",
+      "description": "The HTTP method used for the HTTP request.",
+      "label": "Method"
+    },
+    "paramName": {
+      "category": "property",
+      "description": "The name of a parameter in a part of a deconstructed HTTP header value.",
+      "label": "Parameter name"
+    },
+    "paramValue": {
+      "category": "property",
+      "description": "The value of a parameter in a part of a deconstructed HTTP header value.",
+      "label": "Parameter value"
+    },
+    "params": {
+      "category": "property",
+      "description": "The parameters in a part of a deconstructed HTTP header value.",
+      "label": "Header parameters"
+    },
+    "reasonPhrase": {
+      "category": "property",
+      "description": "The reason phrase (status text) of an HTTP response.",
+      "label": "Reason phrase"
+    },
+    "requests": {
+      "category": "property",
+      "description": "The HTTP requests made via a connection.",
+      "label": "Requests"
+    },
+    "resp": {
+      "category": "property",
+      "description": "The HTTP response sent in answer to an HTTP request.",
+      "label": "Response"
+    },
+    "sc": {
+      "category": "property",
+      "description": "The status code of an HTTP response.",
+      "label": "Status code"
+    },
+    "statusCodeNumber": {
+      "category": "property",
+      "description": "The status code number.",
+      "label": "Status code"
+    },
+    "statusCodeValue": {
+      "category": "property",
+      "description": "The status code value of an HTTP response.",
+      "label": "Status code"
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "iri": "http://www.w3.org/2011/content#",
+  "description": "Representing Content in RDF as defined by http://www.w3.org/TR/Content-in-RDF/",
+  "label": "Representing Content in RDF",
+  "prefix": "cnt",
+  "items": {
+    "Content": {
+      "category": "class",
+      "description": "The content.",
+      "label": "Content"
+    },
+    "ContentAsBase64": {
+      "category": "class",
+      "description": "The base64 encoded content (can be used for binary content).",
+      "label": "Base64 content"
+    },
+    "ContentAsText": {
+      "category": "class",
+      "description": "The text content (can be used for text content).",
+      "label": "Text content"
+    },
+    "ContentAsXML": {
+      "category": "class",
+      "description": "The XML content (can only be used for XML-wellformed content).",
+      "label": "XML content"
+    },
+    "DoctypeDecl": {
+      "category": "class",
+      "description": "The document type declaration.",
+      "label": "Document type declaration"
+    },
+    "bytes": {
+      "category": "property",
+      "description": "The Base64 encoded byte sequence of the content.",
+      "label": "Base64 encoded byte sequence"
+    },
+    "characterEncoding": {
+      "category": "property",
+      "description": "The character encoding used to create a character sequence from a byte sequence or vice versa.",
+      "label": "Character encoding"
+    },
+    "chars": {
+      "category": "property",
+      "description": "The character sequence of the text content.",
+      "label": "Character sequence"
+    },
+    "declaredEncoding": {
+      "category": "property",
+      "description": "The character encoding declared in the XML declaration.",
+      "label": "XML character encoding"
+    },
+    "doctypeName": {
+      "category": "property",
+      "description": "The document type name.",
+      "label": "Document type name"
+    },
+    "dtDecl": {
+      "category": "property",
+      "description": "The document type declaration.",
+      "label": "Document type declaration"
+    },
+    "internalSubset": {
+      "category": "property",
+      "description": "The internal document type definition subset within the document type declarations.",
+      "label": "Internal DTD subset"
+    },
+    "leadingMisc": {
+      "category": "property",
+      "description": "The XML content preceding the document type declaration.",
+      "label": "XML leading misc"
+    },
+    "publicId": {
+      "category": "property",
+      "description": "The document type declarations's public identifier.",
+      "label": "Public ID"
+    },
+    "rest": {
+      "category": "property",
+      "description": "The XML content following the document type declaration.",
+      "label": "XML rest"
+    },
+    "standalone": {
+      "category": "property",
+      "description": "The standalone declaration in the XML declaration.",
+      "label": "XML standalone document declaration"
+    },
+    "systemId": {
+      "category": "property",
+      "description": "The document type declarations's system identifier (typed: xsd:anyURI)",
+      "label": "System ID"
+    },
+    "version": {
+      "category": "property",
+      "description": "The XML version declared in the XML declaration.",
+      "label": "XML version"
+    }
+  }
+}

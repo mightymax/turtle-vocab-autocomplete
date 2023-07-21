@@ -1,0 +1,390 @@
+{
+  "iri": "http://vocab.gtfs.org/terms#",
+  "description": "This ontology is a translation of the General Transit Feed Specification towards URIs. Its intended use is creating an exchange platform where the Linked GTFS model can be used as a start to get the right data into the right format. For semantics of the classes and properties, see https://developers.google.com/transit/gtfs/reference.",
+  "label": "General Transit Feed Specification",
+  "prefix": "gtfs",
+  "items": {
+    "Agency": {
+      "category": "class",
+      "description": "An agency operates a certain schedule based transport mode",
+      "label": "Agency"
+    },
+    "PaymentMethod": {
+      "category": "class",
+      "description": "Method to pay for the public transit service",
+      "label": "Método de pago"
+    },
+    "RouteType": {
+      "category": "class",
+      "description": "Describe el tipo de transporte usado en una ruta",
+      "label": "Route type"
+    },
+    "CalendarDateRule": {
+      "category": "class",
+      "description": "Defines service availability for a specific date",
+      "label": "Calendar date rule"
+    },
+    "ServiceRule": {
+      "category": "class",
+      "description": "One or more service rules define a set of dates",
+      "label": "Regla de servicio"
+    },
+    "CalendarRule": {
+      "category": "class",
+      "description": "Define en qué días de la semana el servicio está disponible para un periodo concreto.",
+      "label": "Calendar rule"
+    },
+    "WheelchairBoardingStatus": {
+      "category": "class",
+      "description": "A class whom's instances indicate how accessible a gtfs:Trip, gtfs:Stop or gtfs:Station is.",
+      "label": "Información de accesibilidad para silla de ruedas"
+    },
+    "DropOffType": {
+      "category": "class",
+      "description": "Instances of this class can be used by gtfs:dropOffType",
+      "label": "Drop Off Type"
+    },
+    "TransferType": {
+      "category": "class",
+      "description": "Instances of this class can be used to describe how to handle a transfer rule",
+      "label": "Tipo de transbordo"
+    },
+    "FareClass": {
+      "category": "class",
+      "description": "A class describing how the fare is calculated.",
+      "label": "Clase tarifaria"
+    },
+    "FareRule": {
+      "category": "class",
+      "description": "A rule which binds a gtfs:FareClass to a part of the network.",
+      "label": "Fare Rule"
+    },
+    "Feed": {
+      "category": "class",
+      "description": "An instance of a gtfs:Feed is a linked GTFS feed that complies to this specification.",
+      "label": "GTFS Feed"
+    },
+    "Frequency": {
+      "category": "class",
+      "description": "An alternative to defining departures and arrivals as StopTimes: define frequencies for transit vehicle",
+      "label": "Frecuencia"
+    },
+    "PickupType": {
+      "category": "class",
+      "description": "Instances of this class can be used by gtfs:pickupType",
+      "label": "Pickup Type"
+    },
+    "TransfersAllowedType": {
+      "category": "class",
+      "description": "Instances of this class describe whether tickets remain valid when transferring",
+      "label": "Tipo de transbordo permitido"
+    },
+    "Route": {
+      "category": "class",
+      "description": "A gtfs:Route is a commercial route followed entirely or partly by gtfs:Trips",
+      "label": "Route"
+    },
+    "Service": {
+      "category": "class",
+      "description": "A gtfs:Service identifies a set of dates when a service is available for one or more routes",
+      "label": "Service"
+    },
+    "Shape": {
+      "category": "class",
+      "description": "A polygon formed by gtfs:ShapePoints",
+      "label": "Shape"
+    },
+    "ShapePoint": {
+      "category": "class",
+      "description": "A geographic point within a gtfs:Shape",
+      "label": "Punto de recorrido"
+    },
+    "Station": {
+      "category": "class",
+      "description": "A physical structure or area that contains one or more stop.",
+      "label": "Estación"
+    },
+    "Stop": {
+      "category": "class",
+      "description": "A location where passengers board or disembark from a transit vehicle.",
+      "label": "Parada"
+    },
+    "StopTime": {
+      "category": "class",
+      "description": "Describe una hora de parada como parte de un viaje",
+      "label": "Hora de parada"
+    },
+    "TransferRule": {
+      "category": "class",
+      "description": "Define additional rules for making connections between routes.",
+      "label": "Regla de transbordo"
+    },
+    "Trip": {
+      "category": "class",
+      "description": "A collection of gtfs:StopTimes followed by a transit vehicle",
+      "label": "Trip"
+    },
+    "Zone": {
+      "category": "class",
+      "description": "Las zonas son necesarias si quiere proporcionar información de tarifas usando gtfs:FareClass",
+      "label": "Zona"
+    },
+    "comment": {
+      "category": "property",
+      "description": "A comment on the relation between the RDFS ontology and the CSV specification.",
+      "label": "Comentario de enlace"
+    },
+    "agency": {
+      "category": "property",
+      "description": "Enlaza a una agencia de la que este concepto es parte.",
+      "label": "agency"
+    },
+    "arrivalTime": {
+      "category": "property",
+      "description": "Check the original specification for special cases",
+      "label": "Arrival time"
+    },
+    "bikesAllowed": {
+      "category": "property",
+      "label": "Bikes allowed"
+    },
+    "block": {
+      "category": "property",
+      "description": "Identifica el bloque al que pertenece el viaje. Un bloque consta de dos o más viajes secuenciales realizados en el mismo vehículo, en los que un pasajero puede cambiar de viaje si simplemente permanece en el vehículo.",
+      "label": "Block"
+    },
+    "code": {
+      "category": "property",
+      "description": "A gtfs:code predicate defines the stop code for a stop.",
+      "label": "Stop Code"
+    },
+    "color": {
+      "category": "property",
+      "description": "A 6 character hexidecimal color (without #)",
+      "label": "Color"
+    },
+    "dateAddition": {
+      "category": "property",
+      "description": "A boolean whether to add (true) or remove (false) a date",
+      "label": "Date Addition"
+    },
+    "departureTime": {
+      "category": "property",
+      "description": "Check the original specification for special cases",
+      "label": "Departure time"
+    },
+    "destinationStop": {
+      "category": "property",
+      "description": "Enlace al gtfs:Stop hacia el que va el viaje",
+      "label": "Destination Stop"
+    },
+    "destinationZone": {
+      "category": "property",
+      "description": "La zona de destino donde una clase tarifaria se aplica",
+      "label": "Destination Zone"
+    },
+    "direction": {
+      "category": "property",
+      "description": "A binary property to indicate the direction the trip is going (e.g., outbound/inbound, center/airport)",
+      "label": "Direction"
+    },
+    "distanceTraveled": {
+      "category": "property",
+      "description": "Indica la distancia a una parada desde el primer punto del recorrido. Representa una distancia de viaje real durante la ruta en unidades expresadas como pies o kilómetros. Esta información permite que quien planifica el viaje determine la porción de la forma que se debe trazar al mostrar parte de un viaje en el mapa. Los valores utilizados para gtfs:distanceTraveled se deben incrementar junto con los de gtfs:stopSequence, es decir, no se pueden usar para mostrar el recorrido inverso a lo largo de una ruta.",
+      "label": "Distance Traveled"
+    },
+    "dropOffType": {
+      "category": "property",
+      "description": "Indica si los pasajeros se bajan en una parada como parte del horario normal o si no pueden bajar en esa parada.",
+      "label": "Drop off type"
+    },
+    "endTime": {
+      "category": "property",
+      "description": "Define la hora a la que el servicio cambia de frecuencia (o bien finaliza) en la primera parada del viaje.",
+      "label": "End Time"
+    },
+    "fareUrl": {
+      "category": "property",
+      "description": "La URL de una página web que permite a un usuario comprar online billetes u otros productos de transporte de esa empresa",
+      "label": "URL de tarifas"
+    },
+    "friday": {
+      "category": "property",
+      "description": "Service is available on Friday",
+      "label": "Friday"
+    },
+    "headsign": {
+      "category": "property",
+      "description": "Esta propiedad apunta al texto que indica el destino del viaje a los pasajeros.",
+      "label": "Headsign"
+    },
+    "headwaySeconds": {
+      "category": "property",
+      "description": "Indica el período de tiempo (en segundos) entre salidas desde la misma parada (tiempo entre viajes) para este tipo de viaje, durante el intervalo de tiempo especificado mediante start_time y end_time.",
+      "label": "Headway Seconds"
+    },
+    "longName": {
+      "category": "property",
+      "description": "Long name given to a route",
+      "label": "Long name"
+    },
+    "minimumTransferTime": {
+      "category": "property",
+      "description": "El tiempo mínimo de transbordo cuando gtfs:transferType es gtfs:MinimumTimeTransfer.",
+      "label": "Minimum Transfer Time"
+    },
+    "monday": {
+      "category": "property",
+      "description": "Service is available on Monday",
+      "label": "Monday"
+    },
+    "originStop": {
+      "category": "property",
+      "description": "Enlace al gtfs:Stop desde el que empieza el viaje",
+      "label": "Origin Stop"
+    },
+    "originZone": {
+      "category": "property",
+      "description": "La zona de origen donde una clase tarifaria se aplica",
+      "label": "Origin Zone"
+    },
+    "parentStation": {
+      "category": "property",
+      "description": "gtfs:parentStation identifica la estación asociada a la parada",
+      "label": "Parent Station"
+    },
+    "paymentMethod": {
+      "category": "property",
+      "description": "The payment method",
+      "label": "Método de pago"
+    },
+    "pickupType": {
+      "category": "property",
+      "description": "Indica si se recogen los pasajeros en una parada como parte del horario normal o si su recogida en dicha parada no se encuentra disponible.",
+      "label": "Pickup type"
+    },
+    "pointSequence": {
+      "category": "property",
+      "description": "El campo shape_pt_sequence asocia la latitud y longitud de un punto de recorrido con su orden de secuencia en el recorrido. Los valores para shape_pt_sequence deben ser números enteros positivos y crecientes conforme avanza el viaje.",
+      "label": "Point Sequence"
+    },
+    "route": {
+      "category": "property",
+      "description": "Este viaje forma parte de esta gtfs:Route",
+      "label": "Route"
+    },
+    "routeType": {
+      "category": "property",
+      "description": "Enlaza al tipo de vehículo que opera en esta ruta",
+      "label": "Route type"
+    },
+    "saturday": {
+      "category": "property",
+      "description": "Service is available on Saturday",
+      "label": "Saturday"
+    },
+    "service": {
+      "category": "property",
+      "description": "Cumple este gtfs:Service.",
+      "label": "Service"
+    },
+    "serviceRule": {
+      "category": "property",
+      "description": "Reglas de servicio que definen un conjunto de fechas",
+      "label": "Service rule"
+    },
+    "shape": {
+      "category": "property",
+      "description": "Un enlace al recorrido que sigue el viaje.",
+      "label": "Shape"
+    },
+    "shapePoint": {
+      "category": "property",
+      "description": "Enlaza a gtfs:ShapePoint",
+      "label": "Shape Point"
+    },
+    "shortName": {
+      "category": "property",
+      "description": "Nombre corto dado a una ruta o viaje",
+      "label": "Short name"
+    },
+    "startTime": {
+      "category": "property",
+      "description": "Define la hora a la que empieza el servicio con la frecuencia especificada",
+      "label": "Start Time"
+    },
+    "stop": {
+      "category": "property",
+      "description": "Indica que este concepto tiene cierta parada.",
+      "label": "Stop"
+    },
+    "stopSequence": {
+      "category": "property",
+      "description": "Indica el orden de paradas para un viaje concreto. Los valores de gtfs:stopSequence deben ser enteros no negativos, deben aumentar durante el viaje referenciado por la propiedad gtfs:trip.",
+      "label": "Stop sequence"
+    },
+    "sunday": {
+      "category": "property",
+      "description": "Service is available on Sunday",
+      "label": "Sunday"
+    },
+    "textColor": {
+      "category": "property",
+      "description": "A 6 character hexidecimal color (without #) asigned to a text label.",
+      "label": "Text color"
+    },
+    "thursday": {
+      "category": "property",
+      "description": "Service is available on Thursday",
+      "label": "Thursday"
+    },
+    "timeZone": {
+      "category": "property",
+      "description": "La zona horaria donde una persona u organización está situada.",
+      "label": "Time zone"
+    },
+    "transferExpiryTime": {
+      "category": "property",
+      "description": "El tiempo que el billete es válido desde que se abandona el vehículo para hacer un transbordo",
+      "label": "Tiempo de validez para el transbordo"
+    },
+    "transferType": {
+      "category": "property",
+      "label": "Transfer Type"
+    },
+    "transfers": {
+      "category": "property",
+      "description": "The validity of the ticket when transferring",
+      "label": "Transfers"
+    },
+    "trip": {
+      "category": "property",
+      "description": "Indica que este concepto es parte de cierto gtfs:Trip",
+      "label": "Trip"
+    },
+    "tuesday": {
+      "category": "property",
+      "description": "Service is available on Tuesday",
+      "label": "Tuesday"
+    },
+    "usesExactTimes": {
+      "category": "property",
+      "label": "Frequency uses exact times"
+    },
+    "wednesday": {
+      "category": "property",
+      "description": "Service is available on Wednesday",
+      "label": "Wednesday"
+    },
+    "wheelchairAccessible": {
+      "category": "property",
+      "description": "La parada o estación específica es accesible para silla de ruedas. Si esta parada es parte de una estación, hay también una ruta accesible desde el exterior de la estación hasta la parada.",
+      "label": "accesible para silla de ruedas"
+    },
+    "zone": {
+      "category": "property",
+      "description": "A gtfs:Stop defines the fare zone. Zones are required if you want to provide fare information using gtfs:FareClass.",
+      "label": "Zone"
+    }
+  }
+}

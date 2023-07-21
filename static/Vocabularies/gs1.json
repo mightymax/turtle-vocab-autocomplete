@@ -1,0 +1,2803 @@
+{
+  "iri": "https://gs1.org/voc/",
+  "description": "The GS1 Web Vocabulary collects terms defined in various GS1 standards and data systems and made available for general use following Linked Data principles. It is designed as an extension to schema.org and, where relevant, mappings and relationships arising from that vocabulary are made explicit.",
+  "label": "GS1 Web Vocabulary",
+  "prefix": "gs1",
+  "items": {
+    "dc11:date": {
+      "category": "property"
+    },
+    "dc11:description": {
+      "category": "property"
+    },
+    "dc11:title": {
+      "category": "property"
+    },
+    "vs:term_status": {
+      "category": "property"
+    },
+    "AdditionalProductClassificationDetails": {
+      "category": "class",
+      "description": "A product classification for the product other than the Global Product Classification(GPC brick value).",
+      "label": "Additional Product Classification Details"
+    },
+    "AdditiveDetails": {
+      "category": "class",
+      "description": "A set of details about one of the additives within the product.",
+      "label": "Additive Details"
+    },
+    "AllergenDetails": {
+      "category": "class",
+      "description": "Details of an allergen for a product.",
+      "label": "Allergen Details"
+    },
+    "TypeCode": {
+      "category": "class",
+      "description": "A code list.",
+      "label": "Type Code"
+    },
+    "AuthenticityDetails": {
+      "category": "class",
+      "description": "A set of details about covert or overt security features that may contribute to checking the authenticity of a product or product instance.",
+      "label": "Authenticity Details"
+    },
+    "AwardPrizeDetails": {
+      "category": "class",
+      "description": "Describes a prize or award won by a product or organization.",
+      "label": "Award Prize"
+    },
+    "Beverage": {
+      "category": "class",
+      "description": "Any potable liquid.",
+      "label": "Beverage"
+    },
+    "FoodBeverageTobaccoProduct": {
+      "category": "class",
+      "description": "A food, beverage or tobacco product.",
+      "label": "Food Beverage Tobacco Product"
+    },
+    "Brand": {
+      "category": "class",
+      "description": "Information on brands and sub-brands for a product.",
+      "label": "Brand"
+    },
+    "CertificationDetails": {
+      "category": "class",
+      "description": "Certification issued by a certifying body to a certification subject (Organization, Place, Product).",
+      "label": "Certification"
+    },
+    "Clothing": {
+      "category": "class",
+      "description": "A product that is worn on the body.",
+      "label": "Clothing"
+    },
+    "WearableProduct": {
+      "category": "class",
+      "description": "Products that are worn on the body.",
+      "label": "Wearable Product"
+    },
+    "ColourCodeDetails": {
+      "category": "class",
+      "description": "A set of colour code details (colour code, party controlling the code list) for the product.",
+      "label": "Colour Code Details"
+    },
+    "ContactPoint": {
+      "category": "class",
+      "description": "Information on an individual or department acting as point of contact for an organiation.",
+      "label": "Contact"
+    },
+    "Country": {
+      "category": "class",
+      "description": "Country is a complex data type that indicates a country and a country subdivision.",
+      "label": "Country"
+    },
+    "DietTypeCodeDetails": {
+      "category": "class",
+      "description": "A set of diet type code details (diet type code and diet type sub code) for the product.",
+      "label": "Diet Type Code Details"
+    },
+    "Discount": {
+      "category": "class",
+      "description": "Provides information on a discount applicable to an offer for example 2 percent.",
+      "label": "Discount"
+    },
+    "FoodAndBeveragePreparationInformation": {
+      "category": "class",
+      "description": "Food and Beverage Preparation Information is a complex data type that indicates a preparation state code and preparation instructions.",
+      "label": "Food and Beverage Preparation Information"
+    },
+    "FoodBeverageTobaccoIngredientDetails": {
+      "category": "class",
+      "description": "Food Beverage Tobacco Ingredient is a complex data type that includes an ingredient statement and details.",
+      "label": "Food Beverage Tobacco Ingredient"
+    },
+    "Product": {
+      "category": "class",
+      "description": "Any item (product or service) upon which there is a need to retrieve pre-defined information and that may be priced, or ordered, or invoiced at any point in any supply chain.",
+      "label": "Product"
+    },
+    "Footwear": {
+      "category": "class",
+      "description": "Outerwear that is worn on the feet such as shoes or boots.",
+      "label": "Footwear"
+    },
+    "FruitsVegetables": {
+      "category": "class",
+      "description": "Contains properties related specifically to fruit and vegetable products.",
+      "label": "Fruits and Vegetables"
+    },
+    "GeoCoordinates": {
+      "category": "class",
+      "description": "The geographic coordinates of a place or event.",
+      "label": "GeoCoordinates"
+    },
+    "GeoShape": {
+      "category": "class",
+      "description": "The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude/longitude pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points.",
+      "label": "GeoShape"
+    },
+    "LocationID_Details": {
+      "category": "class",
+      "description": "Government bodies, trade organisations, and other parties issue identifiers that are associated to locations. Linking these identifiers to GLN and one another supports consolidating records, mapping related, collaborative identifiers, enhances search ability and enables more efficient transitions between identifiers.  This class provides a mechanism for connecting and sharing location identifiers.",
+      "label": "Location ID Details"
+    },
+    "LocationStatusHistory": {
+      "category": "class",
+      "description": "Over the lifetime of a location, it may go through periods of being active and inactive. gs1:LocationStatusHistory allows changes in status to be communicated in advance and tracked over time.",
+      "label": "Location Status History"
+    },
+    "MeatPoultry": {
+      "category": "class",
+      "description": "Meat and poultry products.",
+      "label": "Meat Poultry"
+    },
+    "MilkButterCreamYogurtCheeseEggsSubstitutes": {
+      "category": "class",
+      "description": "Milk butter cream yogurts cheese eggs and any substitutes for these products.",
+      "label": "Milk Butter Cream Yogurt Cheese Eggs Substitutes"
+    },
+    "NutritionMeasurementType": {
+      "category": "class",
+      "description": "A class providing nutritional value and intake percent.",
+      "label": "Nutrition Measurement Type"
+    },
+    "QuantitativeValue": {
+      "category": "class",
+      "description": "A point value or interval for product characteristics and other purposes. A unit of measurement is also specified.",
+      "label": "Measurement Type"
+    },
+    "Offer": {
+      "category": "class",
+      "description": "An offer to transfer some rights to an item or to provide a service,for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.",
+      "label": "Offer"
+    },
+    "OrganicClaimDetails": {
+      "category": "class",
+      "description": "A set of organic claim details for the product.",
+      "label": "Organic Claim Details"
+    },
+    "Organization": {
+      "category": "class",
+      "description": "An Organization is any legal or physical entity involved at any point in any supply chain and upon which there is a need to retrieve predefined information. An Organization is uniquely identified by a Global Location Number (GLN).",
+      "label": "Organization"
+    },
+    "OrganizationID_Details": {
+      "category": "class",
+      "description": "Government bodies, trade organisations, and other parties issue identifiers that are associated to legal entities and/or functions. Linking these identifiers to GLN and one another supports consolidating records, mapping related, collaborative identifiers, enhances search ability and enables more efficient transitions between identifiers.  This class provides a mechanism for connecting and sharing party identifiers.",
+      "label": "Organisation ID Details"
+    },
+    "OrganizationStatusHistory": {
+      "category": "class",
+      "description": "Over the lifetime of an organisation, it may go through periods of being active and inactive. gs1:OrganizationStatusHistory allows changes in status to be communicated in advance and tracked over time.",
+      "label": "Organisation Status History"
+    },
+    "PackagingDetails": {
+      "category": "class",
+      "description": "Details on packaging for a product for example packaging type (bottle), materials, features, recycling, etc..",
+      "label": "Packaging"
+    },
+    "PackagingMaterialDetails": {
+      "category": "class",
+      "description": "Information on any material used for packaging.",
+      "label": "Packaging Material Details"
+    },
+    "Place": {
+      "category": "class",
+      "description": "Entities that have a somewhat fixed, physical location.",
+      "label": "Place"
+    },
+    "PostalAddress": {
+      "category": "class",
+      "description": "The location at which a particular organization or person may be found or reached.",
+      "label": "Address"
+    },
+    "PriceSpecification": {
+      "category": "class",
+      "description": "A structured value representing a monetary amount, consisting of a value and currency code.",
+      "label": "Price Specification"
+    },
+    "ProductYieldDetails": {
+      "category": "class",
+      "description": "A grouping of properties related to the yield of a food or beverage product according to a specified type of preparation.",
+      "label": "Product Yield Details"
+    },
+    "ReferencedFileDetails": {
+      "category": "class",
+      "description": "Provides URL and other information on a referenced electronic file.",
+      "label": "Referenced File"
+    },
+    "ReturnablePackageDepositDetails": {
+      "category": "class",
+      "description": "Details of the deposit for returnable packaging for a product.",
+      "label": "Returnable Package Deposit Details"
+    },
+    "Seafood": {
+      "category": "class",
+      "description": "Seafood Products including fish and shellfish.",
+      "label": "Seafood"
+    },
+    "SizeCodeDetails": {
+      "category": "class",
+      "description": "A grouping of properties related to the representing the size of a product, by specifying a value from a specified code list.",
+      "label": "Size Code Details"
+    },
+    "SizeDetails": {
+      "category": "class",
+      "description": "A grouping of properties related to the size of a wearable product",
+      "label": "Size Details"
+    },
+    "TargetMarketDetails": {
+      "category": "class",
+      "description": "A set of target market details (product release date and associated countries) for the product.",
+      "label": "Target Market Details"
+    },
+    "TextileMaterialDetails": {
+      "category": "class",
+      "description": "Details on the composition of any materials used to make a product using textiles.",
+      "label": "Textile Material"
+    },
+    "WarrantyPromise": {
+      "category": "class",
+      "description": "An assurance that the product is reliable and that repairs or replacement will be done free of charge within a given time limit and under certain conditions in the event of a defect.",
+      "label": "Warranty"
+    },
+    "": {
+      "category": "class"
+    },
+    "originalCodeValue": {
+      "category": "property",
+      "description": "Links to the alphanumeric code value defined elsewhere in GS1 or the GS1 Global Data Dictionary",
+      "label": "Original Code Value"
+    },
+    "acceptedPaymentMethod": {
+      "category": "property",
+      "description": "Code indicating a means of payment, for example, BANK_CHEQUE, CASH, etc.",
+      "label": "Accepted Payment Method"
+    },
+    "activityIdeas": {
+      "category": "property",
+      "description": "A link to ideas for using a product or engaging in other forms of entertainment, particularly with children.",
+      "label": "Activity Ideas"
+    },
+    "linkType": {
+      "category": "property",
+      "description": "Provides a URL for related information or services. This is not expected to be used directly but provides a super property for all other link types in the GS1 ecosystem.",
+      "label": "Link Type"
+    },
+    "additionalLocationID": {
+      "category": "property",
+      "description": "Location identifiers assigned and managed by government bodies, trade organisations, and other entities.",
+      "label": "Has Additional Location ID"
+    },
+    "additionalOrganizationID": {
+      "category": "property",
+      "description": "Party/organisation identifiers assigned and managed by government bodies, trade organisations, and other entities.",
+      "label": "Has Additional Organization ID"
+    },
+    "additionalOrganizationIdentificationTypeValue": {
+      "category": "property",
+      "description": "The value associated with the Additional Organization Identification Type Value.",
+      "label": "Additional Organization Identification Type Value"
+    },
+    "additionalProductClassification": {
+      "category": "property",
+      "description": "Relates to a set of additional product classification details",
+      "label": "Has Additional Product Classification"
+    },
+    "additionalProductClassificationCode": {
+      "category": "property",
+      "description": "Code specifying the applied additional product classification scheme.",
+      "label": "Additional Product Classification Code"
+    },
+    "additionalProductClassificationCodeDescription": {
+      "category": "property",
+      "description": "A description related to  the additional product classification code value.",
+      "label": "Additional Product Classification Code Description"
+    },
+    "additionalProductClassificationValue": {
+      "category": "property",
+      "description": "Code specifying an additional product classification other than the GS1 Global Product Classification. The applied classification scheme is specified as additional information together with the classification value.",
+      "label": "Additional Product Classification Value"
+    },
+    "additionalProductDescription": {
+      "category": "property",
+      "description": "Additional variants necessary to communicate to the industry to help define the product. Multiple variants can be established for each GTIN for e.g. Style, Colour, and Fragrance .",
+      "label": "Additional Product Description"
+    },
+    "additive": {
+      "category": "property",
+      "description": "Relates to details about any additives that a product may contain.",
+      "label": "Has Additive"
+    },
+    "additiveLevelOfContainment": {
+      "category": "property",
+      "description": "Code indicating the level of presence of the additive.",
+      "label": "Additive Level Of Containment"
+    },
+    "additiveName": {
+      "category": "property",
+      "description": "The name of any additive or genetic modification contained or not contained in the product .",
+      "label": "Additive Name"
+    },
+    "address": {
+      "category": "property",
+      "description": "The postal address for an organization or place.",
+      "label": "Has Postal Address"
+    },
+    "addressCountry": {
+      "category": "property",
+      "description": "Code specifying the country (and country subdivision) for the address using ISO 3166-1.",
+      "label": "Address Country"
+    },
+    "addressLocality": {
+      "category": "property",
+      "description": "Text specifying the name of the locality, for example a city.",
+      "label": "Address Locality"
+    },
+    "addressRegion": {
+      "category": "property",
+      "description": "Text specifying a province or state in abbreviated format for example NJ.",
+      "label": "Province State Code"
+    },
+    "addressSuburb": {
+      "category": "property",
+      "description": "A suburb within a town or city.",
+      "label": "Address Suburb"
+    },
+    "afterHoursContact": {
+      "category": "property",
+      "description": "Links to after-hours contact information. For general contact details, gs1:contactPoint SHALL be used.",
+      "label": "Has After Hours Contact"
+    },
+    "contactPoint": {
+      "category": "property",
+      "description": "Contact information. To specify a contact specifically designated for after-hours support, see gs1:afterHoursContact",
+      "label": "Has Business Contact"
+    },
+    "alcoholicBeverageSubregion": {
+      "category": "property",
+      "description": "A legally defined geographical region where the grapes for a wine were grown also known as an appellation. It is recommended to populate this property with an ISO 3166-2 code to indicate country and subdivision.",
+      "label": "Alcoholic Beverage Sub-region"
+    },
+    "allergenInfo": {
+      "category": "property",
+      "description": "A link to a description of the allergen information.",
+      "label": "Allergen information"
+    },
+    "allergenLevelOfContainmentCode": {
+      "category": "property",
+      "description": "Code specifying the level of presence of the allergen.",
+      "label": "Allergen Level Of Containment"
+    },
+    "allergenSpecificationAgency": {
+      "category": "property",
+      "description": "The agency or other organization that defines or manages the criteria for allergen containment.",
+      "label": "Allergen Specification Agency"
+    },
+    "allergenSpecificationName": {
+      "category": "property",
+      "description": "Free text field containing the name and version of the regulation or standard that defines the criteria of allergen containment.",
+      "label": "Allergen Specification Name"
+    },
+    "allergenStatement": {
+      "category": "property",
+      "description": "Textual description of the presence or absence of allergens as governed by local rules and regulations, specified as one string.",
+      "label": "Allergen Statement"
+    },
+    "allergenType": {
+      "category": "property",
+      "description": "Code specifying the type of allergen.",
+      "label": "Allergen Type Code"
+    },
+    "anatomicalForm": {
+      "category": "property",
+      "description": "Describes the meat product in terms of whether it is the whole animal or part of the animal which has been cut such as the muscle, bone, organ, or fat.",
+      "label": "Anatomical Form"
+    },
+    "applicableTo": {
+      "category": "property",
+      "description": "A property linking a gs1:linkType to the primary GS1 key(s) for which it can be used. Similar to rdfs:Domain but the value space is a GS1 Application Identifier, not a class.",
+      "label": "Applicable to"
+    },
+    "audioFile": {
+      "category": "property",
+      "description": "Link to a file containing an audio clip which is relevant to the product. Examples are commercials, or instructional/ how to use audio files.",
+      "label": "Has Audio File"
+    },
+    "authenticity": {
+      "category": "property",
+      "description": "Links to details of covert/overt security markings that may be used to check authenticity of a product instance.",
+      "label": "Has Authenticity Details"
+    },
+    "authenticitySecurityFeatureInstructions": {
+      "category": "property",
+      "description": "Provides human-readable instructions about how to locate a physical security marking and read a value from it.",
+      "label": "Authenticity Security Feature Instructions"
+    },
+    "authenticitySecurityFeatureInstructionsURL": {
+      "category": "property",
+      "description": "Links to online instructions about how to locate a physical security marking and read a value from it.",
+      "label": "Authenticity Security Feature Instructions Link"
+    },
+    "authenticitySecurityFeatureRegularExpression": {
+      "category": "property",
+      "description": "Links to a regular expression to be used to perform syntax validation (plausibility checking) of a string value read from a physical security marking.",
+      "label": "Authenticity Security Feature Regular Expression"
+    },
+    "authenticitySecurityFeatureType": {
+      "category": "property",
+      "description": "Links to a URI code value indicating a particular type of physical security marking.",
+      "label": "Authenticity Security Feature Type"
+    },
+    "authenticitySecurityFeatureValue": {
+      "category": "property",
+      "description": "Links to a string value read from a physical security marking.",
+      "label": "Authenticity Security Feature Value"
+    },
+    "availabilityEnds": {
+      "category": "property",
+      "description": "The date from which the product is no longer available from the information provider, including seasonal or temporary product and services .",
+      "label": "Availability Ends"
+    },
+    "availabilityStarts": {
+      "category": "property",
+      "description": "The date from which the product is available from the information provider, including seasonal or temporary product and services.",
+      "label": "Availability Starts"
+    },
+    "availableAtOrFrom": {
+      "category": "property",
+      "description": "The location the offered product or service is available from.",
+      "label": "Available At/From"
+    },
+    "availableLanguage": {
+      "category": "property",
+      "description": "ISO 639-1 code specifying the language of a specified contact point.",
+      "label": "Available Language"
+    },
+    "awardPrize": {
+      "category": "property",
+      "description": "An award or prize given to the product.",
+      "label": "Has Award Prize"
+    },
+    "awardPrizeCode": {
+      "category": "property",
+      "description": "Indicates the achievement of the product in relation to a prize or award, e.g. winner, runner-up, shortlisted.",
+      "label": "Award Prize Code"
+    },
+    "awardPrizeCountryCode": {
+      "category": "property",
+      "description": "An ISO standard code identifying the country in which a prize or award is given. It is recommended to populate this property with an ISO 3166-1 country code.",
+      "label": "Award Prize Country Code"
+    },
+    "awardPrizeDescription": {
+      "category": "property",
+      "description": "Text that describes the awards won.",
+      "label": "Award Prize Description"
+    },
+    "awardPrizeJury": {
+      "category": "property",
+      "description": "Free text listing members of the jury that awarded the prize.",
+      "label": "Award Prize Jury"
+    },
+    "awardPrizeName": {
+      "category": "property",
+      "description": "The name of a prize or award which the product has received.",
+      "label": "Award Prize Name"
+    },
+    "awardPrizeYear": {
+      "category": "property",
+      "description": "The year in which a prize or award was given.",
+      "label": "Award Prize Year"
+    },
+    "baseLocation": {
+      "category": "property",
+      "description": "A fixed physical location where a mobile location most commonly resides. If gs1:glnType is present, gs1:baseLocationGLN SHALL only be used when gs1:glnType is gs1:GLN_TypeCode-MOBILE_PHYSICAL_LOCATION",
+      "label": "Base Location"
+    },
+    "bestBeforeDate": {
+      "category": "property",
+      "description": "Best before date on the label or package signifies the end of the period under which the product will retain specific quality attributes or claims even though the product may continue to retain positive quality attributes after this date. Best before date is primarily used for consumer information and may be a regulatory requirement.",
+      "label": "15"
+    },
+    "beverageVintage": {
+      "category": "property",
+      "description": "The year in which the majority of ingredients are harvested and/or the alcoholic beverage is produced. Determination as to whether the vintage year is the harvest date or production date is according to requirements in the Target Market.",
+      "label": "Beverage Vintage"
+    },
+    "biotinPerNutrientBasis": {
+      "category": "property",
+      "description": "Biotin Acid per specified nutrient basis quantity.",
+      "label": "Biotin Per Nutrient Basis Quantity"
+    },
+    "bonelessClaim": {
+      "category": "property",
+      "description": "The descriptive term that is used by the product manufacturer to identify whether the product makes a specific claim to contain no bones.",
+      "label": "Boneless Claim"
+    },
+    "brand": {
+      "category": "property",
+      "description": "The brand of the product that appears on the consumer package.",
+      "label": "Has Brand"
+    },
+    "brandHomepageClinical": {
+      "category": "property",
+      "description": "A link to a brand presence aimed at clinical professionals.",
+      "label": "Information for professionals about this brand"
+    },
+    "brandHomepagePatient": {
+      "category": "property",
+      "description": "A link to a brand presence aimed at patients.",
+      "label": "Information for patients about this brand"
+    },
+    "brandName": {
+      "category": "property",
+      "description": "The brand name of the product that appears on the consumer package.",
+      "label": "Brand Name"
+    },
+    "brandOwner": {
+      "category": "property",
+      "description": "The brand owner of the product. The organization that is responsible for allocating the GTIN to the product.",
+      "label": "Has Brand Owner"
+    },
+    "calciumPerNutrientBasis": {
+      "category": "property",
+      "description": "Calcium per specified nutrient basis quantity.",
+      "label": "Calcium Per Nutrient Basis Quantity"
+    },
+    "carbohydratesPerNutrientBasis": {
+      "category": "property",
+      "description": "Carbohydrates per specified nutrient basis quantity.",
+      "label": "Carbohydrates Per Nutrient Basis Quantity"
+    },
+    "careersInfo": {
+      "category": "property",
+      "description": "A link to information about jobs, careers, or other employment opportunities associated to an organisation or location.",
+      "label": "Careers information"
+    },
+    "catchZone": {
+      "category": "property",
+      "description": "Free text field describing the sea zone from which the product was caught in.",
+      "label": "Catch Zone"
+    },
+    "certification": {
+      "category": "property",
+      "description": "Certification information about a product, organisation or location.",
+      "label": "Has Certification"
+    },
+    "certificationAgency": {
+      "category": "property",
+      "description": "Name of the organisation issuing the certification standard or other requirement being met .",
+      "label": "Certification Agency"
+    },
+    "certificationAgencyURL": {
+      "category": "property",
+      "description": "URL of the organisation issuing the certification standard or other requirement being met. e.g. https://www.msc.org , https://www.fsc.org",
+      "label": "Certification Agency URL"
+    },
+    "certificationAuditDate": {
+      "category": "property",
+      "description": "Date of completion of the auditing needed for certification",
+      "label": "Certification Audit Date"
+    },
+    "certificationEndDate": {
+      "category": "property",
+      "description": "Last date of validity for the certification. (After this date the certification lapses and would need to be renewed/replaced)",
+      "label": "Certification End Date"
+    },
+    "certificationIdentification": {
+      "category": "property",
+      "description": "A reference (i.e, to a certificate instance) issued to confirm that a product, party or location has passed certification. e.g. 'XSC-C-12345'",
+      "label": "Certification Identification"
+    },
+    "certificationInfo": {
+      "category": "property",
+      "description": "A link to certification information.",
+      "label": "Certification Information"
+    },
+    "certificationStandard": {
+      "category": "property",
+      "description": "Name of the certification standard. Free text. Example: 'Egg classification' .",
+      "label": "Certification Standard"
+    },
+    "certificationStartDate": {
+      "category": "property",
+      "description": "First date of validity for the certification",
+      "label": "Certification Start Date"
+    },
+    "certificationStatement": {
+      "category": "property",
+      "description": "Certification scope statement of the individual certification instance. The same certificationStandard can be issued with different values of certificationStatement in different instances.",
+      "label": "Certification Statement"
+    },
+    "certificationStatus": {
+      "category": "property",
+      "description": "Indicates the current status of the certification, e.g. active or inactive.",
+      "label": "Certification Status"
+    },
+    "certificationSubject": {
+      "category": "property",
+      "description": "References the object (e.g. product, asset, container), party or location being certified. If multiple values are specified, the certification details apply to the logical conjunction (AND) of groups of different types, while a logical disjunction (OR) applies within each group of the same type. For example, two sibling organisations O1 and O2 can process products P1 and P2 at locations L1 and L2: meaning that either organisation can process either product at either location (OR); but the certificate holds for the combinations of organisation (either O1 OR O2) AND product (either P1 OR P2) AND location (either L1 OR L2)",
+      "label": "Certification Subject"
+    },
+    "certificationType": {
+      "category": "property",
+      "description": "Indicates the type of certification",
+      "label": "Certification Type"
+    },
+    "certificationURI": {
+      "category": "property",
+      "description": "If gs1:certificationURI is present, it should point to data about this individual certificate within a repository maintained by the certification agency.",
+      "label": "Certification URI"
+    },
+    "certificationValue": {
+      "category": "property",
+      "description": "The certification's standard value. Example: '4'.",
+      "label": "Certification Value"
+    },
+    "cheeseFirmness": {
+      "category": "property",
+      "description": "The firmness of the cheese product for example EXTRA_HARD.",
+      "label": "Cheese Firmness"
+    },
+    "cheeseMaturationPeriodDescription": {
+      "category": "property",
+      "description": "A descriptive way to specify a date range as some cheeses are matured over a period of time, but not an exact period. For example 3 to 4 weeks, over 1 year etc. The term maturation is also known in other markets as Aged.",
+      "label": "Cheese Maturation Period Description"
+    },
+    "chloridePerNutrientBasis": {
+      "category": "property",
+      "description": "Chloride per specified nutrient basis quantity.",
+      "label": "Chloride Per Nutrient Basis Quantity"
+    },
+    "cholesterolPerNutrientBasis": {
+      "category": "property",
+      "description": "Cholesterol per specified nutrient basis quantity.",
+      "label": "Cholesterol Per Nutrient Basis Quantity"
+    },
+    "chromiumPerNutrientBasis": {
+      "category": "property",
+      "description": "Chromium per specified nutrient basis quantity.",
+      "label": "Chromium Per Nutrient Basis Quantity"
+    },
+    "circle": {
+      "category": "property",
+      "description": "A circle is the circular region of a specified radius centred at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters.",
+      "label": "Circle"
+    },
+    "clothingCut": {
+      "category": "property",
+      "description": "Supplemental information to indicate the clothing cut or silhouette make of the garment. For example, silhouette details for a pair of jeans such as boot cut, or loose fit, comfort fit.",
+      "label": "Clothing Cut"
+    },
+    "collarType": {
+      "category": "property",
+      "description": "A free text description of the type of collar on the garment.",
+      "label": "Collar Type"
+    },
+    "colourCode": {
+      "category": "property",
+      "description": "Relates to a set of details about the colour code for a product",
+      "label": "Has Colour Code"
+    },
+    "colourCodeList": {
+      "category": "property",
+      "description": "The parties controlling the colour code lists. Dependent on colour code value.",
+      "label": "Colour Code List"
+    },
+    "colourCodeValue": {
+      "category": "property",
+      "description": "A code indicating the colour of an object according to a specific code list. The applied code list is specified as additional information together with the colour code.",
+      "label": "Colour Code"
+    },
+    "colourDescription": {
+      "category": "property",
+      "description": "A description of the colour of an object.",
+      "label": "Colour Description"
+    },
+    "consumerFirstAvailabilityDateTime": {
+      "category": "property",
+      "description": "The first date/time that the buyer is allowed to sell the product to consumers. Usually related to a specific geography. ISO 8601 date format CCYY-MM-DDTHH:MM:SS.",
+      "label": "Consumer First Availability Date Time"
+    },
+    "consumerHandlingStorage": {
+      "category": "property",
+      "description": "Link to a website, file, or image containing the manufacturer's recommendations for how the consumer or end user should store and handle the product.",
+      "label": "Has Consumer Handling Storage"
+    },
+    "consumerHandlingStorageInfo": {
+      "category": "property",
+      "description": "A link to information about safe handling and storage for consumer use.",
+      "label": "Consumer handling and storage information"
+    },
+    "consumerLifestage": {
+      "category": "property",
+      "description": "Indicates, with reference to the product branding, labelling or packaging, the descriptive term that is used by the product manufacturer to identify the period or stage in the consumer's life during which the product is considered to be suitable.",
+      "label": "Consumer Lifestage"
+    },
+    "consumerPackageDisclaimer": {
+      "category": "property",
+      "description": "Additional information that should be used in advertising and in displaying.",
+      "label": "Consumer Package Disclaimer"
+    },
+    "consumerProductVariant": {
+      "category": "property",
+      "description": "The consumer product variant may be used to distinguish one variant of a retail consumer trade item from another if the change does not require the allocation of a different Global Trade Item Number (per the GTIN Management Standard), but communication between trading partners is required to support consumers. The brand owner is responsible for assigning the consumer product variant.",
+      "label": "22"
+    },
+    "consumerSafetyInformation": {
+      "category": "property",
+      "description": "Information on consumer safety regarding the product.",
+      "label": "Consumer Safety Information"
+    },
+    "consumerSalesCondition": {
+      "category": "property",
+      "description": "A code indicating restrictions imposed on the product regarding how it can be sold to the consumer for example Prescription Required.",
+      "label": "Consumer Sales Condition Code"
+    },
+    "consumerStorageInstructions": {
+      "category": "property",
+      "description": "Expresses in text the consumer storage instructions of a product which are normally held on the label or accompanying the product. This information may or may not be labelled on the pack.",
+      "label": "Consumer Storage Instructions"
+    },
+    "consumerUsageInstructions": {
+      "category": "property",
+      "description": "Free text containing the usage instructions of a product, which are normally held on the label or accompanying the product. This information may or may not be labelled on the pack.",
+      "label": "Consumer Usage Instructions"
+    },
+    "contactTitle": {
+      "category": "property",
+      "description": "The job title of the person that can be contacted for example Manager.",
+      "label": "Contact Title"
+    },
+    "contactType": {
+      "category": "property",
+      "description": "The function or role of a contact for example Customer Support.",
+      "label": "Contact Type"
+    },
+    "containedInPlace": {
+      "category": "property",
+      "description": "Designates the larger physical location a sub-location is located within. To specify sub-locations of a physical location, see gs1:containsPlace.",
+      "label": "Contained in Place"
+    },
+    "containsPlace": {
+      "category": "property",
+      "description": "Designates a sub-location (e.g., floor, room, shelf) within the physical location being identified. There may be multiple sub-locations associated to a single, physical location. To specify the larger physical location the sub-location is located within, see gs1:containedInPlace",
+      "label": "Contains Place"
+    },
+    "convenienceLevelPercent": {
+      "category": "property",
+      "description": "An indication of the ease of preparation for semi-prepared products. The convenience level indicates the level of preparation in percentage required to prepare and helps the consumer to assess how long it will take to prepare the meal.",
+      "label": "Convenience Level Percent"
+    },
+    "coordinateReferenceSystem": {
+      "category": "property",
+      "description": "Open standard spatial reference systems or coordinate reference systems that provide coordinate-based local, regional or global system used to locate geographical entities.  Values should be URIs already defined by the IOPG Geomatics Committee (https://epsg.org/), such as https://epsg.io/4326 (WGS84); https://epsg.io/4267 (NAD27); https://epsg.io/4230 (ED50); https://epsg.io/4618 (SAD69); https://epsg.io/4269 (NAD83).  For elevation values, gs1:elevation SHALL be used.",
+      "label": "Coordinate Reference System"
+    },
+    "copperPerNutrientBasis": {
+      "category": "property",
+      "description": "Copper per specified nutrient basis quantity.",
+      "label": "Copper Per Nutrient Basis Quantity"
+    },
+    "countryCode": {
+      "category": "property",
+      "description": "A short text string code (see values defined in ISO 3166) specifying the country in which a processing or other activity is performed, for example processing, bottling, manufacturing.",
+      "label": "Country Code"
+    },
+    "countryOfAssembly": {
+      "category": "property",
+      "description": "The place where product is assembled.",
+      "label": "Has Country Of Assembly"
+    },
+    "countryOfLastProcessing": {
+      "category": "property",
+      "description": "The place where the product or ingredient was last processed and tested before importation.",
+      "label": "Has Country Of Last Processing"
+    },
+    "countryOfOrigin": {
+      "category": "property",
+      "description": "Code indicating the country of origin of the product.",
+      "label": "Has Country Of Origin"
+    },
+    "countryOfOriginStatement": {
+      "category": "property",
+      "description": "A description of the geographic area the item may have originated from or has been processed.",
+      "label": "Country Of Origin Statement"
+    },
+    "countrySubdivisionCode": {
+      "category": "property",
+      "description": "A short text string code (see values defined in ISO 3166_2) specifying the country subdivision in which an activity is performed, for example processing, bottling, manufacturing.",
+      "label": "Country Subdivision Code"
+    },
+    "countyCode": {
+      "category": "property",
+      "description": "A code that identifies a county. A county is a territorial division in some countries, forming the chief unit of local administration. In the US, a county is a political and administrative division of a state.",
+      "label": "County Code"
+    },
+    "crossStreet": {
+      "category": "property",
+      "description": "A street intersecting a main street (usually at right angles) and continuing on both sides of it.",
+      "label": "Cross Street"
+    },
+    "customerSupportCentre": {
+      "category": "property",
+      "description": "The organization which provides product support to the trading partner organization to which merchandise is sold.",
+      "label": "Has Customer Support Centre"
+    },
+    "dailyValueIntakePercent": {
+      "category": "property",
+      "description": "The percentage of the recommended daily intake of a nutrient as recommended by authorities of the target market. Is expressed relative to the serving size and base daily value intake.",
+      "label": "Daily Value Intake Percent"
+    },
+    "defaultLink": {
+      "category": "property",
+      "description": "The default link for a given identified item to which a resolver will redirect unless there is information in the request that is a better match.",
+      "label": "Default link"
+    },
+    "defaultLinkMulti": {
+      "category": "property",
+      "description": "A set of 'default links' that may be differentiated by information in the HTTP request headers sent to a resolver to enable a better match than the single default link.",
+      "label": "Default linkMulti"
+    },
+    "department": {
+      "category": "property",
+      "description": "The name of a division of an organization dealing with a specific activity",
+      "label": "Department"
+    },
+    "dependentProprietaryProduct": {
+      "category": "property",
+      "description": "Dependent products are products which are required to make the current product functional.",
+      "label": "Has Dependent Proprietary Product"
+    },
+    "descriptiveSize": {
+      "category": "property",
+      "description": "An alphanumeric size factor the brand owner wishes to communicate to the consumer. IE Jumbo, Capri, Full Length, Maxi.",
+      "label": "Descriptive Size"
+    },
+    "dietCode": {
+      "category": "property",
+      "description": "Links to multiple pairs of gs1:DietTypeCode and diet type sub code (free-form text string).",
+      "label": "Diet Code"
+    },
+    "dietType": {
+      "category": "property",
+      "description": "Code indicating the diet the product is suitable for example Kosher.",
+      "label": "Diet Type Code"
+    },
+    "dietTypeDescription": {
+      "category": "property",
+      "description": "Free text for indication of diet not stated in the list of diets.",
+      "label": "Diet Type Description"
+    },
+    "dietTypeSubcode": {
+      "category": "property",
+      "description": "Indicates a set of agreements or a certificate name that guarantees the product is permitted in a particular diet. A diet type subcode is a subclassification of a specific diet type. For example, Pareve is a diet type subcode of Kosher.",
+      "label": "Diet Type Sub-code"
+    },
+    "digitalAddress": {
+      "category": "property",
+      "description": "The location reference associated to a digital place. If gs1:glnType is present, SHALL only be associated if the value of gs1:glnType is gs1:GLN_TypeCode-DIGITAL_LOCATION.",
+      "label": "Has Digital Address"
+    },
+    "digitalLocationName": {
+      "category": "property",
+      "description": "The name of a digital place. To specify the name of a physical location, see gs1:physicalLocationName.",
+      "label": "Digital Location Name"
+    },
+    "discountRepeatsPerMultipleMinimum": {
+      "category": "property",
+      "description": "If specified and set to true, the discount is available for each time the minimum qualifying criteria are met.  This can be used to express '$10 off each $50 spend', which is distinct from a 20% discount because it is quantized in units of spending.",
+      "label": "Discount Repeats Per Multiple Minimum"
+    },
+    "discountType": {
+      "category": "property",
+      "description": "A code that specifies the type of payment discount applicable to an offer, for example BOGO.",
+      "label": "Discount Type"
+    },
+    "drainedWeight": {
+      "category": "property",
+      "description": "The weight of the product when drained of its liquid. For example 225 GRM, Jar of pickles in vinegar.",
+      "label": "Drained Weight"
+    },
+    "dueDate": {
+      "category": "property",
+      "description": "The date by which an invoice should be paid. This data element represents an attribute of a payment slip reference number, AI (8020), and a Global Location Number (GLN) of the invoicing party.",
+      "label": "12"
+    },
+    "durationOfWarranty": {
+      "category": "property",
+      "description": "The time period that the warranty is valid within.",
+      "label": "Duration Of Warranty"
+    },
+    "dutyFeeTaxAmount": {
+      "category": "property",
+      "description": "The current tax or duty or fee amount applicable to the product, expressed as a floating-point numeric value that is qualified by the corresponding currency. See also gs1:priceCurrency.",
+      "label": "Duty Fee Tax Amount"
+    },
+    "priceCurrency": {
+      "category": "property",
+      "description": "A string value indicating a currency from ISO 4217 for example USD .",
+      "label": "Price Currency"
+    },
+    "dutyFeeTaxDescription": {
+      "category": "property",
+      "description": "A description of tax type for example Taxes sure les supports audio.",
+      "label": "Duty Fee Tax Description"
+    },
+    "dutyFeeTaxRate": {
+      "category": "property",
+      "description": "The current tax or duty rate percentage applicable to the product.",
+      "label": "Duty Fee Tax Rate"
+    },
+    "elevation": {
+      "category": "property",
+      "description": "The elevation of a location (WGS 84). Values may be of the form 'NUMBER UNITOFMEASUREMENT' (e.g., '1,000 m', '3,200 ft') while numbers alone SHALL be a value in meters.",
+      "label": "Elevation"
+    },
+    "eligibleQuantity": {
+      "category": "property",
+      "description": "The quantity including unit of measure for which the offer for good or service is valid.  If this is not specified, an eligible quantity of 1 should be assumed.",
+      "label": "Eligible Quantity"
+    },
+    "eligibleQuantityMaximum": {
+      "category": "property",
+      "description": "The maximum quantity including unit of measure for which the offer for good or service is valid.",
+      "label": "Eligible Quantity Maximum"
+    },
+    "eligibleQuantityMinimum": {
+      "category": "property",
+      "description": "The minimum quantity including unit of measure for which the offer for good or service is valid.",
+      "label": "Eligible Quantity Minimum"
+    },
+    "eligibleTradeChannel": {
+      "category": "property",
+      "description": "A code determining the location where a user can redeem the offer, for example ONLINE_ONLY.",
+      "label": "Eligible Trade Channel"
+    },
+    "email": {
+      "category": "property",
+      "description": "Creating/sending/receiving of unstructured free text messages or documents using computer network, a mini-computer or an attached modem and regular telephone line or other electronic transmission media.",
+      "label": "E-mail"
+    },
+    "energyFromFatPerNutrientBasis": {
+      "category": "property",
+      "description": "Energy from Fat per specified nutrient basis quantity.",
+      "label": "Energy from Fat Per Nutrient Basis Quantity"
+    },
+    "energyPerNutrientBasis": {
+      "category": "property",
+      "description": "Energy Per specified nutrient basis quantity.",
+      "label": "Energy Per Nutrient Basis Quantity"
+    },
+    "epcis": {
+      "category": "property",
+      "description": "A link to an EPCIS repository of visibility event data.",
+      "label": "EPC Information Services (EPCIS) repository"
+    },
+    "epil": {
+      "category": "property",
+      "description": "A link to an electronic patient information leaflet.",
+      "label": "Electronic Patient Information Leaflet"
+    },
+    "equivalentProduct": {
+      "category": "property",
+      "description": "A product which can be substituted for the product based on supplier-defined functional equivalence to the product.",
+      "label": "Has Equivalent Product"
+    },
+    "eventsInfo": {
+      "category": "property",
+      "description": "A link to event details.  For a page specifically for scheduling a reservation or booking an appointment, see gs1:scheduleTime.",
+      "label": "Events information"
+    },
+    "exactDiscountAmount": {
+      "category": "property",
+      "description": "Links to a gs1:PriceSpecification that indicates in terms of an amount and specified currency, the exact discount on the sales price associated with a particular gs1:Discount. This property can be used to express '$10 off'.",
+      "label": "Exact Discount Amount"
+    },
+    "exactDiscountPercentage": {
+      "category": "property",
+      "description": "A floating-point value indicating an exact percentage discount on the sales price associated with a particular gs1:Discount.  This property can be used to express '15% discount'.",
+      "label": "Exact Discount Percentage"
+    },
+    "exclusionDescription": {
+      "category": "property",
+      "description": "A text description of any products, brands, or categories that cannot be used with the offer",
+      "label": "Exclusion Description"
+    },
+    "expirationDate": {
+      "category": "property",
+      "description": "The expiration date is the date that determines the limit of consumption or use of a product/coupon. Its meaning is determined based on the trade item context (e.g., for food, the date will indicate the possibility of a direct health risk resulting from use of the product after the date, for pharmaceutical products, it will indicate the possibility of an indirect health risk resulting from the ineffectiveness of the product after the date). It is often referred to as 'use by date' or 'maximum durability date'.",
+      "label": "17"
+    },
+    "expirationDateTime": {
+      "category": "property",
+      "description": "The manufacturer determines the expiration date and time, which is relevant only for short duration and for items that will not be sent on long distances and not outside of the time zone. A typical application of AI (7003) is in hospitals or public pharmacies for special, customised, products which may have a 'life duration' shorter than one single day. The life duration varies according the pharmaceutical substances used in the treatment. The precise expiration date and time is defined at the end of the manufacturing process, and can be barcoded on the product label as an attribute to the item's GTIN. Where there is no business requirement to express the expiration date to the nearest hour (or less), AI (17) Expiration date should be used.",
+      "label": "7003"
+    },
+    "faqs": {
+      "category": "property",
+      "description": "A link to a set of frequently asked questions.",
+      "label": "Frequently Asked Questions"
+    },
+    "fatInMilkContent": {
+      "category": "property",
+      "description": "The percentage of fat contained in milk content of the product.",
+      "label": "Fat In Milk Content"
+    },
+    "fatPerNutrientBasis": {
+      "category": "property",
+      "description": "Fat per specified nutrient basis quantity.",
+      "label": "Fat Per Nutrient Basis Quantity"
+    },
+    "fatpercentageInDryMatter": {
+      "category": "property",
+      "description": "The amount of fat contained in the base product expressed in percentage.",
+      "label": "Fat In Dry Matter"
+    },
+    "faxNumber": {
+      "category": "property",
+      "description": "A fax number used for transmitting and reproducing fixed graphic material over telephone lines or other electronic transmission media.",
+      "label": "Telefax"
+    },
+    "fibrePerNutrientBasis": {
+      "category": "property",
+      "description": "Fibre per specified nutrient basis quantity.",
+      "label": "Fibre Per Nutrient Basis Quantity"
+    },
+    "fileLanguageCode": {
+      "category": "property",
+      "description": "The specified language to which the digital asset is targeted. It is recommended to use the ISO 639-1 language code.",
+      "label": "File Language Code"
+    },
+    "filePixelHeight": {
+      "category": "property",
+      "description": "The number of pixels along the vertical axis of the image.",
+      "label": "File Pixel Height"
+    },
+    "filePixelWidth": {
+      "category": "property",
+      "description": "The number of pixels along the horizontal axis of the image.",
+      "label": "File Pixel Width"
+    },
+    "firstFreezeDate": {
+      "category": "property",
+      "description": "The first freeze date is applicable to products that are frozen directly after slaughtering, harvesting, catching or after initial processing of the product. Examples include fresh meat, meat products or fishery products. The first freeze date is determined by the organisation conducting the freezing.",
+      "label": "7006"
+    },
+    "fishType": {
+      "category": "property",
+      "description": "The type of fish for example Sea bass.",
+      "label": "Fish Type"
+    },
+    "fluoridePerNutrientBasis": {
+      "category": "property",
+      "description": "Fluoride per specified nutrient basis quantity.",
+      "label": "Fluoride Per Nutrient Basis Quantity"
+    },
+    "folicAcidPerNutrientBasis": {
+      "category": "property",
+      "description": "Folic Acid per specified nutrient basis quantity.",
+      "label": "Folic Acid Per Nutrient Basis Quantity"
+    },
+    "foodBeverageRefrigerationClaim": {
+      "category": "property",
+      "description": "Identifies whether or not the product requires refrigeration.",
+      "label": "Food Beverage Refrigeration Claim"
+    },
+    "foodBeverageTargetUse": {
+      "category": "property",
+      "description": "The type of meal the food or beverage product is targeted to for example Breakfast.",
+      "label": "Food Beverage Target Use"
+    },
+    "footwearFasteningType": {
+      "category": "property",
+      "description": "Something that mechanically joins or affixes two or more parts together in a footwear product for example a shoe lace.",
+      "label": "Fastening Type"
+    },
+    "footwearUpperType": {
+      "category": "property",
+      "description": "The descriptive term that is used by the product manufacturer to identify whether the footwear upper is open or closed. Otherwise known as Open or Closed Upper.",
+      "label": "Footwear Upper Type"
+    },
+    "freshOrSeawaterFarmed": {
+      "category": "property",
+      "description": "A code determining whether the fish originated from the sea or was farmed.",
+      "label": "Fresh or Seawater Farmed"
+    },
+    "functionalName": {
+      "category": "property",
+      "description": "Describes use of the product or service by the consumer. Should help clarify the product classification associated with the GTIN.",
+      "label": "Functional Name"
+    },
+    "geneticallyModifiedDeclaration": {
+      "category": "property",
+      "description": "A statement of the presence or absence of genetically modified protein or DNA.",
+      "label": "Genetically Modified Declaration Code"
+    },
+    "geo": {
+      "category": "property",
+      "description": "Links to information about geocoordinates or geoshapes for a place.",
+      "label": "Has Geocoordinates"
+    },
+    "glnType": {
+      "category": "property",
+      "description": "Indicates what type of thing is being identified by a GLN.",
+      "label": "Has GLN Type"
+    },
+    "globalLocationNumber": {
+      "category": "property",
+      "description": "A Global Location Number (GLN) is the GS1 Identification Key used to identify physical locations or parties. The key comprises a GS1 Company Prefix, Location Reference and Check Digit. For more information see https://www.gs1.org/gln.",
+      "label": "Global Location Number (GLN)"
+    },
+    "gpcCategoryCode": {
+      "category": "property",
+      "description": "8-digit code (GPC Brick Value) specifying a product category according to the GS1 Global Product Classification (GPC) standard. For more information see https://www.gs1.org/gpc",
+      "label": "GPC Category Code"
+    },
+    "gpcCategoryDescription": {
+      "category": "property",
+      "description": "A description of the code specifying a product category according to the GS1 Global Product Classification (GPC) standard.",
+      "label": "GPC Category Description"
+    },
+    "grossArea": {
+      "category": "property",
+      "description": "The overall area of the item including packaging. This can be given using a number of different AI ranges that depend on the units in which the area is measured.",
+      "label": "334n, 353n, 354n, 355n"
+    },
+    "grossVolume": {
+      "category": "property",
+      "description": "The overall volume of the item including packaging. This can be given using a number of different AI ranges that depend on the units in which the volume is measured.",
+      "label": "335n, 336n, 362n, 363n, 367n, 368n, 369n"
+    },
+    "grossWeight": {
+      "category": "property",
+      "description": "Used to identify the gross weight of the product. The gross weight includes all packaging materials of the product. At pallet level the productGrossWeight includes the weight of the pallet itself. For example, 200 GRM, value - total pounds, total grams, etc.",
+      "label": "Gross Weight"
+    },
+    "growingMethod": {
+      "category": "property",
+      "description": "The process through which fresh produce is grown and cultivated.",
+      "label": "Growing Method"
+    },
+    "gtin": {
+      "category": "property",
+      "description": "A Global Trade Item Number (GTIN) is the 14 digit GS1 Identification Key used to identify products. The key comprises a GS1 Company Prefix followed by an Item Reference Number and a Check Digit. See https://www.gs1.org/gtin  for more details.",
+      "label": "01"
+    },
+    "handledBy": {
+      "category": "property",
+      "description": "Used when one resolver redirects all request URIs that match a given pattern without further processing, such as from GS1 to a brand-operated service. See section 7.7.1 of the Digital Link standard, version 1.1.",
+      "label": "Handled by"
+    },
+    "harvestDate": {
+      "category": "property",
+      "description": "The harvest date. For example, the harvest date can be the date when an animal was slaughtered or killed, a fish has been harvested, or a crop was harvested. This date  is determined by the organisation conducting the harvesting. Different organisations may use more specific terminology when referring to their specific needs and use terms such as: Date of catch or slaughter date.",
+      "label": "7007"
+    },
+    "harvestDateEnd": {
+      "category": "property",
+      "description": "The harvest end date. For example, the harvest end date can be the date when an animal was slaughtered or killed, a fish has been harvested, or a crop was harvested. This end date is determined by the organisation conducting the harvesting. Different organisations may use more specific terminology when referring to their specific needs and use terms such as: Date of catch or slaughter date. When referring to animals the date range refers to the whole animal and all meat or fish cuts derived from this animal.",
+      "label": "7007"
+    },
+    "harvestDateStart": {
+      "category": "property",
+      "description": "The harvest start date. For example, the harvest start date can be the date when an animal was slaughtered or killed, a fish has been harvested, or a crop was harvested. This start date is determined by the organisation conducting the harvesting. Different organisations may use more specific terminology when referring to their specific needs and use terms such as: Date of catch or slaughter date. When referring to animals the date range refers to the whole animal and all meat or fish cuts derived from this animal.",
+      "label": "7007"
+    },
+    "hasAllergen": {
+      "category": "property",
+      "description": "Relates to details about allergens",
+      "label": "Has Allergen"
+    },
+    "hasBatchLotNumber": {
+      "category": "property",
+      "description": "The batch or lot number associates an item with information the manufacturer considers relevant for traceability of the trade item to which the element string is applied. The data may refer to the trade item itself or to items contained. The number may be, for example, a production lot number, a shift number, a machine number, a time, or an internal production code. In cases where the same product is manufactured in different locations the brand owner and the manufacturer are responsible for ensuring the non-duplication of batch/lot numbers for a GTIN. For the re-use of batch/lot numbers with a GTIN, sector-specific constraints need to be considered.",
+      "label": "10"
+    },
+    "hasPrimaryLocation": {
+      "category": "property",
+      "description": "Links to the place(s) that this organisation designates as their primary location(s).",
+      "label": "Has primary location"
+    },
+    "hasRetailers": {
+      "category": "property",
+      "description": "A link to a list of retailers.",
+      "label": "Has Retailers"
+    },
+    "hasReturnablePackageDeposit": {
+      "category": "property",
+      "description": "links to details of amounts refunded for returnable package in a specified region.",
+      "label": "Has Returnable Package Deposit Details"
+    },
+    "hasSerialNumber": {
+      "category": "property",
+      "description": "A serial number is assigned to an entity for its lifetime. When combined with a GTIN, a serial number uniquely identifies an individual item. The serial number field is alphanumeric and may include all characters contained in figure 7.11-1. The brand owner and the manufacturer are responsible for ensuring the non-duplication of serial numbers for a GTIN. For the re-use of serial numbers with a GTIN, sector-specific constraints need to be considered.",
+      "label": "21"
+    },
+    "hasThirdPartyControlledSerialNumber": {
+      "category": "property",
+      "description": "This identifier is assigned to an entity for its lifetime. When combined with a GTIN, a TPX uniquely identifies an individual item and forms a unit pack Unique Identifier (upUI) for tobacco traceability per EU 2018/574. The serial number field is alphanumeric and may include all characters contained in figure 7.11-1. The Third Party determines the TPX, but the TPX shall begin with the ID Issuer Unique Identification Code (UIC), followed by GS1 UIC Extension 1, and GS1 UIC Extension 2.",
+      "label": "235"
+    },
+    "healthClaimDescription": {
+      "category": "property",
+      "description": "A description of health claims according to regulations of the target market.",
+      "label": "Health Claim"
+    },
+    "homepage": {
+      "category": "property",
+      "description": "A link to general information about an organisation or brand. Typically the homepage of an organisation's website. It may include links to further information such as certifications, careers, payments, reservations, etc.",
+      "label": "Organisation Information Page"
+    },
+    "image": {
+      "category": "property",
+      "description": "Link to a file containing a visual representation of the product.",
+      "label": "Has Product Image"
+    },
+    "inPackageDepth": {
+      "category": "property",
+      "description": "The depth of the product in its packaging, as measured according to the GS1 Package Measurement Rules. See https://www.gs1.org/package-measurement-rules-implementation-guide for more details.",
+      "label": "In Package Depth"
+    },
+    "inPackageDiameter": {
+      "category": "property",
+      "description": "The measurement of the diameter of the product in its package at its largest point. For example, 165 MMT.",
+      "label": "In Package Diameter"
+    },
+    "inPackageHeight": {
+      "category": "property",
+      "description": "The height of the product in the package, as measured according to the GS1 Package Measurement Rules. See https://www.gs1.org/package-measurement-rules-implementation-guide for more details.",
+      "label": "In Package Height"
+    },
+    "inPackageWidth": {
+      "category": "property",
+      "description": "The width of the product in the package, as measured according to the GS1 Package Measurement Rules. See https://www.gs1.org/package-measurement-rules-implementation-guide for more details.",
+      "label": "In Package Width"
+    },
+    "includedAccessories": {
+      "category": "property",
+      "description": "Any included object or device not part of the core product itself but which adds to its functionality or use.",
+      "label": "Included Accessories"
+    },
+    "ingredient": {
+      "category": "property",
+      "description": "Links to information about ingredients of a specific Food/Beverage/Tobacco product.",
+      "label": "Has Food And Beverage Ingredient Information"
+    },
+    "ingredientContentPercentage": {
+      "category": "property",
+      "description": "Quantity of the ingredient contained in the product as a percentage of the total product ingredients. This is used in conjunction with ingredientName.",
+      "label": "Ingredient Content Percentage"
+    },
+    "ingredientName": {
+      "category": "property",
+      "description": "Free text field describing an ingredient or ingredient group. Ingredients include any additives (colourings, preservatives, e-numbers, etc.) that are encompassed.",
+      "label": "Ingredient Name"
+    },
+    "ingredientOfConcern": {
+      "category": "property",
+      "description": "Indicates a claim to an ingredient, considered to be a concern for regulatory or other reasons, and which is 'contained' within the product but may not need to specify the amount whether approximate, or an accurate measurement be given.",
+      "label": "Ingredient of Concern"
+    },
+    "ingredientSequence": {
+      "category": "property",
+      "description": "Integer (1, 2, 3...) indicating the ingredient order by content percentage of the product. (major ingredient = 1, second ingredient = 2) etc.",
+      "label": "Ingredient Sequence"
+    },
+    "ingredientStatement": {
+      "category": "property",
+      "description": "Information on the constituent ingredient make up of the product specified as one string.",
+      "label": "Ingredient Statement"
+    },
+    "ingredientsInfo": {
+      "category": "property",
+      "description": "A link to facts about ingredients.",
+      "label": "Ingredients information"
+    },
+    "initialCertificationDate": {
+      "category": "property",
+      "description": "The date when the certification was originally issued. May differ from the certificationStartDate of the current recertification cycle.",
+      "label": "Initial Certification Date"
+    },
+    "instructions": {
+      "category": "property",
+      "description": "A link to instructions, such as assembly instructions, usage tips etc.",
+      "label": "Instructions"
+    },
+    "instructionsForUse": {
+      "category": "property",
+      "description": "Link to a file containing the Instructions For Use.",
+      "label": "Has Instructions For Use"
+    },
+    "iodinePerNutrientBasis": {
+      "category": "property",
+      "description": "Iodine per specified nutrient basis quantity.",
+      "label": "Iodine Per Nutrient Basis Quantity"
+    },
+    "ironPerNutrientBasis": {
+      "category": "property",
+      "description": "Iron per specified nutrient basis quantity.",
+      "label": "Iron Per Nutrient Basis Quantity"
+    },
+    "irradiatedCode": {
+      "category": "property",
+      "description": "Indicates if radiation has been applied to the product.",
+      "label": "Irradiated Code"
+    },
+    "isCarbonated": {
+      "category": "property",
+      "description": "Used to identify whether or not a beverage product is naturally effervescent or has been made effervescent by the addition of carbon dioxide gas.",
+      "label": "Is Carbonated"
+    },
+    "isDecaffeinated": {
+      "category": "property",
+      "description": "The descriptive term that is used by the product manufacturer to identify whether or not the product contains caffeine.",
+      "label": "Is Decaffeinated"
+    },
+    "isFromConcentrate": {
+      "category": "property",
+      "description": "Used to identify whether or not the product claims to be made from a concentrated formulation.",
+      "label": "Is From Concentrate"
+    },
+    "isHomogenised": {
+      "category": "property",
+      "description": "A The indication whether or not the milk used was actively homogenised. The homogenisation of milk is a technical process in the dairy. The milk fat is milled to such an extent that further creaming is prevented.",
+      "label": "Is Homogenised"
+    },
+    "isInstant": {
+      "category": "property",
+      "description": "Determines whether the product is instant.",
+      "label": "Is Instant"
+    },
+    "isMaternity": {
+      "category": "property",
+      "description": "Indicates, with reference to the product branding, labelling or packaging, the descriptive term that is used by the product manufacturer to identify if the product is intended as maternity wear.",
+      "label": "Is Maternity"
+    },
+    "isOnlyAvailableThroughRetailer": {
+      "category": "property",
+      "description": "If specified and set to true, the discount is only available through the retailer making the offer.",
+      "label": "Only Available Through Retailer"
+    },
+    "isOnlyWithMailingListSignup": {
+      "category": "property",
+      "description": "If specified and set to true, the discount is only available for customers who have signed up to the retailer's mailing list.",
+      "label": "Only For Retailer Mailing List Members"
+    },
+    "isOnlyWithPaymentCard": {
+      "category": "property",
+      "description": "If specified, the discount is only available when purchasing using one of the specified payment card types.",
+      "label": "Only With Payment Card"
+    },
+    "isOnlyWithRetailerLoyaltyCard": {
+      "category": "property",
+      "description": "If specified and set to true, the discount is only available for holders of the retailer's own loyalty card.",
+      "label": "Only For Retailer Loyalty Cardholders"
+    },
+    "isOnlyWithRetailerPaymentCard": {
+      "category": "property",
+      "description": "If specified and set to true, the discount is only available for holders of the retailer's own store payment card.",
+      "label": "Only For Retailer Payment Cardholders"
+    },
+    "isPatterned": {
+      "category": "property",
+      "description": "The descriptive term that is used by the product manufacturer to identify whether or not the product has a patterned design.",
+      "label": "Is Patterned"
+    },
+    "isPittedStoned": {
+      "category": "property",
+      "description": "The descriptive term that is used by the product manufacturer to identify whether or not a fruit or vegetable product has been de-stoned or pitted prior to being offered for sale.",
+      "label": "Is Pitted Stoned"
+    },
+    "isProductRecalled": {
+      "category": "property",
+      "description": "An indicator for the product to determine if the Manufacturer or Supplier has recalled the product.",
+      "label": "Is Product Recalled"
+    },
+    "isPromoterExclusiveOffer": {
+      "category": "property",
+      "description": "Determines whether the offer is only provided by the promoter",
+      "label": "Is Promoter Exclusive Offer"
+    },
+    "isRindEdible": {
+      "category": "property",
+      "description": "An indicator whether or not the cheese rind is edible. Some cheeses are coated in plastic or their surface is treated with other traditional substances to increase their shelf life. This can result in the rind no longer being edible.",
+      "label": "Is Rind Edible"
+    },
+    "isSeedless": {
+      "category": "property",
+      "description": "Determines whether the product is seedless as grown.",
+      "label": "Is Seedless"
+    },
+    "isShelledPeeled": {
+      "category": "property",
+      "description": "The descriptive term that is used by the product manufacturer to identify whether or not the product or its contents have been shelled/peeled prior to being offered for sale.",
+      "label": "Is Shelled or Peeled"
+    },
+    "isSliced": {
+      "category": "property",
+      "description": "Determines whether the product comes pre-sliced.",
+      "label": "Is Sliced"
+    },
+    "isThermal": {
+      "category": "property",
+      "description": "The descriptive term that is used to identify whether the product is thermal.",
+      "label": "Is Thermal"
+    },
+    "isVintage": {
+      "category": "property",
+      "description": "Identifies whether the product makes claim to being vintage.",
+      "label": "Is Vintage"
+    },
+    "isWashedReadyToEat": {
+      "category": "property",
+      "description": "Determines whether product has been prewashed and is ready to eat.",
+      "label": "Is Washed Ready To Eat"
+    },
+    "isWaterproof": {
+      "category": "property",
+      "description": "The descriptive term that is used to identify whether or not the product claims to provide waterproofing to the applied surface.",
+      "label": "Is Waterproof"
+    },
+    "isWearableItemDisposable": {
+      "category": "property",
+      "description": "Identifies whether or not the product is intended to be disposed of after single use or a limited period of use.",
+      "label": "Is Wearable Item Disposable"
+    },
+    "itemOffered": {
+      "category": "property",
+      "description": "The product included in the offer.",
+      "label": "Item Offered"
+    },
+    "juiceContentPercent": {
+      "category": "property",
+      "description": "The fruit juice content of the product expressed as a percentage.",
+      "label": "Juice Content Percent"
+    },
+    "jws": {
+      "category": "property",
+      "description": "A link to a JSON Web Signature",
+      "label": "JSON Web Signature"
+    },
+    "latitude": {
+      "category": "property",
+      "description": "Angular distance North or South from the earth's equator measured through 90 degrees.",
+      "label": "Latitude"
+    },
+    "leasedFrom": {
+      "category": "property",
+      "description": "Links to the organisation (lessor) from which this place is leased.",
+      "label": "Leased from"
+    },
+    "leasedTo": {
+      "category": "property",
+      "description": "Links to the organisation(s) (lessee(s)) to which this place is leased. Property SHOULD be applied to a specific sub-location, rather than a main location, wherever possible.",
+      "label": "Leased to"
+    },
+    "leaveReview": {
+      "category": "property",
+      "description": "A link through which a review can be added.",
+      "label": "Leave a review"
+    },
+    "lesseeOf": {
+      "category": "property",
+      "description": "Links to the place(s) for which this organisation is the lessee (i.e., this organisation leases those places from another organisation, the lessor).",
+      "label": "Lessee of location"
+    },
+    "lessorFor": {
+      "category": "property",
+      "description": "Links to the place(s) for which this organisation is the lessor (i.e., this organisation leases those places to others).",
+      "label": "Lessor for"
+    },
+    "line": {
+      "category": "property",
+      "description": "A line is a point-to-point path consisting of two or more point objects separated by a space. A single line segment (i.e., straight line) is expressed as two points.  A multi-line path (i.e., open polygon) is expressed as a series of three or more points. For a closed shape, gs1:polygon SHALL be used.",
+      "label": "Line"
+    },
+    "location": {
+      "category": "property",
+      "description": "The place(s) associated with an organization.",
+      "label": "Has Location"
+    },
+    "locationGLN": {
+      "category": "property",
+      "description": "13-digit GLN that is being used to identify a physical or digital location. If gs1:glnType is present, gs1:locationGLN SHALL only be used when gs1:GLN_TypeCode includes FIXED_PHYSICAL_LOCATION, MOBILE_PHYSICAL_LOCATION, or DIGITAL_LOCATION",
+      "label": "Location GLN"
+    },
+    "locationHistory": {
+      "category": "property",
+      "description": "Provides details on if and when a location is active or inactive.",
+      "label": "Has Location History"
+    },
+    "locationID": {
+      "category": "property",
+      "description": "Identifier value associated to a location. This value SHALL follow rules set forth by the administrating organisation designated in gs1:LocationID_Type.",
+      "label": "Location ID"
+    },
+    "locationID_Qualifier": {
+      "category": "property",
+      "description": "Secondary qualifier to supplement gs1:LocationID_Type meaning. May be used with proprietary ID code values to define identifier administrator.",
+      "label": "Location ID Qualifier"
+    },
+    "locationID_Type": {
+      "category": "property",
+      "description": "Organisation that administers the gs1:locationID or the name of the ID itself.  Value from gs1:LocationID_Type code list.",
+      "label": "Location ID"
+    },
+    "locationID_URI": {
+      "category": "property",
+      "description": "A URI that links to information about the gs1:locationID.",
+      "label": "Location ID URI"
+    },
+    "locationInfo": {
+      "category": "property",
+      "description": "A link to a map, directions, or other location-related information.  For B2B location  information, see gs1:logisticsInfo.  For details specific to hours of operation, see gs1:openingHoursInfo",
+      "label": "Location information"
+    },
+    "locationRole": {
+      "category": "property",
+      "description": "A location classification based on the purpose, type of site and/or what occurs there. Repeatable value from gs1:LocationRoleType code list.",
+      "label": "Location Role"
+    },
+    "locationStatus": {
+      "category": "property",
+      "description": "Designation of active/inactive status of a location.",
+      "label": "Location Status"
+    },
+    "logisticsInfo": {
+      "category": "property",
+      "description": "A link to B2B logistics information related to a physical location.",
+      "label": "Logistics information"
+    },
+    "longitude": {
+      "category": "property",
+      "description": "The arc or portion of the earth's equator intersected between the meridian of a given place and the prime meridian and expressed in degrees",
+      "label": "Longitude"
+    },
+    "magnesiumPerNutrientBasis": {
+      "category": "property",
+      "description": "Magnesium per specified nutrient basis quantity.",
+      "label": "Magnesium Per Nutrient Basis Quantity"
+    },
+    "makesOffer": {
+      "category": "property",
+      "description": "An offer made by an organization.",
+      "label": "Makes Offer"
+    },
+    "managedBy": {
+      "category": "property",
+      "description": "Links to the organisation that manages this place or organisation, as designated by the owner or another organisation.",
+      "label": "Managed by"
+    },
+    "managedFor": {
+      "category": "property",
+      "description": "Links to the organisation(s) for whom this place is managed. Property SHOULD be applied to a specific sub-location, rather than a main location, wherever possible.",
+      "label": "Managed for"
+    },
+    "manages": {
+      "category": "property",
+      "description": "Links to the place(s) or organisation(s) that this organisation manages, on behalf of the owner or another organisation.",
+      "label": "Manages"
+    },
+    "manganesePerNutrientBasis": {
+      "category": "property",
+      "description": "Manganese per specified nutrient basis quantity.",
+      "label": "Manganese Per Nutrient Basis Quantity"
+    },
+    "manufacturer": {
+      "category": "property",
+      "description": "The organization that produces the item.",
+      "label": "Has Manufacturer"
+    },
+    "manufacturerPreparationCode": {
+      "category": "property",
+      "description": "Code indicating the preparation methods that a manufacturer has used in the manufacturing of a product for example DEEP_FRY.",
+      "label": "Manufacturer Preparation Code"
+    },
+    "manufacturersWarranty": {
+      "category": "property",
+      "description": "The warranty associated with the product.",
+      "label": "Has Manufacturer's Warranty"
+    },
+    "manufacturingPlant": {
+      "category": "property",
+      "description": "A physical location consisting of one or more buildings with facilities for manufacturing.",
+      "label": "Has Manufacturing Plant"
+    },
+    "massPerUnitArea": {
+      "category": "property",
+      "description": "The mass per unit area of the item. This can be given using a number of different AI ranges that depend on the units in which the mass and area are measured.",
+      "label": "337n"
+    },
+    "masterData": {
+      "category": "property",
+      "description": "A link to a source of structured master data for the entity. This is typically for B2B applications.",
+      "label": "Master data"
+    },
+    "maturationMethod": {
+      "category": "property",
+      "description": "The method of maturity for the item for example tree ripened or jet fresh.",
+      "label": "Maturation Method Code"
+    },
+    "maxPrice": {
+      "category": "property",
+      "description": "Provides a maximum price value as a floating-point numeric value that is qualified by the corresponding currency. See also gs1:priceCurrency",
+      "label": "Maximum Price"
+    },
+    "maximumDiscountAmount": {
+      "category": "property",
+      "description": "Links to a gs1:PriceSpecification that indicates in terms of an amount and specified currency, the maximum discount on the sales price associated with a particular gs1:Discount. This property can be used to express 'up to $10 off'.",
+      "label": "Maximum Discount Amount"
+    },
+    "maximumDiscountPercentage": {
+      "category": "property",
+      "description": "A floating-point value indicating a maximum percentage discount on the sales price associated with a particular gs1:Discount.  This property can be used to express 'up to 15% discount'.",
+      "label": "Maximum Discount Percentage"
+    },
+    "maximumOptimumConsumptionTemperature": {
+      "category": "property",
+      "description": "The upper limit drinking temperature of the optimum range of the drinking temperature. The optimum range of the drinking temperature is a recommendation and is based on the experience of the individual producer. Allows for the representation of the same value in different units of measure but not multiple values.",
+      "label": "Maximum Optimum Consumption Temperature"
+    },
+    "maximumQualifyingItems": {
+      "category": "property",
+      "description": "Specifies the maximum number of items that qualify for a particular gs1:Discount. This property can be used to express 'maximum N items per customer'.",
+      "label": "Maximum Qualifying Items"
+    },
+    "maximumQualifyingSpend": {
+      "category": "property",
+      "description": "Links to a gs1:PriceSpecification that indicates in terms of an amount and specified currency, the maximum spend that qualifies for a particular gs1:Discount. This property can be used to express 'for purchases of up to $100'.",
+      "label": "Maximum Qualifying Spend"
+    },
+    "meatPoultryType": {
+      "category": "property",
+      "description": "The fish, meat, or poultry type for this food and beverage item.",
+      "label": "Meat Poultry Type Code"
+    },
+    "menuInfo": {
+      "category": "property",
+      "description": "A link to menu details. This may include food menus, services, or other offerings provided by an organisation or at a location.  For details specific to allergens only, see gs1:allergenInfo .  For details specific to nutrition information only, see gs1:nutritionalInfo .  For details specific to ingredients only, see gs1:ingredientsInfo .",
+      "label": "Menu information"
+    },
+    "minPrice": {
+      "category": "property",
+      "description": "Provides a minimum price value as a floating-point numeric value that is qualified by the corresponding currency. See also gs1:priceCurrency",
+      "label": "Minimum Price"
+    },
+    "minimumDiscountAmount": {
+      "category": "property",
+      "description": "Links to a gs1:PriceSpecification that indicates in terms of an amount and specified currency, the minimum discount on the sales price associated with a particular gs1:Discount. This property can be used to express 'at least $10 off'.",
+      "label": "Minimum Discount Amount"
+    },
+    "minimumDiscountPercentage": {
+      "category": "property",
+      "description": "A floating-point value indicating a minimum percentage discount on the sales price associated with a particular gs1:Discount.  This property can be used to express 'at least 15% discount'.",
+      "label": "Minimum Discount Percentage"
+    },
+    "minimumFishContent": {
+      "category": "property",
+      "description": "The minimum amount of fish contained in a food and beverage product expressed as a measurement.",
+      "label": "Minimum Fish Content"
+    },
+    "minimumMeatPoultryContent": {
+      "category": "property",
+      "description": "The minimum amount of fish, meat or poultry contained in a food and beverage product expressed as a measurement.",
+      "label": "Minimum Meat Poultry Content"
+    },
+    "minimumOptimumConsumptionTemperature": {
+      "category": "property",
+      "description": "The lower limit drinking temperature of the optimum range of the drinking temperature. The optimum range of the drinking temperature is a recommendation and is based on the experience of the individual producer. Allows for the representation of the same value in different units of measure but not multiple values.",
+      "label": "Minimum Optimum Consumption Temperature"
+    },
+    "minimumQualifyingItems": {
+      "category": "property",
+      "description": "Specifies the minimum number of items that must be purchased to qualify for a particular gs1:Discount. This property can be used to express 'if you buy at least N items'.",
+      "label": "Minimum Qualifying Items"
+    },
+    "minimumQualifyingSpend": {
+      "category": "property",
+      "description": "Links to a gs1:PriceSpecification that indicates in terms of an amount and specified currency, the minimum spend required to qualify for a particular gs1:Discount. This property can be used to express 'if you spend at least $100'.",
+      "label": "Minimum Qualifying Spend"
+    },
+    "molybdenumPerNutrientBasis": {
+      "category": "property",
+      "description": "Molybdenum per specified nutrient basis quantity.",
+      "label": "Molybdenum Per Nutrient Basis Quantity"
+    },
+    "monounsaturatedFatPerNutrientBasis": {
+      "category": "property",
+      "description": "Monounsaturated fat per specified nutrient basis quantity.",
+      "label": "Monounsaturated Fat Per Nutrient Basis Quantity"
+    },
+    "netArea": {
+      "category": "property",
+      "description": "The net area of the item. This can be given using a number of different AI ranges that depend on the units in which the area is measured.",
+      "label": "314n, 350n, 351n"
+    },
+    "netContent": {
+      "category": "property",
+      "description": "The quantity of the product contained by a package, usually as claimed on the label. Indicates the net content of the total product. For fixed value products use the value claimed on the package, to avoid variable fill rate issue that arises with some product which are sold by volume or weight, and whose actual content may vary slightly from batch to batch.",
+      "label": "360n, 361n, 364n, 365n, 366n"
+    },
+    "netWeight": {
+      "category": "property",
+      "description": "Used to identify the net weight of the product. Net Weight excludes all packaging material, including the packaging material of all lower-level GTINs. Example:11.5 kgm.",
+      "label": "310n, 320n, 356n, 357n"
+    },
+    "niacinPerNutrientBasis": {
+      "category": "property",
+      "description": "Niacin per specified nutrient basis quantity.",
+      "label": "Niacin Per Nutrient Basis Quantity"
+    },
+    "numberOfServingsPerPackage": {
+      "category": "property",
+      "description": "The total number of servings contained in the package.",
+      "label": "Number of Servings Per Package"
+    },
+    "numberOfServingsPerPackageMeasurementPrecision": {
+      "category": "property",
+      "description": "Code indicating whether the number of servings per package is exact or approximate.",
+      "label": "Number of Servings Per Package Measurement Precision"
+    },
+    "numberOfServingsRangeDescription": {
+      "category": "property",
+      "description": "A free text field specifying a range for the number of servings contained in the package.",
+      "label": "Number of Servings Range Description"
+    },
+    "nutrientBasisQuantity": {
+      "category": "property",
+      "description": "Quantity on which the nutrient information has been based; for example, per 100 grams. When specified, nutrientBasisQuantity establishes the basis for all contained nutrient records.",
+      "label": "Nutrient Basis Quantity"
+    },
+    "nutrientBasisQuantityType": {
+      "category": "property",
+      "description": "The type of quantity specified in the nutrientBasisQuantity for example measurement, serving size, or container. This is used in conjunction with the nutrientBasisQuantity.",
+      "label": "Nutrient Basis Quantity Type Code"
+    },
+    "nutrientMeasurementPrecision": {
+      "category": "property",
+      "description": "The Code indicating whether the specified nutrient content is exact or approximate.",
+      "label": "Nutrient Measurement Precision"
+    },
+    "nutritionalClaim": {
+      "category": "property",
+      "description": "Code indicating a nutritional claim applicable to the product, for example FAT_FREE.",
+      "label": "Nutritional Claim Code"
+    },
+    "nutritionalClaimStatement": {
+      "category": "property",
+      "description": "Free text field for any additional nutritional claims.",
+      "label": "Nutritional Claim Statement"
+    },
+    "nutritionalInfo": {
+      "category": "property",
+      "description": "A link to nutritional facts.",
+      "label": "Nutritional Information"
+    },
+    "occupiedBy": {
+      "category": "property",
+      "description": "Links to the organisation(s) that occupy this place. Property SHOULD be applied to a specific sub-location, rather than a main location, wherever possible.",
+      "label": "Occupied by"
+    },
+    "occupies": {
+      "category": "property",
+      "description": "Links to the place(s) that this organisation occupies.",
+      "label": "Occupies location"
+    },
+    "offerDescription": {
+      "category": "property",
+      "description": "A description of the offer including goods or services offered for sale or use.",
+      "label": "Offer Description"
+    },
+    "offerDiscount": {
+      "category": "property",
+      "description": "A discount associated with an offer.",
+      "label": "Offer Discount"
+    },
+    "offerRedemptionType": {
+      "category": "property",
+      "description": "A code indicating the type of redemptions that apply to the offer, for example single use.",
+      "label": "Offer Redemption Type"
+    },
+    "offerRedemptionURL": {
+      "category": "property",
+      "description": "The URL where the offer seeker will need to go in order to redeem the offer for an online redemption.",
+      "label": "Offer Redemption URL"
+    },
+    "offerRestrictionDescription": {
+      "category": "property",
+      "description": "A description of what the offer is restricted to, relative to all other offerings by the issuer, for example payment restrictions, subscription required, new customers only.",
+      "label": "Offer Restriction Description"
+    },
+    "openingHoursInfo": {
+      "category": "property",
+      "description": "A link to details on hours of operation.",
+      "label": "Opening hours information"
+    },
+    "organicClaim": {
+      "category": "property",
+      "description": "Relates to an organic claim about the product",
+      "label": "Has Organic Claim"
+    },
+    "organicClaimAgency": {
+      "category": "property",
+      "description": "A governing body that creates and maintains standards related to organic products.",
+      "label": "Organic Claim Agency Code"
+    },
+    "organicPercentClaim": {
+      "category": "property",
+      "description": "The percent of actual organic materials per weight of the product. This is usually claimed on the product.",
+      "label": "Organic Percent Claim"
+    },
+    "organizationHistory": {
+      "category": "property",
+      "description": "Provides details on if and when an organisation/party is active or inactive.",
+      "label": "Has Organization History"
+    },
+    "organizationID": {
+      "category": "property",
+      "description": "Identifier value associated to an organisation/party. This value SHALL follow rules set forth by the administrating organisation designated in gs1:OrganizationID_Type.",
+      "label": "Organisation ID"
+    },
+    "organizationID_Qualifier": {
+      "category": "property",
+      "description": "Secondary qualifier to supplement gs1:organizationID_Type meaning. May be used with proprietary ID code values to define identifier administrator.",
+      "label": "Organisation ID Qualifier"
+    },
+    "organizationID_Type": {
+      "category": "property",
+      "description": "Organisation that administers the gs1:organizationID or the name of the ID itself.  Value from gs1:OrganizationID_Type code list.",
+      "label": "Organisation ID"
+    },
+    "organizationID_URI": {
+      "category": "property",
+      "description": "A URI that links to information about the gs1:organizationID.",
+      "label": "Organisation ID URI"
+    },
+    "organizationName": {
+      "category": "property",
+      "description": "The name of the organization expressed in text.",
+      "label": "Organization Name"
+    },
+    "organizationRole": {
+      "category": "property",
+      "description": "The role and/or purpose of a party (i.e. legal entity or function).  Multiple values from gs1:OrganizationRoleType code list may be associated to a single organisation/party.",
+      "label": "Has Organization Role"
+    },
+    "organizationStatus": {
+      "category": "property",
+      "description": "Designation of active/inactive status of an organisation/party.",
+      "label": "Organisation Status"
+    },
+    "outOfPackageDepth": {
+      "category": "property",
+      "description": "The depth of the product out of its packaging, as measured according to the GS1 Package Measurement Rules. See https://www.gs1.org/package-measurement-rules-implementation-guide for more details.",
+      "label": "Out of Package Depth"
+    },
+    "outOfPackageDiameter": {
+      "category": "property",
+      "description": "The measurement of the diameter of the product out of its package at its largest point. For example, 165 MMT.",
+      "label": "Out of Package Diameter"
+    },
+    "outOfPackageHeight": {
+      "category": "property",
+      "description": "The height of the product out of the package, as measured according to the GS1 Package Measurement Rules. See https://www.gs1.org/package-measurement-rules-implementation-guide for more details.",
+      "label": "Out of Package Height"
+    },
+    "outOfPackageWidth": {
+      "category": "property",
+      "description": "The width of the product out of the package, as measured according to the GS1 Package Measurement Rules. See https://www.gs1.org/package-measurement-rules-implementation-guide for more details.",
+      "label": "Out of Package Width"
+    },
+    "ownedBy": {
+      "category": "property",
+      "description": "Links to the organisation(s) that own this place, in full or in part. This includes joint ventures. For leased locations, see gs1:lessorFor and gs1:isLeasedFrom.",
+      "label": "Owned by"
+    },
+    "owns": {
+      "category": "property",
+      "description": "Links to the place(s) or organisation(s) that this organisation owns.",
+      "label": "Owns"
+    },
+    "packaging": {
+      "category": "property",
+      "description": "Details on the packaging for a product including type, weight and materials.",
+      "label": "Has Packaging"
+    },
+    "packagingDate": {
+      "category": "property",
+      "description": "The packaging date is the date when the goods were packed as determined by the packager. The date may refer to the trade item itself or to items contained.",
+      "label": "13"
+    },
+    "packagingFeature": {
+      "category": "property",
+      "description": "Code indicating a feature that facilitates the usage of the product by the consumer, for example a handle. Packaging features do not affect the core composition of the packaging type nor modify its usage.",
+      "label": "Packaging Feature"
+    },
+    "packagingFunction": {
+      "category": "property",
+      "description": "Code indicating specific functionality for packaging resulting from specific processes or features present in the packaging type,for example, ANTI_TAMPERING.",
+      "label": "Packaging Function"
+    },
+    "packagingMarkedDietAllergenType": {
+      "category": "property",
+      "description": "Indication of which dietary or allergen marks are on the package.",
+      "label": "Packaging Marked Diet Allergen Type Code"
+    },
+    "packagingMarkedFreeFrom": {
+      "category": "property",
+      "description": "Indication of the food ingredients that the package is marked free from.",
+      "label": "Packaging Marked Free From Code"
+    },
+    "packagingMarkedLabelAccreditation": {
+      "category": "property",
+      "description": "A marking that the product received recognition, endorsement, certification by following guidelines by the label issuing agency. This does not represent claims for regulatory purposes on products such as free from markings.",
+      "label": "Accreditation Code"
+    },
+    "packagingMaterial": {
+      "category": "property",
+      "description": "links to details about packaging material type, quantity and thickness",
+      "label": "Has Packaging Material Details"
+    },
+    "packagingMaterialCompositionQuantity": {
+      "category": "property",
+      "description": "The quantity of the packaging material of the product. Can be weight, volume or surface, can vary by country.",
+      "label": "Packaging Material Composition Quantity"
+    },
+    "packagingMaterialThickness": {
+      "category": "property",
+      "description": "The thickness of a packaging material.",
+      "label": "Packaging Material Thickness"
+    },
+    "packagingMaterialType": {
+      "category": "property",
+      "description": "The materials used for the packaging of the product for example glass or plastic.",
+      "label": "Packaging Material Type"
+    },
+    "packagingRecyclingProcessType": {
+      "category": "property",
+      "description": "The process the packaging could undertake for recyclable & sustainability programs. Examples COMPOSTABLE, ENERGY_RECOVERABLE, REUSABLE.",
+      "label": "Packaging Recycling Process Type"
+    },
+    "packagingRecyclingScheme": {
+      "category": "property",
+      "description": "A code indicating the recycling scheme the packaging of this product will fall within when recycled. Applies to recyclable packaging with or without deposit.",
+      "label": "Packaging Recycling Scheme"
+    },
+    "packagingShape": {
+      "category": "property",
+      "description": "A code depicting the shape of a package for example CONE.",
+      "label": "Packaging Shape"
+    },
+    "packagingType": {
+      "category": "property",
+      "description": "The dominant means used to transport, store, handle or display the product as defined by the data source. This packaging is not used to describe any manufacturing process.Recommend to use UNECE Rec 21 codes.",
+      "label": "Packaging Type"
+    },
+    "pantothenicAcidPerNutrientBasis": {
+      "category": "property",
+      "description": "Pantothenic Acid per specified nutrient basis quantity.",
+      "label": "Pantothenic Acid Per Nutrient Basis Quantity"
+    },
+    "parentOrganization": {
+      "category": "property",
+      "description": "Designates the legal entity or function directly above the organisation/party being identified in a hierarchy. This is not defaulted to the highest-level entity in the hierarchy. Only one parent organisation SHALL be associated to a single GLN. To specify other affiliated organisations, see gs1:affiliatedTo, gs1:managedBy, gs1:franchiseeOf, gs1:ownedBy. To specify an organisation/party lower in the hierarchy, see gs1:subOrganization.",
+      "label": "Parent Organization"
+    },
+    "partyGLN": {
+      "category": "property",
+      "description": "13-digit GLN that is being used to identify a legal entity or function. If gs1:glnType is present, gs1:partyGLN SHALL only be used when gs1:GLN_TypeCode includes LEGAL_ENTITY and/or FUNCTION",
+      "label": "Party GLN"
+    },
+    "paymentLink": {
+      "category": "property",
+      "description": "A link to a place where payments details are provided and/or payments can be made by the user.",
+      "label": "Make Payment"
+    },
+    "paymentTerms": {
+      "category": "property",
+      "description": "The type of payment term expressed as a code, for example Discount.",
+      "label": "Payment Terms"
+    },
+    "percentageOfAlcoholByVolume": {
+      "category": "property",
+      "description": "The percentage of alcohol contained in product.",
+      "label": "Percentage of Alcohol Per Volume"
+    },
+    "phosphorusPerNutrientBasis": {
+      "category": "property",
+      "description": "Phosphorus per specified nutrient basis quantity.",
+      "label": "Phosphorus Per Nutrient Basis Quantity"
+    },
+    "physicalLocationName": {
+      "category": "property",
+      "description": "The name of a physical place. To specify the name of a digital location, see gs1:digitalLocationName.",
+      "label": "Physical Location Name"
+    },
+    "pip": {
+      "category": "property",
+      "description": "A link to information specifically about the identified item, typically operated by the brand owner or a retailer of the product and aimed at consumers. It may include links to further information, product description, specifications etc.",
+      "label": "Product Information Page"
+    },
+    "polygon": {
+      "category": "property",
+      "description": "A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more space delimited points where the first and final points are identical.",
+      "label": "Polygon"
+    },
+    "polyolsPerNutrientBasis": {
+      "category": "property",
+      "description": "Polyols per specified nutrient basis quantity.",
+      "label": "Polyols Per Nutrient Basis Quantity"
+    },
+    "polyunsaturatedFatPerNutrientBasis": {
+      "category": "property",
+      "description": "Polyunsaturated fat per specified nutrient basis quantity.",
+      "label": "Polyunsaturated Fat Per Nutrient Basis Quantity"
+    },
+    "postOfficeBoxNumber": {
+      "category": "property",
+      "description": "The number that identifies a PO box. A PO box is a box in a post office or other postal service location assigned to an organization where postal items may be kept.",
+      "label": "PO Box Number"
+    },
+    "postalCode": {
+      "category": "property",
+      "description": "Text specifying the postal code for an address.",
+      "label": "Postal Code"
+    },
+    "postalName": {
+      "category": "property",
+      "description": "The name of the recipient expressed in text. Note that this may be different than gs1:OrganizationName.",
+      "label": "Postal Name"
+    },
+    "potassiumPerNutrientBasis": {
+      "category": "property",
+      "description": "Potassium per specified nutrient basis quantity.",
+      "label": "Potassium Per Nutrient Basis Quantity"
+    },
+    "preparationCode": {
+      "category": "property",
+      "description": "Code specifying the preparation state of the product for which the nutrient information is valid. PREPARED, UNPREPARED.",
+      "label": "Preparation Type Code"
+    },
+    "preparationConsumptionPrecautions": {
+      "category": "property",
+      "description": "Specifies additional precautions to be taken before preparation or consumption of the product.",
+      "label": "Preparation Consumption Precautions"
+    },
+    "preparationInformation": {
+      "category": "property",
+      "description": "Links to information about how to prepare a specific Food/Beverage/Tobacco product.",
+      "label": "Has Food And Beverage Preparation Information"
+    },
+    "preparationInstructions": {
+      "category": "property",
+      "description": "Free text providing instructions on how to prepare the product before serving.",
+      "label": "Preparation Instructions"
+    },
+    "preservationTechnique": {
+      "category": "property",
+      "description": "Code indicating the preservation technique used to preserve the product from deterioration, for example, BRINING.",
+      "label": "Preservation Technique"
+    },
+    "price": {
+      "category": "property",
+      "description": "Provides a price value as a floating-point numeric value that is qualified by the corresponding currency. See also gs1:priceCurrency. The price value indicates the unit price unless the property gs1:eligibleQuantity is specified and indicates multiple units",
+      "label": "Price Value"
+    },
+    "priceSpecification": {
+      "category": "property",
+      "description": "The price related to an offer. If the offer is a multi-buy offer for a quantity of product greater than one unit, this should be indicated using the property gs1:eligibleQuantity",
+      "label": "Price Specification"
+    },
+    "primaryAlternateProduct": {
+      "category": "property",
+      "description": "A product that is similar to the current product but is not exact match. Same form fit function, e.g. same product different colour, different package size, better quality.",
+      "label": "Has Primary Alternate Product"
+    },
+    "primaryLocationOf": {
+      "category": "property",
+      "description": "Links to the organisation(s) that designate this place as its/their primary location. Property SHOULD be applied to a specific sub-location, rather than a main location, wherever possible.",
+      "label": "Primary location of"
+    },
+    "productDescription": {
+      "category": "property",
+      "description": "An understandable and useable description of a product using brand and other descriptors. This attribute is filled with as little abbreviation as possible, while keeping to a reasonable length.  This should be a meaningful description of the product with full spelling to facilitate message processing. Retailers can use this description as the base to fully understand the brand, flavour, scent etc. of the specific product, in order to accurately create a product description as needed for their internal systems. Examples: XYZ Brand Base Invisible Solid Deodorant AP Stick Spring Breeze.",
+      "label": "Product Description"
+    },
+    "productFeatureBenefit": {
+      "category": "property",
+      "description": "Element for consumer facing marketing content to describe the key features or benefits of the style suitable for display purposes.",
+      "label": "Product Feature Benefit"
+    },
+    "productFormDescription": {
+      "category": "property",
+      "description": "The physical form or shape of the product. Used, for example, in pharmaceutical industry to indicate the formulation of the product. Defines the form the product takes and is distinct from the form of the packaging.",
+      "label": "Product Form Description"
+    },
+    "productID": {
+      "category": "property",
+      "description": "Additional means to the Global Trade Item Number to identify a product.",
+      "label": "Product ID"
+    },
+    "productMarketingMessage": {
+      "category": "property",
+      "description": "Marketing message associated with the product. Consumer-friendly marketing detailed description of the product.",
+      "label": "Product Marketing Message"
+    },
+    "productName": {
+      "category": "property",
+      "description": "Consumer friendly short description of the product suitable for compact presentation.",
+      "label": "Product Name"
+    },
+    "productRange": {
+      "category": "property",
+      "description": "A name, used by a Brand Owner, that span multiple consumer categories or uses. E.g. (Waist Watchers).",
+      "label": "Product Range"
+    },
+    "productSustainabilityInfo": {
+      "category": "property",
+      "description": "This term has been deprecated. Please use gs1:sustainabilityInfo instead.",
+      "label": "Sustainability and recycling (deprecated)"
+    },
+    "productYield": {
+      "category": "property",
+      "description": "Product quantity after preparation. This can differ based on productYieldType",
+      "label": "Product Yield"
+    },
+    "productYieldType": {
+      "category": "property",
+      "description": "Code indicating the type of yield measurement specified in productYield. Examples: AFTER_DILUTION, DRAINED_WEIGHT.",
+      "label": "Product Yield Type Code"
+    },
+    "productYieldVariationPercentage": {
+      "category": "property",
+      "description": "Indication of range in percent of the given cooking / roasting loss. Percentage that the actual weight of the product differs upward or downward from the average or estimated product yield.",
+      "label": "Product Yield Variation Percentage"
+    },
+    "productionDate": {
+      "category": "property",
+      "description": "The production date is the production or assembly date determined by the manufacturer. The date may refer to the trade item itself or to items contained.",
+      "label": "11"
+    },
+    "productionDateTime": {
+      "category": "property",
+      "description": "The date and time of production (or assembly). The date and time of production is determined by the manufacturer. The date and time may refer to the trade item itself or to the items contained.",
+      "label": "8008"
+    },
+    "productionVariantDescription": {
+      "category": "property",
+      "description": "Free text assigned by the manufacturer to describe the production variant. Examples are: package series X, package series Y.",
+      "label": "Production Variant Description"
+    },
+    "productionVariantEffectiveDateTime": {
+      "category": "property",
+      "description": "The start date of a production variant. The variant applies to products having a date mark (a best before date or expiration date) on the package that comes on or after the effective date.",
+      "label": "Production Variant Effective Date Time"
+    },
+    "promotion": {
+      "category": "property",
+      "description": "A link to a promotion.",
+      "label": "Promotion"
+    },
+    "proteinPerNutrientBasis": {
+      "category": "property",
+      "description": "Protein per specified nutrient basis quantity.",
+      "label": "Protein Per Nutrient Basis Quantity"
+    },
+    "provenanceStatement": {
+      "category": "property",
+      "description": "Free text description of the region or place the product originates from. This is to be specifically used to specify areas such as cities, mountain ranges, regions. Examples: Made in the Thuringen Mountains, Made in Paris, From the Napa Valley.",
+      "label": "Provenance Statement"
+    },
+    "purchaseSuppliesOrAccessories": {
+      "category": "property",
+      "description": "A link to information about where supplies or accessories for the item can be purchased or ordered.",
+      "label": "Purchase supplies or accessories"
+    },
+    "qualifyingBrandName": {
+      "category": "property",
+      "description": "If specified, the discount is only available when purchasing a product from one of the brand names specified via this property.",
+      "label": "Qualifying Brand Name"
+    },
+    "qualifyingGPCs": {
+      "category": "property",
+      "description": "If specified, the discount is only available when purchasing a product whose Global Product Classification (GPC) brick value appears in the list specified via this property.",
+      "label": "Qualifying Product GPC codes"
+    },
+    "qualifyingProductCategoryDescription": {
+      "category": "property",
+      "description": "If specified, the discount is only available when purchasing a product from categories specified in this free-form text field.",
+      "label": "Qualifying Product Category Description"
+    },
+    "qualifyingProductClassificationCode": {
+      "category": "property",
+      "description": "If specified, the discount is only available when purchasing a product whose product classification (other than GPC) appears in the list specified via this property. This property specifies a product classification other than GPC.",
+      "label": "Qualifying Product Classification Code"
+    },
+    "qualifyingProductGTINs": {
+      "category": "property",
+      "description": "If specified, the discount is only available when purchasing a product whose GTIN appears in the list specified via this property.",
+      "label": "Qualifying Product GTINs"
+    },
+    "qualifyingSubBrandName": {
+      "category": "property",
+      "description": "If specified, the discount is only available when purchasing a product from one of the sub-brand names (specified product ranges for a given brand) specified via this property.",
+      "label": "Qualifying Sub-brand Name"
+    },
+    "quickStartGuide": {
+      "category": "property",
+      "description": "A link to a description of the key features needed to be understood to begin using the item or interacting with something new.",
+      "label": "Quick start guide"
+    },
+    "recallStatus": {
+      "category": "property",
+      "description": "A link to information about whether the product has been recalled or not, typically an API.",
+      "label": "Recall status"
+    },
+    "recipeInfo": {
+      "category": "property",
+      "description": "A link to a recipe website.",
+      "label": "Recipe website"
+    },
+    "referencedFile": {
+      "category": "property",
+      "description": "Link to a file or website containing additional information on product.",
+      "label": "Has Referenced File"
+    },
+    "referencedFileEffectiveEndDateTime": {
+      "category": "property",
+      "description": "The date upon which the target of this external link ceases to be effective for use.",
+      "label": "Referenced File Effective End Date"
+    },
+    "referencedFileEffectiveStartDateTime": {
+      "category": "property",
+      "description": "The date upon which the target of this external link begins to be effective for use.",
+      "label": "Referenced File Effective Start Date"
+    },
+    "referencedFileSize": {
+      "category": "property",
+      "description": "The size of the file as it is stored in an uncompressed format.",
+      "label": "Referenced File Size"
+    },
+    "referencedFileType": {
+      "category": "property",
+      "description": "A code indicating the purpose or role of file (not a MIME type) that is being referenced, for example PRODUCT_LABEL_IMAGE. This code is used when the purpose of a file is not specified in the property.",
+      "label": "Referenced File Type"
+    },
+    "referencedFileURL": {
+      "category": "property",
+      "description": "Simple text string that refers to a resource on the internet, URLs may refer to documents, resources, people, etc.",
+      "label": "Website"
+    },
+    "registerProduct": {
+      "category": "property",
+      "description": "A link to an entry point for registering ownership of a product including for warranty purposes.",
+      "label": "Register purchase"
+    },
+    "registryEntry": {
+      "category": "property",
+      "description": "A link to an entry in a register, such as a business register or register of locations. Such registers may act as alternative identifiers, such as official company numbers, LEIs, other location identifiers etc.",
+      "label": "Entry in a register"
+    },
+    "regulatedProductName": {
+      "category": "property",
+      "description": "The prescribed, regulated or generic product name or denomination that describes the true nature of the product. For example for a food product in order to distinguish it from other foods according to country specific regulations.",
+      "label": "Regulated Product Name"
+    },
+    "reheatingClaim": {
+      "category": "property",
+      "description": "Indicates, with reference to the product branding, labelling or packaging whether a food product which is ready to eat can be reheated if required prior to consumption.",
+      "label": "Reheating Claim"
+    },
+    "relatedOrganization": {
+      "category": "property",
+      "description": "The organisation(s) associated with a place.",
+      "label": "Has Organisation"
+    },
+    "relatedVideo": {
+      "category": "property",
+      "description": "A link to any video, or document that has an embedded video, that describes or relates to the identified item, organisation, or location in some way.",
+      "label": "Related  video"
+    },
+    "replacedByOrganization": {
+      "category": "property",
+      "description": "Links to the successor organisation that is used in place of a previous organisation",
+      "label": "Replaced by organization"
+    },
+    "replacedByPlace": {
+      "category": "property",
+      "description": "Links to the successor location that is used in place of a previous location",
+      "label": "Replaced by Place"
+    },
+    "replacedByProduct": {
+      "category": "property",
+      "description": "The product which permanently replaces the current product. This product is sent in the record for the original item that is being replaced.",
+      "label": "Has Replaced By Product"
+    },
+    "replacedOrganization": {
+      "category": "property",
+      "description": "Links to the previous organisation that this organisation replaces",
+      "label": "Replaced organization"
+    },
+    "replacedPlace": {
+      "category": "property",
+      "description": "Links to the previous location that this location replaces",
+      "label": "Replaced Place"
+    },
+    "replacedProduct": {
+      "category": "property",
+      "description": "Indicates the product identification of an item that is being permanently replaced by this product.",
+      "label": "Has Replaced Product"
+    },
+    "responsibility": {
+      "category": "property",
+      "description": "Text further specifying the area of responsibility of the trade contact.",
+      "label": "Responsibility"
+    },
+    "responsibleForLocation": {
+      "category": "property",
+      "description": "Links to the place(s) for which this organisation is responsible.",
+      "label": "Responsible for location"
+    },
+    "responsibleOrganization": {
+      "category": "property",
+      "description": "Links to the organisation that is directly responsible for this place.",
+      "label": "Organisation responsible for the location"
+    },
+    "returnablePackageDepositAmount": {
+      "category": "property",
+      "description": "The monetary amount for the individual returnable package.",
+      "label": "Returnable Package Deposit Amount"
+    },
+    "returnablePackageDepositRegion": {
+      "category": "property",
+      "description": "The geographic region associated with the returnable package deposit amount.",
+      "label": "Returnable Package Deposit Region"
+    },
+    "review": {
+      "category": "property",
+      "description": "A link to reviews.",
+      "label": "Reviews"
+    },
+    "riboflavinPerNutrientBasis": {
+      "category": "property",
+      "description": "Riboflavin per specified nutrient basis quantity.",
+      "label": "Riboflavin Per Nutrient Basis Quantity"
+    },
+    "safetyInfo": {
+      "category": "property",
+      "description": "A link to safety information.",
+      "label": "Safety information"
+    },
+    "saltPerNutrientBasis": {
+      "category": "property",
+      "description": "Salt per specified nutrient basis quantity.",
+      "label": "Salt Per Nutrient Basis Quantity"
+    },
+    "saturatedFatPerNutrientBasis": {
+      "category": "property",
+      "description": "Saturated fat per specified nutrient basis quantity.",
+      "label": "Saturated Fat Per Nutrient Basis Quantity"
+    },
+    "scheduleTime": {
+      "category": "property",
+      "description": "A link to a site that offers information on scheduling, appointments, or reservations. This may or may not allow the user to book the reservation.",
+      "label": "Scheduling/Reservation"
+    },
+    "seasonCalendarYear": {
+      "category": "property",
+      "description": "The calendar year in which the product is seasonally available.",
+      "label": "Season Calendar Year"
+    },
+    "seasonName": {
+      "category": "property",
+      "description": "Element defines the season applicable to the item for example Winter.",
+      "label": "Season Name"
+    },
+    "seasonParameter": {
+      "category": "property",
+      "description": "Code indicating the season in which the product is available, e.g. SPRING, WINTER",
+      "label": "Season Parameter"
+    },
+    "seeker": {
+      "category": "property",
+      "description": "The organization seeking an offer.",
+      "label": "Seeker"
+    },
+    "selectedProductsOnly": {
+      "category": "property",
+      "description": "If specified and set to true, the discount only applies to specific products selected by the retailer or offer promoter - not to all items in that product category.  This property should be asserted and set to true for offers that say 'on selected products'.",
+      "label": "Selected Products Only"
+    },
+    "seleniumPerNutrientBasis": {
+      "category": "property",
+      "description": "Selenium per specified nutrient basis quantity.",
+      "label": "Selenium Per Nutrient Basis Quantity"
+    },
+    "sellByDate": {
+      "category": "property",
+      "description": "The date specified by the manufacturer as the last date the retailer is to offer the product for sale to the consumer. The product should not be merchandised after this date.",
+      "label": "16"
+    },
+    "seller": {
+      "category": "property",
+      "description": "The organization seeking to sell a product or service.",
+      "label": "Seller"
+    },
+    "serviceInfo": {
+      "category": "property",
+      "description": "A link to service or maintenance instructions.",
+      "label": "Service information"
+    },
+    "servingSize": {
+      "category": "property",
+      "description": "Measurement value specifying the serving size in which the information per nutrient has been stated. Example: Per 100 GRM.",
+      "label": "Serving Size"
+    },
+    "servingSizeDescription": {
+      "category": "property",
+      "description": "A free text field specifying the serving size for which the nutrient information has been stated for example: per 1/3 cup (42 g).",
+      "label": "Serving Size Description"
+    },
+    "servingSuggestion": {
+      "category": "property",
+      "description": "Free text field for serving suggestion.",
+      "label": "Serving Suggestion"
+    },
+    "sharpnessOfCheese": {
+      "category": "property",
+      "description": "The descriptive term that is used by the product manufacturer to identify the sharpness of the taste of the product for example EXTRA_SHARP. Usually the longer the aging of the product, the sharper the taste.",
+      "label": "Sharpness Of Cheese"
+    },
+    "size": {
+      "category": "property",
+      "description": "Links a wearable product to one or more groupings of gs1:SizeDetails representing size systems, size groups, size type and size dimensions.",
+      "label": "Size"
+    },
+    "sizeCode": {
+      "category": "property",
+      "description": "Links a product to one or more groupings of gs1:SizeCodeDetails representing the size value from a specified code list.",
+      "label": "Size Code"
+    },
+    "sizeCodeListCode": {
+      "category": "property",
+      "description": "Code specifying a size code list. Allowed code values are specified in GS1 Code List SizeCodeListCode .",
+      "label": "Size Code List Code"
+    },
+    "sizeCodeValue": {
+      "category": "property",
+      "description": "A code indicating the size of an object according to a specific code list. The applied code list is specified as additional information together with the size code.",
+      "label": "Size Code"
+    },
+    "sizeDimension": {
+      "category": "property",
+      "description": "The numerical size measurement relating to the size type.",
+      "label": "Size Dimension"
+    },
+    "sizeGroup": {
+      "category": "property",
+      "description": "Code indicating the type of size that is necessary to uniquely specify the size of the item, for example, BOYS.",
+      "label": "Size Group"
+    },
+    "sizeSystem": {
+      "category": "property",
+      "description": "The system that is being used to define the size for example EUROPE. Size system is used in conjunction with size group to define the size dimension.",
+      "label": "Size System"
+    },
+    "sizeType": {
+      "category": "property",
+      "description": "The type of size dimension being specified for example SLEEVE.",
+      "label": "Size Type"
+    },
+    "smartLabel": {
+      "category": "property",
+      "description": "A link to the product's SmartLabel page.",
+      "label": "SmartLabel"
+    },
+    "smpc": {
+      "category": "property",
+      "description": "A link to Summary Product Characteristics. To be used specifically when linking to information for healthcare professionals.",
+      "label": "Summary Product Characteristics (SmPC)"
+    },
+    "socialMedia": {
+      "category": "property",
+      "description": "A link to a social media channel. The title will typically be replaced by the name of the channel.",
+      "label": "Social media"
+    },
+    "sodiumPerNutrientBasis": {
+      "category": "property",
+      "description": "Sodium per specified nutrient basis quantity.",
+      "label": "Sodium Per Nutrient Basis Quantity"
+    },
+    "sourceAnimal": {
+      "category": "property",
+      "description": "Code indicating the source of raw material used to produce the food product, for example a GOAT for milk.",
+      "label": "Source Animal Code"
+    },
+    "sportingActivityType": {
+      "category": "property",
+      "description": "Code indicating the type of sporting activity for which the product is intended to be worn, for example FOOTBALL.",
+      "label": "Sporting Activity Type"
+    },
+    "starchPerNutrientBasis": {
+      "category": "property",
+      "description": "Starch per specified nutrient basis quantity.",
+      "label": "Starch Per Nutrient Basis Quantity"
+    },
+    "statisticInfo": {
+      "category": "property",
+      "description": "A link to information about statistics regarding an organisation, location, or other entity.",
+      "label": "Statistics"
+    },
+    "statusTimestamp": {
+      "category": "property",
+      "description": "Date and time (including optional timezone) associated to status designations. Timestamps may be future dated to provide advance notice of status changes. For further information about the required lexical representation of date, time, and timezone please see https://www.w3.org/TR/xmlschema-2/#dateTime",
+      "label": "Status Timestamp"
+    },
+    "streetAddress": {
+      "category": "property",
+      "description": "The street address expressed as free form text. The street address is printed on paper as the first lines below the name. For example, the name of the street and the number in the street or the name of a building. A total of four street address lines are available. gs1:streetAddress SHOULD be used before populating lines two through four. For a PO Box gs1:postOfficeBoxNumber SHOULD be used instead.",
+      "label": "Street Address"
+    },
+    "streetAddressLine2": {
+      "category": "property",
+      "description": "The second line of the street address, expressed as free form text. The street address is printed on paper as the first lines below the name. For example, the name of the street and the number in the street or the name of a building. A total of four street address lines are available. gs1:streetAddress SHOULD be used before populating lines two through four. These SHALL NOT be used as alternatives to the dedicated address properties gs1:addressSuburb, gs1:addressLocality and gs1:addressRegion.",
+      "label": "Street Address Line 2"
+    },
+    "streetAddressLine3": {
+      "category": "property",
+      "description": "The third line of the street address, expressed as free form text. The street address is printed on paper as the first lines below the name. For example, the name of the street and the number in the street or the name of a building. A total of four street address lines are available. gs1:streetAddress and gs1:streetaddressLine2 SHOULD be used before populating lines three and four. These SHALL NOT be used as alternatives to the dedicated address properties gs1:addressSuburb, gs1:addressLocality and gs1:addressRegion.",
+      "label": "Street Address Line 3"
+    },
+    "streetAddressLine4": {
+      "category": "property",
+      "description": "The fourth line of the street address, expressed as free form text. The street address is printed on paper as the first lines below the name. For example, the name of the street and the number in the street or the name of a building. gs1:streetAddress, gs1:streetaddressLine2 and gs1:streetaddressLine3 SHOULD be used before populating line four. These SHALL NOT be used as alternatives to the dedicated address properties gs1:addressSuburb, gs1:addressLocality and gs1:addressRegion.",
+      "label": "Street Address Line 4"
+    },
+    "styleDescription": {
+      "category": "property",
+      "description": "An attribute that classifies products that share many of the same characteristics (attribute values) that does NOT vary by GTIN, and are presented by the supplier as a single merchandise selection for the buyer.",
+      "label": "Style Description"
+    },
+    "subBrandName": {
+      "category": "property",
+      "description": "Second level of brand. Can be a trademark. It is the primary differentiating factor that a brand owner wants to communicate to the consumer or buyer. E.g. Yummy-Cola Classic. In this example Yummy-Cola is the brand and Classic is the sub-brand.",
+      "label": "Sub-brand Name"
+    },
+    "subOrganization": {
+      "category": "property",
+      "description": "Designates a legal entity or function directly below the organisation/party being identified in a hierarchy. There may be multiple sub-organisations associated to a single GLN. To specify other affiliated organisations, see gs1:manages, gs1:franchisorOf, gs1:owns. To specify a parent organisation, see gs1:parentOrganization.",
+      "label": "Sub-Organization"
+    },
+    "sugarsPerNutrientBasis": {
+      "category": "property",
+      "description": "Sugars per specified nutrient basis quantity.",
+      "label": "Sugars Per Nutrient Basis Quantity"
+    },
+    "supplierSpecifiedMinimumConsumerStorageDays": {
+      "category": "property",
+      "description": "Represents the number of days between a product's sell by date and its use by date.",
+      "label": "Supplier Specified Minimum Consumer Storage Days"
+    },
+    "support": {
+      "category": "property",
+      "description": "A link to a source of support such as a helpdesk, chat support, email etc.",
+      "label": "Support"
+    },
+    "sustainabilityInfo": {
+      "category": "property",
+      "description": "A link to information relating to sustainability and recycling requirements or processes.",
+      "label": "Sustainability and recycling"
+    },
+    "targetConsumerAge": {
+      "category": "property",
+      "description": "Identifies the target consumer age range for which a product has been designed.",
+      "label": "Target Consumer Age"
+    },
+    "targetConsumerGender": {
+      "category": "property",
+      "description": "Identifies the target consumer gender for which a product has been designed for example MALE",
+      "label": "Target Consumer Gender"
+    },
+    "targetMarket": {
+      "category": "property",
+      "description": "Relates to a set of target market details (product release date and associated countries)",
+      "label": "Has Target Market"
+    },
+    "targetMarketCountries": {
+      "category": "property",
+      "description": "List of countries representing the target market for a particular release date indicated by gs1:consumerFirstAvailabilityDateTime",
+      "label": "Target Market Countries"
+    },
+    "telephone": {
+      "category": "property",
+      "description": "A telephone number for example +44 217 992 9999.",
+      "label": "Telephone"
+    },
+    "textileMaterial": {
+      "category": "property",
+      "description": "One or more links to information about the materials used in a wearable product.",
+      "label": "Has Textile Material"
+    },
+    "textileMaterialContent": {
+      "category": "property",
+      "description": "A description of the material composition used in conjunction with the material percentage.",
+      "label": "Textile Material Content"
+    },
+    "textileMaterialDescription": {
+      "category": "property",
+      "description": "This provides a name or brief description of one material contained within the product, for example Rayon.",
+      "label": "Textile Description"
+    },
+    "textileMaterialPercentage": {
+      "category": "property",
+      "description": "Corresponding net weight percentage of the product material specified via gs1:textileMaterialDescription, e.g. 70.",
+      "label": "Textile Material Percentage"
+    },
+    "textileMaterialThreadCount": {
+      "category": "property",
+      "description": "The quality of material (fabric) of a product based on the total number of vertical and horizontal threads in one square inch.",
+      "label": "Textile Material Thread Count"
+    },
+    "textileMaterialWeight": {
+      "category": "property",
+      "description": "The measured weight of the material expressed in ounces per square yard or grams per square meter.",
+      "label": "Textile Material Weight"
+    },
+    "thiaminPerNutrientBasis": {
+      "category": "property",
+      "description": "Thiamin per specified nutrient basis quantity.",
+      "label": "Thiamin Per Nutrient Basis Quantity"
+    },
+    "traceability": {
+      "category": "property",
+      "description": "A link to traceability information (includes track and trace).  Traceability information may be provided for consumption by humans or computers. If the target is an EPCIS repository, use gs1:epcis instead.",
+      "label": "Traceability information"
+    },
+    "transFatPerNutrientBasis": {
+      "category": "property",
+      "description": "Trans Fat per specified nutrient basis quantity.",
+      "label": "Trans Fat Per Nutrient Basis Quantity"
+    },
+    "tutorial": {
+      "category": "property",
+      "description": "A link to a tutorial or set of tutorials, such as online classes, how-to videos etc.",
+      "label": "Tutorial"
+    },
+    "unitCode": {
+      "category": "property",
+      "description": "A string value indicating a Measurement Unit from UN/ECE Recommendation 20, Units of Measure used in International Trade e.g. GRM = gram - see http://www.unece.org/fileadmin/DAM/cefact/recommendations/rec20/rec20_rev3_Annex3e.pdf",
+      "label": "Measurement Unit"
+    },
+    "upperMaterialType": {
+      "category": "property",
+      "description": "The material(s) used for the upper part of the footwear product. The upper is the part of a shoe, boot, slipper or other item of footwear that is above the sole.",
+      "label": "Has Upper Material"
+    },
+    "userAgreement": {
+      "category": "property",
+      "description": "A link to an agreement or waiver.",
+      "label": "Sign waiver/agreement/document"
+    },
+    "usesManagedLocation": {
+      "category": "property",
+      "description": "Links to the place(s) that this organisation uses as a managed space.",
+      "label": "Uses managed location"
+    },
+    "validFrom": {
+      "category": "property",
+      "description": "The effective start date of the price .",
+      "label": "Valid From"
+    },
+    "validThrough": {
+      "category": "property",
+      "description": "The effective end date of the price .",
+      "label": "Valid Through"
+    },
+    "value": {
+      "category": "property",
+      "description": "A floating-point numeric value that is qualified by the corresponding measurement unit code - see gs1:unitCode",
+      "label": "Measurement Value"
+    },
+    "variantDescription": {
+      "category": "property",
+      "description": "Free text field used to identify the variant of the product. Variants are the distinguishing characteristics that differentiate products with the same brand and size including such things as the particular flavour, fragrance, taste.",
+      "label": "Variant Description"
+    },
+    "verificationService": {
+      "category": "property",
+      "description": "A link to a GS1 Lightweight Messaging Service for verifying the status of a product, organisation, or location and its identifier.",
+      "label": "Verification Service"
+    },
+    "vintner": {
+      "category": "property",
+      "description": "The person hired by a winery or wine company who is responsible for many of the processes in the preparation, taste and quality of the wine produced. The science of wine making is referred to as oenology. The vintner is the oenologist.",
+      "label": "Vintner"
+    },
+    "vitaminAPerNutrientBasis": {
+      "category": "property",
+      "description": "Vitamin A per specified nutrient basis quantity.",
+      "label": "Vitamin A Per Nutrient Basis Quantity"
+    },
+    "vitaminB12PerNutrientBasis": {
+      "category": "property",
+      "description": "Vitamin B12 per specified nutrient basis quantity.",
+      "label": "Vitamin B12 Per Nutrient Basis Quantity"
+    },
+    "vitaminB6PerNutrientBasis": {
+      "category": "property",
+      "description": "Vitamin B6 per specified nutrient basis quantity.",
+      "label": "Vitamin B6 Per Nutrient Basis Quantity"
+    },
+    "vitaminCPerNutrientBasis": {
+      "category": "property",
+      "description": "Vitamin C per specified nutrient basis quantity.",
+      "label": "Vitamin C Per Nutrient Basis Quantity"
+    },
+    "vitaminDPerNutrientBasis": {
+      "category": "property",
+      "description": "Vitamin D per specified nutrient basis quantity.",
+      "label": "Vitamin D Per Nutrient Basis Quantity"
+    },
+    "vitaminEPerNutrientBasis": {
+      "category": "property",
+      "description": "Vitamin E per specified nutrient basis quantity.",
+      "label": "Vitamin E Per Nutrient Basis Quantity"
+    },
+    "vitaminKPerNutrientBasis": {
+      "category": "property",
+      "description": "Vitamin K per specified nutrient basis quantity.",
+      "label": "Vitamin K Per Nutrient Basis Quantity"
+    },
+    "warningCopyDescription": {
+      "category": "property",
+      "description": "Warning information is additional information that outlines special requirements, warning and caution information printed on the package.",
+      "label": "Warning Copy Description"
+    },
+    "warranty": {
+      "category": "property",
+      "description": "The warranty associated with the product, as provided by the manufacturer.",
+      "label": "Has Offer Warranty"
+    },
+    "warrantyScopeDescription": {
+      "category": "property",
+      "description": "The description of warranty available for the product. Allows for the representation of the same value in different languages but not for multiple values.",
+      "label": "Warranty Scope"
+    },
+    "whatsInTheBox": {
+      "category": "property",
+      "description": "A link to a description of all the individual items in a packaged item.",
+      "label": "What's in the box?"
+    },
+    "yield": {
+      "category": "property",
+      "description": "Product quantity after preparation.",
+      "label": "Yield"
+    },
+    "zincPerNutrientBasis": {
+      "category": "property",
+      "description": "Zinc per specified nutrient basis quantity.",
+      "label": "Zinc Per Nutrient Basis Quantity"
+    }
+  }
+}

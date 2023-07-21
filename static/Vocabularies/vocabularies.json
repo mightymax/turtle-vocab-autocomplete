@@ -1,0 +1,499 @@
+{
+  "acl": {
+    "iri": "http://www.w3.org/ns/auth/acl#",
+    "description": "Ontology for authorization using access-control list.",
+    "label": "ACL"
+  },
+  "as": {
+    "iri": "https://www.w3.org/ns/activitystreams#",
+    "description": "Extended Activity Streams 2.0 Vocabulary",
+    "label": "Activity Streams 2.0"
+  },
+  "bibo": {
+    "iri": "http://purl.org/ontology/bibo/",
+    "description": "The Bibliographic Ontology describes bibliographic things on the semantic Web in RDF.  This ontology can be used as a citation ontology, as a document classification ontology, or simply as a way to describe any kind of document in RDF. It has been inspired by many existing document description metadata formats, and can be used as a common ground for converting other bibliographic data sources.",
+    "label": "The Bibliographic Ontology"
+  },
+  "cc": {
+    "iri": "http://creativecommons.org/ns#",
+    "description": "The Creative Commons Rights Expression Language (CC REL) lets you describe copyright licenses in RDF. For more information on describing licenses in RDF and attaching those descriptions to digital works, see [CC REL](https://wiki.creativecommons.org/CC_REL) in the [Creative Commons wiki](https://wiki.creativecommons.org/).",
+    "label": "Creative Commons"
+  },
+  "cert": {
+    "iri": "http://www.w3.org/ns/auth/cert#",
+    "description": "Ontology for Certificates and crypto stuff. This is in development. Some other ontologies to look at: * http://www.w3.org/2000/10/swap/crypto + has cwm builtins: http://www.w3.org/2000/10/swap/doc/Trust - a bit old perhaps. It imports daml+oil - would help to be more completely specified - uses literals as subjects a little liberally, which makes this a bit difficult to work with frameworks that don't permit this * http://xmlns.com/wot/0.1/ - limited very much to PGP (though on can map PGP to X509) - a little coarse grained, mixes up the PGP certificate with the PGP public key * Todo: - add some classes and relations for DSA - should this all be in one file? Or should this be cut up a little? Say one file for the general CERT ontology, and then files for RSA, DSA, PGP, etc... Or perhaps it does not really matter? - expand more on the certification side of things - verify this by security experts - owl2 has some constructs for combined inverse functional properties. This may be useful to use in defining an RSA key which is identified by two numbers. - also create html version of the spec by using this as a template. - should comments such as this be in html?",
+    "label": "Ontology for Certificates and crypto stuff."
+  },
+  "cnt": {
+    "iri": "http://www.w3.org/2011/content#",
+    "description": "Representing Content in RDF as defined by http://www.w3.org/TR/Content-in-RDF/",
+    "label": "Representing Content in RDF"
+  },
+  "constant": {
+    "iri": "http://qudt.org/vocab/constant/",
+    "description": "The Constants vocabulary defines terms for and contains the values and standard uncertainties of physical constants, initially populated from the NIST website: The NIST Reference on Constants, Units, and Uncertainty, at http://physics.nist.gov/cuu/index.html",
+    "label": "QUDT Constants"
+  },
+  "crm": {
+    "iri": "http://www.cidoc-crm.org/cidoc-crm/",
+    "description": "The CIDOC Conceptual Reference Model (CRM) is a theoretical and practical tool for information integration in the field of cultural heritage. It can help researchers, administrators and the public explore complex questions with regards to our past across diverse and dispersed datasets. The CIDOC CRM achieves this by providing definitions and a formal structure for describing the implicit and explicit concepts and relationships used in cultural heritage documentation and of general interest for the querying and exploration of such data. Such models are also known as formal ontologies. These formal descriptions allow the integration of data from multiple sources in a software and schema agnostic fashion.",
+    "label": "CIDOC Conceptual Reference Model"
+  },
+  "csvw": {
+    "iri": "http://www.w3.org/ns/csvw#",
+    "description": "This document describes the RDFS vocabulary description used in the Metadata Vocabulary for Tabular Data [[tabular-metadata]] along with the default JSON-LD Context.",
+    "label": "CSVW Namespace Vocabulary Terms"
+  },
+  "ctag": {
+    "iri": "http://commontag.org/ns#",
+    "description": "Common Tag RDF vocabulary, described using W3C RDF Schema. Common Tags allows documents and document fragments (any resource which can be identified by a URI) to be labeled with keywords and URIs, unambigiously idenfying the concepts covered by the resource.",
+    "label": "Common Tag vocabulary"
+  },
+  "dash-sparql": {
+    "iri": "http://datashapes.org/sparql#",
+    "description": "Defines SHACL functions (with URIs) representing the built-in SPARQL 1.1 functions and operators such as isIRI and / (divide). Each of these is represented by an instance of sh:Function with a URI such as sparql:divide. The declared parameters indicate the number of arguments but no other constraints have been added.",
+    "label": "SPARQL Vocabulary for SHACL"
+  },
+  "dash": {
+    "iri": "http://datashapes.org/dash#",
+    "description": "DASH is a SHACL library for frequently needed features and design patterns. The constraint components in this library are 100% standards compliant and will work on any engine that fully supports SHACL.",
+    "label": "DASH Data Shapes Vocabulary"
+  },
+  "dbo": {
+    "iri": "http://dbpedia.org/ontology/",
+    "description": "The DBpedia ontology provides the classes and properties used in the DBpedia data set.",
+    "label": "The DBpedia Ontology"
+  },
+  "dc11": {
+    "iri": "http://purl.org/dc/elements/1.1/",
+    "description": "This document is an up-to-date, authoritative specification of all metadata terms maintained by the Dublin Core™ Metadata Initiative. Included are the fifteen terms of the Dublin Core™ Metadata Element Set (also known as \"the Dublin Core\") plus several dozen properties, classes, datatypes, and vocabulary encoding schemes. The \"Dublin Core\" plus these extension vocabularies are collectively referred to as \"DCMI metadata terms\" (\"Dublin Core terms\" for short). These terms are intended to be used in combination with metadata terms from other, compatible vocabularies in the context of application profiles.",
+    "label": "Dublin Core Metadata Element Set, Version 1.1"
+  },
+  "dcam": {
+    "iri": "http://purl.org/dc/dcam/",
+    "description": "This document is an up-to-date, authoritative specification of all metadata terms maintained by the Dublin Core™ Metadata Initiative. Included are the fifteen terms of the Dublin Core™ Metadata Element Set (also known as \"the Dublin Core\") plus several dozen properties, classes, datatypes, and vocabulary encoding schemes. The \"Dublin Core\" plus these extension vocabularies are collectively referred to as \"DCMI metadata terms\" (\"Dublin Core terms\" for short). These terms are intended to be used in combination with metadata terms from other, compatible vocabularies in the context of application profiles.",
+    "label": "Metadata terms for vocabulary description"
+  },
+  "dcat": {
+    "iri": "http://www.w3.org/ns/dcat#",
+    "description": "DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. By using DCAT to describe datasets in data catalogs, publishers increase discoverability and enable applications easily to consume metadata from multiple catalogs. It further enables decentralized publishing of catalogs and facilitates federated dataset search across sites. Aggregated DCAT metadata can serve as a manifest file to facilitate digital preservation. DCAT is defined at http://www.w3.org/TR/vocab-dcat/. Any variance between that normative document and this schema is an error in this schema.",
+    "label": "The data catalog vocabulary"
+  },
+  "dcmitype": {
+    "iri": "http://purl.org/dc/dcmitype/",
+    "description": "The set of classes specified by the DCMI Type Vocabulary, used to categorize the nature or genre of the resource.",
+    "label": "DCMI Type Vocabulary"
+  },
+  "dcterms": {
+    "iri": "http://purl.org/dc/terms/",
+    "description": "The /terms/ namespace was originally created in 2001 for identifying new terms coined outside of the original fifteen-element Dublin Core. In 2008, in the context of defining formal semantic constraints for DCMI metadata terms in support of RDF applications, the original fifteen elements themselves were mirrored in the /terms/ namespace. As a result, there exists both a dc:date (http://purl.org/dc/elements/1.1/date) with no formal range and a corresponding dcterms:date (http://purl.org/dc/terms/date) with a formal range of \"literal\". While these distinctions are significant for creators of RDF applications, most users can safely treat the fifteen parallel properties as equivalent. The most useful properties and classes of DCMI Metadata Terms have now been published as ISO 15836-2:2019 [ISO 15836-2:2019]. While the /elements/1.1/ namespace will be supported indefinitely, DCMI gently encourages use of the /terms/ namespace.",
+    "label": "DCMI Metadata Terms - other"
+  },
+  "dig": {
+    "iri": "http://www.ics.forth.gr/isl/CRMdig/",
+    "description": "RM Digital is an ontology and RDF Schema to encode metadata about the steps and methods of production (\"provenance\") of digitization products and synthetic digital representations such as 2D, 3D or even animated Models created by various technologies. Its distinct features compared to competitive models is the complete inclusion of the initial physical measurement processes and their parameters. It has been developed as compatible extension of CIDOC CRM, which allows for querying the most relevant facts and returning complete descriptions encoded in this model by generic ISO21127 terms without need to refer to its specific properties. In contrast, competitive models cannot be queried by a more general standard and are restricted to the computational provenance only. Data encoded in the major competitive models can be transformed without loss of meaning into a CRM-Digital-form.",
+    "label": "CRM Digital"
+  },
+  "discipline": {
+    "iri": "http://qudt.org/vocab/discipline/",
+    "label": "QUDT Disciplines Ontology"
+  },
+  "doap": {
+    "iri": "http://usefulinc.com/ns/doap#",
+    "description": "The Description of a Project (DOAP) vocabulary, described using W3C RDF Schema and the Web Ontology Language.",
+    "label": "Description of a Project (DOAP) vocabulary"
+  },
+  "dpv": {
+    "iri": "http://www.w3.org/ns/dpv#",
+    "description": "The Data Privacy Vocabulary [DPV] enables expressing machine-readable metadata about the use and processing of personal data based on legislative requirements such as the General Data Protection Regulation [GDPR]. This document describes the DPV specification along with its data model.",
+    "label": "Data Privacy Vocabulary"
+  },
+  "dqv": {
+    "iri": "http://www.w3.org/ns/dqv#",
+    "description": "The Data Quality Vocabulary (DQV) is seen as an extension to DCAT to cover the quality of the data, how frequently is it updated, whether it accepts user corrections, persistence commitments etc. When used by publishers, this vocabulary will foster trust in the data amongst developers.",
+    "label": "Data Quality Vocabulary"
+  },
+  "dtype": {
+    "iri": "http://www.linkedmodel.org/schema/dtype#"
+  },
+  "duv": {
+    "iri": "http://www.w3.org/ns/duv#",
+    "description": "The Dataset Usage Vocabulary (DUV) is used to describe consumer experiences, citations, and feedback about datasets from the human perspective.",
+    "label": "Dataset Usage Vocabulary"
+  },
+  "earl": {
+    "iri": "http://www.w3.org/ns/earl#",
+    "description": "Formal schema of the Evaluation and Report Language (EARL) 1.0",
+    "label": "Evaluation and Report Language (EARL) 1.0 Schema"
+  },
+  "ebucore": {
+    "iri": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
+    "description": "Guidelines: for the purpose of flexibility and interoperability with a wider range of implementations, some properties purposefully do not have a range and accept either a resource or a literal.  When a resource is used, it is recommended to reuse objects defined in the model (e.g. pair hasEvent/Event or hasRole/Role). Example 1: x hasRole 'actor'. Example 2: x hasRole _:Role_1 (a reference to the Concept identifier from a SKOS Role vocabulary defined in the ontology).",
+    "label": "EBUCore - the Dublin Core for media"
+  },
+  "exif": {
+    "iri": "http://www.w3.org/2003/12/exif/ns#",
+    "description": "Vocabulary to describe an Exif format picture data. All Exif 2.2 tags are defined as RDF properties, as well as several terms to help this schema.",
+    "label": "Exif data description vocabulary"
+  },
+  "foaf": {
+    "iri": "http://xmlns.com/foaf/0.1/",
+    "description": "The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.",
+    "label": "Friend of a Friend (FOAF) vocabulary"
+  },
+  "frbr": {
+    "iri": "http://purl.org/vocab/frbr/core#",
+    "description": "This vocabulary is an expression in RDF of the concepts and relations described in the IFLA report on the Functional Requirements for Bibliographic Records (FRBR). This vocabulary is a work in progress, it includes RDF classes for the group 1, 2 and 3 entities described by the FRBR report and properties corresponding to the core relationships between those entities. It does not yet describe attributes of the entities. Where possible, appropriate relationships with other vocabularies are included in order to place this vocabulary in the context of existing RDF work.",
+    "label": "Functional Requirements for Bibliographic Records (FRBR)"
+  },
+  "geo": {
+    "iri": "http://www.opengis.net/ont/geosparql#",
+    "description": "An RDF/OWL vocabulary for representing spatial information",
+    "label": "GeoSPARQL Ontology"
+  },
+  "geof": {
+    "iri": "http://www.opengis.net/def/function/geosparql/",
+    "label": "GeoSPARQL Functions"
+  },
+  "geor": {
+    "iri": "http://www.opengis.net/def/rule/geosparql/",
+    "label": "GeoSPARQL rules"
+  },
+  "gml": {
+    "iri": "http://www.opengis.net/ont/gml#"
+  },
+  "gn": {
+    "iri": "http://www.geonames.org/ontology#",
+    "description": "The Geonames ontologies provides elements of description for geographical features, in particular those defined in the geonames.org data base",
+    "label": "The Geonames ontology"
+  },
+  "gr": {
+    "iri": "http://purl.org/goodrelations/v1#",
+    "description": "The GoodRelations ontology provides the vocabulary for annotating e-commerce offerings (1) to sell, lease, repair, dispose, or maintain commodity products and (2) to provide commodity services.  GoodRelations allows describing the relationship between (1) Web resources, (2) offerings made by those Web resources, (3) legal entities, (4) prices, (5) terms and conditions, and the aforementioned ontologies for products and services (6).  For more information, see http://purl.org/goodrelations/  Note: The base URI of GoodRelations is http://purl.org/goodrelations/v1. Please make sure you are only using element identifiers in this namespace, e.g. http://purl.org/goodrelations/v1#BusinessEntity. There may be copies of the ontology file on the Web which can be retrieved from other locations, BUT THOSE LOCATIONS MUST NOT BE USED AS THE BASIS OF IDENTIFIERS.  If you use GoodRelations for scientific purposes, please cite our paper:  Hepp, Martin: GoodRelations: An Ontology for Describing Products and Services Offers on the Web, Proceedings of the 16th International Conference on Knowledge Engineering and Knowledge Management (EKAW2008), September 29 - October 3, 2008, Acitrezza, Italy, Springer LNCS, Vol. 5268, pp. 332-347.  PDF at http://www.heppnetz.de/publications/",
+    "label": "The GoodRelations Vocabulary for Semantic Web-based E-Commerce"
+  },
+  "grddl": {
+    "iri": "http://www.w3.org/2003/g/data-view#",
+    "description": "GRDDL is a technique for gleaning resource descriptions from dialects of languages. It's a way of extracting Semantic Web data in RDF from XML formats (especially XHTML dialects or [microformats](http://www.microformats.org/)) via transformations identified by URIs and typically expressed in XSLT. For full details, see the [GRDDL specification](http://www.w3.org/2003/g/data-view#grddl_spec).",
+    "label": "GRDDL Data Views"
+  },
+  "gs1": {
+    "iri": "https://gs1.org/voc/",
+    "description": "The GS1 Web Vocabulary collects terms defined in various GS1 standards and data systems and made available for general use following Linked Data principles. It is designed as an extension to schema.org and, where relevant, mappings and relationships arising from that vocabulary are made explicit.",
+    "label": "GS1 Web Vocabulary"
+  },
+  "gtfs": {
+    "iri": "http://vocab.gtfs.org/terms#",
+    "description": "This ontology is a translation of the General Transit Feed Specification towards URIs. Its intended use is creating an exchange platform where the Linked GTFS model can be used as a start to get the right data into the right format. For semantics of the classes and properties, see https://developers.google.com/transit/gtfs/reference.",
+    "label": "General Transit Feed Specification"
+  },
+  "http": {
+    "iri": "http://www.w3.org/2011/http#",
+    "description": "A namespace for describing HTTP messages (http://www.w3.org/Protocols/rfc2616/rfc2616.html)",
+    "label": "HTTP in RDF"
+  },
+  "hydra": {
+    "iri": "http://www.w3.org/ns/hydra/core#",
+    "description": "The Hydra Core Vocabulary is a lightweight vocabulary to create hypermedia-driven Web APIs. By specifying a number of concepts commonly used in Web APIs it enables the creation of generic API clients.",
+    "label": "The Hydra Core Vocabulary"
+  },
+  "ical": {
+    "iri": "http://www.w3.org/2002/12/cal/icaltzd#",
+    "description": "The Internet Calendaring and Scheduling Core Object Specification (iCalendar) is a media type which allows users to store and exchange calendaring and scheduling information such as events, to-dos, journal entries, and free/busy information,[1] and together with its associated standards has been a cornerstone of the standardization and interoperability of digital calendars across different vendors.",
+    "label": "Internet Calendaring and Scheduling Core Object Specification (iCalendar)"
+  },
+  "la": {
+    "iri": "https://linked.art/ns/terms/",
+    "description": "Linked Art is a Community working together to create a shared Model based on Linked Open Data to describe Art. We then implement that model in Software and use it to provide valuable content. It is under active development and we welcome additional partners and collaborators.",
+    "label": "Linked Art"
+  },
+  "ldp": {
+    "iri": "http://www.w3.org/ns/ldp#",
+    "description": "Vocabulary URIs defined in the Linked Data Platform (LDP) namespace.",
+    "label": "The W3C Linked Data Platform (LDP) Vocabulary"
+  },
+  "list": {
+    "iri": "http://www.w3.org/2000/10/swap/list#",
+    "label": "Semantic Web Application Platform - List"
+  },
+  "locn": {
+    "iri": "http://www.w3.org/ns/locn#",
+    "description": "This is a new version of the final draft published by the European Commission in May 2012, revised according to the results of the ISA Core Location Pilot (see Section Change History for the list of changes). It is currently under the control of the Locations and Addresses Community Group, but is not under active development or review. Comments and queries should be sent to that group via public-locadd@w3.org. Terms defined here may be deprecated by that or future groups but will not disappear or their definition change.",
+    "label": "ISA Programme Location Core Vocabulary"
+  },
+  "log": {
+    "iri": "http://www.w3.org/2000/10/swap/log#",
+    "label": "Semantic Web Application Platform"
+  },
+  "lvont": {
+    "iri": "http://lexvo.org/ontology#",
+    "description": "Lexvo.org Ontology",
+    "label": "Lexvo.org Ontology"
+  },
+  "m4i": {
+    "iri": "http://w3id.org/nfdi4ing/metadata4ing#",
+    "description": "Metadata4Ing defines classes and properties or reuses such classes and properties from other ontologies to describe research processes and research data management in NFDI4Ing. New concepts and properties are located in the namespace of Metadata4Ing. Metadata4Ing does not import complete ontologies for the sake of relevance, readability, understandability and usability by and for engineers. Instead, it tries to make re-use of existing identifiers for classes and properties by re-using all or a relevant subset of the axioms from the original ontology. These statements have been extracted in different ways, e.g. by using Protégé tools importing an ontology and copying axioms of relevant items to Metadata4Ing or by download from data services or raw files of ontologies and manual copypasting. In some cases there was a need to extend or modify the original set of statements about an entity, e.g. because labels and definitions were expressed with a different owl:AnnotationProperty than the rest of Metadata4Ing, or because a skos:preflabel or a skos:definition in any of the languages we would like to support was missing. Any editorial changes on elements from external ontologies are declared in Metadata4Ing by an annotation with skos:editorialNote at item-level. To get the original set of statements we encourage to visit the original namespace of the respective item. Metadata4Ing reuses elements from the following ontologies: - BIBO = Bibliographic Ontology - BIRO = Bibliographic Reference Ontology - DCAT = Data Catalog - DCTERMS = Dublin Core Terms - FOAF = Friend of a Friend - OWL = Web Ontology Language - PROV = Provenance Namespace - QUDT = Quantities, Units, Dimensions and Types - RDF = Resource Description Framework - RDFS = RDF Schema - SCHEMA = schema.org - SKOS = Simple Knowledge Organization System - SSN = Semantic Sensor Network Ontology - VANN = Vocabulary for Annotating vocabulary descriptions - XSD = XML Schema Definition - EMMO = European Materials and Modelling Ontology - BFO = Basic Formal Ontology - RO = Relation Ontology - PIMS-II = PIMS Interoperability Infrastructure - D-SI = Digital System of Units",
+    "label": "Metadata4Ing: An ontology for describing the generation of research data within a scientific activity."
+  },
+  "ma": {
+    "iri": "http://www.w3.org/ns/ma-ont#",
+    "description": "Created by Tobias Buerger, Jean Pierre Evain and Pierre-Antoine Champin with the RDFS Taskforce within the W3C Media Annotation Working Group.",
+    "label": "Ontology for Media Resources"
+  },
+  "mads": {
+    "iri": "http://www.loc.gov/mads/rdf/v1#",
+    "description": "This document describes the MADS/RDF (Metadata Authority Description Schema in RDF) vocabulary, a data model for authority and vocabulary data used within the library and information science (LIS) community, which is inclusive of museums, archives, and other cultural institutions. It is presented as an OWL ontology.   MADS/RDF is a knowledge organization system (KOS) designed for use with controlled values for names (personal, corporate, geographic, etc.), thesauri, taxonomies, subject heading systems, and other controlled value lists. It is closely related to SKOS, the Simple Knowledge Organization System and a widely supported and adopted RDF vocabulary. Given the close relationship between the aim of MADS/RDF and the aim of SKOS, the MADS ontology has been fully mapped to SKOS.   Unlike SKOS, however, which is very broad in its application, MADS/RDF is designed specifically to support authority data as used by and needed in the LIS community and its technology systems. For example, MADS/RDF provides a means to record data from the Machine Readable Cataloging (MARC) Authorities format in RDF for use in semantic applications and Linked Data projects.   MADS/RDF is designed to support the description of cultural and bibliographic resources. Data described using MADS/RDF, therefore, assists with identifying and annotating bibliographic and cultural resources. MADS/RDF is not focused on the description of Real World Objects. Although a MADS/RDF description may contain information specific to the Real World Object associated with the MADS/RDF authoritative label, the MADS/RDF ontology distinguishes between these two entities – the RWO and the Authority.   Updated: 29 October 2015. Addition of new properties, madsrdf:activityEndDate, madsrdf:activityStartDate, madsrdf:associatedLanguage, madsrdf:associatedLocale, madsrdf:birthDate, madsrdf:birthPlace, madsrdf:deathDate, madsrdf:deathPlace, madsrdf:entityDescriptor, madsrdf:establishDate, madsrdf:fieldOfActivity, madsrdf:gender, madsrdf:hasAffiliation, madsrdf:honoraryTitle, madsrdf:isIdentifiedByAuthority, madsrdf:occupation, madsrdf:prominentFamilyMember, madsrdf:terminateDate, madsrdf:fullerName, madsrdf:creationDateStart, madsrdf:creationDateEnd, madsrdf:workOrigin, madsrdf:hasChararacteristic.   The MADS/RDF to SKOS/RDF mapping was done by Antoine Isaac. The MADS/RDF model and ontology benefited significantly as a result of the fruitful discussions surrounding his effort to map the MADS/RDF ontology to SKOS.",
+    "label": "MADS/RDF (Metadata Authority Description Schema in RDF)"
+  },
+  "math": {
+    "iri": "http://www.w3.org/2000/10/swap/math#",
+    "label": "Semantic Web Application Platform - Math"
+  },
+  "oa": {
+    "iri": "http://www.w3.org/ns/oa#",
+    "description": "The Web Annotation ontology defines the terms of the Web Annotation vocabulary. Any changes to this document MUST be from a Working Group in the W3C that has established expertise in the area.",
+    "label": "Web Annotation Ontology"
+  },
+  "og": {
+    "iri": "http://ogp.me/ns#",
+    "description": "The Open Graph protocol enables any web page to become a rich object in a social graph. For instance, this is used on Facebook to allow any web page to have the same functionality as any other object on Facebook.",
+    "label": "The Open Graph protocol"
+  },
+  "oidc": {
+    "iri": "http://www.w3.org/ns/solid/oidc#",
+    "description": "The OpenID Connect vocabulary used by the Solid-OIDC authentication specification.",
+    "label": "Solid OIDC"
+  },
+  "org": {
+    "iri": "http://www.w3.org/ns/org#",
+    "description": "Vocabulary for describing organizational structures, specializable to a broad variety of types of organization.",
+    "label": "Core organization ontology"
+  },
+  "owl": {
+    "iri": "http://www.w3.org/2002/07/owl#",
+    "description": "This ontology partially describes the built-in classes and properties that together form the basis of the RDF/XML syntax of OWL 2. The content of this ontology is based on Tables 6.1 and 6.2 in Section 6.4 of the OWL 2 RDF-Based Semantics specification, available at http://www.w3.org/TR/owl2-rdf-based-semantics/. Please note that those tables do not include the different annotations (labels, comments and rdfs:isDefinedBy links) used in this file. Also note that the descriptions provided in this ontology do not provide a complete and correct formal description of either the syntax or the semantics of the introduced terms (please see the OWL 2 recommendations for the complete and normative specifications). Furthermore, the information provided by this ontology may be misleading if not used with care. This ontology SHOULD NOT be imported into OWL ontologies. Importing this file into an OWL 2 DL ontology will cause it to become an OWL 2 Full ontology and may have other, unexpected, consequences.",
+    "label": "The OWL 2 Schema vocabulary (OWL 2)"
+  },
+  "pim": {
+    "iri": "http://www.w3.org/ns/pim/space#",
+    "description": "This ontology is for use in describing Workspaces.  Workspaces are places where data is stored and associated policies of privacy. A given application typically stores information in several different workspaces, some being user private, some shared, and some public. it is crucial that the user has easy control over the destiny of information.",
+    "label": "Workspace Ontology"
+  },
+  "prefix": {
+    "iri": "http://qudt.org/vocab/prefix/",
+    "description": "The Prefixes vocabulary defines the prefixes commonly prepended to units to connote multiplication, either decimal or binary.",
+    "label": "QUDT Prefixes Version 2.1 Vocabulary"
+  },
+  "prov": {
+    "iri": "http://www.w3.org/ns/prov#",
+    "description": "This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page).  If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/ Archives/Public/public-prov-comments/). All feedback is welcome.",
+    "label": "W3C PROVenance Interchange"
+  },
+  "qb": {
+    "iri": "http://purl.org/linked-data/cube#",
+    "description": "This vocabulary allows multi-dimensional data, such as statistics, to be published in RDF. It is based on the core information model from SDMX (and thus also DDI).",
+    "label": "Vocabulary for multi-dimensional (e.g. statistical) data publishing"
+  },
+  "qkdv": {
+    "iri": "http://qudt.org/vocab/dimensionvector/",
+    "description": "Provides the set of all dimension vectors",
+    "label": "QUDT Dimension Vectors Version 2.1 Vocabulary"
+  },
+  "quantitykind": {
+    "iri": "http://qudt.org/vocab/quantitykind/",
+    "description": "Provides the set of all quantity kinds.",
+    "label": "QUDT VOCAB Quantity Kinds  Release 2.1.25"
+  },
+  "qudt": {
+    "iri": "http://qudt.org/schema/qudt/",
+    "description": "The QUDT, or \"Quantity, Unit, Dimension and Type\" schema defines the base classes properties, and restrictions used for modeling physical quantities, units of measure, and their dimensions in various measurement systems. The goal of the QUDT ontology is to provide a unified model of, measurable quantities, units for measuring different kinds of quantities, the numerical values of quantities in different units of measure and the data structures and data types used to store and manipulate these objects in software.",
+    "label": "QUDT Schema"
+  },
+  "rdau": {
+    "iri": "http://rdaregistry.info/Elements/u/",
+    "description": "Properties that are derived from the elements of all of the RDA entities with semantics that are independent of the IFLA Library Reference Model.",
+    "label": "RDA Unconstrained properties"
+  },
+  "rdf": {
+    "iri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "description": "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts.",
+    "label": "The RDF Concepts Vocabulary (RDF)"
+  },
+  "rdfa": {
+    "iri": "http://www.w3.org/ns/rdfa#",
+    "description": "This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFa 1.1 processing behavior.",
+    "label": "RDFa Vocabulary for Term and Prefix Assignment, and for Processor Graph Reporting"
+  },
+  "rdfs": {
+    "iri": "http://www.w3.org/2000/01/rdf-schema#",
+    "description": "RDF Schema provides a data-modelling vocabulary for RDF data. RDF Schema is an extension of the basic RDF vocabulary.",
+    "label": "The RDF Schema vocabulary (RDFS)"
+  },
+  "rev": {
+    "iri": "http://purl.org/stuff/rev#",
+    "description": "Vocabulary for expressing reviews and ratings using the Resource Description Framework. It is compatible with hReview and conforms to OWL Lite",
+    "label": "RDF Review Vocabulary"
+  },
+  "rico": {
+    "iri": "https://www.ica.org/standards/RiC/ontology#",
+    "description": "<html:div xml:lang=\"en\" id=\"introduction\"> <html:h3>Introduction</html:h3> <html:p>RiC-O (Records in Contexts-Ontology) is an OWL ontology for describing archival record resources. As the second part of Records in Contexts standard, it is a formal representation of Records in Contexts Conceptual Model (RiC-CM). This version, which is v0.2, is the current official release. It is compliant with RiC-CM v0.2, that will be published soon after the release of RiC-O v0.2.</html:p> <html:p>The following diagram shows the main RiC-CM v0.2 entities and a few relations between them: <html:img src=\"https://raw.githubusercontent.com/ICA-EGAD/RiC-O/master/diagrams/diagrams_v0-2/RiC-CM-overview/diagram_RiC-CM-overview-RiC-v0-2.jpg\" alt=\"A partial overview of RiC-CM v0.2 main entities\" class=\"diagram\"></html:img> </html:p> <html:div id=\"design-principles\"> <html:h4>RiC-O design principles</html:h4> <html:p>The following design principles were followed when developing RiC-O.</html:p> <html:p> <html:strong>RiC-O is a domain or reference ontology</html:strong>.</html:p> <html:p>It provides a generic vocabulary and formal rules for creating RDF datasets (or generating them from existing archival metadata) that describe in a consistent way any kind of archival record resource. It can support publishing RDF datasets as Linked Data, querying them using SPARQL, and making inferences using the logic of the ontology.</html:p> <html:p>While some projects have built some specific ontologies for describing archives, at this time no generic domain ontology exists for the specific needs of the archival community. This is why EGAD decided to develop RiC-O as the second part of RiC standard.</html:p> <html:p>Apart this first, main target, RiC-O also can help archival institutions and engineers to design and develop other technical implementations of RiC-CM that represent record resources and their layers of contexts as oriented, interconnected graphs. Of course, other technical implementations may be developed later on, including XML models, or (hopefully) new versions of EAD and EAC-CPF XML models.</html:p> <html:p>As RiC-O is a generic, domain ontology, it does not address by itself every specific need or expectation that may occur in every archival institution or project. It is rather a high level framework and a project can either limit itself to the use of a selection of components, or can add more subcomponents where needed.</html:p> <html:p>As a domain ontology, RiC-O, at this stage at least, does not borrow any component from other existing ontologies (such as the cultural heritage models – IFLA-LRM and CIDOC-CRM, PREMIS, or PROV-O). It should therefore be easier, for an archival institution or archival project, to understand, implement and maintain RiC-O within its system.</html:p> <html:p>Later on, RiC-O will be aligned with these existing models. This is of course essential for interconnecting RDF datasets conforming to RiC-O with other datasets, or for using parts of RiC-O in other contexts than the archival or records management realm.</html:p> <html:p> <html:strong>RiC-O must be immediately usable.</html:strong> </html:p> <html:p>This is a key feature for a new model. In particular, it is very important that existing archival metadata, that are created or generated in current information systems, can be converted to RDF conforming to RiC-O, without losing any data, structural or partially implicit information. What is at stake here is that metadata conforming to the previous existing ICA standards can be processed successfully.</html:p> <html:p>During the ongoing development process, a lot of successful testing has been made, using XML/EAD finding aids and XML/EAC-CPF authority records, that have been converted to RDF datasets, either by hand or using scripts. A conversion software is being developed and will soon be available.</html:p> <html:p>While some existing metadata sets may have a very fine level of granularity and accuracy, already using, for example, controlled vocabularies, or describing curation events separately, often these metadata don’t have the very precise structure that RiC-CM recommends. Even then, such a conversion process should remain possible. In order to allow this, RiC-O sometimes provides several methods for representing information (as described below). From this point of view, the current official version of RiC-O may be considered a transitional ontology, in which some components may be deprecated later on.</html:p> <html:p> The usability of a model also depends on its documentation. That’s why the current official release has been fully documented (this documentation will be continously improved).</html:p> <html:p>RiC-O will also soon be acompanied with examples (RDF datasets). Some tutorials should also be written, and EGAD will organize practical workshops.</html:p> <html:p> <html:strong>RiC-O has to provide a flexible framework</html:strong>.</html:p> <html:p>This is a very important principle too. It is related with the usability principle quoted above. Moreover, archival description is flexible by essence. It is quite commonly noted that the level of granularity of information varies from one finding aid to another (or from one authority record to another), or even within the same finding aid. Some series or agents are described summarily because little is known about them and there is little time for extensive research, while other series, even records, or agents are described in detail; some relations (e.g. that relating to provenance) may be described without any detail while others may be thoroughly documented, as ISAAR(CPF) and EAC-CPF allow it.</html:p> <html:p>Being generally flexible, for an OWL ontology, depends first on the polyhierarchical systems of classes and properties it provides. A superproperty or superclass, more general or generic than its subproperties or subclasses, must exist and be available for handling information, while at the same time more accurate subcomponents must be there for handling more accurate description. Also, RiC-O should provide several methods for expressing whether relations are well attested and certain, or are more vague, as well as direct and short paths between entities alongside more complex ones.</html:p> <html:p> <html:strong>RiC-O opens new potential for archival description.</html:strong> </html:p> <html:p>This means that Linked Data tools and interfaces should enable end users to go through RDF/RiC-O graphs, to query them using SPARQL in an efficient way and to consult archival metadata and their contexts in new ways. As an example, an end user should be able to ask « What are (according to your dataset) the corporate bodies that succeeded to this given entity from its end of existence, by 1840, to nowadays (as concerns this given activity) ?» or « tell me what instantiations of this photograph exist? » « what are the existing copies of this original charter?», and get a list of these entities. In other words, institutions or projects that make the effort to implement RiC-O will get new insight into the content and context of their archives that wasn't visible with the existing ICA-standards. It should be even more interesting if you can infer new assertions from the RDF datasets you built, and of course link your datasets to other ressources outside of your institution.</html:p> <html:p> <html:strong>RiC-O should be extensible</html:strong>.</html:p> <html:p>Institutions are free to extend the ontology by adding new subclasses or subproperties if needed. RiC-O has also the potential to be useable in other contexts than purely archival ones. This implies that hierarchies of classes and properties are defined and that mappings are developed with other ontologies as mentioned above. It may also imply that RiC-O should provide “hooks” enabling connections with, for example, existing SKOS vocabularies.</html:p> </html:div> <html:div id=\"understanding-RiCO\"> <html:h4>Understanding RiC-O: a quick overview of some features</html:h4> <html:div id=\"fromRiCCM-to-RiCO\"> <html:h5>From RiC-CM to RiC-O</html:h5> <html:p>In the <html:strong>system of classes of RiC-O,</html:strong> for each RiC-CM entity, you can find a corresponding class. These classes are organized according to the same hierarchy as in RiC-CM. In some projects, you may need very few of them (e.g. Agent, Record Resource and Activity only), while in other ones, you may need more (e.g. Corporate Body and Person; Record; Place; Provenance Relation).</html:p> <html:p>Certain classes only exist in RiC-O and not in RiC-CM. These additional classes address special needs:</html:p> <html:ul> <html:li>some correspond to RiC-CM attributes, when it may be considered necessary to handle them as full entities. This is the case for <html:a href=\"#rico:Type\">Type</html:a> and its subclasses, that correspond to RiC-CM attributes that contain controlled values, and that can help to articulate RiC-O with external RDF resources like SKOS vocabularies; and also for <html:a href=\"#rico:Language\">Language</html:a>, <html:a href=\"#rico:Name\">Name</html:a> and <html:a href=\"#rico:Identifier\">Identifier</html:a>, that can be considered as full entities and as key linking nodes in a RDF graph. All these classes have been grouped under a <html:a href=\"#rico:Concept\">Concept</html:a> class. </html:li> <html:li>some classes have been added in order to provide a more accurate definition and model for some entities. <html:a href=\"#rico:Place\">Place</html:a> thus comes along with a <html:a href=\"#rico:PhysicalLocation\">Physical Location class</html:a>, and with a <html:a href=\"#rico:Coordinates\">Coordinates class</html:a>. A Place is considered both a geographical and historical entity. As a historical entity, among other features, it has a history, and may be preceded or succeeded by other Places. A Place also may have zero to many Physical Location through time (for instance, its boundaries, if it is an administrative area or a country, may change). Each Physical Location may be connected to zero to many Coordinates. This model is quite close to the Linked Places Format (<html:a href=\"https://github.com/LinkedPasts/linked-places\">https://github.com/LinkedPasts/linked-places</html:a>). Another example of such an addition is the <html:a href=\"#rico:Proxy\">Proxy class</html:a>, that represents (stands for) a Record Resource as it exists in a specific Record Set.</html:li> <html:li>finally, a system of classes helps to implement the Relations section of RiC-CM.<html:br></html:br> While these relations also are represented as simple, binary object properties (e.g. <html:a href=\"#rico:hasProvenance\">‘hasProvenance’</html:a> that corresponds to RiC-R026 relation), you may need to assign different attributes to a relation, e.g. a date, certainty or description, as it is already possible, and quite often done, in a XML/EAC-CPF file. One of the standard available methods for representing such a documented relation in RDF for now is to use a class. RDF* and SPARQL* specification, which is being developed by the W3C RDF-DEV Community Group, provides a far simpler method (allowing to consider a triple as the subject or object of another triple; see <html:a href=\"https://w3c.github.io/rdf-star/\">https://w3c.github.io/rdf-star/</html:a>) and is already being used by some tools; however it is not yet a W3C standard. Thus, for example, in RiC-O an <html:a href=\"#rico:AgentOriginationRelation\">AgentOriginationRelation class</html:a> exists. This class may connect one to many Agents to one to many created or accumulated Record Resources or Instantiations, and has some specific object properties (certainty, date, description, source). Back to the ‘hasProvenance’ object property, let us add that it is formally defined in RiC-O, using OWL 2 property chain axiom (see <html:a href=\"https://www.w3.org/TR/owl2-new-features/\">https://www.w3.org/TR/owl2-new-features/</html:a>, as a ‘shortcut’ for the longer path ‘recordResourceOrInstantiationIsSourceOfAgentOriginationRelation/agentOriginationRelationHasTarget’, where the intermediate node is an instance of Agent Origination Relation:<html:br></html:br> <html:code> <owl:propertyChainAxiom rdf:parseType=\"Collection\"> <html:br></html:br> <rdf:Description rdf:about=\"https://www.ica.org/standards/RiC/ontology#recordResourceOrInstantiationIsSourceOfAgentOriginationRelation\"/> <html:br></html:br> <rdf:Description rdf:about=\"https://www.ica.org/standards/RiC/ontology#agentOriginationRelationHasTarget\"/> <html:br></html:br> </owl:propertyChainAxiom> </html:code> <html:br></html:br>A triplestore, with the appropriate configuration, may thus infer the direct ‘hasProvenance’ assertion from this long path.</html:li> </html:ul> <html:p>Most of the <html:strong>datatype properties in RiC-O </html:strong>correspond to RiC-CM attributes that contain free, plain text. See for example <html:a href=\"#rico:descriptiveNote\">rico:descriptiveNote</html:a>, <html:a href=\"#rico:history\">rico:history</html:a> and <html:a href=\"#scopeAndContent\">rico:scopeAndContent</html:a>.</html:p> <html:p>In addition to these datatype properties, the Name and Identifier RiC-CM attributes also have corresponding classes (subclasses of <html:a href=\"#rico:Appellation\">rico:Appellation</html:a>). A resource may have several Identifiers and each comes with different attributes (e.g. archival reference code, system number, digital object identifier), in this case the identifiers will be modelled in a class. In many simpler usecases it's sufficent to just use the <html:a href=\"#rico:identifier\">identifier datatype property</html:a>, typically for the archival reference code.</html:p> <html:p>The Location RiC-CM attribute also has a <html:a href=\"#rico:PhysicalLocation\">rico:Physical Location corresponding class</html:a> (for users who want to use Place, Physical Location and Coordinates for handling places).</html:p> <html:p>As already said too, every RiC-CM attribute that has ‘controlled value’ or ‘rule-based’ as a schema value, has a class as corresponding component in RiC-O. For these CM attributes that correspond to a RiC-O class, as it is necessary to provide an immediately usable ontology, two supplementary datatype properties exist that allow not to use the classes, at least for a while, if you want to implement RiC-O and create RiC-O/RDF datasets from existing archival metadata without being able to handle URIs for the information you have.</html:p> <html:p>For example, you may not be able to handle and maintain URIs for some controlled values you use in EAD finding aids for carrier types: maybe your information system does not use a vocabulary for this, and you cannot for a while consider these carrier types as full entities. Nevertheless you want to produce RiC-O datasets where every piece of information is kept, and you want to avoid blank nodes. If RiC-O would only provide the Carrier Type class, it would be an issue for you. So RiC-O provides a <html:a href=\"#rico:type\">rico:type datatype property</html:a>, with range rdfs:literal, which allows you to move forward.</html:p> <html:p>Therefore, for the RiC-CM *Type attributes, you have a corresponding <html:a href=\"#rico:type\">rico:type datatype property</html:a>. For RiC-CM Coordinates attribute, you also have <html:a href=\"#rico:geographicalCoordinates\">rico:geographicalCoordinates datatype property</html:a>.</html:p> <html:p>These datatype properties have a skos:scopeNote which says (for example) \"Provided for usability reasons. May be made deprecated or removed later on. Use only if you don't use Physical Location and Coordinates classes with Place.\"</html:p> <html:p>The same key design principle (RiC-O must be immediately usable) led us to define some datatype properties that would enable users to use RiC-O in simple usecases where they do not want to consider dates and rules as full entities. Thus, there of course is Date and Rule classes in RiC-O (since there are Date and Rule entities in RiC-CM). And you also have 'date' datatype properties; plus a <html:a href=\"#rico:ruleFollowed\">rico:ruleFollowed datatype property</html:a>. The same analysis led us to keep the <html:a href=\"#rico:history\">rico:history</html:a> datatype property in RiC-O (same as RiC-CM history attribute), while RiC-CM and RiC-O also provide the <html:a href=\"#rico:Event\">Event class</html:a>, and using a series of Events may of course be a better method, easier to query, link and display, than simply using a history prose discourse. The two methods may be used in parallel within the same dataset by an institution that, for example, would decide to emphasize only the accession, appraisal and description events among the whole history of Record resources.</html:p> <html:p>These datatype properties have the same kind of skos:scopeNote as above.</html:p> <html:p>Finally, we have introduced a few datatype properties that do not correspond to any RiC-CM attribute.</html:p> <html:p>Some are superproperties, and thus group datatype properties (<html:a href=\"#rico:physicalOrLogicalExtent\">rico:physicalOrLogicalExtent</html:a>, with rico:carrierExtent, rico:instantiationExtent and rico:recordResourceExtent as subproperties ; <html:a href=\"#rico:textualValue\">rico:textualValue</html:a>, with rico:expressedDate and rico:normalizedValue as subproperties; <html:a href=\"#rico:measure\">rico:measure</html:a> (and its subproperties); <html:a href=\"#rico:referenceSystem\">rico:referenceSystem</html:a>, superproperty of rico:dateStandard (and of other datatype properties that do not exist in RiC-CM.)</html:p> <html:p>Some are simply more specific properties : <html:a href=\"#rico:accrualStatus\">rico:accrualStatus</html:a> ; <html:a href=\"#rico:recordResourceStructure\">rico:recordResourceStructure</html:a> and <html:a href=\"#rico:instantiationStructure\">rico:instantiationStructure</html:a>, subproperties of rico:structure ; <html:a href=\"#rico:title\">rico:title</html:a> (subproperty of rico:name) ; rico:altitude, rico:latitude, rico:longitude (subproperties of rico:measure), rico:geodesicSystem and rico:altimetricSystem (subproperties of rico:referenceSystem).</html:p> <html:p>In order to connect all the classes created, <html:strong>a significant number of object properties have been defined</html:strong>. While their 'flat' list is a long one, they are grouped hierarchically, so that one can use the upper to intermediate level ones for simplicity sake, or choose the most accurate and expressive ones, or extend the system adding a subproperty easily. It is expected that, in most use cases, a subset of these properties only will be needed. As already said above, some of the object properties are also formally defined as shortcuts.</html:p> <html:p>Finally, let us mention that we added to RiC-O six individuals, considering that they would address current and frequent needs:</html:p> <html:ul> <html:li>Two (<html:a href=\"#FindingAid\">FindingAid</html:a> and <html:a href=\"#AuthorityRecord\">AuthorityRecord</html:a>) are instances of both RiC-O Documentary Form Type and SKOS Concept. They can be used for categorizing Records, finding aids and authority records being considered as Records. A Record that would have ‘Finding Aid’ as a Documentary Form Type, can be connected to one to many Record Resources using 'rico:describes’ object property.</html:li> <html:li>Four (<html:a href=\"#Fonds\">Fonds</html:a>, <html:a href=\"#Series\">Series</html:a>, <html:a href=\"#File\">File</html:a>, and <html:a href=\"#Collection\">Collection</html:a>) are both instances of the Record Set Type class, and of skos:Concept. Their definition is taken from the ISAD(G) glossary. They can be used for categorizing Record Sets.</html:li> </html:ul> <html:p>In the future, we can imagine that many other categories of the kind will be defined by the archival community, forming at least rich SKOS (hopefully multilingual) vocabularies. Considering the concepts thus defined as being also instances of some RiC-O classes may be of great interest for producing a richer description (for example, an instance of the <html:a href=\"#rico:DocumentaryFormType\">Documentary Form Type class</html:a> may have a history and some temporal relations to other documentary form types).</html:p> </html:div> <html:div id=\"RiCO-documentation\"> <html:h5>RiC-O documentation and annotation properties</html:h5> <html:p>Each class or property has at least an English label (rdfs:label) and description (rdfs:comment). Some have a skos:scopeNote or a skos:example.</html:p> <html:p>When a RiC-O class or property corresponds in a way to a RiC-CM component, its description and scope note are, either the same as, or derived from, their definition and scope note in RiC-CM.</html:p> <html:p>We have created two annotation properties, subproperties of rdfs:comment, for handling:</html:p> <html:ul> <html:li>Information about the corresponding RiC-CM component when appliable (<html:a href=\"#rico:RiCCMCorrespondingComponent\">rico:RiCCMCorrespondingComponent</html:a>). Various phrasings are used in this property depending on the rule applied for defining the RiC-CM component.</html:li> <html:li>Information, most often in prose text for now, about possible mappings with other models or ontologies (<html:a href=\"#rico:closeTo\">rico:closeTo</html:a>, rarely used in this 0.1 version)).</html:li> </html:ul> <html:p>Finally, in this official 0.2 release, any change in the definition of a class or property, since December 2019, is documented using a skos:changeNote.</html:p> </html:div> </html:div> <html:div id=\"next-steps\"> <html:h4>Next steps</html:h4> <html:p>The following is a non exhaustive list of known issues, topics or tasks on which EGAD has begun to work and will continue to work in the next months:</html:p> <html:ul> <html:li>providing more examples of known implementations of RiC-O in different institutions and contexts. The goal is to show different practices on how RiC-O is being implemented. We have begun to release such examples in the <html:a href=\"https://github.com/ICA-EGAD/RiC-O\">public RiC-O repository on GitHub</html:a>. One can also have a look at the <html:a href=\"https://ica-egad.github.io/RiC-O/projects-and-tools.html\">Projects and tools page on RiC-O website</html:a>.</html:li> <html:li>finishing the system of relations (where some subclasses are still missing)</html:li> <html:li>assessing, and changing in some cases, the tense of the verbs in some object properties (e.g. for the properties that correspond to some RiC-CM relations). This has been done, following RiC-CM v0.2 updates, where many relations have changed name so that they can be used for recording both past and present situations.</html:li> <html:li>articulating the Event and Activity classes, and the Relation system of classes</html:li> <html:li>improving the names of object properties. This has been done, following RiC-CM v0.2 updates and applying a few naming rules, so that, for example, the same verb is used for naming a relation and the inverse relation when it exists.</html:li> <html:li>adding suggestions of mappings (in rico:closeTo) and OWL equivalences between some classes or properties and components in other models (among which - this is not an exhaustive list- CIDOC-CRM, IFLA-LRM, PREMIS, PROV-O, Wikidata and Schema.org)</html:li> <html:li>documenting RiC-O in French and Spanish</html:li> <html:li>providing users with some SPARQL constructs for inferring.</html:li> </html:ul> </html:div> </html:div>",
+    "label": "International Council on Archives Records in Contexts Ontology\n            (ICA RiC-O) version 0.2"
+  },
+  "rr": {
+    "iri": "http://www.w3.org/ns/r2rml#",
+    "description": "RDB to RDF Mapping Language - Vocabulary",
+    "label": "R2RML vocabulary"
+  },
+  "rss": {
+    "iri": "http://purl.org/rss/1.0/",
+    "description": "RDF Site Summary (RSS) is a lightweight multipurpose extensible metadata description and syndication format. RSS is an XML application, conforms to the W3C's RDF Specification and is extensible via XML-namespace and/or RDF based modularization.",
+    "label": "RDF Site Summary (RSS)"
+  },
+  "schema": {
+    "iri": "http://schema.org/",
+    "description": "Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond. Schema.org vocabulary can be used with many different encodings, including RDFa, Microdata and JSON-LD. These vocabularies cover entities, relationships between entities and actions, and can easily be extended through a well-documented extension model. Over 10 million sites use Schema.org to markup their web pages and email messages. Many applications from Google, Microsoft, Pinterest, Yandex and others already use these vocabularies to power rich, extensible experiences.",
+    "label": "Schema.org"
+  },
+  "sd": {
+    "iri": "http://www.w3.org/ns/sparql-service-description#",
+    "description": "This document describes SPARQL service description, a method for discovering, and vocabulary for describing SPARQL services made available via the SPARQL 1.1 Protocol for RDF [SPROT]. These descriptions provide a mechanism by which a client or end user can discover information about the SPARQL service such as supported extension functions and details about the available dataset.",
+    "label": "SPARQL 1.1 Service Description"
+  },
+  "sdmx": {
+    "iri": "http://purl.org/linked-data/sdmx#",
+    "description": "This vocabulary extends the data cube vocabulary to support publication of statistical data in RDF, using an information model based on SDMX",
+    "label": "Vocabulary for publishing SDMX statistical data in RDF"
+  },
+  "sem": {
+    "iri": "http://semanticweb.cs.vu.nl/2009/11/sem/",
+    "description": "This document describes an ontology for modelling events. Events are central elements in the representation of data from a variety of domains. Examples of these domains are history, cultural heritage, geography and multimedia. Event-centered modeling captures the time and place aspects of a domain. In addition, events provide a way to describe complicated relations between people, places, actions and objects.",
+    "label": "The Simple Event Model Ontology"
+  },
+  "set": {
+    "iri": "http://www.w3.org/2000/10/swap/set#",
+    "label": "Semantic Web Application Platform - Set"
+  },
+  "sf": {
+    "iri": "http://www.opengis.net/ont/sf#"
+  },
+  "sh": {
+    "iri": "http://www.w3.org/ns/shacl#",
+    "description": "This vocabulary defines terms used in SHACL, the W3C Shapes Constraint Language.",
+    "label": "W3C Shapes Constraint Language (SHACL) Vocabulary"
+  },
+  "shex": {
+    "iri": "http://www.w3.org/ns/shex#",
+    "description": "This document describes the RDFS vocabulary description used in the Shape Expression Language (ShEx) [[shex-semantics]] along with the default JSON-LD Context and shape expression to validate RDF versions of shapes.",
+    "label": "Shape Expression Vocabulary"
+  },
+  "sioc": {
+    "iri": "http://rdfs.org/sioc/ns#",
+    "description": "SIOC (Semantically-Interlinked Online Communities) is an ontology for describing the information in online communities. This information can be used to export information from online communities and to link them together. The scope of the application areas that SIOC can be used for includes (and is not limited to) weblogs, message boards, mailing lists and chat channels.",
+    "label": "SIOC Core Ontology Namespace"
+  },
+  "skos": {
+    "iri": "http://www.w3.org/2004/02/skos/core#",
+    "description": "An RDF vocabulary for describing the basic structure and content of concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', other types of controlled vocabulary, and also concept schemes embedded in glossaries and terminologies.",
+    "label": "SKOS Vocabulary"
+  },
+  "skosxl": {
+    "iri": "http://www.w3.org/2008/05/skos-xl#"
+  },
+  "solid": {
+    "iri": "http://www.w3.org/ns/solid/terms#",
+    "description": "The Solid Terms vocabulary defines terms referenced in Solid specifications.",
+    "label": "Solid Terms"
+  },
+  "sosa": {
+    "iri": "http://www.w3.org/ns/sosa/",
+    "description": "This ontology is based on the SSN Ontology by the W3C Semantic Sensor Networks Incubator Group (SSN-XG), together with considerations from the W3C/OGC Spatial Data on the Web Working Group.",
+    "label": "Sensor, Observation, Sample, and Actuator (SOSA) Ontology"
+  },
+  "sou": {
+    "iri": "http://qudt.org/vocab/sou/",
+    "description": "QUDT Systems of Units Vocabulary Version",
+    "label": "QUDT Vocabulary - Systems of Units - v2.1.25"
+  },
+  "ssn": {
+    "iri": "http://www.w3.org/ns/ssn/",
+    "description": "This ontology describes sensors, actuators and observations, and related concepts. It does not describe domain concepts, time, locations, etc. these are intended to be included from other ontologies via OWL imports.",
+    "label": "Semantic Sensor Network Ontology"
+  },
+  "stat": {
+    "iri": "http://www.w3.org/ns/posix/stat#"
+  },
+  "string": {
+    "iri": "http://www.w3.org/2000/10/swap/string#",
+    "description": "String Processing Ontology",
+    "label": "Semantic Web Application Platform - String"
+  },
+  "test": {
+    "iri": "http://www.w3.org/2006/03/test-description#"
+  },
+  "time": {
+    "iri": "http://www.w3.org/2006/time#",
+    "label": "OWL-Time"
+  },
+  "unit": {
+    "iri": "http://qudt.org/vocab/unit/",
+    "label": "QUDT Units of Measure for All Units Release 2.1.25"
+  },
+  "vaem": {
+    "iri": "http://www.linkedmodel.org/schema/vaem#"
+  },
+  "vann": {
+    "iri": "http://purl.org/vocab/vann/",
+    "description": "This document describes a vocabulary for annotating descriptions of vocabularies with examples and usage notes.",
+    "label": "VANN: A vocabulary for annotating vocabulary descriptions"
+  },
+  "vcard": {
+    "iri": "http://www.w3.org/2006/vcard/ns#",
+    "description": "Ontology for vCard based on RFC6350",
+    "label": "Ontology for vCard"
+  },
+  "void": {
+    "iri": "http://rdfs.org/ns/void#",
+    "description": "The Vocabulary of Interlinked Datasets (VoID) is an RDF Schema vocabulary for expressing metadata about RDF datasets. It is intended as a bridge between the publishers and users of RDF data, with applications ranging from data discovery to cataloging and archiving of datasets. This document provides a formal definition of the new RDF classes and properties introduced for VoID.",
+    "label": "Vocabulary of Interlinked Datasets (VoID)"
+  },
+  "vs": {
+    "iri": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+    "description": "An RDF vocabulary for relating SW vocabulary terms to their status.",
+    "label": "SemWeb Vocab Status ontology"
+  },
+  "wdrs": {
+    "iri": "http://www.w3.org/2007/05/powder-s#",
+    "description": "This file specifies the set of classes and properties used in the RDF/OWL version of POWDER documents.",
+    "label": "POWDER-S Vocabulary"
+  },
+  "wgs": {
+    "iri": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "description": "A vocabulary for representing latitude, longitude and altitude information in the WGS84 geodetic reference datum. Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details.",
+    "label": "WGS84 Geo Positioning: an RDF vocabulary"
+  },
+  "xhv": {
+    "iri": "http://www.w3.org/1999/xhtml/vocab#"
+  },
+  "xkos": {
+    "iri": "http://rdf-vocabulary.ddialliance.org/xkos#",
+    "description": "This ontology is based on work initiated at Dagstuhl Schloss in September 2011",
+    "label": "XKOS: an SKOS extension for representing statistical classifications"
+  },
+  "xsd": {
+    "iri": "http://www.w3.org/2001/XMLSchema#",
+    "description": "XSD (XML Schema Definition), a recommendation of the World Wide Web Consortium (W3C), specifies how to formally describe the elements in an Extensible Markup Language (XML) document. It can be used by programmers to verify each piece of item content in a document, to assure it adheres to the description of the element it is placed in.",
+    "label": "XML Schema Definition"
+  },
+  "rif": {
+    "iri": "http://www.w3.org/2007/rif#"
+  },
+  "v": {
+    "iri": "http://rdf.data-vocabulary.org/#"
+  },
+  "wdr": {
+    "iri": "http://www.w3.org/2007/05/powder#"
+  },
+  "xml": {
+    "iri": "http://www.w3.org/XML/1998/namespace/"
+  }
+}

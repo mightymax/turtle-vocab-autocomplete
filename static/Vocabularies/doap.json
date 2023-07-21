@@ -1,0 +1,276 @@
+{
+  "iri": "http://usefulinc.com/ns/doap#",
+  "description": "The Description of a Project (DOAP) vocabulary, described using W3C RDF Schema and the Web Ontology Language.",
+  "label": "Description of a Project (DOAP) vocabulary",
+  "prefix": "doap",
+  "items": {
+    "ArchRepository": {
+      "category": "class",
+      "description": "Dépôt GNU Arch du code source.",
+      "label": "Dépôt GNU Arch"
+    },
+    "Repository": {
+      "category": "class",
+      "description": "Dépôt du code source.",
+      "label": "Dépôt"
+    },
+    "BKRepository": {
+      "category": "class",
+      "description": "BitKeeper Quellcode-Versionierungssystem.",
+      "label": "BitKeeper Repository"
+    },
+    "BazaarBranch": {
+      "category": "class",
+      "description": "Bazaar source code branch.",
+      "label": "Bazaar Branch"
+    },
+    "CVSRepository": {
+      "category": "class",
+      "description": "CVS Quellcode-Versionierungssystem.",
+      "label": "CVS Repository"
+    },
+    "DarcsRepository": {
+      "category": "class",
+      "description": "Dépôt darcs du code source.",
+      "label": "Dépôt darcs"
+    },
+    "GitBranch": {
+      "category": "class",
+      "description": "Código fonte da ramificação Git.",
+      "label": "Git Branch"
+    },
+    "GitRepository": {
+      "category": "class",
+      "description": "Dépôt Git du code source.",
+      "label": "Dépôt Git"
+    },
+    "anon-root": {
+      "category": "property",
+      "description": "Dépôt pour accès anonyme.",
+      "label": "Anonymes Root"
+    },
+    "HgRepository": {
+      "category": "class",
+      "description": "Mercurial source code repository.",
+      "label": "Mercurial Repository"
+    },
+    "audience": {
+      "category": "property",
+      "description": "Description of target user base",
+      "label": "audience"
+    },
+    "Project": {
+      "category": "class",
+      "description": "A project.",
+      "label": "Project"
+    },
+    "blog": {
+      "category": "property",
+      "description": "URI de um blog relacionado com um projeto",
+      "label": "blog"
+    },
+    "SVNRepository": {
+      "category": "class",
+      "description": "Dépôt Subversion du code source.",
+      "label": "Dépôt Subversion"
+    },
+    "browse": {
+      "category": "property",
+      "description": "Interface web au dépôt.",
+      "label": "browse"
+    },
+    "Specification": {
+      "category": "class",
+      "description": "A especificação de aspetos, técnicas ou outros do sistema.",
+      "label": "Especificação"
+    },
+    "bug-database": {
+      "category": "property",
+      "description": "Bug tracker for a project.",
+      "label": "Fehlerdatenbank"
+    },
+    "Version": {
+      "category": "class",
+      "description": "Détails sur une version d'une release d'un projet.",
+      "label": "Version"
+    },
+    "category": {
+      "category": "property",
+      "description": "A category of project.",
+      "label": "Kategorie"
+    },
+    "created": {
+      "category": "property",
+      "description": "Data em que algo foi criado, no formato AAAA-MM-DD. e.g. 2004-04-05",
+      "label": "creado"
+    },
+    "description": {
+      "category": "property",
+      "description": "Beschreibung eines Projekts als einfacher Text mit der Länge von 2 bis 4 Sätzen.",
+      "label": "Beschreibung"
+    },
+    "developer-forum": {
+      "category": "property",
+      "description": "A forum or community for developers of this project.",
+      "label": "developer forum"
+    },
+    "": {
+      "category": "class"
+    },
+    "developer": {
+      "category": "property",
+      "description": "Desarrollador de software para el proyecto.",
+      "label": "Entwickler"
+    },
+    "documenter": {
+      "category": "property",
+      "description": "Collaborateur à la documentation du projet.",
+      "label": "Dokumentator"
+    },
+    "download-mirror": {
+      "category": "property",
+      "description": "Miroir de la page de téléchargement du programme.",
+      "label": "Spiegel der Seite zum Herunterladen"
+    },
+    "download-page": {
+      "category": "property",
+      "description": "Page web à partir de laquelle on peut télécharger le programme.",
+      "label": "Seite zum Herunterladen"
+    },
+    "file-release": {
+      "category": "property",
+      "description": "URI adresa stažení asociované s revizí.",
+      "label": "file-release"
+    },
+    "helper": {
+      "category": "property",
+      "description": "Ajudante ou colaborador do projeto.",
+      "label": "Helfer"
+    },
+    "homepage": {
+      "category": "property",
+      "description": "El URL de la página de un proyecto, asociada con exactamente un proyecto.",
+      "label": "Homepage"
+    },
+    "implements": {
+      "category": "property",
+      "description": "A specification that a project implements. Could be a standard, API or legally defined level of conformance.",
+      "label": "Especificações para implementação"
+    },
+    "language": {
+      "category": "property",
+      "description": "Código de idioma ISO do projeto para o qual foi traduzido",
+      "label": "idioma"
+    },
+    "license": {
+      "category": "property",
+      "description": "Die URI einer RDF-Beschreibung einer Lizenz unter der die Software herausgegeben wird. z.B. eine SPDX Referenz",
+      "label": "Lizenz"
+    },
+    "location": {
+      "category": "property",
+      "description": "Emplacement d'un dépôt.",
+      "label": "Repository Lokation"
+    },
+    "mailing-list": {
+      "category": "property",
+      "description": "Domovská stránka nebo e–mailová adresa e–mailové diskuse.",
+      "label": "Mailing Liste"
+    },
+    "maintainer": {
+      "category": "property",
+      "description": "Desarrollador principal de un proyecto, un líder de proyecto.",
+      "label": "Projektverantwortlicher"
+    },
+    "module": {
+      "category": "property",
+      "description": "Jméno modulu v CVS, BitKeeper nebo Arch úložišti.",
+      "label": "Modul"
+    },
+    "name": {
+      "category": "property",
+      "description": "A name of something.",
+      "label": "Name"
+    },
+    "old-homepage": {
+      "category": "property",
+      "description": "El URL de la antigua página de un proyecto, asociada con exactamente un proyecto.",
+      "label": "Alte Homepage"
+    },
+    "os": {
+      "category": "property",
+      "description": "Betriebssystem auf dem das Projekt eingesetzt werden kann. Diese Eigenschaft kann ausgelassen werden, wenn das Projekt nicht BS-spezifisch ist.",
+      "label": "Betriebssystem"
+    },
+    "platform": {
+      "category": "property",
+      "description": "Indicador da plataforma do software (não específico a nenhum SO), ex.: Java, Firefox, ECMA CLR",
+      "label": "plataforma"
+    },
+    "programming-language": {
+      "category": "property",
+      "description": "Langage de programmation avec lequel un projet est implémenté, ou avec lequel il est prévu de l'utiliser.",
+      "label": "Programmiersprache"
+    },
+    "release": {
+      "category": "property",
+      "description": "A project release.",
+      "label": "Release"
+    },
+    "repository": {
+      "category": "property",
+      "description": "Dépôt du code source.",
+      "label": "Repository"
+    },
+    "repositoryOf": {
+      "category": "property",
+      "description": "The project that uses a repository.",
+      "label": "repository of"
+    },
+    "revision": {
+      "category": "property",
+      "description": "Identifiant de révision d'une release du programme.",
+      "label": "Version"
+    },
+    "screenshots": {
+      "category": "property",
+      "description": "Page web avec des captures d'écran du projet.",
+      "label": "Screenshots"
+    },
+    "service-endpoint": {
+      "category": "property",
+      "description": "The URI of a web service endpoint where software as a service may be accessed",
+      "label": "service endpoint"
+    },
+    "shortdesc": {
+      "category": "property",
+      "description": "Descripción corta (8 o 9 palabras) en texto plano de un proyecto.",
+      "label": "Kurzbeschreibung"
+    },
+    "support-forum": {
+      "category": "property",
+      "description": "A forum or community that supports this project.",
+      "label": "supporting forum"
+    },
+    "tester": {
+      "category": "property",
+      "description": "A tester or other quality control contributor.",
+      "label": "Tester"
+    },
+    "translator": {
+      "category": "property",
+      "description": "Collaborateur à la traduction du projet.",
+      "label": "překladatel"
+    },
+    "vendor": {
+      "category": "property",
+      "description": "Vendor organization: commercial, free or otherwise",
+      "label": "vendor"
+    },
+    "wiki": {
+      "category": "property",
+      "description": "L'URL du Wiki pour la discussion collaborative sur le projet.",
+      "label": "Wiki"
+    }
+  }
+}

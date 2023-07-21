@@ -1,0 +1,184 @@
+{
+  "iri": "http://lexvo.org/ontology#",
+  "description": "Lexvo.org Ontology",
+  "label": "Lexvo.org Ontology",
+  "prefix": "lvont",
+  "items": {
+    "CJKRadical": {
+      "category": "class",
+      "description": "A CJK character radical.",
+      "label": "radical"
+    },
+    "Character": {
+      "category": "class",
+      "description": "An abstract character as defined by the Unicode Standard, Version 5, in Chapter 3.4.",
+      "label": "character"
+    },
+    "GeographicRegion": {
+      "category": "class",
+      "description": "Geographic regions on Earth or elsewhere.",
+      "label": "geographic region"
+    },
+    "Language": {
+      "category": "class",
+      "description": "Groups of human language variants that are or were spoken, written, or signed at some point in time.",
+      "label": "language"
+    },
+    "Script": {
+      "category": "class",
+      "description": "A writing system considered abstractly, i.e. independent of language-specific variations.",
+      "label": "script"
+    },
+    "Term": {
+      "category": "class",
+      "description": "A term in a specific language.",
+      "label": "term"
+    },
+    "broader": {
+      "category": "property",
+      "description": "The property of having a broader, more generic concept.",
+      "label": "broader"
+    },
+    "narrower": {
+      "category": "property",
+      "description": "The property of having a narrower, less generic concept.",
+      "label": "narrower"
+    },
+    "characterRadical": {
+      "category": "property",
+      "description": "The property of a CJK character being conventionally associated with a CJK character radical.",
+      "label": "translation"
+    },
+    "containsCharacter": {
+      "category": "property",
+      "description": "The property of a term containing a specific character.",
+      "label": "contains character"
+    },
+    "evokes": {
+      "category": "property",
+      "description": "The property of conceptually evoking some object.",
+      "label": "evokes"
+    },
+    "hasCharacterComponent": {
+      "category": "property",
+      "description": "The property of a character being composed of another character.",
+      "label": "character component"
+    },
+    "hasMember": {
+      "category": "property",
+      "description": "The property of having a member.",
+      "label": "has member"
+    },
+    "memberOf": {
+      "category": "property",
+      "description": "The property of being a member of a group.",
+      "label": "member of"
+    },
+    "inScript": {
+      "category": "property",
+      "description": "The property of a document being written in a specific script, or a language being written or having being written in a specific script by a considerable group of language users.",
+      "label": "in script"
+    },
+    "involvedIn": {
+      "category": "property",
+      "description": "The property of being involved in something, e.g. for semantic participants' involvement in a semantic frame.",
+      "label": "involved in"
+    },
+    "involves": {
+      "category": "property",
+      "description": "The property of involving some entity, e.g. for semantic participants involved in a semantic frame.",
+      "label": "involves"
+    },
+    "isFocusOf": {
+      "category": "property",
+      "label": "is focus of"
+    },
+    "label": {
+      "category": "property",
+      "description": "If C lvont:Label L and L skosxl:literalForm V, then X rdfs:label V.",
+      "label": "has label"
+    },
+    "representedBy": {
+      "category": "property",
+      "label": "represented by"
+    },
+    "means": {
+      "category": "property",
+      "description": "the semiotic property of a natural language word meaning something, i.e. a relationship between words and resources that they represent (or represented) to a considerable number of humans",
+      "label": "means"
+    },
+    "language": {
+      "category": "property",
+      "description": "The property of a resource being mainly encoded in a specific language.",
+      "label": "in language"
+    },
+    "lexicalCategory": {
+      "category": "property",
+      "description": "A lexical category that a term can be used in.",
+      "label": "lexical category"
+    },
+    "represents": {
+      "category": "property",
+      "description": "the semiotic property of semantically representing something, i.e. a relationship between words and other signs and resources that they represent (or represented) to a considerable number of humans",
+      "label": "represents"
+    },
+    "scriptFor": {
+      "category": "property",
+      "description": "The property of a script being used for a particular language by a considerable of language users (but not necessarily the majority of all language users).",
+      "label": "script for"
+    },
+    "usesScript": {
+      "category": "property",
+      "description": "The property of a language being written or having being written in a specific script by a considerable group of language users.",
+      "label": "uses script"
+    },
+    "strength": {
+      "category": "property",
+      "description": "The strength of an rdf:Statement, given is a value in [0,1].",
+      "label": "strength"
+    },
+    "usedIn": {
+      "category": "property",
+      "description": "The property of a language or writing system being used somewhat extensively in a particular geographical region at some point in time.",
+      "label": "used in"
+    },
+    "variant": {
+      "category": "property",
+      "description": "The property of being a variant of another resource.",
+      "label": "variant"
+    },
+    "iso15924Alphacode": {
+      "category": "property",
+      "label": "ISO 15924 alphabetic code"
+    },
+    "iso639P1Code": {
+      "category": "property",
+      "label": "ISO 639-1 code"
+    },
+    "iso639P2BCode": {
+      "category": "property",
+      "label": "ISO 639-2 Bibliographical code"
+    },
+    "iso639P2TCode": {
+      "category": "property",
+      "label": "ISO 639-2 Terminological code"
+    },
+    "iso639P3Code": {
+      "category": "property",
+      "label": "ISO 639-3 code"
+    },
+    "iso639P5Code": {
+      "category": "property",
+      "label": "ISO 639-5 code"
+    },
+    "marcCode": {
+      "category": "property",
+      "label": "MARC 21 / USMARC code"
+    },
+    "nonRadicalStrokes": {
+      "category": "property",
+      "description": "The property of a character conventionally being written with a specific number strokes, excluding the strokes of its radical.",
+      "label": "non-radical strokes"
+    }
+  }
+}

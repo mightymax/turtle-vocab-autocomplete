@@ -1,0 +1,83 @@
+{
+  "iri": "http://www.w3.org/2000/01/rdf-schema#",
+  "description": "RDF Schema provides a data-modelling vocabulary for RDF data. RDF Schema is an extension of the basic RDF vocabulary.",
+  "label": "The RDF Schema vocabulary (RDFS)",
+  "prefix": "rdfs",
+  "items": {
+    "Class": {
+      "category": "class",
+      "description": "The class of classes.",
+      "label": "Class"
+    },
+    "Resource": {
+      "category": "class",
+      "description": "The class resource, everything.",
+      "label": "Resource"
+    },
+    "Container": {
+      "category": "class",
+      "description": "The class of RDF containers.",
+      "label": "Container"
+    },
+    "ContainerMembershipProperty": {
+      "category": "class",
+      "description": "The class of container membership properties, rdf:_1, rdf:_2, ..., all of which are sub-properties of 'member'.",
+      "label": "ContainerMembershipProperty"
+    },
+    "Datatype": {
+      "category": "class",
+      "description": "The class of RDF datatypes.",
+      "label": "Datatype"
+    },
+    "Literal": {
+      "category": "class",
+      "description": "The class of literal values, eg. textual strings and integers.",
+      "label": "Literal"
+    },
+    "seeAlso": {
+      "category": "property",
+      "description": "Further information about the subject resource.",
+      "label": "seeAlso"
+    },
+    "comment": {
+      "category": "property",
+      "description": "A description of the subject resource.",
+      "label": "comment"
+    },
+    "isDefinedBy": {
+      "category": "property",
+      "description": "The defininition of the subject resource.",
+      "label": "isDefinedBy"
+    },
+    "label": {
+      "category": "property",
+      "description": "A human-readable name for the subject.",
+      "label": "label"
+    },
+    "subClassOf": {
+      "category": "property",
+      "description": "The subject is a subclass of a class.",
+      "label": "subClassOf"
+    },
+    "domain": {
+      "category": "property",
+      "description": "A domain of the subject property.",
+      "label": "domain"
+    },
+    "range": {
+      "category": "property",
+      "description": "A range of the subject property.",
+      "label": "range"
+    },
+    "subPropertyOf": {
+      "category": "property",
+      "description": "The subject is a subproperty of a property.",
+      "label": "subPropertyOf"
+    },
+    "member": {
+      "category": "property",
+      "description": "A member of the subject resource.",
+      "label": "member"
+    }
+  }
+}

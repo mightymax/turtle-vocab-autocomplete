@@ -1,0 +1,7 @@
+{
+  "iri": "http://qudt.org/vocab/constant/",
+  "description": "The Constants vocabulary defines terms for and contains the values and standard uncertainties of physical constants, initially populated from the NIST website: The NIST Reference on Constants, Units, and Uncertainty, at http://physics.nist.gov/cuu/index.html",
+  "label": "QUDT Constants",
+  "prefix": "constant",
+  "items": {}
+}

@@ -1,0 +1,511 @@
+{
+  "iri": "http://rdfs.org/sioc/ns#",
+  "description": "SIOC (Semantically-Interlinked Online Communities) is an ontology for describing the information in online communities. This information can be used to export information from online communities and to link them together. The scope of the application areas that SIOC can be used for includes (and is not limited to) weblogs, message boards, mailing lists and chat channels.",
+  "label": "SIOC Core Ontology Namespace",
+  "prefix": "sioc",
+  "items": {
+    "dcterms:date": {
+      "category": "property"
+    },
+    "dcterms:description": {
+      "category": "property"
+    },
+    "dcterms:title": {
+      "category": "property"
+    },
+    "content": {
+      "category": "property",
+      "description": "The content of the Item in plain text format.",
+      "label": "content"
+    },
+    "content_encoded": {
+      "category": "property",
+      "description": "The encoded content of the Post, contained in CDATA areas.",
+      "label": "content encoded"
+    },
+    "created_at": {
+      "category": "property",
+      "description": "When this was created, in ISO 8601 format.",
+      "label": "created at"
+    },
+    "delivered_at": {
+      "category": "property",
+      "description": "When this was delivered, in ISO 8601 format.",
+      "label": "delivered at"
+    },
+    "description": {
+      "category": "property",
+      "description": "The content of the Post.",
+      "label": "description"
+    },
+    "email_sha1": {
+      "category": "property",
+      "description": "An electronic mail address of the UserAccount, encoded using SHA1.",
+      "label": "email sha1"
+    },
+    "first_name": {
+      "category": "property",
+      "description": "First (real) name of this User. Synonyms include given name or christian name.",
+      "label": "first name"
+    },
+    "id": {
+      "category": "property",
+      "description": "An identifier of a SIOC concept instance. For example, a user ID. Must be unique for instances of each type of SIOC concept within the same site.",
+      "label": "id"
+    },
+    "ip_address": {
+      "category": "property",
+      "description": "The IP address used when creating this Item, UserAccount, etc. This can be associated with a creator. Some wiki articles list the IP addresses for the creator or modifiers when the usernames are absent.",
+      "label": "ip address"
+    },
+    "last_activity_date": {
+      "category": "property",
+      "description": "The date and time of the last activity associated with a SIOC concept instance, and expressed in ISO 8601 format. This could be due to a reply Post or Comment, a modification to an Item, etc.",
+      "label": "last activity date"
+    },
+    "last_item_date": {
+      "category": "property",
+      "description": "The date and time of the last Post (or Item) in a Forum (or a Container), in ISO 8601 format.",
+      "label": "last item date"
+    },
+    "last_name": {
+      "category": "property",
+      "description": "Last (real) name of this user. Synonyms include surname or family name.",
+      "label": "last name"
+    },
+    "last_reply_date": {
+      "category": "property",
+      "description": "The date and time of the last reply Post or Comment, which could be associated with a starter Item or Post or with a Thread, and expressed in ISO 8601 format.",
+      "label": "last reply date"
+    },
+    "modified_at": {
+      "category": "property",
+      "description": "When this was modified, in ISO 8601 format.",
+      "label": "modified at"
+    },
+    "name": {
+      "category": "property",
+      "description": "The name of a SIOC concept instance, e.g. a username for a UserAccount, group name for a Usergroup, etc.",
+      "label": "name"
+    },
+    "note": {
+      "category": "property",
+      "description": "A note associated with this resource, for example, if it has been edited by a UserAccount.",
+      "label": "note"
+    },
+    "num_authors": {
+      "category": "property",
+      "description": "The number of unique authors (UserAccounts and unregistered posters) who have contributed to this Item, Thread, Post, etc.",
+      "label": "num authors"
+    },
+    "num_items": {
+      "category": "property",
+      "description": "The number of Posts (or Items) in a Forum (or a Container).",
+      "label": "num items"
+    },
+    "num_replies": {
+      "category": "property",
+      "description": "The number of replies that this Item, Thread, Post, etc. has. Useful for when the reply structure is absent.",
+      "label": "num replies"
+    },
+    "num_threads": {
+      "category": "property",
+      "description": "The number of Threads (AKA discussion topics) in a Forum.",
+      "label": "num threads"
+    },
+    "num_views": {
+      "category": "property",
+      "description": "The number of times this Item, Thread, UserAccount profile, etc. has been viewed.",
+      "label": "num views"
+    },
+    "read_at": {
+      "category": "property",
+      "description": "When this was read, in ISO 8601 format.",
+      "label": "read at"
+    },
+    "subject": {
+      "category": "property",
+      "description": "Keyword(s) describing subject of the Post.",
+      "label": "subject"
+    },
+    "title": {
+      "category": "property",
+      "description": "This is the title (subject line) of the Post. Note that for a Post within a threaded discussion that has no parents, it would detail the topic thread.",
+      "label": "title"
+    },
+    "dcterms:references": {
+      "category": "property"
+    },
+    "dcterms:subject": {
+      "category": "property"
+    },
+    "about": {
+      "category": "property",
+      "description": "Specifies that this Item is about a particular resource, e.g. a Post describing a book, hotel, etc.",
+      "label": "about"
+    },
+    "account_of": {
+      "category": "property",
+      "description": "Refers to the foaf:Agent or foaf:Person who owns this sioc:UserAccount.",
+      "label": "account of"
+    },
+    "foaf:account": {
+      "category": "property"
+    },
+    "addressed_to": {
+      "category": "property",
+      "description": "Refers to who (e.g. a UserAccount, e-mail address, etc.) a particular Item is addressed to.",
+      "label": "addressed to"
+    },
+    "administrator_of": {
+      "category": "property",
+      "description": "A Site that the UserAccount is an administrator of.",
+      "label": "administrator of"
+    },
+    "has_administrator": {
+      "category": "property",
+      "description": "A UserAccount that is an administrator of this Site.",
+      "label": "has administrator"
+    },
+    "attachment": {
+      "category": "property",
+      "description": "The URI of a file attached to an Item.",
+      "label": "attachment"
+    },
+    "avatar": {
+      "category": "property",
+      "description": "An image or depiction used to represent this UserAccount.",
+      "label": "avatar"
+    },
+    "foaf:depiction": {
+      "category": "property"
+    },
+    "container_of": {
+      "category": "property",
+      "description": "An Item that this Container contains.",
+      "label": "container of"
+    },
+    "has_container": {
+      "category": "property",
+      "description": "The Container to which this Item belongs.",
+      "label": "has container"
+    },
+    "creator_of": {
+      "category": "property",
+      "description": "A resource that the UserAccount is a creator of.",
+      "label": "creator of"
+    },
+    "has_creator": {
+      "category": "property",
+      "description": "This is the UserAccount that made this resource.",
+      "label": "has creator"
+    },
+    "discussion_of": {
+      "category": "property",
+      "description": "The Item that this discussion is about.",
+      "label": "discussion of"
+    },
+    "has_discussion": {
+      "category": "property",
+      "description": "A discussion that is related to this Item. The discussion can be anything, for example, a sioc:Forum or sioc:Thread, a sioct:WikiArticle or simply a foaf:Document.",
+      "label": "has discussion"
+    },
+    "email": {
+      "category": "property",
+      "description": "An electronic mail address of the UserAccount.",
+      "label": "email"
+    },
+    "embeds_knowledge": {
+      "category": "property",
+      "description": "This links Items to embedded statements, facts and structured content.",
+      "label": "embeds knowledge"
+    },
+    "feed": {
+      "category": "property",
+      "description": "A feed (e.g. RSS, Atom, etc.) pertaining to this resource (e.g. for a Forum, Site, UserAccount, etc.).",
+      "label": "feed"
+    },
+    "follows": {
+      "category": "property",
+      "description": "Indicates that one UserAccount follows another UserAccount (e.g. for microblog posts or other content item updates).",
+      "label": "follows"
+    },
+    "function_of": {
+      "category": "property",
+      "description": "A UserAccount that has this Role.",
+      "label": "function of"
+    },
+    "has_function": {
+      "category": "property",
+      "description": "A Role that this UserAccount has.",
+      "label": "has function"
+    },
+    "generator": {
+      "category": "property",
+      "description": "A URI for the application used to generate this Item.",
+      "label": "generator"
+    },
+    "group_of": {
+      "category": "property",
+      "label": "group of"
+    },
+    "has_group": {
+      "category": "property",
+      "label": "has group"
+    },
+    "has_host": {
+      "category": "property",
+      "description": "The Site that hosts this Container.",
+      "label": "has host"
+    },
+    "has_space": {
+      "category": "property",
+      "description": "A data Space which this resource is a part of.",
+      "label": "has space"
+    },
+    "host_of": {
+      "category": "property",
+      "description": "A Container that is hosted on this Site.",
+      "label": "host of"
+    },
+    "has_member": {
+      "category": "property",
+      "description": "A UserAccount that is a member of this Usergroup.",
+      "label": "has member"
+    },
+    "member_of": {
+      "category": "property",
+      "description": "A Usergroup that this UserAccount is a member of.",
+      "label": "member of"
+    },
+    "has_moderator": {
+      "category": "property",
+      "description": "A UserAccount that is a moderator of this Forum.",
+      "label": "has moderator"
+    },
+    "moderator_of": {
+      "category": "property",
+      "description": "A Forum that a UserAccount is a moderator of.",
+      "label": "moderator of"
+    },
+    "has_modifier": {
+      "category": "property",
+      "description": "A UserAccount that modified this resource (e.g. Item, Container, Space).",
+      "label": "has modifier"
+    },
+    "modifier_of": {
+      "category": "property",
+      "description": "A resource that this UserAccount has modified.",
+      "label": "modifier of"
+    },
+    "has_owner": {
+      "category": "property",
+      "description": "A UserAccount that this resource is owned by.",
+      "label": "has owner"
+    },
+    "owner_of": {
+      "category": "property",
+      "description": "A resource owned by a particular UserAccount, for example, a weblog or image gallery.",
+      "label": "owner of"
+    },
+    "has_parent": {
+      "category": "property",
+      "description": "A Container or Forum that this Container or Forum is a child of.",
+      "label": "has parent"
+    },
+    "parent_of": {
+      "category": "property",
+      "description": "A child Container or Forum that this Container or Forum is a parent of.",
+      "label": "parent of"
+    },
+    "has_part": {
+      "category": "property",
+      "description": "An resource that is a part of this subject.",
+      "label": "has part"
+    },
+    "part_of": {
+      "category": "property",
+      "description": "A resource that the subject is a part of.",
+      "label": "part of"
+    },
+    "has_reply": {
+      "category": "property",
+      "description": "Points to an Item or Post that is a reply or response to this Item or Post.",
+      "label": "has reply"
+    },
+    "related_to": {
+      "category": "property",
+      "description": "Related resources for this resource, e.g. for Posts, perhaps determined implicitly from topics or references.",
+      "label": "related to"
+    },
+    "reply_of": {
+      "category": "property",
+      "description": "Links to an Item or Post which this Item or Post is a reply to.",
+      "label": "reply of"
+    },
+    "has_scope": {
+      "category": "property",
+      "description": "A resource that this Role applies to.",
+      "label": "has scope"
+    },
+    "scope_of": {
+      "category": "property",
+      "description": "A Role that has a scope of this resource.",
+      "label": "scope of"
+    },
+    "space_of": {
+      "category": "property",
+      "description": "A resource which belongs to this data Space.",
+      "label": "space of"
+    },
+    "has_subscriber": {
+      "category": "property",
+      "description": "A UserAccount that is subscribed to this Container.",
+      "label": "has subscriber"
+    },
+    "subscriber_of": {
+      "category": "property",
+      "description": "A Container that a UserAccount is subscribed to.",
+      "label": "subscriber of"
+    },
+    "has_usergroup": {
+      "category": "property",
+      "description": "Points to a Usergroup that has certain access to this Space.",
+      "label": "has usergroup"
+    },
+    "usergroup_of": {
+      "category": "property",
+      "description": "A Space that the Usergroup has access to.",
+      "label": "usergroup of"
+    },
+    "latest_version": {
+      "category": "property",
+      "description": "Links to the latest revision of this Item or Post.",
+      "label": "latest version"
+    },
+    "likes": {
+      "category": "property",
+      "description": "Used to indicate some form of endorsement by a UserAccount or Agent of an Item, Container, Space, UserAccount, etc.",
+      "label": "likes"
+    },
+    "link": {
+      "category": "property",
+      "description": "A URI of a document which contains this SIOC object.",
+      "label": "link"
+    },
+    "links_to": {
+      "category": "property",
+      "description": "Links extracted from hyperlinks within a SIOC concept, e.g. Post or Site.",
+      "label": "links to"
+    },
+    "mentions": {
+      "category": "property",
+      "description": "Refers to a UserAccount that a particular Item mentions.",
+      "label": "mentions"
+    },
+    "next_by_date": {
+      "category": "property",
+      "description": "Next Item or Post in a given Container sorted by date.",
+      "label": "next by date"
+    },
+    "previous_by_date": {
+      "category": "property",
+      "description": "Previous Item or Post in a given Container sorted by date.",
+      "label": "previous by date"
+    },
+    "next_version": {
+      "category": "property",
+      "description": "Links to the next revision of this Item or Post.",
+      "label": "next version"
+    },
+    "previous_version": {
+      "category": "property",
+      "description": "Links to the previous revision of this Item or Post.",
+      "label": "previous version"
+    },
+    "reference": {
+      "category": "property",
+      "description": "Links either created explicitly or extracted implicitly on the HTML level from the Post.",
+      "label": "reference"
+    },
+    "respond_to": {
+      "category": "property",
+      "description": "For the reply-to address set in email messages, IMs, etc. The property name was chosen to avoid confusion with has_reply/reply_of (the reply graph).",
+      "label": "respond to"
+    },
+    "shared_by": {
+      "category": "property",
+      "description": "For shared Items where there is a certain creator_of and an intermediary who shares or forwards it (e.g. as a sibling Item).",
+      "label": "shared by"
+    },
+    "topic": {
+      "category": "property",
+      "description": "A topic of interest, linking to the appropriate URI, e.g. in the Open Directory Project or of a SKOS category.",
+      "label": "topic"
+    },
+    "Community": {
+      "category": "class",
+      "description": "Community is a high-level concept that defines an online community and what it consists of.",
+      "label": "Community"
+    },
+    "Item": {
+      "category": "class",
+      "description": "An Item is something which can be in a Container.",
+      "label": "Item"
+    },
+    "Role": {
+      "category": "class",
+      "description": "A Role is a function of a UserAccount within a scope of a particular Forum, Site, etc.",
+      "label": "Role"
+    },
+    "UserAccount": {
+      "category": "class",
+      "description": "A user account in an online community site.",
+      "label": "User Account"
+    },
+    "Container": {
+      "category": "class",
+      "description": "An area in which content Items are contained.",
+      "label": "Container"
+    },
+    "Usergroup": {
+      "category": "class",
+      "description": "A set of UserAccounts whose owners have a common purpose or interest. Can be used for access control purposes.",
+      "label": "Usergroup"
+    },
+    "Forum": {
+      "category": "class",
+      "description": "A discussion area on which Posts or entries are made.",
+      "label": "Forum"
+    },
+    "Space": {
+      "category": "class",
+      "description": "A Space is a place where data resides, e.g. on a website, desktop, fileshare, etc.",
+      "label": "Space"
+    },
+    "Post": {
+      "category": "class",
+      "description": "An article or message that can be posted to a Forum.",
+      "label": "Post"
+    },
+    "foaf:Document": {
+      "category": "class"
+    },
+    "Site": {
+      "category": "class",
+      "description": "A Site can be the location of an online community or set of communities, with UserAccounts and Usergroups creating Items in a set of Containers. It can be thought of as a web-accessible data Space.",
+      "label": "Site"
+    },
+    "Thread": {
+      "category": "class",
+      "description": "A container for a series of threaded discussion Posts or Items.",
+      "label": "Thread"
+    },
+    "foaf:OnlineAccount": {
+      "category": "class"
+    },
+    "foaf:Agent": {
+      "category": "class"
+    }
+  }
+}

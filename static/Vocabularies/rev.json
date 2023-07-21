@@ -1,0 +1,115 @@
+{
+  "iri": "http://purl.org/stuff/rev#",
+  "description": "Vocabulary for expressing reviews and ratings using the Resource Description Framework. It is compatible with hReview and conforms to OWL Lite",
+  "label": "RDF Review Vocabulary",
+  "prefix": "rev",
+  "items": {
+    "dc11:date": {
+      "category": "property"
+    },
+    "dc11:description": {
+      "category": "property"
+    },
+    "dc11:title": {
+      "category": "property"
+    },
+    "positiveVotes": {
+      "category": "property",
+      "description": "Number of positive usefulness votes (integer)",
+      "label": "positiveVotes"
+    },
+    "rating": {
+      "category": "property",
+      "description": "A numeric value",
+      "label": "rating"
+    },
+    "text": {
+      "category": "property",
+      "description": "The text of the review",
+      "label": "text"
+    },
+    "title": {
+      "category": "property",
+      "description": "The title of the review",
+      "label": "title"
+    },
+    "totalVotes": {
+      "category": "property",
+      "description": "Number of usefulness votes (integer)",
+      "label": "totalVotes"
+    },
+    "type": {
+      "category": "property",
+      "description": "The type of media of a work under review",
+      "label": "type"
+    },
+    "Comment": {
+      "category": "class",
+      "description": "A comment on a review",
+      "label": "Comment"
+    },
+    "Feedback": {
+      "category": "class",
+      "description": "Feedback on the review. Expresses whether the review was useful or not",
+      "label": "Feedback"
+    },
+    "Review": {
+      "category": "class",
+      "description": "A review of an work",
+      "label": "Review"
+    },
+    "rdfs:Class": {
+      "category": "class"
+    },
+    "foaf:Agent": {
+      "category": "class"
+    },
+    "rdfs:Resource": {
+      "category": "class"
+    },
+    "foaf:Person": {
+      "category": "class"
+    },
+    "commenter": {
+      "category": "property",
+      "description": "The commenter on the review",
+      "label": "commenter"
+    },
+    "hasComment": {
+      "category": "property",
+      "description": "Used to associate a review with a comment on the review",
+      "label": "hasComment"
+    },
+    "hasFeedback": {
+      "category": "property",
+      "description": "Associates a review with a feedback on the review",
+      "label": "hasFeedback"
+    },
+    "hasReview": {
+      "category": "property",
+      "description": "Associates a work with a a review",
+      "label": "has Review"
+    },
+    "maxRating": {
+      "category": "property",
+      "description": "A numeric value",
+      "label": "max Rating"
+    },
+    "minRating": {
+      "category": "property",
+      "description": "A numeric value",
+      "label": "min Rating"
+    },
+    "reviewer": {
+      "category": "property",
+      "description": "The person that has written the review",
+      "label": "reviewer"
+    },
+    "vs:moreinfo": {
+      "category": "property"
+    },
+    "vs:term_status": {
+      "category": "property"
+    }
+  }
+}

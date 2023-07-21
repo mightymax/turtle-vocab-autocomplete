@@ -1,0 +1,469 @@
+{
+  "iri": "http://w3id.org/nfdi4ing/metadata4ing#",
+  "description": "Metadata4Ing defines classes and properties or reuses such classes and properties from other ontologies to describe research processes and research data management in NFDI4Ing. New concepts and properties are located in the namespace of Metadata4Ing. Metadata4Ing does not import complete ontologies for the sake of relevance, readability, understandability and usability by and for engineers. Instead, it tries to make re-use of existing identifiers for classes and properties by re-using all or a relevant subset of the axioms from the original ontology. These statements have been extracted in different ways, e.g. by using Protégé tools importing an ontology and copying axioms of relevant items to Metadata4Ing or by download from data services or raw files of ontologies and manual copypasting. In some cases there was a need to extend or modify the original set of statements about an entity, e.g. because labels and definitions were expressed with a different owl:AnnotationProperty than the rest of Metadata4Ing, or because a skos:preflabel or a skos:definition in any of the languages we would like to support was missing. Any editorial changes on elements from external ontologies are declared in Metadata4Ing by an annotation with skos:editorialNote at item-level. To get the original set of statements we encourage to visit the original namespace of the respective item. Metadata4Ing reuses elements from the following ontologies: - BIBO = Bibliographic Ontology - BIRO = Bibliographic Reference Ontology - DCAT = Data Catalog - DCTERMS = Dublin Core Terms - FOAF = Friend of a Friend - OWL = Web Ontology Language - PROV = Provenance Namespace - QUDT = Quantities, Units, Dimensions and Types - RDF = Resource Description Framework - RDFS = RDF Schema - SCHEMA = schema.org - SKOS = Simple Knowledge Organization System - SSN = Semantic Sensor Network Ontology - VANN = Vocabulary for Annotating vocabulary descriptions - XSD = XML Schema Definition - EMMO = European Materials and Modelling Ontology - BFO = Basic Formal Ontology - RO = Relation Ontology - PIMS-II = PIMS Interoperability Infrastructure - D-SI = Digital System of Units",
+  "label": "Metadata4Ing: An ontology for describing the generation of research data within a scientific activity.",
+  "prefix": "m4i",
+  "items": {
+    "": {
+      "category": "property",
+      "description": "The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. e.g. John wrote a book from <em>January</em> to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.<br/><br/>  Note that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.",
+      "label": "Startzeit"
+    },
+    "ProcessingStep": {
+      "category": "class",
+      "description": "Specific action undertaken during research",
+      "label": "Arbeitsschritt"
+    },
+    "prov:Role": {
+      "category": "class",
+      "description": "A role is the function of an entity or agent with respect to an activity, in the context of a usage, generation, invalidation, association, start, and end.",
+      "label": "Role"
+    },
+    "KindOfQuantity": {
+      "category": "class",
+      "description": "Kind of quantity, i.e., a physical/chemical quantity from a controlled vocabulary, such as QUDT, IEC, or EMMO",
+      "label": "Größenart"
+    },
+    "Method": {
+      "category": "class",
+      "description": "Abstract description of a method for analysis, generation and transformation of data and material objects like, e.g., 'Fourier Transform Infrared Spectroscopy' or 'Molecular Dynamics Simulation'. Note that while values for relevant parameters should be provided, m4i:Method does not refer to the actual execution of the process that is described (use m4i:ProcessingStep for that), but rather a description of the underlying principle.",
+      "label": "Methode"
+    },
+    "NumericalAssignment": {
+      "category": "class",
+      "description": "Assignment by which a variable (e.g., a physical property) is assigned an si:Real quantity value (scalar x measurement unit) in some context (e.g., applied to some object of research)",
+      "label": "numerical assignment"
+    },
+    "prov:Activity": {
+      "category": "class",
+      "description": "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.",
+      "label": "Activity"
+    },
+    "Tool": {
+      "category": "class",
+      "description": "Object that helps an agent perform an action (e.g., John wrote a book with a pen), i.e., an object of the relation schema:instrument or m4i:hasTool",
+      "label": "Tool"
+    },
+    "UncertaintyDeclaration": {
+      "category": "class",
+      "description": "Declaration that can be applied to an si:Real quantity value to give an assessment of uncertainty",
+      "label": "Unsicherheitsdeklaration"
+    },
+    "foaf:Organization": {
+      "category": "class",
+      "description": "An organization.",
+      "label": "Organisation"
+    },
+    "foaf:Person": {
+      "category": "class",
+      "description": "A person.",
+      "label": "Person"
+    },
+    "dcat:Dataset": {
+      "category": "class",
+      "description": "A collection of data, published or curated by a single source, and available for access or download in one or more representations.",
+      "label": "Datensatz"
+    },
+    "dcat:DatasetSeries": {
+      "category": "class",
+      "description": "A collection of datasets that are published separately, but share some common characteristics that groups them.",
+      "label": "Datensatzserie"
+    },
+    "dcat:Distribution": {
+      "category": "class",
+      "description": "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above).",
+      "label": "Verteilung"
+    },
+    "hasAdmissibleUnit": {
+      "category": "property",
+      "description": "(x hasAdmissibleUnit y) means that y is a unit that can be associated with the variable x",
+      "label": "hasAdmissibleUnit"
+    },
+    "prov:Association": {
+      "category": "class",
+      "description": "An instance of prov:Association provides additional descriptions about the binary prov:wasAssociatedWith relation from an prov:Activity to some prov:Agent that had some responsiblity for it. For example, :baking prov:wasAssociatedWith :baker; prov:qualifiedssociation [ a prov:Association; prov:agent :baker; :foo :bar ].",
+      "label": "Association"
+    },
+    "foaf:Agent": {
+      "category": "class",
+      "description": "An agent (eg. person, group, software or physical artifact).",
+      "label": "Agent"
+    },
+    "hasAdmissibleValue": {
+      "category": "property",
+      "description": "(x hasAdmissibleValue y) means that y is a value that can be assigned to the variable x",
+      "label": "hasAdmissibleValue"
+    },
+    "foaf:Group": {
+      "category": "class",
+      "description": "A class of Agents.",
+      "label": "Group"
+    },
+    "hasAssignedValue": {
+      "category": "property",
+      "description": "(a hasAssignedValue y) means that a: x = y is an assignment where the value y is assigned to a variable x",
+      "label": "has assigned value"
+    },
+    "hasCoverageInterval": {
+      "category": "property",
+      "description": "Associates an si:Real quantity value with an si:CoverageInterval",
+      "label": "has coverage interval"
+    },
+    "hasUncertaintyDeclaration": {
+      "category": "property",
+      "description": "Associates an si:Real quantity value with its mandatory uncertainty declaration (i.e., with an expanded uncertainty or a coverage interval)",
+      "label": "has uncertainty declaration"
+    },
+    "hasEmployedTool": {
+      "category": "property",
+      "description": "Points to a tool that is used within a given processing step",
+      "label": "has employed tool"
+    },
+    "isEmployedToolIn": {
+      "category": "property",
+      "description": "Points to a processing step the tool has been used in",
+      "label": "is employed tool"
+    },
+    "hasExpandedUnc": {
+      "category": "property",
+      "description": "Relates an si:Real to its expanded uncertainty",
+      "label": "has expanded uncertainty"
+    },
+    "hasKindOfQuantity": {
+      "category": "property",
+      "description": "Points to the property characterization (i.e., to the kind of quantity) from a controlled vocabulary",
+      "label": "has kind of quantity"
+    },
+    "hasParameter": {
+      "category": "property",
+      "description": "Points to a parameter of a given method or tool.",
+      "label": "has parameter"
+    },
+    "hasRuntimeAssignment": {
+      "category": "property",
+      "description": "Points to an assignment that is neither input nor output",
+      "label": "has runtime assignment"
+    },
+    "hasUnit": {
+      "category": "property",
+      "description": "Represents the unit of a numerical (real) value",
+      "label": "has unit"
+    },
+    "hasVariable": {
+      "category": "property",
+      "description": "( a hasVariable x ) bedeutet, dass a: x = y eine Variablenzuordnung ist, in der der Variablen x ein Wert zugeordnet wird.",
+      "label": "has variable"
+    },
+    "implementedByTool": {
+      "category": "property",
+      "description": "Points to a tool that implements a given method",
+      "label": "implemented by"
+    },
+    "ssn:implementedBy": {
+      "category": "property",
+      "label": "implemented by"
+    },
+    "implementsMethod": {
+      "category": "property",
+      "description": "Points to a method that is implemented by a given tool",
+      "label": "implementiert"
+    },
+    "ssn:implements": {
+      "category": "property",
+      "label": "implementiert"
+    },
+    "inProject": {
+      "category": "property",
+      "description": "A property that connects a person or an organization with a project.",
+      "label": "associated to project"
+    },
+    "projectParticipant": {
+      "category": "property",
+      "description": "A property that connects a project with a person or an organisation.",
+      "label": "hat Projektmitglied"
+    },
+    "investigates": {
+      "category": "property",
+      "description": "(x investigates y) means that x is about y, in the context of scientific research and development",
+      "label": "investigates"
+    },
+    "investigatesProperty": {
+      "category": "property",
+      "description": "(x investigatesProperty y) means that x is about target property y, in the context of scientific research and development",
+      "label": "investigates property"
+    },
+    "realizesMethod": {
+      "category": "property",
+      "description": "Points to a method that is used within a given processing step",
+      "label": "realisiert Methode"
+    },
+    "dcat:compressFormat": {
+      "category": "property",
+      "description": "This property is to be used when the files in the distribution are compressed, e.g. in a ZIP file. The format SHOULD be expressed using a media type as defined by IANA media types registry https://www.iana.org/assignments/media-types/, if available.",
+      "label": "Kompressionsformat"
+    },
+    "dcat:distribution": {
+      "category": "property",
+      "description": "An available distribution of the dataset.",
+      "label": "has distribution"
+    },
+    "dcat:downloadURL": {
+      "category": "property",
+      "description": "dcat:downloadURL SHOULD be used for the address at which this distribution is available directly, typically through a HTTP Get request.",
+      "label": "Downloadlink"
+    },
+    "dcat:inSeries": {
+      "category": "property",
+      "description": "Normally, child datasets in dataset series are represented as dcat:Dataset. The use of dcat:Distribution for typing child datasets is however recognized as a possible alternative, whenever it addresses more effectively the requirements of a given application scenario.",
+      "label": "in Serie"
+    },
+    "dcat:mediaType": {
+      "category": "property",
+      "description": "This property SHOULD be used when the media type of the distribution is defined in the IANA media types registry https://www.iana.org/assignments/media-types/, otherwise dcterms:format MAY be used with different values.",
+      "label": "Medientyp"
+    },
+    "dcat:packageFormat": {
+      "category": "property",
+      "description": "This property to be used when the files in the distribution are packaged, e.g. in a TAR file, a Frictionless Data Package or a Bagit file. The format SHOULD be expressed using a media type as defined by IANA media types registry https://www.iana.org/assignments/media-types/, if available.",
+      "label": "Packformat"
+    },
+    "prov:agent": {
+      "category": "property",
+      "description": "The prov:agent property is used to reference an agent that had a role in an activity.",
+      "label": "Agent"
+    },
+    "prov:hadRole": {
+      "category": "property",
+      "description": "prov:hadRole references the Role (i.e. the function of an entity with respect to an activity)",
+      "label": "had role"
+    },
+    "prov:wasRoleIn": {
+      "category": "property",
+      "description": "prov:wasRoleIn references the association (e.g. between an agent and an activity) in which a role shall be defined. Inverse property of prov:hadRole.",
+      "label": "war Rolle in"
+    },
+    "prov:qualifiedAssociation": {
+      "category": "property",
+      "description": "Allows to specify more information (e.g. a role) about an association between an agent (e.g. a person) and an Activity (e.g. a processing step).",
+      "label": "näher beschriebene Verbindung"
+    },
+    "ssn:hasProperty": {
+      "category": "property",
+      "description": "Relation between an entity and a Property of that entity.",
+      "label": "has property"
+    },
+    "ssn:isPropertyOf": {
+      "category": "property",
+      "description": "Relation between a Property and the entity it belongs to.",
+      "label": "is property of"
+    },
+    "foaf:mbox": {
+      "category": "property",
+      "description": "A personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that   there is (across time and change) at most one individual that ever has any particular value for foaf:mbox.",
+      "label": "E-Mail-Adresse"
+    },
+    "foaf:member": {
+      "category": "property",
+      "description": "Indicates a member of a Group",
+      "label": "Mitglied"
+    },
+    "skos:closeMatch": {
+      "category": "property"
+    },
+    "skos:definition": {
+      "category": "property"
+    },
+    "skos:editorialNote": {
+      "category": "property"
+    },
+    "skos:prefLabel": {
+      "category": "property"
+    },
+    "skos:altLabel": {
+      "category": "property"
+    },
+    "dcterms:abstract": {
+      "category": "property"
+    },
+    "dcterms:contributor": {
+      "category": "property"
+    },
+    "dcterms:created": {
+      "category": "property"
+    },
+    "dcterms:creator": {
+      "category": "property"
+    },
+    "dcterms:description": {
+      "category": "property",
+      "description": "An account of the resource.",
+      "label": "Beschreibung"
+    },
+    "dcterms:isReferencedBy": {
+      "category": "property",
+      "description": "This property is intended to be used with non-literal values. This property is an inverse property of References.",
+      "label": "is referenced by"
+    },
+    "dcterms:issued": {
+      "category": "property"
+    },
+    "dcterms:license": {
+      "category": "property"
+    },
+    "dcterms:modified": {
+      "category": "property"
+    },
+    "dcterms:publisher": {
+      "category": "property"
+    },
+    "dcterms:references": {
+      "category": "property",
+      "description": "This property is intended to be used with non-literal values. This property is an inverse property of Is Referenced By.",
+      "label": "references"
+    },
+    "dcterms:rights": {
+      "category": "property"
+    },
+    "dcterms:title": {
+      "category": "property",
+      "description": "A name given to the resource.",
+      "label": "Titel"
+    },
+    "bibo:doi": {
+      "category": "property"
+    },
+    "bibo:status": {
+      "category": "property"
+    },
+    "vann:preferredNamespacePrefix": {
+      "category": "property"
+    },
+    "vann:preferredNamespaceUri": {
+      "category": "property"
+    },
+    "skos:scopeNote": {
+      "category": "property"
+    },
+    "skos:narrower": {
+      "category": "property"
+    },
+    "skos:note": {
+      "category": "property"
+    },
+    "skos:broader": {
+      "category": "property"
+    },
+    "skos:example": {
+      "category": "property"
+    },
+    "UsageInstruction": {
+      "category": "property",
+      "description": "Textual description of a processing step within a research process to enable or facilitate its reproducibility",
+      "label": "Verwendungshinweis"
+    },
+    "endOfProject": {
+      "category": "property",
+      "description": "Projektenddatum",
+      "label": "Projektenddatum"
+    },
+    "hasAssignmentTimestamp": {
+      "category": "property",
+      "description": "Points to a timestamp associated with an assignment; there are multiple kinds of timestamp datatype properties, which are included here from schema.org",
+      "label": "has assignment timestamp"
+    },
+    "hasDateAssignmentCreated": {
+      "category": "property",
+      "description": "Points to a date(time) of creation of an assignment",
+      "label": "has date assignment created"
+    },
+    "hasDateAssignmentDeleted": {
+      "category": "property",
+      "description": "Points to a date(time) of deletion of an assignment",
+      "label": "has date assignment deleted"
+    },
+    "hasDateAssignmentModified": {
+      "category": "property",
+      "description": "Points to a date(time) of modification of an assignment",
+      "label": "has date assignment modified"
+    },
+    "hasDateAssignmentValidFrom": {
+      "category": "property",
+      "description": "Points to a date(time) at which the validity of an assignment begins",
+      "label": "has date assignment valid from"
+    },
+    "hasDateAssignmentValidUntil": {
+      "category": "property",
+      "description": "Points to a date(time) at which the validity of an assignment ends",
+      "label": "has date assignment valid until"
+    },
+    "hasNumericalValue": {
+      "category": "property",
+      "description": "Represents the numerical value of a real",
+      "label": "has numerical value"
+    },
+    "hasRorId": {
+      "category": "property",
+      "description": "A Research Organization Registry identifier, that points to a research organization",
+      "label": "has ROR ID"
+    },
+    "identifier": {
+      "category": "property",
+      "description": "A systematically built alphanumeric string that identifies a unique object (e.g. a person, a publication, an organisation, a research activity, a sample, etc.) or a unique class of objects.",
+      "label": "has identifier"
+    },
+    "hasSymbol": {
+      "category": "property",
+      "description": "Buchstabe oder Zeichenkette, die eine Variable repräsentiert",
+      "label": "has symbol"
+    },
+    "hasVariableDescription": {
+      "category": "property",
+      "description": "Textual and human readable description of a variable in a research context",
+      "label": "has variable description"
+    },
+    "orcidId": {
+      "category": "property",
+      "label": "has ORCID ID"
+    },
+    "projectReferenceID": {
+      "category": "property",
+      "description": "An alphanumeric identifier for a project.",
+      "label": "has project ID"
+    },
+    "startOfProject": {
+      "category": "property",
+      "description": "Startdatum eines Projekts",
+      "label": "Projektstartdatum"
+    },
+    "dcat:byteSize": {
+      "category": "property",
+      "description": "The size in bytes can be approximated when the precise size is not known. The literal value of dcat:byteSize should by typed as xsd:decimal.",
+      "label": "Dateigröße (in Byte)"
+    },
+    "dcat:spatialResolutionInMeters": {
+      "category": "property",
+      "description": "Alternative spatial resolutions might be provided as different dataset distributions.",
+      "label": "räumliche Auflösung (in Metern)"
+    },
+    "dcat:temporalResolution": {
+      "category": "property",
+      "description": "Alternative temporal resolutions might be provided as different dataset distributions.",
+      "label": "temporal resolution"
+    },
+    "foaf:firstName": {
+      "category": "property",
+      "description": "The first name of a person.",
+      "label": "Vorname"
+    },
+    "foaf:lastName": {
+      "category": "property",
+      "description": "The last name of a person.",
+      "label": "Nachname"
+    },
+    "foaf:title": {
+      "category": "property",
+      "description": "Title (Mr, Mrs, Ms, Dr. etc)",
+      "label": "Titel"
+    }
+  }
+}

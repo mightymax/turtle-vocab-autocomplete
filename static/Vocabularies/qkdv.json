@@ -1,0 +1,7 @@
+{
+  "iri": "http://qudt.org/vocab/dimensionvector/",
+  "description": "Provides the set of all dimension vectors",
+  "label": "QUDT Dimension Vectors Version 2.1 Vocabulary",
+  "prefix": "qkdv",
+  "items": {}
+}

@@ -1,0 +1,159 @@
+{
+  "iri": "http://www.w3.org/2000/10/swap/math#",
+  "label": "Semantic Web Application Platform - Math",
+  "prefix": "math",
+  "items": {
+    "memberCount": {
+      "category": "property",
+      "description": "The number of items in a list. The subject is a list, the object is calculated as the number of members.",
+      "label": "memberCount"
+    },
+    "Function": {
+      "category": "class",
+      "description": "A math:Function is unique in terms of math:EqualTo.",
+      "label": "Function"
+    },
+    "List": {
+      "category": "class",
+      "description": "The class of things that are DAML lists were all of the members are math:Value items.",
+      "label": "List"
+    },
+    "LogicalOperator": {
+      "category": "class",
+      "description": "a logical operator allows evaluation eihter way, or testing relationship between two values"
+    },
+    "ReverseFunction": {
+      "category": "class",
+      "description": "A math:ReverseFunction is unambiguous in terms of math:EqualTo."
+    },
+    "StrictProperty": {
+      "category": "class",
+      "label": "StrictProperty"
+    },
+    "TwoMemberedList": {
+      "category": "class",
+      "description": "This is the class of things that are math lists with only two members.",
+      "label": "TwoMemberedList"
+    },
+    "Value": {
+      "category": "class",
+      "description": "The class of things that are numeric float values as in Python.",
+      "label": "Value"
+    },
+    "absoluteValue": {
+      "category": "property",
+      "description": "The object is calulated as the absolute value of the subject.",
+      "label": "negation"
+    },
+    "atan2": {
+      "category": "property",
+      "description": "The subject is a pair of numbers. The object is calulated as the arc tangent value of the ratio of the two subject values.",
+      "label": "atan2"
+    },
+    "cos": {
+      "category": "property",
+      "description": "The subject is an angle expressed in radians. The object is calulated as the cosine value of the subject.",
+      "label": "cos"
+    },
+    "degrees": {
+      "category": "property",
+      "description": "The subject is an angle expressed in radians. The object is calulated as the conversion in degrees of the value of the subject.",
+      "label": "degrees"
+    },
+    "difference": {
+      "category": "property",
+      "description": "The subject is a pair of numbers. The object is calculated by subtracting the second number of the pair from the first.",
+      "label": "difference"
+    },
+    "exponentiation": {
+      "category": "property",
+      "description": "The subject is a pair of numbers. The object is calculated by raising the first number of the power of the second.",
+      "label": "exponentiation"
+    },
+    "integerQuotient": {
+      "category": "property",
+      "description": "The subject is a pair of integer numbers. The object is calculated by dividing the first number of the pair by the second, ignoring remainder.",
+      "label": "integerQuotient"
+    },
+    "negation": {
+      "category": "property",
+      "description": "The subject or object is calculated to be the negation of the other.",
+      "label": "negation"
+    },
+    "product": {
+      "category": "property",
+      "description": "The subject is a list of numbers. The object is calculated as the arithmentic product of those numbers.",
+      "label": "product"
+    },
+    "quotient": {
+      "category": "property",
+      "description": "The subject is a pair of numbers. The object is calculated by dividing the first number of the pair by the second.",
+      "label": "quotient"
+    },
+    "remainder": {
+      "category": "property",
+      "description": "The subject is a pair of integers. The object is calculated by dividing the first number of the pair by the second and taking the remainder.",
+      "label": "remainder"
+    },
+    "rounded": {
+      "category": "property",
+      "description": "The object is calulated as the subject rounded to the nearest integer.",
+      "label": "rounded"
+    },
+    "sin": {
+      "category": "property",
+      "description": "The subject is an angle expressed in radians. The object is calulated as the sine value of the subject.",
+      "label": "sin"
+    },
+    "sinh": {
+      "category": "property",
+      "description": "The subject is an angle expressed in radians. The object is calulated as the hyperbolic sine value of the subject.",
+      "label": "sinh"
+    },
+    "sum": {
+      "category": "property",
+      "description": "The subject is a list of numbers. The object is calculated as the arithmentic sum of those numbers.",
+      "label": "sum"
+    },
+    "tan": {
+      "category": "property",
+      "description": "The subject is an angle expressed in radians. The object is calulated as the tangent value of the subject.",
+      "label": "tan"
+    },
+    "tanh": {
+      "category": "property",
+      "description": "The subject is an angle expressed in radians. The object is calulated as the hyperbolic tangent value of the subject.",
+      "label": "tanh"
+    },
+    "equalTo": {
+      "category": "property",
+      "description": "True iff the subject is a string representation of a number which  is EQUAL TO a number of which the object is a string representation.",
+      "label": "equalTo"
+    },
+    "greaterThan": {
+      "category": "property",
+      "description": "True iff the subject is a string representation of a number which  is greater than the number of which the object is a string representation.",
+      "label": "greaterThan"
+    },
+    "lessThan": {
+      "category": "property",
+      "description": "True iff the subject is a string representation of a number which  is LESS than a number of which the object is a string representation.",
+      "label": "lessThan"
+    },
+    "notEqualTo": {
+      "category": "property",
+      "description": "True iff the subject is a string representation of a number which  is NOT EQUAL to a number of which the object is a string representation.",
+      "label": "notEqualTo"
+    },
+    "notGreaterThan": {
+      "category": "property",
+      "description": "True iff the subject is a string representation of a number which is NOT greater than the number of which the object is a string representation.",
+      "label": "notGreaterThan"
+    },
+    "notLessThan": {
+      "category": "property",
+      "description": "True iff the subject is a string representation of a number which  is NOT LESS than a number of which the object is a string representation.",
+      "label": "notlessThan"
+    }
+  }
+}

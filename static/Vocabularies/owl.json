@@ -1,0 +1,393 @@
+{
+  "iri": "http://www.w3.org/2002/07/owl#",
+  "description": "This ontology partially describes the built-in classes and properties that together form the basis of the RDF/XML syntax of OWL 2. The content of this ontology is based on Tables 6.1 and 6.2 in Section 6.4 of the OWL 2 RDF-Based Semantics specification, available at http://www.w3.org/TR/owl2-rdf-based-semantics/. Please note that those tables do not include the different annotations (labels, comments and rdfs:isDefinedBy links) used in this file. Also note that the descriptions provided in this ontology do not provide a complete and correct formal description of either the syntax or the semantics of the introduced terms (please see the OWL 2 recommendations for the complete and normative specifications). Furthermore, the information provided by this ontology may be misleading if not used with care. This ontology SHOULD NOT be imported into OWL ontologies. Importing this file into an OWL 2 DL ontology will cause it to become an OWL 2 Full ontology and may have other, unexpected, consequences.",
+  "label": "The OWL 2 Schema vocabulary (OWL 2)",
+  "prefix": "owl",
+  "items": {
+    "AllDifferent": {
+      "category": "class",
+      "description": "The class of collections of pairwise different individuals.",
+      "label": "AllDifferent"
+    },
+    "AllDisjointClasses": {
+      "category": "class",
+      "description": "The class of collections of pairwise disjoint classes.",
+      "label": "AllDisjointClasses"
+    },
+    "AllDisjointProperties": {
+      "category": "class",
+      "description": "The class of collections of pairwise disjoint properties.",
+      "label": "AllDisjointProperties"
+    },
+    "Annotation": {
+      "category": "class",
+      "description": "The class of annotated annotations for which the RDF serialization consists of an annotated subject, predicate and object.",
+      "label": "Annotation"
+    },
+    "AnnotationProperty": {
+      "category": "class",
+      "description": "The class of annotation properties.",
+      "label": "AnnotationProperty"
+    },
+    "AsymmetricProperty": {
+      "category": "class",
+      "description": "The class of asymmetric properties.",
+      "label": "AsymmetricProperty"
+    },
+    "ObjectProperty": {
+      "category": "class",
+      "description": "The class of object properties.",
+      "label": "ObjectProperty"
+    },
+    "Axiom": {
+      "category": "class",
+      "description": "The class of annotated axioms for which the RDF serialization consists of an annotated subject, predicate and object.",
+      "label": "Axiom"
+    },
+    "Class": {
+      "category": "class",
+      "description": "The class of OWL classes.",
+      "label": "Class"
+    },
+    "DataRange": {
+      "category": "class",
+      "description": "The class of OWL data ranges, which are special kinds of datatypes. Note: The use of the IRI owl:DataRange has been deprecated as of OWL 2. The IRI rdfs:Datatype SHOULD be used instead.",
+      "label": "DataRange"
+    },
+    "DatatypeProperty": {
+      "category": "class",
+      "description": "The class of data properties.",
+      "label": "DatatypeProperty"
+    },
+    "DeprecatedClass": {
+      "category": "class",
+      "description": "The class of deprecated classes.",
+      "label": "DeprecatedClass"
+    },
+    "DeprecatedProperty": {
+      "category": "class",
+      "description": "The class of deprecated properties.",
+      "label": "DeprecatedProperty"
+    },
+    "FunctionalProperty": {
+      "category": "class",
+      "description": "The class of functional properties.",
+      "label": "FunctionalProperty"
+    },
+    "InverseFunctionalProperty": {
+      "category": "class",
+      "description": "The class of inverse-functional properties.",
+      "label": "InverseFunctionalProperty"
+    },
+    "IrreflexiveProperty": {
+      "category": "class",
+      "description": "The class of irreflexive properties.",
+      "label": "IrreflexiveProperty"
+    },
+    "NamedIndividual": {
+      "category": "class",
+      "description": "The class of named individuals.",
+      "label": "NamedIndividual"
+    },
+    "NegativePropertyAssertion": {
+      "category": "class",
+      "description": "The class of negative property assertions.",
+      "label": "NegativePropertyAssertion"
+    },
+    "Ontology": {
+      "category": "class",
+      "description": "The class of ontologies.",
+      "label": "Ontology"
+    },
+    "OntologyProperty": {
+      "category": "class",
+      "description": "The class of ontology properties.",
+      "label": "OntologyProperty"
+    },
+    "ReflexiveProperty": {
+      "category": "class",
+      "description": "The class of reflexive properties.",
+      "label": "ReflexiveProperty"
+    },
+    "Restriction": {
+      "category": "class",
+      "description": "The class of property restrictions.",
+      "label": "Restriction"
+    },
+    "SymmetricProperty": {
+      "category": "class",
+      "description": "The class of symmetric properties.",
+      "label": "SymmetricProperty"
+    },
+    "TransitiveProperty": {
+      "category": "class",
+      "description": "The class of transitive properties.",
+      "label": "TransitiveProperty"
+    },
+    "backwardCompatibleWith": {
+      "category": "property",
+      "description": "The annotation property that indicates that a given ontology is backward compatible with another ontology.",
+      "label": "backwardCompatibleWith"
+    },
+    "deprecated": {
+      "category": "property",
+      "description": "The annotation property that indicates that a given entity has been deprecated.",
+      "label": "deprecated"
+    },
+    "incompatibleWith": {
+      "category": "property",
+      "description": "The annotation property that indicates that a given ontology is incompatible with another ontology.",
+      "label": "incompatibleWith"
+    },
+    "priorVersion": {
+      "category": "property",
+      "description": "The annotation property that indicates the predecessor ontology of a given ontology.",
+      "label": "priorVersion"
+    },
+    "versionInfo": {
+      "category": "property",
+      "description": "The annotation property that provides version information for an ontology or another OWL construct.",
+      "label": "versionInfo"
+    },
+    "allValuesFrom": {
+      "category": "property",
+      "description": "The property that determines the class that a universal property restriction refers to.",
+      "label": "allValuesFrom"
+    },
+    "annotatedProperty": {
+      "category": "property",
+      "description": "The property that determines the predicate of an annotated axiom or annotated annotation.",
+      "label": "annotatedProperty"
+    },
+    "annotatedSource": {
+      "category": "property",
+      "description": "The property that determines the subject of an annotated axiom or annotated annotation.",
+      "label": "annotatedSource"
+    },
+    "annotatedTarget": {
+      "category": "property",
+      "description": "The property that determines the object of an annotated axiom or annotated annotation.",
+      "label": "annotatedTarget"
+    },
+    "assertionProperty": {
+      "category": "property",
+      "description": "The property that determines the predicate of a negative property assertion.",
+      "label": "assertionProperty"
+    },
+    "cardinality": {
+      "category": "property",
+      "description": "The property that determines the cardinality of an exact cardinality restriction.",
+      "label": "cardinality"
+    },
+    "complementOf": {
+      "category": "property",
+      "description": "The property that determines that a given class is the complement of another class.",
+      "label": "complementOf"
+    },
+    "datatypeComplementOf": {
+      "category": "property",
+      "description": "The property that determines that a given data range is the complement of another data range with respect to the data domain.",
+      "label": "datatypeComplementOf"
+    },
+    "differentFrom": {
+      "category": "property",
+      "description": "The property that determines that two given individuals are different.",
+      "label": "differentFrom"
+    },
+    "disjointUnionOf": {
+      "category": "property",
+      "description": "The property that determines that a given class is equivalent to the disjoint union of a collection of other classes.",
+      "label": "disjointUnionOf"
+    },
+    "disjointWith": {
+      "category": "property",
+      "description": "The property that determines that two given classes are disjoint.",
+      "label": "disjointWith"
+    },
+    "distinctMembers": {
+      "category": "property",
+      "description": "The property that determines the collection of pairwise different individuals in a owl:AllDifferent axiom.",
+      "label": "distinctMembers"
+    },
+    "equivalentClass": {
+      "category": "property",
+      "description": "The property that determines that two given classes are equivalent, and that is used to specify datatype definitions.",
+      "label": "equivalentClass"
+    },
+    "equivalentProperty": {
+      "category": "property",
+      "description": "The property that determines that two given properties are equivalent.",
+      "label": "equivalentProperty"
+    },
+    "hasKey": {
+      "category": "property",
+      "description": "The property that determines the collection of properties that jointly build a key.",
+      "label": "hasKey"
+    },
+    "hasSelf": {
+      "category": "property",
+      "description": "The property that determines the property that a self restriction refers to.",
+      "label": "hasSelf"
+    },
+    "hasValue": {
+      "category": "property",
+      "description": "The property that determines the individual that a has-value restriction refers to.",
+      "label": "hasValue"
+    },
+    "intersectionOf": {
+      "category": "property",
+      "description": "The property that determines the collection of classes or data ranges that build an intersection.",
+      "label": "intersectionOf"
+    },
+    "inverseOf": {
+      "category": "property",
+      "description": "The property that determines that two given properties are inverse.",
+      "label": "inverseOf"
+    },
+    "maxCardinality": {
+      "category": "property",
+      "description": "The property that determines the cardinality of a maximum cardinality restriction.",
+      "label": "maxCardinality"
+    },
+    "maxQualifiedCardinality": {
+      "category": "property",
+      "description": "The property that determines the cardinality of a maximum qualified cardinality restriction.",
+      "label": "maxQualifiedCardinality"
+    },
+    "members": {
+      "category": "property",
+      "description": "The property that determines the collection of members in either a owl:AllDifferent, owl:AllDisjointClasses or owl:AllDisjointProperties axiom.",
+      "label": "members"
+    },
+    "minCardinality": {
+      "category": "property",
+      "description": "The property that determines the cardinality of a minimum cardinality restriction.",
+      "label": "minCardinality"
+    },
+    "minQualifiedCardinality": {
+      "category": "property",
+      "description": "The property that determines the cardinality of a minimum qualified cardinality restriction.",
+      "label": "minQualifiedCardinality"
+    },
+    "onClass": {
+      "category": "property",
+      "description": "The property that determines the class that a qualified object cardinality restriction refers to.",
+      "label": "onClass"
+    },
+    "onDataRange": {
+      "category": "property",
+      "description": "The property that determines the data range that a qualified data cardinality restriction refers to.",
+      "label": "onDataRange"
+    },
+    "onDatatype": {
+      "category": "property",
+      "description": "The property that determines the datatype that a datatype restriction refers to.",
+      "label": "onDatatype"
+    },
+    "onProperties": {
+      "category": "property",
+      "description": "The property that determines the n-tuple of properties that a property restriction on an n-ary data range refers to.",
+      "label": "onProperties"
+    },
+    "onProperty": {
+      "category": "property",
+      "description": "The property that determines the property that a property restriction refers to.",
+      "label": "onProperty"
+    },
+    "oneOf": {
+      "category": "property",
+      "description": "The property that determines the collection of individuals or data values that build an enumeration.",
+      "label": "oneOf"
+    },
+    "propertyChainAxiom": {
+      "category": "property",
+      "description": "The property that determines the n-tuple of properties that build a sub property chain of a given property.",
+      "label": "propertyChainAxiom"
+    },
+    "propertyDisjointWith": {
+      "category": "property",
+      "description": "The property that determines that two given properties are disjoint.",
+      "label": "propertyDisjointWith"
+    },
+    "qualifiedCardinality": {
+      "category": "property",
+      "description": "The property that determines the cardinality of an exact qualified cardinality restriction.",
+      "label": "qualifiedCardinality"
+    },
+    "sameAs": {
+      "category": "property",
+      "description": "The property that determines that two given individuals are equal.",
+      "label": "sameAs"
+    },
+    "someValuesFrom": {
+      "category": "property",
+      "description": "The property that determines the class that an existential property restriction refers to.",
+      "label": "someValuesFrom"
+    },
+    "sourceIndividual": {
+      "category": "property",
+      "description": "The property that determines the subject of a negative property assertion.",
+      "label": "sourceIndividual"
+    },
+    "targetIndividual": {
+      "category": "property",
+      "description": "The property that determines the object of a negative object property assertion.",
+      "label": "targetIndividual"
+    },
+    "targetValue": {
+      "category": "property",
+      "description": "The property that determines the value of a negative data property assertion.",
+      "label": "targetValue"
+    },
+    "unionOf": {
+      "category": "property",
+      "description": "The property that determines the collection of classes or data ranges that build a union.",
+      "label": "unionOf"
+    },
+    "withRestrictions": {
+      "category": "property",
+      "description": "The property that determines the collection of facet-value pairs that define a datatype restriction.",
+      "label": "withRestrictions"
+    },
+    "bottomObjectProperty": {
+      "category": "property",
+      "description": "The object property that does not relate any two individuals.",
+      "label": "bottomObjectProperty"
+    },
+    "topObjectProperty": {
+      "category": "property",
+      "description": "The object property that relates every two individuals.",
+      "label": "topObjectProperty"
+    },
+    "Thing": {
+      "category": "class",
+      "description": "The class of OWL individuals.",
+      "label": "Thing"
+    },
+    "Nothing": {
+      "category": "class",
+      "description": "This is the empty class.",
+      "label": "Nothing"
+    },
+    "bottomDataProperty": {
+      "category": "property",
+      "description": "The data property that does not relate any individual to any data value.",
+      "label": "bottomDataProperty"
+    },
+    "topDataProperty": {
+      "category": "property",
+      "description": "The data property that relates every individual to every data value.",
+      "label": "topDataProperty"
+    },
+    "imports": {
+      "category": "property",
+      "description": "The property that is used for importing other ontologies into a given ontology.",
+      "label": "imports"
+    },
+    "versionIRI": {
+      "category": "property",
+      "description": "The property that identifies the version IRI of an ontology.",
+      "label": "versionIRI"
+    }
+  }
+}

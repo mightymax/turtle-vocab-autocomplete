@@ -1,0 +1,187 @@
+{
+  "iri": "http://purl.org/linked-data/cube#",
+  "description": "This vocabulary allows multi-dimensional data, such as statistics, to be published in RDF. It is based on the core information model from SDMX (and thus also DDI).",
+  "label": "Vocabulary for multi-dimensional (e.g. statistical) data publishing",
+  "prefix": "qb",
+  "items": {
+    "Attachable": {
+      "category": "class",
+      "description": "Abstract superclass for everything that can have attributes and dimensions",
+      "label": "Attachable (abstract)"
+    },
+    "AttributeProperty": {
+      "category": "class",
+      "description": "The class of components which represent attributes of observations in the cube, e.g. unit of measurement",
+      "label": "Attribute property"
+    },
+    "ComponentProperty": {
+      "category": "class",
+      "description": "Abstract super-property of all properties representing dimensions, attributes or measures",
+      "label": "Component property (abstract)"
+    },
+    "MeasureProperty": {
+      "category": "class",
+      "description": "The class of components which represent the measured value of the phenomenon being observed",
+      "label": "Measure property"
+    },
+    "CodedProperty": {
+      "category": "class",
+      "description": "Superclass of all coded ComponentProperties",
+      "label": "Coded property"
+    },
+    "ComponentSet": {
+      "category": "class",
+      "description": "Abstract class of things which reference one or more ComponentProperties",
+      "label": "Component set"
+    },
+    "ComponentSpecification": {
+      "category": "class",
+      "description": "Used to define properties of a component (attribute, dimension etc) which are specific to its usage in a DSD.",
+      "label": "Component specification"
+    },
+    "DataSet": {
+      "category": "class",
+      "description": "Represents a collection of observations, possibly organized into various slices, conforming to some common dimensional structure.",
+      "label": "Data set"
+    },
+    "DataStructureDefinition": {
+      "category": "class",
+      "description": "Defines the structure of a DataSet or slice",
+      "label": "Data structure definition"
+    },
+    "DimensionProperty": {
+      "category": "class",
+      "description": "The class of components which represent the dimensions of the cube",
+      "label": "Dimension property"
+    },
+    "HierarchicalCodeList": {
+      "category": "class",
+      "description": "Represents a generalized hierarchy of concepts which can be used for coding. The hierarchy is defined by one or more roots together with a property which relates concepts in the hierarchy to thier child concept .  The same concepts may be members of multiple hierarchies provided that different qb:parentChildProperty values are used for each hierarchy.",
+      "label": "Hierarchical Code List"
+    },
+    "Observation": {
+      "category": "class",
+      "description": "A single observation in the cube, may have one or more associated measured values",
+      "label": "Observation"
+    },
+    "ObservationGroup": {
+      "category": "class",
+      "description": "A, possibly arbitrary, group of observations.",
+      "label": "Observation Group"
+    },
+    "Slice": {
+      "category": "class",
+      "description": "Denotes a subset of a DataSet defined by fixing a subset of the dimensional values, component properties on the Slice",
+      "label": "Slice"
+    },
+    "SliceKey": {
+      "category": "class",
+      "description": "Denotes a subset of the component properties of a DataSet which are fixed in the corresponding slices",
+      "label": "Slice key"
+    },
+    "attribute": {
+      "category": "property",
+      "description": "An alternative to qb:componentProperty which makes explicit that the component is a attribute",
+      "label": "attribute"
+    },
+    "componentProperty": {
+      "category": "property",
+      "description": "indicates a ComponentProperty (i.e. attribute/dimension) expected on a DataSet, or a dimension fixed in a SliceKey",
+      "label": "component"
+    },
+    "codeList": {
+      "category": "property",
+      "description": "gives the code list associated with a CodedProperty",
+      "label": "code list"
+    },
+    "component": {
+      "category": "property",
+      "description": "indicates a component specification which is included in the structure of the dataset",
+      "label": "component specification"
+    },
+    "componentAttachment": {
+      "category": "property",
+      "description": "Indicates the level at which the component property should be attached, this might an qb:DataSet, qb:Slice or qb:Observation, or a qb:MeasureProperty.",
+      "label": "component attachment"
+    },
+    "componentRequired": {
+      "category": "property",
+      "description": "Indicates whether a component property is required (true) or optional (false) in the context of a DSD. Only applicable to components correspond to an attribute. Defaults to false (optional).",
+      "label": "component required"
+    },
+    "concept": {
+      "category": "property",
+      "description": "gives the concept which is being measured or indicated by a ComponentProperty",
+      "label": "concept"
+    },
+    "dataSet": {
+      "category": "property",
+      "description": "indicates the data set of which this observation is a part",
+      "label": "data set"
+    },
+    "dimension": {
+      "category": "property",
+      "description": "An alternative to qb:componentProperty which makes explicit that the component is a dimension",
+      "label": "dimension"
+    },
+    "hierarchyRoot": {
+      "category": "property",
+      "description": "Specifies a root of the hierarchy. A hierarchy may have multiple roots but must have at least one."
+    },
+    "measure": {
+      "category": "property",
+      "description": "An alternative to qb:componentProperty which makes explicit that the component is a measure",
+      "label": "measure"
+    },
+    "measureDimension": {
+      "category": "property",
+      "description": "An alternative to qb:componentProperty which makes explicit that the component is a measure dimension",
+      "label": "measure dimension"
+    },
+    "measureType": {
+      "category": "property",
+      "description": "Generic measure dimension, the value of this dimension indicates which measure (from the set of measures in the DSD) is being given by the obsValue (or other primary measure)",
+      "label": "measure type"
+    },
+    "observation": {
+      "category": "property",
+      "description": "indicates a observation contained within this slice of the data set",
+      "label": "observation"
+    },
+    "observationGroup": {
+      "category": "property",
+      "description": "Indicates a group of observations. The domain of this property is left open so that a group may be attached to different resources and need not be restricted to a single DataSet",
+      "label": "observation group"
+    },
+    "order": {
+      "category": "property",
+      "description": "indicates a priority order for the components of sets with this structure, used to guide presentations - lower order numbers come before higher numbers, un-numbered components come last",
+      "label": "order"
+    },
+    "parentChildProperty": {
+      "category": "property",
+      "description": "Specifies a property which relates a parent concept in the hierarchy to a child concept.",
+      "label": "parent-child property"
+    },
+    "slice": {
+      "category": "property",
+      "description": "Indicates a subset of a DataSet defined by fixing a subset of the dimensional values",
+      "label": "slice"
+    },
+    "sliceKey": {
+      "category": "property",
+      "description": "indicates a slice key which is used for slices in this dataset",
+      "label": "slice key"
+    },
+    "sliceStructure": {
+      "category": "property",
+      "description": "indicates the sub-key corresponding to this slice",
+      "label": "slice structure"
+    },
+    "structure": {
+      "category": "property",
+      "description": "indicates the structure to which this data set conforms",
+      "label": "structure"
+    }
+  }
+}

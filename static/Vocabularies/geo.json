@@ -1,0 +1,308 @@
+{
+  "iri": "http://www.opengis.net/ont/geosparql#",
+  "description": "An RDF/OWL vocabulary for representing spatial information",
+  "label": "GeoSPARQL Ontology",
+  "prefix": "geo",
+  "items": {
+    "Feature": {
+      "category": "class",
+      "description": "A discrete spatial phenomenon in a universe of discourse.",
+      "label": "Feature"
+    },
+    "SpatialObject": {
+      "category": "class",
+      "description": "Anything spatial (being or having a shape, position or an extent).",
+      "label": "Spatial Object"
+    },
+    "Geometry": {
+      "category": "class",
+      "description": "A coherent set of direct positions in space. The positions are held within a Spatial Reference System (SRS).",
+      "label": "Geometry"
+    },
+    "FeatureCollection": {
+      "category": "class",
+      "description": "A collection of individual Features.",
+      "label": "Feature Collection"
+    },
+    "SpatialObjectCollection": {
+      "category": "class",
+      "description": "A collection of individual Spatial Objects.",
+      "label": "Spatial Object Collection"
+    },
+    "GeometryCollection": {
+      "category": "class",
+      "description": "A collection of individual Geometries.",
+      "label": "Geometry Collection"
+    },
+    "asDGGS": {
+      "category": "property",
+      "description": "The Discrete Global Grid System (DGGS) serialization of a Geometry",
+      "label": "as DGGS"
+    },
+    "hasSerialization": {
+      "category": "property",
+      "description": "Connects a Geometry object with its text-based serialization.",
+      "label": "has serialization"
+    },
+    "asGML": {
+      "category": "property",
+      "description": "The GML serialization of a Geometry",
+      "label": "as GML"
+    },
+    "asGeoJSON": {
+      "category": "property",
+      "description": "The GeoJSON serialization of a Geometry",
+      "label": "as GeoJSON"
+    },
+    "asKML": {
+      "category": "property",
+      "description": "The KML serialization of a Geometry",
+      "label": "as KML"
+    },
+    "asWKT": {
+      "category": "property",
+      "description": "The WKT serialization of a Geometry",
+      "label": "as WKT"
+    },
+    "coordinateDimension": {
+      "category": "property",
+      "description": "The number of measurements or axes needed to describe the position of this Geometry in a coordinate system.",
+      "label": "coordinate dimension"
+    },
+    "defaultGeometry": {
+      "category": "property",
+      "description": "The default Geometry to be used in spatial calculations. It is usually the most detailed Geometry.",
+      "label": "default geometry"
+    },
+    "hasGeometry": {
+      "category": "property",
+      "description": "A spatial representation for a given Feature.",
+      "label": "has geometry"
+    },
+    "hasDefaultGeometry": {
+      "category": "property",
+      "description": "The default Geometry to be used in spatial calculations. It is usually the most detailed Geometry.",
+      "label": "has default geometry"
+    },
+    "dimension": {
+      "category": "property",
+      "description": "The topological dimension of this geometric object, which must be less than or equal to the coordinate dimension. In non-homogeneous collections, this will return the largest topological dimension of the contained objects.",
+      "label": "dimension"
+    },
+    "ehContains": {
+      "category": "property",
+      "description": "States that the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*TFF*FF*",
+      "label": "contains"
+    },
+    "ehCoveredBy": {
+      "category": "property",
+      "description": "States that the subject SpatialObject is spatially covered by the object SpatialObject. DE-9IM: TFF*TFT**",
+      "label": "covered by"
+    },
+    "ehCovers": {
+      "category": "property",
+      "description": "States that the subject SpatialObject spatially covers the object SpatialObject. DE-9IM: T*TFT*FF*",
+      "label": "covers"
+    },
+    "ehDisjoint": {
+      "category": "property",
+      "description": "States that the subject SpatialObject is spatially disjoint from the object SpatialObject. DE-9IM: FF*FF****",
+      "label": "disjoint"
+    },
+    "sfDisjoint": {
+      "category": "property",
+      "description": "States that the subject SpatialObject is spatially disjoint from the object SpatialObject. DE-9IM: FF*FF****",
+      "label": "disjoint"
+    },
+    "ehEquals": {
+      "category": "property",
+      "description": "States that the subject SpatialObject spatially equals the object SpatialObject. DE-9IM: TFFFTFFFT",
+      "label": "equals"
+    },
+    "sfEquals": {
+      "category": "property",
+      "description": "States that the subject SpatialObject spatially equals the object SpatialObject. DE-9IM: TFFFTFFFT",
+      "label": "equals"
+    },
+    "ehInside": {
+      "category": "property",
+      "description": "States that the subject SpatialObject is spatially inside the object SpatialObject. DE-9IM: TFF*FFT**",
+      "label": "inside"
+    },
+    "ehMeet": {
+      "category": "property",
+      "description": "States that the subject SpatialObject spatially meets the object SpatialObject. DE-9IM: FT******* ^ F**T***** ^ F***T****",
+      "label": "meet"
+    },
+    "sfTouches": {
+      "category": "property",
+      "description": "States that the subject SpatialObject spatially touches the object SpatialObject. DE-9IM: FT******* ^ F**T***** ^ F***T****",
+      "label": "touches"
+    },
+    "ehOverlap": {
+      "category": "property",
+      "description": "States that the subject SpatialObject spatially overlaps the object SpatialObject. DE-9IM: T*T***T**",
+      "label": "overlap"
+    },
+    "hasArea": {
+      "category": "property",
+      "description": "The area of a Spatial Object.",
+      "label": "has area"
+    },
+    "hasSize": {
+      "category": "property",
+      "description": "Subproperties of this property are used to indicate the size of a Spatial Object as a measurement or estimate of one or more dimensions of the Spatial Object's spatial presence.",
+      "label": "has size"
+    },
+    "hasBoundingBox": {
+      "category": "property",
+      "description": "The target is a Geometry that defines a rectilinear region whose edges are aligned with the axes of the coordinate reference system, which exactly contains the Feature, for example an instance of http://www.opengis.net/ont/sf#envelope.",
+      "label": "has bounding box"
+    },
+    "hasCentroid": {
+      "category": "property",
+      "description": "The target Geometry shall describe a point, for example an instance of http://www.opengis.net/ont/sf#Point.",
+      "label": "has centroid"
+    },
+    "hasLength": {
+      "category": "property",
+      "description": "The length of a Spatial Object.",
+      "label": "has length"
+    },
+    "hasMetricArea": {
+      "category": "property",
+      "description": "The area of a Spatial Object in square meters.",
+      "label": "has area in square meters"
+    },
+    "hasMetricSize": {
+      "category": "property",
+      "description": "Subproperties of this property are used to indicate the size of a Spatial Object, as a measurement or estimate of one or more dimensions of the Spatial Object's spatial presence. Units are always metric (meter, square meter or cubic meter).",
+      "label": "has metric size"
+    },
+    "hasMetricLength": {
+      "category": "property",
+      "description": "The length of a Spatial Object in meters.",
+      "label": "has length in meters"
+    },
+    "hasMetricPerimeterLength": {
+      "category": "property",
+      "description": "The length of the perimeter of a Spatial Object in meters.",
+      "label": "has perimeter length in meters"
+    },
+    "hasMetricSpatialAccuracy": {
+      "category": "property",
+      "description": "The positional accuracy of the coordinates of a Geometry in meters.",
+      "label": "has spatial accuracy in meters"
+    },
+    "hasMetricSpatialResolution": {
+      "category": "property",
+      "description": "The spatial resolution of a Geometry in meters.",
+      "label": "has spatial resolution in meters"
+    },
+    "hasMetricVolume": {
+      "category": "property",
+      "description": "The volume of a Spatial Object in cubic meters.",
+      "label": "has volume in cubic meters"
+    },
+    "hasPerimeterLength": {
+      "category": "property",
+      "description": "The length of the perimeter of a Spatial Object.",
+      "label": "has perimeter length"
+    },
+    "hasSpatialAccuracy": {
+      "category": "property",
+      "description": "The positional accuracy of the coordinates of a Geometry.",
+      "label": "has spatial accuracy"
+    },
+    "hasSpatialResolution": {
+      "category": "property",
+      "description": "The spatial resolution of a Geometry.",
+      "label": "has spatial resolution"
+    },
+    "hasVolume": {
+      "category": "property",
+      "description": "The volume of a three-dimensional Spatial Object.",
+      "label": "has volume"
+    },
+    "isEmpty": {
+      "category": "property",
+      "description": "(true) if this geometric object is the empty Geometry. If true, then this geometric object represents the empty point set for the coordinate space.",
+      "label": "is empty"
+    },
+    "isSimple": {
+      "category": "property",
+      "description": "(true) if this geometric object has no anomalous geometric points, such as self intersection or self tangency.",
+      "label": "is simple"
+    },
+    "rcc8dc": {
+      "category": "property",
+      "description": "States that the subject SpatialObject is spatially disjoint from the object SpatialObject. DE-9IM: FFTFFTTTT",
+      "label": "disconnected"
+    },
+    "rcc8ec": {
+      "category": "property",
+      "description": "States that the subject SpatialObject spatially meets the object SpatialObject. DE-9IM: FFTFTTTTT",
+      "label": "externally connected"
+    },
+    "rcc8eq": {
+      "category": "property",
+      "description": "States that the subject SpatialObject spatially equals the object SpatialObject. DE-9IM: TFFFTFFFT",
+      "label": "equals"
+    },
+    "rcc8ntpp": {
+      "category": "property",
+      "description": "States that the subject SpatialObject is spatially inside the object SpatialObject. DE-9IM: TFFTFFTTT",
+      "label": "non-tangential proper part"
+    },
+    "rcc8ntppi": {
+      "category": "property",
+      "description": "States that the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: TTTFFTFFT",
+      "label": "non-tangential proper part inverse"
+    },
+    "rcc8po": {
+      "category": "property",
+      "description": "States that the subject SpatialObject spatially overlaps the object SpatialObject. DE-9IM: TTTTTTTTT",
+      "label": "partially overlapping"
+    },
+    "rcc8tpp": {
+      "category": "property",
+      "description": "States that the subject SpatialObject is spatially covered by the object SpatialObject. DE-9IM: TFFTTFTTT",
+      "label": "tangential proper part"
+    },
+    "rcc8tppi": {
+      "category": "property",
+      "description": "States that the subject SpatialObject spatially covers the object SpatialObject. DE-9IM: TTTFTTFFT",
+      "label": "tangential proper part inverse"
+    },
+    "sfContains": {
+      "category": "property",
+      "description": "States that the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*",
+      "label": "contains"
+    },
+    "sfCrosses": {
+      "category": "property",
+      "description": "States that the subject SpatialObject spatially crosses the object SpatialObject. DE-9IM: T*T******",
+      "label": "crosses"
+    },
+    "sfIntersects": {
+      "category": "property",
+      "description": "States that the subject SpatialObject is not spatially disjoint from the object SpatialObject. DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T****",
+      "label": "intersects"
+    },
+    "sfOverlaps": {
+      "category": "property",
+      "description": "States that the subject SpatialObject spatially overlaps the object SpatialObject. DE-9IM: T*T***T**",
+      "label": "overlaps"
+    },
+    "sfWithin": {
+      "category": "property",
+      "description": "States that the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***",
+      "label": "within"
+    },
+    "spatialDimension": {
+      "category": "property",
+      "description": "The number of measurements or axes needed to describe the spatial position of this Geometry in a coordinate system.",
+      "label": "spatial dimension"
+    }
+  }
+}

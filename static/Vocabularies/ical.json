@@ -1,0 +1,404 @@
+{
+  "iri": "http://www.w3.org/2002/12/cal/icaltzd#",
+  "description": "The Internet Calendaring and Scheduling Core Object Specification (iCalendar) is a media type which allows users to store and exchange calendaring and scheduling information such as events, to-dos, journal entries, and free/busy information,[1] and together with its associated standards has been a cornerstone of the standardization and interoperability of digital calendars across different vendors.",
+  "label": "Internet Calendaring and Scheduling Core Object Specification (iCalendar)",
+  "prefix": "ical",
+  "items": {
+    "dc11:source": {
+      "category": "property"
+    },
+    "attach": {
+      "category": "property",
+      "description": "The property provides the capability to associate a document object with a calendar component."
+    },
+    "attendee": {
+      "category": "property",
+      "description": "The property defines an \"Attendee\" within a calendar component.",
+      "label": "attendee"
+    },
+    "calAddress": {
+      "category": "property"
+    },
+    "component": {
+      "category": "property"
+    },
+    "daylight": {
+      "category": "property",
+      "label": "DAYLIGHT"
+    },
+    "duration": {
+      "category": "property",
+      "description": "The property specifies a positive duration of time."
+    },
+    "exrule": {
+      "category": "property",
+      "description": "This property defines a rule or repeating pattern for an exception to a recurrence set."
+    },
+    "freebusy": {
+      "category": "property",
+      "description": "The property defines one or more free or busy time intervals."
+    },
+    "geo": {
+      "category": "property",
+      "description": "This property specifies information related to the global position for the activity specified by a calendar component."
+    },
+    "organizer": {
+      "category": "property",
+      "description": "value type: CAL-ADDRESS"
+    },
+    "rrule": {
+      "category": "property",
+      "description": "value type: RECUR"
+    },
+    "standard": {
+      "category": "property",
+      "label": "STANDARD"
+    },
+    "trigger": {
+      "category": "property",
+      "description": "This property specifies when an alarm will trigger."
+    },
+    "tzurl": {
+      "category": "property",
+      "description": "The TZURL provides a means for a VTIMEZONE component to point to a network location that can be used to retrieve an up-to- date version of itself."
+    },
+    "url": {
+      "category": "property",
+      "description": "value type: URI",
+      "label": "see also"
+    },
+    "rdf:value": {
+      "category": "property"
+    },
+    "X-": {
+      "category": "property",
+      "description": "This class of property provides a framework for defining non-standard properties."
+    },
+    "action": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "altrep": {
+      "category": "property",
+      "description": "To specify an alternate text representation for the property value."
+    },
+    "byday": {
+      "category": "property",
+      "label": "BYDAY"
+    },
+    "byhour": {
+      "category": "property",
+      "label": "BYHOUR"
+    },
+    "byminute": {
+      "category": "property",
+      "label": "BYMINUTE"
+    },
+    "bymonth": {
+      "category": "property",
+      "label": "BYMONTH"
+    },
+    "bysecond": {
+      "category": "property",
+      "label": "BYSECOND"
+    },
+    "bysetpos": {
+      "category": "property",
+      "label": "BYSETPOS"
+    },
+    "byweekno": {
+      "category": "property",
+      "label": "BYWEEKNO"
+    },
+    "byyearday": {
+      "category": "property",
+      "label": "BYYEARDAY"
+    },
+    "calscale": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "categories": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "class": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "cn": {
+      "category": "property",
+      "description": "To specify the common name to be associated with the calendar user specified by the property."
+    },
+    "comment": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "completed": {
+      "category": "property",
+      "description": "This property defines the date and time that a to-do was actually completed."
+    },
+    "contact": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "count": {
+      "category": "property",
+      "label": "COUNT"
+    },
+    "created": {
+      "category": "property",
+      "description": "value type: DATE-TIME"
+    },
+    "cutype": {
+      "category": "property",
+      "description": "To specify the type of calendar user specified by the property."
+    },
+    "delegatedFrom": {
+      "category": "property",
+      "description": "To specify the calendar users that have delegated their participation to the calendar user specified by the property."
+    },
+    "delegatedTo": {
+      "category": "property",
+      "description": "To specify the calendar users to whom the calendar user specified by the property has delegated participation."
+    },
+    "description": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "dir": {
+      "category": "property",
+      "description": "To specify reference to a directory entry associated with the calendar user specified by the property."
+    },
+    "dtend": {
+      "category": "property",
+      "description": "This property specifies the date and time that a calendar component ends.",
+      "label": "end"
+    },
+    "dtstamp": {
+      "category": "property",
+      "description": "value type: DATE-TIME"
+    },
+    "dtstart": {
+      "category": "property",
+      "description": "default value type: DATE-TIME",
+      "label": "start"
+    },
+    "due": {
+      "category": "property",
+      "description": "default value type: DATE-TIME"
+    },
+    "encoding": {
+      "category": "property",
+      "description": "To specify an alternate inline encoding for the property value."
+    },
+    "exdate": {
+      "category": "property",
+      "description": "default value type: DATE-TIME"
+    },
+    "fbtype": {
+      "category": "property",
+      "description": "To specify the free or busy time type."
+    },
+    "fmttype": {
+      "category": "property",
+      "description": "To specify the content type of a referenced object."
+    },
+    "freq": {
+      "category": "property",
+      "label": "FREQ"
+    },
+    "interval": {
+      "category": "property",
+      "label": "INTERVAL"
+    },
+    "language": {
+      "category": "property",
+      "description": "To specify the language for text values in a property or property parameter."
+    },
+    "lastModified": {
+      "category": "property",
+      "description": "value type: DATE-TIME"
+    },
+    "location": {
+      "category": "property",
+      "description": "value type: TEXT",
+      "label": "location"
+    },
+    "member": {
+      "category": "property",
+      "description": "To specify the group or list membership of the calendar user specified by the property."
+    },
+    "method": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "partstat": {
+      "category": "property",
+      "description": "To specify the participation status for the calendar user specified by the property."
+    },
+    "percentComplete": {
+      "category": "property",
+      "description": "This property is used by an assignee or delegatee of a to-do to convey the percent completion of a to-do to the Organizer."
+    },
+    "priority": {
+      "category": "property",
+      "description": "value type: INTEGER"
+    },
+    "prodid": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "range": {
+      "category": "property",
+      "description": "To specify the effective range of recurrence instances from the instance specified by the recurrence identifier specified by the property."
+    },
+    "rdate": {
+      "category": "property",
+      "description": "default value type: DATE-TIME"
+    },
+    "recurrenceId": {
+      "category": "property",
+      "description": "default value type: DATE-TIME"
+    },
+    "related": {
+      "category": "property",
+      "description": "To specify the relationship of the alarm trigger with respect to the start or end of the calendar component."
+    },
+    "relatedTo": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "reltype": {
+      "category": "property",
+      "description": "To specify the type of hierarchical relationship associated with the calendar component specified by the property."
+    },
+    "repeat": {
+      "category": "property",
+      "description": "value type: INTEGER"
+    },
+    "requestStatus": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "resources": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "role": {
+      "category": "property",
+      "description": "To specify the participation role for the calendar user specified by the property."
+    },
+    "rsvp": {
+      "category": "property",
+      "description": "To specify whether there is an expectation of a favor of a reply from the calendar user specified by the property value."
+    },
+    "sentBy": {
+      "category": "property",
+      "description": "To specify the calendar user that is acting on behalf of the calendar user specified by the property."
+    },
+    "sequence": {
+      "category": "property",
+      "description": "This property defines the revision sequence number of the calendar component within a sequence of revisions."
+    },
+    "status": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "summary": {
+      "category": "property",
+      "description": "value type: TEXT",
+      "label": "summary"
+    },
+    "transp": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "tzid": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "tzname": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "tzoffsetfrom": {
+      "category": "property",
+      "description": "This property specifies the offset which is in use prior to this time zone observance."
+    },
+    "tzoffsetto": {
+      "category": "property",
+      "description": "value type: UTC-OFFSET"
+    },
+    "uid": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "until": {
+      "category": "property",
+      "label": "UNTIL"
+    },
+    "version": {
+      "category": "property",
+      "description": "value type: TEXT"
+    },
+    "wkst": {
+      "category": "property",
+      "label": "WKST"
+    },
+    "": {
+      "category": "class"
+    },
+    "DomainOf_rrule": {
+      "category": "class"
+    },
+    "List_of_Float": {
+      "category": "class"
+    },
+    "Valarm": {
+      "category": "class",
+      "description": "Provide a grouping of component properties that define an alarm."
+    },
+    "Value_CAL-ADDRESS": {
+      "category": "class"
+    },
+    "Value_DATE": {
+      "category": "class"
+    },
+    "Value_DURATION": {
+      "category": "class"
+    },
+    "Value_PERIOD": {
+      "category": "class"
+    },
+    "Value_RECUR": {
+      "category": "class"
+    },
+    "Vcalendar": {
+      "category": "class",
+      "label": "VCALENDAR"
+    },
+    "Vevent": {
+      "category": "class",
+      "description": "Provide a grouping of component properties that describe an event.",
+      "label": "Event"
+    },
+    "Vfreebusy": {
+      "category": "class",
+      "description": "Provide a grouping of component properties that describe either a request for free/busy time, describe a response to a request for free/busy time or describe a published set of busy time."
+    },
+    "Vjournal": {
+      "category": "class",
+      "description": "Provide a grouping of component properties that describe a journal entry."
+    },
+    "Vtimezone": {
+      "category": "class",
+      "description": "Provide a grouping of component properties that defines a time zone."
+    },
+    "Vtodo": {
+      "category": "class",
+      "description": "Provide a grouping of calendar properties that describe a to-do.",
+      "label": "To-do"
+    }
+  }
+}

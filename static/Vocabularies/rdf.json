@@ -1,0 +1,88 @@
+{
+  "iri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+  "description": "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts.",
+  "label": "The RDF Concepts Vocabulary (RDF)",
+  "prefix": "rdf",
+  "items": {
+    "Alt": {
+      "category": "class",
+      "description": "The class of containers of alternatives.",
+      "label": "Alt"
+    },
+    "Bag": {
+      "category": "class",
+      "description": "The class of unordered containers.",
+      "label": "Bag"
+    },
+    "CompoundLiteral": {
+      "category": "class",
+      "description": "A class representing a compound literal.",
+      "label": "CompoundLiteral"
+    },
+    "List": {
+      "category": "class",
+      "description": "The class of RDF Lists.",
+      "label": "List"
+    },
+    "Property": {
+      "category": "class",
+      "description": "The class of RDF properties.",
+      "label": "Property"
+    },
+    "Seq": {
+      "category": "class",
+      "description": "The class of ordered containers.",
+      "label": "Seq"
+    },
+    "Statement": {
+      "category": "class",
+      "description": "The class of RDF statements.",
+      "label": "Statement"
+    },
+    "type": {
+      "category": "property",
+      "description": "The subject is an instance of a class.",
+      "label": "type"
+    },
+    "direction": {
+      "category": "property",
+      "description": "The base direction component of a CompoundLiteral.",
+      "label": "direction"
+    },
+    "first": {
+      "category": "property",
+      "description": "The first item in the subject RDF list.",
+      "label": "first"
+    },
+    "language": {
+      "category": "property",
+      "description": "The language component of a CompoundLiteral.",
+      "label": "language"
+    },
+    "object": {
+      "category": "property",
+      "description": "The object of the subject RDF statement.",
+      "label": "object"
+    },
+    "predicate": {
+      "category": "property",
+      "description": "The predicate of the subject RDF statement.",
+      "label": "predicate"
+    },
+    "rest": {
+      "category": "property",
+      "description": "The rest of the subject RDF list after the first item.",
+      "label": "rest"
+    },
+    "subject": {
+      "category": "property",
+      "description": "The subject of the subject RDF statement.",
+      "label": "subject"
+    },
+    "value": {
+      "category": "property",
+      "description": "Idiomatic property used for structured values.",
+      "label": "value"
+    }
+  }
+}

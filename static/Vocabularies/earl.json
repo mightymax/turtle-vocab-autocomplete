@@ -1,0 +1,128 @@
+{
+  "iri": "http://www.w3.org/ns/earl#",
+  "description": "Formal schema of the Evaluation and Report Language (EARL) 1.0",
+  "label": "Evaluation and Report Language (EARL) 1.0 Schema",
+  "prefix": "earl",
+  "items": {
+    "Assertion": {
+      "category": "class",
+      "description": "a statement that embodies the results of a test",
+      "label": "Assertion"
+    },
+    "Assertor": {
+      "category": "class",
+      "description": "an entity such as a person, a software tool, an organization, or any other grouping that carries out a test collectively",
+      "label": "Assertor"
+    },
+    "CannotTell": {
+      "category": "class",
+      "description": "the class of outcomes to denote an undetermined outcome",
+      "label": "Undetermined"
+    },
+    "OutcomeValue": {
+      "category": "class",
+      "description": "a discrete value that describes a resulting condition from carrying out the test",
+      "label": "Outcome Value"
+    },
+    "Fail": {
+      "category": "class",
+      "description": "the class of outcomes to denote failing a test",
+      "label": "Fail"
+    },
+    "NotApplicable": {
+      "category": "class",
+      "description": "the class of outcomes to denote the test is not applicable",
+      "label": "Not applicable"
+    },
+    "NotTested": {
+      "category": "class",
+      "description": "the class of outcomes to denote the test has not been carried out",
+      "label": "Not tested"
+    },
+    "Pass": {
+      "category": "class",
+      "description": "the class of outcomes to denote passing a test",
+      "label": "Pass"
+    },
+    "Software": {
+      "category": "class",
+      "description": "any piece of software such as an authoring tool, browser, or evaluation tool",
+      "label": "Software"
+    },
+    "TestCase": {
+      "category": "class",
+      "description": "an atomic test, usually one that is a partial test for a requirement",
+      "label": "Test Case"
+    },
+    "TestCriterion": {
+      "category": "class",
+      "description": "a testable statement, usually one that can be passed or failed",
+      "label": "Test Criterion"
+    },
+    "TestMode": {
+      "category": "class",
+      "description": "describes how a test was carried out",
+      "label": "Test Mode"
+    },
+    "TestRequirement": {
+      "category": "class",
+      "description": "a higher-level requirement that is tested by executing one or more sub-tests",
+      "label": "Test Requirement"
+    },
+    "TestResult": {
+      "category": "class",
+      "description": "the actual result of performing the test",
+      "label": "Test Result"
+    },
+    "TestSubject": {
+      "category": "class",
+      "description": "the class of things that have been tested against some test criterion",
+      "label": "Test Subject"
+    },
+    "assertedBy": {
+      "category": "property",
+      "description": "assertor of an assertion",
+      "label": "Asserted By"
+    },
+    "info": {
+      "category": "property",
+      "description": "additional warnings or error messages in a human-readable form",
+      "label": "Info"
+    },
+    "mainAssertor": {
+      "category": "property",
+      "description": "assertor that is primarily responsible for performing the test",
+      "label": "Main Assertor"
+    },
+    "mode": {
+      "category": "property",
+      "description": "mode in which the test was performed",
+      "label": "Mode"
+    },
+    "outcome": {
+      "category": "property",
+      "description": "outcome of performing the test",
+      "label": "Outcome"
+    },
+    "pointer": {
+      "category": "property",
+      "description": "location within a test subject that are most relevant to a test result",
+      "label": "Pointer"
+    },
+    "result": {
+      "category": "property",
+      "description": "result of an assertion",
+      "label": "Result"
+    },
+    "subject": {
+      "category": "property",
+      "description": "test subject of an assertion",
+      "label": "Subject"
+    },
+    "test": {
+      "category": "property",
+      "description": "test criterion of an assertion",
+      "label": "Test"
+    }
+  }
+}

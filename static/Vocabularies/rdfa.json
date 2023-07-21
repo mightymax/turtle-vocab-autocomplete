@@ -1,0 +1,48 @@
+{
+  "iri": "http://www.w3.org/ns/rdfa#",
+  "description": "This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFa 1.1 processing behavior.",
+  "label": "RDFa Vocabulary for Term and Prefix Assignment, and for Processor Graph Reporting",
+  "prefix": "rdfa",
+  "items": {
+    "PGClass": {
+      "category": "class",
+      "description": "is the top level class of the hierarchy"
+    },
+    "Pattern": {
+      "category": "class",
+      "description": "Class to identify an (RDF) resource whose properties are to be copied to another resource"
+    },
+    "PrefixOrTermMapping": {
+      "category": "class",
+      "description": "is the top level class for prefix or term mappings"
+    },
+    "context": {
+      "category": "property",
+      "description": "provides extra context for the error, eg, http response, an XPointer/XPath information, or simply the URI that created the error"
+    },
+    "copy": {
+      "category": "property",
+      "description": "identifies the resource (i.e., pattern) whose properties and values should be copied to replace the current triple (retaining the subject of the triple)."
+    },
+    "prefix": {
+      "category": "property",
+      "description": "defines a prefix mapping for a URI; the value is supposed to be a NMTOKEN"
+    },
+    "term": {
+      "category": "property",
+      "description": "defines a term mapping for a URI; the value is supposed to be a NMTOKEN"
+    },
+    "uri": {
+      "category": "property",
+      "description": "defines the URI for either a prefix or a term mapping; the value is supposed to be an absolute URI"
+    },
+    "usesVocabulary": {
+      "category": "property",
+      "description": "provides a relationship between the host document and a vocabulary defined using the @vocab facility of RDFa1.1"
+    },
+    "vocabulary": {
+      "category": "property",
+      "description": "defines an absolute URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string 'true' or 'True'."
+    }
+  }
+}

@@ -1,0 +1,711 @@
+{
+  "iri": "http://www.w3.org/2006/vcard/ns#",
+  "description": "Ontology for vCard based on RFC6350",
+  "label": "Ontology for vCard",
+  "prefix": "vcard",
+  "items": {
+    "Acquaintance": {
+      "category": "class",
+      "label": "Acquaintance"
+    },
+    "RelatedType": {
+      "category": "class",
+      "description": "Used for relation type codes. The URI of the relation type code must be used as the value for the Relation Type.",
+      "label": "Relation Type"
+    },
+    "Address": {
+      "category": "class",
+      "description": "To specify the components of the delivery address for the  object",
+      "label": "Address"
+    },
+    "": {
+      "category": "class"
+    },
+    "Agent": {
+      "category": "class",
+      "label": "Agent"
+    },
+    "BBS": {
+      "category": "class",
+      "description": "This class is deprecated",
+      "label": "BBS"
+    },
+    "TelephoneType": {
+      "category": "class",
+      "description": "Used for telephone type codes. The URI of the telephone type code must be used as the value for the Telephone Type.",
+      "label": "Phone"
+    },
+    "Car": {
+      "category": "class",
+      "description": "This class is deprecated",
+      "label": "Car"
+    },
+    "Cell": {
+      "category": "class",
+      "description": "Also called mobile telephone",
+      "label": "Cell"
+    },
+    "Child": {
+      "category": "class",
+      "label": "Child"
+    },
+    "Colleague": {
+      "category": "class",
+      "label": "Colleague"
+    },
+    "Contact": {
+      "category": "class",
+      "label": "Contact"
+    },
+    "Coresident": {
+      "category": "class",
+      "label": "Coresident"
+    },
+    "Coworker": {
+      "category": "class",
+      "label": "Coworker"
+    },
+    "Crush": {
+      "category": "class",
+      "label": "Crush"
+    },
+    "Date": {
+      "category": "class",
+      "label": "Date"
+    },
+    "Dom": {
+      "category": "class",
+      "description": "This class is deprecated",
+      "label": "Dom"
+    },
+    "Type": {
+      "category": "class",
+      "description": "Used for type codes. The URI of the type code must be used as the value for Type.",
+      "label": "Type"
+    },
+    "Email": {
+      "category": "class",
+      "description": "To specify the electronic mail address for communication with the object the vCard represents. Use the hasEmail object property.",
+      "label": "Email"
+    },
+    "Emergency": {
+      "category": "class",
+      "label": "Emergency"
+    },
+    "Fax": {
+      "category": "class",
+      "label": "Fax"
+    },
+    "Female": {
+      "category": "class",
+      "label": "Female"
+    },
+    "Gender": {
+      "category": "class",
+      "description": "Used for gender codes. The URI of the gender code must be used as the value for Gender.",
+      "label": "Gender"
+    },
+    "Friend": {
+      "category": "class",
+      "label": "Friend"
+    },
+    "Group": {
+      "category": "class",
+      "description": "Object representing a group of persons or entities.  A group object will usually contain hasMember properties to specify the members of the group.",
+      "label": "Group"
+    },
+    "Kind": {
+      "category": "class",
+      "description": "The parent class for all objects",
+      "label": "Kind"
+    },
+    "Individual": {
+      "category": "class",
+      "description": "An object representing a single person or entity",
+      "label": "Individual"
+    },
+    "Location": {
+      "category": "class",
+      "description": "An object representing a named geographical place",
+      "label": "Location"
+    },
+    "Organization": {
+      "category": "class",
+      "description": "An object representing an organization.  An organization is a single entity, and might represent a business or government, a department or division within a business or government, a club, an association, or the like.",
+      "label": "Organization"
+    },
+    "Home": {
+      "category": "class",
+      "description": "This implies that the property is related to an individual's personal life",
+      "label": "Home"
+    },
+    "ISDN": {
+      "category": "class",
+      "description": "This class is deprecated",
+      "label": "ISDN"
+    },
+    "Internet": {
+      "category": "class",
+      "description": "This class is deprecated",
+      "label": "Internet"
+    },
+    "Intl": {
+      "category": "class",
+      "description": "This class is deprecated",
+      "label": "Intl"
+    },
+    "Kin": {
+      "category": "class",
+      "label": "Kin"
+    },
+    "VCard": {
+      "category": "class",
+      "description": "The vCard class is  equivalent to the new Kind class, which is the parent for the four explicit types of vCards (Individual, Organization, Location, Group)",
+      "label": "VCard"
+    },
+    "Label": {
+      "category": "class",
+      "description": "This class is deprecated",
+      "label": "Label"
+    },
+    "Male": {
+      "category": "class",
+      "label": "Male"
+    },
+    "Me": {
+      "category": "class",
+      "label": "Me"
+    },
+    "Met": {
+      "category": "class",
+      "label": "Met"
+    },
+    "Modem": {
+      "category": "class",
+      "description": "This class is deprecated",
+      "label": "Modem"
+    },
+    "Msg": {
+      "category": "class",
+      "description": "This class is deprecated",
+      "label": "Msg"
+    },
+    "Muse": {
+      "category": "class",
+      "label": "Muse"
+    },
+    "Name": {
+      "category": "class",
+      "description": "To specify the components of the name of the object",
+      "label": "Name"
+    },
+    "Neighbor": {
+      "category": "class",
+      "label": "Neighbor"
+    },
+    "None": {
+      "category": "class",
+      "label": "None"
+    },
+    "Other": {
+      "category": "class",
+      "label": "Other"
+    },
+    "PCS": {
+      "category": "class",
+      "description": "This class is deprecated",
+      "label": "PCS"
+    },
+    "Pager": {
+      "category": "class",
+      "label": "Pager"
+    },
+    "Parcel": {
+      "category": "class",
+      "description": "This class is deprecated",
+      "label": "Parcel"
+    },
+    "Parent": {
+      "category": "class",
+      "label": "Parent"
+    },
+    "Postal": {
+      "category": "class",
+      "description": "This class is deprecated",
+      "label": "Postal"
+    },
+    "Pref": {
+      "category": "class",
+      "description": "This class is deprecated",
+      "label": "Pref"
+    },
+    "Sibling": {
+      "category": "class",
+      "label": "Sibling"
+    },
+    "Spouse": {
+      "category": "class",
+      "label": "Spouse"
+    },
+    "Sweetheart": {
+      "category": "class",
+      "label": "Sweetheart"
+    },
+    "Tel": {
+      "category": "class",
+      "description": "This class is deprecated. Use the hasTelephone object property.",
+      "label": "Tel"
+    },
+    "Text": {
+      "category": "class",
+      "description": "Also called sms telephone",
+      "label": "Text"
+    },
+    "TextPhone": {
+      "category": "class",
+      "label": "Text phone"
+    },
+    "Unknown": {
+      "category": "class",
+      "label": "Unknown"
+    },
+    "Video": {
+      "category": "class",
+      "label": "Video"
+    },
+    "Voice": {
+      "category": "class",
+      "label": "Voice"
+    },
+    "Work": {
+      "category": "class",
+      "description": "This implies that the property is related to an individual's work place",
+      "label": "Work"
+    },
+    "X400": {
+      "category": "class",
+      "description": "This class is deprecated",
+      "label": "X400"
+    },
+    "additional-name": {
+      "category": "property",
+      "description": "The additional name associated with the object",
+      "label": "additional name"
+    },
+    "anniversary": {
+      "category": "property",
+      "description": "The date of marriage, or equivalent, of the object",
+      "label": "anniversary"
+    },
+    "bday": {
+      "category": "property",
+      "description": "To specify the birth date of the object",
+      "label": "birth date"
+    },
+    "category": {
+      "category": "property",
+      "description": "The category information about the object, also known as tags",
+      "label": "category"
+    },
+    "class": {
+      "category": "property",
+      "description": "This data property has been deprecated",
+      "label": "class"
+    },
+    "country-name": {
+      "category": "property",
+      "description": "The country name associated with the address of the object",
+      "label": "country name"
+    },
+    "extended-address": {
+      "category": "property",
+      "description": "This data property has been deprecated",
+      "label": "extended address"
+    },
+    "family-name": {
+      "category": "property",
+      "description": "The family name associated with the object",
+      "label": "family name"
+    },
+    "fn": {
+      "category": "property",
+      "description": "The formatted text corresponding to the name of the object",
+      "label": "formatted name"
+    },
+    "given-name": {
+      "category": "property",
+      "description": "The given name associated with the object",
+      "label": "given name"
+    },
+    "nickname": {
+      "category": "property",
+      "description": "The nick name associated with the object",
+      "label": "nickname"
+    },
+    "honorific-prefix": {
+      "category": "property",
+      "description": "The honorific prefix of the name associated with the object",
+      "label": "honorific prefix"
+    },
+    "honorific-suffix": {
+      "category": "property",
+      "description": "The honorific suffix of the name associated with the object",
+      "label": "honorific suffix"
+    },
+    "label": {
+      "category": "property",
+      "description": "This data property has been deprecated",
+      "label": "label"
+    },
+    "language": {
+      "category": "property",
+      "description": "To specify the language that may be used for contacting the object. May also be used as a property parameter.",
+      "label": "language"
+    },
+    "latitude": {
+      "category": "property",
+      "description": "This data property has been deprecated. See hasGeo",
+      "label": "latitude"
+    },
+    "locality": {
+      "category": "property",
+      "description": "The locality (e.g. city or town) associated with the address of the object",
+      "label": "locality"
+    },
+    "longitude": {
+      "category": "property",
+      "description": "This data property has been deprecated. See hasGeo",
+      "label": "longitude"
+    },
+    "mailer": {
+      "category": "property",
+      "description": "This data property has been deprecated",
+      "label": "mailer"
+    },
+    "note": {
+      "category": "property",
+      "description": "A note associated with the object",
+      "label": "note"
+    },
+    "organization-name": {
+      "category": "property",
+      "description": "To specify the organizational name associated with the object",
+      "label": "organization name"
+    },
+    "organization-unit": {
+      "category": "property",
+      "description": "To specify the organizational unit name associated with the object",
+      "label": "organizational unit name"
+    },
+    "post-office-box": {
+      "category": "property",
+      "description": "This data property has been deprecated",
+      "label": "post office box"
+    },
+    "postal-code": {
+      "category": "property",
+      "description": "The postal code associated with the address of the object",
+      "label": "postal code"
+    },
+    "prodid": {
+      "category": "property",
+      "description": "To specify the identifier for the product that created the object",
+      "label": "product id"
+    },
+    "region": {
+      "category": "property",
+      "description": "The region (e.g. state or province) associated with the address of the object",
+      "label": "region"
+    },
+    "rev": {
+      "category": "property",
+      "description": "To specify revision information about the object",
+      "label": "revision"
+    },
+    "role": {
+      "category": "property",
+      "description": "To specify the function or part played in a particular situation by the object",
+      "label": "role"
+    },
+    "sort-string": {
+      "category": "property",
+      "description": "To specify the string to be used for national-language-specific sorting. Used as a property parameter only.",
+      "label": "sort as"
+    },
+    "street-address": {
+      "category": "property",
+      "description": "The street address associated with the address of the object",
+      "label": "street address"
+    },
+    "title": {
+      "category": "property",
+      "description": "To specify the position or job of the object",
+      "label": "title"
+    },
+    "tz": {
+      "category": "property",
+      "description": "To indicate time zone information that is specific to the object. May also be used as a property parameter.",
+      "label": "time zone"
+    },
+    "value": {
+      "category": "property",
+      "description": "Used to indicate the literal value of a data property that requires property parameters",
+      "label": "value"
+    },
+    "adr": {
+      "category": "property",
+      "description": "This object property has been mapped",
+      "label": "address"
+    },
+    "hasAddress": {
+      "category": "property",
+      "description": "To specify the components of the delivery address for the object",
+      "label": "has address"
+    },
+    "agent": {
+      "category": "property",
+      "description": "This object property has been deprecated",
+      "label": "agent"
+    },
+    "email": {
+      "category": "property",
+      "description": "This object property has been mapped",
+      "label": "email"
+    },
+    "hasEmail": {
+      "category": "property",
+      "description": "To specify the electronic mail address for communication with the object",
+      "label": "has email"
+    },
+    "geo": {
+      "category": "property",
+      "description": "This object property has been mapped",
+      "label": "geo"
+    },
+    "hasGeo": {
+      "category": "property",
+      "description": "To specify information related to the global positioning of the object. May also be used as a property parameter.",
+      "label": "has geo"
+    },
+    "hasAdditionalName": {
+      "category": "property",
+      "description": "Used to support property parameters for the additional name data property",
+      "label": "has additional name"
+    },
+    "hasCalendarBusy": {
+      "category": "property",
+      "description": "To specify the busy time associated with the object. (Was called FBURL in RFC6350)",
+      "label": "has calendar busy"
+    },
+    "hasCalendarLink": {
+      "category": "property",
+      "description": "To specify the calendar associated with the object. (Was called CALURI in RFC6350)",
+      "label": "has calendar link"
+    },
+    "hasCalendarRequest": {
+      "category": "property",
+      "description": "To specify the calendar user address to which a scheduling request be sent for the object. (Was called CALADRURI in RFC6350)",
+      "label": "has calendar request"
+    },
+    "hasCategory": {
+      "category": "property",
+      "description": "Used to support property parameters for the category data property",
+      "label": "has category"
+    },
+    "hasCountryName": {
+      "category": "property",
+      "description": "Used to support property parameters for the country name data property",
+      "label": "has country name"
+    },
+    "hasFN": {
+      "category": "property",
+      "description": "Used to support property parameters for the formatted name data property",
+      "label": "has formatted name"
+    },
+    "hasFamilyName": {
+      "category": "property",
+      "description": "Used to support property parameters for the family name data property",
+      "label": "has family name"
+    },
+    "hasGender": {
+      "category": "property",
+      "description": "To specify  the sex or gender identity of the object. URIs are recommended to enable interoperable sex and gender codes to be used.",
+      "label": "has gender"
+    },
+    "hasGivenName": {
+      "category": "property",
+      "description": "Used to support property parameters for the given name data property",
+      "label": "has given name"
+    },
+    "hasHonorificPrefix": {
+      "category": "property",
+      "description": "Used to support property parameters for the honorific prefix data property",
+      "label": "has honorific prefix"
+    },
+    "hasHonorificSuffix": {
+      "category": "property",
+      "description": "Used to support property parameters for the honorific suffix data property",
+      "label": "has honorific suffix"
+    },
+    "hasInstantMessage": {
+      "category": "property",
+      "description": "To specify the instant messaging and presence protocol communications with the object. (Was called IMPP in RFC6350)",
+      "label": "has messaging"
+    },
+    "hasKey": {
+      "category": "property",
+      "description": "To specify a public key or authentication certificate associated with the object",
+      "label": "has key"
+    },
+    "key": {
+      "category": "property",
+      "description": "This object property has been mapped",
+      "label": "key"
+    },
+    "hasLanguage": {
+      "category": "property",
+      "description": "Used to support property parameters for the language data property",
+      "label": "has language"
+    },
+    "hasLocality": {
+      "category": "property",
+      "description": "Used to support property parameters for the locality data property",
+      "label": "has locality"
+    },
+    "hasLogo": {
+      "category": "property",
+      "description": "To specify a graphic image of a logo associated with the object",
+      "label": "has logo"
+    },
+    "logo": {
+      "category": "property",
+      "description": "This object property has been mapped",
+      "label": "logo"
+    },
+    "hasMember": {
+      "category": "property",
+      "description": "To include a member in the group this object represents. (This property can only be used by Group individuals)",
+      "label": "has member"
+    },
+    "hasName": {
+      "category": "property",
+      "description": "To specify the components of the name of the object",
+      "label": "has name"
+    },
+    "n": {
+      "category": "property",
+      "description": "This object property has been mapped",
+      "label": "name"
+    },
+    "hasNickname": {
+      "category": "property",
+      "description": "Used to support property parameters for the nickname data property",
+      "label": "has nickname"
+    },
+    "hasNote": {
+      "category": "property",
+      "description": "Used to support property parameters for the note data property",
+      "label": "has note"
+    },
+    "hasOrganizationName": {
+      "category": "property",
+      "description": "Used to support property parameters for the organization name data property",
+      "label": "has organization name"
+    },
+    "hasOrganizationUnit": {
+      "category": "property",
+      "description": "Used to support property parameters for the organization unit name data property",
+      "label": "has organization unit name"
+    },
+    "hasPhoto": {
+      "category": "property",
+      "description": "To specify an image or photograph information that annotates some aspect of the object",
+      "label": "has photo"
+    },
+    "photo": {
+      "category": "property",
+      "description": "This object property has been mapped",
+      "label": "photo"
+    },
+    "hasPostalCode": {
+      "category": "property",
+      "description": "Used to support property parameters for the postal code data property",
+      "label": "has postal code"
+    },
+    "hasRegion": {
+      "category": "property",
+      "description": "Used to support property parameters for the region data property",
+      "label": "has region"
+    },
+    "hasRelated": {
+      "category": "property",
+      "description": "To specify a relationship between another entity and the entity represented by this object",
+      "label": "has related"
+    },
+    "hasRole": {
+      "category": "property",
+      "description": "Used to support property parameters for the role data property",
+      "label": "has role"
+    },
+    "hasSound": {
+      "category": "property",
+      "description": "To specify a digital sound content information that annotates some aspect of the object",
+      "label": "has sound"
+    },
+    "sound": {
+      "category": "property",
+      "description": "This object property has been mapped",
+      "label": "sound"
+    },
+    "hasSource": {
+      "category": "property",
+      "description": "To identify the source of directory information of the object",
+      "label": "has source"
+    },
+    "hasStreetAddress": {
+      "category": "property",
+      "description": "Used to support property parameters for the street address data property",
+      "label": "has street address"
+    },
+    "hasTelephone": {
+      "category": "property",
+      "description": "To specify the telephone number for telephony communication with the object",
+      "label": "has telephone"
+    },
+    "tel": {
+      "category": "property",
+      "description": "This object property has been mapped",
+      "label": "telephone"
+    },
+    "hasTitle": {
+      "category": "property",
+      "description": "Used to support property parameters for the title data property",
+      "label": "has title"
+    },
+    "hasUID": {
+      "category": "property",
+      "description": "To specify a value that represents a globally unique identifier corresponding to the object",
+      "label": "has uid"
+    },
+    "hasURL": {
+      "category": "property",
+      "description": "To specify a uniform resource locator associated with the object",
+      "label": "has url"
+    },
+    "url": {
+      "category": "property",
+      "description": "This object property has been mapped",
+      "label": "url"
+    },
+    "hasValue": {
+      "category": "property",
+      "description": "Used to indicate the resource value of an object property that requires property parameters",
+      "label": "has value"
+    },
+    "org": {
+      "category": "property",
+      "description": "This object property has been mapped. Use the organization-name data property.",
+      "label": "organization"
+    }
+  }
+}

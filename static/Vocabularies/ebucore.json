@@ -1,0 +1,5014 @@
+{
+  "iri": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
+  "description": "Guidelines: for the purpose of flexibility and interoperability with a wider range of implementations, some properties purposefully do not have a range and accept either a resource or a literal.  When a resource is used, it is recommended to reuse objects defined in the model (e.g. pair hasEvent/Event or hasRole/Role). Example 1: x hasRole 'actor'. Example 2: x hasRole _:Role_1 (a reference to the Concept identifier from a SKOS Role vocabulary defined in the ontology).",
+  "label": "EBUCore - the Dublin Core for media",
+  "prefix": "ebucore",
+  "items": {
+    "dc11:Agent": {
+      "category": "class",
+      "description": "A resource that acts or has the power to act.",
+      "label": "Agent"
+    },
+    "Asset": {
+      "category": "class",
+      "description": "The Class \"Asset\" is an object to which an identifier will be associated at commissioning. It will serve as a central reference point to manage rights associated to EditorialObjects, Resources, MediaResources or Essences, and PublicationEvents (distribution and exploitation conditions).",
+      "label": "Asset"
+    },
+    "MediaResource": {
+      "category": "class",
+      "description": "The use of MediaResource is reserved to audiovisual content. In a production process, several MediaResources can be edited and assembled to realsie an Essence ready for distribution (see IMF package and OPL)",
+      "label": "Media Resource"
+    },
+    "PublicationEvent": {
+      "category": "class",
+      "description": "To describe any manifestation of a media resource on any media (live, on demand, catch-up TV, etc.) and the appropriate PublciationChannel.",
+      "label": "Publication Event"
+    },
+    "BusinessObject": {
+      "category": "class",
+      "description": "An image, a document, an annotation (descriptive textual metadata or audio/video tag), a tag (time related in audiovisual media resources), or an audiovisual media resource (optionally composed of one or more fragment / part and / or audio, video data tracks). Other types of BusinessObjects may be defined as subclasses.",
+      "label": "Business Object"
+    },
+    "": {
+      "category": "property",
+      "description": "The main subject of interest.",
+      "label": "Primary topic"
+    },
+    "Contact": {
+      "category": "class",
+      "description": "A physical person.",
+      "label": "Contact"
+    },
+    "AccessConditions": {
+      "category": "class",
+      "description": "The conditions under which content can be accessed.",
+      "label": "Access conditions"
+    },
+    "Rights": {
+      "category": "class",
+      "description": "To provide information on the rights, including intellectual property, related to a BusinessObject or Resource.",
+      "label": "Rights"
+    },
+    "Action": {
+      "category": "class",
+      "description": "A class to log Actions.",
+      "label": "Action"
+    },
+    "Action_Type": {
+      "category": "class",
+      "description": "To define a type of Action.",
+      "label": "Action type"
+    },
+    "ActiveFormatDescriptorCode": {
+      "category": "class",
+      "description": "To define an active format code.",
+      "label": "Active format descriptor code"
+    },
+    "Format": {
+      "category": "class",
+      "description": "The format provides technical information on the format of a Resource. A BusinessObject can be instantiated in a variety of Resources each in a particular Format. Other specific data formats may be defined as subclasses of format.",
+      "label": "Format"
+    },
+    "Affiliation": {
+      "category": "class",
+      "description": "An Organisation to which a Contact is affiliated (with period of validity).",
+      "label": "Affiliation"
+    },
+    "Organisation": {
+      "category": "class",
+      "description": "An organisation (business, corporation, federation, etc.) or moral agent (government body).",
+      "label": "Organisation"
+    },
+    "Agent": {
+      "category": "class",
+      "description": "A person / contact or organisation.",
+      "label": "Agent"
+    },
+    "foaf:Agent": {
+      "category": "class",
+      "description": "A person or Organisation.",
+      "label": "Agent"
+    },
+    "AncillaryData": {
+      "category": "class",
+      "description": "Any ancillary data provided with the content other than captioning and subtitling.",
+      "label": "Ancillary data"
+    },
+    "DataTrack": {
+      "category": "class",
+      "description": "Ancillary data track e.g. Â¨captioning\" or \"subtitling\" in addition to video and audio tracks.",
+      "label": "Data track"
+    },
+    "AncillaryDataFormat": {
+      "category": "class",
+      "description": "To define the format of AncillaryData such as legacy data used to be carried in vertical blanking intervals. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.",
+      "label": "Ancillary data format"
+    },
+    "DataFormat": {
+      "category": "class",
+      "description": "To provide addtional technical information on the characteristics of data streams in a MediaResource including but not limited to AncillaryData, Subtilting and Captioning. Additional specific data format may be defined as subclasses of DataFormat.",
+      "label": "Data format"
+    },
+    "Animal": {
+      "category": "class",
+      "description": "To identify an animal.",
+      "label": "Animal"
+    },
+    "AnimalBreedCode": {
+      "category": "class",
+      "description": "To provide a breed code for an animal..",
+      "label": "Animal breed code"
+    },
+    "AnimalColourCode": {
+      "category": "class",
+      "description": "To provide a colour code for an animal..",
+      "label": "Animal colour code"
+    },
+    "Annotation": {
+      "category": "class",
+      "description": "A class used to annotate Assets.",
+      "label": "Annotation"
+    },
+    "Annotation_Type": {
+      "category": "class",
+      "description": "To define a type of Annotation.",
+      "label": "Annotation type"
+    },
+    "Artefact": {
+      "category": "class",
+      "description": "To identify and describe artefacts used in a production (on and behind the stage).",
+      "label": "Artefact"
+    },
+    "Artefact_Type": {
+      "category": "class",
+      "description": "To define a type of artefact.",
+      "label": "Artefact type"
+    },
+    "Asset_Type": {
+      "category": "class",
+      "description": "To define a type of asset.",
+      "label": "Asset type"
+    },
+    "Atmosphere": {
+      "category": "class",
+      "description": "To describe a feeling summarising the atmosphere.",
+      "label": "Atmosphere"
+    },
+    "Type": {
+      "category": "class",
+      "description": "An expression of type in textual form or as a term from a classification scheme.",
+      "label": "Type"
+    },
+    "AudienceLevel": {
+      "category": "class",
+      "description": "The target audience (target region, target audience category but also parental guidance recommendation) for which the media resource is intended.",
+      "label": "Target audience"
+    },
+    "dc11:contributor": {
+      "category": "property",
+      "description": "An Agent who has participated in any phase of management of an Asset.",
+      "label": "Contributor"
+    },
+    "Rating": {
+      "category": "class",
+      "description": "This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.",
+      "label": "Rating"
+    },
+    "dc11:creator": {
+      "category": "property",
+      "description": "To identify the creator of an Asset.",
+      "label": "Creator"
+    },
+    "AudienceRating": {
+      "category": "class",
+      "description": "The audience by which the Resource can be seen according to ratings like MPAA  (http://en.wikipedia.org/wiki/Motion_picture_rating_system) or other organisational / national / local standards.",
+      "label": "Audience rating"
+    },
+    "dc11:date": {
+      "category": "property",
+      "description": "A date associated with an Asset.",
+      "label": "Date"
+    },
+    "AudienceScoreRecordingTechnique": {
+      "category": "class",
+      "description": "To define the technique use to measure an audience score.",
+      "label": "Audience score recording technique"
+    },
+    "dc11:description": {
+      "category": "property",
+      "description": "A description of an Asset.",
+      "label": "Description"
+    },
+    "AudioChannelFunction": {
+      "category": "class",
+      "description": "To define the function of an AudioChannel.",
+      "label": "Audio channel function"
+    },
+    "dc11:format": {
+      "category": "property",
+      "description": "Information about the Format of a Resource.",
+      "label": "Format"
+    },
+    "AudioChannelPurpose": {
+      "category": "class",
+      "description": "To define the purpose of an AudioChannel.",
+      "label": "Audio channel purpose"
+    },
+    "dc11:identifier": {
+      "category": "property",
+      "description": "To provide a simple not strongly structured identifier.",
+      "label": "Identifier"
+    },
+    "AudioCodec": {
+      "category": "class",
+      "description": "To provide information about an audio codec.",
+      "label": "Audio codec"
+    },
+    "dc11:language": {
+      "category": "property",
+      "label": "To define languages associated with an Asset."
+    },
+    "Codec": {
+      "category": "class",
+      "description": "To provide information on a codec.",
+      "label": "Codec"
+    },
+    "dc11:publisher": {
+      "category": "property",
+      "description": "An Agent involved in the distribution of content.",
+      "label": "Publisher"
+    },
+    "AudioContent": {
+      "category": "class",
+      "description": "An audioContent defines one component of a programme (e.g. background music), its association with an audioGroup (e.g. a 2.0 audioPackFormat of audioChannelFormats for stereo reproduction), its association with an audioStreamFormat, and its set of loudness parameters.",
+      "label": "Audio content"
+    },
+    "dc11:rights": {
+      "category": "property",
+      "description": "Rights information related to an Asset, aPublicationEvent, a BusinessObject or a resource.",
+      "label": "Rights"
+    },
+    "Programme": {
+      "category": "class",
+      "description": "An EditorialObject corresponding to a MediaResource ready for publication.",
+      "label": "Programme"
+    },
+    "dc11:source": {
+      "category": "property",
+      "description": "To identify a Resource as the source of another Resource.",
+      "label": "Source"
+    },
+    "AudioContent_Type": {
+      "category": "class",
+      "description": "to define a type of AudioContent.",
+      "label": "Audio content type"
+    },
+    "dc11:subject": {
+      "category": "property",
+      "description": "To associate a Subject or topic addressed by a BusinessObject / Resource.",
+      "label": "Subject"
+    },
+    "AudioDescription": {
+      "category": "class",
+      "description": "A Track containing audio description.",
+      "label": "Audio description"
+    },
+    "dc11:title": {
+      "category": "property",
+      "description": "The title by which a BusinessObject is known.",
+      "label": "Title"
+    },
+    "AudioTrack": {
+      "category": "class",
+      "description": "An audioTrack is the basic audio data container of a medium. Attribute is an unambiguous reference to this container in a given medium.",
+      "label": "Audio track"
+    },
+    "dc11:type": {
+      "category": "property",
+      "description": "A concept associated with an Asset.",
+      "label": "Type"
+    },
+    "AudioEncodingFormat": {
+      "category": "class",
+      "description": "The encoding format for the audio.",
+      "label": "Audio encoding format"
+    },
+    "dcterms:alternative": {
+      "category": "property",
+      "description": "An alternative to the title.",
+      "label": "Alternative title"
+    },
+    "EncodingFormat": {
+      "category": "class",
+      "description": "To provide a definition of the encoding format for audio and video. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme e.g. http://www.ebu.ch/metadata/ontologies/skos/ebu_AudioCompressionCodeCS.rdf or http://www.ebu.ch/metadata/ontologies/skos/ebu_VideoCompressionCodeCS.rdf.",
+      "label": "Encoding"
+    },
+    "dcterms:contributor": {
+      "category": "property",
+      "description": "In the context of EBUCore, reserved for the annotation of RDF properties.",
+      "label": "Contributor"
+    },
+    "AudioFormat": {
+      "category": "class",
+      "description": "To define an AudioFormat.",
+      "label": "Audio format"
+    },
+    "dcterms:title": {
+      "category": "property",
+      "description": "In the context of EBUCore, reserved for the annotation of RDF properties.",
+      "label": "Title"
+    },
+    "AudioObject": {
+      "category": "class",
+      "description": "To define an audio object in reference to the Audio Definition Model (ADM)",
+      "label": "Audio object"
+    },
+    "AudioProgramme": {
+      "category": "class",
+      "description": "A set of one or more audioContent that derive from the same material, i.e. an audioMultiplex, and the definition of its multiplexed audioContents (e.g. foreground and commentary, background music).",
+      "label": "Audio programme"
+    },
+    "AudioProgramme_Type": {
+      "category": "class",
+      "description": "to define a type of AudioProgramme.",
+      "label": "Audio programme type"
+    },
+    "AudioStream": {
+      "category": "class",
+      "description": "An audioStreamFormat describes a decodable signal - PCM signal or a Dolby E stream for example. It is composed of one or more AudioTracks.",
+      "label": "Audio stream"
+    },
+    "Stream": {
+      "category": "class",
+      "description": "A continuous stream of bits.",
+      "label": "Stream"
+    },
+    "Track": {
+      "category": "class",
+      "description": "Audiovisual content can be composed of audio, video and data Tracks (including captioning and subtitling).",
+      "label": "Track"
+    },
+    "DID": {
+      "category": "property",
+      "description": "The Data Identifier word (along with the SDID, if used), indicates the type of ancillary data that the packet corresponds to.",
+      "label": "DID"
+    },
+    "AudioTrackPurpose": {
+      "category": "class",
+      "description": "To describe the purpose of an AudioTrack e.g. dubbing.",
+      "label": "Audio track purpose"
+    },
+    "SDID": {
+      "category": "property",
+      "description": "Secondary data identification word for ancillary data. Send mode identifier. An identifier which indicates the transmission timing for closed caption data.",
+      "label": "SDID"
+    },
+    "Award": {
+      "category": "class",
+      "description": "To describe an Award and associated information.",
+      "label": "Award"
+    },
+    "abrigedTitle": {
+      "category": "property",
+      "description": "An abridged title.",
+      "label": "Abridged title"
+    },
+    "Award_Type": {
+      "category": "class",
+      "description": "To define a type of Award.",
+      "label": "Award type"
+    },
+    "alternativeTitle": {
+      "category": "property",
+      "description": "To provide an alternative title.",
+      "label": "Alternative title."
+    },
+    "BMContent": {
+      "category": "class",
+      "description": "The FIMS BMContent.",
+      "label": "BMContent"
+    },
+    "abstract": {
+      "category": "property",
+      "description": "To provide an abstract.",
+      "label": "Abstract"
+    },
+    "EditorialObject": {
+      "category": "class",
+      "description": "In the audiovisual domain, the Class EditorialObject transforms a commissioned concept into an editorial definition of a MediaResource before fabrication (in the Production Domain) and Distribution (in the Distribution Domain). An EditorialObject is a set of descriptive metadata summarising e.g. editing decisions. An EditorialObject can also be a part of an EditorialObject, which is defined by its start time and duration. An EditorialObject can also be a group of EditorialObjects. For example a series composed of episodes is defined as an EditorialObject.",
+      "label": "Editorial Object"
+    },
+    "description": {
+      "category": "property",
+      "description": "This can be specialised by using sub-properties like defined in http://www.ebu.ch/metadata/cs/web/ebu_DescriptionTypeCodeCS_p.xml.htm implemented as examples as e.g. 'summary' or 'script'.",
+      "label": "Description"
+    },
+    "BMEssence": {
+      "category": "class",
+      "description": "The FIMS Essence",
+      "label": "BMEssence"
+    },
+    "actionDescription": {
+      "category": "property",
+      "description": "The description of an Action.",
+      "label": "Action description"
+    },
+    "Essence": {
+      "category": "class",
+      "description": "Essence is content ready for distribution. Essence can become a MediaResource in further production processes.",
+      "label": "Essence"
+    },
+    "actionId": {
+      "category": "property",
+      "description": "An identifier attributed to an Action.",
+      "label": "Action identifier"
+    },
+    "BMTemplate": {
+      "category": "class",
+      "description": "A template describe as a BMEssence.",
+      "label": "BMTemplate"
+    },
+    "actionName": {
+      "category": "property",
+      "description": "The name of an Action.",
+      "label": "Action name"
+    },
+    "Template": {
+      "category": "class",
+      "description": "An Essence defined as a Template with all associated technical parameters.",
+      "label": "Template"
+    },
+    "actionTimestamp": {
+      "category": "property",
+      "description": "The time when the Action occurs.",
+      "label": "Action timestamp"
+    },
+    "BibliographicalObject": {
+      "category": "class",
+      "description": "Documents of various nature.",
+      "label": "Bibliographical object"
+    },
+    "actionTimestampEditUnits": {
+      "category": "property",
+      "description": "The edit unit number at which the Action occurs.",
+      "label": "Action edit unit number"
+    },
+    "Biography": {
+      "category": "class",
+      "description": "To record a biography.",
+      "label": "Biography"
+    },
+    "actionTimestampNormalPlayTime": {
+      "category": "property",
+      "description": "The normal play time at which the Action occurs.",
+      "label": "Action normal play time"
+    },
+    "Brand": {
+      "category": "class",
+      "description": "A group of EditorialObjects having a Brand as a common denominator.",
+      "label": "Brand"
+    },
+    "actionTimestampTimecode": {
+      "category": "property",
+      "description": "The timecode at which the Action occurs.",
+      "label": "Action timecode"
+    },
+    "Group": {
+      "category": "class",
+      "description": "To define a collection / group of media resources, for example a series made of episodes.",
+      "label": "Group"
+    },
+    "actionTimestampTimecodeDropFrame": {
+      "category": "property",
+      "description": "The timecode (dropframe) at which the Action occurs.",
+      "label": "Action timecode (dropframe)"
+    },
+    "BreakingNewsItem": {
+      "category": "class",
+      "description": "To describe a breaking news.",
+      "label": "Breaking news item"
+    },
+    "actionType": {
+      "category": "property",
+      "description": "A type of Action.",
+      "label": "Action type"
+    },
+    "Item": {
+      "category": "class",
+      "description": "An item e.g. newsItem or sportItem",
+      "label": "Item"
+    },
+    "activityEndDate": {
+      "category": "property",
+      "description": "To provide the end date of activity of an Organisation.",
+      "label": "Activity end date"
+    },
+    "BusinessObject_Type": {
+      "category": "class",
+      "description": "To define a type of business object.",
+      "label": "Business object type"
+    },
+    "activityStartDate": {
+      "category": "property",
+      "description": "To provide the start date of activity of an Organisation.",
+      "label": "Activity start date"
+    },
+    "Captioning": {
+      "category": "class",
+      "description": "To signal the presence of hard of hearing captioning.",
+      "label": "Captioning"
+    },
+    "adultContent": {
+      "category": "property",
+      "description": "A flag to indiucate adult content.",
+      "label": "Adult content flag"
+    },
+    "CaptioningFormat": {
+      "category": "class",
+      "description": "To define the format of captioning. Captioning's main use isfor hard of hearing transcription. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.",
+      "label": "Captioning format"
+    },
+    "affiliationEndDate": {
+      "category": "property",
+      "description": "The date of end of Affiliation.",
+      "label": "Affiliation end date"
+    },
+    "Cast": {
+      "category": "class",
+      "description": "A member of the cast list (a list of performers/actors and associated fictitious characters).",
+      "label": "Cast member"
+    },
+    "affiliationStartDate": {
+      "category": "property",
+      "description": "The date of Affiliation.",
+      "label": "Affiliation start date"
+    },
+    "Character": {
+      "category": "class",
+      "description": "E.g. a fictitious contact / person.",
+      "label": "Character"
+    },
+    "age": {
+      "category": "property",
+      "description": "The age of a Contact/Person.",
+      "label": "Age"
+    },
+    "Person": {
+      "category": "class",
+      "description": "To describe a Person.",
+      "label": "Person"
+    },
+    "agentDbpedia": {
+      "category": "property",
+      "description": "A link to a DBPedia page.",
+      "label": "DBPedia"
+    },
+    "CityCode": {
+      "category": "class",
+      "description": "To allocate a city code.",
+      "label": "City code"
+    },
+    "agentLinkedData": {
+      "category": "property",
+      "description": "Range: a URL or URI.",
+      "label": "Agent linked data"
+    },
+    "Clip": {
+      "category": "class",
+      "description": "For use in models where Clip is common.",
+      "label": "Clip"
+    },
+    "agentDescription": {
+      "category": "property",
+      "description": "To provide a description of an Agent.",
+      "label": "Description"
+    },
+    "ClosedCaptions": {
+      "category": "class",
+      "description": "Closed captioning is provided as separate content.",
+      "label": "Closed caption"
+    },
+    "agentEmailAddress": {
+      "category": "property",
+      "description": "To provide an email address.",
+      "label": "email"
+    },
+    "ClosedSubtitling": {
+      "category": "class",
+      "description": "Closed subtitles are provided as separate content.",
+      "label": "Closed subtitling"
+    },
+    "agentFacebook": {
+      "category": "property",
+      "label": "Facebook"
+    },
+    "Subtitling": {
+      "category": "class",
+      "description": "To signal the presence of subtitles for translation in alternative languages.",
+      "label": "Subtitling"
+    },
+    "agentSocialMedia": {
+      "category": "property",
+      "description": "Links to an Agent's social media.",
+      "label": "Socail media"
+    },
+    "Collection": {
+      "category": "class",
+      "description": "A group of EditorialObjects. There can be many types of collections for which specific sub-classes should be defined. In the worl of archives, A collection corresponds to all items belonging to an individual / collector.",
+      "label": "Collection"
+    },
+    "agentFee": {
+      "category": "property",
+      "description": "The fee of an Agent.",
+      "label": "Agent fee"
+    },
+    "ColourSpace": {
+      "category": "class",
+      "description": "The CoulourSpace of a VideoResource. A ColourSpace is defined as free text in an annotation label or as an identifier pointing to a term in a classification scheme such as http://www.ebu.ch/metadata/ontologies/skos/ebu_ColourCodeCS.rdf.",
+      "label": "Colour space"
+    },
+    "agentFlickr": {
+      "category": "property",
+      "label": "Flickr"
+    },
+    "CommercialCode": {
+      "category": "class",
+      "description": "To identify a type of commercial content.",
+      "label": "Commercial code"
+    },
+    "agentId": {
+      "category": "property",
+      "description": "An identifier attributed to an Agent.",
+      "label": "Agent identifier"
+    },
+    "Component": {
+      "category": "class",
+      "description": "A component e.g. audio, video, data or else or a MediaResource or Essence.",
+      "label": "Component"
+    },
+    "agentImdb": {
+      "category": "property",
+      "description": "A link to an imdb page.",
+      "label": "Wikidata"
+    },
+    "ContainerCodec": {
+      "category": "class",
+      "description": "To identify an container codec, e.g. MXF",
+      "label": "Container codec"
+    },
+    "agentInstagram": {
+      "category": "property",
+      "label": "Instagram"
+    },
+    "ContainerEncodingFormat": {
+      "category": "class",
+      "description": "To define the conatiner encoding format.",
+      "label": "Container encoding format"
+    },
+    "agentLinkedIn": {
+      "category": "property",
+      "label": "LinkedIn"
+    },
+    "ContainerMimeType": {
+      "category": "class",
+      "description": "The definition of the container if available as a MIME type. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme. For more information: http://www.iana.org/assignments/media-types/application/index.html.",
+      "label": "Container Mime type"
+    },
+    "agentMobileTelephoneNumber": {
+      "category": "property",
+      "description": "To provide the mobile telephone number of an Agent (Contact/Person or organisation)",
+      "label": "Mobile"
+    },
+    "ContentAlert": {
+      "category": "class",
+      "description": "To provide information about a particular type of content potentially sensitive.",
+      "label": "Content alert"
+    },
+    "agentTelephoneNumber": {
+      "category": "property",
+      "description": "To provide the telephone number of an Agent (Contact/Person or Organisation).",
+      "label": "Telephone"
+    },
+    "ContentEditorialCode": {
+      "category": "class",
+      "description": "To define a code of EditorialFormat",
+      "label": "Editorial code"
+    },
+    "agentName": {
+      "category": "property",
+      "description": "To provide a name of an Agent.",
+      "label": "Name"
+    },
+    "ContentEditorialFormat": {
+      "category": "class",
+      "description": "To define an EditorialFormat",
+      "label": "Editorial format"
+    },
+    "agentNickname": {
+      "category": "property",
+      "description": "To provide a nickname of a Contact/Person.",
+      "label": "Nickname"
+    },
+    "ContractType": {
+      "category": "class",
+      "description": "To define a type of contract.",
+      "label": "Contract type"
+    },
+    "agentPreviousName": {
+      "category": "property",
+      "description": "To provide the previous name of a Contact/Person.",
+      "label": "Previous name"
+    },
+    "Copyright": {
+      "category": "class",
+      "description": "To provide a copyright statement.",
+      "label": "Copyright"
+    },
+    "agentRelatedInformationLink": {
+      "category": "property",
+      "description": "To provide a link to a web resource containing information related to an Agent (Contact/Person or Organisation).",
+      "label": "Related information link"
+    },
+    "Costume": {
+      "category": "class",
+      "description": "To identify and describe Costumes used in productions.",
+      "label": "Costume"
+    },
+    "agentRelatedLink": {
+      "category": "property",
+      "description": "To provide a link to e.g. a web resource related to an Agent.",
+      "label": "Related link"
+    },
+    "CostumeType": {
+      "category": "class",
+      "description": "To define a costume type.",
+      "label": "Costume type"
+    },
+    "agentRelatedPressLink": {
+      "category": "property",
+      "description": "To provide a link to a web resource containing information related to an Agent (Contact/Person or Organisation).",
+      "label": "Related press link"
+    },
+    "CountryCode": {
+      "category": "class",
+      "description": "To identify a country by its ISO code.",
+      "label": "Country code"
+    },
+    "agentTwitter": {
+      "category": "property",
+      "label": "Twitter"
+    },
+    "CoverageRestrictions": {
+      "category": "class",
+      "description": "To provide information on possible restrictions regarding the temporal and spatial coverage for publication.",
+      "label": "Coverage restrictions"
+    },
+    "agentType": {
+      "category": "property",
+      "description": "Range: string or anyURI or Concept.",
+      "label": "Agent type"
+    },
+    "CreativeCommons": {
+      "category": "class",
+      "description": "A set of creative commons rights.",
+      "label": "Creative commons"
+    },
+    "agentWebHomepage": {
+      "category": "property",
+      "description": "To provide the address of the webpage of an Agent (Contact/Person or Organisation).",
+      "label": "Homepage"
+    },
+    "Crew": {
+      "category": "class",
+      "description": "A member of the Crew.",
+      "label": "Crew member"
+    },
+    "agentWikidata": {
+      "category": "property",
+      "description": "A link to a wikidata page.",
+      "label": "Wikidata"
+    },
+    "CuisineStyle": {
+      "category": "class",
+      "description": "To identify a style of Cuisine.",
+      "label": "Cuisine style"
+    },
+    "agentWikipedia": {
+      "category": "property",
+      "label": "Wikipedia"
+    },
+    "CurrencyCode": {
+      "category": "class",
+      "description": "To identify a currency by its ISO code.",
+      "label": "Currency code"
+    },
+    "animalBirthYear": {
+      "category": "property",
+      "description": "To year of birth of an animal.",
+      "label": "Animal birth year"
+    },
+    "Department": {
+      "category": "class",
+      "description": "A department within and organisation.",
+      "label": "Department"
+    },
+    "animalCharacterName": {
+      "category": "property",
+      "description": "To associate a fictitious character name with an animal.",
+      "label": "Animal character name"
+    },
+    "DepictedEvent": {
+      "category": "class",
+      "description": "A DepictedEVent is fictitious or historical or other sort of Event that the content of the BusinessObject or resource relates to.",
+      "label": "Depicted Event"
+    },
+    "animalCode": {
+      "category": "property",
+      "description": "To associate a code with an animal.",
+      "label": "Animal code"
+    },
+    "Event": {
+      "category": "class",
+      "description": "Additional types of event shall be defined as new sub-classes of event.",
+      "label": "Event"
+    },
+    "animalDescription": {
+      "category": "property",
+      "description": "To describe an animal.",
+      "label": "Animal description"
+    },
+    "Disclaimer": {
+      "category": "class",
+      "description": "To provide a disclaimer of any form.",
+      "label": "Disclaimer"
+    },
+    "animalGender": {
+      "category": "property",
+      "description": "To give the gender of an animal.",
+      "label": "Animal gender"
+    },
+    "Document": {
+      "category": "class",
+      "description": "To describe a publication in the form of a document e.g. a html webpage (news item) or a pdf document e.g. a script.",
+      "label": "Document"
+    },
+    "animalId": {
+      "category": "property",
+      "description": "To associate an Id with an animal.",
+      "label": "Animal Id"
+    },
+    "Resource": {
+      "category": "class",
+      "description": "To describe a Resource.",
+      "label": "Resource"
+    },
+    "animalName": {
+      "category": "property",
+      "description": "To name an animal.",
+      "label": "Animal name"
+    },
+    "DocumentFormat": {
+      "category": "class",
+      "description": "To provide technical information about the format of a document such as the orientation. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.",
+      "label": "Document format"
+    },
+    "animalPassport": {
+      "category": "property",
+      "description": "To replicate the passport of an animal.",
+      "label": "Animal passport"
+    },
+    "Dopesheet": {
+      "category": "class",
+      "description": "Provides additional information about a NewsItem, e.g. date and place, subject.",
+      "label": "Dopesheet"
+    },
+    "annotationConfidence": {
+      "category": "property",
+      "description": "To estimate the confidence in an Annotation.",
+      "label": "Annotation confidence"
+    },
+    "EditorialObject_Type": {
+      "category": "class",
+      "description": "To define a type of editorial object.",
+      "label": "Editorial object type"
+    },
+    "annotationCurationDateTime": {
+      "category": "property",
+      "description": "To provide the date and time when an Annotation has been reviewed.",
+      "label": "Annotation curation date & time"
+    },
+    "Emotion": {
+      "category": "class",
+      "description": "A class to log Emotions.",
+      "label": "Emotion"
+    },
+    "annotationDescription": {
+      "category": "property",
+      "description": "To describe an Annotation.",
+      "label": "Annotation description"
+    },
+    "Emotion_Type": {
+      "category": "class",
+      "description": "To define a type of emotion.",
+      "label": "Emotion type"
+    },
+    "annotationId": {
+      "category": "property",
+      "description": "To identify an Annotation.",
+      "label": "Annotation Id"
+    },
+    "Episode": {
+      "category": "class",
+      "description": "To describe an episode in a series.",
+      "label": "Episode"
+    },
+    "annotationName": {
+      "category": "property",
+      "description": "To name an Annotation.",
+      "label": "Annotation name"
+    },
+    "EventType": {
+      "category": "class",
+      "description": "To define a type of event.",
+      "label": "Event type"
+    },
+    "annotationSaliency": {
+      "category": "property",
+      "description": "To estimate the saliency of an Annotation.",
+      "label": "Annotation saliency"
+    },
+    "ExclusivityType": {
+      "category": "class",
+      "description": "To define a type of exclusity rights.",
+      "label": "Exclusivity type"
+    },
+    "annotationType": {
+      "category": "property",
+      "description": "To define a type of Annotation.",
+      "label": "Annotation type"
+    },
+    "ExploitationIssues": {
+      "category": "class",
+      "description": "To highlight potential exploitation issues.",
+      "label": "Exploitation issues"
+    },
+    "appliesOutOf": {
+      "category": "property",
+      "description": "Range: string or CountryCode.",
+      "label": "Exclusion area"
+    },
+    "Feature": {
+      "category": "class",
+      "description": "The editorial object for a feature film.",
+      "label": "Feature"
+    },
+    "appliesTo": {
+      "category": "property",
+      "description": "To identify the media resource to which the Rating applies.",
+      "label": "Media resource"
+    },
+    "FictionalEvent": {
+      "category": "class",
+      "description": "To describe a fictional Event.",
+      "label": "Fictional event"
+    },
+    "applyTo": {
+      "category": "property",
+      "description": "The Asset to which Rights apply.",
+      "label": "Asset"
+    },
+    "FictionalLocation": {
+      "category": "class",
+      "description": "To describe a fictional Location.",
+      "label": "Fictional location"
+    },
+    "approvedBy": {
+      "category": "property",
+      "description": "Range: Agent or string",
+      "label": "Agent"
+    },
+    "Location": {
+      "category": "class",
+      "description": "This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.",
+      "label": "Location"
+    },
+    "artefactAvailability": {
+      "category": "property",
+      "description": "To flag the availability of an Artefact.",
+      "label": "Artefact availability flag"
+    },
+    "FictionalOrganisation": {
+      "category": "class",
+      "description": "To define a fictional Organisation.",
+      "label": "Fictional organisation"
+    },
+    "artefactBoxHeight": {
+      "category": "property",
+      "description": "The height of the box containing the Artefact.",
+      "label": "Artefact box height."
+    },
+    "FictionalPerson": {
+      "category": "class",
+      "description": "To describe a fictional Person, e.g. a character in a drama.",
+      "label": "Fictional person"
+    },
+    "artefactBoxTopLeftCornerLineNumber": {
+      "category": "property",
+      "description": "The coordinates on a vertical axis of the position of the top left corner of the box containing the Artefact.",
+      "label": "Artefact box top left corner Y position."
+    },
+    "FileFormat": {
+      "category": "class",
+      "description": "A file format for Resources other than audiovisual resources. The format is defined as free text or pointing at a term in a classification scheme e.g. http://www.ebu.ch/metadata/ontologies/skos/ebu_FileFormatCS.rdf.",
+      "label": "File format"
+    },
+    "artefactBoxTopLeftCornerPixelNumber": {
+      "category": "property",
+      "description": "The coordinates on an horizontal axis of the position of the top left corner of the box containing the Artefact.",
+      "label": "Artefact box top left corner X position."
+    },
+    "Food": {
+      "category": "class",
+      "description": "To describe Food shown or consumed in productions.",
+      "label": "Food"
+    },
+    "artefactBoxWidth": {
+      "category": "property",
+      "description": "The width of the box containing the Artefact.",
+      "label": "Artefact box width."
+    },
+    "FoodStyle": {
+      "category": "class",
+      "description": "To define a style of food.",
+      "label": "Food style"
+    },
+    "artefactBrand": {
+      "category": "property",
+      "description": "To specify the brand of an Artefact.",
+      "label": "Artefact brand"
+    },
+    "Generation": {
+      "category": "class",
+      "description": "Identifies the generation of a version of a resource, i.e. master, edit master, distribution copy, etc.",
+      "label": "Generation"
+    },
+    "artefactColour": {
+      "category": "property",
+      "description": "To provide the clour(s) of an Artefact.",
+      "label": "Artefact colour(s)"
+    },
+    "Genre": {
+      "category": "class",
+      "description": "This class shall be used to provide information on the genre of the BusinessObject or Resource. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme e.g. http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS.rdf or http://www.ebu.ch/metadata/ontologies/skos/ebu_EditorialFormatCodeCS.rdf.",
+      "label": "Genre"
+    },
+    "artefactComment": {
+      "category": "property",
+      "description": "To provide a contextual comment about an Artefact.",
+      "label": "Artefact comment"
+    },
+    "IPRRestrictions": {
+      "category": "class",
+      "description": "To provide information on intellectual property.",
+      "label": "IPR restrictions"
+    },
+    "artefactDateOfPurchase": {
+      "category": "property",
+      "description": "The date when an Artefact was purchased. .",
+      "label": "Artefact date of purchase"
+    },
+    "Identifier": {
+      "category": "class",
+      "description": "To support the use of structured identifiers.",
+      "label": "Identifier"
+    },
+    "artefactDateOfSell": {
+      "category": "property",
+      "description": "The date when an Artefact was sold.",
+      "label": "Artefact date of sell"
+    },
+    "IdentifierType": {
+      "category": "class",
+      "description": "To define a type of identifier.",
+      "label": "Identifier type"
+    },
+    "artefactDescription": {
+      "category": "property",
+      "description": "A description of an Artefact.",
+      "label": "Artefact description"
+    },
+    "Image": {
+      "category": "class",
+      "description": "A still image / thumbnail / key frame / logo related to the media resource or being the media resource itself.",
+      "label": "Image"
+    },
+    "artefactId": {
+      "category": "property",
+      "description": "Range: string or Identifier.",
+      "label": "Artefact Identifier"
+    },
+    "ImageCodec": {
+      "category": "class",
+      "description": "to identify a codec for images",
+      "label": "Image codec"
+    },
+    "artefactModel": {
+      "category": "property",
+      "description": "To specify a model of an Artefact.",
+      "label": "Artefact model"
+    },
+    "ImageFormat": {
+      "category": "class",
+      "description": "To provide technical information about the format of an image such as the orientation. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.",
+      "label": "Image format"
+    },
+    "artefactName": {
+      "category": "property",
+      "description": "A name associated with an Artefact.",
+      "label": "Artefact name"
+    },
+    "IntentionCode": {
+      "category": "class",
+      "description": "To indicate the purpose for which content was created.",
+      "label": "Intention code"
+    },
+    "artefactPeriod": {
+      "category": "property",
+      "description": "To specify the period associated with an Artefact.",
+      "label": "Artefact period"
+    },
+    "KeyCareerEvent": {
+      "category": "class",
+      "description": "To describe a key career Event of a Contact.",
+      "label": "Key career event"
+    },
+    "artefactPriceAmount": {
+      "category": "property",
+      "description": "To specifythe price of an Artefact.",
+      "label": "Artefact price"
+    },
+    "KeyEvent": {
+      "category": "class",
+      "description": "To describe a significant event.",
+      "label": "Key event"
+    },
+    "artefactReference": {
+      "category": "property",
+      "description": "To specify a reference of an Artefact.",
+      "label": "Artefact reference"
+    },
+    "KeyPersonalEvent": {
+      "category": "class",
+      "description": "A key personal Event of a Contact.",
+      "label": "Key personal event"
+    },
+    "artefactStyle": {
+      "category": "property",
+      "description": "To specify the style associated with an Artefact.",
+      "label": "Artefact style"
+    },
+    "Keyframe": {
+      "category": "class",
+      "description": "A key frame is a frame extarcted from video, e.g. representative of a part of a MediaResource.",
+      "label": "key frame"
+    },
+    "artefactType": {
+      "category": "property",
+      "description": "Range: string or Artefact_type.",
+      "label": "Artefact type"
+    },
+    "Picture": {
+      "category": "class",
+      "description": "A photography, a logo, a pictogram, etc.",
+      "label": "Picture"
+    },
+    "artefactUsageHistory": {
+      "category": "property",
+      "description": "To provide information on the usage history of an Artefact.",
+      "label": "Artefact usage history"
+    },
+    "Keyword": {
+      "category": "class",
+      "description": "To proivde keywords and define key concepts illustrating the content of the Resource or EditorialObject. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.",
+      "label": "Keyword"
+    },
+    "artefactWebsite": {
+      "category": "property",
+      "description": "To specify a website where more  information can be found on the Artefact.",
+      "label": "Artefact website"
+    },
+    "Language": {
+      "category": "class",
+      "description": "To provide information on languages present in the BusinessObject and its purpose. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.Other language specific types may be added as subclasses of language.",
+      "label": "Language"
+    },
+    "aspectRatio": {
+      "category": "property",
+      "description": "To specify the aspect ratio.",
+      "label": "Aspect ratio"
+    },
+    "Licensing": {
+      "category": "class",
+      "description": "To define the licensing terms associated with an Asset.",
+      "label": "Licensing"
+    },
+    "assetDescription": {
+      "category": "property",
+      "description": "To provide a description of an Asset.",
+      "label": "Description"
+    },
+    "Link": {
+      "category": "class",
+      "description": "To define a custom link.",
+      "label": "Link"
+    },
+    "assetId": {
+      "category": "property",
+      "description": "Range: an Identifier or anyURI or string.",
+      "label": "Asset identifier"
+    },
+    "LocationCode": {
+      "category": "class",
+      "description": "A code given to a Location.",
+      "label": "Location code."
+    },
+    "assetName": {
+      "category": "property",
+      "description": "To provide a name of an Asset.",
+      "label": "Name"
+    },
+    "LocationTimeType": {
+      "category": "class",
+      "description": "To define a type of time at a location.",
+      "label": "Location time type"
+    },
+    "assetType": {
+      "category": "property",
+      "description": "Range: string or anyURI or Concept.",
+      "label": "Asset type"
+    },
+    "LocationType": {
+      "category": "class",
+      "description": "To define a type of location.",
+      "label": "Location type"
+    },
+    "audioBitRate": {
+      "category": "property",
+      "description": "The audio bitrate.",
+      "label": "Audio bitrate"
+    },
+    "Locator": {
+      "category": "class",
+      "description": "Custom attributes are to be associated by implementers.",
+      "label": "Locator"
+    },
+    "bitRate": {
+      "category": "property",
+      "description": "To provide the bitrate at which the MediaResource can be played in bits/second. Current bitrate if constant, and average bitrate if variable.",
+      "label": "Bitrate"
+    },
+    "Logo": {
+      "category": "class",
+      "description": "A Logo allows to visually identify an organisation, publicationService, publicationChannel, or ratings / parentalGuidance",
+      "label": "Logo"
+    },
+    "audioBitRateMax": {
+      "category": "property",
+      "description": "The max audio bitrate.",
+      "label": "Audio bitrate"
+    },
+    "MediaFragment": {
+      "category": "class",
+      "description": "A MediaFragment is a temporal or spatial segment of a resource identified by a MediaGragment URI (http://www.w3.org/2008/WebVideo/Fragments/WD-media-fragments-spec/).",
+      "label": "Media Fragment"
+    },
+    "bitRateMax": {
+      "category": "property",
+      "description": "The maximum bitrate when variable, in bits per second.",
+      "label": "Maximum bitrate"
+    },
+    "MediaResource_Type": {
+      "category": "class",
+      "description": "To define a type of MediaResource.",
+      "label": "Media resource type"
+    },
+    "audioBitRateMode": {
+      "category": "property",
+      "description": "The audio bitrate mode.",
+      "label": "Audio bitrate mode"
+    },
+    "MediaType": {
+      "category": "class",
+      "description": "To provide additional information on the type of media.",
+      "label": "Media type"
+    },
+    "bitRateMode": {
+      "category": "property",
+      "description": "A flag to indicate if the bit rate is fixed or variable.",
+      "label": "Bitrate mode"
+    },
+    "Medium": {
+      "category": "class",
+      "description": "To provide information on the medium formats in which the resource is available. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.",
+      "label": "Medium"
+    },
+    "audioChannelNumber": {
+      "category": "property",
+      "description": "The total number of audio channels contained in the MediaResource.",
+      "label": "Audio channel number"
+    },
+    "MetadataTrack": {
+      "category": "class",
+      "description": "A Track on which metadata is embedded (e.g. MXF).",
+      "label": "Metadata track"
+    },
+    "audioEncodingLevel": {
+      "category": "property",
+      "description": "The encoding level as defined in specifications.",
+      "label": "Audio encoding level"
+    },
+    "MimeType": {
+      "category": "class",
+      "description": "The definition of the container if available as a MIME type. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme. For more information: http://www.iana.org/assignments/media-types/index.html.",
+      "label": "Mime type"
+    },
+    "encodingLevel": {
+      "category": "property",
+      "description": "To define an encoding level.",
+      "label": "Encoding level"
+    },
+    "NewsItem": {
+      "category": "class",
+      "description": "A NewsItem aggregates all information about a particular news event.",
+      "label": "News Item"
+    },
+    "audioEncodingProfile": {
+      "category": "property",
+      "description": "The encoding profile as defined in specifications.",
+      "label": "Audio encoding profile"
+    },
+    "ObjectType": {
+      "category": "class",
+      "description": "To specify the type of BusinessObject e.g. and EditorialObject of type \"programme\" or clip\". This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme e.g. http://www.ebu.ch/metadata/ontologies/skos/ebu_ObjectTypeCodeCS.rdf.",
+      "label": "Object type"
+    },
+    "encodingProfile": {
+      "category": "property",
+      "description": "The encoding profile as defined in specifications.",
+      "label": "Encoding profile"
+    },
+    "OpenCaptions": {
+      "category": "class",
+      "description": "Open Captions are burned in the image.",
+      "label": "Open captions"
+    },
+    "audioTrackConfiguration": {
+      "category": "property",
+      "description": "The configuration of audio tracks contained in the MediaResource.",
+      "label": "Audio track configuration"
+    },
+    "OpenSubtitling": {
+      "category": "class",
+      "description": "Open subtitles are burned in the image.",
+      "label": "Open subtitling"
+    },
+    "audioTrackNumber": {
+      "category": "property",
+      "description": "The total number of audio tracks contained in the MediaResource.",
+      "label": "Audio track number"
+    },
+    "foaf:Organization": {
+      "category": "class",
+      "description": "An organisation (business, corporation, federation, etc.) or moral agent (government body).",
+      "label": "Organization"
+    },
+    "awardCeremony": {
+      "category": "property",
+      "description": "To provide an Award ceremony name.",
+      "label": "Award ceremony"
+    },
+    "OriginalLanguage": {
+      "category": "class",
+      "description": "The original language in which the BusinessObject or Resource has been created and released. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.",
+      "label": "Language"
+    },
+    "awardDate": {
+      "category": "property",
+      "description": "To provide an date when an Award was delivered.",
+      "label": "Award date"
+    },
+    "Part": {
+      "category": "class",
+      "description": "A Fragment is a particular section of a MediaResource identified by a start and end time or duration. Fragment can also be called segment or part.",
+      "label": "Part, Fragment, Segment"
+    },
+    "awardDescription": {
+      "category": "property",
+      "description": "To provide a description for an Award.",
+      "label": "Award description"
+    },
+    "Part_Type": {
+      "category": "class",
+      "description": "To define a type or part.",
+      "label": "Part type"
+    },
+    "awardId": {
+      "category": "property",
+      "description": "Range: string or Identifier",
+      "label": "Award identifier"
+    },
+    "Party": {
+      "category": "class",
+      "description": "To identify a Party intervening in a transaction or contractual agreement.",
+      "label": "Party"
+    },
+    "awardName": {
+      "category": "property",
+      "description": "To provide the name of an Award.",
+      "label": "Award name"
+    },
+    "foaf:Person": {
+      "category": "class",
+      "description": "all types of people such as politicians, athletes, historic figures, contributors in programmes e.t.c.",
+      "label": "Person"
+    },
+    "awardType": {
+      "category": "property",
+      "description": "To define a type of Award.",
+      "label": "Award type"
+    },
+    "PhysicalResource": {
+      "category": "class",
+      "description": "To describe a physical resource e.g. a tape.",
+      "label": "Physical resource"
+    },
+    "bitDepth": {
+      "category": "property",
+      "description": "To provide the bitdepth at which the MediaResource has been encoded.",
+      "label": "Bit depth"
+    },
+    "Pictogram": {
+      "category": "class",
+      "description": "A visual / graphical representation of a concept.",
+      "label": "Pictogram"
+    },
+    "ma:averageBitRate": {
+      "category": "property"
+    },
+    "foaf:img": {
+      "category": "class",
+      "description": "Animage to represent something.",
+      "label": "Image"
+    },
+    "bitRateOverall": {
+      "category": "property",
+      "description": "To provide the overall bitrate at which the MediaResource can be played in bits/second. Current bitrate if constant, and average bitrate if variable.",
+      "label": "Overall bitrate"
+    },
+    "PictureDisplayFormat": {
+      "category": "class",
+      "description": "To define a picture display format code.",
+      "label": "Picture display format code"
+    },
+    "bookmark": {
+      "category": "property",
+      "description": "To provide a bookmark.",
+      "label": "Bookmark"
+    },
+    "Platform": {
+      "category": "class",
+      "description": "A platform like a network or operator platform.",
+      "label": "Platform"
+    },
+    "businessObjectDescription": {
+      "category": "property",
+      "description": "To provide a description of an BusinessObject.",
+      "label": "Description"
+    },
+    "Service": {
+      "category": "class",
+      "description": "A service is the umbrella under which one or more PublicationChannel is operated.",
+      "label": "Service"
+    },
+    "businessObjectId": {
+      "category": "property",
+      "description": "Range: an Identifier or anyURI or string.",
+      "label": "BusinessObject identifier"
+    },
+    "Props": {
+      "category": "class",
+      "description": "To identify and describe Props used in productions (e.g. vehicles, objects of various shapes and brand and purpose, etc.).",
+      "label": "Props"
+    },
+    "businessObjectName": {
+      "category": "property",
+      "description": "To provide a name of an BusinessObject.",
+      "label": "Name"
+    },
+    "Provenance": {
+      "category": "class"
+    },
+    "businessObjectType": {
+      "category": "property",
+      "description": "A type attributed to a BusinessObject.",
+      "label": "Business Object type"
+    },
+    "PublicationChannel": {
+      "category": "class",
+      "description": "The name of the channel through which a Resource has been published as a PublicationEvent. A PublicationChannel can use a variety of medias e.g. broadcast or online.",
+      "label": "Publication Channel"
+    },
+    "characterDescription": {
+      "category": "property",
+      "description": "To provide the description of a Character.",
+      "label": "Character description"
+    },
+    "PublicationChannel_Type": {
+      "category": "class",
+      "description": "To define a type of publication channel.",
+      "label": "Publication channel type"
+    },
+    "characterEndIndex": {
+      "category": "property",
+      "description": "To identify the end character index of the portion of text to which the Annotation applies.",
+      "label": "Annotation character start index"
+    },
+    "PublicationEvent_Type": {
+      "category": "class",
+      "description": "To define a type of publication event.",
+      "label": "Publication event type"
+    },
+    "characterName": {
+      "category": "property",
+      "description": "To specify the name of a Character.",
+      "label": "Character name."
+    },
+    "PublicationHistory": {
+      "category": "class",
+      "description": "A collection of PublicationEvents through which a resource has been published.",
+      "label": "Publication History"
+    },
+    "characterStartIndex": {
+      "category": "property",
+      "description": "To identify the start character index of the portion of text to which the Annotation applies.",
+      "label": "Annotation text character start index"
+    },
+    "PublicationMedium": {
+      "category": "class",
+      "label": "Publication medium"
+    },
+    "clonedTo": {
+      "category": "property",
+      "description": "Identifies relationship between a digital instantiation of a Resource and its direct copy, with no generational loss.",
+      "label": "Cloned to"
+    },
+    "PublicationPlan": {
+      "category": "class",
+      "description": "A collection of PublicationEvents organised as a PublicationPlanning.",
+      "label": "Publication History"
+    },
+    "isClonedFrom": {
+      "category": "property",
+      "description": "To identify the source of a clone Editorial Object or Resource",
+      "label": "Clone source"
+    },
+    "PublicationPlan_Type": {
+      "category": "class",
+      "description": "To define a type of publication plan.",
+      "label": "Publication plan type"
+    },
+    "codecFamily": {
+      "category": "property",
+      "description": "To provide information on the product family of the Codec.",
+      "label": "Codec family"
+    },
+    "RadioProgramme": {
+      "category": "class",
+      "description": "A programme for distribution on radio channels.",
+      "label": "Radio Programme"
+    },
+    "codecId": {
+      "category": "property",
+      "description": "Range: string or Identifier.",
+      "label": "Codec Identifier"
+    },
+    "Record": {
+      "category": "class",
+      "description": "The record the description of an Asset.",
+      "label": "Record"
+    },
+    "codecName": {
+      "category": "property",
+      "description": "To provide a name for the Codec, e.g. a product name.",
+      "label": "Codec name"
+    },
+    "RegionCode": {
+      "category": "class",
+      "description": "To define a region.(@en}",
+      "label": "Region code"
+    },
+    "codecVersion": {
+      "category": "property",
+      "description": "To provide information on the version of the Codec.",
+      "label": "Codec version"
+    },
+    "Relation": {
+      "category": "class",
+      "description": "To define links and relations.",
+      "label": "Relation"
+    },
+    "comments": {
+      "category": "property",
+      "description": "To provide a comment.",
+      "label": "Comments"
+    },
+    "Relation_Type": {
+      "category": "class",
+      "description": "To specify a type of relation.",
+      "label": "Relation type"
+    },
+    "costumeGender": {
+      "category": "property",
+      "description": "To specify the gender associated with a Costume.",
+      "label": "Costume gender"
+    },
+    "Resource_Type": {
+      "category": "class",
+      "description": "To define a type of resource.",
+      "label": "Resource type"
+    },
+    "costumeSizeInformation": {
+      "category": "property",
+      "description": "To collect all information available useful to determine the size of a Costume.",
+      "label": "Costume size information"
+    },
+    "Review": {
+      "category": "class",
+      "description": "To provide a Review.",
+      "label": "Review"
+    },
+    "costumeTexture": {
+      "category": "property",
+      "description": "Range: a string or a Concept code from a vocabulary, e.g. Getty",
+      "label": "Costume texture"
+    },
+    "RightsClearance": {
+      "category": "class",
+      "description": "To signal that rights have been cleared (or not)",
+      "label": "Rights Clearance"
+    },
+    "costumeType": {
+      "category": "property",
+      "description": "To specify a type of Costume.",
+      "label": "Costume type"
+    },
+    "RightsType": {
+      "category": "class",
+      "description": "To define a type of Rights.",
+      "label": "Rights type"
+    },
+    "date": {
+      "category": "property",
+      "description": "A date associated to an Asset.",
+      "label": "Date"
+    },
+    "Role": {
+      "category": "class",
+      "description": "To define the role / action of an agent. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.",
+      "label": "Role"
+    },
+    "dateArchived": {
+      "category": "property",
+      "description": "The date when the Asset was archived.",
+      "label": "Archiving date"
+    },
+    "Scene": {
+      "category": "class",
+      "description": "A specifc type of Part.",
+      "label": "Scene"
+    },
+    "dateBroadcast": {
+      "category": "property",
+      "description": "The date when the Asset was first broadcast publicly on television or radio or via streaming.",
+      "label": "Broadcast date"
+    },
+    "Season": {
+      "category": "class",
+      "description": "A series can be composed of one or more seasons clustering a certain number of episodes. Fro this reason, seasons are related to series using the isRelatedTo property.",
+      "label": "Season"
+    },
+    "dateCreated": {
+      "category": "property",
+      "description": "The date of creation of the Asset.",
+      "label": "Creation date/time"
+    },
+    "Series": {
+      "category": "class",
+      "description": "Series is a particular type of collection. TV or Radio Series are composed of Episodes.",
+      "label": "Series"
+    },
+    "dateDeleted": {
+      "category": "property",
+      "description": "The date when the Resource was deleted.",
+      "label": "Deletion date"
+    },
+    "Service_Type": {
+      "category": "class",
+      "description": "To define a type of service.",
+      "label": "Service type"
+    },
+    "dateDigitised": {
+      "category": "property",
+      "description": "The date when the Resource was digitised.",
+      "label": "Digitisation date"
+    },
+    "Shot": {
+      "category": "class",
+      "description": "A specifc type of Part.",
+      "label": "Shot"
+    },
+    "dateDistributed": {
+      "category": "property",
+      "description": "The date when the Resource was first made available to the public for purchase, download, or online access.",
+      "label": "Distribution date"
+    },
+    "SignLanguageCode": {
+      "category": "class",
+      "description": "To identify a sign language by its code.",
+      "label": "Sign language code"
+    },
+    "dateIngested": {
+      "category": "property",
+      "description": "The date when the Resource was ingested/acquired in institutional holdings.",
+      "label": "Ingest date"
+    },
+    "Signing": {
+      "category": "class",
+      "description": "To signal the presence of Signing for hard of hearing users. The type of Signing (e.g. incursted in or else) or language of Signing can be specified using the appropriate properties.",
+      "label": "Signing"
+    },
+    "dateIssued": {
+      "category": "property",
+      "description": "The date when the Asset was issued.",
+      "label": "Archiving date"
+    },
+    "VideoTrack": {
+      "category": "class",
+      "description": "A specialisation of Track for Video to provide a link to specific data properties such as frameRate, etc. Signing is another possible example of video track. Specific VideoTracks such as Signing can be defined as sub VideoTracks.. In advanced systems, different VideoTracks can be used to provide e.g. different viewing angles.",
+      "label": "Video track"
+    },
+    "dateMigrated": {
+      "category": "property",
+      "description": "The date when the Resource was copied or converted from an obsolete or endangered original format to a more updated format for preservation.",
+      "label": "Migration date"
+    },
+    "SigningFormat": {
+      "category": "class",
+      "description": "To provide additional information on the signing format. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.",
+      "label": "Signing format"
+    },
+    "dateModified": {
+      "category": "property",
+      "description": "To indicate the date at which the Asset has been modified.",
+      "label": "Modification date/time"
+    },
+    "SportItem": {
+      "category": "class",
+      "description": "A SportItem aggregates all information about a sport event.",
+      "label": "Sport item"
+    },
+    "dateNormalized": {
+      "category": "property",
+      "description": "The date when the Resource was converted from its original format into a format pre-selected by the institution for preservation.",
+      "label": "Normalization date"
+    },
+    "Staff": {
+      "category": "class",
+      "description": "A member of Staff.",
+      "label": "Staff member."
+    },
+    "dateOfBirth": {
+      "category": "property",
+      "description": "The date when a Contact/Person is born.",
+      "label": "Date of birth"
+    },
+    "Standard": {
+      "category": "class",
+      "description": "identifies the technical video standard of a resource, i.e. NTSC or PAL.",
+      "label": "Standard"
+    },
+    "dateOfDeath": {
+      "category": "property",
+      "description": "The date when a Contact/Person has passed away.",
+      "label": "Date of death"
+    },
+    "Sticker": {
+      "category": "class",
+      "description": "A sticker associated with a Costume.",
+      "label": "Sticker"
+    },
+    "dateOfRetirement": {
+      "category": "property",
+      "description": "The date when a Contact/Person has retired.",
+      "label": "Date of retirement"
+    },
+    "Storage_Type": {
+      "category": "class",
+      "description": "The type of storage used for the repository. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.",
+      "label": "Storage type"
+    },
+    "dateProduced": {
+      "category": "property",
+      "description": "The date of production of the Asset.",
+      "label": "production date"
+    },
+    "Subject": {
+      "category": "class",
+      "description": "A term describing the topic covered by the BusinessObject or resource. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.",
+      "label": "Subject"
+    },
+    "dateReleased": {
+      "category": "property",
+      "description": "The date when the Resource was first made available to the public for purchase, download, or online access.",
+      "label": "Release date"
+    },
+    "SubtitlingFormat": {
+      "category": "class",
+      "description": "To define the format of subtitling. subtitling's main use isfor translation. This is provided as free text in an annotation label  or as an identifier pointing to a term in a classification scheme.",
+      "label": "Subtitling format"
+    },
+    "dateTransferred": {
+      "category": "property",
+      "description": "The date when the Asset was moved from one digital or physical location to another.",
+      "label": "Transfer date"
+    },
+    "TVProgramme": {
+      "category": "class",
+      "description": "A programme for distribution on television channels.",
+      "label": "TV Programme"
+    },
+    "dateValidated": {
+      "category": "property",
+      "description": "The most recent date when the Resource was confirmed to be valid through manual or digital QC.",
+      "label": "Validation date"
+    },
+    "TargetAudience": {
+      "category": "class",
+      "description": "To identify the audience for which the content was created.",
+      "label": "Target audience"
+    },
+    "datelicenseEnd": {
+      "category": "property",
+      "description": "The date when the licence for the Asset ends.",
+      "label": "Licence end date"
+    },
+    "TargetPlatform": {
+      "category": "class",
+      "description": "To specify a target platform.",
+      "label": "Target Platform"
+    },
+    "datelicensed": {
+      "category": "property",
+      "description": "The date when the licence for the Asset begins.",
+      "label": "Licence start date"
+    },
+    "Team": {
+      "category": "class",
+      "description": "To define a Team.",
+      "label": "Team"
+    },
+    "derivedTo": {
+      "category": "property",
+      "description": "To identify a new version derived from the original.",
+      "label": "Derivation target"
+    },
+    "foaf:Group": {
+      "category": "class",
+      "description": "A group of Agents.",
+      "label": "Group"
+    },
+    "dimensions": {
+      "category": "property",
+      "description": "Describes the physical dimensions of a MediaResource, with units of measure concatenated to become part of the value.",
+      "label": "Dimensions"
+    },
+    "TerritoryCode": {
+      "category": "class",
+      "description": "To identify a territory e.g. by its UN code.",
+      "label": "Territory code"
+    },
+    "dishDescription": {
+      "category": "property",
+      "description": "The description of a Dish.",
+      "label": "Dish description"
+    },
+    "TextAnnotation": {
+      "category": "class",
+      "description": "A class specific to the annotation of a text or portions of text.",
+      "label": "Text Annotation"
+    },
+    "dishName": {
+      "category": "property",
+      "description": "The name of a Dish.",
+      "label": "Dish name"
+    },
+    "TextLine": {
+      "category": "class",
+      "description": "To provide lines of text extracted from or additional to the resource.",
+      "label": "Text line"
+    },
+    "displayAspectRatio": {
+      "category": "property",
+      "description": "The aspect ratio when displayed.",
+      "label": "Display aspect ratio"
+    },
+    "TextLine_Type": {
+      "category": "class",
+      "description": "To define a TextLine type.",
+      "label": "Text line type"
+    },
+    "displayOrder": {
+      "category": "property",
+      "description": "The order in which an Agent appears in a scene.",
+      "label": "Display order"
+    },
+    "TextUsageType": {
+      "category": "class",
+      "description": "To specify the usage of a text.",
+      "label": "Text usage type"
+    },
+    "dubbedTo": {
+      "category": "property",
+      "description": "Range: string or Language.",
+      "label": "Dubbed to"
+    },
+    "Theme": {
+      "category": "class",
+      "description": "To define a Theme associated with an Asset.",
+      "label": "Theme"
+    },
+    "isDubbedFrom": {
+      "category": "property",
+      "description": "the origin of a dubbed MediaResource.",
+      "label": "Dubbed from"
+    },
+    "Thumbnail": {
+      "category": "class",
+      "description": "A thumbnail is a low resolution picture that can be associated with EditorialObjects or e.g. MediaResources or Contacts.",
+      "label": "Thumbnail"
+    },
+    "duration": {
+      "category": "property",
+      "description": "To provide information on the duration of an EditorialObject or MediaResource.",
+      "label": "Duration"
+    },
+    "TimecodeTrack": {
+      "category": "class",
+      "description": "A track with timecode information e.g. in MXF.",
+      "label": "Timecode track"
+    },
+    "durationEditUnits": {
+      "category": "property",
+      "description": "To provide a duration in edit units.",
+      "label": "Duration (edit units)"
+    },
+    "TimedTextAuthoringTechnique": {
+      "category": "class",
+      "description": "To define a timed text authoring technique.",
+      "label": "Timed text authoring technique"
+    },
+    "durationNormalPlayTime": {
+      "category": "property",
+      "description": "To provide a duration as normal time.",
+      "label": "Duration (time)"
+    },
+    "TimedTextContentType": {
+      "category": "class",
+      "description": "To define a type of timed text.",
+      "label": "Timed text content type"
+    },
+    "durationPublished": {
+      "category": "property",
+      "description": "To provide information on the published / announced duration of an EditorialObject.",
+      "label": "Published Duration"
+    },
+    "TimedTextSubtitleTargetFormat": {
+      "category": "class",
+      "description": "To define a timed text subtitle format.",
+      "label": "Timed text subtitle target format"
+    },
+    "durationPublishedNormalPlayTime": {
+      "category": "property",
+      "description": "To provide a published duration as normal play time.",
+      "label": "Published duration (play time)"
+    },
+    "TimelineTrack": {
+      "category": "class",
+      "description": "To define a time sequence of EditorialObjects.",
+      "label": "Timeline track"
+    },
+    "durationTimecode": {
+      "category": "property",
+      "description": "The duration expressed as a timecode.",
+      "label": "Duration (timecode)"
+    },
+    "TimelineTrack_Type": {
+      "category": "class",
+      "description": "To specify a type or TimelineTrack.",
+      "label": "Timeline track type"
+    },
+    "durationTimecodeDropFrame": {
+      "category": "property",
+      "description": "The duration expressed as a timecode with drop frames.",
+      "label": "Duration (timecode, drop frame)"
+    },
+    "Topic": {
+      "category": "class",
+      "description": "A type subject for use in some contexts. This is provided as free text in an annotation label or as an identifier pointing to a term in a classification scheme.",
+      "label": "Topic"
+    },
+    "editUnit": {
+      "category": "property",
+      "description": "The edit unit is e.g. the inverse of the audio sample rate or video frame rate.",
+      "label": "Edit unit"
+    },
+    "TrackPurpose": {
+      "category": "class",
+      "description": "To define the prupose of a track.",
+      "label": "Track purpose"
+    },
+    "editorialObjectDescription": {
+      "category": "property",
+      "description": "To provide a description of an EditorialObject.",
+      "label": "Description"
+    },
+    "Track_Type": {
+      "category": "class",
+      "description": "To define a type of track.",
+      "label": "Track type"
+    },
+    "editorialObjectId": {
+      "category": "property",
+      "description": "Range: an Identifier or anyURI or string.",
+      "label": "Editorial object identifier"
+    },
+    "UsageRestrictions": {
+      "category": "class",
+      "description": "To define a set of UsageRestrictions.",
+      "label": "Usage restrictions"
+    },
+    "editorialObjectName": {
+      "category": "property",
+      "description": "A name attributed to an EditorialObject.",
+      "label": "Name"
+    },
+    "UsageRights": {
+      "category": "class",
+      "description": "Usage rights associated with content.",
+      "label": "Usage rights"
+    },
+    "editorialObjectType": {
+      "category": "property",
+      "description": "A type attributed to an EditorialObject.",
+      "label": "Editorial Object type"
+    },
+    "Version": {
+      "category": "class",
+      "description": "To specifically identify a Version of an EditorialObject.",
+      "label": "Version"
+    },
+    "education": {
+      "category": "property",
+      "description": "To provide information on the education.",
+      "label": "Education"
+    },
+    "VideoCodec": {
+      "category": "class",
+      "description": "To provide information about a video codec.",
+      "label": "Video codec"
+    },
+    "emotionDescription": {
+      "category": "property",
+      "description": "The description of an Emotion.",
+      "label": "Emotion description"
+    },
+    "VideoEncodingFormat": {
+      "category": "class",
+      "description": "The encoding format of the video.",
+      "label": "Video encoding format"
+    },
+    "emotionEditUnit": {
+      "category": "property",
+      "description": "The edit unit number at which the Emotion occurs.",
+      "label": "Emotion edit unit number"
+    },
+    "VideoFormat": {
+      "category": "class",
+      "description": "To define an VideoFormat.",
+      "label": "Video format"
+    },
+    "emotionTimestamp": {
+      "category": "property",
+      "description": "To identify a timestamp at which an Emotion can be seen.",
+      "label": "Emotion timestamp"
+    },
+    "VideoStream": {
+      "category": "class",
+      "description": "A decodable video stream of bits.",
+      "label": "Video stream"
+    },
+    "emotionId": {
+      "category": "property",
+      "description": "Range: anyURI or string or Identifier",
+      "label": "Emotion identifier"
+    },
+    "WrappingType": {
+      "category": "class",
+      "description": "To define a type of wrapping.",
+      "label": "Wrapping type"
+    },
+    "emotionName": {
+      "category": "property",
+      "description": "A name attributed to an Emotion.",
+      "label": "Emotion name"
+    },
+    "emotionNormalPlayTime": {
+      "category": "property",
+      "description": "The normal play time at which the Emotion occurs.",
+      "label": "Emotion normal play time"
+    },
+    "emotionTimecode": {
+      "category": "property",
+      "description": "The timecode at which the Emotion occurs.",
+      "label": "Emotion timecode"
+    },
+    "emotionTimecodeDropFrame": {
+      "category": "property",
+      "description": "The timecode (dropframe) at which the Emotion occurs.",
+      "label": "Emotion timecode (dropframe)"
+    },
+    "emotionType": {
+      "category": "property",
+      "description": "A type of Emotion.",
+      "label": "Emotion type"
+    },
+    "end": {
+      "category": "property",
+      "description": "To define an end timestamp, e.g. the end point of a MediaResource.",
+      "label": "End"
+    },
+    "endEditUnits": {
+      "category": "property",
+      "description": "The end time in edit units.",
+      "label": "End time (edit units)"
+    },
+    "endNormalPlayTime": {
+      "category": "property",
+      "description": "The end time expressed using a time expression.",
+      "label": "End time (time)"
+    },
+    "endOffsetEditUnits": {
+      "category": "property",
+      "description": "The offset end time in edit units.",
+      "label": "Offset end time (edit units)"
+    },
+    "endOffsetNormalPlayTime": {
+      "category": "property",
+      "description": "The offset end time in normal play time.",
+      "label": "Offset end time (normal play time)"
+    },
+    "endOffsetTimecode": {
+      "category": "property",
+      "description": "The offset end timecode.",
+      "label": "Offset end timecode"
+    },
+    "endOffsetTimecodedropframe": {
+      "category": "property",
+      "description": "The offset end timecode dropframe.",
+      "label": "Offset end timecode (dropframe)"
+    },
+    "endTimecode": {
+      "category": "property",
+      "description": "An end time expressed as timecode.",
+      "label": "End time (timecode)"
+    },
+    "endTimecodeDropFrame": {
+      "category": "property",
+      "description": "An end time expressed as timecode with drop frames.",
+      "label": "End time (timecode dropframe)"
+    },
+    "episodeNumber": {
+      "category": "property",
+      "description": "The Episode Number",
+      "label": "Episode number"
+    },
+    "episodeNumberInSeason": {
+      "category": "property",
+      "description": "The Episode Number in a season",
+      "label": "Episode number in season"
+    },
+    "episodeNumberInSeries": {
+      "category": "property",
+      "description": "The Episode Number in a series",
+      "label": "Episode number in series"
+    },
+    "eventDescription": {
+      "category": "property",
+      "description": "To provide a description for an Event.",
+      "label": "Event description"
+    },
+    "eventDuration": {
+      "category": "property",
+      "description": "The duration of an Event.",
+      "label": "Duration"
+    },
+    "eventEndDate": {
+      "category": "property",
+      "description": "The end date of an Event.",
+      "label": "Event end date"
+    },
+    "eventEndDateTime": {
+      "category": "property",
+      "description": "The end date and time of an Event.",
+      "label": "Event end date & time"
+    },
+    "eventEndTime": {
+      "category": "property",
+      "description": "The end time of an Event.",
+      "label": "Event end time"
+    },
+    "eventId": {
+      "category": "property",
+      "description": "An identifier attributed to an Event.",
+      "label": "Event identifier"
+    },
+    "eventName": {
+      "category": "property",
+      "description": "To provide a name for an Event.",
+      "label": "Event name"
+    },
+    "eventPeriod": {
+      "category": "property",
+      "description": "The period of time during which an Event has occured.",
+      "label": "Event period"
+    },
+    "eventStartDate": {
+      "category": "property",
+      "description": "The start date of an Event.",
+      "label": "Event start date"
+    },
+    "eventStartDateTime": {
+      "category": "property",
+      "description": "The start date and time of an Event.",
+      "label": "Event start date & time"
+    },
+    "eventStartTime": {
+      "category": "property",
+      "description": "The start time of an Event.",
+      "label": "Event start time"
+    },
+    "eventType": {
+      "category": "property",
+      "description": "Range: Event or string",
+      "label": "Event type"
+    },
+    "familyInformation": {
+      "category": "property",
+      "description": "To provide information on the family of a Person.",
+      "label": "Family information"
+    },
+    "familyName": {
+      "category": "property",
+      "description": "The family name of a Person.",
+      "label": "Family name"
+    },
+    "fileSize": {
+      "category": "property",
+      "description": "Provides the size of a MediaResource in bytes.",
+      "label": "File size"
+    },
+    "firstShowing": {
+      "category": "property",
+      "description": "To flag this is a first showing PublicationEvent.",
+      "label": "First showing flag"
+    },
+    "firstShowingThisService": {
+      "category": "property",
+      "description": "To falg this is a first showing  PublicationEvent on this service.",
+      "label": "First showing on service flag"
+    },
+    "folksonomy": {
+      "category": "property",
+      "description": "Provides a user/audience-generated description, tag, or label for resource content.",
+      "label": "Folksonomy"
+    },
+    "followsInSequence": {
+      "category": "property",
+      "description": "A link to an Asset precedinging the current Asset in an ordered sequence.",
+      "label": "Preceding"
+    },
+    "foodCategory": {
+      "category": "property",
+      "description": "To define a category of Food.",
+      "label": "Food category"
+    },
+    "foodIngredient": {
+      "category": "property",
+      "description": "The Food ingredients or Food items.",
+      "label": "Food ingredient"
+    },
+    "formatId": {
+      "category": "property",
+      "description": "A version identifier attributed to a Format.",
+      "label": "Format version identifier"
+    },
+    "formatVersionId": {
+      "category": "property",
+      "description": "A version identifier attributed to a Format.",
+      "label": "Format version identifier"
+    },
+    "frameHeight": {
+      "category": "property",
+      "description": "The height of a video frame.",
+      "label": "Frame height"
+    },
+    "height": {
+      "category": "property",
+      "description": "The height of e.g. a video frame typically expressed as a number of lines or the height of a picture/image expressed in millimeters or else.",
+      "label": "Height"
+    },
+    "frameHeightUnit": {
+      "category": "property",
+      "description": "The unit used to measure the height of a frame.",
+      "label": "Frame height unit"
+    },
+    "heightUnit": {
+      "category": "property",
+      "description": "To specify a unit to express height.",
+      "label": "Height unit"
+    },
+    "frameRate": {
+      "category": "property",
+      "description": "The unit used to express the frame rate of a MediaResource in frames/second.",
+      "label": "Frame rate"
+    },
+    "frameSizeUnit": {
+      "category": "property",
+      "description": "The unit used to express the frame width or height. The unit by default is 'pixel'.",
+      "label": "Frame size unit"
+    },
+    "frameWidth": {
+      "category": "property",
+      "description": "The width of a video frame.",
+      "label": "Frame width"
+    },
+    "width": {
+      "category": "property",
+      "description": "The width of e.g. a video frame typically expressed as a number of pixels, or picture/image in millimeters.",
+      "label": "Width"
+    },
+    "frameWidthUnit": {
+      "category": "property",
+      "description": "The unit used to measure the width of a frame.",
+      "label": "Frame width unit"
+    },
+    "widthUnit": {
+      "category": "property",
+      "description": "The unit used to measure a width e.g. in pixels or number of lines or millimeters or else.",
+      "label": "Width unit"
+    },
+    "free": {
+      "category": "property",
+      "description": "A flag to indicate that the access to the PublicationEvent is 'free'.",
+      "label": "Free access"
+    },
+    "gender": {
+      "category": "property",
+      "description": "The gender of a Person e.g. male or female.",
+      "label": "Gender"
+    },
+    "geoBlocking": {
+      "category": "property",
+      "description": "To identify geographical areas where content cannor be accessed.",
+      "label": "Geographical blocking"
+    },
+    "givenName": {
+      "category": "property",
+      "description": "The given name of a Person.",
+      "label": "Given name"
+    },
+    "groupDescription": {
+      "category": "property",
+      "description": "A textual description of a Group.",
+      "label": "Group description"
+    },
+    "groupId": {
+      "category": "property",
+      "description": "An identifier attributed to a Group.",
+      "label": "Group identifier"
+    },
+    "groupName": {
+      "category": "property",
+      "description": "The name attributed to a Group.",
+      "label": "Group name"
+    },
+    "groupType": {
+      "category": "property",
+      "description": "A type attributed to a Group.",
+      "label": "Group identifier"
+    },
+    "hasAccessConditions": {
+      "category": "property",
+      "description": "Range: string or AccessConditions.",
+      "label": "Access conditions"
+    },
+    "isCoveredBy": {
+      "category": "property",
+      "description": "Range: a link to Rights or open text (string).",
+      "label": "Rights"
+    },
+    "hasActionRelatedAgent": {
+      "category": "property",
+      "description": "Range: string or Agent.",
+      "label": "Action related agent"
+    },
+    "hasActionRelatedScene": {
+      "category": "property",
+      "description": "Range: string or Scene.",
+      "label": "Action related scene"
+    },
+    "hasAffiliation": {
+      "category": "property",
+      "description": "A property to establish the relation between a Contact/Person and an Organisation.",
+      "label": "Affiliation"
+    },
+    "hasAgentBiography": {
+      "category": "property",
+      "description": "Range: a string or an anyURI (e,g, a URL to a webpage) or a Biography.",
+      "label": "Biography"
+    },
+    "hasAgentCountryOfResidence": {
+      "category": "property",
+      "description": "Range: string or CountryCode",
+      "label": "Country of residence"
+    },
+    "hasAgentLanguage": {
+      "category": "property",
+      "description": "Range: a string or Language.",
+      "label": "Language"
+    },
+    "hasAgentMember": {
+      "category": "property",
+      "description": "Range: string or Agent.",
+      "label": "Agent member"
+    },
+    "hasAgentNationality": {
+      "category": "property",
+      "description": "Range: a string or CountryCode.",
+      "label": "Nationality"
+    },
+    "hasAgentPlaceOfResidence": {
+      "category": "property",
+      "description": "To indicate the place of residence of an Agent.",
+      "label": "Place of residence"
+    },
+    "hasAgentRelatedPicture": {
+      "category": "property",
+      "label": "Related picture"
+    },
+    "hasAncillaryData": {
+      "category": "property",
+      "description": "To identify ancillary data in the media resource.",
+      "label": "Ancillary data"
+    },
+    "hasAncillaryDataFormat": {
+      "category": "property",
+      "description": "Range: string or AncillaryDataFormat",
+      "label": "Ancillary data format"
+    },
+    "hasFormat": {
+      "category": "property",
+      "description": "Range: string, Format or any Format-related Concept",
+      "label": "Format"
+    },
+    "hasAnimalBreedCode": {
+      "category": "property",
+      "description": "To associate a breed code with an animal.",
+      "label": "Animal breed code"
+    },
+    "hasAnimalColourCode": {
+      "category": "property",
+      "description": "To associate a colour code with an animal.",
+      "label": "Animal colour code"
+    },
+    "hasAnimalRole": {
+      "category": "property",
+      "description": "To identify the role of an animal.",
+      "label": "Animal role"
+    },
+    "hasAnnotationBody": {
+      "category": "property",
+      "description": "To define the Annotation has a string or instance of an EBUCore class.",
+      "label": "Annotation body"
+    },
+    "hasAnnotationPurpose": {
+      "category": "property",
+      "description": "To define the purpose of an Annotation.",
+      "label": "Annotation confidence"
+    },
+    "hasAnnotationRelatedAgent": {
+      "category": "property",
+      "description": "To identify an Agent subject of the Annotation.",
+      "label": "Annotation related agent"
+    },
+    "hasAnnotationRelatedArtefact": {
+      "category": "property",
+      "description": "To identify an Artefact subject of the Annotation.",
+      "label": "Annotation related artefact"
+    },
+    "hasAnnotationRelatedEvent": {
+      "category": "property",
+      "description": "To identify an Event subject of the Annotation.",
+      "label": "Annotation related event"
+    },
+    "hasAnnotationRelatedLocation": {
+      "category": "property",
+      "description": "To identify a Location subject of the Annotation.",
+      "label": "Annotation related location"
+    },
+    "hasAnnotationTarget": {
+      "category": "property",
+      "description": "To define the target object to which the Annotation applies.",
+      "label": "Annotation target"
+    },
+    "hasArtefactBuyer": {
+      "category": "property",
+      "description": "Range: string or Agent",
+      "label": "Buyer"
+    },
+    "hasArtefactCreator": {
+      "category": "property",
+      "description": "Range: string or Agent",
+      "label": "Creator"
+    },
+    "hasArtefactLocation": {
+      "category": "property",
+      "description": "Range: string or Location",
+      "label": "Location"
+    },
+    "hasArtefactOwner": {
+      "category": "property",
+      "description": "Range: string or Agent",
+      "label": "Owner"
+    },
+    "hasArtefactPriceCurrency": {
+      "category": "property",
+      "description": "Range: string or CurrencyCode",
+      "label": "Artefact price currency"
+    },
+    "hasArtefactRelatedAgent": {
+      "category": "property",
+      "description": "Range: string or Agent",
+      "label": "Associated agent"
+    },
+    "hasArtefactRelatedEditorialObject": {
+      "category": "property",
+      "description": "Range: string or EditorialObject",
+      "label": "Associated editorial object"
+    },
+    "hasArtefactRelatedLocation": {
+      "category": "property",
+      "description": "Range: string or Location",
+      "label": "Associated location"
+    },
+    "hasArtefactRelatedPhysicalResource": {
+      "category": "property",
+      "description": "Range: string or PhysicalResource",
+      "label": "Associated physical resource"
+    },
+    "hasArtefactRelatedResource": {
+      "category": "property",
+      "description": "Range: string or Resource",
+      "label": "Associated resource"
+    },
+    "hasArtefactRetailer": {
+      "category": "property",
+      "description": "Range: string or Agent",
+      "label": "Retailer"
+    },
+    "hasArtefactSupplier": {
+      "category": "property",
+      "description": "Range: string or Agent",
+      "label": "Supplier"
+    },
+    "hasAssetRelatedBusinessObject": {
+      "category": "property",
+      "description": "To associate a BusinessObject with an Asset.",
+      "label": "Related business object"
+    },
+    "hasAssetRelatedEditorialObject": {
+      "category": "property",
+      "description": "To associate an EditorialObject with an Asset.",
+      "label": "Related editorial object"
+    },
+    "hasAssetRelatedMediaResource": {
+      "category": "property",
+      "description": "To identify a related MediaResource.",
+      "label": "Asset related media resource"
+    },
+    "hasAssetRelatedResource": {
+      "category": "property",
+      "description": "To identify a related Resource.",
+      "label": "Asset related resource"
+    },
+    "hasAssociatedArtefact": {
+      "category": "property",
+      "label": "Related Artefact"
+    },
+    "hasAssociatedAsset": {
+      "category": "property",
+      "description": "To identify an associated asset.",
+      "label": "Associated asset"
+    },
+    "hasAssociatedRelation": {
+      "category": "property",
+      "description": "To define a Relation.",
+      "label": "Relation"
+    },
+    "hasAudienceScoreRecordingTechnique": {
+      "category": "property",
+      "description": "Range: string or AudienceScorerecordingTechnique.",
+      "label": "Audience score recording technique"
+    },
+    "hasAudioCodec": {
+      "category": "property",
+      "description": "Range:string or AudioCodec",
+      "label": "Audio codec"
+    },
+    "hasCodec": {
+      "category": "property",
+      "description": "Range: string or Codec",
+      "label": "Codec"
+    },
+    "hasAudioContentType": {
+      "category": "property",
+      "description": "Range:string or AudioContent_Type.",
+      "label": "Audio content type"
+    },
+    "hasAudioDescription": {
+      "category": "property",
+      "description": "To signal the presence of AudioDescription.",
+      "label": "Audio description"
+    },
+    "hasAudioEncodingFormat": {
+      "category": "property",
+      "description": "Range: string or AudioEncodingFormat",
+      "label": "Audio encoding format"
+    },
+    "hasAudioProgrammeType": {
+      "category": "property",
+      "description": "Range:string or AudioProgramme_Type",
+      "label": "Audio programme type."
+    },
+    "hasAudioTrack": {
+      "category": "property",
+      "description": "To identify AudioTracks in the Resource.",
+      "label": "Audio track"
+    },
+    "hasAwardRelatedAgent": {
+      "category": "property",
+      "description": "Range: string or Agent.",
+      "label": "Agent"
+    },
+    "hasAwardRelatedBusinessObject": {
+      "category": "property",
+      "description": "To link a BusinessObject to an Award.",
+      "label": "Business object"
+    },
+    "hasAwardRelatedEvent": {
+      "category": "property",
+      "description": "An Event e.g. a ceremony, associated to an Award.",
+      "label": "Event"
+    },
+    "hasBeenAwarded": {
+      "category": "property",
+      "description": "Range: a string or an Award.",
+      "label": "Agent"
+    },
+    "hasCaptioning": {
+      "category": "property",
+      "description": "To signal the presence of Captioning.",
+      "label": "Captioning"
+    },
+    "hasCaptioningFormat": {
+      "category": "property",
+      "description": "Range: string or CaptioningFormat",
+      "label": "Captioning format"
+    },
+    "hasCaptioningSource": {
+      "category": "property",
+      "description": "Range: string or Agent",
+      "label": "Captioning source"
+    },
+    "hasCastMember": {
+      "category": "property",
+      "description": "A member of the cast.",
+      "label": "Cast member"
+    },
+    "hasCastRole": {
+      "category": "property",
+      "description": "Range: a string or a Role/Concept from a controlled vocabulary.",
+      "label": "Cast role"
+    },
+    "hasChannelLogo": {
+      "category": "property",
+      "description": "The logo of a Publication Channel",
+      "label": "Channel logo"
+    },
+    "hasLogo": {
+      "category": "property",
+      "description": "Logos can be used in a variety of contexts. Logo can be associated with an Organisation or a Service or a PublicationChannel.",
+      "label": "Logo"
+    },
+    "hasChannelPublicationEvent": {
+      "category": "property",
+      "description": "To associate PublicationEvents with PublicationChannels.",
+      "label": "Publication event"
+    },
+    "hasCharacter": {
+      "category": "property",
+      "description": "Range: a string or a \"fictitious\" person - Character.",
+      "label": "Character"
+    },
+    "hasCodecVendor": {
+      "category": "property",
+      "description": "Range: string or Agent.",
+      "label": "Codec vendor"
+    },
+    "hasColourSpace": {
+      "category": "property",
+      "description": "Range: string or Concept",
+      "label": "Colour space"
+    },
+    "hasContact": {
+      "category": "property",
+      "description": "Range: a link to a Contact or a string.",
+      "label": "Contact"
+    },
+    "hasContainerCodec": {
+      "category": "property",
+      "description": "Range: string or ContainerCodec",
+      "label": "Container codec"
+    },
+    "hasContainerEncodingFormat": {
+      "category": "property",
+      "description": "Range: string or ContainerEncodingFormat",
+      "label": "Container encoding format"
+    },
+    "hasContainerMimeType": {
+      "category": "property",
+      "description": "Range: string or MimeType",
+      "label": "Mime type"
+    },
+    "hasContentEditorialFormat": {
+      "category": "property",
+      "description": "Range: string or ContentEditorialFormat.",
+      "label": "Editorial format"
+    },
+    "hasContributor": {
+      "category": "property",
+      "description": "Range: string or Agent",
+      "label": "Contributor"
+    },
+    "hasCopyright": {
+      "category": "property",
+      "description": "Range: string or Copyright.",
+      "label": "Copyright"
+    },
+    "hasCostumeType": {
+      "category": "property",
+      "description": "Range: a string or Costume_type e.g. a Concept code from a vocabulary, e.g. Getty.",
+      "label": "Costume type"
+    },
+    "hasCountryOfBirth": {
+      "category": "property",
+      "description": "Range: string or CountryCode",
+      "label": "Country of birth"
+    },
+    "hasCountryOfDeath": {
+      "category": "property",
+      "description": "Range: string or CountryCode",
+      "label": "Country of death"
+    },
+    "hasCoverage": {
+      "category": "property",
+      "description": "Range: string or Event or Location",
+      "label": "Coverage"
+    },
+    "hasCoverageRestrictions": {
+      "category": "property",
+      "description": "Range: string or CoverageRestrictions.",
+      "label": "Coverage restrictions"
+    },
+    "hasCreationLocation": {
+      "category": "property",
+      "description": "Range: string or Location.",
+      "label": "Creation location"
+    },
+    "hasCreativeCommons": {
+      "category": "property",
+      "description": "Range: string or Creative Commons.",
+      "label": "Creative Commons"
+    },
+    "hasCreator": {
+      "category": "property",
+      "description": "Range: string or Agent.",
+      "label": "Creator"
+    },
+    "hasCrewMember": {
+      "category": "property",
+      "description": "A member of the crew.",
+      "label": "Crew member"
+    },
+    "hasCrewRole": {
+      "category": "property",
+      "description": "Range: a string or a Role/Concept from a controlled vocabulary.",
+      "label": "Crew role"
+    },
+    "hasCuisineOrigin": {
+      "category": "property",
+      "description": "Range: a string or CountryCode",
+      "label": "Cuisine origin"
+    },
+    "hasCuisineStyle": {
+      "category": "property",
+      "description": "Range: a string or CuisineStyle",
+      "label": "Cuisine style"
+    },
+    "hasDataFormat": {
+      "category": "property",
+      "description": "Range: string or DataFormat",
+      "label": "Data format"
+    },
+    "hasDataTrack": {
+      "category": "property",
+      "description": "To identify DataTracks in the Resource.",
+      "label": "Data track"
+    },
+    "hasDepartment": {
+      "category": "property",
+      "description": "Range: string or Department.",
+      "label": "Department"
+    },
+    "hasDisclaimer": {
+      "category": "property",
+      "description": "Range: string or Disclaimer.",
+      "label": "Disclaimer"
+    },
+    "hasDocumentFormat": {
+      "category": "property",
+      "description": "Range: string or Document format",
+      "label": "Document format"
+    },
+    "hasDopesheet": {
+      "category": "property",
+      "description": "Range: string or Dopesheet.",
+      "label": "Dopesheet"
+    },
+    "hasDubbedLanguage": {
+      "category": "property",
+      "description": "Range: string or Language.",
+      "label": "Dubbed language"
+    },
+    "hasLanguage": {
+      "category": "property",
+      "description": "Range: string or Language.",
+      "label": "Language"
+    },
+    "hasEidrIdentifier": {
+      "category": "property",
+      "description": "Range: string or Identifier.",
+      "label": "EIDR"
+    },
+    "hasIdentifier": {
+      "category": "property",
+      "description": "Range: string or Identifier.",
+      "label": "Identifier"
+    },
+    "hasEmotionRelatedAgent": {
+      "category": "property",
+      "description": "Range: String or Agent",
+      "label": "Emotion related agent"
+    },
+    "hasEmotionRelatedScene": {
+      "category": "property",
+      "description": "Range: string or Scene",
+      "label": "Emotion related scene"
+    },
+    "hasEncodingFormat": {
+      "category": "property",
+      "description": "Range: string or Encoding format",
+      "label": "Encoding format"
+    },
+    "hasEpisode": {
+      "category": "property",
+      "description": "Range: string or Episode.",
+      "label": "Episode"
+    },
+    "hasEventRelatedAgent": {
+      "category": "property",
+      "description": "Range: string or Agent",
+      "label": "Agent"
+    },
+    "hasEventRelatedArtefact": {
+      "category": "property",
+      "description": "An artefact related to an Event.",
+      "label": "Artefact"
+    },
+    "hasEventRelatedBusinessObject": {
+      "category": "property",
+      "description": "A BusinessObject relates to an Event.",
+      "label": "Business object"
+    },
+    "hasEventRelatedEvent": {
+      "category": "property",
+      "description": "An Event relates to an Event.",
+      "label": "Event"
+    },
+    "hasEventRelatedLocation": {
+      "category": "property",
+      "description": "Range: a Location or a string",
+      "label": "Location"
+    },
+    "hasEventRelatedResource": {
+      "category": "property",
+      "description": "A Resource relates to an Event.",
+      "label": "Resource"
+    },
+    "hasEventType": {
+      "category": "property",
+      "description": "To define a type of Event.",
+      "label": "Agent"
+    },
+    "hasExploitationIssues": {
+      "category": "property",
+      "description": "Range: string or Exploitation Issues.",
+      "label": "Exploitation Issues"
+    },
+    "hasFileFormat": {
+      "category": "property",
+      "description": "Range: string or FileFormat.",
+      "label": "File format"
+    },
+    "hasFoodStyle": {
+      "category": "property",
+      "description": "Range: string or FoodStyle.",
+      "label": "Food style"
+    },
+    "hasFormatId": {
+      "category": "property",
+      "description": "Range: Identifier or string or anyURI.",
+      "label": "Format identifier"
+    },
+    "hasGeneration": {
+      "category": "property",
+      "description": "Identifies the generation of a version of a resource, i.e. master, edit master, distribution copy, etc.",
+      "label": "Generation"
+    },
+    "hasGenre": {
+      "category": "property",
+      "description": "To define a Genre/category associated to the BusinesssObject.",
+      "label": "Genre"
+    },
+    "hasIMediaIdentifier": {
+      "category": "property",
+      "description": "Range: string or Identifier.",
+      "label": "IMedia Id"
+    },
+    "hasIPRRestrictions": {
+      "category": "property",
+      "description": "Range: string or IPR Restrictions.",
+      "label": "IPR restrictions"
+    },
+    "hasIdPicture": {
+      "category": "property",
+      "description": "A locator / URI or a Picture.",
+      "label": "Identification picture"
+    },
+    "hasIdentifierType": {
+      "category": "property",
+      "description": "Range: Concept or string",
+      "label": "Identifier type"
+    },
+    "hasImageCodec": {
+      "category": "property",
+      "description": "Range: string or Codec",
+      "label": "Image codec"
+    },
+    "hasImageFormat": {
+      "category": "property",
+      "description": "Range: string or ImageFormat",
+      "label": "Image format"
+    },
+    "hasIsanIdentifier": {
+      "category": "property",
+      "description": "Range: string or Identifier.",
+      "label": "ISAN"
+    },
+    "hasKeyCareerEvent": {
+      "category": "property",
+      "description": "Range: string or KeyCareerEvent",
+      "label": "Career event"
+    },
+    "hasKeyPersonalEvent": {
+      "category": "property",
+      "description": "Range: string or KeyPersonalEvent",
+      "label": "Personal event"
+    },
+    "hasKeyword": {
+      "category": "property",
+      "description": "Range: Keyword or string or any URI from a controlled vocabulary",
+      "label": "Keyword"
+    },
+    "hasSubject": {
+      "category": "property",
+      "description": "Range: string, anyURI or Subject",
+      "label": "Subject"
+    },
+    "hasLicensing": {
+      "category": "property",
+      "description": "Range: string or Licensing.",
+      "label": "Licensing"
+    },
+    "hasLocationCode": {
+      "category": "property",
+      "description": "Range: string or LocationCode.",
+      "label": "Locationcode"
+    },
+    "hasLocationPicture": {
+      "category": "property",
+      "description": "A picture associated with a Location.",
+      "label": "Picture"
+    },
+    "hasLocationRelatedArtefact": {
+      "category": "property",
+      "description": "Range: a string or an Artefact.",
+      "label": "Artefact"
+    },
+    "hasLocationRelatedEvent": {
+      "category": "property",
+      "description": "Range: a string or an Event.",
+      "label": "Event"
+    },
+    "hasLocationRelatedResource": {
+      "category": "property",
+      "description": "To identify a Resource associated with a Location.",
+      "label": "Related resource"
+    },
+    "hasLocationType": {
+      "category": "property",
+      "description": "Range: string or LocationType.",
+      "label": "Locationcode"
+    },
+    "hasLocator": {
+      "category": "property",
+      "description": "A locator from where the MediaResource can be accessed.",
+      "label": "Locator"
+    },
+    "hasManifestation": {
+      "category": "property",
+      "description": "A manifestation is the physical embodiment of work e.g. a tape, a file...",
+      "label": "Manifestation"
+    },
+    "hasMaster": {
+      "category": "property",
+      "description": "To identify the master of a Resource",
+      "label": "Master"
+    },
+    "hasMediaFragment": {
+      "category": "property",
+      "description": "To define relation to MediaFragments withiin a MediaResource.",
+      "label": "Fragment"
+    },
+    "isMediaFragmentOf": {
+      "category": "property",
+      "description": "To identify the Media Resource to which a Media Fragment belongs to",
+      "label": "Media fragment source"
+    },
+    "hasMedium": {
+      "category": "property",
+      "description": "Range: string or Medium",
+      "label": "Medium"
+    },
+    "hasMember": {
+      "category": "property",
+      "description": "To establish group/collection relationship between EditorialObjects.",
+      "label": "Member."
+    },
+    "hasMemberPublicationPlan": {
+      "category": "property",
+      "description": "To identify a PublicationPlan that forms part of another PublicationPlan.",
+      "label": "Publication  plan member"
+    },
+    "hasMetadataTrack": {
+      "category": "property",
+      "description": "To identify MetadataTracks in the Resource.",
+      "label": "Metadata track"
+    },
+    "hasMimeType": {
+      "category": "property",
+      "description": "Range: string or MimeType",
+      "label": "Mime type"
+    },
+    "hasObjectType": {
+      "category": "property",
+      "description": "Range: string or ObjectType.",
+      "label": "Object/asset type"
+    },
+    "hasOrganisationLogo": {
+      "category": "property",
+      "description": "The logo representing an Organisation",
+      "label": "Organisation logo"
+    },
+    "hasOrganisationStaff": {
+      "category": "property",
+      "description": "Range: string or Staff.",
+      "label": "Staff"
+    },
+    "hasOriginalLanguage": {
+      "category": "property",
+      "description": "Range: string or Language.",
+      "label": "Original language"
+    },
+    "hasParentEditorialObject": {
+      "category": "property",
+      "description": "To link a EditorialOject to a parent.",
+      "label": "Parent editorial object"
+    },
+    "hasParentMediaResource": {
+      "category": "property",
+      "description": "To link a MediaResource to a parent.",
+      "label": "Parent resource"
+    },
+    "hasPart": {
+      "category": "property",
+      "description": "To define Parts (segments, fragments, shots, etc.) within an EditorialObject.",
+      "label": "Part"
+    },
+    "hasPartType": {
+      "category": "property",
+      "description": "A type of Part.",
+      "label": "Part type"
+    },
+    "hasParticipatingAgent": {
+      "category": "property",
+      "description": "To identify participating Agents.",
+      "label": "Participating agent"
+    },
+    "hasPictogram": {
+      "category": "property",
+      "description": "Range: a locator/URI or a Picture.",
+      "label": "Pictogram"
+    },
+    "hasPlaceOfBirth": {
+      "category": "property",
+      "description": "To identify the place of birth.",
+      "label": "Birth place"
+    },
+    "hasPlaceOfDeath": {
+      "category": "property",
+      "description": "To identify the place of death.",
+      "label": "Death place"
+    },
+    "hasProducer": {
+      "category": "property",
+      "description": "Range: string or Agent.",
+      "label": "Producer"
+    },
+    "hasProductionLocation": {
+      "category": "property",
+      "description": "Range: a Location or string",
+      "label": "Production location"
+    },
+    "hasProvenance": {
+      "category": "property",
+      "description": "Range: string, anyURI or Concept.",
+      "label": "Provenance"
+    },
+    "hasProvenanceTarget": {
+      "category": "property",
+      "description": "The instance of an object sourced by the Provenance.",
+      "label": "Provenance target"
+    },
+    "hasPublicationEvent": {
+      "category": "property",
+      "description": "To associate PublicationEvents with PublicationChannels or as elements of a PublicationHistory or PublicationPlanning.",
+      "label": "Publication event"
+    },
+    "hasPublicationHistory": {
+      "category": "property",
+      "description": "To provide the history of publication of an EditorailObject or MediaResource.",
+      "label": "Publication history"
+    },
+    "hasPublicationMedium": {
+      "category": "property",
+      "description": "Range: string or PublicationMedium.",
+      "label": "Publication medium"
+    },
+    "hasPublicationPlanMember": {
+      "category": "property",
+      "description": "To identify a subplan of a publication plan.",
+      "label": "Publication plan member."
+    },
+    "hasPublicationPlanType": {
+      "category": "property",
+      "description": "Range: string or PublicationPlan_type.",
+      "label": "Publication plan type"
+    },
+    "hasPublicationRegion": {
+      "category": "property",
+      "description": "Range: string or Location",
+      "label": "Publication region"
+    },
+    "hasPublisher": {
+      "category": "property",
+      "description": "To identify an Agent involved in the publication of the Resource or BusinessObject.",
+      "label": "Publisher"
+    },
+    "hasRating": {
+      "category": "property",
+      "description": "Range: a string or a Rating.",
+      "label": "Rating"
+    },
+    "hasRatingProvider": {
+      "category": "property",
+      "description": "Range: string or Agent.",
+      "label": "Rating source / agent"
+    },
+    "hasRatingSource": {
+      "category": "property",
+      "description": "Range: string or Agent.",
+      "label": "Rating source / agent"
+    },
+    "hasRelatedAnimal": {
+      "category": "property",
+      "description": "To identify animals associate with an Asset.",
+      "label": "Related animal"
+    },
+    "hasRelatedArtefact": {
+      "category": "property",
+      "description": "Range: string or Artefact.",
+      "label": "Related artefact"
+    },
+    "hasRelatedAsset": {
+      "category": "property",
+      "description": "To identify related Assets.",
+      "label": "Related asset"
+    },
+    "hasRelatedAudioContent": {
+      "category": "property",
+      "description": "To identify related Audio Content",
+      "label": "Audio content"
+    },
+    "hasRelatedAudioObject": {
+      "category": "property",
+      "description": "To identify related Audio Objects",
+      "label": "Audio object"
+    },
+    "hasRelatedAudioProgramme": {
+      "category": "property",
+      "description": "A related audio programme",
+      "label": "Audio programme"
+    },
+    "hasRelatedAudioTrack": {
+      "category": "property",
+      "description": "To identify related Audio Tracks",
+      "label": "Audio track"
+    },
+    "hasRelatedAward": {
+      "category": "property",
+      "description": "Range: string or Award.",
+      "label": "Related award"
+    },
+    "hasRelatedEditorialObject": {
+      "category": "property",
+      "description": "To identify related EditorialObjects.",
+      "label": "Related editorial object"
+    },
+    "hasRelatedEssence": {
+      "category": "property",
+      "description": "To establish a relation between a MediaResource and an Essence.",
+      "label": "Related essence"
+    },
+    "hasRelatedEvent": {
+      "category": "property",
+      "description": "A property to identify the Events, all real or fictional, covered by the EditorialObject.",
+      "label": "Event"
+    },
+    "hasRelatedImage": {
+      "category": "property",
+      "description": "To associate an Image with a BusinessObject.",
+      "label": "Image"
+    },
+    "hasRelatedLocation": {
+      "category": "property",
+      "description": "A property to identify the Locations, all real or fictional, covered by the EditorialObject.",
+      "label": "Location"
+    },
+    "hasRelatedMediaFragment": {
+      "category": "property",
+      "description": "To associate a Part of an Asset with a MediaFragment within the association MediaResource instantiating the Asset.",
+      "label": "Media fragment"
+    },
+    "hasRelatedMediaResource": {
+      "category": "property",
+      "description": "To identify a MediaResource associated with an Asset or a BusinessObject or a PublicationEvent or another Resource.",
+      "label": "Related media resource"
+    },
+    "hasRelatedPicture": {
+      "category": "property",
+      "description": "To associate a Picture with a BusinessObject or a Resource.",
+      "label": "Picture"
+    },
+    "hasRelatedPublicationChannel": {
+      "category": "property",
+      "description": "Range: string or PublicationChannel",
+      "label": "Publication channel"
+    },
+    "hasRelatedPublicationEvent": {
+      "category": "property",
+      "description": "To identify the PublicationEvent associated with a MediaResource (manifestation of an EditorialObject).",
+      "label": "Publication event"
+    },
+    "hasRelatedRecord": {
+      "category": "property",
+      "description": "Range, a string a URI or a Record.",
+      "label": "Related record"
+    },
+    "hasRelatedResource": {
+      "category": "property",
+      "description": "To identify a Resource associated with an Asset or a BusinessObject or a PublicationEvent or another Resource.",
+      "label": "Related resource"
+    },
+    "hasRelatedService": {
+      "category": "property",
+      "description": "Range: string or Service.",
+      "label": "Related Service"
+    },
+    "hasRelatedTextLine": {
+      "category": "property",
+      "description": "A TextLine or free text related to an EditorialObject.",
+      "label": "Related text line"
+    },
+    "hasRelationSource": {
+      "category": "property",
+      "description": "Range: string or Agent.",
+      "label": "Relation source"
+    },
+    "hasResourceLocator": {
+      "category": "property",
+      "description": "A locator from where the Resource can be accessed.",
+      "label": "Locator"
+    },
+    "hasReview": {
+      "category": "property",
+      "description": "Range: string or Review.",
+      "label": "Review"
+    },
+    "hasRightsClearance": {
+      "category": "property",
+      "description": "Range: string or Rights Clearance.",
+      "label": "Rights clearance"
+    },
+    "hasRightsContact": {
+      "category": "property",
+      "description": "Range: a string or a Contact.",
+      "label": "Contact"
+    },
+    "hasRightsHolder": {
+      "category": "property",
+      "description": "Range: a string or an Agent.",
+      "label": "Rights holder"
+    },
+    "hasRole": {
+      "category": "property",
+      "description": "Range: a string or a Role/Concept from a controlled vocabulary.",
+      "label": "Role"
+    },
+    "hasSeason": {
+      "category": "property",
+      "description": "To identiify Seasons in a Series.",
+      "label": "Season"
+    },
+    "hasServiceGenre": {
+      "category": "property",
+      "description": "Range: string or Genre",
+      "label": "Service genre"
+    },
+    "hasServiceLogo": {
+      "category": "property",
+      "description": "The Logo characterising a Service",
+      "label": "Service logo"
+    },
+    "hasShootingLocation": {
+      "category": "property",
+      "description": "Range: Location or string",
+      "label": "Shooting location"
+    },
+    "hasSigning": {
+      "category": "property",
+      "description": "A locator/URI to a resource or a Signing resource.",
+      "label": "Accessibility - signing"
+    },
+    "hasSigningFormat": {
+      "category": "property",
+      "description": "Range: string or SigningFormat.",
+      "label": "Signing format"
+    },
+    "hasSigningSource": {
+      "category": "property",
+      "description": "Range: string or Agent.",
+      "label": "Signing source"
+    },
+    "hasSource": {
+      "category": "property",
+      "description": "To identify the source of a MediaResource.",
+      "label": "Source"
+    },
+    "hasStaffMember": {
+      "category": "property",
+      "description": "Range: string or Staff.",
+      "label": "member of Staff"
+    },
+    "hasStaffRole": {
+      "category": "property",
+      "description": "Range: a string or a Role/Concept from a controlled vocabulary.",
+      "label": "Staff role"
+    },
+    "hasStakeholder": {
+      "category": "property",
+      "description": "Range: Agent or string",
+      "label": "Publication plan stakeholder"
+    },
+    "hasStandard": {
+      "category": "property",
+      "description": "Identifies the technical video standard of a MediaResource, i.e. NTSC or PAL.",
+      "label": "Standard"
+    },
+    "hasStorageId": {
+      "category": "property",
+      "description": "Range: Identifier, anyURI, string",
+      "label": "Storage identifier"
+    },
+    "hasStorageType": {
+      "category": "property",
+      "description": "Range:; string or Storage_Type",
+      "label": "Storage type"
+    },
+    "hasSubtitling": {
+      "category": "property",
+      "description": "Range: string or Subtitling",
+      "label": "Subtitling"
+    },
+    "hasSubtitlingFormat": {
+      "category": "property",
+      "description": "Range: string or SubtitlingFormat",
+      "label": "Subtitling format"
+    },
+    "hasSubtitlingSource": {
+      "category": "property",
+      "description": "Range: a string or an Agent.",
+      "label": "Subtitling source"
+    },
+    "hasTargetAudience": {
+      "category": "property",
+      "description": "Range: string or TargetAudience.",
+      "label": "Target audience"
+    },
+    "hasTargetPlatform": {
+      "category": "property",
+      "description": "To specify a target platform.",
+      "label": "Target platform"
+    },
+    "hasTeamMember": {
+      "category": "property",
+      "description": "Range: a Person or a string",
+      "label": "Team member"
+    },
+    "hasTextLineId": {
+      "category": "property",
+      "description": "Range: string or Identifier.",
+      "label": "Text line identifier."
+    },
+    "hasTextLineRelatedAgent": {
+      "category": "property",
+      "description": "Range: string or Agent.",
+      "label": "Text line related agent"
+    },
+    "hasTextLineRelatedCharacter": {
+      "category": "property",
+      "description": "Range: string or Character.",
+      "label": "Text line related character"
+    },
+    "hasTextLineRelatedScene": {
+      "category": "property",
+      "description": "Range: string or Scene.",
+      "label": "Text line related scene"
+    },
+    "hasTextLineSource": {
+      "category": "property",
+      "description": "Range: string or Agent.",
+      "label": "Text line source"
+    },
+    "hasTextLineType": {
+      "category": "property",
+      "description": "Range: string or TextLine_Type",
+      "label": "Text line type"
+    },
+    "hasTheme": {
+      "category": "property",
+      "description": "Range: a Concept, anyURI or a string",
+      "label": "Theme"
+    },
+    "hasTimecodeTrack": {
+      "category": "property",
+      "description": "To identify a timecode track with a MediaResource.",
+      "label": "Timecode track"
+    },
+    "hasTimelineTrack": {
+      "category": "property",
+      "description": "To associate a TimelineTrack with an EditorialObject",
+      "label": "Timeline track"
+    },
+    "hasTimelineTrackPart": {
+      "category": "property",
+      "description": "To associate an EditorialObject to a TimelineTrackPart",
+      "label": "Timeline track part"
+    },
+    "hasTimelineTrackType": {
+      "category": "property",
+      "description": "Range: string or anyURI or TimelineTrack_Type.",
+      "label": "Timeline track type"
+    },
+    "hasTopic": {
+      "category": "property",
+      "description": "Range: a Topic, anyURI or a string",
+      "label": "Topic"
+    },
+    "hasTrack": {
+      "category": "property",
+      "description": "To associate audio/data/video tracks with a MediaResource.",
+      "label": "Track"
+    },
+    "hasTrackPart": {
+      "category": "property",
+      "description": "An element to identify a part of a track by a title, a start time and an end time in both the media source and media destinationn.",
+      "label": "Track part source"
+    },
+    "hasTrackPurpose": {
+      "category": "property",
+      "description": "Range: string or TrackPurpose.",
+      "label": "Track purpose"
+    },
+    "hasType": {
+      "category": "property",
+      "description": "An type of Asset.",
+      "label": "Type"
+    },
+    "hasUsageRestrictions": {
+      "category": "property",
+      "description": "Range: string or UsageRestrictions.",
+      "label": "Usage restrictions"
+    },
+    "hasUsageRights": {
+      "category": "property",
+      "description": "Range: string or UsageRights.",
+      "label": "Usage rights"
+    },
+    "hasVersion": {
+      "category": "property",
+      "description": "To identify another version of an Asset, BusinessObject or Resource.",
+      "label": "Version"
+    },
+    "isVersionOf": {
+      "category": "property",
+      "description": "To identify related versions.",
+      "label": "Version of"
+    },
+    "hasVideoCodec": {
+      "category": "property",
+      "description": "Range: string or VideoCodec",
+      "label": "Video codec"
+    },
+    "hasVideoEncodingFormat": {
+      "category": "property",
+      "description": "Range: string or VideoEncodingFormat",
+      "label": "Audio encoding format"
+    },
+    "hasVideoTrack": {
+      "category": "property",
+      "description": "To identify VideoTracks in the Resource.",
+      "label": "Video track"
+    },
+    "hasWrappingType": {
+      "category": "property",
+      "description": "Range: string or WrappingType.",
+      "label": "Wrapping type"
+    },
+    "hashValue": {
+      "category": "property",
+      "description": "The hash value associated to a Resource. There are different methods / algorithms to calculate hash values, which can be defined as subproperties.",
+      "label": "Hash code"
+    },
+    "highlights": {
+      "category": "property",
+      "description": "To provide highlights.",
+      "label": "Highlights"
+    },
+    "hobbies": {
+      "category": "property",
+      "description": "The hobbies of a Person.",
+      "label": "Hobbies"
+    },
+    "iFrameSize": {
+      "category": "property",
+      "description": "The distance between 2 I-frames also known as the gop size.",
+      "label": "I-frame/Gop size"
+    },
+    "idDateOfCreation": {
+      "category": "property",
+      "description": "The date when the identifier was generated.",
+      "label": "Date of creation"
+    },
+    "identifierValue": {
+      "category": "property",
+      "description": "Range: string or anyURI.",
+      "label": "Identifier value"
+    },
+    "inchesPerSecond": {
+      "category": "property",
+      "description": "Identifies the inches per second at which an analog audio tape should be played back for human consumption.",
+      "label": "Inches per second"
+    },
+    "playbackSpeed": {
+      "category": "property",
+      "description": "Identifies the rate of units against time at which the resource should be played back for human consumption.  If the unit of measure is known, use sub-properties framesPerSecond or inchesPerSecond.",
+      "label": "Playback speed"
+    },
+    "instantiates": {
+      "category": "property",
+      "description": "To link a particular manifestation of a BusinessObject to the corresponding Resource.",
+      "label": "Business object"
+    },
+    "isAgent": {
+      "category": "property",
+      "description": "Range: string or Agent."
+    },
+    "isAnimalGroom": {
+      "category": "property",
+      "description": "To identify the groom / care taker of an animal.",
+      "label": "Animal groom"
+    },
+    "isAnimalOwner": {
+      "category": "property",
+      "description": "To identify the owner of an animal.",
+      "label": "Animal owner"
+    },
+    "isAnnotatedMediaResource": {
+      "category": "property",
+      "description": "To link an Annotation to a MediaResource.",
+      "label": "Media resource"
+    },
+    "isAnnotationBy": {
+      "category": "property",
+      "description": "To link an Annotation to an Agent who created it.",
+      "label": "Agent"
+    },
+    "isAttributedTo": {
+      "category": "property",
+      "description": "Tassociate an Agent with a Provenance instance.",
+      "label": "Provenance target"
+    },
+    "isBrand": {
+      "category": "property",
+      "description": "Range: a string or Brand",
+      "label": "Brand"
+    },
+    "isCharacter": {
+      "category": "property",
+      "description": "Range: string or Agent.",
+      "label": "Fictional character."
+    },
+    "isChildOf": {
+      "category": "property",
+      "description": "To link a BusinessOject or Resource to a parent.",
+      "label": "Parent"
+    },
+    "isComposedOf": {
+      "category": "property",
+      "description": "To identify mediaResources used to compose an Essence.",
+      "label": "Media Resource"
+    },
+    "ma:hasPermissions": {
+      "category": "property",
+      "description": "To define permissions as defined in the W3C media ontology (ma-ont)",
+      "label": "Permissions"
+    },
+    "isDerivedFrom": {
+      "category": "property",
+      "description": "Identifies a content-based relationship between two resources.",
+      "label": "Derived from"
+    },
+    "isDistributedOn": {
+      "category": "property",
+      "description": "Range: Service or string.",
+      "label": "Platform/Service/PublicationChannel"
+    },
+    "isEditorialFormatOf": {
+      "category": "property",
+      "description": "To identify an Editorial Object based on the same Editorial format",
+      "label": "Same editorial format"
+    },
+    "isEpisodeOf": {
+      "category": "property",
+      "description": "Range: Series or string.",
+      "label": "Parent season / series"
+    },
+    "isEpisodeOfSeason": {
+      "category": "property",
+      "description": "The Episode of a Series or a Season.",
+      "label": "Parent season / series"
+    },
+    "isEpisodeOfSeries": {
+      "category": "property",
+      "description": "The Episode of a Series or a Season.",
+      "label": "Parent season / series"
+    },
+    "isFictitiousPerson": {
+      "category": "property",
+      "description": "Range: a string or a FictitiousPerson.",
+      "label": "Fictitious contact"
+    },
+    "isInstantiatedBy": {
+      "category": "property",
+      "description": "To identify a MediaResource instantiating an EditorialObject.",
+      "label": "Media Resource"
+    },
+    "isIssuedBy": {
+      "category": "property",
+      "description": "Range: Agent or String",
+      "label": "Issuer"
+    },
+    "isMasterOf": {
+      "category": "property",
+      "description": "To identify the master of a derived media resource.",
+      "label": "Derived media resource"
+    },
+    "isMemberOf": {
+      "category": "property",
+      "description": "Range: string or Group.",
+      "label": "Member of"
+    },
+    "isMemberOfPublicationPlan": {
+      "category": "property",
+      "description": "To identify a parent Publication Plan",
+      "label": "Parent publication  plan"
+    },
+    "isNextInSequence": {
+      "category": "property",
+      "description": "A link to an Asset following the current Asset in an ordered sequence.",
+      "label": "Next"
+    },
+    "isOperatedBy": {
+      "category": "property",
+      "description": "Range: string or Service.",
+      "label": "Operator, owner"
+    },
+    "isOwnedBy": {
+      "category": "property",
+      "description": "Range: string or Agent.",
+      "label": "Owner"
+    },
+    "isParentOf": {
+      "category": "property",
+      "description": "To link a Asset to a parent Asset.",
+      "label": "Child"
+    },
+    "isPartOf": {
+      "category": "property",
+      "description": "To identify the editorial object to which belongs a part.",
+      "label": "Editorial object"
+    },
+    "isPictureIdLocator": {
+      "category": "property",
+      "description": "Range: e.g. a string, URL or Locator.",
+      "label": "Identification picture locator"
+    },
+    "isRatingRelatedToBusinessObject": {
+      "category": "property",
+      "description": "To identify the BusinessObject associated with a Rating.",
+      "label": "Rated business object"
+    },
+    "isRatingRelatedToResource": {
+      "category": "property",
+      "description": "To identify the resource associated with a Rating.",
+      "label": "Rated Resource"
+    },
+    "isReferencedBy": {
+      "category": "property",
+      "description": "To described references between assets.",
+      "label": "Reference source"
+    },
+    "isReleasedBy": {
+      "category": "property",
+      "description": "Range: Service or string",
+      "label": "Service"
+    },
+    "isReplacedBy": {
+      "category": "property",
+      "description": "To identify substitutions.",
+      "label": "Replacement"
+    },
+    "isRequiredBy": {
+      "category": "property",
+      "description": "To express strong relations between Assets, BusinessObjects or Resources.",
+      "label": "Required"
+    },
+    "isScheduledOn": {
+      "category": "property",
+      "description": "To associatre a PublicationEvent with an EditorialObject.",
+      "label": "Publication event"
+    },
+    "isSeasonOf": {
+      "category": "property",
+      "description": "Range: Series or string.",
+      "label": "Series"
+    },
+    "isSeriesOf": {
+      "category": "property",
+      "description": "Range: Brand or string.",
+      "label": "Brand"
+    },
+    "isTimelineTrackPartOf": {
+      "category": "property",
+      "description": "To associate an EditorialObject with a part of the TimelineTrack.",
+      "label": "Editorial Object"
+    },
+    "isTrackPartOf": {
+      "category": "property",
+      "description": "An element to identify a part of a track by a title, a start time and an end time in both the media source and media destination.",
+      "label": "Track part source"
+    },
+    "lineNumber": {
+      "category": "property",
+      "description": "To provide the number of the line on which ancillary data is being carried and the equivalent in the digital domain.",
+      "label": "Line number"
+    },
+    "linkToLogo": {
+      "category": "property",
+      "description": "Range: string or Logo",
+      "label": "Link to logo"
+    },
+    "linkToSticker": {
+      "category": "property",
+      "description": "Range: anyURI or Sticker.",
+      "label": "Link to Sticker"
+    },
+    "live": {
+      "category": "property",
+      "description": "A flag to signal that content is live",
+      "label": "live"
+    },
+    "localFamiliyName": {
+      "category": "property",
+      "description": "To provide a family name in its local expression.",
+      "label": "Local familiy name"
+    },
+    "localGivenName": {
+      "category": "property",
+      "description": "To provide a given name in its local expression.",
+      "label": "Local given name"
+    },
+    "locationAddress": {
+      "category": "property",
+      "description": "To provide the address of a Location.",
+      "label": "Address"
+    },
+    "locationAddressArea": {
+      "category": "property",
+      "description": "To provide the Area part of an Adrress.",
+      "label": "Area"
+    },
+    "locationAddressCountry": {
+      "category": "property",
+      "description": "To provide the country name and or country code.",
+      "label": "Country"
+    },
+    "locationAddressLine": {
+      "category": "property",
+      "description": "To provide an address line.",
+      "label": "Adress line"
+    },
+    "locationAddressLocality": {
+      "category": "property",
+      "description": "To provide the name of a city, village, etc.",
+      "label": "Locality"
+    },
+    "locationAddressPostalCode": {
+      "category": "property",
+      "description": "To provide an address postal code.",
+      "label": "Postal code"
+    },
+    "locationAltitude": {
+      "category": "property",
+      "description": "To define the altitude of a Location in meters.",
+      "label": "Altitude"
+    },
+    "locationCoordinateSystemName": {
+      "category": "property",
+      "description": "To specify the name of the gps coordinate system used for the Location.",
+      "label": "Coordinate system"
+    },
+    "locationDescription": {
+      "category": "property",
+      "description": "To provide a description of a particular Location.",
+      "label": "Location description"
+    },
+    "locationId": {
+      "category": "property",
+      "description": "An identifier attributed to a Location.",
+      "label": "Location identifier"
+    },
+    "locationLatitude": {
+      "category": "property",
+      "description": "The latitude of the Location.",
+      "label": "Latitude"
+    },
+    "wgs:lat": {
+      "category": "property"
+    },
+    "locationLongitude": {
+      "category": "property",
+      "description": "To define the longitude of the Location.",
+      "label": "Longitude"
+    },
+    "wgs:long": {
+      "category": "property"
+    },
+    "locationName": {
+      "category": "property",
+      "description": "To provide a namefor a particular Location.",
+      "label": "Location name"
+    },
+    "locationRegion": {
+      "category": "property",
+      "description": "Range: string or RegionCode",
+      "label": "Region"
+    },
+    "locationTimeType": {
+      "category": "property",
+      "description": "A type of time at a Location.",
+      "label": "Location type"
+    },
+    "locationType": {
+      "category": "property",
+      "description": "A type of Location.",
+      "label": "Location type"
+    },
+    "locatorTargetInformation": {
+      "category": "property",
+      "description": "Information on the locator target.",
+      "label": "Locator target information"
+    },
+    "log": {
+      "category": "property",
+      "description": "To log everything in the content following predefined rules and criterias, as a neutral sequence of (possibly timed) textual descriptions.",
+      "label": "Log"
+    },
+    "loudnessIntegratedLoudness": {
+      "category": "property",
+      "description": "The value for integrated loudness measured at AudioProgramme or AudioContent level.",
+      "label": "Integrated loudness"
+    },
+    "loudnessParameters": {
+      "category": "property",
+      "description": "To provide loudness parameters.",
+      "label": "Loudness parameters"
+    },
+    "loudnessMaxMomentary": {
+      "category": "property",
+      "description": "The value for maximum momentary loudness measured at AudioProgramme or AudioContent level.",
+      "label": "Max momentary loudness"
+    },
+    "loudnessMaxShortTerm": {
+      "category": "property",
+      "description": "The value for maximum max short term loudness measured at AudioProgramme or AudioContent level.",
+      "label": "Max short term loudness"
+    },
+    "loudnessMaxTruepeak": {
+      "category": "property",
+      "description": "The value for maximum true peak loudness measured at AudioProgramme or AudioContent level.",
+      "label": "Max true peak loudness"
+    },
+    "loudnessMethod": {
+      "category": "property",
+      "description": "The method for loudness measurement at AudioProgramme or AudioContent level.",
+      "label": "Loudness method"
+    },
+    "loudnessRange": {
+      "category": "property",
+      "description": "The loudness range measured at AudioProgramme or AudioContent level.",
+      "label": "Loudness range"
+    },
+    "mainTitle": {
+      "category": "property",
+      "description": "Specifies the main title or name given to the EditorialObject.",
+      "label": "Main title"
+    },
+    "title": {
+      "category": "property",
+      "description": "All value of the EBU title status classification scheme (http://www.ebu.ch/metadata/cs/web/ebu_TitleStatusCodeCS_p.xml.htm) are candidates subproperties of the title property as implemented for an example with alternativeTitle.",
+      "label": "Title"
+    },
+    "maritalStatus": {
+      "category": "property",
+      "description": "To identify the marital status of a Person.",
+      "label": "Marital Status"
+    },
+    "mediaResourceDescription": {
+      "category": "property",
+      "description": "A description of a MediaResource.",
+      "label": "MediaResource description"
+    },
+    "mediaResourceId": {
+      "category": "property",
+      "description": "Range: Identifier or string",
+      "label": "Media resource Id"
+    },
+    "mediaResourceType": {
+      "category": "property",
+      "description": "To identify a type of MediaResource, e.g. a template'.",
+      "label": "Media resource type"
+    },
+    "midRollAdAllowed": {
+      "category": "property",
+      "description": "A flag to indicate whether it is allowed to insert ad breaks in mid-roll.",
+      "label": "Midroll ad allowed"
+    },
+    "middleName": {
+      "category": "property",
+      "description": "To provide one or more middle names for a Person.",
+      "label": "Middle name"
+    },
+    "nickName": {
+      "category": "property",
+      "description": "The nickname of a Person.",
+      "label": "Nickname"
+    },
+    "noiseFilter": {
+      "category": "property",
+      "description": "A flag to signal that a noise filter has been used.",
+      "label": "Noise filter"
+    },
+    "notRated": {
+      "category": "property",
+      "description": "A flag to indicate that the EditorialObejct has not been rated.",
+      "label": "Not rated"
+    },
+    "numberOfAudioTracks": {
+      "category": "property",
+      "description": "To provide the number of audio tracks.",
+      "label": "Number of audio tracks"
+    },
+    "numberOfTracks": {
+      "category": "property",
+      "description": "The number of Tracks composing the MediaResource.",
+      "label": "Number of tracks"
+    },
+    "numberOfVideoTracks": {
+      "category": "property",
+      "description": "To provide the number of video tracks.",
+      "label": "Number of video tracks"
+    },
+    "occupation": {
+      "category": "property",
+      "description": "The job / occupation name of a Person.",
+      "label": "Occupation"
+    },
+    "offers": {
+      "category": "property",
+      "description": "To identify the PublicationEvents provided through a Service.",
+      "label": "PublicationEvent"
+    },
+    "officeEmailAddress": {
+      "category": "property",
+      "description": "To provide the professional/office email address of an Agent (Contact/Person or Organisation).",
+      "label": "Office email"
+    },
+    "officeMobileTelephoneNumber": {
+      "category": "property",
+      "description": "To provide the office mobile telephone number of an Agent (Contact/Person).",
+      "label": "Telephone (private)"
+    },
+    "officeTelephoneNumber": {
+      "category": "property",
+      "description": "To provide the office telephone number of an Agent (Contact/Person).",
+      "label": "Telephone (private)"
+    },
+    "orderedFlag": {
+      "category": "property",
+      "description": "A flag to indicate that a EditorialObject is member of an ordered group or is an ordered group (e.g. Series)",
+      "label": "Ordered flag"
+    },
+    "organisationDescription": {
+      "category": "property",
+      "description": "To provide a description of an Organisation.",
+      "label": "Organisation description"
+    },
+    "organisationId": {
+      "category": "property",
+      "description": "Range: string or Identifier",
+      "label": "Organisation identifier"
+    },
+    "organisationName": {
+      "category": "property",
+      "description": "To provide the full name of an Organisation.",
+      "label": "Organisation name"
+    },
+    "organisationType": {
+      "category": "property",
+      "description": "Range: string or anyURI or Concept.",
+      "label": "Asset type"
+    },
+    "orientation": {
+      "category": "property",
+      "description": "The orientation of a Document or an Image i.e. landscape or portrait.",
+      "label": "Orientation"
+    },
+    "originalTitle": {
+      "category": "property",
+      "description": "The original title used to identify the work.",
+      "label": "Original title."
+    },
+    "packageByteSize": {
+      "category": "property",
+      "description": "The size of a media package in Bytes.",
+      "label": "Package size (in bytes)"
+    },
+    "packageName": {
+      "category": "property",
+      "description": "The name of a media package in Bytes.",
+      "label": "Package name"
+    },
+    "partDefinition": {
+      "category": "property",
+      "description": "A definition associated with the Part.",
+      "label": "Part definition"
+    },
+    "partDescription": {
+      "category": "property",
+      "description": "A description associated with the Part.",
+      "label": "Part definition"
+    },
+    "partId": {
+      "category": "property",
+      "description": "Range: a string or Identifier",
+      "label": "Part identifier"
+    },
+    "partName": {
+      "category": "property",
+      "description": "A name associated with the Part.",
+      "label": "Part name"
+    },
+    "partNumber": {
+      "category": "property",
+      "description": "The number associated to a Part as one among many.",
+      "label": "Part number"
+    },
+    "partTotalNumber": {
+      "category": "property",
+      "description": "The total number of Parts associated with an EditorialObject.",
+      "label": "Part total number"
+    },
+    "personDescription": {
+      "category": "property",
+      "description": "To provide a description of a Person.",
+      "label": "Description"
+    },
+    "personHeight": {
+      "category": "property",
+      "description": "To indicate the height of a person.",
+      "label": "Person height"
+    },
+    "personId": {
+      "category": "property",
+      "description": "Range: an Identifier or anyURI or string.",
+      "label": "Person identifier"
+    },
+    "personName": {
+      "category": "property",
+      "description": "To provide e.g. compound names.",
+      "label": "Person name"
+    },
+    "personType": {
+      "category": "property",
+      "description": "A type attributed to a Person.",
+      "label": "Person type"
+    },
+    "personWeight": {
+      "category": "property",
+      "description": "To indicate the weight of a person.",
+      "label": "Person weight"
+    },
+    "playlist": {
+      "category": "property",
+      "description": "To provide a playlist.",
+      "label": "Playlist"
+    },
+    "playsOut": {
+      "category": "property",
+      "description": "To identify the Essence used in a PublicationEvent",
+      "label": "Essence"
+    },
+    "position": {
+      "category": "property",
+      "description": "To indicate the position of an EditorialObject in an ordered group.",
+      "label": "Position"
+    },
+    "privateEmailAddress": {
+      "category": "property",
+      "description": "To provide the private email address of an Agent (Contact/Person)",
+      "label": "Private email"
+    },
+    "privateHomepage": {
+      "category": "property",
+      "description": "To provide an private web homepage of an Agent (Contact/Person).",
+      "label": "Homepage (private)"
+    },
+    "privateMobileTelephoneNumber": {
+      "category": "property",
+      "description": "To provide the private mobile telephone number of an Agent (Contact/Person).",
+      "label": "Telephone (private)"
+    },
+    "privateTelephoneNumber": {
+      "category": "property",
+      "description": "To provide the private telephone number of an Agent (Contact/Person).",
+      "label": "Telephone (private)"
+    },
+    "productionSynopsis": {
+      "category": "property",
+      "description": "A synopsis or summary provided by the producer at the time of production.",
+      "label": "Production synopsis"
+    },
+    "promotionalInformation": {
+      "category": "property",
+      "description": "To provide textual promotional information.",
+      "label": "Promotional information"
+    },
+    "provenanceDateCreated": {
+      "category": "property",
+      "description": "The date of creation of a Provenance instance.",
+      "label": "Provenance creation date & time"
+    },
+    "provenanceDateModified": {
+      "category": "property",
+      "description": "The date of modification of a Provenance instance.",
+      "label": "Provenance modification date & time"
+    },
+    "provenanceDescription": {
+      "category": "property",
+      "description": "To describe a Provenance.",
+      "label": "Provenance description"
+    },
+    "provenanceId": {
+      "category": "property",
+      "description": "To identify a Provenance.",
+      "label": "Provenance Id"
+    },
+    "provenanceName": {
+      "category": "property",
+      "description": "To name a Provenance.",
+      "label": "Provenance name"
+    },
+    "provenanceType": {
+      "category": "property",
+      "description": "Range: string, anyURI or Concept.",
+      "label": "Provenance type"
+    },
+    "pubStatus": {
+      "category": "property",
+      "description": "To indicate a publication status.",
+      "label": "Publication status"
+    },
+    "publicationChannelDescription": {
+      "category": "property",
+      "description": "To provide a description of a PublicationChannel e.g. a TV channel or website.",
+      "label": "PublicationChannel description"
+    },
+    "publicationChannelId": {
+      "category": "property",
+      "description": "Range: Identifier, anyURI, string",
+      "label": "Publication channel identifier"
+    },
+    "publicationChannelName": {
+      "category": "property",
+      "description": "To provide a name to a PublicationChannel e.g. a TV channel or website.",
+      "label": "PublicationChannel name"
+    },
+    "publicationChannelType": {
+      "category": "property",
+      "description": "Range: string or PublicationChannel_Type.",
+      "label": "Publication Channel type"
+    },
+    "publicationDuration": {
+      "category": "property",
+      "description": "The actual duration of a PublicationEvent.",
+      "label": "PublicationEvent duration"
+    },
+    "publicationEndDateTime": {
+      "category": "property",
+      "description": "The actual end date and time of a PublicationEvent.",
+      "label": "PublicationEvent end date & time"
+    },
+    "publicationEventAbstract": {
+      "category": "property",
+      "description": "To provide an abstract for a PublicationEvent.",
+      "label": "PublicationEvent abstract"
+    },
+    "publicationEventDescription": {
+      "category": "property",
+      "description": "To provide the description of a PublicationEvent.",
+      "label": "PublicationEvent  description"
+    },
+    "publicationEventId": {
+      "category": "property",
+      "description": "Range: Identifier, anyURI, string",
+      "label": "Publication event identifier"
+    },
+    "publicationEventName": {
+      "category": "property",
+      "description": "To provide a name to a PublicationEvent.",
+      "label": "PublicationEvent name"
+    },
+    "publicationEventTitle": {
+      "category": "property",
+      "description": "To provide a title for a PublicationEvent.",
+      "label": "PublicationEvent title"
+    },
+    "publicationEventType": {
+      "category": "property",
+      "description": "A type of PublicationEvent.",
+      "label": "Publication event type"
+    },
+    "publicationPlanDescription": {
+      "category": "property",
+      "description": "A description of a PublicationPlan.",
+      "label": "PublicationPlan description"
+    },
+    "publicationPlanEndDate": {
+      "category": "property",
+      "description": "The end date of a PublicationPlan",
+      "label": "PublicationPlan end date"
+    },
+    "publicationPlanId": {
+      "category": "property",
+      "description": "Range: Identifier, anyURI, string",
+      "label": "Publication plan identifier"
+    },
+    "publicationPlanName": {
+      "category": "property",
+      "description": "A name attributed to a PublicationPlan.",
+      "label": "Publication plan name"
+    },
+    "publicationPlanStartDate": {
+      "category": "property",
+      "description": "The start date of a PublicationPlan",
+      "label": "PublicationPlan start date"
+    },
+    "publicationPlanStatus": {
+      "category": "property",
+      "description": "To provide a status regarding the PublicationPlan.",
+      "label": "PublicationPlan status"
+    },
+    "publicationScheduleDate": {
+      "category": "property",
+      "description": "To express specifically the schedule date to which a PublicationEvent is related in particular if the broacdast time is after midnight. For example, the schedule date would be May 29th and the programme is published at 1 am on May 30th, while still associated in the schedule with the night of May 29th.",
+      "label": "Schedule date"
+    },
+    "publicationStartDateTime": {
+      "category": "property",
+      "description": "The actual start date and time of a PublicationEvent.",
+      "label": "Publication start date & time"
+    },
+    "publishedEndDateTime": {
+      "category": "property",
+      "description": "The end date and time of a PublicationEvent as scheduled.",
+      "label": "Publication end date & time"
+    },
+    "publishedStartDateTime": {
+      "category": "property",
+      "description": "The start date and time of a PublicationEvent as scheduled.",
+      "label": "Publication start date & time"
+    },
+    "publishedTitle": {
+      "category": "property",
+      "description": "The title used to identify the work at publication time.",
+      "label": "Published title."
+    },
+    "publishes": {
+      "category": "property",
+      "description": "The editorial object associated to a PublicationEvent.",
+      "label": "Editorial object"
+    },
+    "ratingDescription": {
+      "category": "property",
+      "description": "To associate a description with a Rating.",
+      "label": "Rating name"
+    },
+    "ratingId": {
+      "category": "property",
+      "description": "Range: string or anyURI or Identifier.",
+      "label": "Rating Id"
+    },
+    "ratingName": {
+      "category": "property",
+      "description": "To associate a name with a Rating.",
+      "label": "Rating name"
+    },
+    "ratingScaleMax": {
+      "category": "property",
+      "description": "The maximum value of the scale used for the Rating of a MediaResource.",
+      "label": "Rating scale (top value)"
+    },
+    "ratingScaleMin": {
+      "category": "property",
+      "description": "The minimum value of the scale used for rating a MediaResource.",
+      "label": "Rating scale (min. value)"
+    },
+    "ratingSystemEnvironment": {
+      "category": "property",
+      "description": "To identify the environment in which rating applies.",
+      "label": "Rating environment"
+    },
+    "ratingSystemName": {
+      "category": "property",
+      "description": "To identify a Rating system by its name.",
+      "label": "Rating system"
+    },
+    "ratingType": {
+      "category": "property",
+      "description": "Range: string or anyURI or Concept.",
+      "label": "Rating type"
+    },
+    "ratingValue": {
+      "category": "property",
+      "description": "To express a free text Rating value defined in a rating classification scheme.",
+      "label": "Rating"
+    },
+    "readyForPublication": {
+      "category": "property",
+      "description": "A flag to indicate that the Essence is ready for publication.",
+      "label": "Ready for publication"
+    },
+    "reason": {
+      "category": "property",
+      "description": "A reason given for a rating.",
+      "label": "Reason"
+    },
+    "references": {
+      "category": "property",
+      "description": "To express a reference between Assets, BusinessObjects or Resources.",
+      "label": "References"
+    },
+    "regionDelimX": {
+      "category": "property",
+      "description": "To define the top left corner of a zone on the x-axis. If present with regionDelimy, the zone definition is complemented by the associated values of the height and width.",
+      "label": "Region delimiter (x-axis)"
+    },
+    "regionDelimY": {
+      "category": "property",
+      "description": "To define the bottom right corner of a zone on the y-axis. If present with regionDelimX, the zone definition is complemented by the associated values of the height and width.",
+      "label": "Region delimiter (y-axis)"
+    },
+    "relationIdentifier": {
+      "category": "property",
+      "description": "Range: string or Identifier.",
+      "label": "Relation Type"
+    },
+    "relationLink": {
+      "category": "property",
+      "description": "To define a link in a Relation.",
+      "label": "Link"
+    },
+    "relationNote": {
+      "category": "property",
+      "description": "A note to provide additional information about a Relation.",
+      "label": "Relation Note"
+    },
+    "relationOrderedGroupFlag": {
+      "category": "property",
+      "description": "A boolean to define if a Relation is defined within and ordered group.",
+      "label": "Relation Ordered group flag"
+    },
+    "relationRunningOrderNumber": {
+      "category": "property",
+      "description": "The order number in a list.",
+      "label": "Relation Running Order Number"
+    },
+    "relationTotalNumberOfGroupMembers": {
+      "category": "property",
+      "description": "Total number of group members in a Relation.",
+      "label": "Total number of group members."
+    },
+    "relationType": {
+      "category": "property",
+      "description": "Range: string or Relation_Type.",
+      "label": "Relation Type"
+    },
+    "replaces": {
+      "category": "property",
+      "description": "To identify substitution.",
+      "label": "Replaces"
+    },
+    "represents": {
+      "category": "property",
+      "description": "To establish a relation between a BusinessObject and an Asset.",
+      "label": "Related asset"
+    },
+    "requires": {
+      "category": "property",
+      "description": "To express dependency.",
+      "label": "Requires"
+    },
+    "resolution": {
+      "category": "property",
+      "description": "To define the resolution of an Asset e.g. video, image...",
+      "label": "Resolution"
+    },
+    "resourceDescription": {
+      "category": "property",
+      "description": "A desciprtion of a Resource.",
+      "label": "Resource description"
+    },
+    "resourceFileSize": {
+      "category": "property",
+      "description": "Provides the size of a Resource in bytes.",
+      "label": "File size"
+    },
+    "resourceFilename": {
+      "category": "property",
+      "description": "The name of the file containing the Resource.",
+      "label": "File name"
+    },
+    "resourceId": {
+      "category": "property",
+      "description": "An identifier associated to a Resource.",
+      "label": "Resource id"
+    },
+    "resourceIdType": {
+      "category": "property",
+      "description": "Range: Resource_type or anyURI or string",
+      "label": "Resource id"
+    },
+    "resourceLocatorTargetInformation": {
+      "category": "property",
+      "description": "Information on the Resource locator target.",
+      "label": "Locator target information"
+    },
+    "resourceName": {
+      "category": "property",
+      "description": "The name given to a Resource.",
+      "label": "Resource name"
+    },
+    "resourceOffset": {
+      "category": "property",
+      "description": "The start offset within a Resource.",
+      "label": "Resource offset"
+    },
+    "resourceOffsetNormalPlaytime": {
+      "category": "property",
+      "description": "The resource offset in normal play time",
+      "label": "Resource offset normal playtime"
+    },
+    "resourceOffsetNumberEditUnit": {
+      "category": "property",
+      "description": "The resource offset in edit units",
+      "label": "Resource offset number edit units"
+    },
+    "resourceOffsetTimecode": {
+      "category": "property",
+      "description": "The resource offset in timecode",
+      "label": "Resource offset timecode."
+    },
+    "resourceOffsetTimecodedropframe": {
+      "category": "property",
+      "description": "The resource offset in timecode dropframe",
+      "label": "Resource offset timecode (dropframe)."
+    },
+    "rightsClearanceFlag": {
+      "category": "property",
+      "description": "A flag to indicate that righst have been cleared",
+      "label": "Rights clearance flag"
+    },
+    "rightsDuration": {
+      "category": "property",
+      "description": "To define the duration of the period when Rights are applicable.",
+      "label": "Rights duration"
+    },
+    "rightsEndDateTime": {
+      "category": "property",
+      "description": "To define the end time until when Rights are applicable.",
+      "label": "Rights end date time"
+    },
+    "rightsExpression": {
+      "category": "property",
+      "description": "To express an expression of Rights.",
+      "label": "Rights"
+    },
+    "rightsId": {
+      "category": "property",
+      "description": "Range: Identifier, anyURI, string",
+      "label": "Rights identifier"
+    },
+    "rightsLink": {
+      "category": "property",
+      "description": "A link to e.g. a webpage where an expression of the rights can be found and consulted.",
+      "label": "Rights web resource"
+    },
+    "rightsStartDateTime": {
+      "category": "property",
+      "description": "To define the start time since when Rights are applicable.",
+      "label": "Rights start date time"
+    },
+    "rightsTerritoryExcludes": {
+      "category": "property",
+      "description": "Range: string or CountryCode.",
+      "label": "Excluded territories"
+    },
+    "rightsTerritoryIncludes": {
+      "category": "property",
+      "description": "Range: string or CountryCode.",
+      "label": "Included territories"
+    },
+    "rightsType": {
+      "category": "property",
+      "description": "Range: a string or a Rights_Type or a ContractType.",
+      "label": "Rights type"
+    },
+    "roleId": {
+      "category": "property",
+      "description": "Range: string or anyURI.",
+      "label": "role Id"
+    },
+    "roleType": {
+      "category": "property",
+      "description": "To define a type of Role (not the Role itself).",
+      "label": "Role type"
+    },
+    "salutationTitle": {
+      "category": "property",
+      "description": "To provide a salutation title e.g M. Ms, Dr, Pr.",
+      "label": "Salutation title"
+    },
+    "sampleRate": {
+      "category": "property",
+      "description": "The frequency at which audio is sampled per second. Also called sampling rate.",
+      "label": "Sample Rate"
+    },
+    "sampleSize": {
+      "category": "property",
+      "description": "The size of an audio sample in bits. Also called bit depth.",
+      "label": "Sample size"
+    },
+    "sampleType": {
+      "category": "property",
+      "description": "The type of audio sample.",
+      "label": "Sample type"
+    },
+    "scanningFormat": {
+      "category": "property",
+      "description": "To define the scanning format for a MediaResource. For video, the two main values are \"interlaced\" or \"progressive\".",
+      "label": "Scanning format"
+    },
+    "script": {
+      "category": "property",
+      "description": "To provide a script.",
+      "label": "Script"
+    },
+    "seasonNumber": {
+      "category": "property",
+      "description": "To provide a Season number.",
+      "label": "Season number"
+    },
+    "serviceDescription": {
+      "category": "property",
+      "description": "A description of the Service.",
+      "label": "Service description"
+    },
+    "serviceId": {
+      "category": "property",
+      "description": "Range: string or Identifier.",
+      "label": "Service identiifier"
+    },
+    "serviceName": {
+      "category": "property",
+      "description": "The name of the Service.",
+      "label": "Service name"
+    },
+    "serviceType": {
+      "category": "property",
+      "description": "Range: string or Service_type",
+      "label": "Service type"
+    },
+    "shotLog": {
+      "category": "property",
+      "description": "Provides a shot-by-shot description of a MediaResource.",
+      "label": "Shot log"
+    },
+    "start": {
+      "category": "property",
+      "description": "Start timestamp e.g. the start time for a MediaResource.",
+      "label": "Start time"
+    },
+    "startEditUnits": {
+      "category": "property",
+      "description": "A start time expressed as a number of edit units.",
+      "label": "Start time (edit units)"
+    },
+    "startNormalPlayTime": {
+      "category": "property",
+      "description": "A start time expressed as a normal play time.",
+      "label": "Start time (normal play time)"
+    },
+    "startOffsetEditUnit": {
+      "category": "property",
+      "description": "A start offset time expressed as a number of edit units.",
+      "label": "Startoffset  time (edit units)"
+    },
+    "startOffsetNormalPlayTime": {
+      "category": "property",
+      "description": "A start offset time expressed as normal play time.",
+      "label": "Startoffset  time (edit units)"
+    },
+    "startOffsetTimecode": {
+      "category": "property",
+      "description": "A start offset time expressed as timecode.",
+      "label": "Start offset time (timecode)"
+    },
+    "startOffsetTimecodeDropFrame": {
+      "category": "property",
+      "description": "A start offset time expressed as timecode with drop frames.",
+      "label": "Start offset time (timecode, drop frames)"
+    },
+    "startTimecode": {
+      "category": "property",
+      "description": "A start time expressed as timecode.",
+      "label": "Start time (timecode)"
+    },
+    "startTimecodeDropFrame": {
+      "category": "property",
+      "description": "A start time expressed as timecode with drop frames.",
+      "label": "Start time (timecode, drop frames)"
+    },
+    "subtitle": {
+      "category": "property",
+      "description": "A complementary subtitle.",
+      "label": "Subtitle"
+    },
+    "suffix": {
+      "category": "property",
+      "description": "To provide a suffix associated with a Person name e.g. Jr.",
+      "label": "Suffix"
+    },
+    "summary": {
+      "category": "property",
+      "description": "To provide a summary.",
+      "label": "Summary"
+    },
+    "synopsis": {
+      "category": "property",
+      "description": "To provide a summary.",
+      "label": "Synopsis"
+    },
+    "tableOfContent": {
+      "category": "property",
+      "description": "to provide a table of content.",
+      "label": "Table of content"
+    },
+    "tag": {
+      "category": "property",
+      "description": "To provide a list of tags.",
+      "label": "Tag"
+    },
+    "targetAudienceSystem": {
+      "category": "property",
+      "description": "To define the system used to provide a TargetAudience.",
+      "label": "Target audience system"
+    },
+    "textLineBoxHeight": {
+      "category": "property",
+      "description": "The height of the text box containing the TextLine.",
+      "label": "Text line box height."
+    },
+    "textLineBoxTopLeftCornerLineNumber": {
+      "category": "property",
+      "description": "The coordinates on a vertical axis of the position of the top left corner of the text box containing the TextLine.",
+      "label": "Text line box top left corner Y position."
+    },
+    "textLineBoxTopLeftCornerPixelNumber": {
+      "category": "property",
+      "description": "The coordinates on an horizontal axis of the position of the top left corner of the text box containing the TextLine.",
+      "label": "Text line box top left Coner X position."
+    },
+    "textLineBoxWidth": {
+      "category": "property",
+      "description": "The width of the text box containing the TextLine.",
+      "label": "Text line box width."
+    },
+    "textLineContent": {
+      "category": "property",
+      "description": "To provide the content of a text line.",
+      "label": "Text line"
+    },
+    "textLineEndEditUnits": {
+      "category": "property",
+      "description": "The end time of a TextLine expressed as a number of edit units.",
+      "label": "Text line end in edit units"
+    },
+    "textLineEndTime": {
+      "category": "property",
+      "description": "The end time point of a TextLine in a Scene.",
+      "label": "Text line end time"
+    },
+    "textLineEndNormalPlayTime": {
+      "category": "property",
+      "description": "The end time of a TextLine expressed as a normal play time.",
+      "label": "Text line end in normal play time"
+    },
+    "textLineEndTimecode": {
+      "category": "property",
+      "description": "The end time of a TextLine expressed as timecode.",
+      "label": "Text line end timecode"
+    },
+    "textLineEndTimecodeDropFrame": {
+      "category": "property",
+      "description": "The end time of a TextLine expressed as timecode with drop frames.",
+      "label": "Text line end timecode drop frames"
+    },
+    "textLineOrder": {
+      "category": "property",
+      "description": "The order in which a text line can be found e.g. in a scene.",
+      "label": "Text line order"
+    },
+    "textLineStartEditUnits": {
+      "category": "property",
+      "description": "The start time of a TextLine expressed as a number of edit units.",
+      "label": "Text line start in edit units"
+    },
+    "textLineStartTime": {
+      "category": "property",
+      "description": "The start time point of a TextLine in a Scene.",
+      "label": "Text line start time"
+    },
+    "textLineStartNormalPlayTime": {
+      "category": "property",
+      "description": "The start time of a TextLine expressed as a normal play time.",
+      "label": "Text line start in normal play time"
+    },
+    "textLineStartTimecode": {
+      "category": "property",
+      "description": "The start time of a TextLine expressed as timecode.",
+      "label": "Text line start timecode"
+    },
+    "textLineStartTimecodeDropFrame": {
+      "category": "property",
+      "description": "The start time of a TextLine expressed as timecode with drop frames.",
+      "label": "Text line start timecode drop frames"
+    },
+    "timeCreated": {
+      "category": "property",
+      "description": "the tie of creation of an Asset.",
+      "label": "Time created."
+    },
+    "timelineTrackDuration": {
+      "category": "property",
+      "description": "To express the duration of a TimelineTrack.",
+      "label": "TimelineTrack duration"
+    },
+    "timelineTrackDurationEditUnits": {
+      "category": "property",
+      "description": "To provide a duration as a number of edit units.",
+      "label": "Duration (edit unit)"
+    },
+    "timelineTrackDurationNormalPlayTime": {
+      "category": "property",
+      "description": "To provide a duration as normal time.",
+      "label": "Duration (time)"
+    },
+    "timelineTrackDurationTimecode": {
+      "category": "property",
+      "description": "The duration expressed as a timecode.",
+      "label": "Duration (timecode)"
+    },
+    "timelineTrackDurationTimecodeDropFrame": {
+      "category": "property",
+      "description": "The duration expressed as a timecode with drop frames.",
+      "label": "Duration (timecode, drop frame)"
+    },
+    "totalNumberOfEpisodes": {
+      "category": "property",
+      "description": "To provide the total number of episodes in a Series or a Season.",
+      "label": "Total number of episodes"
+    },
+    "totalNumberOfGroupMembers": {
+      "category": "property",
+      "description": "To provide the total number of members in a Group.",
+      "label": "Total number of Group members"
+    },
+    "trackDefinition": {
+      "category": "property",
+      "description": "To provide a definition associated to a Track.",
+      "label": "Definition"
+    },
+    "trackId": {
+      "category": "property",
+      "description": "Range: Identifier, anyURI, string",
+      "label": "Track identifier"
+    },
+    "trackName": {
+      "category": "property",
+      "description": "To provide  name of a Track.",
+      "label": "Track name"
+    },
+    "trackType": {
+      "category": "property",
+      "description": "Range: string or Track_Type",
+      "label": "Track name"
+    },
+    "translationTitle": {
+      "category": "property",
+      "description": "A translated version of the title.",
+      "label": "Translation title"
+    },
+    "username": {
+      "category": "property",
+      "description": "The username by which a Person is known e.g. when attributing a rating value.",
+      "label": "Username"
+    },
+    "version": {
+      "category": "property",
+      "description": "To provide information on the current version of an EditorialObject.",
+      "label": "Version"
+    },
+    "versionTitle": {
+      "category": "property",
+      "description": "An alternative title specific to a verison of content.",
+      "label": "Version title"
+    },
+    "videoBitRate": {
+      "category": "property",
+      "description": "The video bitrate. To provide the bitrate at which the MediaResource can be played in bits/second. Current bitrate if constant, and average bitrate if variable.",
+      "label": "Video bitrate"
+    },
+    "videoBitRateMax": {
+      "category": "property",
+      "description": "The maximum video bitrate.",
+      "label": "Video bitrate max"
+    },
+    "videoBitRateMode": {
+      "category": "property",
+      "description": "The video bitrate mode.",
+      "label": "Video bitrate mode"
+    },
+    "videoEncodingLevel": {
+      "category": "property",
+      "description": "The encoding level as defined in specifications.",
+      "label": "Video encoding level"
+    },
+    "videoEncodingProfile": {
+      "category": "property",
+      "description": "The encoding level as defined in specifications.",
+      "label": "Video encoding profile"
+    },
+    "wordCount": {
+      "category": "property",
+      "description": "The number of words contained in a document.",
+      "label": "Word count"
+    },
+    "workingTitle": {
+      "category": "property",
+      "description": "A title used while content is not complete.",
+      "label": "Working title"
+    },
+    "foaf:member": {
+      "category": "property",
+      "description": "To identify an Agent member of a Group.",
+      "label": "Group member"
+    },
+    "foaf:name": {
+      "category": "property",
+      "description": "To name an Agent.",
+      "label": "Name"
+    }
+  }
+}

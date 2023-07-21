@@ -1,0 +1,203 @@
+{
+  "iri": "http://semanticweb.cs.vu.nl/2009/11/sem/",
+  "description": "This document describes an ontology for modelling events. Events are central elements in the representation of data from a variety of domains. Examples of these domains are history, cultural heritage, geography and multimedia. Event-centered modeling captures the time and place aspects of a domain. In addition, events provide a way to describe complicated relations between people, places, actions and objects.",
+  "label": "The Simple Event Model Ontology",
+  "prefix": "sem",
+  "items": {
+    "Actor": {
+      "category": "class",
+      "description": "Actors are entities that take part in an Event, either actively or passively. Actors do not necessarily have to be sentient. They can also be objects. Actors are a thing, animate or inanimate, physical or non-physical.",
+      "label": "Actor"
+    },
+    "Authority": {
+      "category": "class",
+      "description": "Authorities are entities that state SEM properties. Their nature is not specified. They can symbolize people, organizations, sources of information, etc.",
+      "label": "Authority"
+    },
+    "Core": {
+      "category": "class",
+      "description": "The SEM Core class contains all entities that make up the context of an event: Events, Actors, Places, Times. This class is meant to be extended for each application domain.",
+      "label": "Core"
+    },
+    "ActorType": {
+      "category": "class",
+      "description": "EventType contains all resources that are used to classify Actors, e.g. person",
+      "label": "Actor type"
+    },
+    "Type": {
+      "category": "class",
+      "description": "The SEM Type class contains all types of Core instances. These can be either individuals of classes themselves. This class is meant to be extended for each application domain.",
+      "label": "Type"
+    },
+    "Constraint": {
+      "category": "class",
+      "description": "The SEM Constraint class contains instances of properties that have a constrained (i.e. not universal) validity. This includes time dependent validity (Temporary), validity in the guise of a specific role (Role), or validity according to a given Authority (View).",
+      "label": "Constraint"
+    },
+    "Event": {
+      "category": "class",
+      "description": "Events are things that happen. This comprises everything from historical events to web site sessions and mythical journeys. Event is the central class of SEM.",
+      "label": "Event"
+    },
+    "EventType": {
+      "category": "class",
+      "description": "EventType contains all resources that are used to classify Events, e.g. meeting.",
+      "label": "Event type"
+    },
+    "Object": {
+      "category": "class",
+      "description": "Objects are passive, inanimate Actors.",
+      "label": "Object"
+    },
+    "Place": {
+      "category": "class",
+      "description": "Places are locations where an Event happens. They do not need to be physical places and hence do not necessarily need coordinates. Neither do they need to have any significance apart from them being the location of an Event.",
+      "label": "Place"
+    },
+    "PlaceType": {
+      "category": "class",
+      "description": "EventType contains all resources that are used to classify Places, e.g. river.",
+      "label": "Place type"
+    },
+    "Role": {
+      "category": "class",
+      "description": "Roles are properties with a subspecified function or position indicated by a RoleType in the scope of an Event. For example, the sem:hasActor property can be subspecified with the RoleType attacker, to denote that the type of participation of the Actor in the scope of the Event is \"attacker\". The sem:hasPlace property can be subspecified with the RoleType origin, to denote that within the scope of the Event it is the origin.",
+      "label": "Role"
+    },
+    "RoleType": {
+      "category": "class",
+      "description": "EventType contains all resources that are used to classify Roles, e.g. receiver.",
+      "label": "Role type"
+    },
+    "Temporary": {
+      "category": "class",
+      "description": "Temporaries are properties that only hold during a certain Time, which is either indicated with the sem:hasTime property to an instance of sem:Time, or with the sem:hasTimeStamp property to some timestamp(s).",
+      "label": "Temporary"
+    },
+    "Time": {
+      "category": "class",
+      "description": "Time contains symbolic representations of when an Event took place. Time instances do not necessarily need to have a timestamp associated with them. The Time class exists to represent semantics of time, e.g. that one thing happens before another, even though the exact timestamps are unknown.",
+      "label": "Time"
+    },
+    "TimeType": {
+      "category": "class",
+      "description": "EventType contains all resources that are used to classify Time, e.g. century.",
+      "label": "Time type"
+    },
+    "View": {
+      "category": "class",
+      "description": "Views are properties that only hold according to a certain Authority.",
+      "label": "View"
+    },
+    "accordingTo": {
+      "category": "property",
+      "description": "According to is used to state which Authority sais that a property constrained by the View Constraint is true.",
+      "label": "according to"
+    },
+    "actorType": {
+      "category": "property",
+      "description": "Has actor type is used to assign a type to an actor.",
+      "label": "has actor type"
+    },
+    "type": {
+      "category": "property",
+      "description": "Type is the super property of the properties that are used to indicate the type of a Core instance, eventType, actorType, placeType, timeType; and of roleType. Types can be both classes and individuals, cf. OWL 2 punning.",
+      "label": "type property"
+    },
+    "eventProperty": {
+      "category": "property",
+      "description": "Event properties connect Events to other SEM Core entities.",
+      "label": "event property"
+    },
+    "eventType": {
+      "category": "property",
+      "description": "Has event type is used to assign a type to an event.",
+      "label": "has event type"
+    },
+    "hasActor": {
+      "category": "property",
+      "description": "Has actor is used to state which Actors or Objects participate in an Event.",
+      "label": "has Actor"
+    },
+    "hasPlace": {
+      "category": "property",
+      "description": "Has place is used to state in which Place(s) an Event happened. Coordinates can be attached to the Place with the W3C Geospatial Vocabulary (http://www.w3.org/2005/Incubator/geo/XGR-geo-20071023/).",
+      "label": "has Place"
+    },
+    "hasSubEvent": {
+      "category": "property",
+      "description": "Has subevent connects an Event to other Events that belong to it. This is a very generic property that does not mean the subevents fully define the superconcept or that there is any causal relationship.",
+      "label": "has subevent"
+    },
+    "subEventOf": {
+      "category": "property",
+      "description": "Inverse property of hasSubEvent",
+      "label": "subevent of"
+    },
+    "hasSubType": {
+      "category": "property",
+      "description": "Has sub type is used to state that a type falls under another type. This is a generic aggregation relation that is used to generalize over various hierarchical relations that can exist between types.",
+      "label": "has subtype"
+    },
+    "subTypeOf": {
+      "category": "property",
+      "description": "The inverse property of hasSubType.",
+      "label": "subtype of"
+    },
+    "hasTime": {
+      "category": "property",
+      "description": "Has time is used to indicate at which time an Event took place or when a property under the Temporary Constraint is valid. Has time points to a symbolic representation of time, which allows semantic relations between time resources. (see http://www.w3.org/TR/owl-time/)",
+      "label": "has Time"
+    },
+    "placeType": {
+      "category": "property",
+      "description": "Has place type is used to assign a type to a place.",
+      "label": "has place type"
+    },
+    "roleType": {
+      "category": "property",
+      "description": "Has role type is used to assign a role type to a Role property constraint. This role is a subspecification of the eventProperty which it constrains. For example, if an Event hasActor an Actor and this property is given a Role Constraint, then roleType can be used to assign a role to the participation of the Actor in the Event indicated by hasActor.",
+      "label": "has role type"
+    },
+    "timeType": {
+      "category": "property",
+      "description": "Has time type is used to assign a type to a time individual.",
+      "label": "has time type"
+    },
+    "hasBeginTimeStamp": {
+      "category": "property",
+      "description": "Has begin timestamp is used to indicate the beginning of a time interval. Omitting the hasBeginTimeStamp while stating a hasEndTimeStamp is interpreted as an open ended interval.",
+      "label": "has begin timestamp"
+    },
+    "hasTimeStamp": {
+      "category": "property",
+      "description": "Has timestamp is used to put time indicators on any individual. It is the most common way to state when an Event took place. There are subproperties of hasTimeStamp to represent time intervals and uncertain time intervals. If the exact moment is not known, but it is necessary to specify a certain time, use hasTime instead. All of these properties are also used to indicate the time at which a property under the Temporary Constraint is valid.",
+      "label": "has timestamp"
+    },
+    "hasEarliestBeginTimeStamp": {
+      "category": "property",
+      "description": "Has earliest begin timestamp is used to indicate the earliest possible starting time of an uncertain time interval.",
+      "label": "has earliest begin timestamp"
+    },
+    "hasEarliestEndTimeStamp": {
+      "category": "property",
+      "description": "Has earliest end timestamp is used to indicate the earliest possible ending time of an uncertain time interval.",
+      "label": "has earliest end timestamp"
+    },
+    "hasEndTimeStamp": {
+      "category": "property",
+      "description": "Has end timestamp is used to indicate the end of a time interval. Omitting the hasEndTimeStamp while stating a hasBeginTimeStamp is interpreted as an open ended interval.",
+      "label": "has end timestamp"
+    },
+    "hasLatestBeginTimeStamp": {
+      "category": "property",
+      "description": "Has latest begin timestamp is used to indicate the latest possible starting time of an uncertain time interval.",
+      "label": "has latest begin timestamp"
+    },
+    "hasLatestEndTimeStamp": {
+      "category": "property",
+      "description": "Has latest end timestamp is used to indicate the latest possible ending time of an uncertain time interval.",
+      "label": "has latest end timestamp"
+    }
+  }
+}

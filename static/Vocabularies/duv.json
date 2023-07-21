@@ -1,0 +1,58 @@
+{
+  "iri": "http://www.w3.org/ns/duv#",
+  "description": "The Dataset Usage Vocabulary (DUV) is used to describe consumer experiences, citations, and feedback about datasets from the human perspective.",
+  "label": "Dataset Usage Vocabulary",
+  "prefix": "duv",
+  "items": {
+    "RatingFeedback": {
+      "category": "class",
+      "description": "Predefined criteria used to express a user opinion about a dataset or distribution using a discrete range of values.",
+      "label": "Rating Feedback"
+    },
+    "UserFeedback": {
+      "category": "class",
+      "description": "User feedback on the dataset. Expresses whether the dataset was useful or not, for example.",
+      "label": "User Feedback"
+    },
+    "Usage": {
+      "category": "class",
+      "description": "A helpful description of actions that can be performed on a given dataset or distribution.",
+      "label": "Usage"
+    },
+    "UsageTool": {
+      "category": "class",
+      "description": "A synopsis describing the way a tool can use a dataset or distribution.",
+      "label": "UsageTool"
+    },
+    "hasDistributor": {
+      "category": "property",
+      "description": "The distributor is the organization that makes the dataset available for downloading and use.",
+      "label": "has distributor"
+    },
+    "hasFeedback": {
+      "category": "property",
+      "description": "User feedback associated with Dataset or distribution",
+      "label": "has dataset feedback"
+    },
+    "hasRating": {
+      "category": "property",
+      "description": "Rating Feedback has rating opinion",
+      "label": "has rating"
+    },
+    "hasUsage": {
+      "category": "property",
+      "description": "Dataset/distribution usage guidance or instructions.",
+      "label": "has dataset/distribution usage"
+    },
+    "hasUsageTool": {
+      "category": "property",
+      "description": "Describes the tool that provides the Usage",
+      "label": "has usage tool"
+    },
+    "refersTo": {
+      "category": "property",
+      "description": "Dataset associated with Usage.",
+      "label": "refers to dataset"
+    }
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "iri": "http://rdf-vocabulary.ddialliance.org/xkos#",
+  "description": "This ontology is based on work initiated at Dagstuhl Schloss in September 2011",
+  "label": "XKOS: an SKOS extension for representing statistical classifications",
+  "prefix": "xkos",
+  "items": {
+    "ClassificationLevel": {
+      "category": "class",
+      "label": "Classification level"
+    },
+    "ConceptAssociation": {
+      "category": "class",
+      "label": "Association de concepts"
+    },
+    "Correspondence": {
+      "category": "class",
+      "label": "Correspondance"
+    },
+    "ExplanatoryNote": {
+      "category": "class",
+      "label": "Explanatory note"
+    },
+    "": {
+      "category": "class"
+    },
+    "additionalContentNote": {
+      "category": "property",
+      "label": "additional content"
+    },
+    "inclusionNote": {
+      "category": "property",
+      "label": "inclusions"
+    },
+    "after": {
+      "category": "property",
+      "label": "after"
+    },
+    "temporal": {
+      "category": "property",
+      "label": "en relation temporelle"
+    },
+    "before": {
+      "category": "property",
+      "label": "avant"
+    },
+    "belongsTo": {
+      "category": "property",
+      "label": "appartient à"
+    },
+    "caseLaw": {
+      "category": "property",
+      "label": "case law"
+    },
+    "causal": {
+      "category": "property",
+      "label": "en relation causale"
+    },
+    "causedBy": {
+      "category": "property",
+      "label": "caused by"
+    },
+    "causes": {
+      "category": "property",
+      "label": "causes"
+    },
+    "classifiedUnder": {
+      "category": "property",
+      "label": "classified under"
+    },
+    "compares": {
+      "category": "property",
+      "label": "compare"
+    },
+    "coreContentNote": {
+      "category": "property",
+      "label": "contenu central"
+    },
+    "covers": {
+      "category": "property",
+      "label": "couvre"
+    },
+    "coversExhaustively": {
+      "category": "property",
+      "label": "couvre exhaustivement"
+    },
+    "coversMutuallyExclusively": {
+      "category": "property",
+      "label": "couvre sans recouvrement"
+    },
+    "depth": {
+      "category": "property",
+      "label": "depth"
+    },
+    "disjoint": {
+      "category": "property",
+      "label": "disjoint de"
+    },
+    "exclusionNote": {
+      "category": "property",
+      "label": "exclusions"
+    },
+    "follows": {
+      "category": "property",
+      "label": "follows"
+    },
+    "generalizes": {
+      "category": "property",
+      "label": "generalizes"
+    },
+    "specializes": {
+      "category": "property",
+      "label": "specializes"
+    },
+    "hasPart": {
+      "category": "property",
+      "label": "a pour partie"
+    },
+    "isPartOf": {
+      "category": "property",
+      "label": "est une partie de"
+    },
+    "levels": {
+      "category": "property",
+      "label": "level list"
+    },
+    "madeOf": {
+      "category": "property",
+      "label": "comprend"
+    },
+    "maxLength": {
+      "category": "property",
+      "label": "longueur maximale"
+    },
+    "next": {
+      "category": "property",
+      "description": "immediate successor in the sequence",
+      "label": "next"
+    },
+    "succeeds": {
+      "category": "property",
+      "description": "successeur dans la séquence",
+      "label": "succeeds"
+    },
+    "notationPattern": {
+      "category": "property",
+      "label": "code pattern"
+    },
+    "numberOfLevels": {
+      "category": "property",
+      "label": "nombre de niveaux"
+    },
+    "organizedBy": {
+      "category": "property",
+      "label": "organisé en"
+    },
+    "plainText": {
+      "category": "property",
+      "description": "This property is expected to store plain text literals, without HTML or XML markup.",
+      "label": "plain text"
+    },
+    "precedes": {
+      "category": "property",
+      "description": "predecessor in the sequence",
+      "label": "precedes"
+    },
+    "sequential": {
+      "category": "property",
+      "label": "en relation séquentielle"
+    },
+    "previous": {
+      "category": "property",
+      "description": "immediate predecessor in the sequence",
+      "label": "previous"
+    },
+    "sourceConcept": {
+      "category": "property",
+      "label": "concept source"
+    },
+    "supersedes": {
+      "category": "property",
+      "label": "remplace"
+    },
+    "targetConcept": {
+      "category": "property",
+      "label": "concept cible"
+    },
+    "variant": {
+      "category": "property",
+      "label": "variant"
+    }
+  }
+}

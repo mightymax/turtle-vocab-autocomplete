@@ -1,0 +1,27 @@
+{
+  "iri": "http://www.w3.org/2000/10/swap/list#",
+  "label": "Semantic Web Application Platform - List",
+  "prefix": "list",
+  "items": {
+    "append": {
+      "category": "property",
+      "description": "Iff the subject is a list of lists and the concatenation of all those lists is the object, then this is true. eg  ( (1 2) (3 4) ) list:append (1 2 3 4). The object can be calculated as a function of the subject.",
+      "label": "concatenation"
+    },
+    "in": {
+      "category": "property",
+      "description": "Iff the object is a list and the subject is in that list, then this is true.",
+      "label": "in"
+    },
+    "last": {
+      "category": "property",
+      "description": "Iff the suject is a list and the obbject is the last thing that list, then this is true. The object can be calculated as a function of the list.",
+      "label": "in"
+    },
+    "member": {
+      "category": "property",
+      "description": "Iff the subject is a list and the obbject is in that list, then this is true.",
+      "label": "member"
+    }
+  }
+}

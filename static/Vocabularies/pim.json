@@ -1,0 +1,55 @@
+{
+  "iri": "http://www.w3.org/ns/pim/space#",
+  "description": "This ontology is for use in describing Workspaces.  Workspaces are places where data is stored and associated policies of privacy. A given application typically stores information in several different workspaces, some being user private, some shared, and some public. it is crucial that the user has easy control over the destiny of information.",
+  "label": "Workspace Ontology",
+  "prefix": "pim",
+  "items": {
+    "ControlledStorage": {
+      "category": "class",
+      "description": "A  storage is a space of URIs in which you can individually control for each resource who has access to it.",
+      "label": "access controlled storage"
+    },
+    "Storage": {
+      "category": "class",
+      "description": "A storage is a space of URIs in which you have access to data.",
+      "label": "storage"
+    },
+    "PersonalStorage": {
+      "category": "class",
+      "description": "A personal storage is a space of URIs in which you and only you have access to data, you cannot give access to anyone else.",
+      "label": "personal storage"
+    },
+    "Workspace": {
+      "category": "class",
+      "description": "Workspaces are place where data is stored, and associated polices of privacy. A given application typically stores information in several different workspaces, some being user private, some shared, and some public.",
+      "label": "workspace"
+    },
+    "PublicStorage": {
+      "category": "class",
+      "description": "A public storage is a space of URIs in which you have access to data, and all data is accessible to anyone without control.",
+      "label": "public storage"
+    },
+    "masterWorkspace": {
+      "category": "property",
+      "label": "master workspace"
+    },
+    "preferencesFile": {
+      "category": "property",
+      "label": "preferences file"
+    },
+    "storage": {
+      "category": "property",
+      "description": "The storage in which this workspace is, or the storage which contains this resource, or a storage available to this agent to use.",
+      "label": "storage"
+    },
+    "uriPrefix": {
+      "category": "property",
+      "description": "URIs which start with this string are in this workspace or storage. This may be used for constructing URIs for new storage resources.",
+      "label": "URI prefix"
+    },
+    "workspace": {
+      "category": "property",
+      "label": "workspace"
+    }
+  }
+}

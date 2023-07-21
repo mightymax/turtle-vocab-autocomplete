@@ -1,0 +1,161 @@
+{
+  "iri": "http://www.w3.org/ns/ssn/",
+  "description": "This ontology describes sensors, actuators and observations, and related concepts. It does not describe domain concepts, time, locations, etc. these are intended to be included from other ontologies via OWL imports.",
+  "label": "Semantic Sensor Network Ontology",
+  "prefix": "ssn",
+  "items": {
+    "dcterms:created": {
+      "category": "property"
+    },
+    "dcterms:creator": {
+      "category": "property"
+    },
+    "dcterms:description": {
+      "category": "property"
+    },
+    "dcterms:license": {
+      "category": "property"
+    },
+    "dcterms:rights": {
+      "category": "property"
+    },
+    "dcterms:title": {
+      "category": "property"
+    },
+    "vann:preferredNamespacePrefix": {
+      "category": "property"
+    },
+    "vann:preferredNamespaceUri": {
+      "category": "property"
+    },
+    "skos:definition": {
+      "category": "property"
+    },
+    "skos:example": {
+      "category": "property"
+    },
+    "foaf:name": {
+      "category": "property"
+    },
+    "": {
+      "category": "class"
+    },
+    "Property": {
+      "category": "class",
+      "description": "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.",
+      "label": "Property"
+    },
+    "sosa:Actuation": {
+      "category": "class"
+    },
+    "System": {
+      "category": "class",
+      "description": "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems.",
+      "label": "System"
+    },
+    "sosa:Observation": {
+      "category": "class"
+    },
+    "sosa:Sampling": {
+      "category": "class"
+    },
+    "Deployment": {
+      "category": "class",
+      "description": "Describes the Deployment of one or more Systems for a particular purpose. Deployment may be done on a Platform.",
+      "label": "Deployment"
+    },
+    "Input": {
+      "category": "class",
+      "description": "Any information that is provided to a Procedure for its use.",
+      "label": "Input"
+    },
+    "Output": {
+      "category": "class",
+      "description": "Any information that is reported from a Procedure.",
+      "label": "Output"
+    },
+    "Stimulus": {
+      "category": "class",
+      "description": "An event in the real world that 'triggers' the Sensor. The properties associated to the Stimulus may be different to the eventual observed ObservableProperty. It is the event, not the object, that triggers the Sensor.",
+      "label": "Stimulus"
+    },
+    "foaf:Agent": {
+      "category": "class"
+    },
+    "forProperty": {
+      "category": "property",
+      "description": "A relation between some aspect of an entity and a Property.",
+      "label": "for property"
+    },
+    "deployedOnPlatform": {
+      "category": "property",
+      "description": "Relation between a Deployment and the Platform on which the Systems are deployed.",
+      "label": "deployed on platform"
+    },
+    "inDeployment": {
+      "category": "property",
+      "description": "Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform.",
+      "label": "in deployment"
+    },
+    "deployedSystem": {
+      "category": "property",
+      "description": "Relation between a Deployment and a deployed System.",
+      "label": "deployed system"
+    },
+    "hasDeployment": {
+      "category": "property",
+      "description": "Relation between a System and a Deployment, recording that the System is deployed in that Deployment.",
+      "label": "has deployment"
+    },
+    "detects": {
+      "category": "property",
+      "description": "A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some ObservableProperty.",
+      "label": "detects"
+    },
+    "hasInput": {
+      "category": "property",
+      "description": "Relation between a Procedure and an Input to it.",
+      "label": "has input"
+    },
+    "hasOutput": {
+      "category": "property",
+      "description": "Relation between a Procedure and an Output of it.",
+      "label": "has output"
+    },
+    "hasProperty": {
+      "category": "property",
+      "description": "Relation between an entity and a Property of that entity.",
+      "label": "has property"
+    },
+    "isPropertyOf": {
+      "category": "property",
+      "description": "Relation between a Property and the entity it belongs to.",
+      "label": "is property of"
+    },
+    "hasSubSystem": {
+      "category": "property",
+      "description": "Relation between a System and its component parts.",
+      "label": "has subsystem"
+    },
+    "implementedBy": {
+      "category": "property",
+      "description": "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.",
+      "label": "implemented by"
+    },
+    "implements": {
+      "category": "property",
+      "description": "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).",
+      "label": "implements"
+    },
+    "isProxyFor": {
+      "category": "property",
+      "description": "A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.",
+      "label": "is proxy for"
+    },
+    "wasOriginatedBy": {
+      "category": "property",
+      "description": "Relation between an Observation and the Stimulus that originated it.",
+      "label": "was originated by"
+    }
+  }
+}

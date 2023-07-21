@@ -1,0 +1,171 @@
+{
+  "iri": "http://www.w3.org/2004/02/skos/core#",
+  "description": "An RDF vocabulary for describing the basic structure and content of concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', other types of controlled vocabulary, and also concept schemes embedded in glossaries and terminologies.",
+  "label": "SKOS Vocabulary",
+  "prefix": "skos",
+  "items": {
+    "Collection": {
+      "category": "class",
+      "description": "A meaningful collection of concepts.",
+      "label": "Collection"
+    },
+    "Concept": {
+      "category": "class",
+      "description": "An idea or notion; a unit of thought.",
+      "label": "Concept"
+    },
+    "ConceptScheme": {
+      "category": "class",
+      "description": "A concept scheme may be defined to include concepts from different sources.",
+      "label": "Concept Scheme"
+    },
+    "OrderedCollection": {
+      "category": "class",
+      "description": "Ordered collections can be used where you would like a set of concepts to be displayed in a specific order, and optionally under a 'node label'.",
+      "label": "Ordered Collection"
+    },
+    "": {
+      "category": "class"
+    },
+    "definition": {
+      "category": "property",
+      "description": "A statement or formal explanation of the meaning of a concept.",
+      "label": "definition"
+    },
+    "scopeNote": {
+      "category": "property",
+      "description": "A note that helps to clarify the meaning and/or the use of a concept.",
+      "label": "scope note"
+    },
+    "example": {
+      "category": "property",
+      "description": "An example of the use of a concept.",
+      "label": "example"
+    },
+    "altLabel": {
+      "category": "property",
+      "description": "The range of skos:altLabel is the class of RDF plain literals.",
+      "label": "alternative label"
+    },
+    "broadMatch": {
+      "category": "property",
+      "description": "skos:broadMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.",
+      "label": "has broader match"
+    },
+    "broader": {
+      "category": "property",
+      "description": "Broader concepts are typically rendered as parents in a concept hierarchy (tree).",
+      "label": "has broader"
+    },
+    "mappingRelation": {
+      "category": "property",
+      "description": "These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice.",
+      "label": "is in mapping relation with"
+    },
+    "narrowMatch": {
+      "category": "property",
+      "description": "skos:narrowMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.",
+      "label": "has narrower match"
+    },
+    "broaderTransitive": {
+      "category": "property",
+      "description": "By convention, skos:broaderTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.",
+      "label": "has broader transitive"
+    },
+    "narrower": {
+      "category": "property",
+      "description": "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.",
+      "label": "has narrower"
+    },
+    "semanticRelation": {
+      "category": "property",
+      "description": "This property should not be used directly, but as a super-property for all properties denoting a relationship of meaning between concepts.",
+      "label": "is in semantic relation with"
+    },
+    "narrowerTransitive": {
+      "category": "property",
+      "description": "By convention, skos:narrowerTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.",
+      "label": "has narrower transitive"
+    },
+    "changeNote": {
+      "category": "property",
+      "description": "A note about a modification to a concept.",
+      "label": "change note"
+    },
+    "note": {
+      "category": "property",
+      "description": "This property may be used directly, or as a super-property for more specific note types.",
+      "label": "note"
+    },
+    "closeMatch": {
+      "category": "property",
+      "description": "skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of \"compound errors\" when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property.",
+      "label": "has close match"
+    },
+    "editorialNote": {
+      "category": "property",
+      "description": "A note for an editor, translator or maintainer of the vocabulary.",
+      "label": "editorial note"
+    },
+    "exactMatch": {
+      "category": "property",
+      "description": "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch.",
+      "label": "has exact match"
+    },
+    "hasTopConcept": {
+      "category": "property",
+      "description": "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies.",
+      "label": "has top concept"
+    },
+    "topConceptOf": {
+      "category": "property",
+      "description": "Relates a concept to the concept scheme that it is a top level concept of.",
+      "label": "is top concept in scheme"
+    },
+    "hiddenLabel": {
+      "category": "property",
+      "description": "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.",
+      "label": "hidden label"
+    },
+    "historyNote": {
+      "category": "property",
+      "description": "A note about the past state/use/meaning of a concept.",
+      "label": "history note"
+    },
+    "inScheme": {
+      "category": "property",
+      "description": "A concept may be a member of more than one concept scheme.",
+      "label": "is in scheme"
+    },
+    "member": {
+      "category": "property",
+      "description": "Relates a collection to one of its members.",
+      "label": "has member"
+    },
+    "memberList": {
+      "category": "property",
+      "description": "For any resource, every item in the list given as the value of the skos:memberList property is also a value of the skos:member property.",
+      "label": "has member list"
+    },
+    "notation": {
+      "category": "property",
+      "description": "By convention, skos:notation is used with a typed literal in the object position of the triple.",
+      "label": "notation"
+    },
+    "prefLabel": {
+      "category": "property",
+      "description": "A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag.",
+      "label": "preferred label"
+    },
+    "related": {
+      "category": "property",
+      "description": "skos:related is disjoint with skos:broaderTransitive",
+      "label": "has related"
+    },
+    "relatedMatch": {
+      "category": "property",
+      "description": "skos:relatedMatch is used to state an associative mapping link between two conceptual resources in different concept schemes.",
+      "label": "has related match"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "iri": "http://www.w3.org/2006/03/test-description#",
+  "prefix": "test",
+  "items": {
+    "ReviewStatus": {
+      "category": "class",
+      "description": "A particular stage in a review process",
+      "label": "Status in a review process"
+    },
+    "SimpleReviewStatus": {
+      "category": "class",
+      "label": "A status for a simple review process containing 6 possible stages"
+    },
+    "SpecificationTestCase": {
+      "category": "class",
+      "description": "A test case which relates to a requirement set in a specification",
+      "label": "A Test Case based on a specification"
+    },
+    "TestCase": {
+      "category": "class",
+      "description": "A set of test inputs, execution conditions, and expected results developed for a particular objective, such as to exercise a particular program path or to verify compliance with a specific requirement",
+      "label": "A Test Case"
+    },
+    "expectedResults": {
+      "category": "property",
+      "description": "The results that a conformant implementation is expected to produce when this test is executed",
+      "label": "expected results"
+    },
+    "input": {
+      "category": "property",
+      "description": "Parameters or data that are needed for the test execution.",
+      "label": "input"
+    },
+    "informationResourceInput": {
+      "category": "property",
+      "description": "Information Resource (e.g. a file) used as input for the test case",
+      "label": "information resource as input"
+    },
+    "informationResourceResults": {
+      "category": "property",
+      "description": "Information Resource (e.g. a file) that contains the expected results for the test case",
+      "label": "information resource as expected results"
+    },
+    "reviewStatus": {
+      "category": "property",
+      "label": "status of review"
+    },
+    "preCondition": {
+      "category": "property",
+      "description": "a condition that must be met before the test is executed",
+      "label": "precondition"
+    },
+    "purpose": {
+      "category": "property",
+      "label": "purpose"
+    },
+    "specificationReference": {
+      "category": "property",
+      "description": "a description or a link of what part of which specification lead to the creation of this test case",
+      "label": "reference in specification"
+    }
+  }
+}

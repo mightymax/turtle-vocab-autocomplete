@@ -1,0 +1,36 @@
+{
+  "iri": "http://www.w3.org/2008/05/skos-xl#",
+  "prefix": "skosxl",
+  "items": {
+    "Label": {
+      "category": "class",
+      "description": "A special class of lexical entities.",
+      "label": "Label"
+    },
+    "altLabel": {
+      "category": "property",
+      "description": "If C skosxl:altLabel L and L skosxl:literalForm V, then X skos:altLabel V.",
+      "label": "alternative label"
+    },
+    "hiddenLabel": {
+      "category": "property",
+      "description": "If C skosxl:hiddenLabel L and L skosxl:literalForm V, then C skos:hiddenLabel V.",
+      "label": "hidden label"
+    },
+    "labelRelation": {
+      "category": "property",
+      "description": "skosxl:labelRelation is not intended to be used directly, but rather as the basis for a design pattern which can be refined for more specific labeling scenarios.",
+      "label": "label relation"
+    },
+    "literalForm": {
+      "category": "property",
+      "description": "If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource.",
+      "label": "literal form"
+    },
+    "prefLabel": {
+      "category": "property",
+      "description": "If C skosxl:prefLabel L and L skosxl:literalForm V, then X skos:prefLabel V.",
+      "label": "preferred label"
+    }
+  }
+}

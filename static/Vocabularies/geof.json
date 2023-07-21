@@ -1,0 +1,6 @@
+{
+  "iri": "http://www.opengis.net/def/function/geosparql/",
+  "label": "GeoSPARQL Functions",
+  "prefix": "geof",
+  "items": {}
+}
