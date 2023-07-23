@@ -4,7 +4,7 @@ export default (
   vocabularies: Vocabularies
 ) => {
   return vscode.languages.registerCompletionItemProvider(
-			documentypeSelectors,
+			[...documentypeSelectors, 'sparql'],
 			{
 				provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
 					const linePrefix = document.lineAt(position).text.slice(0, position.character);
