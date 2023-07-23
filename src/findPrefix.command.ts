@@ -3,16 +3,20 @@ import { Templates, Vocabularies } from './types';
 
 export function getSnippet(item: vscode.QuickPickItem, template?: Templates): string {
 	template = template ?? vscode.workspace.getConfiguration().get('conf.settingsEditor.turtleVocabAutoComplete.template') ?? 'prefix ex: <http://ex.com/>';
+  const languageId = vscode.window.activeTextEditor!.document.languageId;
+
 	let snippet = template === '@prefix ex: <http://ex.com/> .' ?
 		`@prefix ${item.label} .` :
 		`prefix ${item.label}` ;
+  if (languageId === 'sparql') {
+    snippet = `prefix ${item.label}` ;
+  }
   if (vscode.workspace.getConfiguration().get('conf.settingsEditor.turtleVocabAutoComplete.addDisplayName') ?? true) {
     if (item.description !== undefined) snippet += ` # ${item.description}`;
   }
   if (vscode.workspace.getConfiguration().get('conf.settingsEditor.turtleVocabAutoComplete.addDescription') ?? false) {
     if (item.detail !== undefined) snippet = `# ${item.detail}\n${snippet}`;
   }
-  console.log(item)
   return snippet;
 }
 
