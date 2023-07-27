@@ -5,6 +5,8 @@ import findPrefixAutocomplete from './findPrefix.autocomplete';
 import { readFileSync } from 'fs';
 import path from 'path';
 import vocabularyAutocomplete from './vocabulary.autocomplete';
+import removeUnusedPrefixesCommand from './removeUnusedPrefixes.command';
+import addMissingPrefixesCommand from './addMissingPrefixes.command';
 
 export function activate(context: vscode.ExtensionContext) {
 	console.log('Congratulations, your extension "turtle-vocab-autocomplete" is now active!');
@@ -32,9 +34,12 @@ export function activate(context: vscode.ExtensionContext) {
 
 	context.subscriptions.push(
 		findPrefixCommand(vocabularies),
+		addMissingPrefixesCommand(prefixCC),
+		removeUnusedPrefixesCommand(prefixCC),
 		findPrefixAutocomplete(vocabularies),
 		vocabularyAutocomplete(vocabularies)
 	);
 }
 
 export function deactivate() {}
+

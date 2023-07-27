@@ -14,7 +14,6 @@ export default (
           if (reversed.match(/^\:([a-z0-9]+)(?: .*)?$/)) {
             prefix = reversed.replace(/^\:([a-z0-9]+)(?: .*)$/, '$1').split("").reverse().join("");
           }
-          console.log(prefix)
           if (prefix === undefined || vocabularies[prefix.replace(/:$/, '')] === undefined) {
             return;
           };
@@ -22,7 +21,6 @@ export default (
 
           const items = vocabularies[prefix].items();
           if (Object.keys(items).length === 0) {
-            console.log(`no items for ${prefix}:`)
             return ;
           }
 

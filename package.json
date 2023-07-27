@@ -29,6 +29,14 @@
       {
         "command": "turtle-vocab-autocomplete.findPrefix",
         "title": "Vocabulary Prefix"
+      },
+      {
+        "command": "turtle-vocab-autocomplete.addMissingPrefixes",
+        "title": "Add missing prefixes"
+      },
+      {
+        "command": "turtle-vocab-autocomplete.removeUnusedPrefixes",
+        "title": "Remove unused prefixes"
       }
     ],
     "configuration": [
